@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="TermsView" customModule="Gamification" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nct-Z5-cjx">
+                    <rect key="frame" x="30" y="300" width="354" height="296.5"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="IWy-5o-DWn">
+                            <rect key="frame" x="20" y="30" width="314" height="236.5"/>
+                            <subviews>
+                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="YUQ-M3-fYA">
+                                    <rect key="frame" x="0.0" y="0.0" width="314" height="236.5"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Terms &amp; Conditions" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sGK-HM-4Km">
+                                            <rect key="frame" x="0.0" y="0.0" width="314" height="20.5"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                            <color key="textColor" red="0.13068386909999999" green="0.1246742383" blue="0.3787754774" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Vn-g6-pDg">
+                                            <rect key="frame" x="0.0" y="40.5" width="314" height="86"/>
+                                            <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in </string>
+                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="JU8-sN-kNi">
+                                            <rect key="frame" x="0.0" y="146.5" width="314" height="20"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lwm-RC-AQl">
+                                                    <rect key="frame" x="0.0" y="0.0" width="20" height="20"/>
+                                                    <subviews>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="termsCheck" translatesAutoresizingMaskIntoConstraints="NO" id="DE7-E0-Qke">
+                                                            <rect key="frame" x="0.0" y="0.0" width="20" height="20"/>
+                                                        </imageView>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstItem="DE7-E0-Qke" firstAttribute="top" secondItem="Lwm-RC-AQl" secondAttribute="top" id="1Tf-01-0TV"/>
+                                                        <constraint firstAttribute="width" constant="20" id="DZp-mh-meX"/>
+                                                        <constraint firstItem="DE7-E0-Qke" firstAttribute="leading" secondItem="Lwm-RC-AQl" secondAttribute="leading" id="XMU-cO-FbY"/>
+                                                        <constraint firstAttribute="bottom" secondItem="DE7-E0-Qke" secondAttribute="bottom" id="rC2-ks-8vB"/>
+                                                        <constraint firstAttribute="height" constant="20" id="rpa-yJ-WMN"/>
+                                                        <constraint firstAttribute="trailing" secondItem="DE7-E0-Qke" secondAttribute="trailing" id="s5n-zd-QjI"/>
+                                                    </constraints>
+                                                </view>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ACd-G9-4g5">
+                                                    <rect key="frame" x="25" y="0.0" width="289" height="20"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                    <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <state key="normal" title="I agree to the Terms and Conditions">
+                                                        <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </state>
+                                                    <state key="selected">
+                                                        <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="iAgreeTapped:" destination="iN0-l3-epB" eventType="touchUpInside" id="GzA-Xn-Fgs"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </stackView>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wPX-mV-iBO" customClass="NeumorphicButton" customModule="Gamification" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="186.5" width="314" height="50"/>
+                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="50" id="7Xg-PX-nz4"/>
+                                            </constraints>
+                                        </view>
+                                    </subviews>
+                                </stackView>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="IWy-5o-DWn" firstAttribute="leading" secondItem="Nct-Z5-cjx" secondAttribute="leading" constant="20" id="3KI-Cy-B0L"/>
+                        <constraint firstAttribute="bottom" secondItem="IWy-5o-DWn" secondAttribute="bottom" constant="30" id="khx-bv-hxi"/>
+                        <constraint firstItem="IWy-5o-DWn" firstAttribute="centerX" secondItem="Nct-Z5-cjx" secondAttribute="centerX" id="lXj-NU-8be"/>
+                        <constraint firstItem="IWy-5o-DWn" firstAttribute="top" secondItem="Nct-Z5-cjx" secondAttribute="top" constant="30" id="q8g-aq-unN"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="Nct-Z5-cjx" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="PzJ-vP-nMk"/>
+                <constraint firstItem="Nct-Z5-cjx" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="30" id="kQE-Ga-t3g"/>
+                <constraint firstItem="Nct-Z5-cjx" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="uiC-4O-7Qu"/>
+            </constraints>
+            <connections>
+                <outlet property="agreeButton" destination="ACd-G9-4g5" id="gJX-NY-s3m"/>
+                <outlet property="checkContainerView" destination="Lwm-RC-AQl" id="sWT-wo-yCq"/>
+                <outlet property="checkImageView" destination="DE7-E0-Qke" id="8MZ-DV-syi"/>
+                <outlet property="containerView" destination="Nct-Z5-cjx" id="JCl-ap-f4S"/>
+                <outlet property="continueButton" destination="wPX-mV-iBO" id="zak-Ce-zMh"/>
+                <outlet property="subtitleLabel" destination="1Vn-g6-pDg" id="uP7-hh-m1r"/>
+                <outlet property="titleTopLabel" destination="sGK-HM-4Km" id="fF0-09-KIg"/>
+            </connections>
+            <point key="canvasLocation" x="-178.2608695652174" y="38.839285714285715"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="termsCheck" width="10" height="10"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

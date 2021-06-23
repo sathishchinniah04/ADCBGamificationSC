@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ExpireView" customModule="Gamification" customModuleProvider="target">
+            <connections>
+                <outlet property="button" destination="jkv-PI-h4v" id="lIl-dT-U7Q"/>
+                <outlet property="expireLabel" destination="BLo-MQ-iSF" id="080-ic-kf4"/>
+                <outlet property="gameNameLabel" destination="ZpA-KF-iFY" id="mcj-9T-AIq"/>
+                <outlet property="rewardLabel" destination="heg-QQ-ejD" id="W3v-EQ-wRi"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="396"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="h3n-Xe-X60">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="142"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="9hH-O7-8ve">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="142"/>
+                            <subviews>
+                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="nYC-7P-LNa">
+                                    <rect key="frame" x="110" y="0.0" width="194" height="72"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Game Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZpA-KF-iFY">
+                                            <rect key="frame" x="0.0" y="0.0" width="194" height="20.5"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                            <color key="textColor" red="0.13068386909999999" green="0.1246742383" blue="0.3787754774" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Play and win exciting rewards." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="heg-QQ-ejD">
+                                            <rect key="frame" x="0.0" y="30.5" width="194" height="17"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <color key="textColor" red="0.13068386909999999" green="0.1246742383" blue="0.3787754774" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="expire in " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BLo-MQ-iSF">
+                                            <rect key="frame" x="0.0" y="57.5" width="194" height="14.5"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </stackView>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jkv-PI-h4v">
+                                    <rect key="frame" x="20" y="97" width="374" height="45"/>
+                                    <color key="backgroundColor" red="0.13068386909999999" green="0.1246742383" blue="0.3787754774" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="45" id="cJH-2B-PeC"/>
+                                    </constraints>
+                                    <state key="normal" title="Button">
+                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="playButtonAction" destination="-1" eventType="touchUpInside" id="p66-5p-KC2"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <constraints>
+                                <constraint firstItem="jkv-PI-h4v" firstAttribute="leading" secondItem="9hH-O7-8ve" secondAttribute="leading" constant="20" id="ZNQ-kG-mn8"/>
+                                <constraint firstItem="jkv-PI-h4v" firstAttribute="centerX" secondItem="9hH-O7-8ve" secondAttribute="centerX" id="dTD-au-kFs"/>
+                            </constraints>
+                        </stackView>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="h3n-Xe-X60" secondAttribute="bottom" id="Dat-gX-n4g"/>
+                <constraint firstItem="h3n-Xe-X60" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="P6y-Zr-Nv2"/>
+                <constraint firstAttribute="trailing" secondItem="h3n-Xe-X60" secondAttribute="trailing" id="dvZ-CO-dLb"/>
+                <constraint firstItem="h3n-Xe-X60" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="hpd-8W-zil"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="-57" y="42"/>
+        </view>
+    </objects>
+</document>
