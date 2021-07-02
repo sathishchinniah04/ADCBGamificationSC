@@ -10,11 +10,11 @@ public class Game {
     public static func loadGame(controller: UIViewController) {
         IQKeyboardManager.shared.enable = true
         IQKeyboardManager.shared.goNext()
-        self.navigateToCOntroller(controller: controller, storyboard: "Spin", id: "SpinHomeController")
-        //self.navigateToCOntroller(controller: controller, storyboard: "Refer", id: "ReferIntroController")
+        //self.navigateToCOntroller(controller: controller, storyboard: "Spin", id: "SpinHomeController")
+        self.navigateToController(controller: controller, storyboard: "Refer", id: "ReferIntroController")
     }
     
-    static func navigateToCOntroller(controller: UIViewController, storyboard: String, id: String) {
+    static func navigateToController(controller: UIViewController, storyboard: String, id: String) {
         var cont: UIViewController?
         if #available(iOS 13.0, *) {
             let cont = UIStoryboard(name: storyboard, bundle: Bundle(for: Game.self)).instantiateViewController(identifier: id)
