@@ -30,7 +30,7 @@ class PredictIntroController: UIViewController {
     }
     
     func nextController() {
-        let cont = UIStoryboard(name: "Predict", bundle: Bundle(for: Self.self)).instantiateViewController(withIdentifier: "PredictMatchController")
+        let cont = UIStoryboard(name: "Predict", bundle: Bundle(for: Self.self)).instantiateViewController(withIdentifier: "MatchListController")
         self.navigationController?.pushViewController(cont, animated: true)
     }
 }

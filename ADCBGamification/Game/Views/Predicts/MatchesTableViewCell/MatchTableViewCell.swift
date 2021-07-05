@@ -8,7 +8,9 @@
 import UIKit
 
 class MatchTableViewCell: UITableViewCell {
-
+    
+    @IBOutlet weak var mainContainerView: UIView!
+    @IBOutlet weak var predictTeamView: PredictTeamView!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -18,6 +20,17 @@ class MatchTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+    }
+    
+    func populateCell() {
+        DispatchQueue.main.async {
+            self.neumorphicDesign()
+            self.predictTeamView.populateView()
+        }
+    }
+    
+    func neumorphicDesign() {
+        self.mainContainerView.addShadow(cornerRadius: 10, shadowRadius: 4, opacity: 0.3, color: UIColor.black)
     }
     
 }

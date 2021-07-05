@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="QuestionView" customModule="ADCBGamification" customModuleProvider="target">
+            <connections>
+                <outlet property="questionContainerView" destination="D0M-qR-YQ9" id="aZx-DU-G3i"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="393"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="E3T-So-Z93">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="393"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="5a1-BL-xlG">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="317"/>
+                            <subviews>
+                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="JNE-4t-tEu">
+                                    <rect key="frame" x="147" y="0.0" width="120.5" height="50"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="D0M-qR-YQ9">
+                                            <rect key="frame" x="0.0" y="0.0" width="120.5" height="50"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Question 1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KP8-PO-nts">
+                                                    <rect key="frame" x="20" y="8" width="80.5" height="34"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" systemColor="systemGray4Color"/>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="KP8-PO-nts" secondAttribute="bottom" constant="8" id="acy-2e-j7W"/>
+                                                <constraint firstItem="KP8-PO-nts" firstAttribute="leading" secondItem="D0M-qR-YQ9" secondAttribute="leading" constant="20" id="lzK-6c-wxQ"/>
+                                                <constraint firstAttribute="trailing" secondItem="KP8-PO-nts" secondAttribute="trailing" constant="20" id="n5e-e4-VDM"/>
+                                                <constraint firstItem="KP8-PO-nts" firstAttribute="top" secondItem="D0M-qR-YQ9" secondAttribute="top" constant="8" id="oMA-cC-MTs"/>
+                                            </constraints>
+                                        </view>
+                                    </subviews>
+                                </stackView>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="who is going to win this match?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R73-1I-dve">
+                                    <rect key="frame" x="101.5" y="70" width="211" height="17"/>
+                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="3Qs-d2-pNa">
+                                    <rect key="frame" x="20" y="107" width="374" height="210"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qAX-Bm-QJh" customClass="NeumorphicButton" customModule="ADCBGamification" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="0.0" width="374" height="45"/>
+                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="45" id="SVl-fc-FGT"/>
+                                            </constraints>
+                                        </view>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6vf-9J-dC4" customClass="NeumorphicButton" customModule="ADCBGamification" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="55" width="374" height="45"/>
+                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        </view>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1cL-Dx-gQS" customClass="NeumorphicButton" customModule="ADCBGamification" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="110" width="374" height="45"/>
+                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        </view>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8R9-1g-R2p" customClass="NeumorphicButton" customModule="ADCBGamification" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="165" width="374" height="45"/>
+                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        </view>
+                                    </subviews>
+                                </stackView>
+                            </subviews>
+                            <constraints>
+                                <constraint firstItem="3Qs-d2-pNa" firstAttribute="leading" secondItem="5a1-BL-xlG" secondAttribute="leading" constant="20" id="zbY-0v-CIw"/>
+                            </constraints>
+                        </stackView>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="5a1-BL-xlG" firstAttribute="top" secondItem="E3T-So-Z93" secondAttribute="top" id="OKa-Tw-57Q"/>
+                        <constraint firstAttribute="trailing" secondItem="5a1-BL-xlG" secondAttribute="trailing" id="Ug7-Ne-r99"/>
+                        <constraint firstItem="5a1-BL-xlG" firstAttribute="leading" secondItem="E3T-So-Z93" secondAttribute="leading" id="Zsc-Hs-iLs"/>
+                        <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="5a1-BL-xlG" secondAttribute="bottom" constant="20" id="xjR-iN-eCJ"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="E3T-So-Z93" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="F5G-Jc-rS9"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="E3T-So-Z93" secondAttribute="bottom" id="U7x-j5-Pjw"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="E3T-So-Z93" secondAttribute="trailing" id="ZC0-fd-jLM"/>
+                <constraint firstItem="E3T-So-Z93" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="kHu-h3-CNR"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="-78.260869565217391" y="94.084821428571431"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray4Color">
+            <color red="0.81960784313725488" green="0.81960784313725488" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

@@ -96,6 +96,8 @@
 		3320FFE22682EBC4001809AA /* CarnivalWheelSlice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3320FF9F2682EBC4001809AA /* CarnivalWheelSlice.swift */; };
 		3320FFEA2682ED8F001809AA /* ADCBGamification.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3320FF0C2682EA9F001809AA /* ADCBGamification.framework */; };
 		3320FFEB2682ED8F001809AA /* ADCBGamification.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3320FF0C2682EA9F001809AA /* ADCBGamification.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		3357ED862693207E00607F50 /* PredictTeamView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3357ED852693207E00607F50 /* PredictTeamView.swift */; };
+		3357ED8C2693209300607F50 /* PredictTeamView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3357ED8B2693209300607F50 /* PredictTeamView.xib */; };
 		33EDB0C2268ED7B10040DCD4 /* PredictIntroController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33EDB0C1268ED7B10040DCD4 /* PredictIntroController.swift */; };
 		33EDB0C9268ED7C90040DCD4 /* MatchListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33EDB0C8268ED7C90040DCD4 /* MatchListController.swift */; };
 		33EDB0D0268ED7F20040DCD4 /* PredictMatchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33EDB0CF268ED7F20040DCD4 /* PredictMatchController.swift */; };
@@ -105,6 +107,11 @@
 		33EDB0EB2692CE870040DCD4 /* CustomNavView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33EDB0EA2692CE870040DCD4 /* CustomNavView.swift */; };
 		33EDB0EF2692D0A70040DCD4 /* CustomNavView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 33EDB0EE2692D0A70040DCD4 /* CustomNavView.xib */; };
 		33EDB0F42692D9F00040DCD4 /* CustomNavViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33EDB0F32692D9F00040DCD4 /* CustomNavViewController.swift */; };
+		33F59CCC26932818005B009A /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F59CCB26932818005B009A /* UIImageView+Extension.swift */; };
+		33F59CD2269330C0005B009A /* PredictMatchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F59CD0269330C0005B009A /* PredictMatchTableViewCell.swift */; };
+		33F59CD3269330C0005B009A /* PredictMatchTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 33F59CD1269330C0005B009A /* PredictMatchTableViewCell.xib */; };
+		33F59CD8269331E6005B009A /* QuestionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F59CD7269331E6005B009A /* QuestionView.swift */; };
+		33F59CDE26933283005B009A /* QuestionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 33F59CDD26933283005B009A /* QuestionView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -210,6 +217,8 @@
 		3320FF9D2682EBC4001809AA /* SpinningWheelSlice .swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SpinningWheelSlice .swift"; sourceTree = "<group>"; };
 		3320FF9E2682EBC4001809AA /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3320FF9F2682EBC4001809AA /* CarnivalWheelSlice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarnivalWheelSlice.swift; sourceTree = "<group>"; };
+		3357ED852693207E00607F50 /* PredictTeamView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PredictTeamView.swift; sourceTree = "<group>"; };
+		3357ED8B2693209300607F50 /* PredictTeamView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PredictTeamView.xib; sourceTree = "<group>"; };
 		33EDB0C1268ED7B10040DCD4 /* PredictIntroController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PredictIntroController.swift; sourceTree = "<group>"; };
 		33EDB0C8268ED7C90040DCD4 /* MatchListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchListController.swift; sourceTree = "<group>"; };
 		33EDB0CF268ED7F20040DCD4 /* PredictMatchController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PredictMatchController.swift; sourceTree = "<group>"; };
@@ -219,6 +228,11 @@
 		33EDB0EA2692CE870040DCD4 /* CustomNavView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavView.swift; sourceTree = "<group>"; };
 		33EDB0EE2692D0A70040DCD4 /* CustomNavView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomNavView.xib; sourceTree = "<group>"; };
 		33EDB0F32692D9F00040DCD4 /* CustomNavViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavViewController.swift; sourceTree = "<group>"; };
+		33F59CCB26932818005B009A /* UIImageView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
+		33F59CD0269330C0005B009A /* PredictMatchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PredictMatchTableViewCell.swift; sourceTree = "<group>"; };
+		33F59CD1269330C0005B009A /* PredictMatchTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PredictMatchTableViewCell.xib; sourceTree = "<group>"; };
+		33F59CD7269331E6005B009A /* QuestionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionView.swift; sourceTree = "<group>"; };
+		33F59CDD26933283005B009A /* QuestionView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QuestionView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -308,6 +322,7 @@
 				3320FF432682EBC3001809AA /* UIView+Extension.swift */,
 				3320FF442682EBC3001809AA /* String+Extension.swift */,
 				3320FF452682EBC3001809AA /* UIController+Extension.swift */,
+				33F59CCB26932818005B009A /* UIImageView+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -601,6 +616,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		3357ED842693203C00607F50 /* PredictTeamView */ = {
+			isa = PBXGroup;
+			children = (
+				3357ED852693207E00607F50 /* PredictTeamView.swift */,
+				3357ED8B2693209300607F50 /* PredictTeamView.xib */,
+			);
+			path = PredictTeamView;
+			sourceTree = "<group>";
+		};
 		33EDB0BE268ED72F0040DCD4 /* Predict */ = {
 			isa = PBXGroup;
 			children = (
@@ -646,6 +670,9 @@
 		33EDB0DE2692CC650040DCD4 /* Predicts */ = {
 			isa = PBXGroup;
 			children = (
+				33F59CD6269331C4005B009A /* QuestionView */,
+				33F59CCF269330A0005B009A /* PredictMatchTableViewCell */,
+				3357ED842693203C00607F50 /* PredictTeamView */,
 				33EDB0DF2692CC770040DCD4 /* MatchesTableViewCell */,
 			);
 			path = Predicts;
@@ -683,6 +710,24 @@
 				33EDB0F32692D9F00040DCD4 /* CustomNavViewController.swift */,
 			);
 			path = NavigationController;
+			sourceTree = "<group>";
+		};
+		33F59CCF269330A0005B009A /* PredictMatchTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				33F59CD0269330C0005B009A /* PredictMatchTableViewCell.swift */,
+				33F59CD1269330C0005B009A /* PredictMatchTableViewCell.xib */,
+			);
+			path = PredictMatchTableViewCell;
+			sourceTree = "<group>";
+		};
+		33F59CD6269331C4005B009A /* QuestionView */ = {
+			isa = PBXGroup;
+			children = (
+				33F59CD7269331E6005B009A /* QuestionView.swift */,
+				33F59CDD26933283005B009A /* QuestionView.xib */,
+			);
+			path = QuestionView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -787,12 +832,15 @@
 				3320FFC82682EBC4001809AA /* NeumorphicTextField.xib in Resources */,
 				3320FFA62682EBC4001809AA /* Refer.storyboard in Resources */,
 				3320FFD32682EBC4001809AA /* NewReferTableViewCell.xib in Resources */,
+				33F59CDE26933283005B009A /* QuestionView.xib in Resources */,
 				3320FFA82682EBC4001809AA /* TermsView.xib in Resources */,
+				3357ED8C2693209300607F50 /* PredictTeamView.xib in Resources */,
 				33EDB0E32692CCB40040DCD4 /* MatchTableViewCell.xib in Resources */,
 				3320FFD12682EBC4001809AA /* NewRefferView.xib in Resources */,
 				3320FFD92682EBC4001809AA /* Assets.xcassets in Resources */,
 				3320FFAB2682EBC4001809AA /* ExpireView.xib in Resources */,
 				3320FFD22682EBC4001809AA /* HistoryTableViewCell.xib in Resources */,
+				33F59CD3269330C0005B009A /* PredictMatchTableViewCell.xib in Resources */,
 				3320FFC92682EBC4001809AA /* NeumorphicButton.xib in Resources */,
 				3320FFCE2682EBC4001809AA /* ReferSuccessPopupView.xib in Resources */,
 				3320FFAD2682EBC4001809AA /* GamificationAssets.xcassets in Resources */,
@@ -860,6 +908,7 @@
 				3320FFB82682EBC4001809AA /* IQKeyboardManagerConstants.swift in Sources */,
 				3320FFAE2682EBC4001809AA /* IQTextView.swift in Sources */,
 				3320FFD82682EBC4001809AA /* SpinHomeController.swift in Sources */,
+				3357ED862693207E00607F50 /* PredictTeamView.swift in Sources */,
 				3320FFE02682EBC4001809AA /* SpinningWheelSlice .swift in Sources */,
 				33EDB0E22692CCB40040DCD4 /* MatchTableViewCell.swift in Sources */,
 				3320FFB32682EBC4001809AA /* IQToolbar.swift in Sources */,
@@ -869,15 +918,18 @@
 				33EDB0F42692D9F00040DCD4 /* CustomNavViewController.swift in Sources */,
 				3320FFA02682EBC4001809AA /* UIColor+Extension.swift in Sources */,
 				3320FFD52682EBC4001809AA /* SpinerContainerView.swift in Sources */,
+				33F59CCC26932818005B009A /* UIImageView+Extension.swift in Sources */,
 				3320FFCF2682EBC4001809AA /* ReferTableView.swift in Sources */,
 				33EDB0D0268ED7F20040DCD4 /* PredictMatchController.swift in Sources */,
 				3320FFB02682EBC4001809AA /* IQPreviousNextView.swift in Sources */,
 				3320FFC02682EBC4001809AA /* IQUIScrollView+Additions.swift in Sources */,
 				3320FFB72682EBC4001809AA /* IQKeyboardManagerConstantsInternal.swift in Sources */,
+				33F59CD2269330C0005B009A /* PredictMatchTableViewCell.swift in Sources */,
 				3320FFA12682EBC4001809AA /* UIButton+Extension.swift in Sources */,
 				3320FFBB2682EBC4001809AA /* IQKeyboardManager.swift in Sources */,
 				3320FFC62682EBC4001809AA /* ReferIntroController.swift in Sources */,
 				3320FFE22682EBC4001809AA /* CarnivalWheelSlice.swift in Sources */,
+				33F59CD8269331E6005B009A /* QuestionView.swift in Sources */,
 				3320FFB62682EBC4001809AA /* IQKeyboardManager+UIKeyboardNotification.swift in Sources */,
 				3320FFD42682EBC4001809AA /* NewReferTableViewCell.swift in Sources */,
 				3320FFBD2682EBC4001809AA /* IQKeyboardManager+OrientationNotification.swift in Sources */,
