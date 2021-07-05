@@ -19,7 +19,7 @@ public class Game {
         var cont: UIViewController?
         if #available(iOS 13.0, *) {
             let cont = UIStoryboard(name: storyboard, bundle: Bundle(for: Game.self)).instantiateViewController(identifier: id)
-            let nav = UINavigationController(rootViewController: cont)
+            let nav = CustomNavViewController(rootViewController: cont)
             nav.navigationBar.isHidden = true
             nav.modalPresentationStyle = .fullScreen
             controller.present(nav, animated: true, completion: nil)

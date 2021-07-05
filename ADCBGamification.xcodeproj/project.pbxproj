@@ -104,6 +104,7 @@
 		33EDB0E32692CCB40040DCD4 /* MatchTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 33EDB0E12692CCB40040DCD4 /* MatchTableViewCell.xib */; };
 		33EDB0EB2692CE870040DCD4 /* CustomNavView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33EDB0EA2692CE870040DCD4 /* CustomNavView.swift */; };
 		33EDB0EF2692D0A70040DCD4 /* CustomNavView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 33EDB0EE2692D0A70040DCD4 /* CustomNavView.xib */; };
+		33EDB0F42692D9F00040DCD4 /* CustomNavViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33EDB0F32692D9F00040DCD4 /* CustomNavViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -217,6 +218,7 @@
 		33EDB0E12692CCB40040DCD4 /* MatchTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MatchTableViewCell.xib; sourceTree = "<group>"; };
 		33EDB0EA2692CE870040DCD4 /* CustomNavView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavView.swift; sourceTree = "<group>"; };
 		33EDB0EE2692D0A70040DCD4 /* CustomNavView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomNavView.xib; sourceTree = "<group>"; };
+		33EDB0F32692D9F00040DCD4 /* CustomNavViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -422,6 +424,7 @@
 		3320FF712682EBC3001809AA /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				33EDB0F22692D9BC0040DCD4 /* NavigationController */,
 				33EDB0BE268ED72F0040DCD4 /* Predict */,
 				3320FF722682EBC3001809AA /* Refer */,
 				3320FF8C2682EBC4001809AA /* Spin */,
@@ -674,6 +677,14 @@
 			path = CustomNavView;
 			sourceTree = "<group>";
 		};
+		33EDB0F22692D9BC0040DCD4 /* NavigationController */ = {
+			isa = PBXGroup;
+			children = (
+				33EDB0F32692D9F00040DCD4 /* CustomNavViewController.swift */,
+			);
+			path = NavigationController;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -855,6 +866,7 @@
 				3320FFAF2682EBC4001809AA /* IQKeyboardManager+Internal.swift in Sources */,
 				3320FFDC2682EBC4001809AA /* FortuneWheelLayer.swift in Sources */,
 				3320FFDD2682EBC4001809AA /* Utils.swift in Sources */,
+				33EDB0F42692D9F00040DCD4 /* CustomNavViewController.swift in Sources */,
 				3320FFA02682EBC4001809AA /* UIColor+Extension.swift in Sources */,
 				3320FFD52682EBC4001809AA /* SpinerContainerView.swift in Sources */,
 				3320FFCF2682EBC4001809AA /* ReferTableView.swift in Sources */,

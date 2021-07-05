@@ -6,7 +6,10 @@
 //
 
 import UIKit
-
+enum CustomNavViewAction {
+    case back
+    case home
+}
 @IBDesignable class CustomNavView: UIView {
     
     @IBOutlet weak var titleLabel: UILabel!
@@ -16,7 +19,7 @@ import UIKit
     var isDismiss: Bool = false
     var view: UIView?
     var sController: UIViewController?
-    
+    var handler:((CustomNavViewAction)->Void)?
     func loadXib() -> UIView {
         return UINib(nibName: "CustomNavView", bundle: Bundle(for: Self.self)).instantiate(withOwner: self, options: nil).first as! UIView
     }
@@ -44,20 +47,23 @@ import UIKit
     }
     
     @IBAction func backButtonAction() {
-        print("Back button tapped controllers count is  = \(sController?.navigationController?.viewControllers.count)")
-        if  sController?.navigationController?.viewControllers.count ?? 0 <= 1 {
-            sController?.dismiss(animated: true, completion: nil)
+        handler?(.back)
+        let cont = sController?.getTopController()
+        if  cont?.navigationController?.viewControllers.count ?? 0 <= 1 {
+            cont?.dismiss(animated: true, completion: nil)
         } else {
-            sController?.navigationController?.popViewController(animated: true)
+            cont?.navigationController?.popViewController(animated: true)
         }
     }
     
     @IBAction func homeButtonAction() {
         print("Home button tapped")
+        handler?(.home)
         sController?.dismiss(animated: true, completion: nil)
     }
     
-    func populateView(sController: UIViewController) {
+    func populateView(sController: UIViewController, complition:((CustomNavViewAction)->Void)? = nil) {
+        self.handler = complition
         self.sController = sController
     }
 }

@@ -15,8 +15,14 @@ class PredictMatchController: UIViewController {
         super.viewDidLoad()
         navInitialSetup()
     }
+
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        let con = self.navigationController
+        (con as? CustomNavViewController)?.changeTitle(title: "SHIV")
+    }
     
     func navInitialSetup() {
-        customNavView.populateView(sController: self)
+        //customNavView.populateView(sController: self)
     }
 }
