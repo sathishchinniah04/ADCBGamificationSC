@@ -20,26 +20,29 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CurveClip" translatesAutoresizingMaskIntoConstraints="NO" id="O1D-93-f0H">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="493"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X9q-hd-qQU">
-                                <rect key="frame" x="30" y="802" width="354" height="30"/>
-                                <state key="normal" title="Button"/>
-                                <connections>
-                                    <action selector="nextController" destination="aA4-yv-tXs" eventType="touchUpInside" id="Oe7-Cc-xd2"/>
-                                </connections>
-                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0zs-1g-UM0" customClass="ExpireView" customModule="ADCBGamification" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="714" width="414" height="128"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" placeholder="YES" id="FL3-MQ-5k5"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="F75-gm-2pA"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="F75-gm-2pA" firstAttribute="bottom" secondItem="X9q-hd-qQU" secondAttribute="bottom" constant="30" id="6zC-w7-dM6"/>
+                            <constraint firstItem="F75-gm-2pA" firstAttribute="trailing" secondItem="0zs-1g-UM0" secondAttribute="trailing" id="419-qE-ObW"/>
                             <constraint firstItem="O1D-93-f0H" firstAttribute="height" secondItem="9LS-1p-Or3" secondAttribute="height" multiplier="0.55" id="7wa-X5-mOd"/>
                             <constraint firstItem="F75-gm-2pA" firstAttribute="trailing" secondItem="O1D-93-f0H" secondAttribute="trailing" id="Mvk-nf-CKr"/>
-                            <constraint firstItem="X9q-hd-qQU" firstAttribute="leading" secondItem="F75-gm-2pA" secondAttribute="leading" constant="30" id="YUo-qL-bsd"/>
-                            <constraint firstItem="X9q-hd-qQU" firstAttribute="centerX" secondItem="9LS-1p-Or3" secondAttribute="centerX" id="lPH-5E-eFo"/>
+                            <constraint firstItem="0zs-1g-UM0" firstAttribute="leading" secondItem="F75-gm-2pA" secondAttribute="leading" id="TYA-d3-N2f"/>
                             <constraint firstItem="O1D-93-f0H" firstAttribute="top" secondItem="9LS-1p-Or3" secondAttribute="top" id="qJA-QL-DME"/>
+                            <constraint firstItem="F75-gm-2pA" firstAttribute="bottom" secondItem="0zs-1g-UM0" secondAttribute="bottom" constant="20" id="qpv-jn-NT6"/>
                             <constraint firstItem="O1D-93-f0H" firstAttribute="leading" secondItem="F75-gm-2pA" secondAttribute="leading" id="tPC-AS-WDR"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="expireView" destination="0zs-1g-UM0" id="Nkd-iS-rPk"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wLU-v0-rOV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

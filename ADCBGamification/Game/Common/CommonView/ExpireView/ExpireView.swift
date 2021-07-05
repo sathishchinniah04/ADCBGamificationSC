@@ -15,6 +15,7 @@ class ExpireView: UIView {
     @IBOutlet weak var descLabel: UILabel!
     var termsView = TermsViewHelper()
     var handler: (()->Void)?
+    var isShowTerms: Bool = true
     override init(frame: CGRect) {
         super.init(frame: frame)
         initialSetup()
@@ -57,10 +58,14 @@ class ExpireView: UIView {
     }
     
     @IBAction func playButtonAction() {
-        termsView.show {
-            print("fsdfsdfdss")
+        if isShowTerms {
+            termsView.show {
+                print("fsdfsdfdss")
+                self.handler?()
+            }
+        } else {
             self.handler?()
         }
     }
-
+    
 }
