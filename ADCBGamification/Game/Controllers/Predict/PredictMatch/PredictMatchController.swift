@@ -19,7 +19,7 @@ class PredictMatchController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         let con = self.navigationController
-        (con as? CustomNavViewController)?.changeTitle(title: "SHIV")
+        //(con as? CustomNavViewController)?.changeTitle(title: "SHIV")
     }
     
     func navInitialSetup() {

@@ -18,7 +18,7 @@ class PredictIntroController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         let con = self.navigationController
-        (con as? CustomNavViewController)?.changeTitle(title: "SKY")
+        //(con as? CustomNavViewController)?.changeTitle(title: "SKY")
     }
 //    override func viewWillAppear(_ animated: Bool) {
 //        super.viewWillAppear(animated)
