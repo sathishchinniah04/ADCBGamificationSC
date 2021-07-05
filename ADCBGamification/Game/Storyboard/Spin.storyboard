@@ -12,16 +12,16 @@
         <!--Spin Home Controller-->
         <scene sceneID="fbX-Cl-pIn">
             <objects>
-                <viewController storyboardIdentifier="SpinHomeController" id="INV-Uo-N1h" customClass="SpinHomeController" customModule="Gamification" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SpinHomeController" id="INV-Uo-N1h" customClass="SpinHomeController" customModule="ADCBGamification" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2DE-sR-4BU">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="O5H-9N-Ue9">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CurveClip" translatesAutoresizingMaskIntoConstraints="NO" id="O5H-9N-Ue9">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="493"/>
-                                <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </imageView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wNb-S9-CRs" customClass="ExpireView" customModule="Gamification" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wNb-S9-CRs" customClass="ExpireView" customModule="ADCBGamification" customModuleProvider="target">
                                 <rect key="frame" x="30" y="772" width="354" height="50"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -61,11 +61,9 @@
         </scene>
     </scenes>
     <resources>
+        <image name="CurveClip" width="375" height="422"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemYellowColor">
-            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

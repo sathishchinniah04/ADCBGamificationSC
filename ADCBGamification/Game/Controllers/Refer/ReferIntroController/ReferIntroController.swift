@@ -8,7 +8,7 @@
 import UIKit
 
 class ReferIntroController: UIViewController {
-    @IBOutlet weak var customView: UIView!
+    
     @IBOutlet weak var expireView: ExpireView!
     
     override func viewDidLoad() {

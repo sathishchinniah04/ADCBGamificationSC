@@ -11,7 +11,8 @@ public class Game {
         IQKeyboardManager.shared.enable = true
         IQKeyboardManager.shared.goNext()
         //self.navigateToCOntroller(controller: controller, storyboard: "Spin", id: "SpinHomeController")
-        self.navigateToController(controller: controller, storyboard: "Refer", id: "ReferIntroController")
+        self.navigateToController(controller: controller, storyboard: "Predict", id: "PredictIntroController")
+       // self.navigateToController(controller: controller, storyboard: "Refer", id: "ReferIntroController")
     }
     
     static func navigateToController(controller: UIViewController, storyboard: String, id: String) {

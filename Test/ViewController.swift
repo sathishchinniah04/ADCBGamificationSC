@@ -16,7 +16,12 @@ class ViewController: UIViewController {
         }
         // Do any additional setup after loading the view.
     }
-
+    
+    @IBAction func openGameButtonAction() {
+        DispatchQueue.main.async {
+            Game.loadGame(controller: self)
+        }
+    }
 
 }
 

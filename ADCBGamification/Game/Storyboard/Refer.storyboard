@@ -5,55 +5,43 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--Refer Intro Controller-->
         <scene sceneID="tOx-W1-R8C">
             <objects>
-                <viewController storyboardIdentifier="ReferIntroController" id="Umo-k5-hCF" customClass="ReferIntroController" customModule="Gamification" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ReferIntroController" id="Umo-k5-hCF" customClass="ReferIntroController" customModule="ADCBGamification" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8Yo-nW-oOk">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kms-wt-X4Q">
-                                <rect key="frame" x="50" y="423" width="314" height="50"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="5Hz-SN-cK5"/>
-                                </constraints>
-                            </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ic6-ia-DtR" customClass="ExpireView" customModule="Gamification" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ic6-ia-DtR" customClass="ExpireView" customModule="ADCBGamification" customModuleProvider="target">
                                 <rect key="frame" x="20" y="732" width="374" height="100"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" placeholder="YES" id="RwE-XI-TyB"/>
                                 </constraints>
                             </view>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="XUZ-wa-BVQ">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CurveClip" translatesAutoresizingMaskIntoConstraints="NO" id="XUZ-wa-BVQ">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="493"/>
-                                <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="HH6-ca-mjg"/>
                         <color key="backgroundColor" red="0.99205940960000005" green="0.99222511049999995" blue="0.99203759430000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="kms-wt-X4Q" firstAttribute="leading" secondItem="HH6-ca-mjg" secondAttribute="leading" constant="50" id="GdQ-wo-qqR"/>
                             <constraint firstItem="XUZ-wa-BVQ" firstAttribute="height" secondItem="8Yo-nW-oOk" secondAttribute="height" multiplier="0.55" id="KHP-6y-5QI"/>
-                            <constraint firstItem="kms-wt-X4Q" firstAttribute="centerY" secondItem="8Yo-nW-oOk" secondAttribute="centerY" id="P2B-9l-XaE"/>
                             <constraint firstItem="XUZ-wa-BVQ" firstAttribute="leading" secondItem="8Yo-nW-oOk" secondAttribute="leading" id="aoe-k8-ZCr"/>
                             <constraint firstItem="XUZ-wa-BVQ" firstAttribute="top" secondItem="8Yo-nW-oOk" secondAttribute="top" id="bTO-Io-jcX"/>
                             <constraint firstItem="HH6-ca-mjg" firstAttribute="bottom" secondItem="ic6-ia-DtR" secondAttribute="bottom" constant="30" id="cJ5-dU-LoH"/>
                             <constraint firstItem="ic6-ia-DtR" firstAttribute="centerX" secondItem="HH6-ca-mjg" secondAttribute="centerX" id="iS2-a1-aqB"/>
                             <constraint firstItem="ic6-ia-DtR" firstAttribute="leading" secondItem="HH6-ca-mjg" secondAttribute="leading" constant="20" id="pbI-zY-eWY"/>
-                            <constraint firstItem="kms-wt-X4Q" firstAttribute="centerX" secondItem="8Yo-nW-oOk" secondAttribute="centerX" id="sBe-im-sss"/>
                             <constraint firstItem="HH6-ca-mjg" firstAttribute="trailing" secondItem="XUZ-wa-BVQ" secondAttribute="trailing" id="xsm-v0-awZ"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Vl6-Hj-plw"/>
                     <connections>
-                        <outlet property="customView" destination="kms-wt-X4Q" id="qcp-AH-Lfc"/>
                         <outlet property="expireView" destination="ic6-ia-DtR" id="cqc-O3-ex4"/>
                     </connections>
                 </viewController>
@@ -64,14 +52,14 @@
         <!--Refer View Controller-->
         <scene sceneID="mvI-6N-SsN">
             <objects>
-                <viewController storyboardIdentifier="ReferViewController" id="vAT-ls-gbd" customClass="ReferViewController" customModule="Gamification" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ReferViewController" id="vAT-ls-gbd" customClass="ReferViewController" customModule="ADCBGamification" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="42W-hh-2wZ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8dx-cD-jGi">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CurveClip" translatesAutoresizingMaskIntoConstraints="NO" id="8dx-cD-jGi">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="493"/>
-                                <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SxZ-Z0-WFX">
                                 <rect key="frame" x="0.0" y="44" width="414" height="50"/>
@@ -108,7 +96,7 @@
                                     <action selector="segmentAction:" destination="vAT-ls-gbd" eventType="valueChanged" id="m0f-o1-D16"/>
                                 </connections>
                             </segmentedControl>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="PZY-07-X08" customClass="ReferTableView" customModule="Gamification" customModuleProvider="target">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="PZY-07-X08" customClass="ReferTableView" customModule="ADCBGamification" customModuleProvider="target">
                                 <rect key="frame" x="20" y="145" width="374" height="697"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <userDefinedRuntimeAttributes>
@@ -147,8 +135,6 @@
         </scene>
     </scenes>
     <resources>
-        <systemColor name="systemYellowColor">
-            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
+        <image name="CurveClip" width="375" height="422"/>
     </resources>
 </document>

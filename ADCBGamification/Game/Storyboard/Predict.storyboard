@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Predict Intro Controller-->
+        <scene sceneID="wrW-ku-pje">
+            <objects>
+                <viewController storyboardIdentifier="PredictIntroController" id="aA4-yv-tXs" customClass="PredictIntroController" customModule="ADCBGamification" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="9LS-1p-Or3">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CurveClip" translatesAutoresizingMaskIntoConstraints="NO" id="O1D-93-f0H">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="493"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RMn-Pl-7TA" customClass="CustomNavView" customModule="ADCBGamification" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="49" width="414" height="45"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="ch9-Y6-sWU"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X9q-hd-qQU">
+                                <rect key="frame" x="30" y="802" width="354" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="nextController" destination="aA4-yv-tXs" eventType="touchUpInside" id="Oe7-Cc-xd2"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="F75-gm-2pA"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="F75-gm-2pA" firstAttribute="bottom" secondItem="X9q-hd-qQU" secondAttribute="bottom" constant="30" id="6zC-w7-dM6"/>
+                            <constraint firstItem="O1D-93-f0H" firstAttribute="height" secondItem="9LS-1p-Or3" secondAttribute="height" multiplier="0.55" id="7wa-X5-mOd"/>
+                            <constraint firstItem="F75-gm-2pA" firstAttribute="trailing" secondItem="O1D-93-f0H" secondAttribute="trailing" id="Mvk-nf-CKr"/>
+                            <constraint firstItem="RMn-Pl-7TA" firstAttribute="leading" secondItem="F75-gm-2pA" secondAttribute="leading" id="TVQ-A5-QRP"/>
+                            <constraint firstItem="F75-gm-2pA" firstAttribute="trailing" secondItem="RMn-Pl-7TA" secondAttribute="trailing" id="URj-Hk-ZNz"/>
+                            <constraint firstItem="RMn-Pl-7TA" firstAttribute="top" secondItem="F75-gm-2pA" secondAttribute="top" constant="5" id="Uww-RF-UM0"/>
+                            <constraint firstItem="X9q-hd-qQU" firstAttribute="leading" secondItem="F75-gm-2pA" secondAttribute="leading" constant="30" id="YUo-qL-bsd"/>
+                            <constraint firstItem="X9q-hd-qQU" firstAttribute="centerX" secondItem="9LS-1p-Or3" secondAttribute="centerX" id="lPH-5E-eFo"/>
+                            <constraint firstItem="O1D-93-f0H" firstAttribute="top" secondItem="9LS-1p-Or3" secondAttribute="top" id="qJA-QL-DME"/>
+                            <constraint firstItem="O1D-93-f0H" firstAttribute="leading" secondItem="F75-gm-2pA" secondAttribute="leading" id="tPC-AS-WDR"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="customNav" destination="RMn-Pl-7TA" id="zWl-EB-vCF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wLU-v0-rOV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-33.333333333333336" y="94.419642857142847"/>
+        </scene>
+        <!--Predict Match Controller-->
+        <scene sceneID="iWO-3b-eQQ">
+            <objects>
+                <viewController storyboardIdentifier="PredictMatchController" id="4Ck-to-3UP" customClass="PredictMatchController" customModule="ADCBGamification" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="n2S-G4-qs1">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CurveClip" translatesAutoresizingMaskIntoConstraints="NO" id="otf-wu-BSJ">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="493"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Akm-FO-7ne" customClass="CustomNavView" customModule="ADCBGamification" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="49" width="414" height="45"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="R4m-rf-1Bp"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="dKt-wo-pLV"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="otf-wu-BSJ" firstAttribute="height" secondItem="n2S-G4-qs1" secondAttribute="height" multiplier="0.55" id="7Sw-AM-rJq"/>
+                            <constraint firstItem="otf-wu-BSJ" firstAttribute="top" secondItem="n2S-G4-qs1" secondAttribute="top" id="LYn-v6-b26"/>
+                            <constraint firstItem="dKt-wo-pLV" firstAttribute="trailing" secondItem="Akm-FO-7ne" secondAttribute="trailing" id="SAw-c7-eTl"/>
+                            <constraint firstItem="otf-wu-BSJ" firstAttribute="leading" secondItem="n2S-G4-qs1" secondAttribute="leading" id="cyU-ED-GtZ"/>
+                            <constraint firstItem="dKt-wo-pLV" firstAttribute="trailing" secondItem="otf-wu-BSJ" secondAttribute="trailing" id="hWk-bm-el8"/>
+                            <constraint firstItem="Akm-FO-7ne" firstAttribute="top" secondItem="dKt-wo-pLV" secondAttribute="top" constant="5" id="j4w-Hn-uZK"/>
+                            <constraint firstItem="Akm-FO-7ne" firstAttribute="leading" secondItem="dKt-wo-pLV" secondAttribute="leading" id="m1t-Ws-yCX"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="customNavView" destination="Akm-FO-7ne" id="HER-o9-hCQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="50E-Yx-fl4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="727" y="116"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="CurveClip" width="187.5" height="211"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

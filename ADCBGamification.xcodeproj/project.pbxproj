@@ -96,6 +96,14 @@
 		3320FFE22682EBC4001809AA /* CarnivalWheelSlice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3320FF9F2682EBC4001809AA /* CarnivalWheelSlice.swift */; };
 		3320FFEA2682ED8F001809AA /* ADCBGamification.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3320FF0C2682EA9F001809AA /* ADCBGamification.framework */; };
 		3320FFEB2682ED8F001809AA /* ADCBGamification.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3320FF0C2682EA9F001809AA /* ADCBGamification.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		33EDB0C2268ED7B10040DCD4 /* PredictIntroController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33EDB0C1268ED7B10040DCD4 /* PredictIntroController.swift */; };
+		33EDB0C9268ED7C90040DCD4 /* MatchListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33EDB0C8268ED7C90040DCD4 /* MatchListController.swift */; };
+		33EDB0D0268ED7F20040DCD4 /* PredictMatchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33EDB0CF268ED7F20040DCD4 /* PredictMatchController.swift */; };
+		33EDB0D6268ED8200040DCD4 /* Predict.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 33EDB0D5268ED8200040DCD4 /* Predict.storyboard */; };
+		33EDB0E22692CCB40040DCD4 /* MatchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33EDB0E02692CCB40040DCD4 /* MatchTableViewCell.swift */; };
+		33EDB0E32692CCB40040DCD4 /* MatchTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 33EDB0E12692CCB40040DCD4 /* MatchTableViewCell.xib */; };
+		33EDB0EB2692CE870040DCD4 /* CustomNavView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33EDB0EA2692CE870040DCD4 /* CustomNavView.swift */; };
+		33EDB0EF2692D0A70040DCD4 /* CustomNavView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 33EDB0EE2692D0A70040DCD4 /* CustomNavView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -201,6 +209,14 @@
 		3320FF9D2682EBC4001809AA /* SpinningWheelSlice .swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SpinningWheelSlice .swift"; sourceTree = "<group>"; };
 		3320FF9E2682EBC4001809AA /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3320FF9F2682EBC4001809AA /* CarnivalWheelSlice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarnivalWheelSlice.swift; sourceTree = "<group>"; };
+		33EDB0C1268ED7B10040DCD4 /* PredictIntroController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PredictIntroController.swift; sourceTree = "<group>"; };
+		33EDB0C8268ED7C90040DCD4 /* MatchListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchListController.swift; sourceTree = "<group>"; };
+		33EDB0CF268ED7F20040DCD4 /* PredictMatchController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PredictMatchController.swift; sourceTree = "<group>"; };
+		33EDB0D5268ED8200040DCD4 /* Predict.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Predict.storyboard; sourceTree = "<group>"; };
+		33EDB0E02692CCB40040DCD4 /* MatchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchTableViewCell.swift; sourceTree = "<group>"; };
+		33EDB0E12692CCB40040DCD4 /* MatchTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MatchTableViewCell.xib; sourceTree = "<group>"; };
+		33EDB0EA2692CE870040DCD4 /* CustomNavView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavView.swift; sourceTree = "<group>"; };
+		33EDB0EE2692D0A70040DCD4 /* CustomNavView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomNavView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -268,6 +284,8 @@
 		3320FF3F2682EBC3001809AA /* Game */ = {
 			isa = PBXGroup;
 			children = (
+				33EDB0E62692CD720040DCD4 /* CustomView */,
+				33EDB0BF268ED74A0040DCD4 /* Views */,
 				3320FF402682EBC3001809AA /* Extension */,
 				3320FF462682EBC3001809AA /* Game.swift */,
 				3320FF472682EBC3001809AA /* Storyboard */,
@@ -297,6 +315,7 @@
 			children = (
 				3320FF482682EBC3001809AA /* Refer.storyboard */,
 				3320FF492682EBC3001809AA /* Spin.storyboard */,
+				33EDB0D5268ED8200040DCD4 /* Predict.storyboard */,
 			);
 			path = Storyboard;
 			sourceTree = "<group>";
@@ -403,6 +422,7 @@
 		3320FF712682EBC3001809AA /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				33EDB0BE268ED72F0040DCD4 /* Predict */,
 				3320FF722682EBC3001809AA /* Refer */,
 				3320FF8C2682EBC4001809AA /* Spin */,
 			);
@@ -578,6 +598,82 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		33EDB0BE268ED72F0040DCD4 /* Predict */ = {
+			isa = PBXGroup;
+			children = (
+				33EDB0CE268ED7DC0040DCD4 /* PredictMatch */,
+				33EDB0C7268ED7B60040DCD4 /* Matches */,
+				33EDB0C0268ED78A0040DCD4 /* Intro */,
+			);
+			path = Predict;
+			sourceTree = "<group>";
+		};
+		33EDB0BF268ED74A0040DCD4 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				33EDB0DE2692CC650040DCD4 /* Predicts */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		33EDB0C0268ED78A0040DCD4 /* Intro */ = {
+			isa = PBXGroup;
+			children = (
+				33EDB0C1268ED7B10040DCD4 /* PredictIntroController.swift */,
+			);
+			path = Intro;
+			sourceTree = "<group>";
+		};
+		33EDB0C7268ED7B60040DCD4 /* Matches */ = {
+			isa = PBXGroup;
+			children = (
+				33EDB0C8268ED7C90040DCD4 /* MatchListController.swift */,
+			);
+			path = Matches;
+			sourceTree = "<group>";
+		};
+		33EDB0CE268ED7DC0040DCD4 /* PredictMatch */ = {
+			isa = PBXGroup;
+			children = (
+				33EDB0CF268ED7F20040DCD4 /* PredictMatchController.swift */,
+			);
+			path = PredictMatch;
+			sourceTree = "<group>";
+		};
+		33EDB0DE2692CC650040DCD4 /* Predicts */ = {
+			isa = PBXGroup;
+			children = (
+				33EDB0DF2692CC770040DCD4 /* MatchesTableViewCell */,
+			);
+			path = Predicts;
+			sourceTree = "<group>";
+		};
+		33EDB0DF2692CC770040DCD4 /* MatchesTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				33EDB0E02692CCB40040DCD4 /* MatchTableViewCell.swift */,
+				33EDB0E12692CCB40040DCD4 /* MatchTableViewCell.xib */,
+			);
+			path = MatchesTableViewCell;
+			sourceTree = "<group>";
+		};
+		33EDB0E62692CD720040DCD4 /* CustomView */ = {
+			isa = PBXGroup;
+			children = (
+				33EDB0E72692CD880040DCD4 /* CustomNavView */,
+			);
+			path = CustomView;
+			sourceTree = "<group>";
+		};
+		33EDB0E72692CD880040DCD4 /* CustomNavView */ = {
+			isa = PBXGroup;
+			children = (
+				33EDB0EA2692CE870040DCD4 /* CustomNavView.swift */,
+				33EDB0EE2692D0A70040DCD4 /* CustomNavView.xib */,
+			);
+			path = CustomNavView;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -681,6 +777,7 @@
 				3320FFA62682EBC4001809AA /* Refer.storyboard in Resources */,
 				3320FFD32682EBC4001809AA /* NewReferTableViewCell.xib in Resources */,
 				3320FFA82682EBC4001809AA /* TermsView.xib in Resources */,
+				33EDB0E32692CCB40040DCD4 /* MatchTableViewCell.xib in Resources */,
 				3320FFD12682EBC4001809AA /* NewRefferView.xib in Resources */,
 				3320FFD92682EBC4001809AA /* Assets.xcassets in Resources */,
 				3320FFAB2682EBC4001809AA /* ExpireView.xib in Resources */,
@@ -688,6 +785,8 @@
 				3320FFC92682EBC4001809AA /* NeumorphicButton.xib in Resources */,
 				3320FFCE2682EBC4001809AA /* ReferSuccessPopupView.xib in Resources */,
 				3320FFAD2682EBC4001809AA /* GamificationAssets.xcassets in Resources */,
+				33EDB0EF2692D0A70040DCD4 /* CustomNavView.xib in Resources */,
+				33EDB0D6268ED8200040DCD4 /* Predict.storyboard in Resources */,
 				3320FFD72682EBC4001809AA /* SpinerContainerView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -751,6 +850,7 @@
 				3320FFAE2682EBC4001809AA /* IQTextView.swift in Sources */,
 				3320FFD82682EBC4001809AA /* SpinHomeController.swift in Sources */,
 				3320FFE02682EBC4001809AA /* SpinningWheelSlice .swift in Sources */,
+				33EDB0E22692CCB40040DCD4 /* MatchTableViewCell.swift in Sources */,
 				3320FFB32682EBC4001809AA /* IQToolbar.swift in Sources */,
 				3320FFAF2682EBC4001809AA /* IQKeyboardManager+Internal.swift in Sources */,
 				3320FFDC2682EBC4001809AA /* FortuneWheelLayer.swift in Sources */,
@@ -758,6 +858,7 @@
 				3320FFA02682EBC4001809AA /* UIColor+Extension.swift in Sources */,
 				3320FFD52682EBC4001809AA /* SpinerContainerView.swift in Sources */,
 				3320FFCF2682EBC4001809AA /* ReferTableView.swift in Sources */,
+				33EDB0D0268ED7F20040DCD4 /* PredictMatchController.swift in Sources */,
 				3320FFB02682EBC4001809AA /* IQPreviousNextView.swift in Sources */,
 				3320FFC02682EBC4001809AA /* IQUIScrollView+Additions.swift in Sources */,
 				3320FFB72682EBC4001809AA /* IQKeyboardManagerConstantsInternal.swift in Sources */,
@@ -768,6 +869,7 @@
 				3320FFB62682EBC4001809AA /* IQKeyboardManager+UIKeyboardNotification.swift in Sources */,
 				3320FFD42682EBC4001809AA /* NewReferTableViewCell.swift in Sources */,
 				3320FFBD2682EBC4001809AA /* IQKeyboardManager+OrientationNotification.swift in Sources */,
+				33EDB0EB2692CE870040DCD4 /* CustomNavView.swift in Sources */,
 				3320FFB92682EBC4001809AA /* IQKeyboardManager+Position.swift in Sources */,
 				3320FFCA2682EBC4001809AA /* NeumorphicButton.swift in Sources */,
 				3320FFC22682EBC4001809AA /* IQUITextFieldView+Additions.swift in Sources */,
@@ -779,7 +881,9 @@
 				3320FFB42682EBC4001809AA /* IQUIView+IQKeyboardToolbar.swift in Sources */,
 				3320FFCD2682EBC4001809AA /* ReferSuccessPopupHelper.swift in Sources */,
 				3320FFC32682EBC4001809AA /* IQUIView+Hierarchy.swift in Sources */,
+				33EDB0C2268ED7B10040DCD4 /* PredictIntroController.swift in Sources */,
 				3320FFA92682EBC4001809AA /* TermsView.swift in Sources */,
+				33EDB0C9268ED7C90040DCD4 /* MatchListController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

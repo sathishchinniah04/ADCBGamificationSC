@@ -10,8 +10,9 @@ import UIKit
 class ExpireView: UIView {
     @IBOutlet weak var button: UIButton!
     @IBOutlet weak var gameNameLabel: UILabel!
-    @IBOutlet weak var rewardLabel: UILabel!
+    @IBOutlet weak var gameNameSubTitleLabel: UILabel!
     @IBOutlet weak var expireLabel: UILabel!
+    @IBOutlet weak var descLabel: UILabel!
     var termsView = TermsViewHelper()
     var handler: (()->Void)?
     override init(frame: CGRect) {
