@@ -9,14 +9,14 @@ import UIKit
 
 class CustomNavViewController: UINavigationController {
     let nav = CustomNavView()
-    var yellow = UIColor(red: 255.0/256.0, green: 224.0/256.0, blue: 0.0/256.0, alpha: 1)
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         let topView = UIView(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: 20))
-        topView.backgroundColor = yellow
+        topView.backgroundColor = .customYellowColor()
         self.view.addSubview(topView)
         //self.delegate = self
-        nav.backgroundColor = yellow
+        nav.backgroundColor = .customYellowColor()
         nav.frame = CGRect(x: 0, y: 20, width: UIScreen.main.bounds.width, height: 45)
         nav.populateView(sController: self,complition: navHandler(action:))
         self.view.addSubview(nav)

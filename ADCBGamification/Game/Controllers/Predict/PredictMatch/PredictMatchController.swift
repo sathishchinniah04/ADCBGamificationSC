@@ -15,10 +15,10 @@ class PredictMatchController: UIViewController {
         super.viewDidLoad()
         navInitialSetup()
         tableSetup()
-        DispatchQueue.main.asyncAfter(deadline: .now()+0.3) {
+        DispatchQueue.main.asyncAfter(deadline: .now()+1) {
             self.tableView.beginUpdates()
             self.tableView.endUpdates()
-            self.buttonContainerView.addShadow(cornerRadius:0, shadowRadius: 5, opacity: 0.5)
+            self.buttonContainerView.addShadow(cornerRadius:0, shadowRadius: 2, opacity: 0.5)
         }
     }
 

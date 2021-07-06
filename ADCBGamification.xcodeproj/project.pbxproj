@@ -98,6 +98,8 @@
 		3320FFEB2682ED8F001809AA /* ADCBGamification.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3320FF0C2682EA9F001809AA /* ADCBGamification.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		3357ED862693207E00607F50 /* PredictTeamView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3357ED852693207E00607F50 /* PredictTeamView.swift */; };
 		3357ED8C2693209300607F50 /* PredictTeamView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3357ED8B2693209300607F50 /* PredictTeamView.xib */; };
+		335933AC26941F0E00CF6AAF /* CustomNeumophicButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 335933AB26941F0E00CF6AAF /* CustomNeumophicButton.swift */; };
+		335933B026941FC200CF6AAF /* CustomNeumophicButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = 335933AF26941FC200CF6AAF /* CustomNeumophicButton.xib */; };
 		33EDB0C2268ED7B10040DCD4 /* PredictIntroController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33EDB0C1268ED7B10040DCD4 /* PredictIntroController.swift */; };
 		33EDB0C9268ED7C90040DCD4 /* MatchListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33EDB0C8268ED7C90040DCD4 /* MatchListController.swift */; };
 		33EDB0D0268ED7F20040DCD4 /* PredictMatchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33EDB0CF268ED7F20040DCD4 /* PredictMatchController.swift */; };
@@ -219,6 +221,8 @@
 		3320FF9F2682EBC4001809AA /* CarnivalWheelSlice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarnivalWheelSlice.swift; sourceTree = "<group>"; };
 		3357ED852693207E00607F50 /* PredictTeamView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PredictTeamView.swift; sourceTree = "<group>"; };
 		3357ED8B2693209300607F50 /* PredictTeamView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PredictTeamView.xib; sourceTree = "<group>"; };
+		335933AB26941F0E00CF6AAF /* CustomNeumophicButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNeumophicButton.swift; sourceTree = "<group>"; };
+		335933AF26941FC200CF6AAF /* CustomNeumophicButton.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomNeumophicButton.xib; sourceTree = "<group>"; };
 		33EDB0C1268ED7B10040DCD4 /* PredictIntroController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PredictIntroController.swift; sourceTree = "<group>"; };
 		33EDB0C8268ED7C90040DCD4 /* MatchListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchListController.swift; sourceTree = "<group>"; };
 		33EDB0CF268ED7F20040DCD4 /* PredictMatchController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PredictMatchController.swift; sourceTree = "<group>"; };
@@ -348,6 +352,7 @@
 		3320FF4B2682EBC3001809AA /* CommonView */ = {
 			isa = PBXGroup;
 			children = (
+				335933AA26941EA400CF6AAF /* CustomNeumorphicButton */,
 				3320FF4C2682EBC3001809AA /* TermView */,
 				3320FF502682EBC3001809AA /* ExpireView */,
 			);
@@ -625,6 +630,15 @@
 			path = PredictTeamView;
 			sourceTree = "<group>";
 		};
+		335933AA26941EA400CF6AAF /* CustomNeumorphicButton */ = {
+			isa = PBXGroup;
+			children = (
+				335933AB26941F0E00CF6AAF /* CustomNeumophicButton.swift */,
+				335933AF26941FC200CF6AAF /* CustomNeumophicButton.xib */,
+			);
+			path = CustomNeumorphicButton;
+			sourceTree = "<group>";
+		};
 		33EDB0BE268ED72F0040DCD4 /* Predict */ = {
 			isa = PBXGroup;
 			children = (
@@ -829,6 +843,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3320FFA72682EBC4001809AA /* Spin.storyboard in Resources */,
+				335933B026941FC200CF6AAF /* CustomNeumophicButton.xib in Resources */,
 				3320FFC82682EBC4001809AA /* NeumorphicTextField.xib in Resources */,
 				3320FFA62682EBC4001809AA /* Refer.storyboard in Resources */,
 				3320FFD32682EBC4001809AA /* NewReferTableViewCell.xib in Resources */,
@@ -944,6 +959,7 @@
 				3320FFD62682EBC4001809AA /* SpinerContainerHelper.swift in Sources */,
 				3320FFB42682EBC4001809AA /* IQUIView+IQKeyboardToolbar.swift in Sources */,
 				3320FFCD2682EBC4001809AA /* ReferSuccessPopupHelper.swift in Sources */,
+				335933AC26941F0E00CF6AAF /* CustomNeumophicButton.swift in Sources */,
 				3320FFC32682EBC4001809AA /* IQUIView+Hierarchy.swift in Sources */,
 				33EDB0C2268ED7B10040DCD4 /* PredictIntroController.swift in Sources */,
 				3320FFA92682EBC4001809AA /* TermsView.swift in Sources */,

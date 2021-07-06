@@ -10,13 +10,14 @@ import UIKit
 class QuestionView: UIView {
     var view: UIView?
     @IBOutlet weak var questionContainerView: UIView!
+    @IBOutlet weak var buttonContainerStackView: UIStackView!
+    @IBOutlet weak var firstAnswerButton: CustomNeumophicButton!
+    @IBOutlet weak var secondAnswerButton: CustomNeumophicButton!
+    @IBOutlet weak var thirdAnswerButton: CustomNeumophicButton!
+    @IBOutlet weak var fourthAnswerButton: CustomNeumophicButton!
     
-    @IBOutlet weak var firstAnswerButton: NeumorphicButton!
-    @IBOutlet weak var secondAnswerButton: NeumorphicButton!
-    @IBOutlet weak var thirdAnswerButton: NeumorphicButton!
-    @IBOutlet weak var fourthAnswerButton: NeumorphicButton!
-    
-    
+    var noOfQ: Int = 4
+    var noOfButton: Int = 4
     func loaxXib() -> UIView {
         return UINib(nibName: "QuestionView", bundle: Bundle(for: Self.self)).instantiate(withOwner: self, options: nil).first as! UIView
     }
@@ -41,11 +42,31 @@ class QuestionView: UIView {
         view?.frame = self.bounds
         view?.autoresizingMask = [.flexibleWidth,.flexibleHeight]
         self.addSubview(view!)
+        hideAllButton()
+        buttonSetup()
     }
     
+    func buttonSetup() {
+        firstAnswerButton.handler = buttonHandler
+        secondAnswerButton.handler = buttonHandler
+        thirdAnswerButton.handler = buttonHandler
+        fourthAnswerButton.handler = buttonHandler
+    }
+    
+    func buttonHandler() {
+            print("Tapped")
+        buttonContainerStackView.isUserInteractionEnabled = false
+    }
+    
+    func hideAllButton() {
+        for i in 0..<noOfButton {
+        let v = self.viewWithTag(i+1)
+            v?.isHidden = true
+        }
+    }
     func populateView() {
         setupCornerRadius()
-        buttonSetup()
+        self.visibleOption()
     }
     
     func setupCornerRadius() {
@@ -54,8 +75,11 @@ class QuestionView: UIView {
         }
     }
     
-    func buttonSetup() {
-        firstAnswerButton.button.setTitleColor(UIColor.black, for: .normal)
-        firstAnswerButton.button.setTitle("firstAnswerButton", for: .normal)
+    func visibleOption() {
+        for i in 0..<noOfQ {
+            let v = self.viewWithTag(i+1)
+            v?.isHidden = false
+        }
     }
+    
 }

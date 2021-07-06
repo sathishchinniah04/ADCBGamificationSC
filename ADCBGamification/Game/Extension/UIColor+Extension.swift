@@ -16,4 +16,7 @@ extension UIColor {
    class func newmorphicColor() -> UIColor {
         return UIColor(red: 248.0/256.0, green: 248.0/256.0, blue: 248.0/256.0, alpha: 1)
     }
+    class func customYellowColor() -> UIColor {
+         return UIColor(red: 255.0/256.0, green: 224.0/256.0, blue: 0.0/256.0, alpha: 1)
+     }
 }
