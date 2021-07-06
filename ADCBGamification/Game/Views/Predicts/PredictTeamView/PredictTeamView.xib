@@ -29,7 +29,7 @@
                     <rect key="frame" x="0.0" y="0.0" width="661" height="247"/>
                     <subviews>
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="17n-d9-AOt">
-                            <rect key="frame" x="20" y="20" width="641" height="183"/>
+                            <rect key="frame" x="20" y="0.0" width="641" height="183"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="UAE League Cup" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JDG-lh-POg">
                                     <rect key="frame" x="0.0" y="0.0" width="641" height="19"/>
@@ -73,7 +73,7 @@
                                                     </subviews>
                                                 </stackView>
                                             </subviews>
-                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
                                                 <constraint firstAttribute="trailing" secondItem="iZq-MT-5Ew" secondAttribute="trailing" constant="10" id="18x-Os-yZo"/>
                                                 <constraint firstItem="iZq-MT-5Ew" firstAttribute="top" secondItem="Fe8-du-Nac" secondAttribute="top" constant="10" id="AUt-l4-UrF"/>
@@ -91,7 +91,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
-                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="50" id="47l-Fi-EMY"/>
                                                 <constraint firstItem="RZe-dl-RyT" firstAttribute="centerX" secondItem="XCp-eV-pCK" secondAttribute="centerX" id="Lgy-ou-ExX"/>
@@ -133,7 +133,7 @@
                                                     </subviews>
                                                 </stackView>
                                             </subviews>
-                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
                                                 <constraint firstItem="YcO-0m-b2A" firstAttribute="top" secondItem="OO6-tW-ly5" secondAttribute="top" constant="10" id="2at-7M-7kG"/>
                                                 <constraint firstItem="YcO-0m-b2A" firstAttribute="leading" secondItem="OO6-tW-ly5" secondAttribute="leading" constant="10" id="AI3-vF-TPY"/>
@@ -153,16 +153,16 @@
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </stackView>
                     </subviews>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstAttribute="trailing" secondItem="17n-d9-AOt" secondAttribute="trailing" id="1eI-WG-ruO"/>
-                        <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="17n-d9-AOt" secondAttribute="bottom" constant="20" id="34S-9Q-urR"/>
-                        <constraint firstItem="17n-d9-AOt" firstAttribute="top" secondItem="TBU-VV-GGG" secondAttribute="top" constant="20" id="DDx-bm-Cn0"/>
+                        <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="17n-d9-AOt" secondAttribute="bottom" id="34S-9Q-urR"/>
+                        <constraint firstItem="17n-d9-AOt" firstAttribute="top" secondItem="TBU-VV-GGG" secondAttribute="top" id="DDx-bm-Cn0"/>
                         <constraint firstItem="17n-d9-AOt" firstAttribute="leading" secondItem="TBU-VV-GGG" secondAttribute="leading" constant="20" id="Hyq-2w-nyB"/>
                     </constraints>
                 </view>
             </subviews>
-            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstAttribute="trailing" secondItem="TBU-VV-GGG" secondAttribute="trailing" id="LEt-zR-VHj"/>
                 <constraint firstAttribute="bottom" secondItem="TBU-VV-GGG" secondAttribute="bottom" id="MxV-ze-Y4W"/>

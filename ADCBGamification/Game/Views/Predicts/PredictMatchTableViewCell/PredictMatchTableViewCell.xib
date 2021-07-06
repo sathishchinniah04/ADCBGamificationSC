@@ -35,7 +35,7 @@
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bo9-rt-Gjz" customClass="PredictTeamView" customModule="ADCBGamification" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="280" height="80"/>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="80" placeholder="YES" id="oVw-Oz-bgA"/>
                                                 </constraints>

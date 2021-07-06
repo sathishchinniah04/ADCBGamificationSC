@@ -22,14 +22,14 @@
                         <rect key="frame" x="20" y="10" width="310" height="218"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7QK-1w-W4H" customClass="PredictTeamView" customModule="ADCBGamification" customModuleProvider="target">
-                                <rect key="frame" x="10" y="0.0" width="290" height="218"/>
+                                <rect key="frame" x="10" y="20" width="290" height="178"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="7QK-1w-W4H" firstAttribute="top" secondItem="QPe-Qh-FOs" secondAttribute="top" id="2Ug-HR-vxz"/>
-                            <constraint firstAttribute="bottom" secondItem="7QK-1w-W4H" secondAttribute="bottom" id="CEE-HP-8wR"/>
+                            <constraint firstItem="7QK-1w-W4H" firstAttribute="top" secondItem="QPe-Qh-FOs" secondAttribute="top" constant="20" id="2Ug-HR-vxz"/>
+                            <constraint firstAttribute="bottom" secondItem="7QK-1w-W4H" secondAttribute="bottom" constant="20" id="CEE-HP-8wR"/>
                             <constraint firstItem="7QK-1w-W4H" firstAttribute="leading" secondItem="QPe-Qh-FOs" secondAttribute="leading" constant="10" id="ZBz-ad-4RZ"/>
                             <constraint firstAttribute="trailing" secondItem="7QK-1w-W4H" secondAttribute="trailing" constant="10" id="wQO-oQ-uJK"/>
                         </constraints>

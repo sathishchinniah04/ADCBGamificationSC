@@ -29,7 +29,7 @@
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="HH6-ca-mjg"/>
-                        <color key="backgroundColor" red="0.99205940960000005" green="0.99222511049999995" blue="0.99203759430000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="1" green="0.8784313725490196" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="XUZ-wa-BVQ" firstAttribute="height" secondItem="8Yo-nW-oOk" secondAttribute="height" multiplier="0.55" id="KHP-6y-5QI"/>
                             <constraint firstItem="XUZ-wa-BVQ" firstAttribute="leading" secondItem="8Yo-nW-oOk" secondAttribute="leading" id="aoe-k8-ZCr"/>
