@@ -114,6 +114,12 @@
 		33F59CD3269330C0005B009A /* PredictMatchTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 33F59CD1269330C0005B009A /* PredictMatchTableViewCell.xib */; };
 		33F59CD8269331E6005B009A /* QuestionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F59CD7269331E6005B009A /* QuestionView.swift */; };
 		33F59CDE26933283005B009A /* QuestionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 33F59CDD26933283005B009A /* QuestionView.xib */; };
+		33FC31672695758500868D9E /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33FC31662695758500868D9E /* NetworkManager.swift */; };
+		33FC316E26957F5C00868D9E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33FC316D26957F5C00868D9E /* Constants.swift */; };
+		33FC317326957FB000868D9E /* StoreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33FC317226957FB000868D9E /* StoreManager.swift */; };
+		33FC317A26958C5D00868D9E /* GameListVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33FC317926958C5D00868D9E /* GameListVM.swift */; };
+		33FC317F26958C9B00868D9E /* GameList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33FC317E26958C9B00868D9E /* GameList.swift */; };
+		33FC318426958D2F00868D9E /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33FC318326958D2F00868D9E /* Utility.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -237,6 +243,12 @@
 		33F59CD1269330C0005B009A /* PredictMatchTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PredictMatchTableViewCell.xib; sourceTree = "<group>"; };
 		33F59CD7269331E6005B009A /* QuestionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionView.swift; sourceTree = "<group>"; };
 		33F59CDD26933283005B009A /* QuestionView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QuestionView.xib; sourceTree = "<group>"; };
+		33FC31662695758500868D9E /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		33FC316D26957F5C00868D9E /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		33FC317226957FB000868D9E /* StoreManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreManager.swift; sourceTree = "<group>"; };
+		33FC317926958C5D00868D9E /* GameListVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameListVM.swift; sourceTree = "<group>"; };
+		33FC317E26958C9B00868D9E /* GameList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameList.swift; sourceTree = "<group>"; };
+		33FC318326958D2F00868D9E /* Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -304,6 +316,8 @@
 		3320FF3F2682EBC3001809AA /* Game */ = {
 			isa = PBXGroup;
 			children = (
+				33FC317D26958C9000868D9E /* Model */,
+				33FC317826958C4900868D9E /* ViewModel */,
 				33EDB0E62692CD720040DCD4 /* CustomView */,
 				33EDB0BF268ED74A0040DCD4 /* Views */,
 				3320FF402682EBC3001809AA /* Extension */,
@@ -344,6 +358,10 @@
 		3320FF4A2682EBC3001809AA /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				33FC318226958D1F00868D9E /* Utility */,
+				33FC317126957FA000868D9E /* StoreManager */,
+				33FC316C26957F4300868D9E /* Constants */,
+				33FC31652695756C00868D9E /* NetworkManager */,
 				3320FF4B2682EBC3001809AA /* CommonView */,
 			);
 			path = Common;
@@ -744,6 +762,54 @@
 			path = QuestionView;
 			sourceTree = "<group>";
 		};
+		33FC31652695756C00868D9E /* NetworkManager */ = {
+			isa = PBXGroup;
+			children = (
+				33FC31662695758500868D9E /* NetworkManager.swift */,
+			);
+			path = NetworkManager;
+			sourceTree = "<group>";
+		};
+		33FC316C26957F4300868D9E /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				33FC316D26957F5C00868D9E /* Constants.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		33FC317126957FA000868D9E /* StoreManager */ = {
+			isa = PBXGroup;
+			children = (
+				33FC317226957FB000868D9E /* StoreManager.swift */,
+			);
+			path = StoreManager;
+			sourceTree = "<group>";
+		};
+		33FC317826958C4900868D9E /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				33FC317926958C5D00868D9E /* GameListVM.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		33FC317D26958C9000868D9E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				33FC317E26958C9B00868D9E /* GameList.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		33FC318226958D1F00868D9E /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				33FC318326958D2F00868D9E /* Utility.swift */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -918,6 +984,7 @@
 				3320FFA42682EBC4001809AA /* UIController+Extension.swift in Sources */,
 				3320FFB52682EBC4001809AA /* IQInvocation.swift in Sources */,
 				3320FFC12682EBC4001809AA /* IQUIViewController+Additions.swift in Sources */,
+				33FC318426958D2F00868D9E /* Utility.swift in Sources */,
 				3320FFCC2682EBC4001809AA /* ReferSuccessPopupView.swift in Sources */,
 				3320FFA22682EBC4001809AA /* UIView+Extension.swift in Sources */,
 				3320FFB82682EBC4001809AA /* IQKeyboardManagerConstants.swift in Sources */,
@@ -928,6 +995,7 @@
 				33EDB0E22692CCB40040DCD4 /* MatchTableViewCell.swift in Sources */,
 				3320FFB32682EBC4001809AA /* IQToolbar.swift in Sources */,
 				3320FFAF2682EBC4001809AA /* IQKeyboardManager+Internal.swift in Sources */,
+				33FC317F26958C9B00868D9E /* GameList.swift in Sources */,
 				3320FFDC2682EBC4001809AA /* FortuneWheelLayer.swift in Sources */,
 				3320FFDD2682EBC4001809AA /* Utils.swift in Sources */,
 				33EDB0F42692D9F00040DCD4 /* CustomNavViewController.swift in Sources */,
@@ -940,13 +1008,17 @@
 				3320FFC02682EBC4001809AA /* IQUIScrollView+Additions.swift in Sources */,
 				3320FFB72682EBC4001809AA /* IQKeyboardManagerConstantsInternal.swift in Sources */,
 				33F59CD2269330C0005B009A /* PredictMatchTableViewCell.swift in Sources */,
+				33FC317A26958C5D00868D9E /* GameListVM.swift in Sources */,
 				3320FFA12682EBC4001809AA /* UIButton+Extension.swift in Sources */,
+				33FC316E26957F5C00868D9E /* Constants.swift in Sources */,
 				3320FFBB2682EBC4001809AA /* IQKeyboardManager.swift in Sources */,
 				3320FFC62682EBC4001809AA /* ReferIntroController.swift in Sources */,
 				3320FFE22682EBC4001809AA /* CarnivalWheelSlice.swift in Sources */,
 				33F59CD8269331E6005B009A /* QuestionView.swift in Sources */,
 				3320FFB62682EBC4001809AA /* IQKeyboardManager+UIKeyboardNotification.swift in Sources */,
 				3320FFD42682EBC4001809AA /* NewReferTableViewCell.swift in Sources */,
+				33FC31672695758500868D9E /* NetworkManager.swift in Sources */,
+				33FC317326957FB000868D9E /* StoreManager.swift in Sources */,
 				3320FFBD2682EBC4001809AA /* IQKeyboardManager+OrientationNotification.swift in Sources */,
 				33EDB0EB2692CE870040DCD4 /* CustomNavView.swift in Sources */,
 				3320FFB92682EBC4001809AA /* IQKeyboardManager+Position.swift in Sources */,

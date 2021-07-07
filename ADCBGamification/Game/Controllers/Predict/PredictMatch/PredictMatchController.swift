@@ -15,6 +15,7 @@ class PredictMatchController: UIViewController {
         super.viewDidLoad()
         navInitialSetup()
         tableSetup()
+        //self.navigationController?.navigationBar.isHidden = true
         DispatchQueue.main.asyncAfter(deadline: .now()+1) {
             self.tableView.beginUpdates()
             self.tableView.endUpdates()

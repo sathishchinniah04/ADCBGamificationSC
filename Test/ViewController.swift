@@ -12,14 +12,14 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         DispatchQueue.main.async {
-            Game.loadGame(controller: self)
+            Game.loadGame(controller: self, msisdn: "9902390324", language: "EN")
         }
         // Do any additional setup after loading the view.
     }
     
     @IBAction func openGameButtonAction() {
         DispatchQueue.main.async {
-            Game.loadGame(controller: self)
+            Game.loadGame(controller: self, msisdn: "9902390324", language: "EN")
         }
     }
 

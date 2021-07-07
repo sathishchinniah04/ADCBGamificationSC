@@ -30,7 +30,7 @@ class PredictMatchTableViewCell: UITableViewCell {
     }
     
     func appearenceSetup() {
-        predictTeamContainerView.addShadow(cornerRadius: 10, shadowRadius: 6, opacity: 0.5)
+        predictTeamContainerView.addShadow(cornerRadius: 10, shadowRadius: 6, opacity: 0.09)
     }
     
     func hideUnwantedObject() {

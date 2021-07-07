@@ -43,6 +43,7 @@ extension MatchListController: UITableViewDelegate, UITableViewDataSource {
     
     func moveToController() {
         let controller = UIStoryboard(name: "Predict", bundle: Bundle(for: Self.self)).instantiateViewController(withIdentifier: "PredictMatchController") as! PredictMatchController
+        //self.present(controller, animated: true, completion: nil)
         self.navigationController?.pushViewController(controller, animated: true)
     }
 }
