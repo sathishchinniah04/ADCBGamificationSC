@@ -97,14 +97,35 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="493"/>
                             </imageView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Oaw-BX-70x">
-                                <rect key="frame" x="0.0" y="89" width="414" height="708"/>
+                                <rect key="frame" x="0.0" y="89" width="414" height="696"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4AT-rD-JbW">
-                                <rect key="frame" x="0.0" y="797" width="414" height="65"/>
+                                <rect key="frame" x="0.0" y="785" width="414" height="77"/>
+                                <subviews>
+                                    <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UVo-Be-85q">
+                                        <rect key="frame" x="30" y="16" width="354" height="45"/>
+                                        <color key="backgroundColor" red="0.13333333333333333" green="0.12941176470588234" blue="0.396078431372549" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="45" id="fba-7v-8DG"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                                        <state key="normal" title="Confirm &amp; Submit">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="65" id="fF4-oE-1YH"/>
+                                    <constraint firstItem="UVo-Be-85q" firstAttribute="leading" secondItem="4AT-rD-JbW" secondAttribute="leading" constant="30" id="99n-XY-pgz"/>
+                                    <constraint firstItem="UVo-Be-85q" firstAttribute="centerX" secondItem="4AT-rD-JbW" secondAttribute="centerX" id="GH3-N9-AeY"/>
+                                    <constraint firstItem="UVo-Be-85q" firstAttribute="centerY" secondItem="4AT-rD-JbW" secondAttribute="centerY" id="nu9-JM-CnG"/>
+                                    <constraint firstItem="UVo-Be-85q" firstAttribute="top" secondItem="4AT-rD-JbW" secondAttribute="top" constant="16" id="wo3-Zt-HIO"/>
                                 </constraints>
                             </view>
                         </subviews>

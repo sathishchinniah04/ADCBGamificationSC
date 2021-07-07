@@ -16,7 +16,7 @@ class QuestionView: UIView {
     @IBOutlet weak var thirdAnswerButton: CustomNeumophicButton!
     @IBOutlet weak var fourthAnswerButton: CustomNeumophicButton!
     
-    var noOfQ: Int = 4
+    var noOfQ: Int = 2
     var noOfButton: Int = 4
     func loaxXib() -> UIView {
         return UINib(nibName: "QuestionView", bundle: Bundle(for: Self.self)).instantiate(withOwner: self, options: nil).first as! UIView

@@ -53,7 +53,7 @@
                                         </view>
                                     </subviews>
                                 </stackView>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="who is going to win this match?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R73-1I-dve">
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="who is going to win this match?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R73-1I-dve">
                                     <rect key="frame" x="101.5" y="70" width="211" height="17"/>
                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
                                     <nil key="textColor"/>
@@ -89,7 +89,7 @@
                             </constraints>
                         </stackView>
                     </subviews>
-                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstItem="5a1-BL-xlG" firstAttribute="top" secondItem="E3T-So-Z93" secondAttribute="top" id="OKa-Tw-57Q"/>
                         <constraint firstAttribute="trailing" secondItem="5a1-BL-xlG" secondAttribute="trailing" id="Ug7-Ne-r99"/>
@@ -99,7 +99,7 @@
                 </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
-            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstItem="E3T-So-Z93" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="F5G-Jc-rS9"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="E3T-So-Z93" secondAttribute="bottom" id="U7x-j5-Pjw"/>

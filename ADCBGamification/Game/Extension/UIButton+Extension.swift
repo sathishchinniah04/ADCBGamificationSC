@@ -10,6 +10,7 @@ extension UIButton {
     func addCustomShadow(cornerRadius:CGFloat = 5.0,shadowRadius:CGFloat = 4, opacity: CGFloat = 0.1, color:UIColor = UIColor.black, offset: CGSize) {
         layer.cornerRadius = cornerRadius
         layer.masksToBounds = false
+        
         layer.shadowColor = color.cgColor
         layer.shadowOffset = offset//CGSize(width: 0, height: 0.0)
         layer.shadowOpacity = Float(opacity)

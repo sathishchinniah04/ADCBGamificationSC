@@ -61,6 +61,8 @@ class CustomNeumophicButton: UIView {
         darkL = nil
         lightL = nil
         button.backgroundColor = UIColor.white
+        button.layer.cornerRadius = 5
+        
         button.addCustomShadow(cornerRadius: 5, shadowRadius: 2, opacity: 0.2, color: UIColor.black, offset: CGSize(width: 2, height: 2))
     }
     

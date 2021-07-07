@@ -9,7 +9,8 @@ import UIKit
 
 class PredictMatchTableViewCell: UITableViewCell {
     @IBOutlet weak var titleLabel: UILabel!
-    
+    @IBOutlet weak var predictTeamContainerView: UIView!
+    @IBOutlet weak var spacerView: UIView!
     @IBOutlet weak var predictTeamView: PredictTeamView!
     @IBOutlet weak var questionView: QuestionView!
     
@@ -20,12 +21,16 @@ class PredictMatchTableViewCell: UITableViewCell {
 
     func populateView(index: Int) {
         self.questionView.populateView()
+        self.hideUnwantedObject()
         DispatchQueue.main.async {
+            self.appearenceSetup()
             self.setupForFirstIndex(index: index)
             self.predictTeamView.populateView()
-            self.hideUnwantedObject()
-            
         }
+    }
+    
+    func appearenceSetup() {
+        predictTeamContainerView.addShadow(cornerRadius: 10, shadowRadius: 6, opacity: 0.5)
     }
     
     func hideUnwantedObject() {
@@ -37,9 +42,13 @@ class PredictMatchTableViewCell: UITableViewCell {
         if index == 0 {
             self.predictTeamView.isHidden = false
             self.titleLabel.isHidden = false
+            self.spacerView.isHidden = false
+            self.predictTeamContainerView.isHidden = false
         } else {
             self.predictTeamView.isHidden = true
             self.titleLabel.isHidden = true
+            self.spacerView.isHidden = true
+            self.predictTeamContainerView.isHidden = true
         }
     }
     
