@@ -44,6 +44,7 @@ enum CustomNavViewAction {
         view?.frame = self.bounds
         view?.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         self.addSubview(view!)
+        
     }
     
     @IBAction func backButtonAction() {
@@ -65,5 +66,7 @@ enum CustomNavViewAction {
     func populateView(sController: UIViewController, complition:((CustomNavViewAction)->Void)? = nil) {
         self.handler = complition
         self.sController = sController
+        
+        print("cont?.navigationController?.viewControllers.count \(sController.navigationController?.viewControllers.count)")
     }
 }

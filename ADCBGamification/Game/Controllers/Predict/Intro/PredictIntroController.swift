@@ -9,11 +9,22 @@ import UIKit
 
 class PredictIntroController: UIViewController {
     @IBOutlet weak var expireView: ExpireView!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    var game: Games?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         expireViewSetup()
+        expireView.isUserInteractionEnabled = false
     }
+    
+    func updateOnResponce(game: Games) {
+        print("Updated from game list")
+        activityIndicator.stopAnimating()
+        expireView.isUserInteractionEnabled = true
+        self.game = game
+    }
+    
     
     func expireViewSetup() {
         expireView.isShowTerms = false

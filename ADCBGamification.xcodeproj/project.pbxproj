@@ -120,6 +120,10 @@
 		33FC317A26958C5D00868D9E /* GameListVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33FC317926958C5D00868D9E /* GameListVM.swift */; };
 		33FC317F26958C9B00868D9E /* GameList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33FC317E26958C9B00868D9E /* GameList.swift */; };
 		33FC318426958D2F00868D9E /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33FC318326958D2F00868D9E /* Utility.swift */; };
+		33FC319B2695B04300868D9E /* GameList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 33FC319A2695B04200868D9E /* GameList.storyboard */; };
+		33FC31A02695B08300868D9E /* GameListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33FC319F2695B08300868D9E /* GameListController.swift */; };
+		33FC31A72695B18800868D9E /* GameListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33FC31A52695B18800868D9E /* GameListTableViewCell.swift */; };
+		33FC31A82695B18800868D9E /* GameListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 33FC31A62695B18800868D9E /* GameListTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -249,6 +253,10 @@
 		33FC317926958C5D00868D9E /* GameListVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameListVM.swift; sourceTree = "<group>"; };
 		33FC317E26958C9B00868D9E /* GameList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameList.swift; sourceTree = "<group>"; };
 		33FC318326958D2F00868D9E /* Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
+		33FC319A2695B04200868D9E /* GameList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = GameList.storyboard; sourceTree = "<group>"; };
+		33FC319F2695B08300868D9E /* GameListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameListController.swift; sourceTree = "<group>"; };
+		33FC31A52695B18800868D9E /* GameListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameListTableViewCell.swift; sourceTree = "<group>"; };
+		33FC31A62695B18800868D9E /* GameListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GameListTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -351,6 +359,7 @@
 				3320FF482682EBC3001809AA /* Refer.storyboard */,
 				3320FF492682EBC3001809AA /* Spin.storyboard */,
 				33EDB0D5268ED8200040DCD4 /* Predict.storyboard */,
+				33FC319A2695B04200868D9E /* GameList.storyboard */,
 			);
 			path = Storyboard;
 			sourceTree = "<group>";
@@ -462,6 +471,7 @@
 		3320FF712682EBC3001809AA /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				33FC319E2695B06800868D9E /* GameListController */,
 				33EDB0F22692D9BC0040DCD4 /* NavigationController */,
 				33EDB0BE268ED72F0040DCD4 /* Predict */,
 				3320FF722682EBC3001809AA /* Refer */,
@@ -670,6 +680,7 @@
 		33EDB0BF268ED74A0040DCD4 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				33FC31A32695B15A00868D9E /* GameList */,
 				33EDB0DE2692CC650040DCD4 /* Predicts */,
 			);
 			path = Views;
@@ -810,6 +821,31 @@
 			path = Utility;
 			sourceTree = "<group>";
 		};
+		33FC319E2695B06800868D9E /* GameListController */ = {
+			isa = PBXGroup;
+			children = (
+				33FC319F2695B08300868D9E /* GameListController.swift */,
+			);
+			path = GameListController;
+			sourceTree = "<group>";
+		};
+		33FC31A32695B15A00868D9E /* GameList */ = {
+			isa = PBXGroup;
+			children = (
+				33FC31A42695B16300868D9E /* GameListTableViewCell */,
+			);
+			path = GameList;
+			sourceTree = "<group>";
+		};
+		33FC31A42695B16300868D9E /* GameListTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				33FC31A52695B18800868D9E /* GameListTableViewCell.swift */,
+				33FC31A62695B18800868D9E /* GameListTableViewCell.xib */,
+			);
+			path = GameListTableViewCell;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -922,12 +958,14 @@
 				3320FFAB2682EBC4001809AA /* ExpireView.xib in Resources */,
 				3320FFD22682EBC4001809AA /* HistoryTableViewCell.xib in Resources */,
 				33F59CD3269330C0005B009A /* PredictMatchTableViewCell.xib in Resources */,
+				33FC319B2695B04300868D9E /* GameList.storyboard in Resources */,
 				3320FFC92682EBC4001809AA /* NeumorphicButton.xib in Resources */,
 				3320FFCE2682EBC4001809AA /* ReferSuccessPopupView.xib in Resources */,
 				3320FFAD2682EBC4001809AA /* GamificationAssets.xcassets in Resources */,
 				33EDB0EF2692D0A70040DCD4 /* CustomNavView.xib in Resources */,
 				33EDB0D6268ED8200040DCD4 /* Predict.storyboard in Resources */,
 				3320FFD72682EBC4001809AA /* SpinerContainerView.xib in Resources */,
+				33FC31A82695B18800868D9E /* GameListTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1021,6 +1059,7 @@
 				33FC317326957FB000868D9E /* StoreManager.swift in Sources */,
 				3320FFBD2682EBC4001809AA /* IQKeyboardManager+OrientationNotification.swift in Sources */,
 				33EDB0EB2692CE870040DCD4 /* CustomNavView.swift in Sources */,
+				33FC31A72695B18800868D9E /* GameListTableViewCell.swift in Sources */,
 				3320FFB92682EBC4001809AA /* IQKeyboardManager+Position.swift in Sources */,
 				3320FFCA2682EBC4001809AA /* NeumorphicButton.swift in Sources */,
 				3320FFC22682EBC4001809AA /* IQUITextFieldView+Additions.swift in Sources */,
@@ -1031,6 +1070,7 @@
 				3320FFD62682EBC4001809AA /* SpinerContainerHelper.swift in Sources */,
 				3320FFB42682EBC4001809AA /* IQUIView+IQKeyboardToolbar.swift in Sources */,
 				3320FFCD2682EBC4001809AA /* ReferSuccessPopupHelper.swift in Sources */,
+				33FC31A02695B08300868D9E /* GameListController.swift in Sources */,
 				335933AC26941F0E00CF6AAF /* CustomNeumophicButton.swift in Sources */,
 				3320FFC32682EBC4001809AA /* IQUIView+Hierarchy.swift in Sources */,
 				33EDB0C2268ED7B10040DCD4 /* PredictIntroController.swift in Sources */,

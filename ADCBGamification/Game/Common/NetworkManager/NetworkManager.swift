@@ -29,7 +29,7 @@ class NetworkManager {
         return req
     }
     
-    class func postRequest<T:Decodable>(struct: T.Type, url: String, urlReq: URLRequest? = nil, request: Dictionary<String, Any>, complition:((T?,ErrorType?)->Void?)?) {
+    class func postRequest<T:Decodable>(struct: T.Type, url: String, urlReq: URLRequest? = nil, request: Dictionary<String, Any>, complition: ((T?,ErrorType?)->Void)?) {
         guard let ur = URL(string: url) else { complition?(nil, .invalidUrl); return}
         let urReq = urlReq ?? URLRequest(url: ur)
         var req = createCommonRequest(url: ur, urlReq: urReq, methodType: .post)

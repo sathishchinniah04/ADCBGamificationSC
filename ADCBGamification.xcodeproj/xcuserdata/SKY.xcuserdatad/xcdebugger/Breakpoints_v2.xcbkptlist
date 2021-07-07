@@ -7,64 +7,80 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "E664D8C6-F320-4734-B198-B41D18EC9758"
+            uuid = "1C44188C-FD4B-4E06-8B5E-719211B893EB"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "ADCBGamification/Game/Common/NetworkManager/NetworkManager.swift"
+            filePath = "ADCBGamification/Game/ViewModel/GameListVM.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "78"
-            endingLineNumber = "78"
-            landmarkName = "parseData(data:resp:error:complition:)"
+            startingLineNumber = "47"
+            endingLineNumber = "47"
+            landmarkName = "getActiveGames(list:complition:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "50218374-566A-4E31-872A-1A1F20E83F38"
+            uuid = "21DB2D2B-257E-487E-8CCF-B6311FF8B1C9"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "ADCBGamification/Game/Common/NetworkManager/NetworkManager.swift"
+            filePath = "ADCBGamification/Game/CustomView/CustomNavView/CustomNavView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "77"
-            endingLineNumber = "77"
-            landmarkName = "parseData(data:resp:error:complition:)"
+            startingLineNumber = "52"
+            endingLineNumber = "52"
+            landmarkName = "backButtonAction()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "C55F0F36-CB74-429B-ACEB-9DE809F769B0"
+            uuid = "98656B9A-B31C-4CEE-A204-C273F2403EC5"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "ADCBGamification/Game/Common/NetworkManager/NetworkManager.swift"
+            filePath = "ADCBGamification/Game/ViewModel/GameListVM.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "82"
-            endingLineNumber = "82"
-            landmarkName = "parseData(data:resp:error:complition:)"
+            startingLineNumber = "18"
+            endingLineNumber = "18"
+            landmarkName = "getGameList(url:gameType:gameid:complition:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "A08F3159-2665-43FF-867F-8C267D62014D"
+            uuid = "CE0A95CD-BFCB-4767-A815-B83E1D2432FE"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "ADCBGamification/Game/Common/NetworkManager/NetworkManager.swift"
+            filePath = "ADCBGamification/Game/ViewModel/GameListVM.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "83"
-            endingLineNumber = "83"
-            landmarkName = "parseData(data:resp:error:complition:)"
+            startingLineNumber = "21"
+            endingLineNumber = "21"
+            landmarkName = "getGameList(url:gameType:gameid:complition:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "8E57DD8F-CB99-424D-830F-2B486CA03D42"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ADCBGamification/Game/ViewModel/GameListVM.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "30"
+            endingLineNumber = "30"
+            landmarkName = "getGameList(url:gameType:gameid:complition:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

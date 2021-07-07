@@ -64,6 +64,10 @@
                                     <constraint firstAttribute="height" constant="128" placeholder="YES" id="FL3-MQ-5k5"/>
                                 </constraints>
                             </view>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="xxf-cY-7Q7">
+                                <rect key="frame" x="188.5" y="429.5" width="37" height="37"/>
+                                <color key="color" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="F75-gm-2pA"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -72,12 +76,15 @@
                             <constraint firstItem="O1D-93-f0H" firstAttribute="height" secondItem="9LS-1p-Or3" secondAttribute="height" multiplier="0.55" id="7wa-X5-mOd"/>
                             <constraint firstItem="F75-gm-2pA" firstAttribute="trailing" secondItem="O1D-93-f0H" secondAttribute="trailing" id="Mvk-nf-CKr"/>
                             <constraint firstItem="0zs-1g-UM0" firstAttribute="leading" secondItem="F75-gm-2pA" secondAttribute="leading" id="TYA-d3-N2f"/>
+                            <constraint firstItem="xxf-cY-7Q7" firstAttribute="centerY" secondItem="9LS-1p-Or3" secondAttribute="centerY" id="jiN-aX-18L"/>
                             <constraint firstItem="O1D-93-f0H" firstAttribute="top" secondItem="9LS-1p-Or3" secondAttribute="top" id="qJA-QL-DME"/>
                             <constraint firstItem="F75-gm-2pA" firstAttribute="bottom" secondItem="0zs-1g-UM0" secondAttribute="bottom" constant="20" id="qpv-jn-NT6"/>
                             <constraint firstItem="O1D-93-f0H" firstAttribute="leading" secondItem="F75-gm-2pA" secondAttribute="leading" id="tPC-AS-WDR"/>
+                            <constraint firstItem="xxf-cY-7Q7" firstAttribute="centerX" secondItem="9LS-1p-Or3" secondAttribute="centerX" id="yaR-oM-c6Z"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="activityIndicator" destination="xxf-cY-7Q7" id="bmt-Xw-Fze"/>
                         <outlet property="expireView" destination="0zs-1g-UM0" id="Nkd-iS-rPk"/>
                     </connections>
                 </viewController>

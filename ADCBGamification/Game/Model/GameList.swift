@@ -19,9 +19,9 @@ class GameListResponseDetail: Decodable {
 }
 
 class Games: Decodable {
-    let gameId: String
-    let gameTitle: String
-    let gameType: String
+    let gameId: String?
+    let gameTitle: String?
+    let gameType: String?
     let gameStatus: String?
     let executionStatus: String?
     
@@ -38,6 +38,7 @@ class Games: Decodable {
     let attributeList: AttributeList?
     let costOfGame: CostOfGame?
     let frequency:[Frequency]
+    
 }
 class ValidityPeriod: Decodable {
     var startDateTime: String?
@@ -70,7 +71,7 @@ class AttributeList: Decodable {
 
 class CostOfGame: Decodable {
     var cost: Float? = 0.0
-    let costType: String
+    let costType: String?
 }
 
 class Frequency: Decodable {
