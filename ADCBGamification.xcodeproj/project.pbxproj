@@ -127,6 +127,9 @@
 		33FC31AE2696D7CA00868D9E /* SpinViewOfferVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33FC31AD2696D7C900868D9E /* SpinViewOfferVM.swift */; };
 		33FC31B22696DC9F00868D9E /* SpinOffers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33FC31B12696DC9F00868D9E /* SpinOffers.swift */; };
 		33FC31BA2696F82800868D9E /* SpinAssignReward.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33FC31B92696F82800868D9E /* SpinAssignReward.swift */; };
+		33FC31C02697129100868D9E /* SpinSuccessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33FC31BF2697129100868D9E /* SpinSuccessView.swift */; };
+		33FC31C62697129B00868D9E /* SpinSuccessView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 33FC31C52697129B00868D9E /* SpinSuccessView.xib */; };
+		33FC31CA26971A9800868D9E /* SpinSuccessViewHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33FC31C926971A9800868D9E /* SpinSuccessViewHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -263,6 +266,9 @@
 		33FC31AD2696D7C900868D9E /* SpinViewOfferVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpinViewOfferVM.swift; sourceTree = "<group>"; };
 		33FC31B12696DC9F00868D9E /* SpinOffers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpinOffers.swift; sourceTree = "<group>"; };
 		33FC31B92696F82800868D9E /* SpinAssignReward.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpinAssignReward.swift; sourceTree = "<group>"; };
+		33FC31BF2697129100868D9E /* SpinSuccessView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpinSuccessView.swift; sourceTree = "<group>"; };
+		33FC31C52697129B00868D9E /* SpinSuccessView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SpinSuccessView.xib; sourceTree = "<group>"; };
+		33FC31C926971A9800868D9E /* SpinSuccessViewHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpinSuccessViewHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -686,6 +692,7 @@
 		33EDB0BF268ED74A0040DCD4 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				33FC31BD2697126C00868D9E /* SpinView */,
 				33FC31A32695B15A00868D9E /* GameList */,
 				33EDB0DE2692CC650040DCD4 /* Predicts */,
 			);
@@ -855,6 +862,24 @@
 			path = GameListTableViewCell;
 			sourceTree = "<group>";
 		};
+		33FC31BD2697126C00868D9E /* SpinView */ = {
+			isa = PBXGroup;
+			children = (
+				33FC31BE2697127600868D9E /* SpinSuccessView */,
+			);
+			path = SpinView;
+			sourceTree = "<group>";
+		};
+		33FC31BE2697127600868D9E /* SpinSuccessView */ = {
+			isa = PBXGroup;
+			children = (
+				33FC31BF2697129100868D9E /* SpinSuccessView.swift */,
+				33FC31C52697129B00868D9E /* SpinSuccessView.xib */,
+				33FC31C926971A9800868D9E /* SpinSuccessViewHelper.swift */,
+			);
+			path = SpinSuccessView;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -959,6 +984,7 @@
 				3320FFA62682EBC4001809AA /* Refer.storyboard in Resources */,
 				3320FFD32682EBC4001809AA /* NewReferTableViewCell.xib in Resources */,
 				33F59CDE26933283005B009A /* QuestionView.xib in Resources */,
+				33FC31C62697129B00868D9E /* SpinSuccessView.xib in Resources */,
 				3320FFA82682EBC4001809AA /* TermsView.xib in Resources */,
 				3357ED8C2693209300607F50 /* PredictTeamView.xib in Resources */,
 				33EDB0E32692CCB40040DCD4 /* MatchTableViewCell.xib in Resources */,
@@ -1037,6 +1063,7 @@
 				3320FFA22682EBC4001809AA /* UIView+Extension.swift in Sources */,
 				3320FFB82682EBC4001809AA /* IQKeyboardManagerConstants.swift in Sources */,
 				3320FFAE2682EBC4001809AA /* IQTextView.swift in Sources */,
+				33FC31C02697129100868D9E /* SpinSuccessView.swift in Sources */,
 				3320FFD82682EBC4001809AA /* SpinHomeController.swift in Sources */,
 				3357ED862693207E00607F50 /* PredictTeamView.swift in Sources */,
 				3320FFE02682EBC4001809AA /* SpinningWheelSlice .swift in Sources */,
@@ -1054,6 +1081,7 @@
 				3320FFCF2682EBC4001809AA /* ReferTableView.swift in Sources */,
 				33EDB0D0268ED7F20040DCD4 /* PredictMatchController.swift in Sources */,
 				3320FFB02682EBC4001809AA /* IQPreviousNextView.swift in Sources */,
+				33FC31CA26971A9800868D9E /* SpinSuccessViewHelper.swift in Sources */,
 				3320FFC02682EBC4001809AA /* IQUIScrollView+Additions.swift in Sources */,
 				3320FFB72682EBC4001809AA /* IQKeyboardManagerConstantsInternal.swift in Sources */,
 				33F59CD2269330C0005B009A /* PredictMatchTableViewCell.swift in Sources */,

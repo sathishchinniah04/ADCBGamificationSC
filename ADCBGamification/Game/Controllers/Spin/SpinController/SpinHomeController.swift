@@ -13,7 +13,7 @@ class SpinHomeController: UIViewController {
     var spinerView = SpinerContainerHelper()
     var game: Games?
     var spinOffers: SpinOffers?
-    
+    var spinSuccessView = SpinSuccessViewHelper()
     override func viewDidLoad() {
         super.viewDidLoad()    
         self.initialSetup()
@@ -63,6 +63,22 @@ class SpinHomeController: UIViewController {
     
     func spinnerStopped() {
         print("spinner stpped")
+        spinSuccessView.loadScreen(action: successScreenActionHandler(action:))
+    }
+    
+    func successScreenActionHandler(action: SpinSuccessViewAction) {
+        switch action {
+        case .homePageTapped:
+            print("home page tapped")
+        case .knowMoreTapped:
+            print("Know more tapped")
+        case .rewardTapped:
+            print("Reward  tapped")
+        case .spinAgainTapped:
+            print("Spin again tapped")
+        default:
+            break
+        }
     }
     
     func spinOffersResponce(data: SpinOffers) {
