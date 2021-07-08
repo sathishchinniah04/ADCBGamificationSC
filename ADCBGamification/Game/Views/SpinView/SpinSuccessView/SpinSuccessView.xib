@@ -18,6 +18,15 @@
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CurveClip" translatesAutoresizingMaskIntoConstraints="NO" id="apC-av-XxZ">
                     <rect key="frame" x="0.0" y="0.0" width="414" height="493"/>
                 </imageView>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Clouds" translatesAutoresizingMaskIntoConstraints="NO" id="xLg-Vx-zvZ">
+                    <rect key="frame" x="0.0" y="94.5" width="414" height="83"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="83" id="RyR-eN-gca"/>
+                    </constraints>
+                </imageView>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Mobile" translatesAutoresizingMaskIntoConstraints="NO" id="NRS-Bg-v13">
+                    <rect key="frame" x="0.0" y="148" width="414" height="197"/>
+                </imageView>
                 <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JZg-t3-0uF">
                     <rect key="frame" x="170" y="54" width="74.5" height="20.5"/>
                     <subviews>
@@ -36,22 +45,22 @@
                     </subviews>
                 </stackView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IAH-G8-iQf">
-                    <rect key="frame" x="25" y="229" width="364" height="438.5"/>
+                    <rect key="frame" x="30" y="230.5" width="354" height="435"/>
                     <subviews>
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="lgM-G5-jqe">
-                            <rect key="frame" x="20" y="25" width="324" height="388.5"/>
+                            <rect key="frame" x="20" y="25" width="314" height="385"/>
                             <subviews>
                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="52P-1c-Gqs">
-                                    <rect key="frame" x="0.0" y="0.0" width="324" height="139"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="314" height="139"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hurray!" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D7d-3h-9d3">
-                                            <rect key="frame" x="126.5" y="0.0" width="71.5" height="24"/>
+                                            <rect key="frame" x="121.5" y="0.0" width="71.5" height="24"/>
                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                             <color key="textColor" red="0.13333333333333333" green="0.12941176470588234" blue="0.396078431372549" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="oDq-NS-RoN">
-                                            <rect key="frame" x="112" y="39" width="100" height="100"/>
+                                            <rect key="frame" x="107" y="39" width="100" height="100"/>
                                             <color key="backgroundColor" red="1" green="0.87843137250000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="100" id="2bg-LY-uEu"/>
@@ -66,10 +75,10 @@
                                     </subviews>
                                 </stackView>
                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="iDh-ex-AMd">
-                                    <rect key="frame" x="0.0" y="164" width="324" height="72"/>
+                                    <rect key="frame" x="0.0" y="164" width="314" height="72"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cv6-6m-HDP">
-                                            <rect key="frame" x="52.5" y="0.0" width="219.5" height="33.5"/>
+                                            <rect key="frame" x="47.5" y="0.0" width="219.5" height="33.5"/>
                                             <string key="text">You have won a discount voucher!
 Enjoy 10% off at Starbucks!</string>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -77,7 +86,7 @@ Enjoy 10% off at Starbucks!</string>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="g9m-97-Rjs">
-                                            <rect key="frame" x="125.5" y="43.5" width="73" height="28.5"/>
+                                            <rect key="frame" x="120.5" y="43.5" width="73" height="28.5"/>
                                             <state key="normal">
                                                 <attributedString key="attributedTitle">
                                                     <fragment content="Know more">
@@ -97,16 +106,16 @@ Enjoy 10% off at Starbucks!</string>
                                     </subviews>
                                 </stackView>
                                 <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="ncE-ck-i1D">
-                                    <rect key="frame" x="0.0" y="261" width="324" height="20.5"/>
+                                    <rect key="frame" x="0.0" y="261" width="314" height="17"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="ji9-a5-jqy">
-                                            <rect key="frame" x="0.0" y="0.0" width="324" height="20.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="314" height="17"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="kbL-vN-54z">
-                                                    <rect key="frame" x="0.0" y="9.5" width="94.5" height="1"/>
+                                                    <rect key="frame" x="0.0" y="8" width="91.5" height="1"/>
                                                     <subviews>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="213-6F-Wtq">
-                                                            <rect key="frame" x="0.0" y="0.0" width="94.5" height="1"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="91.5" height="1"/>
                                                             <color key="backgroundColor" systemColor="systemGray6Color"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="1" id="wsO-Vs-fWL"/>
@@ -115,22 +124,22 @@ Enjoy 10% off at Starbucks!</string>
                                                     </subviews>
                                                 </stackView>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="XJA-7g-1DF">
-                                                    <rect key="frame" x="114.5" y="0.0" width="95" height="20.5"/>
+                                                    <rect key="frame" x="111.5" y="0.0" width="91" height="17"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Go To " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HUj-tb-PpK">
-                                                            <rect key="frame" x="23" y="0.0" width="49" height="20.5"/>
+                                                            <rect key="frame" x="25" y="0.0" width="41.5" height="17"/>
                                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                             <color key="textColor" red="0.32941176470588235" green="0.32941176470588235" blue="0.33725490196078434" alpha="1" colorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
                                                 </stackView>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="oOK-wD-9AU">
-                                                    <rect key="frame" x="229.5" y="9.5" width="94.5" height="1"/>
+                                                    <rect key="frame" x="222.5" y="8" width="91.5" height="1"/>
                                                     <subviews>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aYv-WR-5Ep">
-                                                            <rect key="frame" x="0.0" y="0.0" width="94.5" height="1"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="91.5" height="1"/>
                                                             <color key="backgroundColor" systemColor="systemGray6Color"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="1" id="4IE-aI-o3a"/>
@@ -143,10 +152,10 @@ Enjoy 10% off at Starbucks!</string>
                                     </subviews>
                                 </stackView>
                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="dfg-br-ZoA">
-                                    <rect key="frame" x="0.0" y="306.5" width="324" height="82"/>
+                                    <rect key="frame" x="0.0" y="303" width="314" height="82"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="tCG-j6-XhI">
-                                            <rect key="frame" x="0.0" y="0.0" width="324" height="28.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="314" height="28.5"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MTc-43-SJc">
                                                     <rect key="frame" x="0.0" y="0.0" width="49" height="28.5"/>
@@ -167,7 +176,7 @@ Enjoy 10% off at Starbucks!</string>
                                                     </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eQC-VT-XrO">
-                                                    <rect key="frame" x="253" y="0.0" width="71" height="28.5"/>
+                                                    <rect key="frame" x="243" y="0.0" width="71" height="28.5"/>
                                                     <state key="normal">
                                                         <attributedString key="attributedTitle">
                                                             <fragment content="Homepage">
@@ -187,10 +196,10 @@ Enjoy 10% off at Starbucks!</string>
                                             </subviews>
                                         </stackView>
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="H0f-iL-vLV">
-                                            <rect key="frame" x="0.0" y="53.5" width="324" height="28.5"/>
+                                            <rect key="frame" x="0.0" y="53.5" width="314" height="28.5"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wBQ-IV-oOm">
-                                                    <rect key="frame" x="127.5" y="0.0" width="69" height="28.5"/>
+                                                    <rect key="frame" x="122.5" y="0.0" width="69" height="28.5"/>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <state key="normal">
                                                         <attributedString key="attributedTitle">
@@ -227,14 +236,23 @@ Enjoy 10% off at Starbucks!</string>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
+                <constraint firstItem="xLg-Vx-zvZ" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="7n9-Po-MyH"/>
                 <constraint firstItem="JZg-t3-0uF" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="10" id="8sX-eo-nQ4"/>
-                <constraint firstItem="IAH-G8-iQf" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="25" id="Gec-R6-RCz"/>
+                <constraint firstItem="NRS-Bg-v13" firstAttribute="width" secondItem="apC-av-XxZ" secondAttribute="width" id="FHf-fY-KYq"/>
+                <constraint firstItem="NRS-Bg-v13" firstAttribute="centerX" secondItem="apC-av-XxZ" secondAttribute="centerX" id="GDG-ar-mdr"/>
+                <constraint firstItem="IAH-G8-iQf" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="30" id="Gec-R6-RCz"/>
                 <constraint firstItem="apC-av-XxZ" firstAttribute="height" secondItem="iN0-l3-epB" secondAttribute="height" multiplier="0.55" id="Hdt-PY-eBl"/>
                 <constraint firstItem="IAH-G8-iQf" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="Idx-gt-CqI"/>
+                <constraint firstItem="xLg-Vx-zvZ" firstAttribute="top" secondItem="JZg-t3-0uF" secondAttribute="bottom" constant="20" id="KG2-hb-VbX"/>
+                <constraint firstItem="xLg-Vx-zvZ" firstAttribute="width" secondItem="apC-av-XxZ" secondAttribute="width" id="Vcn-2h-1Fn"/>
+                <constraint firstItem="xLg-Vx-zvZ" firstAttribute="centerX" secondItem="apC-av-XxZ" secondAttribute="centerX" id="Yix-ha-DsF"/>
                 <constraint firstItem="JZg-t3-0uF" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="aOh-PY-OMO"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="apC-av-XxZ" secondAttribute="trailing" id="aXU-Kx-Fom"/>
                 <constraint firstItem="apC-av-XxZ" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="bwv-9A-RUZ"/>
+                <constraint firstItem="NRS-Bg-v13" firstAttribute="height" secondItem="apC-av-XxZ" secondAttribute="height" multiplier="0.4" id="f59-dG-0pP"/>
                 <constraint firstItem="apC-av-XxZ" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="gCL-pL-sYz"/>
+                <constraint firstItem="xLg-Vx-zvZ" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="mwQ-TB-YBw"/>
+                <constraint firstItem="NRS-Bg-v13" firstAttribute="centerY" secondItem="apC-av-XxZ" secondAttribute="centerY" id="u0a-Ay-TvT"/>
                 <constraint firstItem="IAH-G8-iQf" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="xXl-Gg-Eiy"/>
             </constraints>
             <connections>
@@ -248,7 +266,9 @@ Enjoy 10% off at Starbucks!</string>
         </view>
     </objects>
     <resources>
+        <image name="Clouds" width="300" height="63"/>
         <image name="CurveClip" width="187.5" height="211"/>
+        <image name="Mobile" width="137" height="250"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
