@@ -32,7 +32,7 @@ class SpinSuccessView: UIView {
     }
     
     func appearanceSetup() {
-        containerView.addShadow(cornerRadius: 10, shadowRadius: 3, opacity: 0.5, color: UIColor.black)
+        containerView.addShadow(cornerRadius: 20, shadowRadius: 3, opacity: 0.5, color: UIColor.black)
     }
     
     @IBAction func rewardButtonAction() {
