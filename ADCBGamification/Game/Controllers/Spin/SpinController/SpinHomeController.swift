@@ -22,7 +22,8 @@ class SpinHomeController: UIViewController {
     
     func initialSetup() {
         containerView.isHidden = true
-        expireView.populateView {
+        expireView.setupButtonName(name: "Spin")
+        expireView.populateView(game: self.game) {
             self.onAcceptingTermsAndConditon()
         }
     }

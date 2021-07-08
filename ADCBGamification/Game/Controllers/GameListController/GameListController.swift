@@ -47,7 +47,7 @@ extension GameListController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        var gameType = self.games[indexPath.row].gameType
+        let gameType = self.games[indexPath.row].gameType
         let game = self.games[indexPath.row]
         getControllerRef(gameType: gameType, game: game)
     }
@@ -58,6 +58,8 @@ extension GameListController: UITableViewDelegate, UITableViewDataSource {
             (contr as? PredictIntroController)?.game = game
         } else if gameType == "SpinNWin" {
             (contr as? SpinHomeController)?.game = game
+        } else if gameType == "ReferNWin" {
+            (contr as? ReferIntroController)?.game = game
         }
         self.navigationController?.pushViewController(contr, animated: true)
     }
@@ -67,6 +69,8 @@ extension GameListController: UITableViewDelegate, UITableViewDataSource {
             self.moveToController(sName: "Spin", id: "SpinHomeController", gameType: gameType, game: game)
         } else if gameType == "PredictNWin" {
             self.moveToController(sName: "Predict", id: "PredictIntroController", gameType: gameType, game: game)
+        } else if gameType == "ReferNWin" {
+            self.moveToController(sName: "Refer", id: "ReferIntroController", gameType: gameType, game: game)
         } else {
             print("no game type ")
         }

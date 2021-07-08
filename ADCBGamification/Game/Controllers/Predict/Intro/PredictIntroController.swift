@@ -14,15 +14,19 @@ class PredictIntroController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        expireViewSetup()
+        self.initialSetup()
+    }
+    
+    func initialSetup() {
         expireView.isUserInteractionEnabled = false
+        expireViewSetup()
         if let gam = game {
             self.updateOnResponce(game: gam)
         }
     }
     
     func updateOnResponce(game: Games) {
-        print("Updated from game list type = \(game.gameType)  gameId  = \(game.gameId)")
+        print("Updated from game list type = \(game.gameType)  gameId  = \(game.gameId ?? "")")
         activityIndicator.stopAnimating()
         expireView.isUserInteractionEnabled = true
         self.game = game
@@ -30,16 +34,15 @@ class PredictIntroController: UIViewController {
     
     
     func expireViewSetup() {
-        expireView.isShowTerms = false
         expireView.button.setTitle("Predict Now", for: .normal)
-        expireView.handler = {
-            self.nextController()
+        expireView.populateView(isShowTerms: false, game: self.game) {
+          self.nextController()
         }
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        let con = self.navigationController
+        let _ = self.navigationController
         //(con as? CustomNavViewController)?.changeTitle(title: "SKY")
     }
     

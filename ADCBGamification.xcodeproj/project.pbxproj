@@ -130,6 +130,8 @@
 		33FC31C02697129100868D9E /* SpinSuccessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33FC31BF2697129100868D9E /* SpinSuccessView.swift */; };
 		33FC31C62697129B00868D9E /* SpinSuccessView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 33FC31C52697129B00868D9E /* SpinSuccessView.xib */; };
 		33FC31CA26971A9800868D9E /* SpinSuccessViewHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33FC31C926971A9800868D9E /* SpinSuccessViewHelper.swift */; };
+		33FC31CE26973C5100868D9E /* ExpireViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33FC31CD26973C5100868D9E /* ExpireViewModel.swift */; };
+		33FC31D326973CA000868D9E /* CustomTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33FC31D226973CA000868D9E /* CustomTimer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -269,6 +271,8 @@
 		33FC31BF2697129100868D9E /* SpinSuccessView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpinSuccessView.swift; sourceTree = "<group>"; };
 		33FC31C52697129B00868D9E /* SpinSuccessView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SpinSuccessView.xib; sourceTree = "<group>"; };
 		33FC31C926971A9800868D9E /* SpinSuccessViewHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpinSuccessViewHelper.swift; sourceTree = "<group>"; };
+		33FC31CD26973C5100868D9E /* ExpireViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpireViewModel.swift; sourceTree = "<group>"; };
+		33FC31D226973CA000868D9E /* CustomTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTimer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -379,6 +383,8 @@
 		3320FF4A2682EBC3001809AA /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				336B67A726974AC6008E419B /* CommonMethod */,
+				33FC31D126973C8F00868D9E /* CustomTimer */,
 				33FC318226958D1F00868D9E /* Utility */,
 				33FC317126957FA000868D9E /* StoreManager */,
 				33FC316C26957F4300868D9E /* Constants */,
@@ -679,6 +685,13 @@
 			path = CustomNeumorphicButton;
 			sourceTree = "<group>";
 		};
+		336B67A726974AC6008E419B /* CommonMethod */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CommonMethod;
+			sourceTree = "<group>";
+		};
 		33EDB0BE268ED72F0040DCD4 /* Predict */ = {
 			isa = PBXGroup;
 			children = (
@@ -815,6 +828,7 @@
 			children = (
 				33FC317926958C5D00868D9E /* GameListVM.swift */,
 				33FC31AD2696D7C900868D9E /* SpinViewOfferVM.swift */,
+				33FC31CD26973C5100868D9E /* ExpireViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -878,6 +892,14 @@
 				33FC31C926971A9800868D9E /* SpinSuccessViewHelper.swift */,
 			);
 			path = SpinSuccessView;
+			sourceTree = "<group>";
+		};
+		33FC31D126973C8F00868D9E /* CustomTimer */ = {
+			isa = PBXGroup;
+			children = (
+				33FC31D226973CA000868D9E /* CustomTimer.swift */,
+			);
+			path = CustomTimer;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1046,6 +1068,7 @@
 				3320FFBE2682EBC4001809AA /* IQKeyboardManager+Toolbar.swift in Sources */,
 				3320FFBC2682EBC4001809AA /* IQKeyboardManager+Debug.swift in Sources */,
 				3320FFAC2682EBC4001809AA /* ExpireView.swift in Sources */,
+				33FC31CE26973C5100868D9E /* ExpireViewModel.swift in Sources */,
 				3320FFA32682EBC4001809AA /* String+Extension.swift in Sources */,
 				3320FFBA2682EBC4001809AA /* IQKeyboardReturnKeyHandler.swift in Sources */,
 				3320FFB22682EBC4001809AA /* IQBarButtonItem.swift in Sources */,
@@ -1096,6 +1119,7 @@
 				3320FFD42682EBC4001809AA /* NewReferTableViewCell.swift in Sources */,
 				33FC31672695758500868D9E /* NetworkManager.swift in Sources */,
 				33FC317326957FB000868D9E /* StoreManager.swift in Sources */,
+				33FC31D326973CA000868D9E /* CustomTimer.swift in Sources */,
 				3320FFBD2682EBC4001809AA /* IQKeyboardManager+OrientationNotification.swift in Sources */,
 				33EDB0EB2692CE870040DCD4 /* CustomNavView.swift in Sources */,
 				33FC31A72695B18800868D9E /* GameListTableViewCell.swift in Sources */,

@@ -10,11 +10,11 @@ import UIKit
 class ReferIntroController: UIViewController {
     
     @IBOutlet weak var expireView: ExpireView!
-    
+    var game: Games?
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.expireView.populateView(complition: expireViewHandle)
-        self.expireView.setupButtonName(name: "Refer now")
+        self.expireView.populateView(game: game, complition: expireViewHandle)
+        
     }
     
     func expireViewHandle() {

@@ -13,9 +13,10 @@ class ExpireView: UIView {
     @IBOutlet weak var gameNameSubTitleLabel: UILabel!
     @IBOutlet weak var expireLabel: UILabel!
     @IBOutlet weak var descLabel: UILabel!
-    var termsView = TermsViewHelper()
-    var handler: (()->Void)?
-    var isShowTerms: Bool = true
+    private var termsView = TermsViewHelper()
+    private var handler: (()->Void)?
+    private var isShowTerms: Bool = true
+    private var game: Games?
     override init(frame: CGRect) {
         super.init(frame: frame)
         initialSetup()
@@ -43,9 +44,50 @@ class ExpireView: UIView {
         button.addCustomShadow(cornerRadius: 10, shadowRadius: 4, opacity: 0.3, color: UIColor.blue, offSet: CGSize(width: 4, height: 4))
     }
     
-    func populateView(complition: (()->Void)?) {
+    func populateView(isShowTerms: Bool = true, game: Games?, complition: (()->Void)?) {
+        self.game = game
+        self.isShowTerms = isShowTerms
         self.handler = complition
         setupLabel()
+        guard let gam = game else { return }
+        CustomTimer.shared.startTimer {
+            self.checkGameStatus(game: gam)
+        }
+        checkGameStatus(game: gam)
+        labelSetup(game: gam)
+    }
+    
+    func labelSetup(game: Games) {
+        gameNameLabel.text = game.gameType
+        gameNameSubTitleLabel.text = game.displayDetails?.synonym ?? ""
+        descLabel.text = game.displayDetails?.description ?? ""
+    }
+    
+    func checkGameStatus(game: Games) {
+        if game.executionStatus == "Active" {
+            onActive(game: game)
+        } else {
+            onLock(game: game)
+        }
+    }
+    
+    func onLock(game: Games) {
+        button.alpha = 0.15
+        button.isUserInteractionEnabled = false
+        let date = game.executionPeriod?.startDateTime ?? ""
+        hourMinteAlignmentCheck(date: date, value: "Available in")
+    }
+    
+    func onActive(game: Games) {
+        button.alpha = 1.0
+        button.isUserInteractionEnabled = true
+        let date = game.executionPeriod?.endDateTime ?? ""
+        hourMinteAlignmentCheck(date: date, value: "Expires in")
+    }
+    
+    func hourMinteAlignmentCheck(date: String, value: String) {
+        
+            expireLabel.text = value + " \(Utility.secondsToHoursMinutesSeconds(seconds: Utility.convertStringIntoDate(date: date)).0)h  \(Utility.secondsToHoursMinutesSeconds(seconds: Utility.convertStringIntoDate(date: date)).1)min \(Utility.secondsToHoursMinutesSeconds(seconds: Utility.convertStringIntoDate(date: date)).2)sec"
     }
     
     func setupButtonName(name: String) {
