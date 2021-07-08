@@ -9,11 +9,15 @@ import UIKit
 
 class SpinHomeController: UIViewController {
     @IBOutlet weak var expireView: ExpireView!
+    @IBOutlet weak var containerView: UIView!
     var spinerView = SpinerContainerHelper()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        containerView.isHidden = true
         expireView.populateView {
-            self.spinerView.loadSpinner()
+            self.containerView.isHidden = false
+            self.spinerView.loadSpinner(sourceView: self.containerView)
             self.expireView.isHidden = true
         }
     }

@@ -76,6 +76,7 @@ class NetworkManager {
         do {
             let result = try JSONDecoder().decode(T.self, from: data)
             print("Result is after decode = \(result)")
+            print("Result is after decode = \(result)")
             complition?(result, nil)
         } catch let error {
             print("error is \(error)")

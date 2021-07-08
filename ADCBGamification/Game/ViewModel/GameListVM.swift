@@ -10,7 +10,8 @@ import Foundation
 class GameListVM {
     static var activeGames = [Games]()
     static var allGames = [Games]()
-    static func getGameList(url: String, gameType: String, gameid: String?,complition:(()->Void)? = nil) {
+    
+    static func getGame(url: String, gameType: String, gameid: String?,complition:(()->Void)? = nil) {
         
         let searchQuerry: [[String: String]]!
         
@@ -27,6 +28,28 @@ class GameListVM {
             "timestamp": Utility.getTimeStamp(),
                 "keyword": "ListGames",
             "searchFilter": searchQuerry as Any,
+            "queryParams": [["key": StoreManager.shared.msisdn, "keyType": "CUSTOMER_ID"],["key": StoreManager.shared.language, "keyType": "LANG"]]
+        ] as [String : Any]
+        
+        NetworkManager.postRequest(struct: GameList.self, url: url, request: myDict) { (data, error) in
+            print("data \(data)")
+            if let data = data {
+                getActiveGames(list: data, complition: complition)
+            } else {
+             print("error is \(error)")
+            }
+        }
+    }
+    
+    static func getGameList(url: String, complition:(()->Void)? = nil) {
+        
+        let searchQuerry: [[String: String]]!
+        
+        let myDict: Dictionary = [
+            "requestId": Utility.getRandonNo(),
+            "timestamp": Utility.getTimeStamp(),
+                "keyword": "ListGames",
+            //"searchFilter": searchQuerry as Any,
             "queryParams": [["key": StoreManager.shared.msisdn, "keyType": "CUSTOMER_ID"],["key": StoreManager.shared.language, "keyType": "LANG"]]
         ] as [String : Any]
         

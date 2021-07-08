@@ -11,7 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="SpinerContainerView" customModule="Gamification" customModuleProvider="target">
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="SpinerContainerView" customModule="ADCBGamification" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
@@ -66,7 +66,7 @@
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="xYT-lm-Iws" secondAttribute="bottom" constant="30" id="3sQ-y3-zxE"/>
                 <constraint firstItem="ZS7-oq-Kzz" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="HCo-9s-fDh"/>
                 <constraint firstItem="esq-XD-pA3" firstAttribute="centerY" secondItem="ZS7-oq-Kzz" secondAttribute="centerY" id="OJF-sF-nqw"/>
-                <constraint firstItem="ZS7-oq-Kzz" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" multiplier="0.9" id="OOy-gI-CTC"/>
+                <constraint firstItem="ZS7-oq-Kzz" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" constant="-45" id="OOy-gI-CTC"/>
                 <constraint firstItem="xYT-lm-Iws" firstAttribute="centerX" secondItem="ZS7-oq-Kzz" secondAttribute="centerX" id="iqG-eT-fVI"/>
                 <constraint firstItem="xYT-lm-Iws" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="30" id="mgT-dz-WXH"/>
                 <constraint firstItem="esq-XD-pA3" firstAttribute="centerX" secondItem="ZS7-oq-Kzz" secondAttribute="centerX" id="rSl-dC-bOT"/>

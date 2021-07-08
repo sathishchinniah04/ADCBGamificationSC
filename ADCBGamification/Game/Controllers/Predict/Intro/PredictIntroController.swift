@@ -16,10 +16,13 @@ class PredictIntroController: UIViewController {
         super.viewDidLoad()
         expireViewSetup()
         expireView.isUserInteractionEnabled = false
+        if let gam = game {
+            self.updateOnResponce(game: gam)
+        }
     }
     
     func updateOnResponce(game: Games) {
-        print("Updated from game list")
+        print("Updated from game list type = \(game.gameType)  gameId  = \(game.gameId)")
         activityIndicator.stopAnimating()
         expireView.isUserInteractionEnabled = true
         self.game = game

@@ -11,6 +11,7 @@ class GameListController: UIViewController {
     @IBOutlet weak var gamesTableView: UITableView!
     @IBOutlet weak var activityIndicatorView: UIActivityIndicatorView!
     var games = [Games]()
+    var contRef: UIViewController?
     override func viewDidLoad() {
         super.viewDidLoad()
         tableViewSetup()
@@ -24,13 +25,13 @@ class GameListController: UIViewController {
     }
     
     func getResponce() {
-//        GameListVM.getGameList(url: Constants.listGameUrl) {
-//            DispatchQueue.main.async {
-//                self.activityIndicatorView.stopAnimating()
-//                self.games = GameListVM.allGames
-//                self.gamesTableView.reloadData()
-//            }
-//        }
+        GameListVM.getGameList(url: Constants.listGameUrl) {
+            DispatchQueue.main.async {
+                self.activityIndicatorView.stopAnimating()
+                self.games = GameListVM.allGames
+                self.gamesTableView.reloadData()
+            }
+        }
     }
 }
 
@@ -45,5 +46,28 @@ extension GameListController: UITableViewDelegate, UITableViewDataSource {
         return cell
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        var gameType = self.games[indexPath.row].gameType
+        var game = self.games[indexPath.row]
+        getControllerRef(gameType: gameType, game: game)
+        //let controller =
+    }
     
+    func moveToController(sName: String, id: String, gameType: String, game: Games) {
+        let contr = UIStoryboard(name: sName, bundle: Bundle(for: Self.self)).instantiateViewController(withIdentifier: id)
+        if gameType == "PredictNWin" {
+            (contr as? PredictIntroController)?.game = game
+        }
+        self.navigationController?.pushViewController(contr, animated: true)
+    }
+    
+    func getControllerRef(gameType: String, game: Games) {
+        if gameType == "SpinNWin" {
+            self.moveToController(sName: "Spin", id: "SpinHomeController", gameType: gameType, game: game)
+        } else if gameType == "PredictNWin" {
+            self.moveToController(sName: "Predict", id: "PredictIntroController", gameType: gameType, game: game)
+        } else {
+            print("no game type ")
+        }
+    }
 }

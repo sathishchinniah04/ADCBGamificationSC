@@ -10,6 +10,8 @@ import UIKit
 class GameListTableViewCell: UITableViewCell {
     @IBOutlet weak var gameNameLabel: UILabel!
     @IBOutlet weak var gameStatusLabel: UILabel!
+    @IBOutlet weak var gameIdLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -25,7 +27,11 @@ class GameListTableViewCell: UITableViewCell {
         DispatchQueue.main.async {
             self.gameNameLabel.text = "\(game.gameType) == \(game.gameTitle)"
             self.gameStatusLabel.text = game.executionStatus
+            self.gameIdLabel.text = "Game id = \(game.gameId ?? "")"
+            print("\n")
             print("game active \(game.executionStatus)")
+            print("game is \(game.gameId)")
+            print("\n")
             self.gameStatusLabel.textColor = game.executionStatus == "Active" ? UIColor.green : UIColor.red
         }
         

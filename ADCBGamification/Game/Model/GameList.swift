@@ -20,8 +20,8 @@ class GameListResponseDetail: Decodable {
 
 class Games: Decodable {
     let gameId: String?
-    let gameTitle: String?
-    let gameType: String?
+    let gameTitle: String
+    let gameType: String
     let gameStatus: String?
     let executionStatus: String?
     

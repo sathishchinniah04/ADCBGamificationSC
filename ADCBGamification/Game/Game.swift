@@ -10,7 +10,7 @@ public class Game {
     
     private static var controllerRef: UIViewController?
     
-    public static func loadGame(controller: UIViewController, msisdn: String, language: String, gameType: String, gameId: String?) {
+    public static func open(controller: UIViewController, msisdn: String, language: String, gameType: String, gameId: String?) {
         getUrlFromInfoPlist()
         StoreManager.shared.msisdn = msisdn
         StoreManager.shared.language = language
@@ -20,6 +20,18 @@ public class Game {
         StoreManager.shared.accessToken = "J0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9"
         getControllerRef(controller: controller, gameType: gameType, gameId: gameId)
         //loadGameList(controller: controller)
+    }
+    
+    public static func openGameList(controller: UIViewController, msisdn: String, language: String) {
+        getUrlFromInfoPlist()
+        StoreManager.shared.msisdn = msisdn
+        StoreManager.shared.language = language
+        IQKeyboardManager.shared.enable = true
+        IQKeyboardManager.shared.goNext()
+        
+        StoreManager.shared.accessToken = "J0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9"
+       // getControllerRef(controller: controller)
+        loadGameList(controller: controller)
     }
     
     private class func navigateToController(controller: UIViewController, storyboard: String, id: String) -> UIViewController {
@@ -52,7 +64,7 @@ public class Game {
     }
     
     private static func getGameList(gameType: String, gameId: String?, complition:((Games)->Void)?) {
-        GameListVM.getGameList(url: Constants.listGameUrl, gameType: gameType, gameid: gameId) {
+        GameListVM.getGame(url: Constants.listGameUrl, gameType: gameType, gameid: gameId) {
             print("Data is \(GameListVM.activeGames)")
             if let gam = GameListVM.activeGames.first {
                 complition?(gam)
