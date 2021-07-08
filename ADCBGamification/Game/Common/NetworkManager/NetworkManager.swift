@@ -22,7 +22,7 @@ class NetworkManager {
     
     private class func createCommonRequest(url: URL, urlReq: URLRequest, methodType: MethodType) -> URLRequest {
         var req = urlReq
-         req = URLRequest(url: url,timeoutInterval: TimeInterval(timeOut))
+         //req = URLRequest(url: url,timeoutInterval: TimeInterval(timeOut))
         req.httpMethod = methodType.rawValue
         req.setValue("application/json", forHTTPHeaderField: "Content-Type")
         req.setValue("Bearer \(StoreManager.shared.accessToken)", forHTTPHeaderField: "Authorization")
@@ -32,16 +32,20 @@ class NetworkManager {
     class func postRequest<T:Decodable>(struct: T.Type, url: String, urlReq: URLRequest? = nil, request: Dictionary<String, Any>, complition: ((T?,ErrorType?)->Void)?) {
         guard let ur = URL(string: url) else { complition?(nil, .invalidUrl); return}
         let urReq = urlReq ?? URLRequest(url: ur)
+        print("urlReq \(urReq)")
         var req = createCommonRequest(url: ur, urlReq: urReq, methodType: .post)
+        print("req pac = \(request)")
         let jsonData = try? JSONSerialization.data(withJSONObject: request, options:[])
         req.httpBody = jsonData
         task(req: req, complition: complition)
     }
     
-    class func getRequest<T:Decodable>(struct: T.Type, url: String, urlReq: URLRequest? = nil, complition:((T?,ErrorType?)->Void?)?) {
+    class func getRequest<T:Decodable>(struct: T.Type, url: String, urlReq: URLRequest? = nil, complition:((T?,ErrorType?)->Void)?) {
         guard let ur = URL(string: url) else { complition?(nil, .invalidUrl); return}
         let urReq = urlReq ?? URLRequest(url: ur)
+        print("urlReq \(urReq)")
         let req = createCommonRequest(url: ur, urlReq: urReq, methodType: .get)
+        
         task(req: req, complition: complition)
     }
     
@@ -58,7 +62,7 @@ class NetworkManager {
         if let data = data {
             print("data into String \(String(data: data, encoding: .utf8))")
         }
-        print("Responce is \(String(describing: resp))")
+        //print("Responce is \(String(describing: resp))")
         print("\n\n\n")
         print("Header is \(req.allHTTPHeaderFields)")
         print("Data is \(String(describing: data))")
@@ -66,6 +70,7 @@ class NetworkManager {
         print("\n\n\n")
         print("Req \(req)")
         print("url \(String(describing: req.url))")
+
         print("\n\n\n")
         
         print("\n\n\n")

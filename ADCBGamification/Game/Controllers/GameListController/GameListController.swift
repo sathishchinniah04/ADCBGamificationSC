@@ -48,15 +48,16 @@ extension GameListController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         var gameType = self.games[indexPath.row].gameType
-        var game = self.games[indexPath.row]
+        let game = self.games[indexPath.row]
         getControllerRef(gameType: gameType, game: game)
-        //let controller =
     }
     
     func moveToController(sName: String, id: String, gameType: String, game: Games) {
         let contr = UIStoryboard(name: sName, bundle: Bundle(for: Self.self)).instantiateViewController(withIdentifier: id)
         if gameType == "PredictNWin" {
             (contr as? PredictIntroController)?.game = game
+        } else if gameType == "SpinNWin" {
+            (contr as? SpinHomeController)?.game = game
         }
         self.navigationController?.pushViewController(contr, animated: true)
     }

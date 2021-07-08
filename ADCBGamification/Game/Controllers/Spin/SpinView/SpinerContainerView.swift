@@ -6,16 +6,19 @@
 //
 
 import UIKit
+enum SpinerContainerViewAction {
+        case spinTapped
+}
 
 class SpinerContainerView: UIView {
     @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var wheelContainerView: UIView!
     @IBOutlet weak var spinCenterView: UIView!
     @IBOutlet weak var spinNowButton: UIButton!
-    
+    var offer: [Offers]?
     var fortuneWheel: TTFortuneWheel?
     var slices: [CarnivalWheelSlice] = []
-    
+    var handle:((SpinerContainerViewAction)->Void)?
     static func loadXib() ->SpinerContainerView {
         return UINib(nibName: "SpinerContainerView", bundle:Bundle(for: SpinerContainerView.self)).instantiate(withOwner: self, options: nil).first as! SpinerContainerView
     }
@@ -44,22 +47,25 @@ class SpinerContainerView: UIView {
     }
     
     func populateView() {
-        spinSetup()
         addCenterViewRadius()
         fortuneWheel?.clipsToBounds = false
     }
     
-    func spinSetup() {
-        
-        slices.append(CarnivalWheelSlice.init(title: "100 \n Points"))
-        slices.append(CarnivalWheelSlice.init(title: "101 \n Points"))
-        slices.append(CarnivalWheelSlice.init(title: "102 \n Points"))
-        slices.append(CarnivalWheelSlice.init(title: "103 \n Points"))
-        slices.append(CarnivalWheelSlice.init(title: "104 \n Points"))
-        slices.append(CarnivalWheelSlice.init(title: "105 \n Points"))
-        slices.append(CarnivalWheelSlice.init(title: "106 \n Points"))
-        slices.append(CarnivalWheelSlice.init(title: "107 \n Points"))
-        
+    func stopAnimationAtIndex(index: String, complition:(()->Void)?) {
+        let ind = self.offer?.firstIndex(where: {$0.rewardId == index}) ?? 0
+        self.startRotate(index: ind, complition: complition)
+    }
+    
+    func populateSpinner(offer: [Offers],complition:((SpinerContainerViewAction)->Void)?) {
+        self.offer = offer
+        spinSetup(offer: offer)
+        self.handle = complition
+    }
+    
+    func spinSetup(offer: [Offers]) {
+        for item in offer {
+            slices.append(CarnivalWheelSlice.init(title: "\(item.rewardTitle ?? "")"))
+        }
         fortuneWheel = TTFortuneWheel(frame: wheelContainerView.bounds, slices:slices)
         self.fortuneWheel?.transform = CGAffineTransform(rotationAngle: -CGFloat(Double.pi/2))
         fortuneWheel?.frameStroke.width = 0
@@ -128,8 +134,10 @@ class SpinerContainerView: UIView {
     }
     
     @IBAction func spinNowButtonAction() {
-        startRotate(index: 3) { () -> Void? in
-            print("spinNowButtonAction ")
-        }
+        self.fortuneWheel?.startAnimating()
+        self.handle?(.spinTapped)
+//        startRotate(index: 3) { () -> Void? in
+//            print("spinNowButtonAction ")
+//        }
     }
 }

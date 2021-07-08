@@ -124,6 +124,9 @@
 		33FC31A02695B08300868D9E /* GameListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33FC319F2695B08300868D9E /* GameListController.swift */; };
 		33FC31A72695B18800868D9E /* GameListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33FC31A52695B18800868D9E /* GameListTableViewCell.swift */; };
 		33FC31A82695B18800868D9E /* GameListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 33FC31A62695B18800868D9E /* GameListTableViewCell.xib */; };
+		33FC31AE2696D7CA00868D9E /* SpinViewOfferVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33FC31AD2696D7C900868D9E /* SpinViewOfferVM.swift */; };
+		33FC31B22696DC9F00868D9E /* SpinOffers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33FC31B12696DC9F00868D9E /* SpinOffers.swift */; };
+		33FC31BA2696F82800868D9E /* SpinAssignReward.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33FC31B92696F82800868D9E /* SpinAssignReward.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -257,6 +260,9 @@
 		33FC319F2695B08300868D9E /* GameListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameListController.swift; sourceTree = "<group>"; };
 		33FC31A52695B18800868D9E /* GameListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameListTableViewCell.swift; sourceTree = "<group>"; };
 		33FC31A62695B18800868D9E /* GameListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GameListTableViewCell.xib; sourceTree = "<group>"; };
+		33FC31AD2696D7C900868D9E /* SpinViewOfferVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpinViewOfferVM.swift; sourceTree = "<group>"; };
+		33FC31B12696DC9F00868D9E /* SpinOffers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpinOffers.swift; sourceTree = "<group>"; };
+		33FC31B92696F82800868D9E /* SpinAssignReward.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpinAssignReward.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -801,6 +807,7 @@
 			isa = PBXGroup;
 			children = (
 				33FC317926958C5D00868D9E /* GameListVM.swift */,
+				33FC31AD2696D7C900868D9E /* SpinViewOfferVM.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -809,6 +816,8 @@
 			isa = PBXGroup;
 			children = (
 				33FC317E26958C9B00868D9E /* GameList.swift */,
+				33FC31B12696DC9F00868D9E /* SpinOffers.swift */,
+				33FC31B92696F82800868D9E /* SpinAssignReward.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1016,6 +1025,7 @@
 				3320FFB22682EBC4001809AA /* IQBarButtonItem.swift in Sources */,
 				3320FFDB2682EBC4001809AA /* SpinningWheelAnimator.swift in Sources */,
 				3320FFB12682EBC4001809AA /* IQTitleBarButtonItem.swift in Sources */,
+				33FC31B22696DC9F00868D9E /* SpinOffers.swift in Sources */,
 				3320FFC52682EBC4001809AA /* IQKeyboardManager+UITextFieldViewNotification.swift in Sources */,
 				3320FFDF2682EBC4001809AA /* SpinningWheelSliceImpl.swift in Sources */,
 				3320FFA52682EBC4001809AA /* Game.swift in Sources */,
@@ -1032,6 +1042,7 @@
 				3320FFE02682EBC4001809AA /* SpinningWheelSlice .swift in Sources */,
 				33EDB0E22692CCB40040DCD4 /* MatchTableViewCell.swift in Sources */,
 				3320FFB32682EBC4001809AA /* IQToolbar.swift in Sources */,
+				33FC31BA2696F82800868D9E /* SpinAssignReward.swift in Sources */,
 				3320FFAF2682EBC4001809AA /* IQKeyboardManager+Internal.swift in Sources */,
 				33FC317F26958C9B00868D9E /* GameList.swift in Sources */,
 				3320FFDC2682EBC4001809AA /* FortuneWheelLayer.swift in Sources */,
@@ -1065,6 +1076,7 @@
 				3320FFC22682EBC4001809AA /* IQUITextFieldView+Additions.swift in Sources */,
 				3320FFDA2682EBC4001809AA /* TTFortuneWheel.swift in Sources */,
 				3320FFCB2682EBC4001809AA /* ReferViewController.swift in Sources */,
+				33FC31AE2696D7CA00868D9E /* SpinViewOfferVM.swift in Sources */,
 				3320FFD02682EBC4001809AA /* HistoryTableViewCell.swift in Sources */,
 				3320FFAA2682EBC4001809AA /* TermsViewHelper.swift in Sources */,
 				3320FFD62682EBC4001809AA /* SpinerContainerHelper.swift in Sources */,

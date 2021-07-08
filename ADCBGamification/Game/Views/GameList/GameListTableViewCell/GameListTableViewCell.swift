@@ -28,10 +28,10 @@ class GameListTableViewCell: UITableViewCell {
             self.gameNameLabel.text = "\(game.gameType) == \(game.gameTitle)"
             self.gameStatusLabel.text = game.executionStatus
             self.gameIdLabel.text = "Game id = \(game.gameId ?? "")"
-            print("\n")
-            print("game active \(game.executionStatus)")
-            print("game is \(game.gameId)")
-            print("\n")
+//            print("\n")
+//            print("game active \(game.executionStatus)")
+//            print("game is \(game.gameId)")
+//            print("\n")
             self.gameStatusLabel.textColor = game.executionStatus == "Active" ? UIColor.green : UIColor.red
         }
         

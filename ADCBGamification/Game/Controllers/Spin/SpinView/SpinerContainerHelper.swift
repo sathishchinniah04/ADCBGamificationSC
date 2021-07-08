@@ -8,17 +8,22 @@
 import UIKit
 class SpinerContainerHelper {
     var view: SpinerContainerView?
-    //var rootView = UIApplication.shared.windows.first
-    
     func loadSpinner(sourceView: UIView) {
         DispatchQueue.main.async {
             self.removeView()
-            //self.rootView = UIApplication.shared.windows.first
             self.view = SpinerContainerView.loadXib()
-            self.view?.frame = sourceView.bounds//UIScreen.main.bounds
+            self.view?.frame = sourceView.bounds
             self.view?.populateView()
             sourceView.addSubview(self.view!)
         }
+    }
+    
+    func stopAnimationAtIndex(index: String, complition:(()->Void)?) {
+        self.view?.stopAnimationAtIndex(index: index, complition: complition)
+    }
+    
+    func populateSpinner(offer: [Offers],complition:((SpinerContainerViewAction)->Void)?) {
+        self.view?.populateSpinner(offer: offer, complition: complition)
     }
     
     func removeView() {
