@@ -42,7 +42,10 @@ class PredictMatchController: UIViewController {
 
 extension PredictMatchController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
+        
         let cellCount = eventsList?.questionList?.count ?? 0
+        print("questin list \(cellCount)")
         return cellCount
     }
     

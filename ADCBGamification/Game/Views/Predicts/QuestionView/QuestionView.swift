@@ -18,7 +18,7 @@ class QuestionView: UIView {
     @IBOutlet weak var thirdAnswerButton: CustomNeumophicButton!
     @IBOutlet weak var fourthAnswerButton: CustomNeumophicButton!
     
-    var noOfQ: Int = 2
+    var noOfQ: Int = 0
     var noOfButton: Int = 4
     func loaxXib() -> UIView {
         return UINib(nibName: "QuestionView", bundle: Bundle(for: Self.self)).instantiate(withOwner: self, options: nil).first as! UIView
@@ -68,7 +68,7 @@ class QuestionView: UIView {
     }
     func populateView(index: Int, eventsList: EventsList?) {
         guard let even = eventsList else { return }
-        let noOfQues = even.questionList?.first?.predOptions?.count ?? 0
+        let noOfQues = even.questionList?[index].predOptions?.count ?? 0
         noOfQ = Int(noOfQues)
         setupCornerRadius()
         self.visibleOption()
@@ -84,7 +84,8 @@ class QuestionView: UIView {
     func buttonPopulate(index: Int, info: EventsList) {
         let predOp = info.questionList?[index].predOptions
         if noOfQ == 1 {
-            firstAnswerButton.button.setTitle(predOp?[0].text, for: .normal)
+            let ans = "\(predOp?[0].text ?? "")"//+"\(predOp?[0].abcd)"
+            firstAnswerButton.button.setTitle(ans, for: .normal)
         }
         if noOfQ == 2 {
             firstAnswerButton.button.setTitle(predOp?[0].text, for: .normal)
