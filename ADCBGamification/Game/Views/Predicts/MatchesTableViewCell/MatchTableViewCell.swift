@@ -22,7 +22,7 @@ class MatchTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func populateCell(index: Int, info: Tournaments?) {
+    func populateCell(index: Int, info: EventsList?) {
         DispatchQueue.main.async {
             self.neumorphicDesign()
             self.predictTeamView.populateView(index: index, info: info)

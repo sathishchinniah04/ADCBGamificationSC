@@ -14,7 +14,9 @@
                 <outlet property="buttonContainerStackView" destination="3Qs-d2-pNa" id="hw7-rt-a7j"/>
                 <outlet property="firstAnswerButton" destination="qAX-Bm-QJh" id="Dco-BV-qZR"/>
                 <outlet property="fourthAnswerButton" destination="8R9-1g-R2p" id="Msb-Kc-G9e"/>
+                <outlet property="noOfQuesLabel" destination="KP8-PO-nts" id="PYE-p5-eK4"/>
                 <outlet property="questionContainerView" destination="D0M-qR-YQ9" id="aZx-DU-G3i"/>
+                <outlet property="questionLabel" destination="R73-1I-dve" id="sqt-mG-n4r"/>
                 <outlet property="secondAnswerButton" destination="6vf-9J-dC4" id="ERK-YC-pbh"/>
                 <outlet property="thirdAnswerButton" destination="1cL-Dx-gQS" id="svF-Sk-jsJ"/>
             </connections>

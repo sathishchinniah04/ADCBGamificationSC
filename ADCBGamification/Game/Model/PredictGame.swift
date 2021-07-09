@@ -24,11 +24,10 @@ class Tournaments: Decodable {
     var tournamentName: String?
     var tournamentImage: String?
     var eventList: [EventsList]?
-    
 }
 class EventsList: Decodable {
-    var eventid: String?
-    var numberOfquestions: String?
+    var eventid: Float?
+    var numberOfquestions: Float?
     var imageCard: String?
     var predictionActivationTime: String?
     var predictionLockingTime: String?
@@ -44,15 +43,15 @@ class EventsList: Decodable {
 class QuestionList: Decodable {
     
     var question: String?
-    var questionId: String?
+    var questionId: Int?
     var imageCard: String?
     var predOptions:[PredOption]?
     
 }
 
 class PredOption: Decodable {
-    var id: String?
+    var id: Int?
     var text: String?
     var image: String?
-    var predictedPercentage: String?
+    var predictedPercentage: Float?
 }

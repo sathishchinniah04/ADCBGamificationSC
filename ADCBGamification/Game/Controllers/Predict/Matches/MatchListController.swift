@@ -9,8 +9,10 @@ import UIKit
 
 class MatchListController: UIViewController {
     @IBOutlet weak var matchTableView: UITableView!
+    @IBOutlet weak var activityIndicatorView: UIActivityIndicatorView!
     var predictGame = PredictGame()
     var game: Games?
+    var tournaments: [Tournaments]?
     override func viewDidLoad() {
         super.viewDidLoad()
         registorCell()
@@ -29,8 +31,13 @@ class MatchListController: UIViewController {
     
     func getMatchList() {
         guard let gam = game else { return }
-        PredictViewModel.getPredictDetail(gameId: game?.gameId ?? "0") { (info) in
-            print("info is \(info)")
+        PredictViewModel.getPredictDetail(gameId: gam.gameId ?? "0") { (info) in
+            DispatchQueue.main.async {
+                self.activityIndicatorView.stopAnimating()
+                self.predictGame = info
+                self.tournaments = info.predictionList?.first?.tournaments
+                self.matchTableView.reloadData()
+            }
         }
     }
 }
@@ -38,27 +45,30 @@ class MatchListController: UIViewController {
 extension MatchListController: UITableViewDelegate, UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 2//predictGame.predictionList?.count ?? 0
+        return tournaments?.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1//predictGame.predictionList?[section].tournaments?.count ?? 0
+        return tournaments?[section].eventList?.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "MatchTableViewCell") as! MatchTableViewCell
-        let tournaments = predictGame.predictionList?[indexPath.section].tournaments?[indexPath.row]
-        cell.populateCell(index: indexPath.row, info: tournaments)
+        var event = tournaments?[indexPath.section].eventList?[indexPath.row]
+//        let tournaments = predictGame.predictionList?[indexPath.section].tournaments?[indexPath.row]
+        cell.populateCell(index: indexPath.row, info: event)
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print("didSelectRowAt \(indexPath)")
-        moveToController()
+        moveToController(index: indexPath)
     }
     
-    func moveToController() {
+    func moveToController(index: IndexPath) {
         let controller = UIStoryboard(name: "Predict", bundle: Bundle(for: Self.self)).instantiateViewController(withIdentifier: "PredictMatchController") as! PredictMatchController
+        let event = tournaments?[index.section].eventList?[index.row]
+        controller.eventsList = event
         //self.present(controller, animated: true, completion: nil)
         self.navigationController?.pushViewController(controller, animated: true)
     }

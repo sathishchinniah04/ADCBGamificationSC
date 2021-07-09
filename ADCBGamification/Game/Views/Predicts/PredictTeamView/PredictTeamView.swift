@@ -44,20 +44,20 @@ class PredictTeamView: UIView {
         self.addSubview(view!)
     }
     
-    func populateView(index: Int, info: Tournaments?) {
+    func populateView(index: Int, info: EventsList?) {
         DispatchQueue.main.async {
             self.appearenceSetup()
             self.labelSetup(index: index, info: info)
         }
     }
     
-    func labelSetup(index: Int, info: Tournaments?) {
+    func labelSetup(index: Int, info: EventsList?) {
         guard let inf = info else { return }
-        leagueNameLabel.text = inf.tournamentName
-        guard let events = inf.eventList?.first else { return }
-        imageSetup(info: events)
-        firstTeamNameLabel.text = events.OpponentA
-        secondTeamNameLabel.text = events.OpponentB
+        //leagueNameLabel.text = inf.
+       // guard let events = inf else { return }
+        imageSetup(info: inf)
+        firstTeamNameLabel.text = inf.OpponentA
+        secondTeamNameLabel.text = inf.OpponentB
     }
     
     func imageSetup(info: EventsList) {

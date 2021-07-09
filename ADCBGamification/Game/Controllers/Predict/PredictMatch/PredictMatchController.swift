@@ -11,7 +11,8 @@ class PredictMatchController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var buttonContainerView: UIView!
-    var tournaments: Tournaments?
+    var eventsList: EventsList?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         navInitialSetup()
@@ -41,12 +42,16 @@ class PredictMatchController: UIViewController {
 
 extension PredictMatchController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1//tournaments?.eventList?.first?.questionList?.count ?? 0
+        let cellCount = eventsList?.questionList?.count ?? 0
+        return cellCount
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "PredictMatchTableViewCell") as! PredictMatchTableViewCell
-        cell.populateView(index: indexPath.row, info: tournaments)
+       // print("quest is   \(eventsList?.questionList?.first?.question)")
+        let questions = eventsList?.questionList?[indexPath.row].question
+        print("quest is \(questions)")
+        cell.populateView(index: indexPath.row, info: eventsList)
         return cell
     }
     

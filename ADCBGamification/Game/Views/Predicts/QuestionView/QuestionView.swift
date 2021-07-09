@@ -66,26 +66,41 @@ class QuestionView: UIView {
             v?.isHidden = true
         }
     }
-    func populateView(index: Int, tournament: Tournaments?) {
-        guard let tourn = tournament else { return }
-        let noOfQues = tourn.eventList?.first?.numberOfquestions ?? "0"
-        noOfQ = Int(noOfQues) ?? 0
+    func populateView(index: Int, eventsList: EventsList?) {
+        guard let even = eventsList else { return }
+        let noOfQues = even.questionList?.first?.predOptions?.count ?? 0
+        noOfQ = Int(noOfQues)
         setupCornerRadius()
         self.visibleOption()
-        labelSetup(index: index, info: tourn)
-        buttonPopulate(index: index, info: tourn)
+        labelSetup(index: index, info: even)
+        buttonPopulate(index: index, info: even)
     }
     
-    func labelSetup(index: Int, info: Tournaments) {
-        guard let list = info.eventList?.first?.questionList?[index] else { return }
-        noOfQuesLabel.text = "Question \(list.questionId ?? "0")"
-        questionLabel.text = list.question
+    func labelSetup(index: Int, info: EventsList) {
+            questionLabel.text = info.questionList?[index].question
+            noOfQuesLabel.text = "Question \(index+1)"
     }
     
-    func buttonPopulate(index: Int, info: Tournaments) {
-        let predOp = info.eventList?.first?.questionList?[index].predOptions
+    func buttonPopulate(index: Int, info: EventsList) {
+        let predOp = info.questionList?[index].predOptions
         if noOfQ == 1 {
             firstAnswerButton.button.setTitle(predOp?[0].text, for: .normal)
+        }
+        if noOfQ == 2 {
+            firstAnswerButton.button.setTitle(predOp?[0].text, for: .normal)
+            secondAnswerButton.button.setTitle(predOp?[1].text, for: .normal)
+        }
+        if noOfQ == 3 {
+            firstAnswerButton.button.setTitle(predOp?[0].text, for: .normal)
+            secondAnswerButton.button.setTitle(predOp?[1].text, for: .normal)
+            thirdAnswerButton.button.setTitle(predOp?[2].text, for: .normal)
+        }
+        
+        if noOfQ == 4 {
+            firstAnswerButton.button.setTitle(predOp?[0].text, for: .normal)
+            secondAnswerButton.button.setTitle(predOp?[1].text, for: .normal)
+            thirdAnswerButton.button.setTitle(predOp?[2].text, for: .normal)
+            fourthAnswerButton.button.setTitle(predOp?[3].text, for: .normal)
         }
     }
     
