@@ -11,6 +11,7 @@ class PredictMatchController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var buttonContainerView: UIView!
+    var tournaments: Tournaments?
     override func viewDidLoad() {
         super.viewDidLoad()
         navInitialSetup()
@@ -29,7 +30,7 @@ class PredictMatchController: UIViewController {
     }
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        let con = self.navigationController
+        let _ = self.navigationController
         //(con as? CustomNavViewController)?.changeTitle(title: "SHIV")
     }
     
@@ -40,12 +41,12 @@ class PredictMatchController: UIViewController {
 
 extension PredictMatchController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 2
+        return 1//tournaments?.eventList?.first?.questionList?.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "PredictMatchTableViewCell") as! PredictMatchTableViewCell
-        cell.populateView(index: indexPath.row)
+        cell.populateView(index: indexPath.row, info: tournaments)
         return cell
     }
     

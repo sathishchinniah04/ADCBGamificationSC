@@ -68,8 +68,7 @@ extension ReferTableView : UITableViewDelegate, UITableViewDataSource {
             handle?(.refer)
         case .sendButton:
             handle?(.sendRefer)
-        default:
-            break
+        
         }
     }
     

@@ -100,6 +100,8 @@
 		3357ED8C2693209300607F50 /* PredictTeamView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3357ED8B2693209300607F50 /* PredictTeamView.xib */; };
 		335933AC26941F0E00CF6AAF /* CustomNeumophicButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 335933AB26941F0E00CF6AAF /* CustomNeumophicButton.swift */; };
 		335933B026941FC200CF6AAF /* CustomNeumophicButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = 335933AF26941FC200CF6AAF /* CustomNeumophicButton.xib */; };
+		336B67AB2697E24C008E419B /* PredictGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 336B67AA2697E24C008E419B /* PredictGame.swift */; };
+		336B67AF26980C08008E419B /* PredictViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 336B67AE26980C08008E419B /* PredictViewModel.swift */; };
 		33EDB0C2268ED7B10040DCD4 /* PredictIntroController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33EDB0C1268ED7B10040DCD4 /* PredictIntroController.swift */; };
 		33EDB0C9268ED7C90040DCD4 /* MatchListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33EDB0C8268ED7C90040DCD4 /* MatchListController.swift */; };
 		33EDB0D0268ED7F20040DCD4 /* PredictMatchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33EDB0CF268ED7F20040DCD4 /* PredictMatchController.swift */; };
@@ -241,6 +243,8 @@
 		3357ED8B2693209300607F50 /* PredictTeamView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PredictTeamView.xib; sourceTree = "<group>"; };
 		335933AB26941F0E00CF6AAF /* CustomNeumophicButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNeumophicButton.swift; sourceTree = "<group>"; };
 		335933AF26941FC200CF6AAF /* CustomNeumophicButton.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomNeumophicButton.xib; sourceTree = "<group>"; };
+		336B67AA2697E24C008E419B /* PredictGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PredictGame.swift; sourceTree = "<group>"; };
+		336B67AE26980C08008E419B /* PredictViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PredictViewModel.swift; sourceTree = "<group>"; };
 		33EDB0C1268ED7B10040DCD4 /* PredictIntroController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PredictIntroController.swift; sourceTree = "<group>"; };
 		33EDB0C8268ED7C90040DCD4 /* MatchListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchListController.swift; sourceTree = "<group>"; };
 		33EDB0CF268ED7F20040DCD4 /* PredictMatchController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PredictMatchController.swift; sourceTree = "<group>"; };
@@ -829,6 +833,7 @@
 				33FC317926958C5D00868D9E /* GameListVM.swift */,
 				33FC31AD2696D7C900868D9E /* SpinViewOfferVM.swift */,
 				33FC31CD26973C5100868D9E /* ExpireViewModel.swift */,
+				336B67AE26980C08008E419B /* PredictViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -839,6 +844,7 @@
 				33FC317E26958C9B00868D9E /* GameList.swift */,
 				33FC31B12696DC9F00868D9E /* SpinOffers.swift */,
 				33FC31B92696F82800868D9E /* SpinAssignReward.swift */,
+				336B67AA2697E24C008E419B /* PredictGame.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1067,6 +1073,7 @@
 				3320FFC72682EBC4001809AA /* NeumorphicTextField.swift in Sources */,
 				3320FFBE2682EBC4001809AA /* IQKeyboardManager+Toolbar.swift in Sources */,
 				3320FFBC2682EBC4001809AA /* IQKeyboardManager+Debug.swift in Sources */,
+				336B67AF26980C08008E419B /* PredictViewModel.swift in Sources */,
 				3320FFAC2682EBC4001809AA /* ExpireView.swift in Sources */,
 				33FC31CE26973C5100868D9E /* ExpireViewModel.swift in Sources */,
 				3320FFA32682EBC4001809AA /* String+Extension.swift in Sources */,
@@ -1076,6 +1083,7 @@
 				3320FFB12682EBC4001809AA /* IQTitleBarButtonItem.swift in Sources */,
 				33FC31B22696DC9F00868D9E /* SpinOffers.swift in Sources */,
 				3320FFC52682EBC4001809AA /* IQKeyboardManager+UITextFieldViewNotification.swift in Sources */,
+				336B67AB2697E24C008E419B /* PredictGame.swift in Sources */,
 				3320FFDF2682EBC4001809AA /* SpinningWheelSliceImpl.swift in Sources */,
 				3320FFA52682EBC4001809AA /* Game.swift in Sources */,
 				3320FFA42682EBC4001809AA /* UIController+Extension.swift in Sources */,

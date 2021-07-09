@@ -43,8 +43,8 @@ class SpinViewOfferVM {
             if let data = data {
                 complition?(data)
             }
-            print("Data is \(data)")
-            print("error is \(error)")
+            print("Data is \(String(describing: data))")
+            print("error is \(String(describing: error))")
         }
     }
 }

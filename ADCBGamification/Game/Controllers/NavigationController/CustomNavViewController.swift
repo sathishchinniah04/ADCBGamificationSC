@@ -31,8 +31,6 @@ class CustomNavViewController: UINavigationController {
             print("back button")
         case .home:
             print("home button")
-        default:
-            break
         }
     }
 }

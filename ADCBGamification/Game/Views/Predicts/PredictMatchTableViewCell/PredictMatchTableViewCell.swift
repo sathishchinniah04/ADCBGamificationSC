@@ -19,13 +19,14 @@ class PredictMatchTableViewCell: UITableViewCell {
         // Initialization code
     }
 
-    func populateView(index: Int) {
-        self.questionView.populateView()
+    func populateView(index: Int, info: Tournaments?) {
+        self.questionView.populateView(index: index, tournament: info)
         self.hideUnwantedObject()
+        self.questionView.populateView(index: index, tournament: info)
         DispatchQueue.main.async {
             self.appearenceSetup()
             self.setupForFirstIndex(index: index)
-            self.predictTeamView.populateView()
+            self.predictTeamView.populateView(index: index, info: info)
         }
     }
     

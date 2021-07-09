@@ -10,6 +10,8 @@ import UIKit
 class QuestionView: UIView {
     var view: UIView?
     @IBOutlet weak var questionContainerView: UIView!
+    @IBOutlet weak var noOfQuesLabel: UILabel!
+    @IBOutlet weak var questionLabel: UILabel!
     @IBOutlet weak var buttonContainerStackView: UIStackView!
     @IBOutlet weak var firstAnswerButton: CustomNeumophicButton!
     @IBOutlet weak var secondAnswerButton: CustomNeumophicButton!
@@ -64,9 +66,27 @@ class QuestionView: UIView {
             v?.isHidden = true
         }
     }
-    func populateView() {
+    func populateView(index: Int, tournament: Tournaments?) {
+        guard let tourn = tournament else { return }
+        let noOfQues = tourn.eventList?.first?.numberOfquestions ?? "0"
+        noOfQ = Int(noOfQues) ?? 0
         setupCornerRadius()
         self.visibleOption()
+        labelSetup(index: index, info: tourn)
+        buttonPopulate(index: index, info: tourn)
+    }
+    
+    func labelSetup(index: Int, info: Tournaments) {
+        guard let list = info.eventList?.first?.questionList?[index] else { return }
+        noOfQuesLabel.text = "Question \(list.questionId ?? "0")"
+        questionLabel.text = list.question
+    }
+    
+    func buttonPopulate(index: Int, info: Tournaments) {
+        let predOp = info.eventList?.first?.questionList?[index].predOptions
+        if noOfQ == 1 {
+            firstAnswerButton.button.setTitle(predOp?[0].text, for: .normal)
+        }
     }
     
     func setupCornerRadius() {

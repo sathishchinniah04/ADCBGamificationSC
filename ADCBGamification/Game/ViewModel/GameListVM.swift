@@ -32,18 +32,16 @@ class GameListVM {
         ] as [String : Any]
         
         NetworkManager.postRequest(struct: GameList.self, url: url, request: myDict) { (data, error) in
-            print("data \(data)")
+            print("data \(String(describing: data))")
             if let data = data {
                 getActiveGames(list: data, complition: complition)
             } else {
-             print("error is \(error)")
+                print("error is \(String(describing: error))")
             }
         }
     }
     
     static func getGameList(url: String, complition:(()->Void)? = nil) {
-        
-        let searchQuerry: [[String: String]]!
         
         let myDict: Dictionary = [
             "requestId": Utility.getRandonNo(),
@@ -54,11 +52,11 @@ class GameListVM {
         ] as [String : Any]
         
         NetworkManager.postRequest(struct: GameList.self, url: url, request: myDict) { (data, error) in
-            print("data \(data)")
+            print("data \(String(describing: data))")
             if let data = data {
                 getActiveGames(list: data, complition: complition)
             } else {
-             print("error is \(error)")
+                print("error is \(String(describing: error))")
             }
         }
     }

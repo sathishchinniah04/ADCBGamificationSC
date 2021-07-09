@@ -9,10 +9,13 @@ import UIKit
 
 class MatchListController: UIViewController {
     @IBOutlet weak var matchTableView: UITableView!
+    var predictGame = PredictGame()
+    var game: Games?
     override func viewDidLoad() {
         super.viewDidLoad()
         registorCell()
         tableSetup()
+        getMatchList()
     }
     
     func tableSetup() {
@@ -23,16 +26,29 @@ class MatchListController: UIViewController {
     func registorCell() {
         matchTableView.register(UINib(nibName: "MatchTableViewCell", bundle: Bundle(for: Self.self)), forCellReuseIdentifier: "MatchTableViewCell")
     }
+    
+    func getMatchList() {
+        guard let gam = game else { return }
+        PredictViewModel.getPredictDetail(gameId: game?.gameId ?? "0") { (info) in
+            print("info is \(info)")
+        }
+    }
 }
 
 extension MatchListController: UITableViewDelegate, UITableViewDataSource {
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 2//predictGame.predictionList?.count ?? 0
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return 1//predictGame.predictionList?[section].tournaments?.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "MatchTableViewCell") as! MatchTableViewCell
-        cell.populateCell()
+        let tournaments = predictGame.predictionList?[indexPath.section].tournaments?[indexPath.row]
+        cell.populateCell(index: indexPath.row, info: tournaments)
         return cell
     }
     
