@@ -73,6 +73,18 @@ extension UIView {
         layer.shadowRadius = shadowRadius
     }
     
+    func addDottedLine() {
+        
+        let shapeLayer = CAShapeLayer()
+        shapeLayer.strokeColor = UIColor.lightGray.cgColor
+        shapeLayer.lineDashPattern = [3, 4]
+        shapeLayer.frame = self.bounds
+        shapeLayer.fillColor = nil
+        self.layer.cornerRadius = 10
+        self.layer.masksToBounds = true
+        shapeLayer.path = UIBezierPath(roundedRect: self.bounds,cornerRadius: 10).cgPath
+        self.layer.addSublayer(shapeLayer)
+    }
     
     func addCustomShadow(cornerRadius:CGFloat = 5.0,shadowRadius:CGFloat = 4, opacity: CGFloat = 0.1, color:UIColor = UIColor.black, offSet: CGSize) {
         layer.cornerRadius = cornerRadius

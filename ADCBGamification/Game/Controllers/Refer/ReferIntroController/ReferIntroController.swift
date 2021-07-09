@@ -13,7 +13,7 @@ class ReferIntroController: UIViewController {
     var game: Games?
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.expireView.populateView(game: game, complition: expireViewHandle)
+        self.expireView.populateView(isShowTerms: false, game: game, complition: expireViewHandle)
         
     }
     
@@ -27,13 +27,10 @@ class ReferIntroController: UIViewController {
         }
     }
     func navigate() {
-        if #available(iOS 13.0, *) {
-            let cont = UIStoryboard(name: "Refer", bundle: Bundle(for: ReferIntroController.self)).instantiateViewController(identifier: "ReferViewController") as! ReferViewController
-            self.navigationController?.pushViewController(cont, animated: true)
-        } else {
-            // Fallback on earlier versions
-        }
         
+            //let cont = UIStoryboard(name: "Refer", bundle: Bundle(for: ReferIntroController.self)).instantiateViewController(withIdentifier: "ReferViewController") as! ReferViewController
+            let cont = UIStoryboard(name: "Refer", bundle: Bundle(for: Self.self)).instantiateViewController(withIdentifier: "ReferController") as! ReferController
+            self.navigationController?.pushViewController(cont, animated: true)
         
     }
 }
