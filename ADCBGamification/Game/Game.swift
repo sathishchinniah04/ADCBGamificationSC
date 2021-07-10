@@ -30,8 +30,14 @@ public class Game {
         IQKeyboardManager.shared.goNext()
         
         StoreManager.shared.accessToken = "J0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9"
+        deleteThis(contr: controller)
        // getControllerRef(controller: controller)
-        loadGameList(controller: controller)
+        //loadGameList(controller: controller)
+    }
+    
+    static func deleteThis(contr: UIViewController) {
+        let cont = UIStoryboard(name: "Refer", bundle: Bundle(for: Self.self)).instantiateViewController(withIdentifier: "ContactListController")
+        contr.present(cont, animated: true, completion: nil)
     }
     
     private class func navigateToController(controller: UIViewController, storyboard: String, id: String) -> UIViewController {

@@ -10,12 +10,14 @@ import UIKit
 class GameListController: UIViewController {
     @IBOutlet weak var gamesTableView: UITableView!
     @IBOutlet weak var activityIndicatorView: UIActivityIndicatorView!
+    
     var games = [Games]()
     var contRef: UIViewController?
     override func viewDidLoad() {
         super.viewDidLoad()
         tableViewSetup()
         getResponce()
+        
     }
     
     func tableViewSetup() {
