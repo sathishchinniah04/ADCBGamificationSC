@@ -8,6 +8,7 @@
 import UIKit
 
 class CustomContactCell: UITableViewCell {
+    @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var imageContainerView: UIView!
     @IBOutlet weak var contactNameLabel: UILabel!
     @IBOutlet weak var contactLabel: UILabel!
@@ -22,6 +23,7 @@ class CustomContactCell: UITableViewCell {
     func populateView(info: FetchedContact) {
         cornerSetup()
         labelSetup(info: info)
+        setupImage(info: info)
     }
     
     func labelSetup(info: FetchedContact) {
@@ -34,9 +36,20 @@ class CustomContactCell: UITableViewCell {
         }
     }
     
+    func setupImage(info: FetchedContact) {
+        DispatchQueue.main.async {
+            if let imgD = info.image {
+                self.userImageView.image = UIImage(data: imgD)
+                self.userImageView.isHidden = false
+            } else {
+                self.userImageView.isHidden = true
+            }
+        }
+    }
+    
     func cornerSetup() {
         DispatchQueue.main.async {
-    //        self.imageContainerView.layer.cornerRadius = 10.0
+            
         }
     }
     

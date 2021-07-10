@@ -16,7 +16,7 @@ class ContactListController: UIViewController {
     @IBOutlet weak var inviteButtonContainerView: UIView!
     
     var contacts = [FetchedContact]()
-    
+    var newList  = [FetchedContact]()
     override func viewDidLoad() {
         super.viewDidLoad()
         buttonSetup()
@@ -29,7 +29,10 @@ class ContactListController: UIViewController {
     
     func fetchContact() {
         PhoneContactVM.getContacts { (contacts) in
+            self.contacts.removeAll()
+            self.newList.removeAll()
             self.contacts = contacts
+            self.newList = contacts
             self.contactTableView.reloadData()
         }
     }
@@ -42,7 +45,7 @@ class ContactListController: UIViewController {
     
     func buttonSetup() {
         DispatchQueue.main.async {
-            self.chooseContactButton.populateView(complition: self.chooseContactButtonTapped(action:))
+            self.chooseContactButton.populateView(complition: self.chooseContactButtonTapped(action:), textAction: self.textFieldDelegateHandle(action:))
             self.chooseContactButton.chooseContact.isHidden = true
             self.chooseContactButton.titleLabel.isHidden = false
             self.chooseContactButton.titleLabel.alpha = 0.00
@@ -52,7 +55,9 @@ class ContactListController: UIViewController {
             self.inviteButtonContainerView.isHidden = true
         }
     }
-
+    
+    
+    
     func neumorphicEffect() {
         DispatchQueue.main.asyncAfter(deadline: .now()+0.03) {
             self.chooseContactButton.buttonState(isPressed: false)
@@ -70,6 +75,31 @@ class ContactListController: UIViewController {
         }
     }
     
+    func textFieldDelegateHandle(action: ReferTextFieldAction) {
+        switch action {
+        case .onEdit(let text):
+            self.onEditionTextField(text: text)
+        case .cleared:
+            print("text field cleared")
+            self.newList = self.contacts
+            self.chooseContactButton.titleLabel.text = self.chooseContactButton.textField.placeholder
+            self.contactTableView.reloadData()
+        default:
+            break
+        }
+    }
+    
+    func onEditionTextField(text: String) {
+        self.newList = self.contacts.filter {
+            $0.firstName.range(of: text, options: [.caseInsensitive, .diacriticInsensitive ]) != nil ||
+                $0.telephone.range(of: text, options: [.caseInsensitive, .diacriticInsensitive ]) != nil
+        }
+        if text.isEmpty {
+            self.newList = self.contacts
+        }
+        self.contactTableView.reloadData()
+    }
+    
     func unHideInviteButon() {
         UIView.animate(withDuration: 0.3) {
             self.inviteButtonContainerView.isHidden = false
@@ -77,23 +107,11 @@ class ContactListController: UIViewController {
         } completion: { (done) in
             print("done")
         }
-
+        
     }
-    
-}
-extension ContactListController: UITableViewDelegate, UITableViewDataSource {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return contacts.count
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "CustomContactCell") as! CustomContactCell
-        cell.populateView(info: contacts[indexPath.row])
-        return cell
-    }
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let contact = contacts[indexPath.row]
+    func onCellTap(indexPath: IndexPath) {
+        self.view.endEditing(true)
+        let contact = self.newList[indexPath.row]
         chooseContactButton.titleLabel.isHidden = false
         chooseContactButton.titleLabel.text = contact.firstName
         chooseContactButton.buttonState(isPressed: false)
@@ -101,6 +119,20 @@ extension ContactListController: UITableViewDelegate, UITableViewDataSource {
         chooseContactButton.textField.text = contact.telephone
         self.unHideInviteButon()
     }
+}
+extension ContactListController: UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return self.newList.count
+    }
     
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "CustomContactCell") as! CustomContactCell
+        cell.populateView(info: self.newList[indexPath.row])
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        onCellTap(indexPath: indexPath)
+    }
     
 }

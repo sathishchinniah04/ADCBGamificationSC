@@ -23,7 +23,7 @@ class ReferController: UIViewController {
             self.shareButton.populateView(complition: self.referButtonHandle(action:))
             self.shareButton.buttonState(isPressed: true)
             self.shareButton.button.setImage(UIImage(named: "Refershare"), for: .normal)
-            self.chooseContactButton.populateView(complition: self.chooseContactButtonTapped(action:))
+            self.chooseContactButton.populateView(complition: self.chooseContactButtonTapped(action:), textAction: nil)
         }
     }
     

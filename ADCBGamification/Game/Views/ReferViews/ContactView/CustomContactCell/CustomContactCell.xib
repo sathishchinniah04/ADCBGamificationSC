@@ -24,7 +24,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="mBl-Dy-Mxn">
                                 <rect key="frame" x="0.0" y="0.0" width="55" height="55"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MiE-SQ-cVi">
+                                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MiE-SQ-cVi">
                                         <rect key="frame" x="0.0" y="0.0" width="55" height="55"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SK" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oph-6r-exG">
@@ -33,7 +33,7 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="BPk-9y-p8I">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="BPk-9y-p8I">
                                                 <rect key="frame" x="0.0" y="0.0" width="55" height="55"/>
                                             </imageView>
                                         </subviews>
@@ -98,6 +98,7 @@
             <connections>
                 <outlet property="contactLabel" destination="LBS-Wf-vv4" id="4ro-DL-x6F"/>
                 <outlet property="contactNameLabel" destination="Rh4-Db-MM3" id="XsG-DF-LQU"/>
+                <outlet property="containerView" destination="fin-0S-chR" id="w5p-Ap-TQ8"/>
                 <outlet property="imageContainerView" destination="MiE-SQ-cVi" id="PRB-jw-CWB"/>
                 <outlet property="initialCharLabel" destination="oph-6r-exG" id="iDK-sU-3C6"/>
                 <outlet property="userImageView" destination="BPk-9y-p8I" id="ukJ-LZ-0gQ"/>

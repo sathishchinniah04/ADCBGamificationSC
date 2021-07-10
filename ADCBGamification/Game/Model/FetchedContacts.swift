@@ -10,4 +10,5 @@ struct FetchedContact {
     var firstName: String
     var lastName: String
     var telephone: String
+    var image: Data?
 }

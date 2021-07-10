@@ -13,6 +13,7 @@ class PhoneContactVM: NSObject {
     private static var contacts = [FetchedContact]()
     
     static func getContacts(complition:(([FetchedContact])->Void)?) {
+        contacts.removeAll()
         fetchContacts(complition: complition)
     }
     
@@ -26,12 +27,12 @@ class PhoneContactVM: NSObject {
             }
             if granted {
                 // 2.
-                let keys = [CNContactGivenNameKey, CNContactFamilyNameKey, CNContactPhoneNumbersKey]
+                let keys = [CNContactGivenNameKey, CNContactFamilyNameKey, CNContactPhoneNumbersKey, CNContactImageDataKey]
                 let request = CNContactFetchRequest(keysToFetch: keys as [CNKeyDescriptor])
                 do {
                     // 3.
                     try store.enumerateContacts(with: request, usingBlock: { (contact, stopPointer) in
-                        self.contacts.append(FetchedContact(firstName: contact.givenName, lastName: contact.familyName, telephone: contact.phoneNumbers.first?.value.stringValue ?? ""))
+                        self.contacts.append(FetchedContact(firstName: contact.givenName, lastName: contact.familyName, telephone: contact.phoneNumbers.first?.value.stringValue ?? "", image: contact.imageData))
                     })
                     complition?(self.contacts)
                 } catch let error {

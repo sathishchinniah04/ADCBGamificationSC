@@ -10,6 +10,12 @@ enum ReferContactButtonAction {
     case chooseContact
     
 }
+
+enum ReferTextFieldAction {
+    case onEdit(String)
+    case cleared
+}
+
 @IBDesignable class ReferContactButton: UIView {
     
     @IBOutlet weak var titleLabel: UILabel!
@@ -32,6 +38,8 @@ enum ReferContactButtonAction {
     
     var view: UIView?
     private var handle: ((ReferContactButtonAction)->Void)?
+    private var textHandle: ((ReferTextFieldAction)->Void)?
+    
     func loadXib() -> UIView {
         return UINib(nibName: "ReferContactButton", bundle: Bundle(for: Self.self)).instantiate(withOwner: self, options: nil).first as! UIView
     }
@@ -59,6 +67,7 @@ enum ReferContactButtonAction {
         titleLabel.isHidden = true
         titleLabel.text = title
         textField.placeholder = placeHolder
+        textField.delegate = self
     }
     
     func buttonState(isPressed: Bool) {
@@ -76,7 +85,8 @@ enum ReferContactButtonAction {
     }
     
     
-    func populateView(complition:((ReferContactButtonAction)->Void)?) {
+    func populateView(complition:((ReferContactButtonAction)->Void)?, textAction:((ReferTextFieldAction)->Void)? = nil) {
+        self.textHandle = textAction
         self.handle = complition
     }
     
@@ -86,5 +96,21 @@ enum ReferContactButtonAction {
             self.titleLabel.isHidden = false
         }
         self.handle?(.chooseContact)
+    }
+}
+extension ReferContactButton: UITextFieldDelegate {
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        if let text = textField.text,
+                   let textRange = Range(range, in: text) {
+                   let updatedText = text.replacingCharacters(in: textRange,
+                                                               with: string)
+            self.textHandle?(.onEdit(updatedText))
+        }
+        return true
+    }
+    
+    func textFieldShouldClear(_ textField: UITextField) -> Bool {
+        self.textHandle?(.cleared)
+        return true
     }
 }
