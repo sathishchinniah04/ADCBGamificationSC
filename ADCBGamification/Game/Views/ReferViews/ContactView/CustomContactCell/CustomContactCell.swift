@@ -26,7 +26,7 @@ class CustomContactCell: UITableViewCell {
     
     func labelSetup(info: FetchedContact) {
         DispatchQueue.main.async {
-            self.contactNameLabel.text = info.firstName
+            self.contactNameLabel.text = info.firstName+" "+info.lastName
             self.contactLabel.text = info.telephone
             let fistC = info.firstName.first?.description ?? ""
             let secC = info.lastName.first?.description ?? ""
