@@ -11,11 +11,10 @@ class PredictIntroController: UIViewController {
     @IBOutlet weak var expireView: ExpireView!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     var game: Games?
-    var predictSuccessHelper = PredictSuccessHelper()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.initialSetup()
-        predictSuccessHelper.show(complition: nil)
     }
     
     func initialSetup() {

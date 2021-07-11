@@ -28,7 +28,7 @@ class PredictViewModel {
         }
     }
     
-    static func submitAnswer(gameId: String, event: EventsList, index: Int) {
+    static func submitAnswer(gameId: String, event: EventsList, index: Int, complition: (()->Void)?) {
         let urlStr = Constants.predictgameDetail+"\(gameId)/1"
         guard let url = URL(string: urlStr) else {print("Inavlid url getPredictDetail"); return }
         var urlReq = URLRequest(url: url)
@@ -38,11 +38,14 @@ class PredictViewModel {
         urlReq.setValue(StoreManager.shared.msisdn, forHTTPHeaderField: "msisdn")
         urlReq.setValue(StoreManager.shared.msisdn, forHTTPHeaderField: "customerId")
         urlReq.setValue(StoreManager.shared.language, forHTTPHeaderField: "language")
-//        NetworkManager.postRequest(struct: GameList.self, url: urlStr, urlReq: urlReq, requestData: reqData(event: event, index: index)!) { (data, error) in
-//            print("data is \(data)")
-//            print("Error is \(error)")
-//        }
-        reqData(event: event, index: index)
+        NetworkManager.postRequest(struct: GameList.self, url: urlStr, urlReq: urlReq, requestData: reqData(event: event, index: index)!) { (data, error) in
+            if let dat = data {
+             complition?()
+            }
+            print("data is \(data)")
+            print("Error is \(error)")
+        }
+//        reqData(event: event, index: index)
     }
     
     static private func reqData(event: EventsList, index: Int) -> [String : Any]? {

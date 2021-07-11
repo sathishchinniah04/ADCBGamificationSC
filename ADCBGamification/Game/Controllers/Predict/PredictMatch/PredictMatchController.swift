@@ -15,6 +15,8 @@ class PredictMatchController: UIViewController {
     var eventsList: EventsList?
     var selectedIndex: Int = 0
     var game: Games?
+    var predictSuccessHelper = PredictSuccessHelper()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         initialSetup()
@@ -47,10 +49,16 @@ class PredictMatchController: UIViewController {
         //customNavView.populateView(sController: self)
     }
     
+    func onSuccess() {
+        predictSuccessHelper.show { (action) in
+            print("action \(action)")
+        }
+    }
+    
     @IBAction func submitAnswer() {
         guard let gId = game?.gameId else { return }
         guard let event = eventsList else { return }
-        PredictViewModel.submitAnswer(gameId: gId, event: event, index: selectedIndex)
+        PredictViewModel.submitAnswer(gameId: gId, event: event, index: selectedIndex, complition: onSuccess)
         print("submit ans")
     }
 }
