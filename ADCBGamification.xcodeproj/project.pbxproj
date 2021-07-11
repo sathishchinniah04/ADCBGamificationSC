@@ -110,6 +110,9 @@
 		3381168C2699A78600C8F35E /* FetchedContacts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3381168B2699A78600C8F35E /* FetchedContacts.swift */; };
 		338116982699AC4900C8F35E /* CustomContactCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 338116962699AC4900C8F35E /* CustomContactCell.swift */; };
 		338116992699AC4900C8F35E /* CustomContactCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 338116972699AC4900C8F35E /* CustomContactCell.xib */; };
+		33CD2194269AF4D300CB71AC /* PredictSuccessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33CD2193269AF4D200CB71AC /* PredictSuccessView.swift */; };
+		33CD2198269AF4DD00CB71AC /* PredictSuccessView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 33CD2197269AF4DD00CB71AC /* PredictSuccessView.xib */; };
+		33CD219C269AF4EE00CB71AC /* PredictSuccessHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33CD219B269AF4EE00CB71AC /* PredictSuccessHelper.swift */; };
 		33EDB0C2268ED7B10040DCD4 /* PredictIntroController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33EDB0C1268ED7B10040DCD4 /* PredictIntroController.swift */; };
 		33EDB0C9268ED7C90040DCD4 /* MatchListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33EDB0C8268ED7C90040DCD4 /* MatchListController.swift */; };
 		33EDB0D0268ED7F20040DCD4 /* PredictMatchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33EDB0CF268ED7F20040DCD4 /* PredictMatchController.swift */; };
@@ -261,6 +264,9 @@
 		3381168B2699A78600C8F35E /* FetchedContacts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchedContacts.swift; sourceTree = "<group>"; };
 		338116962699AC4900C8F35E /* CustomContactCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomContactCell.swift; sourceTree = "<group>"; };
 		338116972699AC4900C8F35E /* CustomContactCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomContactCell.xib; sourceTree = "<group>"; };
+		33CD2193269AF4D200CB71AC /* PredictSuccessView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PredictSuccessView.swift; sourceTree = "<group>"; };
+		33CD2197269AF4DD00CB71AC /* PredictSuccessView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PredictSuccessView.xib; sourceTree = "<group>"; };
+		33CD219B269AF4EE00CB71AC /* PredictSuccessHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PredictSuccessHelper.swift; sourceTree = "<group>"; };
 		33EDB0C1268ED7B10040DCD4 /* PredictIntroController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PredictIntroController.swift; sourceTree = "<group>"; };
 		33EDB0C8268ED7C90040DCD4 /* MatchListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchListController.swift; sourceTree = "<group>"; };
 		33EDB0CF268ED7F20040DCD4 /* PredictMatchController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PredictMatchController.swift; sourceTree = "<group>"; };
@@ -756,6 +762,16 @@
 			path = CustomContactCell;
 			sourceTree = "<group>";
 		};
+		33CD2192269AF4B800CB71AC /* PredictSuccessView */ = {
+			isa = PBXGroup;
+			children = (
+				33CD2193269AF4D200CB71AC /* PredictSuccessView.swift */,
+				33CD2197269AF4DD00CB71AC /* PredictSuccessView.xib */,
+				33CD219B269AF4EE00CB71AC /* PredictSuccessHelper.swift */,
+			);
+			path = PredictSuccessView;
+			sourceTree = "<group>";
+		};
 		33EDB0BE268ED72F0040DCD4 /* Predict */ = {
 			isa = PBXGroup;
 			children = (
@@ -804,6 +820,7 @@
 		33EDB0DE2692CC650040DCD4 /* Predicts */ = {
 			isa = PBXGroup;
 			children = (
+				33CD2192269AF4B800CB71AC /* PredictSuccessView */,
 				33F59CD6269331C4005B009A /* QuestionView */,
 				33F59CCF269330A0005B009A /* PredictMatchTableViewCell */,
 				3357ED842693203C00607F50 /* PredictTeamView */,
@@ -1088,6 +1105,7 @@
 				3320FFD22682EBC4001809AA /* HistoryTableViewCell.xib in Resources */,
 				33F59CD3269330C0005B009A /* PredictMatchTableViewCell.xib in Resources */,
 				33FC319B2695B04300868D9E /* GameList.storyboard in Resources */,
+				33CD2198269AF4DD00CB71AC /* PredictSuccessView.xib in Resources */,
 				3320FFC92682EBC4001809AA /* NeumorphicButton.xib in Resources */,
 				3320FFCE2682EBC4001809AA /* ReferSuccessPopupView.xib in Resources */,
 				3320FFAD2682EBC4001809AA /* GamificationAssets.xcassets in Resources */,
@@ -1182,6 +1200,7 @@
 				33EDB0D0268ED7F20040DCD4 /* PredictMatchController.swift in Sources */,
 				3320FFB02682EBC4001809AA /* IQPreviousNextView.swift in Sources */,
 				33FC31CA26971A9800868D9E /* SpinSuccessViewHelper.swift in Sources */,
+				33CD219C269AF4EE00CB71AC /* PredictSuccessHelper.swift in Sources */,
 				3320FFC02682EBC4001809AA /* IQUIScrollView+Additions.swift in Sources */,
 				3320FFB72682EBC4001809AA /* IQKeyboardManagerConstantsInternal.swift in Sources */,
 				33F59CD2269330C0005B009A /* PredictMatchTableViewCell.swift in Sources */,
@@ -1197,6 +1216,7 @@
 				3320FFD42682EBC4001809AA /* NewReferTableViewCell.swift in Sources */,
 				33FC31672695758500868D9E /* NetworkManager.swift in Sources */,
 				33FC317326957FB000868D9E /* StoreManager.swift in Sources */,
+				33CD2194269AF4D300CB71AC /* PredictSuccessView.swift in Sources */,
 				33FC31D326973CA000868D9E /* CustomTimer.swift in Sources */,
 				3320FFBD2682EBC4001809AA /* IQKeyboardManager+OrientationNotification.swift in Sources */,
 				33EDB0EB2692CE870040DCD4 /* CustomNavView.swift in Sources */,
