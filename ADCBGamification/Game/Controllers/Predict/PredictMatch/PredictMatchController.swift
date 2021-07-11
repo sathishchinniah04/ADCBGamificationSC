@@ -73,12 +73,7 @@ extension PredictMatchController: UITableViewDelegate, UITableViewDataSource {
     func answerButtonTapped(action: PredictMatchTableViewCellAction) {
         switch action {
         case .tapped(let qNo, let inde):
-        
-            print("q no is \(qNo)  and index is \(inde)")
-            print("event is \(eventsList?.eventid ?? 0)")
-            print("questionId is \(eventsList?.questionList?[inde].questionId ?? 0)")
-            print("option Id is \(eventsList?.questionList?[inde].predOptions?[qNo].id)")
-            print("even \(eventsList?.questionList?[inde].predOptions?[qNo].isSelected)")
+        break
         default:
             break
         }

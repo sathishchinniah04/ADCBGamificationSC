@@ -38,11 +38,11 @@ class PredictViewModel {
         urlReq.setValue(StoreManager.shared.msisdn, forHTTPHeaderField: "msisdn")
         urlReq.setValue(StoreManager.shared.msisdn, forHTTPHeaderField: "customerId")
         urlReq.setValue(StoreManager.shared.language, forHTTPHeaderField: "language")
-        NetworkManager.postRequest(struct: GameList.self, url: urlStr, urlReq: urlReq, requestData: reqData(event: event, index: index)!) { (data, error) in
-            print("data is \(data)")
-            print("Error is \(error)")
-        }
-        
+//        NetworkManager.postRequest(struct: GameList.self, url: urlStr, urlReq: urlReq, requestData: reqData(event: event, index: index)!) { (data, error) in
+//            print("data is \(data)")
+//            print("Error is \(error)")
+//        }
+        reqData(event: event, index: index)
     }
     
     static private func reqData(event: EventsList, index: Int) -> [String : Any]? {
@@ -52,25 +52,43 @@ class PredictViewModel {
         var ansList = [["questionid": "",
                        "optionId": ""]]
         ansList.removeAll()
+        var answeredQ: [PredOption]?
+        
+        var count: Int = 0
         for item in questList {
             guard let opsList = item.predOptions else { return nil}
             var id = ""
+            answeredQ = opsList.filter({$0.isSelected == true})
+            
             for ops in opsList {
                 if !ops.isSelected  {
-                    print("questionis not answered ")
+
                 } else {
+                    count += 1
                     id = "\(ops.id ?? 0)"
                 }
             }
             ansList.append(["questionid": "\(item.questionId ?? 0)",
                             "optionId": "\(id)"])
-            print("no of question \(item)")
+         
         }
+        print("answered question \(count)")
+        print("answered quet is \(answeredQ?.count)")
+        let jsonData = try? JSONSerialization.data(withJSONObject: ansList, options: [])
+        let eventJson = String(data: jsonData!, encoding: .utf8)
+    //    print("items to send is \(ansList)")
+        let ansListStr = ["eventid": eventId, "answerList": eventJson!] as [String : Any]
         
-        print("items to send is \(ansList)")
-        let event = ["eventid": eventId, "answerList": ansList] as [String : Any]
-        let submitPred = ["submitPredictions": event]
         
+//        print("ansListStr data is \(ansListStr)")
+
+        let submitPred = ["submitPredictions": ansListStr]
+  //      print("submitPred \(submitPred)")
+        if count == questList.count {
+            print("Answered all question")
+        } else {
+            print("All questions are not answered")
+        }
         return submitPred
     }
     
