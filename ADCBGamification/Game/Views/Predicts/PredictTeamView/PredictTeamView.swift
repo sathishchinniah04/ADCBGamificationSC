@@ -56,8 +56,8 @@ class PredictTeamView: UIView {
         //leagueNameLabel.text = inf.
        // guard let events = inf else { return }
         imageSetup(info: inf)
-        firstTeamNameLabel.text = inf.OpponentA
-        secondTeamNameLabel.text = inf.OpponentB
+        firstTeamNameLabel.text = inf.opponentASynonym
+        secondTeamNameLabel.text = inf.opponentBSynonym
     }
     
     func imageSetup(info: EventsList) {

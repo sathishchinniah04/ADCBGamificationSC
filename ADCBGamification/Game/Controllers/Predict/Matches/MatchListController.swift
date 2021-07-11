@@ -69,6 +69,8 @@ extension MatchListController: UITableViewDelegate, UITableViewDataSource {
         let controller = UIStoryboard(name: "Predict", bundle: Bundle(for: Self.self)).instantiateViewController(withIdentifier: "PredictMatchController") as! PredictMatchController
         let event = tournaments?[index.section].eventList?[index.row]
         controller.eventsList = event
+        controller.selectedIndex = index.row
+        controller.game = game
         //self.present(controller, animated: true, completion: nil)
         self.navigationController?.pushViewController(controller, animated: true)
     }

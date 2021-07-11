@@ -11,10 +11,13 @@ class PredictMatchController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var buttonContainerView: UIView!
+    @IBOutlet weak var submitButton: UIButton!
     var eventsList: EventsList?
-    
+    var selectedIndex: Int = 0
+    var game: Games?
     override func viewDidLoad() {
         super.viewDidLoad()
+        initialSetup()
         navInitialSetup()
         tableSetup()
         self.buttonContainerView.addShadow(cornerRadius:0, shadowRadius: 2, opacity: 0.5)
@@ -24,6 +27,11 @@ class PredictMatchController: UIViewController {
         }
     }
 
+    func initialSetup() {
+        self.submitButton.alpha = 0.2
+        self.submitButton.isUserInteractionEnabled = false
+    }
+    
     func tableSetup() {
         tableView.delegate = self
         tableView.dataSource = self
@@ -38,25 +46,44 @@ class PredictMatchController: UIViewController {
     func navInitialSetup() {
         //customNavView.populateView(sController: self)
     }
+    
+    @IBAction func submitAnswer() {
+        guard let gId = game?.gameId else { return }
+        guard let event = eventsList else { return }
+        PredictViewModel.submitAnswer(gameId: gId, event: event, index: selectedIndex)
+        print("submit ans")
+    }
 }
 
 extension PredictMatchController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
-        
+
         let cellCount = eventsList?.questionList?.count ?? 0
-        print("questin list \(cellCount)")
         return cellCount
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "PredictMatchTableViewCell") as! PredictMatchTableViewCell
-       // print("quest is   \(eventsList?.questionList?.first?.question)")
+
         let questions = eventsList?.questionList?[indexPath.row].question
-        print("quest is \(questions)")
-        cell.populateView(index: indexPath.row, info: eventsList)
+        cell.populateView(index: indexPath.row, info: eventsList, complition: answerButtonTapped(action:))
         return cell
     }
     
+    func answerButtonTapped(action: PredictMatchTableViewCellAction) {
+        switch action {
+        case .tapped(let qNo, let inde):
+        
+            print("q no is \(qNo)  and index is \(inde)")
+            print("event is \(eventsList?.eventid ?? 0)")
+            print("questionId is \(eventsList?.questionList?[inde].questionId ?? 0)")
+            print("option Id is \(eventsList?.questionList?[inde].predOptions?[qNo].id)")
+            print("even \(eventsList?.questionList?[inde].predOptions?[qNo].isSelected)")
+        default:
+            break
+        }
+        self.submitButton.alpha = 1.0
+        self.submitButton.isUserInteractionEnabled = true
+    }
     
 }

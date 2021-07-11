@@ -39,7 +39,7 @@ class SpinViewOfferVM {
         ] as [String : Any]
         
         let urlStr = Constants.spinAssignReward
-        NetworkManager.postRequest(struct: SpinAssignReward.self, url: urlStr, request: myDict) { (data, error) in
+        NetworkManager.postRequest(struct: SpinAssignReward.self, url: urlStr, requestData: myDict) { (data, error) in
             if let data = data {
                 complition?(data)
             }

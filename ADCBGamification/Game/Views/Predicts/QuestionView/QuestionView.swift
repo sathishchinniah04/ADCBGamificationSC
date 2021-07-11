@@ -19,7 +19,10 @@ class QuestionView: UIView {
     @IBOutlet weak var fourthAnswerButton: CustomNeumophicButton!
     
     var noOfQ: Int = 0
+    var handle:((_ qNo: Int,_ indexPath : Int)->Void)?
     var noOfButton: Int = 4
+    var eventsList: EventsList?
+    var index: Int = 0
     func loaxXib() -> UIView {
         return UINib(nibName: "QuestionView", bundle: Bundle(for: Self.self)).instantiate(withOwner: self, options: nil).first as! UIView
     }
@@ -49,16 +52,35 @@ class QuestionView: UIView {
     }
     
     func buttonSetup() {
-        firstAnswerButton.handler = buttonHandler
-        secondAnswerButton.handler = buttonHandler
-        thirdAnswerButton.handler = buttonHandler
-        fourthAnswerButton.handler = buttonHandler
+        firstAnswerButton.handler = firstButtonHandler
+        secondAnswerButton.handler = secButtonHandler
+        thirdAnswerButton.handler = thirdButtonHandler
+        fourthAnswerButton.handler = fourthButtonHandler
     }
     
-    func buttonHandler() {
-            print("Tapped")
+    func firstButtonHandler() {
+        self.eventsList?.questionList?[index].predOptions?[0].isSelected = true
         buttonContainerStackView.isUserInteractionEnabled = false
+        handle?(0, self.index)
     }
+    func secButtonHandler() {
+        
+        self.eventsList?.questionList?[index].predOptions?[1].isSelected = true
+        buttonContainerStackView.isUserInteractionEnabled = false
+        handle?(1, self.index)
+    }
+    func thirdButtonHandler() {
+        self.eventsList?.questionList?[index].predOptions?[2].isSelected = true
+        buttonContainerStackView.isUserInteractionEnabled = false
+        handle?(2, self.index)
+    }
+    func fourthButtonHandler() {
+        self.eventsList?.questionList?[index].predOptions?[3].isSelected = true
+        buttonContainerStackView.isUserInteractionEnabled = false
+        handle?(3, self.index)
+    }
+    
+    
     
     func hideAllButton() {
         for i in 0..<noOfButton {
@@ -66,9 +88,13 @@ class QuestionView: UIView {
             v?.isHidden = true
         }
     }
-    func populateView(index: Int, eventsList: EventsList?) {
+    func populateView(index: Int, eventsList: EventsList?, complition:((_ qNo: Int,_ indexPath : Int)->Void)?) {
         guard let even = eventsList else { return }
+        self.eventsList = even
+        self.index = index
+        
         let noOfQues = even.questionList?[index].predOptions?.count ?? 0
+        self.handle = complition
         noOfQ = Int(noOfQues)
         setupCornerRadius()
         self.visibleOption()
@@ -84,24 +110,55 @@ class QuestionView: UIView {
     func buttonPopulate(index: Int, info: EventsList) {
         let predOp = info.questionList?[index].predOptions
         if noOfQ == 1 {
-            let ans = "\(predOp?[0].text ?? "")"//+"\(predOp?[0].abcd)"
+            let ans = predOp?[0].text ?? ""// ;let id = "\(predOp?[0].id ?? 0)"
+            
             firstAnswerButton.button.setTitle(ans, for: .normal)
+            secondAnswerButton.isHidden = true
+            thirdAnswerButton.isHidden = true
+            fourthAnswerButton.isHidden = true
+            predOp?[0].isSelected = false
         }
         if noOfQ == 2 {
-            firstAnswerButton.button.setTitle(predOp?[0].text, for: .normal)
-            secondAnswerButton.button.setTitle(predOp?[1].text, for: .normal)
+            
+            let ans = predOp?[0].text ?? "" //; let id = "\(predOp?[0].id ?? 0)"
+            let ans1 = predOp?[1].text ?? ""//; let id1 = "\(predOp?[1].id ?? 0)"
+    
+            firstAnswerButton.button.setTitle(ans, for: .normal)
+            secondAnswerButton.button.setTitle(ans1, for: .normal)
+            thirdAnswerButton.isHidden = true
+            fourthAnswerButton.isHidden = true
+            predOp?[0].isSelected = false
+            predOp?[1].isSelected = false
         }
         if noOfQ == 3 {
-            firstAnswerButton.button.setTitle(predOp?[0].text, for: .normal)
-            secondAnswerButton.button.setTitle(predOp?[1].text, for: .normal)
-            thirdAnswerButton.button.setTitle(predOp?[2].text, for: .normal)
+            let ans = predOp?[0].text ?? "" //; let id = "\(predOp?[0].id ?? 0)"
+            let ans1 = predOp?[1].text ?? ""//; let id1 = "\(predOp?[1].id ?? 0)"
+            let ans2 = predOp?[2].text ?? ""// ; let id2 = "\(predOp?[2].id ?? 0)"
+            
+            firstAnswerButton.button.setTitle(ans, for: .normal)
+            secondAnswerButton.button.setTitle(ans1, for: .normal)
+            thirdAnswerButton.button.setTitle(ans2, for: .normal)
+            fourthAnswerButton.isHidden = true
+            predOp?[0].isSelected = false
+            predOp?[1].isSelected = false
+            predOp?[2].isSelected = false
+            
         }
         
         if noOfQ == 4 {
-            firstAnswerButton.button.setTitle(predOp?[0].text, for: .normal)
-            secondAnswerButton.button.setTitle(predOp?[1].text, for: .normal)
-            thirdAnswerButton.button.setTitle(predOp?[2].text, for: .normal)
-            fourthAnswerButton.button.setTitle(predOp?[3].text, for: .normal)
+            let ans = predOp?[0].text ?? "" //; let id = "\(predOp?[0].id ?? 0)"
+            let ans1 = predOp?[1].text ?? ""//; let id1 = "\(predOp?[1].id ?? 0)"
+            let ans2 = predOp?[2].text ?? "" //; let id2 = "\(predOp?[2].id ?? 0)"
+            let ans3 = predOp?[3].text ?? ""//; let id3 = "\(predOp?[3].id ?? 0)"
+            
+            firstAnswerButton.button.setTitle(ans, for: .normal)
+            secondAnswerButton.button.setTitle(ans1, for: .normal)
+            thirdAnswerButton.button.setTitle(ans2, for: .normal)
+            fourthAnswerButton.button.setTitle(ans3, for: .normal)
+            predOp?[0].isSelected = false
+            predOp?[1].isSelected = false
+            predOp?[2].isSelected = false
+            predOp?[3].isSelected = false
         }
     }
     

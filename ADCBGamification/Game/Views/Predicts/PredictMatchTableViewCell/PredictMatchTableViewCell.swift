@@ -6,6 +6,9 @@
 //
 
 import UIKit
+enum PredictMatchTableViewCellAction {
+    case tapped(_ qNo: Int,_ indexPath : Int)
+}
 
 class PredictMatchTableViewCell: UITableViewCell {
     @IBOutlet weak var titleLabel: UILabel!
@@ -13,15 +16,18 @@ class PredictMatchTableViewCell: UITableViewCell {
     @IBOutlet weak var spacerView: UIView!
     @IBOutlet weak var predictTeamView: PredictTeamView!
     @IBOutlet weak var questionView: QuestionView!
-    
+    var handle:((PredictMatchTableViewCellAction)->Void)?
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
 
-    func populateView(index: Int, info: EventsList?) {
+    func populateView(index: Int, info: EventsList?, complition: ((PredictMatchTableViewCellAction)->Void)?) {
+        self.handle = complition
+        self.questionView.populateView(index: index, eventsList: info) {(qNo,index1) in
+            self.handle?(.tapped(qNo, index1))
+        }
         
-        self.questionView.populateView(index: index, eventsList: info)
         self.hideUnwantedObject()
         DispatchQueue.main.async {
             self.appearenceSetup()

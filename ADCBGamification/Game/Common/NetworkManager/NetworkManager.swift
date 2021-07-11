@@ -29,13 +29,13 @@ class NetworkManager {
         return req
     }
     
-    class func postRequest<T:Decodable>(struct: T.Type, url: String, urlReq: URLRequest? = nil, request: Dictionary<String, Any>, complition: ((T?,ErrorType?)->Void)?) {
+    class func postRequest<T:Decodable>(struct: T.Type, url: String, urlReq: URLRequest? = nil, requestData: Dictionary<String, Any>, complition: ((T?,ErrorType?)->Void)?) {
         guard let ur = URL(string: url) else { complition?(nil, .invalidUrl); return}
         let urReq = urlReq ?? URLRequest(url: ur)
         print("urlReq \(urReq)")
         var req = createCommonRequest(url: ur, urlReq: urReq, methodType: .post)
-        print("req pac = \(request)")
-        let jsonData = try? JSONSerialization.data(withJSONObject: request, options:[])
+        print("req pac = \(requestData)")
+        let jsonData = try? JSONSerialization.data(withJSONObject: requestData, options:[])
         req.httpBody = jsonData
         task(req: req, complition: complition)
     }
@@ -70,7 +70,11 @@ class NetworkManager {
         print("\n\n\n")
         print("Req \(req)")
         print("url \(String(describing: req.url))")
-
+        if let da = data {
+            let json = try? JSONSerialization.jsonObject(with: da, options: .allowFragments)
+            print("Json data is \(json)")
+        }
+        
         print("\n\n\n")
         
         print("\n\n\n")

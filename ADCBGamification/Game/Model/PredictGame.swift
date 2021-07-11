@@ -32,6 +32,8 @@ class EventsList: Decodable {
     var predictionActivationTime: String?
     var predictionLockingTime: String?
     var OpponentA: String?
+    var opponentASynonym: String?
+    var opponentBSynonym: String?
     var OpponentB: String?
     var imageCardOppenentA: String?
     var imageCardOppenentB: String?
@@ -54,4 +56,7 @@ class PredOption: Decodable {
     var text: String?
     var image: String?
     var predictedPercentage: Float?
+    lazy var isSelected: Bool = {
+        return false
+    }()
 }

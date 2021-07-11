@@ -132,6 +132,9 @@
                                                 <integer key="value" value="10"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="submitAnswer" destination="4Ck-to-3UP" eventType="touchUpInside" id="9Qs-a8-Gdi"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -161,6 +164,7 @@
                     </view>
                     <connections>
                         <outlet property="buttonContainerView" destination="4AT-rD-JbW" id="Rh8-he-Vs9"/>
+                        <outlet property="submitButton" destination="UVo-Be-85q" id="XaW-HG-Gvo"/>
                         <outlet property="tableView" destination="Oaw-BX-70x" id="caM-Kg-BR5"/>
                     </connections>
                 </viewController>

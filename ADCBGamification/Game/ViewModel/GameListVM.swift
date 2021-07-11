@@ -31,7 +31,7 @@ class GameListVM {
             "queryParams": [["key": StoreManager.shared.msisdn, "keyType": "CUSTOMER_ID"],["key": StoreManager.shared.language, "keyType": "LANG"]]
         ] as [String : Any]
         
-        NetworkManager.postRequest(struct: GameList.self, url: url, request: myDict) { (data, error) in
+        NetworkManager.postRequest(struct: GameList.self, url: url, requestData: myDict) { (data, error) in
             print("data \(String(describing: data))")
             if let data = data {
                 getActiveGames(list: data, complition: complition)
@@ -51,7 +51,7 @@ class GameListVM {
             "queryParams": [["key": StoreManager.shared.msisdn, "keyType": "CUSTOMER_ID"],["key": StoreManager.shared.language, "keyType": "LANG"]]
         ] as [String : Any]
         
-        NetworkManager.postRequest(struct: GameList.self, url: url, request: myDict) { (data, error) in
+        NetworkManager.postRequest(struct: GameList.self, url: url, requestData: myDict) { (data, error) in
             print("data \(String(describing: data))")
             if let data = data {
                 getActiveGames(list: data, complition: complition)
