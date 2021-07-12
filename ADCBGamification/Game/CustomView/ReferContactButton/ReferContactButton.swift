@@ -64,10 +64,15 @@ enum ReferTextFieldAction {
         view?.frame = self.bounds
         view?.autoresizingMask = [.flexibleWidth,.flexibleHeight]
         self.addSubview(view!)
-        titleLabel.isHidden = true
+        //titleLabel.isHidden = true
+        titleVisible(visible: false)
         titleLabel.text = title
         textField.placeholder = placeHolder
         textField.delegate = self
+    }
+    
+    func titleVisible(visible: Bool) {
+        titleLabel.alpha = visible ? 1.0 : 0.0
     }
     
     func buttonState(isPressed: Bool) {
@@ -92,8 +97,9 @@ enum ReferTextFieldAction {
     
     @IBAction func cheooseContactTapped() {
         DispatchQueue.main.async {
-            self.chooseContact.isHidden = true
+          //  self.chooseContact.isHidden = true
             self.titleLabel.isHidden = false
+            self.titleVisible(visible: true)
         }
         self.handle?(.chooseContact)
     }

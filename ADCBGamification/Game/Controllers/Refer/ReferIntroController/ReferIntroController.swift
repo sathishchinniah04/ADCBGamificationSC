@@ -19,11 +19,12 @@ class ReferIntroController: UIViewController {
     
     func expireViewHandle() {
         DispatchQueue.main.async {
-            UIView.animate(withDuration: 0.3) {
-                self.expireView.isHidden = true
-            } completion: { (done) in
-                self.navigate()
-            }
+            self.navigate()
+//            UIView.animate(withDuration: 0.3) {
+//                self.expireView.isHidden = false
+//            } completion: { (done) in
+//                self.navigate()
+//            }
         }
     }
     func navigate() {

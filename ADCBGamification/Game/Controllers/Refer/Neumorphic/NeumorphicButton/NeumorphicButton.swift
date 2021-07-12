@@ -16,6 +16,8 @@ enum NeumorphicButtonAction {
     var isTapped: Bool = false
     private var handle:((NeumorphicButtonAction)->Void)?
     var isInnerState: Bool = false
+    var buttonImgName: String?
+    var buttonName: String?
     override init(frame: CGRect) {
         super.init(frame: frame)
         initialSetup()
@@ -60,11 +62,14 @@ enum NeumorphicButtonAction {
     }
     
     func setButtonTitle(title: String, titleColor: UIColor = .gray) {
+        self.buttonName = title
+        
         self.button.setTitle(title, for: .normal)
         self.button.setTitleColor(titleColor, for: .normal)
         self.button.setImage(nil, for: .normal)
     }
     func setButtonImage(name: String) {
+        self.buttonImgName = name
         let img = UIImage(named: name, in: Bundle(for: Self.self), compatibleWith: nil)
         self.button.setImage(img, for: .normal)
         self.button.setTitle(nil, for: .normal)
@@ -92,6 +97,12 @@ enum NeumorphicButtonAction {
             } else {
                 self.button.addInnerShadowBtn(lightShadow: self.lightLayer, darkShadow: self.darkLayer, cornerRadius: 10)
             }
+        }
+        if let img = self.buttonImgName {
+            self.setButtonImage(name: img)
+        }
+        if let name = self.buttonName {
+            self.setButtonTitle(title: name)
         }
     }
     

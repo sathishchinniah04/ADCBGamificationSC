@@ -14,7 +14,7 @@ class ContactListController: UIViewController {
     @IBOutlet weak var chooseContactButton: ReferContactButton!
     @IBOutlet weak var inviteButton: NeumorphicButton!
     @IBOutlet weak var inviteButtonContainerView: UIView!
-    
+    var handle: ((_ name: String,_ ph: String)->Void)?
     var contacts = [FetchedContact]()
     var newList  = [FetchedContact]()
     override func viewDidLoad() {
@@ -118,6 +118,8 @@ class ContactListController: UIViewController {
         self.chooseContactButton.titleLabel.alpha = 1.0
         chooseContactButton.textField.text = contact.telephone
         self.unHideInviteButon()
+        self.handle?(contact.firstName + " " + contact.lastName, contact.telephone)
+        self.dismiss(animated: true, completion: nil)
     }
 }
 extension ContactListController: UITableViewDelegate, UITableViewDataSource {

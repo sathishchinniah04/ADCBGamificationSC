@@ -9,7 +9,7 @@ import Foundation
 class ReferViewModel {
     static func getReferalCode(complition:((ReferCode)->Void)?) {
         let service = "activation"
-        let urlStr = Constants.listGameUrl+service
+        let urlStr = Constants.getReferCodeUrl+service
         guard let url = URL(string: urlStr) else { return }
         var urlReq = URLRequest(url: url)
         urlReq.setValue(Utility.getRandonNo(), forHTTPHeaderField: "requestId")
@@ -17,7 +17,9 @@ class ReferViewModel {
         urlReq.setValue(StoreManager.shared.language, forHTTPHeaderField: "language")
         NetworkManager.getRequest(struct: ReferCode.self, url: urlStr, urlReq: urlReq) { (data, error) in
             if let dat = data {
-                complition?(dat)
+                if dat.respCode == "SC0000" {
+                    complition?(dat)
+                }
             }
             print("data \(data)")
             print("error \(error)")

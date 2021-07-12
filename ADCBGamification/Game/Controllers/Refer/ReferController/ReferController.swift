@@ -12,6 +12,7 @@ class ReferController: UIViewController {
     @IBOutlet weak var referCodeView: UIView!
     @IBOutlet weak var referCodeLabel: UILabel!
     @IBOutlet weak var shareButton: NeumorphicButton!
+    @IBOutlet weak var inviteButton: UIButton!
     @IBOutlet weak var chooseContactButton: ReferContactButton!
     @IBOutlet weak var activityIndicatorView: UIActivityIndicatorView!
     override func viewDidLoad() {
@@ -19,6 +20,14 @@ class ReferController: UIViewController {
         self.addDottedLine()
         self.neumorphicButtonSetup()
         getReferCode()
+        buttonUserInteraction(enable: false)
+    }
+    
+    func buttonUserInteraction(enable: Bool) {
+        DispatchQueue.main.async {
+            self.inviteButton.isUserInteractionEnabled = enable
+            self.shareButton.isUserInteractionEnabled = enable
+        }
     }
     
     func getReferCode() {
@@ -27,6 +36,7 @@ class ReferController: UIViewController {
             DispatchQueue.main.async {
                 self.activityIndicatorView.stopAnimating()
                 self.referCodeLabel.text = data.referralCode
+                self.buttonUserInteraction(enable: true)
             }
         }
     }
@@ -45,7 +55,7 @@ class ReferController: UIViewController {
             self.shareButton.setButtonImage(name: "Refershare")
             self.shareButton.populateView(complition: self.referButtonHandle(action:))
             self.shareButton.buttonState(isPressed: true)
-            self.shareButton.button.setImage(UIImage(named: "Refershare"), for: .normal)
+            //self.shareButton.button.setImage(UIImage(named: "Refershare"), for: .normal)
         }
     }
     
@@ -64,7 +74,11 @@ class ReferController: UIViewController {
     }
     
     func openContactList() {
-        let cont = UIStoryboard(name: "Refer", bundle: Bundle(for: Self.self)).instantiateViewController(withIdentifier: "ContactListController")
+        let cont = UIStoryboard(name: "Refer", bundle: Bundle(for: Self.self)).instantiateViewController(withIdentifier: "ContactListController") as! ContactListController
+        cont.handle = {(name, ph) in
+            self.chooseContactButton.titleLabel.text = name
+            self.chooseContactButton.textField.text = ph
+        }
         self.present(cont, animated: true, completion: nil)
     }
     
