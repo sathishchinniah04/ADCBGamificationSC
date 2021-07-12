@@ -17,9 +17,7 @@ class ReferViewModel {
         urlReq.setValue(StoreManager.shared.language, forHTTPHeaderField: "language")
         NetworkManager.getRequest(struct: ReferCode.self, url: urlStr, urlReq: urlReq) { (data, error) in
             if let dat = data {
-                if dat.respCode == "SC0000" {
-                    complition?(dat)
-                }
+                complition?(dat)
             }
             print("data \(data)")
             print("error \(error)")

@@ -37,6 +37,7 @@ class ReferController: UIViewController {
                 self.activityIndicatorView.stopAnimating()
                 self.referCodeLabel.text = data.referralCode
                 self.buttonUserInteraction(enable: true)
+                self.referCodeView.layoutIfNeeded()
             }
         }
     }
