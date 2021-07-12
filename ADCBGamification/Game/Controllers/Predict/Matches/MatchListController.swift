@@ -54,8 +54,8 @@ extension MatchListController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "MatchTableViewCell") as! MatchTableViewCell
-        var event = tournaments?[indexPath.section].eventList?[indexPath.row]
-//        let tournaments = predictGame.predictionList?[indexPath.section].tournaments?[indexPath.row]
+        Constants.leagueName = tournaments?[indexPath.section].tournamentName ?? ""
+        let event = tournaments?[indexPath.section].eventList?[indexPath.row]
         cell.populateCell(index: indexPath.row, info: event)
         return cell
     }
@@ -68,6 +68,7 @@ extension MatchListController: UITableViewDelegate, UITableViewDataSource {
     func moveToController(index: IndexPath) {
         let controller = UIStoryboard(name: "Predict", bundle: Bundle(for: Self.self)).instantiateViewController(withIdentifier: "PredictMatchController") as! PredictMatchController
         let event = tournaments?[index.section].eventList?[index.row]
+        
         controller.eventsList = event
         controller.selectedIndex = index.row
         controller.game = game

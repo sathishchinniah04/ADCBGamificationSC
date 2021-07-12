@@ -85,8 +85,11 @@ extension PredictMatchController: UITableViewDelegate, UITableViewDataSource {
         default:
             break
         }
-        self.submitButton.alpha = 1.0
-        self.submitButton.isUserInteractionEnabled = true
+        guard let eve = eventsList else { return }
+        if PredictViewModel.checkAllQuestionAnswered(event: eve, index: selectedIndex) {
+            self.submitButton.alpha = 1.0
+            self.submitButton.isUserInteractionEnabled = true
+        }
     }
     
 }

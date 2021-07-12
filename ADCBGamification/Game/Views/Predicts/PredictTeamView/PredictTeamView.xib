@@ -95,18 +95,15 @@
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XCp-eV-pCK">
                                             <rect key="frame" x="305.5" y="0.0" width="50" height="152"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="VS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RZe-dl-RyT">
-                                                    <rect key="frame" x="10" y="63" width="30.5" height="26.5"/>
-                                                    <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="22"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="VS" translatesAutoresizingMaskIntoConstraints="NO" id="ZKe-0r-ZVA">
+                                                    <rect key="frame" x="6.5" y="49" width="37" height="54.5"/>
+                                                </imageView>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="50" id="47l-Fi-EMY"/>
-                                                <constraint firstItem="RZe-dl-RyT" firstAttribute="centerX" secondItem="XCp-eV-pCK" secondAttribute="centerX" id="Lgy-ou-ExX"/>
-                                                <constraint firstItem="RZe-dl-RyT" firstAttribute="centerY" secondItem="XCp-eV-pCK" secondAttribute="centerY" id="RqK-qa-iWo"/>
+                                                <constraint firstItem="ZKe-0r-ZVA" firstAttribute="centerX" secondItem="XCp-eV-pCK" secondAttribute="centerX" id="5EO-c9-EVn"/>
+                                                <constraint firstItem="ZKe-0r-ZVA" firstAttribute="centerY" secondItem="XCp-eV-pCK" secondAttribute="centerY" id="6hS-p8-Joz"/>
                                             </constraints>
                                         </view>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OO6-tW-ly5">
@@ -194,6 +191,7 @@
         </view>
     </objects>
     <resources>
+        <image name="VS" width="37" height="54.5"/>
         <systemColor name="systemYellowColor">
             <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

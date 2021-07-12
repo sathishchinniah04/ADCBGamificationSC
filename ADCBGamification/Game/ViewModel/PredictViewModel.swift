@@ -95,4 +95,26 @@ class PredictViewModel {
         return submitPred
     }
     
+    static func checkAllQuestionAnswered(event: EventsList, index: Int)-> Bool {
+        guard let questList = event.questionList else { return false}
+        var count: Int = 0
+        for item in questList {
+            guard let opsList = item.predOptions else { return false}
+            for ops in opsList {
+                if !ops.isSelected  {
+
+                } else {
+                    count += 1
+                }
+            }
+        }
+        if count == questList.count {
+            print("Answered all question")
+            return true
+        } else {
+            print("All questions are not answered")
+            return false
+        }
+    }
+    
 }

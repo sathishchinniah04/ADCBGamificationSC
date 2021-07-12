@@ -92,6 +92,7 @@ class PredictTeamView: UIView {
         //leagueNameLabel.text = inf.
        // guard let events = inf else { return }
        // imageSetup(info: inf)
+        leagueNameLabel.text = Constants.leagueName
         firstTeamNameLabel.text = inf.opponentASynonym
         secondTeamNameLabel.text = inf.opponentBSynonym
     }
