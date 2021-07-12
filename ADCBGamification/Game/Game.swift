@@ -64,14 +64,14 @@ public class Game {
             let cont = self.navigateToController(controller: controller, storyboard: "Spin", id: "SpinHomeController") as? SpinHomeController
             getGameList(gameType: gameType, gameId: gameId) { (games) in
                 DispatchQueue.main.async {
-                  //  cont?.updateOnResponce(game: games)
+                    cont?.updateOnResponce(game: games)
                 }
             }
         } else if gameType == "ReferNWin" {
             let cont = self.navigateToController(controller: controller, storyboard: "Refer", id: "ReferIntroController") as? ReferIntroController
             getGameList(gameType: gameType, gameId: gameId) { (games) in
                 DispatchQueue.main.async {
-                    //cont?.updateOnResponce(game: games)
+                    cont?.updateOnResponce(game: games)
                 }
             }
         } else {

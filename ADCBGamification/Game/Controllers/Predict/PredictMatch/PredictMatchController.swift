@@ -52,6 +52,8 @@ class PredictMatchController: UIViewController {
     func onSuccess() {
         predictSuccessHelper.show { (action) in
             print("action \(action)")
+            self.predictSuccessHelper.animateAndRemove()
+            self.navigationController?.popToRootViewController(animated: true)
         }
     }
     

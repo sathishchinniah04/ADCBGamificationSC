@@ -34,10 +34,23 @@ class MatchListController: UIViewController {
         PredictViewModel.getPredictDetail(gameId: gam.gameId ?? "0") { (info) in
             DispatchQueue.main.async {
                 self.activityIndicatorView.stopAnimating()
-                self.predictGame = info
-                self.tournaments = info.predictionList?.first?.tournaments
-                self.matchTableView.reloadData()
+                if info.respCode == "SC0000" {
+                    self.onSuccess(info: info)
+                } else {
+                    self.onFailure(info: info)
+                }
             }
+        }
+    }
+    func onSuccess(info: PredictGame) {
+        
+        self.predictGame = info
+        self.tournaments = info.predictionList?.first?.tournaments
+        self.matchTableView.reloadData()
+    }
+    func onFailure(info: PredictGame) {
+        self.view.showAlert(singelBtn: true, ok: "Ok", title: "Alert", message: info.respDesc ?? "") { (done) in
+            self.navigationController?.popViewController(animated: true)
         }
     }
 }

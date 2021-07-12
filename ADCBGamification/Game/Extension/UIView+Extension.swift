@@ -6,7 +6,10 @@
 //
 
 import UIKit
-
+enum AlertAction {
+    case ok
+    case cancel
+}
 extension UIView {
     
     @available(iOS 13.0, *)
@@ -18,6 +21,23 @@ extension UIView {
             blurEffectView?.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         if let effe = blurEffectView {
             self.insertSubview(effe, at: 0)
+        }
+    }
+    
+    func showAlert(singelBtn: Bool = true,ok: String = "Ok", cancel: String = "Cancel",title: String = "Alert",message: String,complition:((AlertAction)->Void)? = nil) {
+        DispatchQueue.main.async {
+            
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: ok, style: .default, handler: { (action) in
+            complition?(.ok)
+        }))
+        if !singelBtn {
+            alert.addAction(UIAlertAction(title: cancel, style: .cancel, handler: { (action) in
+            complition?(.cancel)
+            }))
+        }
+            let rootView = UIApplication.shared.windows.last?.rootViewController
+        rootView?.present(alert, animated: true, completion: nil)
         }
     }
     

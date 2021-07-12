@@ -32,7 +32,7 @@ class SpinSuccessViewHelper {
         }
     }
     
-    private func animateAndRemove() {
+     func animateAndRemove() {
         UIView.animate(withDuration: 0.3) {
             self.view?.alpha = 0.0
         } completion: { (done) in

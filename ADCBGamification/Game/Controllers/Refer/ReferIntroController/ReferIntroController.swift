@@ -17,6 +17,12 @@ class ReferIntroController: UIViewController {
         
     }
     
+    func updateOnResponce(game: Games) {
+        print("Updated from game list type = \(game.gameType)  gameId  = \(game.gameId ?? "")")
+        //activityIndicator.stopAnimating()
+        expireView.isUserInteractionEnabled = true
+        self.game = game
+    }
     func expireViewHandle() {
         DispatchQueue.main.async {
             self.navigate()

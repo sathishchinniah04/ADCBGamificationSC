@@ -22,6 +22,14 @@ class SpinHomeController: UIViewController {
         self.getSpinOffers()
     }
     
+    
+    func updateOnResponce(game: Games) {
+        print("Updated from game list type = \(game.gameType)  gameId  = \(game.gameId ?? "")")
+       // activityIndicator.stopAnimating()
+        expireView.isUserInteractionEnabled = true
+        self.game = game
+    }
+    
     func initialSetup() {
         containerView.backgroundColor = UIColor.clear
         containerView.isHidden = true
@@ -79,11 +87,15 @@ class SpinHomeController: UIViewController {
         switch action {
         case .homePageTapped:
             print("home page tapped")
+            self.spinSuccessView.animateAndRemove()
+            self.navigationController?.popToRootViewController(animated: true)
         case .knowMoreTapped:
             print("Know more tapped")
         case .rewardTapped:
             print("Reward  tapped")
         case .spinAgainTapped:
+            self.spinSuccessView.animateAndRemove()
+            self.navigationController?.popViewController(animated: true)
             print("Spin again tapped")
         default:
             break
@@ -93,9 +105,21 @@ class SpinHomeController: UIViewController {
     func spinOffersResponce(data: SpinOffers) {
         print("data got from respo \(data)")
         DispatchQueue.main.async {
-            self.spinOffers = data
-            self.onAcceptingTermsAndConditon()
+            if data.respCode == "SC0000" {
+                self.onSuccess(info: data)
+            } else {
+                self.onFailure(info: data)
+            }
             self.activityIndicatorView.stopAnimating()
+        }
+    }
+    func onSuccess(info: SpinOffers) {
+        self.spinOffers = info
+        self.onAcceptingTermsAndConditon()
+    }
+    func onFailure(info: SpinOffers) {
+        self.view.showAlert(singelBtn: true, ok: "Ok", title: "Alert", message: info.respDesc ?? "") { (done) in
+            self.navigationController?.popViewController(animated: true)
         }
     }
 }
