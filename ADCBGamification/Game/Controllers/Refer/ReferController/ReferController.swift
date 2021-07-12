@@ -78,6 +78,7 @@ class ReferController: UIViewController {
         cont.handle = {(name, ph) in
             self.chooseContactButton.titleLabel.text = name
             self.chooseContactButton.textField.text = ph
+            self.chooseContactButton.buttonState(isPressed: true)
         }
         self.present(cont, animated: true, completion: nil)
     }

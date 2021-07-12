@@ -104,6 +104,7 @@ class ContactListController: UIViewController {
         UIView.animate(withDuration: 0.3) {
             self.inviteButtonContainerView.isHidden = false
             self.inviteButton.buttonState(isPressed: true)
+            self.inviteButtonAppearance()
         } completion: { (done) in
             print("done")
         }
@@ -113,13 +114,18 @@ class ContactListController: UIViewController {
         self.view.endEditing(true)
         let contact = self.newList[indexPath.row]
         chooseContactButton.titleLabel.isHidden = false
-        chooseContactButton.titleLabel.text = contact.firstName
+        chooseContactButton.titleLabel.text = contact.firstName + " " + contact.lastName
         chooseContactButton.buttonState(isPressed: false)
         self.chooseContactButton.titleLabel.alpha = 1.0
         chooseContactButton.textField.text = contact.telephone
         self.unHideInviteButon()
         self.handle?(contact.firstName + " " + contact.lastName, contact.telephone)
-        self.dismiss(animated: true, completion: nil)
+       // self.dismiss(animated: true, completion: nil)
+    }
+    
+    func inviteButtonAppearance() {
+        self.inviteButton.button.titleLabel?.font = UIFont.systemFont(ofSize: 16, weight: .semibold)
+        self.inviteButton.setButtonTitle(title: "Invite", titleColor: UIColor.darkBlueColor())
     }
 }
 extension ContactListController: UITableViewDelegate, UITableViewDataSource {

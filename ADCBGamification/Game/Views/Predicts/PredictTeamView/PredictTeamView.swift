@@ -12,6 +12,8 @@ class PredictTeamView: UIView {
     @IBOutlet weak var timeLabel: UILabel!
     @IBOutlet weak var leagueNameLabel: UILabel!
     @IBOutlet weak var firstTeamNameLabel: UILabel!
+    @IBOutlet weak var firstTeamCharLabel: UILabel!
+    @IBOutlet weak var secondTeamCharLabel: UILabel!
     @IBOutlet weak var secondTeamNameLabel: UILabel!
     @IBOutlet weak var firstTeamImageView: UIImageView!
     @IBOutlet weak var secondTeamImageView: UIImageView!
@@ -48,14 +50,48 @@ class PredictTeamView: UIView {
         DispatchQueue.main.async {
             self.appearenceSetup()
             self.labelSetup(index: index, info: info)
+            self.getChars(index: index, info: info)
         }
     }
+    
+    func getChars(index: Int, info: EventsList?) {
+        guard let inf = info else { return }
+        let nameFArr = inf.opponentASynonym?.components(separatedBy: " ")
+        guard let fArr = nameFArr else { return }
+        if fArr.isEmpty{return}
+        
+        if fArr.count>=2 {
+            let fc = fArr[0].first?.description ?? ""
+            let sc = fArr[1].first?.description ?? ""
+            firstTeamCharLabel.text = fc + " " + sc
+            
+        } else {
+            let fc = fArr[0].first?.description ?? ""
+            firstTeamCharLabel.text = fc
+        }
+        
+        let nameSArr = inf.opponentBSynonym?.components(separatedBy: " ")
+        guard let fSrr = nameSArr else { return }
+        if fSrr.isEmpty{return}
+        
+        if fSrr.count>=2 {
+            let fc = fSrr[0].first?.description ?? ""
+            let sc = fSrr[1].first?.description ?? ""
+            secondTeamCharLabel.text = fc + " " + sc
+            
+        } else {
+            let fc = fSrr[0].first?.description ?? ""
+            secondTeamCharLabel.text = fc
+        }
+    }
+    
+    
     
     func labelSetup(index: Int, info: EventsList?) {
         guard let inf = info else { return }
         //leagueNameLabel.text = inf.
        // guard let events = inf else { return }
-        imageSetup(info: inf)
+       // imageSetup(info: inf)
         firstTeamNameLabel.text = inf.opponentASynonym
         secondTeamNameLabel.text = inf.opponentBSynonym
     }

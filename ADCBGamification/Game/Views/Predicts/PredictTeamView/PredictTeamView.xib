@@ -10,10 +10,12 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PredictTeamView" customModule="ADCBGamification" customModuleProvider="target">
             <connections>
+                <outlet property="firstTeamCharLabel" destination="Ktw-fR-Lyy" id="Od1-1k-rn6"/>
                 <outlet property="firstTeamImageContainerView" destination="Ru2-AS-CT4" id="FKu-7w-FM9"/>
                 <outlet property="firstTeamImageView" destination="l3I-TR-hVN" id="Ohq-GA-JuA"/>
                 <outlet property="firstTeamNameLabel" destination="E7q-SX-7G1" id="qsi-DI-uPa"/>
                 <outlet property="leagueNameLabel" destination="JDG-lh-POg" id="8UJ-7r-Km7"/>
+                <outlet property="secondTeamCharLabel" destination="kT1-Er-6qk" id="EO1-8A-aUN"/>
                 <outlet property="secondTeamImageContainerView" destination="T7P-tP-ekM" id="ukg-8M-gBE"/>
                 <outlet property="secondTeamImageView" destination="0cO-BC-jtH" id="rRJ-3Z-ldl"/>
                 <outlet property="secondTeamNameLabel" destination="tgf-zD-tmd" id="QtF-jk-ud2"/>
@@ -49,18 +51,27 @@
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ru2-AS-CT4">
                                                             <rect key="frame" x="90" y="0.0" width="60" height="60"/>
                                                             <subviews>
-                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CurveClip" translatesAutoresizingMaskIntoConstraints="NO" id="l3I-TR-hVN">
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ktw-fR-Lyy">
+                                                                    <rect key="frame" x="5" y="21.5" width="50" height="17"/>
+                                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="l3I-TR-hVN">
                                                                     <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
-                                                                    <color key="backgroundColor" red="0.61176470589999998" green="0.20392156859999999" blue="0.2156862745" alpha="1" colorSpace="calibratedRGB"/>
+                                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 </imageView>
                                                             </subviews>
-                                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                            <color key="backgroundColor" systemColor="systemYellowColor"/>
                                                             <constraints>
                                                                 <constraint firstItem="l3I-TR-hVN" firstAttribute="leading" secondItem="Ru2-AS-CT4" secondAttribute="leading" id="6dN-DM-a00"/>
                                                                 <constraint firstAttribute="height" constant="60" id="NxU-f5-ynY"/>
                                                                 <constraint firstItem="l3I-TR-hVN" firstAttribute="top" secondItem="Ru2-AS-CT4" secondAttribute="top" id="QcM-Ny-qVd"/>
                                                                 <constraint firstAttribute="trailing" secondItem="l3I-TR-hVN" secondAttribute="trailing" id="UVJ-5E-JAF"/>
+                                                                <constraint firstItem="Ktw-fR-Lyy" firstAttribute="leading" secondItem="Ru2-AS-CT4" secondAttribute="leading" constant="5" id="Z6Y-nE-EvI"/>
+                                                                <constraint firstItem="Ktw-fR-Lyy" firstAttribute="centerX" secondItem="Ru2-AS-CT4" secondAttribute="centerX" id="dqi-nb-zYT"/>
                                                                 <constraint firstAttribute="bottom" secondItem="l3I-TR-hVN" secondAttribute="bottom" id="hII-yk-TIe"/>
+                                                                <constraint firstItem="Ktw-fR-Lyy" firstAttribute="centerY" secondItem="Ru2-AS-CT4" secondAttribute="centerY" id="mbs-gc-WVX"/>
                                                                 <constraint firstAttribute="width" constant="60" id="uHU-ux-qgn"/>
                                                             </constraints>
                                                         </view>
@@ -107,19 +118,28 @@
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="T7P-tP-ekM">
                                                             <rect key="frame" x="90" y="0.0" width="60" height="60"/>
                                                             <subviews>
-                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CurveClip" translatesAutoresizingMaskIntoConstraints="NO" id="0cO-BC-jtH">
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kT1-Er-6qk">
+                                                                    <rect key="frame" x="5" y="21.5" width="50" height="17"/>
+                                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0cO-BC-jtH">
                                                                     <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
-                                                                    <color key="backgroundColor" red="0.61176470589999998" green="0.20392156859999999" blue="0.2156862745" alpha="1" colorSpace="calibratedRGB"/>
+                                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="height" constant="60" id="6xL-uS-qUs"/>
                                                                         <constraint firstAttribute="width" constant="60" id="Ubs-vs-gAN"/>
                                                                     </constraints>
                                                                 </imageView>
                                                             </subviews>
-                                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                            <color key="backgroundColor" systemColor="systemYellowColor"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="bottom" secondItem="0cO-BC-jtH" secondAttribute="bottom" id="5bW-2X-jUe"/>
                                                                 <constraint firstItem="0cO-BC-jtH" firstAttribute="leading" secondItem="T7P-tP-ekM" secondAttribute="leading" id="Fjc-GP-bn2"/>
+                                                                <constraint firstItem="kT1-Er-6qk" firstAttribute="centerX" secondItem="T7P-tP-ekM" secondAttribute="centerX" id="Ubs-Kc-BjV"/>
+                                                                <constraint firstItem="kT1-Er-6qk" firstAttribute="centerY" secondItem="T7P-tP-ekM" secondAttribute="centerY" id="bSp-pb-0C5"/>
+                                                                <constraint firstItem="kT1-Er-6qk" firstAttribute="leading" secondItem="T7P-tP-ekM" secondAttribute="leading" constant="5" id="cHu-pc-XZV"/>
                                                                 <constraint firstAttribute="trailing" secondItem="0cO-BC-jtH" secondAttribute="trailing" id="su3-7R-ZPh"/>
                                                                 <constraint firstItem="0cO-BC-jtH" firstAttribute="top" secondItem="T7P-tP-ekM" secondAttribute="top" id="tVh-Qm-kw6"/>
                                                             </constraints>
@@ -174,9 +194,8 @@
         </view>
     </objects>
     <resources>
-        <image name="CurveClip" width="187.5" height="211"/>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
