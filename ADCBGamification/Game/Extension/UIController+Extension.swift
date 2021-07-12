@@ -9,8 +9,10 @@ import UIKit
 
 extension UIViewController{
     func openActivityController(text: String) {
-    let activityVC = UIActivityViewController(activityItems: [text], applicationActivities: nil)
-    self.present(activityVC, animated: true, completion: nil)
+        DispatchQueue.main.async {
+            let activityVC = UIActivityViewController(activityItems: [text], applicationActivities: nil)
+            self.present(activityVC, animated: true, completion: nil)
+        }
     }
     
     func getTopController(base: UIViewController? = UIApplication.shared.keyWindow?.rootViewController) -> UIViewController? {

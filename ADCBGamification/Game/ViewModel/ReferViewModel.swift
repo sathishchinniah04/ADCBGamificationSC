@@ -24,7 +24,7 @@ class ReferViewModel {
         }
     }
     
-    static func recordRefer(referCode: String, complition:((ReferCode)->Void)?) {
+    static func recordRefer(referCode: String, bParty: String ,complition:((ReferCode)->Void)?) {
         let service = "activation"
         let urlStr = Constants.recordReferUrl+service
         guard let url = URL(string: urlStr) else { return }
@@ -32,7 +32,7 @@ class ReferViewModel {
         urlReq.setValue(Utility.getRandonNo(), forHTTPHeaderField: "requestId")
         urlReq.setValue(StoreManager.shared.msisdn, forHTTPHeaderField: "customerId")
         urlReq.setValue(StoreManager.shared.language, forHTTPHeaderField: "language")
-        urlReq.setValue(StoreManager.shared.msisdn, forHTTPHeaderField: "msisdn")
+        urlReq.setValue(bParty, forHTTPHeaderField: "msisdn")
         urlReq.setValue(referCode, forHTTPHeaderField: "referralCode")
         NetworkManager.postRequest(struct: ReferCode.self, url: urlStr, urlReq: urlReq) { (data , error) in
             if let dat = data {

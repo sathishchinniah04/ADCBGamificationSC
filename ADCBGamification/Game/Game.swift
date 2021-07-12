@@ -35,6 +35,25 @@ public class Game {
         loadGameList(controller: controller)
     }
     
+    public static func openGamePagination(controller: UIViewController, msisdn: String, language: String) {
+        getUrlFromInfoPlist()
+        StoreManager.shared.msisdn = msisdn
+        StoreManager.shared.language = language
+        IQKeyboardManager.shared.enable = true
+        IQKeyboardManager.shared.goNext()
+        
+        StoreManager.shared.accessToken = "J0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9"
+        paginationLoad(target: controller)
+    }
+    
+    static func paginationLoad(target: UIViewController) {
+        let cont = UIStoryboard(name: "Pagination", bundle: Bundle(for: Self.self)).instantiateViewController(withIdentifier: "GamesViewController")
+        let nav = CustomNavViewController(rootViewController: cont)
+        nav.navigationBar.isHidden = true
+        nav.modalPresentationStyle = .fullScreen
+        target.present(nav, animated: true, completion: nil)
+    }
+    
     static func deleteThis(contr: UIViewController) {
         let cont = UIStoryboard(name: "Refer", bundle: Bundle(for: Self.self)).instantiateViewController(withIdentifier: "ContactListController")
         contr.present(cont, animated: true, completion: nil)

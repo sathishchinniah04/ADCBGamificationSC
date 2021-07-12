@@ -8,7 +8,7 @@
 import UIKit
 enum ReferContactButtonAction {
     case chooseContact
-    
+    case contactList
 }
 
 enum ReferTextFieldAction {
@@ -21,6 +21,7 @@ enum ReferTextFieldAction {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var textField: UITextField!
     @IBOutlet weak var chooseContact: UIButton!
+    @IBOutlet weak var contactListButton: UIButton!
     @IBOutlet weak var dummyButton: UIButton!
     var darkLayer: CALayer?
     var lightLayer: CALayer?
@@ -93,6 +94,14 @@ enum ReferTextFieldAction {
     func populateView(complition:((ReferContactButtonAction)->Void)?, textAction:((ReferTextFieldAction)->Void)? = nil) {
         self.textHandle = textAction
         self.handle = complition
+    }
+    
+    @IBAction func openContactListTapped() {
+        DispatchQueue.main.async {
+            self.titleLabel.isHidden = false
+            self.titleVisible(visible: true)
+        }
+        self.handle?(.contactList)
     }
     
     @IBAction func cheooseContactTapped() {

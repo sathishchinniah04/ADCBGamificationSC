@@ -11,6 +11,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ReferContactButton" customModule="ADCBGamification" customModuleProvider="target">
             <connections>
                 <outlet property="chooseContact" destination="0H8-Oo-g3L" id="YyY-Jp-Vba"/>
+                <outlet property="contactListButton" destination="IQT-nA-uLM" id="gHb-jV-DPT"/>
                 <outlet property="dummyButton" destination="9yQ-Ns-Z0O" id="Jyg-aD-JCc"/>
                 <outlet property="textField" destination="Gh4-0l-Dw7" id="NlH-jU-TOs"/>
                 <outlet property="titleLabel" destination="G1R-Ae-TCe" id="CVl-f2-rIP"/>
@@ -27,23 +28,37 @@
                         <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9yQ-Ns-Z0O">
                             <rect key="frame" x="0.0" y="0.0" width="414" height="47.5"/>
                         </button>
-                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="GOt-ri-a11">
+                        <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GOt-ri-a11">
                             <rect key="frame" x="10" y="4" width="399" height="39.5"/>
                             <subviews>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G1R-Ae-TCe">
-                                    <rect key="frame" x="0.0" y="0.0" width="399" height="14.5"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                    <color key="textColor" systemColor="systemGray2Color"/>
-                                    <nil key="highlightedColor"/>
-                                </label>
-                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Mobile Number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Gh4-0l-Dw7">
-                                    <rect key="frame" x="0.0" y="14.5" width="399" height="25"/>
+                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Zu1-Ch-vG8">
+                                    <rect key="frame" x="0.0" y="0.0" width="399" height="39.5"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G1R-Ae-TCe">
+                                            <rect key="frame" x="0.0" y="0.0" width="399" height="14.5"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                            <color key="textColor" systemColor="systemGray2Color"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Mobile Number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Gh4-0l-Dw7">
+                                            <rect key="frame" x="0.0" y="14.5" width="399" height="25"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="25" id="zOX-b5-sXM"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <textInputTraits key="textInputTraits"/>
+                                        </textField>
+                                    </subviews>
+                                </stackView>
+                                <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="contactAdd" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IQT-nA-uLM">
+                                    <rect key="frame" x="0.0" y="0.0" width="45" height="39.5"/>
                                     <constraints>
-                                        <constraint firstAttribute="height" constant="25" id="zOX-b5-sXM"/>
+                                        <constraint firstAttribute="width" constant="45" id="6oh-Rc-Nhh"/>
                                     </constraints>
-                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                    <textInputTraits key="textInputTraits"/>
-                                </textField>
+                                    <connections>
+                                        <action selector="openContactListTapped" destination="-1" eventType="touchUpInside" id="HDV-91-zuz"/>
+                                    </connections>
+                                </button>
                             </subviews>
                         </stackView>
                     </subviews>

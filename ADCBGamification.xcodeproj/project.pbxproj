@@ -96,6 +96,15 @@
 		3320FFE22682EBC4001809AA /* CarnivalWheelSlice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3320FF9F2682EBC4001809AA /* CarnivalWheelSlice.swift */; };
 		3320FFEA2682ED8F001809AA /* ADCBGamification.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3320FF0C2682EA9F001809AA /* ADCBGamification.framework */; };
 		3320FFEB2682ED8F001809AA /* ADCBGamification.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3320FF0C2682EA9F001809AA /* ADCBGamification.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		33542A67269CA76A008CE8C2 /* CompletedTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 33542A5F269CA76A008CE8C2 /* CompletedTableViewCell.xib */; };
+		33542A68269CA76A008CE8C2 /* CompletedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33542A60269CA76A008CE8C2 /* CompletedTableViewCell.swift */; };
+		33542A69269CA76A008CE8C2 /* CompletedTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33542A62269CA76A008CE8C2 /* CompletedTableView.swift */; };
+		33542A6A269CA76A008CE8C2 /* GamesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33542A63269CA76A008CE8C2 /* GamesViewController.swift */; };
+		33542A78269CA853008CE8C2 /* CollectionDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33542A73269CA853008CE8C2 /* CollectionDataSource.swift */; };
+		33542A79269CA853008CE8C2 /* ZoomAndSnapFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33542A74269CA853008CE8C2 /* ZoomAndSnapFlowLayout.swift */; };
+		33542A7A269CA853008CE8C2 /* PageCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 33542A76269CA853008CE8C2 /* PageCollectionCell.xib */; };
+		33542A7B269CA853008CE8C2 /* PageCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33542A77269CA853008CE8C2 /* PageCollectionCell.swift */; };
+		33542A7F269CA912008CE8C2 /* Pagination.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 33542A7E269CA912008CE8C2 /* Pagination.storyboard */; };
 		3357ED862693207E00607F50 /* PredictTeamView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3357ED852693207E00607F50 /* PredictTeamView.swift */; };
 		3357ED8C2693209300607F50 /* PredictTeamView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3357ED8B2693209300607F50 /* PredictTeamView.xib */; };
 		335933AC26941F0E00CF6AAF /* CustomNeumophicButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 335933AB26941F0E00CF6AAF /* CustomNeumophicButton.swift */; };
@@ -253,6 +262,15 @@
 		3320FF9D2682EBC4001809AA /* SpinningWheelSlice .swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SpinningWheelSlice .swift"; sourceTree = "<group>"; };
 		3320FF9E2682EBC4001809AA /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3320FF9F2682EBC4001809AA /* CarnivalWheelSlice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarnivalWheelSlice.swift; sourceTree = "<group>"; };
+		33542A5F269CA76A008CE8C2 /* CompletedTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CompletedTableViewCell.xib; sourceTree = "<group>"; };
+		33542A60269CA76A008CE8C2 /* CompletedTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompletedTableViewCell.swift; sourceTree = "<group>"; };
+		33542A62269CA76A008CE8C2 /* CompletedTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompletedTableView.swift; sourceTree = "<group>"; };
+		33542A63269CA76A008CE8C2 /* GamesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GamesViewController.swift; sourceTree = "<group>"; };
+		33542A73269CA853008CE8C2 /* CollectionDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionDataSource.swift; sourceTree = "<group>"; };
+		33542A74269CA853008CE8C2 /* ZoomAndSnapFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZoomAndSnapFlowLayout.swift; sourceTree = "<group>"; };
+		33542A76269CA853008CE8C2 /* PageCollectionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PageCollectionCell.xib; sourceTree = "<group>"; };
+		33542A77269CA853008CE8C2 /* PageCollectionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageCollectionCell.swift; sourceTree = "<group>"; };
+		33542A7E269CA912008CE8C2 /* Pagination.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Pagination.storyboard; sourceTree = "<group>"; };
 		3357ED852693207E00607F50 /* PredictTeamView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PredictTeamView.swift; sourceTree = "<group>"; };
 		3357ED8B2693209300607F50 /* PredictTeamView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PredictTeamView.xib; sourceTree = "<group>"; };
 		335933AB26941F0E00CF6AAF /* CustomNeumophicButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNeumophicButton.swift; sourceTree = "<group>"; };
@@ -372,6 +390,7 @@
 		3320FF3F2682EBC3001809AA /* Game */ = {
 			isa = PBXGroup;
 			children = (
+				33542A5C269CA747008CE8C2 /* GameListController */,
 				33FC317D26958C9000868D9E /* Model */,
 				33FC317826958C4900868D9E /* ViewModel */,
 				33EDB0E62692CD720040DCD4 /* CustomView */,
@@ -699,6 +718,70 @@
 			children = (
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		33542A5C269CA747008CE8C2 /* GameListController */ = {
+			isa = PBXGroup;
+			children = (
+				33542A71269CA853008CE8C2 /* Pagination */,
+				33542A5D269CA76A008CE8C2 /* Completed */,
+				33542A63269CA76A008CE8C2 /* GamesViewController.swift */,
+				33542A7E269CA912008CE8C2 /* Pagination.storyboard */,
+			);
+			path = GameListController;
+			sourceTree = "<group>";
+		};
+		33542A5D269CA76A008CE8C2 /* Completed */ = {
+			isa = PBXGroup;
+			children = (
+				33542A5E269CA76A008CE8C2 /* CompletedCell */,
+				33542A61269CA76A008CE8C2 /* CompletedTableView */,
+			);
+			path = Completed;
+			sourceTree = "<group>";
+		};
+		33542A5E269CA76A008CE8C2 /* CompletedCell */ = {
+			isa = PBXGroup;
+			children = (
+				33542A5F269CA76A008CE8C2 /* CompletedTableViewCell.xib */,
+				33542A60269CA76A008CE8C2 /* CompletedTableViewCell.swift */,
+			);
+			path = CompletedCell;
+			sourceTree = "<group>";
+		};
+		33542A61269CA76A008CE8C2 /* CompletedTableView */ = {
+			isa = PBXGroup;
+			children = (
+				33542A62269CA76A008CE8C2 /* CompletedTableView.swift */,
+			);
+			path = CompletedTableView;
+			sourceTree = "<group>";
+		};
+		33542A71269CA853008CE8C2 /* Pagination */ = {
+			isa = PBXGroup;
+			children = (
+				33542A72269CA853008CE8C2 /* CellAnimation */,
+				33542A75269CA853008CE8C2 /* PageCollectionView */,
+			);
+			path = Pagination;
+			sourceTree = "<group>";
+		};
+		33542A72269CA853008CE8C2 /* CellAnimation */ = {
+			isa = PBXGroup;
+			children = (
+				33542A73269CA853008CE8C2 /* CollectionDataSource.swift */,
+				33542A74269CA853008CE8C2 /* ZoomAndSnapFlowLayout.swift */,
+			);
+			path = CellAnimation;
+			sourceTree = "<group>";
+		};
+		33542A75269CA853008CE8C2 /* PageCollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				33542A76269CA853008CE8C2 /* PageCollectionCell.xib */,
+				33542A77269CA853008CE8C2 /* PageCollectionCell.swift */,
+			);
+			path = PageCollectionView;
 			sourceTree = "<group>";
 		};
 		3357ED842693203C00607F50 /* PredictTeamView */ = {
@@ -1096,6 +1179,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				33542A7A269CA853008CE8C2 /* PageCollectionCell.xib in Resources */,
 				3320FFA72682EBC4001809AA /* Spin.storyboard in Resources */,
 				335933B026941FC200CF6AAF /* CustomNeumophicButton.xib in Resources */,
 				3320FFC82682EBC4001809AA /* NeumorphicTextField.xib in Resources */,
@@ -1113,8 +1197,10 @@
 				3320FFAB2682EBC4001809AA /* ExpireView.xib in Resources */,
 				3320FFD22682EBC4001809AA /* HistoryTableViewCell.xib in Resources */,
 				33F59CD3269330C0005B009A /* PredictMatchTableViewCell.xib in Resources */,
+				33542A7F269CA912008CE8C2 /* Pagination.storyboard in Resources */,
 				33FC319B2695B04300868D9E /* GameList.storyboard in Resources */,
 				33CD2198269AF4DD00CB71AC /* PredictSuccessView.xib in Resources */,
+				33542A67269CA76A008CE8C2 /* CompletedTableViewCell.xib in Resources */,
 				3320FFC92682EBC4001809AA /* NeumorphicButton.xib in Resources */,
 				3320FFCE2682EBC4001809AA /* ReferSuccessPopupView.xib in Resources */,
 				3320FFAD2682EBC4001809AA /* GamificationAssets.xcassets in Resources */,
@@ -1169,6 +1255,8 @@
 				3381167926993DE500C8F35E /* ReferContactButton.swift in Sources */,
 				336B67AF26980C08008E419B /* PredictViewModel.swift in Sources */,
 				3320FFAC2682EBC4001809AA /* ExpireView.swift in Sources */,
+				33542A69269CA76A008CE8C2 /* CompletedTableView.swift in Sources */,
+				33542A78269CA853008CE8C2 /* CollectionDataSource.swift in Sources */,
 				33FC31CE26973C5100868D9E /* ExpireViewModel.swift in Sources */,
 				33CD21A4269BDEE400CB71AC /* ReferCode.swift in Sources */,
 				3320FFA32682EBC4001809AA /* String+Extension.swift in Sources */,
@@ -1176,6 +1264,7 @@
 				3320FFB22682EBC4001809AA /* IQBarButtonItem.swift in Sources */,
 				3320FFDB2682EBC4001809AA /* SpinningWheelAnimator.swift in Sources */,
 				3320FFB12682EBC4001809AA /* IQTitleBarButtonItem.swift in Sources */,
+				33542A68269CA76A008CE8C2 /* CompletedTableViewCell.swift in Sources */,
 				33FC31B22696DC9F00868D9E /* SpinOffers.swift in Sources */,
 				3320FFC52682EBC4001809AA /* IQKeyboardManager+UITextFieldViewNotification.swift in Sources */,
 				336B67AB2697E24C008E419B /* PredictGame.swift in Sources */,
@@ -1194,6 +1283,7 @@
 				3357ED862693207E00607F50 /* PredictTeamView.swift in Sources */,
 				3320FFE02682EBC4001809AA /* SpinningWheelSlice .swift in Sources */,
 				33EDB0E22692CCB40040DCD4 /* MatchTableViewCell.swift in Sources */,
+				33542A6A269CA76A008CE8C2 /* GamesViewController.swift in Sources */,
 				3320FFB32682EBC4001809AA /* IQToolbar.swift in Sources */,
 				338116882699A46400C8F35E /* PhoneContactVM.swift in Sources */,
 				33FC31BA2696F82800868D9E /* SpinAssignReward.swift in Sources */,
@@ -1203,6 +1293,7 @@
 				3320FFDD2682EBC4001809AA /* Utils.swift in Sources */,
 				33EDB0F42692D9F00040DCD4 /* CustomNavViewController.swift in Sources */,
 				3320FFA02682EBC4001809AA /* UIColor+Extension.swift in Sources */,
+				33542A79269CA853008CE8C2 /* ZoomAndSnapFlowLayout.swift in Sources */,
 				3320FFD52682EBC4001809AA /* SpinerContainerView.swift in Sources */,
 				33F59CCC26932818005B009A /* UIImageView+Extension.swift in Sources */,
 				338116732698A39800C8F35E /* ReferController.swift in Sources */,
@@ -1249,6 +1340,7 @@
 				335933AC26941F0E00CF6AAF /* CustomNeumophicButton.swift in Sources */,
 				3381168C2699A78600C8F35E /* FetchedContacts.swift in Sources */,
 				3320FFC32682EBC4001809AA /* IQUIView+Hierarchy.swift in Sources */,
+				33542A7B269CA853008CE8C2 /* PageCollectionCell.swift in Sources */,
 				33EDB0C2268ED7B10040DCD4 /* PredictIntroController.swift in Sources */,
 				3320FFA92682EBC4001809AA /* TermsView.swift in Sources */,
 				33EDB0C9268ED7C90040DCD4 /* MatchListController.swift in Sources */,
@@ -1497,7 +1589,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = Indosat;
+				PRODUCT_BUNDLE_IDENTIFIER = ADCBGamification;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -1517,7 +1609,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = Indosat;
+				PRODUCT_BUNDLE_IDENTIFIER = ADCBGamification;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;

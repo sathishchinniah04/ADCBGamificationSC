@@ -15,7 +15,7 @@ class Constants {
     static let spinAssignReward = "\(baseUrl)Gamification-1.0/Gamification/executeEvent"
     static let predictgameDetail = "\(baseUrl)Gamification-1.0/Gamification/gameEngine/predictionGameDetails/"
     static let getReferCodeUrl = "\(baseUrl)Gamification-1.0/Gamification/gameManagement/game/referral/"
-    static let recordReferUrl = "\(baseUrl)Gamification-1.0/Gamification/gameManagement/recordReferral/"
+    static let recordReferUrl = "\(baseUrl)Gamification-1.0/Gamification/gameManagement/game/recordReferral/"
     static let sendNotificationUrl = "\(baseUrl)Gamification-1.0/Gamification/gameManagement/game/referral/"
     
     static let spinGetSpinOffer = "http://cvm-game.20.74.146.216.nip.io/Gamification-1.0/Gamification/gameEngine/executeGame"

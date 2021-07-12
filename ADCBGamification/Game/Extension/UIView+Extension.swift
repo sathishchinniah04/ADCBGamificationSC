@@ -24,7 +24,7 @@ extension UIView {
         }
     }
     
-    func showAlert(singelBtn: Bool = true,ok: String = "Ok", cancel: String = "Cancel",title: String = "Alert",message: String,complition:((AlertAction)->Void)? = nil) {
+    func showAlert(singelBtn: Bool = true,ok: String = "Ok", cancel: String = "Cancel",title: String = "Alert",message: String, complition:((AlertAction)->Void)?) {
         DispatchQueue.main.async {
             
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
