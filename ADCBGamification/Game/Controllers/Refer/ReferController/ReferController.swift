@@ -15,6 +15,7 @@ class ReferController: UIViewController {
     @IBOutlet weak var inviteButton: UIButton!
     @IBOutlet weak var chooseContactButton: ReferContactButton!
     @IBOutlet weak var activityIndicatorView: UIActivityIndicatorView!
+    var referCode: String = ""
     override func viewDidLoad() {
         super.viewDidLoad()
         self.addDottedLine()
@@ -36,6 +37,7 @@ class ReferController: UIViewController {
             DispatchQueue.main.async {
                 self.activityIndicatorView.stopAnimating()
                 self.referCodeLabel.text = data.referralCode
+                self.referCode = data.referralCode ?? ""
                 self.buttonUserInteraction(enable: true)
                 self.referCodeView.layoutIfNeeded()
             }
@@ -51,6 +53,16 @@ class ReferController: UIViewController {
         }
     }
     
+    @IBAction func inviteButtonAction() {
+        if self.chooseContactButton.textField.text!.isEmpty {
+            self.view.showAlert(message: "Please enter mobile number.")
+        } else {
+            ReferViewModel.recordRefer(referCode: self.referCode) { (data) in
+                print("data is \(data)")
+            }
+        }
+    }
+    
     func neumorphicButtonSetup() {
         DispatchQueue.main.async {
             self.shareButton.setButtonImage(name: "Refershare")
@@ -62,7 +74,7 @@ class ReferController: UIViewController {
     
     func referButtonHandle(action: NeumorphicButtonAction) {
         print("Tapped refer")
-        self.openActivityController(text: "share this text")
+        self.openActivityController(text: "Hey! check out the referral code and use this while registering. *\(referCode)*")
     }
     
     func chooseContactButtonTapped(action: ReferContactButtonAction) {

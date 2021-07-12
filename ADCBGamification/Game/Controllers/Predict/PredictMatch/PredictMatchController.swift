@@ -15,6 +15,8 @@ class PredictMatchController: UIViewController {
     var eventsList: EventsList?
     var selectedIndex: Int = 0
     var game: Games?
+    var teamA: String = ""
+    var teamB: String = ""
     var predictSuccessHelper = PredictSuccessHelper()
     
     override func viewDidLoad() {
@@ -50,10 +52,21 @@ class PredictMatchController: UIViewController {
     }
     
     func onSuccess() {
-        predictSuccessHelper.show { (action) in
-            print("action \(action)")
+        predictSuccessHelper.show(complition: predictSuccessPopupHandler(action:))
+    }
+    
+    func predictSuccessPopupHandler(action: PredictSuccessViewAction) {
+        switch action {
+        case .homePage:
             self.predictSuccessHelper.animateAndRemove()
-            self.navigationController?.popToRootViewController(animated: true)
+            DispatchQueue.main.asyncAfter(deadline: .now()+0.2) {
+                self.navigationController?.popToRootViewController(animated: true)
+            }
+        case .share:
+            let message = "Hey! I have predicted a game the match is *\(teamA)* and *\(teamB)*."
+            self.openActivityController(text: message)
+        default:
+            break
         }
     }
     
@@ -83,6 +96,9 @@ extension PredictMatchController: UITableViewDelegate, UITableViewDataSource {
     func answerButtonTapped(action: PredictMatchTableViewCellAction) {
         switch action {
         case .tapped(let qNo, let inde):
+            self.teamA = eventsList?.OpponentA ?? ""
+            self.teamB = eventsList?.OpponentB ?? ""
+            
         break
         default:
             break

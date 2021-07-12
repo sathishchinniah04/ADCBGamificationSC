@@ -251,6 +251,9 @@
                                                 <integer key="value" value="10"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="inviteButtonAction" destination="TVV-eO-t0j" eventType="touchUpInside" id="RVb-fU-hjt"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
