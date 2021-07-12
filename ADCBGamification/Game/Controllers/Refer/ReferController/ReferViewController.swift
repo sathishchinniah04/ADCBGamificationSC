@@ -21,6 +21,8 @@ class ReferViewController: UIViewController {
         tblView.tableSetup(type: .newRefer,complition: tableActionHandle(action:))
     }
     
+   
+    
     func tableActionHandle(action: ReferTableViewAction) {
         switch action {
         case .refer:

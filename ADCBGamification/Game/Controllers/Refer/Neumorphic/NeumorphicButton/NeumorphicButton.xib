@@ -7,7 +7,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="NeumorphicButton" customModule="Gamification" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="NeumorphicButton" customModule="ADCBGamification" customModuleProvider="target">
             <connections>
                 <outlet property="button" destination="rWS-la-5Ke" id="IJv-MQ-iNE"/>
             </connections>
@@ -20,6 +20,7 @@
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rWS-la-5Ke">
                     <rect key="frame" x="0.0" y="0.0" width="507" height="396"/>
                     <color key="backgroundColor" red="0.97245341539999997" green="0.97261589770000001" blue="0.9724320769" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <state key="normal" image="Refershare"/>
                     <connections>
                         <action selector="buttonAction" destination="-1" eventType="touchUpInside" id="wRG-HL-v0B"/>
                     </connections>
@@ -36,4 +37,7 @@
             <point key="canvasLocation" x="-132.60869565217394" y="48.883928571428569"/>
         </view>
     </objects>
+    <resources>
+        <image name="Refershare" width="37.5" height="33.5"/>
+    </resources>
 </document>
