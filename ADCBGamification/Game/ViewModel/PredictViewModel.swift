@@ -40,58 +40,32 @@ class PredictViewModel {
         urlReq.setValue(StoreManager.shared.language, forHTTPHeaderField: "language")
         NetworkManager.postRequest(struct: GameList.self, url: urlStr, urlReq: urlReq, requestData: reqData(event: event, index: index)!) { (data, error) in
             if let dat = data {
+                print("data is \(dat)")
              complition?()
             }
-            print("data is \(data)")
-            print("Error is \(error)")
+            
+            print("Error is \(String(describing: error))")
         }
-//        reqData(event: event, index: index)
     }
     
     static private func reqData(event: EventsList, index: Int) -> [String : Any]? {
         guard let questList = event.questionList else { return nil}
-        
-        var eventId = event.eventid ?? 0
+        let eventId = event.eventid ?? 0
         var ansList = [["questionid": "",
                        "optionId": ""]]
         ansList.removeAll()
-        var answeredQ: [PredOption]?
-        
-        var count: Int = 0
         for item in questList {
             guard let opsList = item.predOptions else { return nil}
             var id = ""
-            answeredQ = opsList.filter({$0.isSelected == true})
-            
             for ops in opsList {
-                if !ops.isSelected  {
-
-                } else {
-                    count += 1
-                    id = "\(ops.id ?? 0)"
-                }
+                if !ops.isSelected  {} else {id = "\(ops.id ?? 0)"}
             }
             ansList.append(["questionid": "\(item.questionId ?? 0)",
                             "optionId": "\(id)"])
          
         }
-        print("answered question \(count)")
-        print("answered quet is \(answeredQ?.count)")
-        let jsonData = try? JSONSerialization.data(withJSONObject: ansList, options: [])
-        let eventJson = String(data: jsonData!, encoding: .utf8)
-    //    print("items to send is \(ansList)")
-        let ansListStr = ["eventid": eventId, "answerList": eventJson!] as [String : Any]
-        
-        
-//        print("ansListStr data is \(ansListStr)")
-
-        let submitPred = ["submitPredictions": ansListStr]
-  //      print("submitPred \(submitPred)")
-        if count == questList.count {
-            print("Answered all question")
-        } else {
-            print("All questions are not answered")
-        }
+        let ansListStr = ["eventid": eventId, "answerList": ansList] as [String : Any]
+        let submitPred = ["submitPredictions": [ansListStr]]
         return submitPred
     }
     
@@ -101,11 +75,7 @@ class PredictViewModel {
         for item in questList {
             guard let opsList = item.predOptions else { return false}
             for ops in opsList {
-                if !ops.isSelected  {
-
-                } else {
-                    count += 1
-                }
+                if !ops.isSelected  { } else { count += 1}
             }
         }
         if count == questList.count {

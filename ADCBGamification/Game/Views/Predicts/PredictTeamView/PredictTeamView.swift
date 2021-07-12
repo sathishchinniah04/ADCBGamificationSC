@@ -46,6 +46,10 @@ class PredictTeamView: UIView {
         self.addSubview(view!)
     }
     
+    func extraPopulation(time: String) {
+        
+    }
+    
     func populateView(index: Int, info: EventsList?) {
         DispatchQueue.main.async {
             self.appearenceSetup()

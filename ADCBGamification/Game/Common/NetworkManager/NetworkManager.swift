@@ -36,8 +36,10 @@ class NetworkManager {
         var req = createCommonRequest(url: ur, urlReq: urReq, methodType: .post)
         if let reData = requestData {
             print("req pac = \(reData)")
-            let jsonData = try? JSONSerialization.data(withJSONObject: reData, options:[])
-            req.httpBody = jsonData
+            let jsonData = try? JSONSerialization.data(withJSONObject: reData, options:[.fragmentsAllowed])
+//            let intoStr = String(data: jsonData!, encoding: .utf8)
+//            print("req pac into json formate = \(intoStr!)")
+            req.httpBody = jsonData//Data(intoStr!.utf8)
     }
         task(req: req, complition: complition)
     }
