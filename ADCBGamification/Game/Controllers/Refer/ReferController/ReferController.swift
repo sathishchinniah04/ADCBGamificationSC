@@ -10,13 +10,25 @@ import UIKit
 class ReferController: UIViewController {
     
     @IBOutlet weak var referCodeView: UIView!
+    @IBOutlet weak var referCodeLabel: UILabel!
     @IBOutlet weak var shareButton: NeumorphicButton!
     @IBOutlet weak var chooseContactButton: ReferContactButton!
-    
+    @IBOutlet weak var activityIndicatorView: UIActivityIndicatorView!
     override func viewDidLoad() {
         super.viewDidLoad()
         self.addDottedLine()
         self.neumorphicButtonSetup()
+        getReferCode()
+    }
+    
+    func getReferCode() {
+        referCodeLabel.text = "Loading"
+        ReferViewModel.getReferalCode { (data) in
+            DispatchQueue.main.async {
+                self.activityIndicatorView.stopAnimating()
+                self.referCodeLabel.text = data.referralCode
+            }
+        }
     }
     
     func addDottedLine() {
