@@ -3,4 +3,102 @@
    uuid = "866B0DC3-4407-444F-BCFA-DA6FFE906F6C"
    type = "1"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "24D8BCEE-B6D4-48C2-9AB8-00BB1BE25DC1"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ADCBGamification/Game/Game.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "64"
+            endingLineNumber = "64"
+            landmarkName = "getControllerRef(controller:gameType:gameId:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "221128D1-8A47-4905-A829-A924E0807569"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ADCBGamification/Game/Game.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "71"
+            endingLineNumber = "71"
+            landmarkName = "getControllerRef(controller:gameType:gameId:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "55BB970A-06E6-4DB1-959F-EF491EA14F57"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ADCBGamification/Game/Game.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "58"
+            endingLineNumber = "58"
+            landmarkName = "getControllerRef(controller:gameType:gameId:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "55BB970A-06E6-4DB1-959F-EF491EA14F57 - 3889b50357496fd"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "static ADCBGamification.Game.(getControllerRef in _DABAC8E795D8583A85D33C2726B07E6E)(controller: __C.UIViewController, gameType: Swift.String, gameId: Swift.Optional&lt;Swift.String&gt;) -&gt; ()"
+                  moduleName = "ADCBGamification"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/6d/Documents/SKY/SkyRepo/ADCB/ADCBGamification/ADCBGamification/Game/Game.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "58"
+                  endingLineNumber = "58"
+                  offsetFromSymbolStart = "568">
+               </Location>
+               <Location
+                  uuid = "55BB970A-06E6-4DB1-959F-EF491EA14F57 - f1d2e80dad44bf6c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (ADCBGamification.Games) -&gt; () in static ADCBGamification.Game.(getControllerRef in _DABAC8E795D8583A85D33C2726B07E6E)(controller: __C.UIViewController, gameType: Swift.String, gameId: Swift.Optional&lt;Swift.String&gt;) -&gt; ()"
+                  moduleName = "ADCBGamification"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/6d/Documents/SKY/SkyRepo/ADCB/ADCBGamification/ADCBGamification/Game/Game.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "59"
+                  endingLineNumber = "59"
+                  offsetFromSymbolStart = "192">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "4206CFBE-81AF-4D28-A600-8F49F1C3E152"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ADCBGamification/Game/Game.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "74"
+            endingLineNumber = "74"
+            landmarkName = "getControllerRef(controller:gameType:gameId:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

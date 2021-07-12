@@ -10,6 +10,8 @@ import UIKit
 class SpinHomeController: UIViewController {
     @IBOutlet weak var expireView: ExpireView!
     @IBOutlet weak var containerView: UIView!
+    @IBOutlet weak var spinDummyImgView: UIImageView!
+    @IBOutlet weak var activityIndicatorView: UIActivityIndicatorView!
     var spinerView = SpinerContainerHelper()
     var game: Games?
     var spinOffers: SpinOffers?
@@ -21,17 +23,22 @@ class SpinHomeController: UIViewController {
     }
     
     func initialSetup() {
+        containerView.backgroundColor = UIColor.clear
         containerView.isHidden = true
         expireView.setupButtonName(name: "Spin")
+        spinerView.hideSpinView()
         expireView.populateView(isShowTerms: false, game: self.game) {
-            self.onAcceptingTermsAndConditon()
+            self.spinDummyImgView.isHidden = true
+            self.spinerView.unHideSpinView()
+            self.containerView.isHidden = false
+            self.expireView.isHidden = true
         }
     }
     
     func onAcceptingTermsAndConditon() {
-        self.containerView.isHidden = false
+        //self.containerView.isHidden = false
         self.spinerView.loadSpinner(sourceView: self.containerView)
-        self.expireView.isHidden = true
+        //self.expireView.isHidden = true
         DispatchQueue.main.asyncAfter(deadline: .now()+0.2) {
             guard let off = self.spinOffers?.offers else { return }
             self.spinerView.populateSpinner(offer: off,complition: self.spinButtonTapped(action:))
@@ -41,6 +48,7 @@ class SpinHomeController: UIViewController {
     func spinButtonTapped(action: SpinerContainerViewAction) {
         switch action {
         case .spinTapped:
+            
             print("Spin button tapped")
             self.assignRewards()
         default:
@@ -84,6 +92,10 @@ class SpinHomeController: UIViewController {
     
     func spinOffersResponce(data: SpinOffers) {
         print("data got from respo \(data)")
-        self.spinOffers = data
+        DispatchQueue.main.async {
+            self.spinOffers = data
+            self.onAcceptingTermsAndConditon()
+            self.activityIndicatorView.stopAnimating()
+        }
     }
 }

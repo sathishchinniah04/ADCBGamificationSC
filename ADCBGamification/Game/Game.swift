@@ -31,7 +31,7 @@ public class Game {
         
         StoreManager.shared.accessToken = "J0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9"
         //deleteThis(contr: controller)
-       // getControllerRef(controller: controller)
+        //getControllerRef(controller: controller)
         loadGameList(controller: controller)
     }
     
@@ -60,10 +60,20 @@ public class Game {
                     cont?.updateOnResponce(game: games)
                 }
             }
-        } else if gameType == "Spin" {
+        } else if gameType == "SpinNWin" {
             let cont = self.navigateToController(controller: controller, storyboard: "Spin", id: "SpinHomeController") as? SpinHomeController
-        } else if gameType == "Refer" {
+            getGameList(gameType: gameType, gameId: gameId) { (games) in
+                DispatchQueue.main.async {
+                  //  cont?.updateOnResponce(game: games)
+                }
+            }
+        } else if gameType == "ReferNWin" {
             let cont = self.navigateToController(controller: controller, storyboard: "Refer", id: "ReferIntroController") as? ReferIntroController
+            getGameList(gameType: gameType, gameId: gameId) { (games) in
+                DispatchQueue.main.async {
+                    //cont?.updateOnResponce(game: games)
+                }
+            }
         } else {
             print("Game type does not match")
         }

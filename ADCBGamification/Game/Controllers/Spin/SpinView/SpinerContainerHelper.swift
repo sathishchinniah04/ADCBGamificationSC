@@ -26,6 +26,14 @@ class SpinerContainerHelper {
         self.view?.populateSpinner(offer: offer, complition: complition)
     }
     
+    func hideSpinView() {
+        self.view?.isHidden = true
+    }
+    
+    func unHideSpinView() {
+        self.view?.isHidden = false
+    }
+    
     func removeView() {
         view?.removeFromSuperview()
         view = nil
