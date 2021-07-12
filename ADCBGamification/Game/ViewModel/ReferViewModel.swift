@@ -43,6 +43,22 @@ class ReferViewModel {
         }
     }
     
+    static func notifyToUser() {
+        let service = "activation"
+        let urlStr = Constants.sendNotificationUrl+"\(service)/notifications"
+        guard let url = URL(string: urlStr) else { return }
+        var urlReq = URLRequest(url: url)
+        urlReq.setValue(Utility.getRandonNo(), forHTTPHeaderField: "requestId")
+        urlReq.setValue(StoreManager.shared.msisdn, forHTTPHeaderField: "customerId")
+        urlReq.setValue(StoreManager.shared.language, forHTTPHeaderField: "language")
+        NetworkManager.postRequest(struct: ReferNotification.self, url: urlStr, urlReq: urlReq) { (data, error) in
+            if let da = data {
+                print("data is \(da)")
+            }
+            print("Error is \(error)")
+        }
+    }
+    
 //    static func getRecordHistory(referCode: String, complition:((ReferCode)->Void)?) {
 //
 //

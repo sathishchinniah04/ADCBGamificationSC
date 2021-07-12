@@ -115,6 +115,7 @@
 		33CD219C269AF4EE00CB71AC /* PredictSuccessHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33CD219B269AF4EE00CB71AC /* PredictSuccessHelper.swift */; };
 		33CD21A0269BDCC400CB71AC /* ReferViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33CD219F269BDCC200CB71AC /* ReferViewModel.swift */; };
 		33CD21A4269BDEE400CB71AC /* ReferCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33CD21A3269BDEE400CB71AC /* ReferCode.swift */; };
+		33CD21A8269BE49E00CB71AC /* ReferNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33CD21A7269BE49E00CB71AC /* ReferNotification.swift */; };
 		33EDB0C2268ED7B10040DCD4 /* PredictIntroController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33EDB0C1268ED7B10040DCD4 /* PredictIntroController.swift */; };
 		33EDB0C9268ED7C90040DCD4 /* MatchListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33EDB0C8268ED7C90040DCD4 /* MatchListController.swift */; };
 		33EDB0D0268ED7F20040DCD4 /* PredictMatchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33EDB0CF268ED7F20040DCD4 /* PredictMatchController.swift */; };
@@ -271,6 +272,7 @@
 		33CD219B269AF4EE00CB71AC /* PredictSuccessHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PredictSuccessHelper.swift; sourceTree = "<group>"; };
 		33CD219F269BDCC200CB71AC /* ReferViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReferViewModel.swift; sourceTree = "<group>"; };
 		33CD21A3269BDEE400CB71AC /* ReferCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReferCode.swift; sourceTree = "<group>"; };
+		33CD21A7269BE49E00CB71AC /* ReferNotification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReferNotification.swift; sourceTree = "<group>"; };
 		33EDB0C1268ED7B10040DCD4 /* PredictIntroController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PredictIntroController.swift; sourceTree = "<group>"; };
 		33EDB0C8268ED7C90040DCD4 /* MatchListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchListController.swift; sourceTree = "<group>"; };
 		33EDB0CF268ED7F20040DCD4 /* PredictMatchController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PredictMatchController.swift; sourceTree = "<group>"; };
@@ -932,6 +934,7 @@
 				336B67AA2697E24C008E419B /* PredictGame.swift */,
 				3381168B2699A78600C8F35E /* FetchedContacts.swift */,
 				33CD21A3269BDEE400CB71AC /* ReferCode.swift */,
+				33CD21A7269BE49E00CB71AC /* ReferNotification.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1204,6 +1207,7 @@
 				33F59CCC26932818005B009A /* UIImageView+Extension.swift in Sources */,
 				338116732698A39800C8F35E /* ReferController.swift in Sources */,
 				3320FFCF2682EBC4001809AA /* ReferTableView.swift in Sources */,
+				33CD21A8269BE49E00CB71AC /* ReferNotification.swift in Sources */,
 				33EDB0D0268ED7F20040DCD4 /* PredictMatchController.swift in Sources */,
 				3320FFB02682EBC4001809AA /* IQPreviousNextView.swift in Sources */,
 				33FC31CA26971A9800868D9E /* SpinSuccessViewHelper.swift in Sources */,
