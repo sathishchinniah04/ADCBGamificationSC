@@ -11,24 +11,17 @@ class GamesViewController: UIViewController {
     
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var collectionContainerView: UIView!
-    @IBOutlet weak var segmentControl: UISegmentedControl!
     @IBOutlet weak var pageControl: UIPageControl!
-    @IBOutlet weak var completedTableView: CompletedTableView!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     let collectionDataSource = CollectionDataSource()
     let flowLayout = ZoomAndSnapFlowLayout()
-    //var gameListViewModel: GameListViewModel?
     var games: [Games]? = []
-    //var complition:((GameAction)->Void)?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         initialSetup()
         collectionViewSetup()
-        segmentControlSetup()
         getGameListFromApi()
-        pageControlSetup()
-        
         fixWarningActivityIndicator()
     }
     
@@ -43,18 +36,18 @@ class GamesViewController: UIViewController {
     //flip
     func initialSetup() {
         displayGameList()
-        completedTableView.tableViewSetup()
+        
         pageControl.isHidden = true
     }
     
     func displayGameList() {
-        completedTableView.isHidden = true
+        
         collectionView.isHidden = false
         pageControl.isHidden = false
     }
     
     func displayCompletedGames() {
-        completedTableView.isHidden = false
+        
         collectionView.isHidden = true
         pageControl.isHidden = true
     }
@@ -74,31 +67,6 @@ class GamesViewController: UIViewController {
                     }
     }
     
-    func pageControlSetup() {
-        pageControl.addTarget(self, action: #selector(self.pageControlSelectionAction(_:)), for: .touchUpInside)
-    }
-    @objc func pageControlSelectionAction(_ sender: UIPageControl) {
-        let page: Int? = sender.currentPage
-        if let page = page {
-            self.collectionView.scrollToItem(at: IndexPath(row: page, section: 0), at: .centeredHorizontally, animated: true)
-        }
-        print("Current page is \(String(describing: page))")
-    }
-    
-    func segmentControlSetup() {
-        //segmentControl.selectedSegmentIndex = 1
-        UISegmentedControl.appearance().setTitleTextAttributes([NSAttributedString.Key.foregroundColor:UIColor.white], for: .selected)
-        //        UISegmentedControl.appearance().setTitleTextAttributes([NSAttributedString.Key.font:UIFont.boldSystemFont(ofSize: 14)], for: .selected)
-        segmentControl.addTarget(self, action: #selector(segmentHanlder(segment:)), for: .valueChanged)
-    }
-    
-    @objc func segmentHanlder(segment: UISegmentedControl) {
-        if segment.selectedSegmentIndex == 0 {
-            self.displayGameList()
-        } else {
-            self.displayCompletedGames()
-        }
-    }
     
     func collectionViewSetup(){
         guard let collectionView = collectionView else { fatalError() }
@@ -121,22 +89,13 @@ class GamesViewController: UIViewController {
         super.viewWillLayoutSubviews()
         self.flowLayout.setHeight(width: self.collectionContainerView.bounds.width/1.7,height: self.collectionContainerView.frame.height-150)
     }
-    @IBAction func backButtonAction() {
-        //        if self.navigationController != nil {
-        //            self.navigationController?.popViewController(animated: true)
-        //        } else {
-        self.dismiss(animated: true, completion: nil)
-        //}
-    }
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.navigationController?.navigationBar.isHidden = true
-        //self.navigationController?.isNavigationBarHidden = true
     }
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        //self.navigationController?.isNavigationBarHidden = false
-        //self.navigationController?.navigationBar.isHidden = false
     }
 }
 
@@ -144,33 +103,64 @@ extension GamesViewController {
     func cellActionHandler(action: CollectionCellAction) {
         switch action {
         case .startGame(let index):
-            navigateToController(game: self.games?[index.row])
+            //navigateToController(game: self.games?[index.row])
+            self.getControllerRef(gameType: self.games?[index.row].gameType ?? "", game: (self.games?[index.row])!)
         case .page(let index):
             self.pageControl.currentPage = index
         }
     }
     
+    
+    
+    func moveToController(sName: String, id: String, gameType: String, game: Games) {
+        let contr = UIStoryboard(name: sName, bundle: Bundle(for: Self.self)).instantiateViewController(withIdentifier: id)
+        if gameType == "PredictNWin" {
+            (contr as? PredictIntroController)?.game = game
+        } else if gameType == "SpinNWin" {
+            (contr as? SpinHomeController)?.game = game
+        } else if gameType == "ReferNWin" {
+            (contr as? ReferIntroController)?.game = game
+        }
+        self.navigationController?.pushViewController(contr, animated: true)
+    }
+    
+    func getControllerRef(gameType: String, game: Games) {
+        if gameType == "SpinNWin" {
+            self.moveToController(sName: "Spin", id: "SpinHomeController", gameType: gameType, game: game)
+        } else if gameType == "PredictNWin" {
+            self.moveToController(sName: "Predict", id: "PredictIntroController", gameType: gameType, game: game)
+        } else if gameType == "ReferNWin" {
+            self.moveToController(sName: "Refer", id: "ReferIntroController", gameType: gameType, game: game)
+        } else {
+            print("no game type ")
+        }
+    }
+    
+    /*
+    
     func navigateToController(game: Games?) {
-        if game?.gameTitle == "Guess N Win" {
+        if game?.gameType == "GuessNWin" {
             moveToGuessAndWin(game: game)
-        } else if game?.gameTitle == "Refer N Win" {
+        } else if game?.gameType == "ReferNWin" {
             moveToReferAndWin(game: game)
-        } else if game?.gameTitle == "Shake And Win" {
+        } else if game?.gameType == "ShakeAndWin" {
             moveToShakeAndWin(game: game)
-        } else if game?.gameTitle == "SpinNWin" {
+        } else if game?.gameType == "SpinNWin" {
             moveToSpinAndWin(game: game)
-        } else if game?.gameTitle == "Lottery N Win" {
+        } else if game?.gameType == "LotteryNWin" {
             moveToLotteryAndWin(game: game)
-        } else if game?.gameTitle == "Survey"{
+        } else if game?.gameType == "Survey"{
             moveToLotteryAndWin(game: game)
-        } else if game?.gameTitle == "Quiz"{
+        } else if game?.gameType == "Quiz"{
             moveToActiveAndWin(game: game)
-        } else if game?.gameTitle == "Predict N Win" {
+        } else if game?.gameType == "PredictNWin" {
             moveToPredictAndWin(game: game)
         } else {
             moveToLotteryAndWin(game: game)
         }
     }
+    
+    
     
     func moveToReferAndWin(game: Games?) {
         
@@ -200,4 +190,5 @@ extension GamesViewController {
     func moveToPredictAndWin(game: Games?) {
         
     }
+ */
 }

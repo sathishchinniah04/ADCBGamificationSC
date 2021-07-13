@@ -22,6 +22,12 @@ class ExpireView: UIView {
         initialSetup()
     }
     
+    @IBInspectable var hidePlayButton: Bool = false {
+        didSet {
+            button.isHidden = hidePlayButton
+        }
+    }
+    
     required init?(coder: NSCoder) {
         super.init(coder: coder)
         initialSetup()
@@ -42,6 +48,7 @@ class ExpireView: UIView {
         view.autoresizingMask = [.flexibleWidth,.flexibleHeight]
         addSubview(view)
         button.addCustomShadow(cornerRadius: 10, shadowRadius: 4, opacity: 0.3, color: UIColor.blue, offSet: CGSize(width: 4, height: 4))
+        button.isHidden = hidePlayButton
     }
     
     func populateView(isShowTerms: Bool = true, game: Games?, complition: (()->Void)?) {
@@ -86,8 +93,9 @@ class ExpireView: UIView {
     }
     
     func hourMinteAlignmentCheck(date: String, value: String) {
-        
-            expireLabel.text = value + " \(Utility.secondsToHoursMinutesSeconds(seconds: Utility.convertStringIntoDate(date: date)).0)h  \(Utility.secondsToHoursMinutesSeconds(seconds: Utility.convertStringIntoDate(date: date)).1)min \(Utility.secondsToHoursMinutesSeconds(seconds: Utility.convertStringIntoDate(date: date)).2)sec"
+        DispatchQueue.main.async {
+            self.expireLabel.text = value + " \(Utility.secondsToHoursMinutesSeconds(seconds: Utility.convertStringIntoDate(date: date)).0)h  \(Utility.secondsToHoursMinutesSeconds(seconds: Utility.convertStringIntoDate(date: date)).1)min \(Utility.secondsToHoursMinutesSeconds(seconds: Utility.convertStringIntoDate(date: date)).2)sec"
+        }
     }
     
     func setupButtonName(name: String) {
