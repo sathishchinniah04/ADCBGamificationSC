@@ -39,7 +39,7 @@ class PageCollectionCell: UICollectionViewCell {
         if game.gameType == "SpinNWin" {
             imgName = "Spin"
         } else if game.gameType == "PredictNWin" {
-            
+            imgName = "Predict"
         } else if game.gameType == "ReferNWin" {
             imgName = "ReferLogo"
         } else if game.gameType == "Spi" {
