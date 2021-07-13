@@ -30,6 +30,14 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="128" placeholder="YES" id="clg-yc-AD2"/>
                                 </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="mainStackSpace">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="secondStackSpace">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </view>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Spin" translatesAutoresizingMaskIntoConstraints="NO" id="5xz-YZ-Pku">
                                 <rect key="frame" x="101.5" y="129.5" width="120" height="120"/>

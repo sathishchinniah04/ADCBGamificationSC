@@ -10,10 +10,12 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ExpireView" customModule="ADCBGamification" customModuleProvider="target">
             <connections>
                 <outlet property="button" destination="jkv-PI-h4v" id="lIl-dT-U7Q"/>
+                <outlet property="containerStackView" destination="nYC-7P-LNa" id="KGu-YX-ZCL"/>
                 <outlet property="descLabel" destination="g6i-Vh-D9n" id="cx1-oT-gnV"/>
                 <outlet property="expireLabel" destination="BLo-MQ-iSF" id="080-ic-kf4"/>
                 <outlet property="gameNameLabel" destination="ZpA-KF-iFY" id="mcj-9T-AIq"/>
                 <outlet property="gameNameSubTitleLabel" destination="heg-QQ-ejD" id="W3v-EQ-wRi"/>
+                <outlet property="secondStackView" destination="AOu-or-gVc" id="4lD-tA-fQc"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>

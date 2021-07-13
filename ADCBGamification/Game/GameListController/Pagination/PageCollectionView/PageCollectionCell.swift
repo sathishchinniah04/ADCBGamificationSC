@@ -32,6 +32,21 @@ class PageCollectionCell: UICollectionViewCell {
         self.addShadow(cornerRadius: 10, shadowRadius: 3, opacity: 0.4, color: UIColor.black)
     }
     
+    func imageLogoSetup(game: Games,index: Int) {
+        var imgName: String = ""
+        if game.gameType == "SpinNWin" {
+            imgName = "Spin"
+        } else if game.gameType == "PredictNWin" {
+            
+        } else if game.gameType == "ReferNWin" {
+            
+        } else if game.gameType == "SpinNWin" {
+        } else {
+            
+        }
+        gameLogoImageView.image = UIImage(named: "", in: Bundle(for: Self.self), compatibleWith: nil)
+    }
+    
 //
     func setImage(index: Int) {
         backGroundImageView.image = UIImage(named: "ListImg\(index)", in: Bundle(for: PageCollectionCell.self), compatibleWith: nil)//UIImage(named: "ListImg\(index)")

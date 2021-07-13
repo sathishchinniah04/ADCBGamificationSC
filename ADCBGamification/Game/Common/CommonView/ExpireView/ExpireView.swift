@@ -13,6 +13,8 @@ class ExpireView: UIView {
     @IBOutlet weak var gameNameSubTitleLabel: UILabel!
     @IBOutlet weak var expireLabel: UILabel!
     @IBOutlet weak var descLabel: UILabel!
+    @IBOutlet weak var containerStackView: UIStackView!
+    @IBOutlet weak var secondStackView: UIStackView!
     private var termsView = TermsViewHelper()
     private var handler: (()->Void)?
     private var isShowTerms: Bool = true
@@ -20,6 +22,18 @@ class ExpireView: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         initialSetup()
+    }
+    
+    @IBInspectable var mainStackSpace: CGFloat = 50 {
+        didSet {
+            containerStackView.spacing = mainStackSpace
+        }
+    }
+    
+    @IBInspectable var secondStackSpace: CGFloat = 20 {
+        didSet {
+            secondStackView.spacing = secondStackSpace
+        }
     }
     
     @IBInspectable var hidePlayButton: Bool = false {
@@ -49,6 +63,8 @@ class ExpireView: UIView {
         addSubview(view)
         button.addCustomShadow(cornerRadius: 10, shadowRadius: 4, opacity: 0.3, color: UIColor.blue, offSet: CGSize(width: 4, height: 4))
         button.isHidden = hidePlayButton
+        containerStackView.spacing = mainStackSpace
+        secondStackView.spacing = secondStackSpace
     }
     
     func populateView(isShowTerms: Bool = true, game: Games?, complition: (()->Void)?) {
