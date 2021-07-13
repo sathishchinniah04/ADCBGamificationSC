@@ -27,6 +27,8 @@ class PageCollectionCell: UICollectionViewCell {
             self.cellTapHandler?(.startGame(index))
         }
         addShadowOnView()
+        guard let gam = game else { return }
+        imageLogoSetup(game: gam, index: index.row)
     }
     func addShadowOnView() {
         self.addShadow(cornerRadius: 10, shadowRadius: 3, opacity: 0.4, color: UIColor.black)
@@ -40,11 +42,12 @@ class PageCollectionCell: UICollectionViewCell {
             
         } else if game.gameType == "ReferNWin" {
             
-        } else if game.gameType == "SpinNWin" {
+        } else if game.gameType == "Spi" {
+            
         } else {
             
         }
-        gameLogoImageView.image = UIImage(named: "", in: Bundle(for: Self.self), compatibleWith: nil)
+        gameLogoImageView.image = UIImage(named: imgName, in: Bundle(for: Self.self), compatibleWith: nil)
     }
     
 //
