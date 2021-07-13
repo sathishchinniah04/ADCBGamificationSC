@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
@@ -14,25 +14,34 @@
             <objects>
                 <viewController storyboardIdentifier="ReferIntroController" id="Umo-k5-hCF" customClass="ReferIntroController" customModule="ADCBGamification" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8Yo-nW-oOk">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ic6-ia-DtR" customClass="ExpireView" customModule="ADCBGamification" customModuleProvider="target">
-                                <rect key="frame" x="20" y="732" width="374" height="100"/>
+                                <rect key="frame" x="20" y="537" width="335" height="100"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" placeholder="YES" id="RwE-XI-TyB"/>
                                 </constraints>
                             </view>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CurveClip" translatesAutoresizingMaskIntoConstraints="NO" id="XUZ-wa-BVQ">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="493"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="367"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ReferLogo" translatesAutoresizingMaskIntoConstraints="NO" id="Tc1-oJ-i1w">
+                                <rect key="frame" x="30" y="52" width="315" height="315"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Tc1-oJ-i1w" secondAttribute="height" multiplier="1:1" id="wwO-em-n64"/>
+                                </constraints>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="HH6-ca-mjg"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="Tc1-oJ-i1w" firstAttribute="centerX" secondItem="XUZ-wa-BVQ" secondAttribute="centerX" id="7SY-hG-W2q"/>
+                            <constraint firstItem="Tc1-oJ-i1w" firstAttribute="leading" secondItem="8Yo-nW-oOk" secondAttribute="leading" constant="30" id="HW0-Nl-YeS"/>
                             <constraint firstItem="XUZ-wa-BVQ" firstAttribute="height" secondItem="8Yo-nW-oOk" secondAttribute="height" multiplier="0.55" id="KHP-6y-5QI"/>
+                            <constraint firstItem="Tc1-oJ-i1w" firstAttribute="bottom" secondItem="XUZ-wa-BVQ" secondAttribute="bottom" id="Tcq-bu-HPt"/>
                             <constraint firstItem="XUZ-wa-BVQ" firstAttribute="leading" secondItem="8Yo-nW-oOk" secondAttribute="leading" id="aoe-k8-ZCr"/>
                             <constraint firstItem="XUZ-wa-BVQ" firstAttribute="top" secondItem="8Yo-nW-oOk" secondAttribute="top" id="bTO-Io-jcX"/>
                             <constraint firstItem="HH6-ca-mjg" firstAttribute="bottom" secondItem="ic6-ia-DtR" secondAttribute="bottom" constant="30" id="cJ5-dU-LoH"/>
@@ -55,18 +64,18 @@
             <objects>
                 <viewController storyboardIdentifier="ReferViewController" id="vAT-ls-gbd" customClass="ReferViewController" customModule="ADCBGamification" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="42W-hh-2wZ">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CurveClip" translatesAutoresizingMaskIntoConstraints="NO" id="8dx-cD-jGi">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="493"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="367"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SxZ-Z0-WFX">
-                                <rect key="frame" x="0.0" y="44" width="414" height="50"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Refer &amp; Win" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F9Z-UC-l0Y">
-                                        <rect key="frame" x="165" y="16" width="84.5" height="18"/>
+                                        <rect key="frame" x="145.5" y="16" width="84.5" height="18"/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -86,7 +95,7 @@
                                 </constraints>
                             </view>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" apportionsSegmentWidthsByContent="YES" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="MXR-QP-Nec">
-                                <rect key="frame" x="126" y="94" width="162" height="32"/>
+                                <rect key="frame" x="106.5" y="50" width="162" height="32"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <segments>
                                     <segment title="New Referral"/>
@@ -98,7 +107,7 @@
                                 </connections>
                             </segmentedControl>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="PZY-07-X08" customClass="ReferTableView" customModule="ADCBGamification" customModuleProvider="target">
-                                <rect key="frame" x="20" y="145" width="374" height="697"/>
+                                <rect key="frame" x="20" y="101" width="335" height="546"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -139,15 +148,21 @@
             <objects>
                 <viewController storyboardIdentifier="ReferController" id="TVV-eO-t0j" customClass="ReferController" customModule="ADCBGamification" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gV3-aM-XOC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CurveClip" translatesAutoresizingMaskIntoConstraints="NO" id="GG1-Ex-sQ9">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="493"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="367"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ReferLogo" translatesAutoresizingMaskIntoConstraints="NO" id="Yjb-c9-aHn">
+                                <rect key="frame" x="30" y="52" width="315" height="315"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Yjb-c9-aHn" secondAttribute="height" multiplier="1:1" id="4dv-gT-YvP"/>
+                                </constraints>
+                            </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Zve-f3-Hol">
-                                <rect key="frame" x="73" y="755" width="268.5" height="77"/>
+                                <rect key="frame" x="53.5" y="560" width="268.5" height="77"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="LgF-aF-OfC">
                                         <rect key="frame" x="0.0" y="0.0" width="268.5" height="77"/>
@@ -180,7 +195,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="iq8-Er-Ty5">
-                                <rect key="frame" x="199" y="704.5" width="16" height="20.5"/>
+                                <rect key="frame" x="179.5" y="509.5" width="16" height="20.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="or" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Nh-q7-GLj">
                                         <rect key="frame" x="0.0" y="0.0" width="16" height="20.5"/>
@@ -191,10 +206,10 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="PDu-Pq-V5j">
-                                <rect key="frame" x="225" y="714.5" width="159" height="1"/>
+                                <rect key="frame" x="205.5" y="519.5" width="139.5" height="1"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lOq-gB-iUA">
-                                        <rect key="frame" x="0.0" y="0.0" width="159" height="1"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="139.5" height="1"/>
                                         <color key="backgroundColor" systemColor="systemGray5Color"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="1" id="BG4-KT-xj6"/>
@@ -203,10 +218,10 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="HWn-Y7-7Zo">
-                                <rect key="frame" x="30" y="714.5" width="159" height="1"/>
+                                <rect key="frame" x="30" y="519.5" width="139.5" height="1"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cwB-0o-9RR">
-                                        <rect key="frame" x="0.0" y="0.0" width="159" height="1"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="139.5" height="1"/>
                                         <color key="backgroundColor" systemColor="systemGray5Color"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="1" id="FhP-gE-0My"/>
@@ -215,17 +230,17 @@
                                 </subviews>
                             </stackView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8gm-Ye-CoG" customClass="NeumorphicButton" customModule="ADCBGamification" customModuleProvider="target">
-                                <rect key="frame" x="291.5" y="782" width="50" height="50"/>
+                                <rect key="frame" x="272" y="587" width="50" height="50"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="8gm-Ye-CoG" secondAttribute="height" multiplier="8:8" id="dQm-AR-JOw"/>
                                 </constraints>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="Bv6-l7-cTD">
-                                <rect key="frame" x="30" y="559.5" width="354" height="115"/>
+                                <rect key="frame" x="30" y="364.5" width="315" height="115"/>
                                 <subviews>
                                     <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qhl-SX-l84" customClass="ReferContactButton" customModule="ADCBGamification" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="354" height="45"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="315" height="45"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" priority="750" constant="45" placeholder="YES" id="TE1-EF-t8u"/>
@@ -237,7 +252,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                     <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V0w-fA-Tuy">
-                                        <rect key="frame" x="0.0" y="70" width="354" height="45"/>
+                                        <rect key="frame" x="0.0" y="70" width="315" height="45"/>
                                         <color key="backgroundColor" systemColor="systemGray3Color"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="45" id="fcQ-gm-WGE"/>
@@ -258,7 +273,7 @@
                                 </subviews>
                             </stackView>
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="dni-3P-yCj">
-                                <rect key="frame" x="188.5" y="429.5" width="37" height="37"/>
+                                <rect key="frame" x="169" y="315" width="37" height="37"/>
                                 <color key="color" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </activityIndicatorView>
                         </subviews>
@@ -268,13 +283,16 @@
                             <constraint firstItem="GG1-Ex-sQ9" firstAttribute="height" secondItem="gV3-aM-XOC" secondAttribute="height" multiplier="0.55" id="0vS-Cp-q4p"/>
                             <constraint firstItem="8gm-Ye-CoG" firstAttribute="trailing" secondItem="sWE-jm-dk4" secondAttribute="trailing" id="1bs-ju-pxo"/>
                             <constraint firstItem="dni-3P-yCj" firstAttribute="centerX" secondItem="gV3-aM-XOC" secondAttribute="centerX" id="4zv-aJ-XUU"/>
+                            <constraint firstItem="Yjb-c9-aHn" firstAttribute="bottom" secondItem="GG1-Ex-sQ9" secondAttribute="bottom" id="7u5-Hh-tUQ"/>
                             <constraint firstAttribute="trailing" secondItem="GG1-Ex-sQ9" secondAttribute="trailing" id="Ahe-ep-9il"/>
                             <constraint firstItem="PDu-Pq-V5j" firstAttribute="leading" secondItem="iq8-Er-Ty5" secondAttribute="trailing" constant="10" id="ELJ-aI-3mu"/>
+                            <constraint firstItem="Yjb-c9-aHn" firstAttribute="width" secondItem="Yjb-c9-aHn" secondAttribute="height" multiplier="1:1" id="ODg-qG-WVb"/>
                             <constraint firstItem="HWn-Y7-7Zo" firstAttribute="centerY" secondItem="3Nh-q7-GLj" secondAttribute="centerY" id="QQ7-CU-j7g"/>
                             <constraint firstItem="iq8-Er-Ty5" firstAttribute="centerX" secondItem="gV3-aM-XOC" secondAttribute="centerX" id="RRF-Wc-9is"/>
                             <constraint firstAttribute="trailing" secondItem="PDu-Pq-V5j" secondAttribute="trailing" constant="30" id="SVN-3W-Esm"/>
                             <constraint firstItem="iq8-Er-Ty5" firstAttribute="top" secondItem="Bv6-l7-cTD" secondAttribute="bottom" constant="30" id="UE8-Z7-eTo"/>
                             <constraint firstItem="8gm-Ye-CoG" firstAttribute="top" secondItem="sWE-jm-dk4" secondAttribute="top" id="UOw-mi-HSt"/>
+                            <constraint firstItem="Yjb-c9-aHn" firstAttribute="leading" secondItem="gV3-aM-XOC" secondAttribute="leading" constant="30" id="UVU-LO-k0r"/>
                             <constraint firstItem="lOq-gB-iUA" firstAttribute="centerY" secondItem="3Nh-q7-GLj" secondAttribute="centerY" id="XBS-6x-B1s"/>
                             <constraint firstItem="Bv6-l7-cTD" firstAttribute="leading" secondItem="t9B-6s-wkc" secondAttribute="leading" constant="30" id="ZPq-DB-qgY"/>
                             <constraint firstItem="GG1-Ex-sQ9" firstAttribute="leading" secondItem="t9B-6s-wkc" secondAttribute="leading" id="aEB-VC-9Ad"/>
@@ -287,6 +305,7 @@
                             <constraint firstItem="8gm-Ye-CoG" firstAttribute="bottom" secondItem="sWE-jm-dk4" secondAttribute="bottom" id="otq-6Q-IE9"/>
                             <constraint firstItem="HWn-Y7-7Zo" firstAttribute="leading" secondItem="t9B-6s-wkc" secondAttribute="leading" constant="30" id="pmi-ce-BXu"/>
                             <constraint firstItem="t9B-6s-wkc" firstAttribute="bottom" secondItem="Zve-f3-Hol" secondAttribute="bottom" constant="30" id="rJl-g8-Lfx"/>
+                            <constraint firstItem="Yjb-c9-aHn" firstAttribute="centerX" secondItem="GG1-Ex-sQ9" secondAttribute="centerX" id="vd8-Zv-bFh"/>
                             <constraint firstItem="t9B-6s-wkc" firstAttribute="trailing" secondItem="Bv6-l7-cTD" secondAttribute="trailing" constant="30" id="zvU-bp-FgH"/>
                         </constraints>
                     </view>
@@ -308,11 +327,11 @@
             <objects>
                 <viewController storyboardIdentifier="ContactListController" id="7hu-A8-FJZ" customClass="ContactListController" customModule="ADCBGamification" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="E3h-MP-Cf0">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pbt-nx-Apd" customClass="ReferContactButton" customModule="ADCBGamification" customModuleProvider="target">
-                                <rect key="frame" x="25" y="74" width="364" height="45"/>
+                                <rect key="frame" x="25" y="30" width="325" height="45"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" placeholder="YES" id="ati-7I-yt2"/>
@@ -323,10 +342,10 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5WR-6z-2ZY">
-                                <rect key="frame" x="0.0" y="134" width="414" height="27"/>
+                                <rect key="frame" x="0.0" y="90" width="375" height="27"/>
                                 <subviews>
                                     <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You can choose a maximum of 5 contacts" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qmQ-w6-zbe">
-                                        <rect key="frame" x="25" y="5" width="364" height="17"/>
+                                        <rect key="frame" x="25" y="5" width="325" height="17"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <color key="textColor" red="0.1333333333" green="0.12941176469999999" blue="0.39607843139999999" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -342,23 +361,23 @@
                                 </constraints>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="YAy-Jv-GQE">
-                                <rect key="frame" x="0.0" y="161" width="414" height="735"/>
+                                <rect key="frame" x="0.0" y="117" width="375" height="550"/>
                                 <subviews>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="N8C-f9-hdr">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="645"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="460"/>
                                         <color key="backgroundColor" red="0.91764705879999997" green="0.91764705879999997" blue="0.91764705879999997" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" priority="250" constant="645" id="KYa-q0-tEy"/>
                                         </constraints>
                                     </tableView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="cys-Tx-eHk">
-                                        <rect key="frame" x="0.0" y="645" width="414" height="90"/>
+                                        <rect key="frame" x="0.0" y="460" width="375" height="90"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YLQ-kn-WGP">
-                                                <rect key="frame" x="0.0" y="0.0" width="414" height="90"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="90"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cA1-V0-Mn1" customClass="NeumorphicButton" customModule="ADCBGamification" customModuleProvider="target">
-                                                        <rect key="frame" x="20" y="10" width="374" height="40"/>
+                                                        <rect key="frame" x="20" y="10" width="335" height="40"/>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="40" id="9ni-gi-QWz"/>
@@ -408,6 +427,7 @@
     </scenes>
     <resources>
         <image name="CurveClip" width="187.5" height="211"/>
+        <image name="ReferLogo" width="397" height="398"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="RvL-uK-7BA">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -38,13 +39,66 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="activityIndicatorView" destination="TMF-SB-Say" id="N33-hh-oeQ"/>
                         <outlet property="gamesTableView" destination="uKH-pV-egK" id="dim-vQ-YXH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ook-AU-4sJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="33" y="119"/>
+        </scene>
+        <!--Game List Controller-->
+        <scene sceneID="9SH-3h-Rxg">
+            <objects>
+                <viewController storyboardIdentifier="ADCBGameListController" id="RvL-uK-7BA" customClass="ADCBGameListController" customModule="ADCBGamification" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="PNW-8C-ohd">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Rg8-QX-k6w">
+                                <rect key="frame" x="0.0" y="89" width="414" height="773"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="AHH-yk-XZ8">
+                                    <size key="itemSize" width="414" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="9ky-qF-mV2">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="128"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="NbU-0H-yxk">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="128"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </collectionViewCellContentView>
+                                        <size key="customSize" width="414" height="128"/>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="XiW-Wo-Aln">
+                                <rect key="frame" x="188.5" y="457" width="37" height="37"/>
+                                <color key="color" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Rgz-Wg-eTu"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="XiW-Wo-Aln" firstAttribute="centerY" secondItem="Rg8-QX-k6w" secondAttribute="centerY" id="Dib-fP-82a"/>
+                            <constraint firstItem="Rg8-QX-k6w" firstAttribute="top" secondItem="Rgz-Wg-eTu" secondAttribute="top" constant="45" id="Ylz-UB-Aiu"/>
+                            <constraint firstItem="Rgz-Wg-eTu" firstAttribute="trailing" secondItem="Rg8-QX-k6w" secondAttribute="trailing" id="dPh-N0-OIz"/>
+                            <constraint firstItem="XiW-Wo-Aln" firstAttribute="centerX" secondItem="Rg8-QX-k6w" secondAttribute="centerX" id="sHP-mt-Vsa"/>
+                            <constraint firstItem="Rgz-Wg-eTu" firstAttribute="bottom" secondItem="Rg8-QX-k6w" secondAttribute="bottom" id="w0F-7k-aew"/>
+                            <constraint firstItem="Rg8-QX-k6w" firstAttribute="leading" secondItem="Rgz-Wg-eTu" secondAttribute="leading" id="we8-XB-5Fc"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="activityIndicatorView" destination="XiW-Wo-Aln" id="FqM-EI-Z1V"/>
+                        <outlet property="gamesCollectionView" destination="Rg8-QX-k6w" id="rCW-66-gYv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mBf-F5-8GE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="744.92753623188412" y="327.45535714285711"/>
         </scene>
     </scenes>
     <resources>

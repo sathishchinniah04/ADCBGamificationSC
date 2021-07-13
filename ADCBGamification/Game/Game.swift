@@ -10,7 +10,7 @@ public class Game {
     
     private static var controllerRef: UIViewController?
     
-    public static func open(controller: UIViewController, msisdn: String, language: String, gameType: String, gameId: String?) {
+    private static func open(controller: UIViewController, msisdn: String, language: String, gameType: String, gameId: String?) {
         getUrlFromInfoPlist()
         StoreManager.shared.msisdn = msisdn
         StoreManager.shared.language = language
@@ -22,20 +22,20 @@ public class Game {
         //loadGameList(controller: controller)
     }
     
-    public static func openGameList(controller: UIViewController, msisdn: String, language: String) {
-        getUrlFromInfoPlist()
-        StoreManager.shared.msisdn = msisdn
-        StoreManager.shared.language = language
-        IQKeyboardManager.shared.enable = true
-        IQKeyboardManager.shared.goNext()
-        
-        StoreManager.shared.accessToken = "J0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9"
-        //deleteThis(contr: controller)
-        //getControllerRef(controller: controller)
-        loadGameList(controller: controller)
-    }
+//    public static func openGameList(controller: UIViewController, msisdn: String, language: String) {
+//        getUrlFromInfoPlist()
+//        StoreManager.shared.msisdn = msisdn
+//        StoreManager.shared.language = language
+//        IQKeyboardManager.shared.enable = true
+//        IQKeyboardManager.shared.goNext()
+//
+//        StoreManager.shared.accessToken = "J0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9"
+//        //deleteThis(contr: controller)
+//        //getControllerRef(controller: controller)
+//        loadGameList(controller: controller)
+//    }
     
-    public static func openGamePagination(controller: UIViewController, msisdn: String, language: String) {
+    public static func openGameList(controller: UIViewController, msisdn: String, language: String) {
         getUrlFromInfoPlist()
         StoreManager.shared.msisdn = msisdn
         StoreManager.shared.language = language
@@ -47,7 +47,7 @@ public class Game {
     }
     
     static func paginationLoad(target: UIViewController) {
-        let cont = UIStoryboard(name: "Pagination", bundle: Bundle(for: Self.self)).instantiateViewController(withIdentifier: "GamesViewController")
+        let cont = UIStoryboard(name: "GameList", bundle: Bundle(for: Self.self)).instantiateViewController(withIdentifier: "ADCBGameListController")
         let nav = CustomNavViewController(rootViewController: cont)
         nav.navigationBar.isHidden = true
         nav.modalPresentationStyle = .fullScreen

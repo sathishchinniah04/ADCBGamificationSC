@@ -81,8 +81,8 @@ class ExpireView: UIView {
     }
     
     func labelSetup(game: Games) {
-        gameNameLabel.text = game.gameType
-        gameNameSubTitleLabel.text = game.displayDetails?.synonym ?? ""
+        gameNameLabel.text = game.gameTitle
+        gameNameSubTitleLabel.text = game.gameType ?? ""
         descLabel.text = game.displayDetails?.description ?? ""
     }
     

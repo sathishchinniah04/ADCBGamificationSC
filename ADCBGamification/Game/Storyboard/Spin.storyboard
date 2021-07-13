@@ -22,7 +22,7 @@
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Spin" translatesAutoresizingMaskIntoConstraints="NO" id="SGV-Kl-EeD">
-                                <rect key="frame" x="60" y="199" width="294" height="294"/>
+                                <rect key="frame" x="30" y="139" width="354" height="354"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="SGV-Kl-EeD" secondAttribute="height" multiplier="1:1" id="zae-vP-IuS"/>
                                 </constraints>
@@ -55,7 +55,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="wNb-S9-CRs" firstAttribute="centerX" secondItem="peg-KZ-704" secondAttribute="centerX" id="0XT-mI-hD7"/>
-                            <constraint firstItem="SGV-Kl-EeD" firstAttribute="leading" secondItem="peg-KZ-704" secondAttribute="leading" constant="60" id="1RE-cg-YEE"/>
+                            <constraint firstItem="SGV-Kl-EeD" firstAttribute="leading" secondItem="peg-KZ-704" secondAttribute="leading" constant="30" id="1RE-cg-YEE"/>
                             <constraint firstItem="otW-Vk-P3R" firstAttribute="centerY" secondItem="2DE-sR-4BU" secondAttribute="centerY" multiplier="0.85" id="1es-h9-EZt"/>
                             <constraint firstItem="fIY-xv-g70" firstAttribute="top" secondItem="peg-KZ-704" secondAttribute="top" constant="45" id="3B6-vR-KxL"/>
                             <constraint firstItem="O5H-9N-Ue9" firstAttribute="leading" secondItem="2DE-sR-4BU" secondAttribute="leading" id="3YB-7M-SHh"/>

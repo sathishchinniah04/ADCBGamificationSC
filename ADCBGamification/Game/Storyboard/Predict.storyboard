@@ -64,6 +64,12 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CurveClip" translatesAutoresizingMaskIntoConstraints="NO" id="O1D-93-f0H">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="493"/>
                             </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Predict" translatesAutoresizingMaskIntoConstraints="NO" id="Ifq-Y2-VVs">
+                                <rect key="frame" x="30" y="139" width="354" height="354"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Ifq-Y2-VVs" secondAttribute="height" multiplier="1:1" id="W7H-zh-VKn"/>
+                                </constraints>
+                            </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0zs-1g-UM0" customClass="ExpireView" customModule="ADCBGamification" customModuleProvider="target">
                                 <rect key="frame" x="20" y="714" width="374" height="128"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -82,11 +88,15 @@
                             <constraint firstItem="O1D-93-f0H" firstAttribute="height" secondItem="9LS-1p-Or3" secondAttribute="height" multiplier="0.55" id="7wa-X5-mOd"/>
                             <constraint firstItem="0zs-1g-UM0" firstAttribute="centerX" secondItem="F75-gm-2pA" secondAttribute="centerX" id="JaJ-b4-4JZ"/>
                             <constraint firstItem="F75-gm-2pA" firstAttribute="trailing" secondItem="O1D-93-f0H" secondAttribute="trailing" id="Mvk-nf-CKr"/>
+                            <constraint firstItem="Ifq-Y2-VVs" firstAttribute="width" secondItem="Ifq-Y2-VVs" secondAttribute="height" multiplier="1:1" id="O1d-sS-Y32"/>
+                            <constraint firstItem="Ifq-Y2-VVs" firstAttribute="leading" secondItem="F75-gm-2pA" secondAttribute="leading" constant="30" id="Qgr-Vy-tbU"/>
                             <constraint firstItem="0zs-1g-UM0" firstAttribute="leading" secondItem="F75-gm-2pA" secondAttribute="leading" constant="20" id="TYA-d3-N2f"/>
                             <constraint firstItem="xxf-cY-7Q7" firstAttribute="centerY" secondItem="9LS-1p-Or3" secondAttribute="centerY" id="jiN-aX-18L"/>
                             <constraint firstItem="O1D-93-f0H" firstAttribute="top" secondItem="9LS-1p-Or3" secondAttribute="top" id="qJA-QL-DME"/>
                             <constraint firstItem="F75-gm-2pA" firstAttribute="bottom" secondItem="0zs-1g-UM0" secondAttribute="bottom" constant="20" id="qpv-jn-NT6"/>
                             <constraint firstItem="O1D-93-f0H" firstAttribute="leading" secondItem="F75-gm-2pA" secondAttribute="leading" id="tPC-AS-WDR"/>
+                            <constraint firstItem="Ifq-Y2-VVs" firstAttribute="centerX" secondItem="O1D-93-f0H" secondAttribute="centerX" id="xZ9-5h-LjJ"/>
+                            <constraint firstItem="Ifq-Y2-VVs" firstAttribute="bottom" secondItem="O1D-93-f0H" secondAttribute="bottom" id="xds-2d-30z"/>
                             <constraint firstItem="xxf-cY-7Q7" firstAttribute="centerX" secondItem="9LS-1p-Or3" secondAttribute="centerX" id="yaR-oM-c6Z"/>
                         </constraints>
                     </view>
@@ -175,6 +185,7 @@
     </scenes>
     <resources>
         <image name="CurveClip" width="187.5" height="211"/>
+        <image name="Predict" width="658" height="658"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
