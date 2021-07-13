@@ -40,10 +40,10 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5xz-YZ-Pku">
-                                <rect key="frame" x="101.5" y="129.5" width="120" height="120"/>
+                                <rect key="frame" x="86.5" y="99.5" width="150" height="150"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="120" id="NcJ-qv-NZe"/>
-                                    <constraint firstAttribute="width" constant="120" id="W3W-7V-zbV"/>
+                                    <constraint firstAttribute="height" constant="150" id="NcJ-qv-NZe"/>
+                                    <constraint firstAttribute="width" constant="150" id="W3W-7V-zbV"/>
                                 </constraints>
                             </imageView>
                         </subviews>

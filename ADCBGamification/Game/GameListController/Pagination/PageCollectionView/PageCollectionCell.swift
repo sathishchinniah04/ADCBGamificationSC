@@ -41,7 +41,7 @@ class PageCollectionCell: UICollectionViewCell {
         } else if game.gameType == "PredictNWin" {
             
         } else if game.gameType == "ReferNWin" {
-            
+            imgName = "ReferLogo"
         } else if game.gameType == "Spi" {
             
         } else {
