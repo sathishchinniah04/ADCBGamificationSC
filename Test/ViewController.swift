@@ -54,8 +54,8 @@ class ViewController: UIViewController {
       let refer = UIAlertAction(title: "ReferNWin", style: .default) { action in
           self.gameNameButton.setTitle("ReferNWin", for: .normal)
       }
-        alertController.addAction(predict)
         alertController.addAction(spin)
+        alertController.addAction(predict)
         alertController.addAction(refer)
       self.present(alertController, animated: true, completion: nil)
     }
