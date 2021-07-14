@@ -6,11 +6,15 @@
 //
 
 import UIKit
+enum GameError {
+    case noActiveGames
+    case noGames
+}
 public class Game {
     
     private static var controllerRef: UIViewController?
     
-    private static func open(controller: UIViewController, msisdn: String, language: String, gameType: String, gameId: String?) {
+    public static func open(controller: UIViewController, msisdn: String, language: String, gameType: String, gameId: String?) {
         getUrlFromInfoPlist()
         StoreManager.shared.msisdn = msisdn
         StoreManager.shared.language = language
@@ -74,35 +78,40 @@ public class Game {
     private class func getControllerRef(controller: UIViewController, gameType: String, gameId: String?) {
         if gameType == "PredictNWin" {
            let cont = self.navigateToController(controller: controller, storyboard: "Predict", id: "PredictIntroController") as? PredictIntroController
-            getGameList(gameType: gameType, gameId: gameId) { (games) in
+            getGameList(gameType: gameType, gameId: gameId) { (games, error) in
                 DispatchQueue.main.async {
-                    cont?.updateOnResponce(game: games)
+                    cont?.updateOnResponce(game: games, error: error)
                 }
             }
         } else if gameType == "SpinNWin" {
             let cont = self.navigateToController(controller: controller, storyboard: "Spin", id: "SpinHomeController") as? SpinHomeController
-            getGameList(gameType: gameType, gameId: gameId) { (games) in
+            getGameList(gameType: gameType, gameId: gameId) { (game, error) in
                 DispatchQueue.main.async {
-                    cont?.updateOnResponce(game: games)
+                    cont?.updateOnResponce(game: game, error: error)
                 }
             }
         } else if gameType == "ReferNWin" {
             let cont = self.navigateToController(controller: controller, storyboard: "Refer", id: "ReferIntroController") as? ReferIntroController
-            getGameList(gameType: gameType, gameId: gameId) { (games) in
+            getGameList(gameType: gameType, gameId: gameId) { (games, error)  in
                 DispatchQueue.main.async {
-                    cont?.updateOnResponce(game: games)
-                }
+                    cont?.updateOnResponce(game: games, error: error)
             }
-        } else {
-            print("Game type does not match")
         }
-    }
-    
-    private static func getGameList(gameType: String, gameId: String?, complition:((Games)->Void)?) {
+        } else {
+            print("No Game type match")
+        }
+}
+        private class func getGameList(gameType: String, gameId: String?, complition:((Games?, GameError?)->Void)?) {
         GameListVM.getGame(url: Constants.listGameUrl, gameType: gameType, gameid: gameId) {
             print("Data is \(GameListVM.activeGames)")
             if let gam = GameListVM.activeGames.first {
-                complition?(gam)
+                complition?(gam,nil)
+            }
+            if GameListVM.allGames.isEmpty {
+                complition?(nil, .noGames)
+            }
+            if GameListVM.activeGames.isEmpty {
+                complition?(nil, .noActiveGames)
             }
         }
     }

@@ -18,29 +18,65 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="keZ-HK-X3Z">
-                                <rect key="frame" x="166" y="433" width="82" height="30"/>
-                                <state key="normal" title="Open Game"/>
+                                <rect key="frame" x="170.5" y="433" width="73" height="30"/>
+                                <state key="normal" title="GamesList"/>
                                 <connections>
-                                    <action selector="openGameButtonAction" destination="BYZ-38-t0r" eventType="touchUpInside" id="vF2-S8-TzO"/>
+                                    <action selector="openGameListButtonAction" destination="BYZ-38-t0r" eventType="touchUpInside" id="tc4-nF-6qu"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3xe-J6-pKC">
-                                <rect key="frame" x="30" y="124" width="354" height="34"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
-                            </textField>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="TQ0-sI-IK9">
+                                <rect key="frame" x="30" y="124" width="354" height="183"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="EU5-Xh-XJr">
+                                        <rect key="frame" x="0.0" y="0.0" width="354" height="113"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="hgT-tV-doL">
+                                                <rect key="frame" x="0.0" y="0.0" width="354" height="73"/>
+                                                <subviews>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3xe-J6-pKC">
+                                                        <rect key="frame" x="0.0" y="0.0" width="354" height="34"/>
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
+                                                    </textField>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bRn-fe-Uw2">
+                                                        <rect key="frame" x="0.0" y="39" width="354" height="34"/>
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
+                                                    </textField>
+                                                </subviews>
+                                            </stackView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gNR-Le-zf4">
+                                                <rect key="frame" x="0.0" y="83" width="354" height="30"/>
+                                                <state key="normal" title="Button"/>
+                                                <connections>
+                                                    <action selector="gameNameAction" destination="BYZ-38-t0r" eventType="touchUpInside" id="E3R-m0-ch3"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b3n-t5-MLK">
+                                        <rect key="frame" x="0.0" y="153" width="354" height="30"/>
+                                        <state key="normal" title="Open game"/>
+                                        <connections>
+                                            <action selector="openGameAction" destination="BYZ-38-t0r" eventType="touchUpInside" id="0Xp-55-aj0"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="keZ-HK-X3Z" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Gmm-iI-BEx"/>
-                            <constraint firstItem="3xe-J6-pKC" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="j2V-HI-Pho"/>
-                            <constraint firstItem="3xe-J6-pKC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="l8r-C0-5Lc"/>
-                            <constraint firstItem="3xe-J6-pKC" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="80" id="nEb-0r-End"/>
+                            <constraint firstItem="TQ0-sI-IK9" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="80" id="Pkb-Ok-ihc"/>
+                            <constraint firstItem="TQ0-sI-IK9" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="k4f-uP-fLH"/>
+                            <constraint firstItem="TQ0-sI-IK9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="nxb-md-KU7"/>
                             <constraint firstItem="keZ-HK-X3Z" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="y5i-vW-jIr"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="gameIdTxtFld" destination="bRn-fe-Uw2" id="ma5-WM-K3x"/>
+                        <outlet property="gameNameButton" destination="gNR-Le-zf4" id="qzZ-nI-cXE"/>
                         <outlet property="msisdnTextField" destination="3xe-J6-pKC" id="14L-fz-3Zy"/>
                     </connections>
                 </viewController>

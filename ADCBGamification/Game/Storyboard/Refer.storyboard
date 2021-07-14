@@ -34,13 +34,19 @@
                                     <constraint firstAttribute="width" secondItem="Tc1-oJ-i1w" secondAttribute="height" multiplier="1:1" id="wwO-em-n64"/>
                                 </constraints>
                             </imageView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="Off-2c-xZL">
+                                <rect key="frame" x="169" y="315" width="37" height="37"/>
+                                <color key="color" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="HH6-ca-mjg"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="Tc1-oJ-i1w" firstAttribute="centerX" secondItem="XUZ-wa-BVQ" secondAttribute="centerX" id="7SY-hG-W2q"/>
+                            <constraint firstItem="Off-2c-xZL" firstAttribute="centerY" secondItem="8Yo-nW-oOk" secondAttribute="centerY" id="Dlm-nN-4At"/>
                             <constraint firstItem="Tc1-oJ-i1w" firstAttribute="leading" secondItem="8Yo-nW-oOk" secondAttribute="leading" constant="30" id="HW0-Nl-YeS"/>
                             <constraint firstItem="XUZ-wa-BVQ" firstAttribute="height" secondItem="8Yo-nW-oOk" secondAttribute="height" multiplier="0.55" id="KHP-6y-5QI"/>
+                            <constraint firstItem="Off-2c-xZL" firstAttribute="centerX" secondItem="8Yo-nW-oOk" secondAttribute="centerX" id="P86-Ln-Ahv"/>
                             <constraint firstItem="Tc1-oJ-i1w" firstAttribute="bottom" secondItem="XUZ-wa-BVQ" secondAttribute="bottom" id="Tcq-bu-HPt"/>
                             <constraint firstItem="XUZ-wa-BVQ" firstAttribute="leading" secondItem="8Yo-nW-oOk" secondAttribute="leading" id="aoe-k8-ZCr"/>
                             <constraint firstItem="XUZ-wa-BVQ" firstAttribute="top" secondItem="8Yo-nW-oOk" secondAttribute="top" id="bTO-Io-jcX"/>
@@ -52,6 +58,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="Vl6-Hj-plw"/>
                     <connections>
+                        <outlet property="activityIndicatorView" destination="Off-2c-xZL" id="KdL-Nc-4hl"/>
                         <outlet property="expireView" destination="ic6-ia-DtR" id="cqc-O3-ex4"/>
                     </connections>
                 </viewController>

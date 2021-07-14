@@ -19,19 +19,28 @@ class PredictIntroController: UIViewController {
     
     func initialSetup() {
         expireView.isUserInteractionEnabled = false
-        expireViewSetup()
+        expireView.alpha = 0.0
         if let gam = game {
-            self.updateOnResponce(game: gam)
+            self.updateOnResponce(game: gam, error: nil)
         }
     }
     
-    func updateOnResponce(game: Games) {
-        print("Updated from game list type = \(game.gameType)  gameId  = \(game.gameId ?? "")")
+    func updateOnResponce(game: Games?, error: GameError?) {
+        if let gam = game {
+            self.basedOnResponce(game: gam)
+        }
+        Utility.errorHandler(target: self, error: error)
+    }
+    
+    func basedOnResponce(game: Games) {
         activityIndicator.stopAnimating()
         expireView.isUserInteractionEnabled = true
         self.game = game
+        expireViewSetup()
+        UIView.animate(withDuration: 0.3) {
+            self.expireView.alpha = 1.0
+        }
     }
-    
     
     func expireViewSetup() {
         expireView.button.setTitle("Predict Now", for: .normal)

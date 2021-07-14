@@ -5,7 +5,7 @@
 //  Created by SKY on 07/07/21.
 //
 
-import Foundation
+import UIKit
 
 class Utility {
     static func getRandonNo() -> String {
@@ -17,6 +17,39 @@ class Utility {
         df.dateFormat = "YYMMDDHHmmss"
         let timeStamp = df.string(from: d)
         return "\(timeStamp)"
+    }
+    
+    static func errorHandler(target: UIViewController, error: GameError?) {
+        switch error {
+        case .noActiveGames:
+            Utility.showAlert(message: "No Active Games Available") { (done) in
+                target.dismiss(animated: true, completion: nil)
+            }
+        case .noGames:
+            Utility.showAlert(message: "No Games Available") { (done) in
+                target.dismiss(animated: true, completion: nil)
+            }
+        default:
+            break
+        }
+    }
+    
+    
+   static func showAlert(singelBtn: Bool = true,ok: String = "Ok", cancel: String = "Cancel",title: String = "Alert",message: String, complition:((AlertAction)->Void)?) {
+        DispatchQueue.main.async {
+            
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: ok, style: .default, handler: { (action) in
+            complition?(.ok)
+        }))
+        if !singelBtn {
+            alert.addAction(UIAlertAction(title: cancel, style: .cancel, handler: { (action) in
+            complition?(.cancel)
+            }))
+        }
+            let rootView = UIApplication.shared.windows.last?.rootViewController
+        rootView?.present(alert, animated: true, completion: nil)
+        }
     }
     
         

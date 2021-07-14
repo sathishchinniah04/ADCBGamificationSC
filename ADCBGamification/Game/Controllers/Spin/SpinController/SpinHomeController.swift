@@ -19,22 +19,48 @@ class SpinHomeController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()    
         self.initialSetup()
-        self.getSpinOffers()
+        
+        if let gam = game {
+            updateOnResponce(game: gam, error: nil)
+        }
     }
     
     
-    func updateOnResponce(game: Games) {
+    func updateOnResponce(game: Games?,error: GameError?) {
+        if let gam = game {
+            self.handlerBasedOnResponce(game: gam)
+        }
+        Utility.errorHandler(target: self, error: error)
+    }
+    
+    func handlerBasedOnResponce(game: Games) {
         print("Updated from game list type = \(game.gameType)  gameId  = \(game.gameId ?? "")")
-       // activityIndicator.stopAnimating()
+        activityIndicatorView.stopAnimating()
         expireView.isUserInteractionEnabled = true
         self.game = game
+        self.getSpinOffers()
+        self.populateExpireView(game: game)
+        UIView.animate(withDuration: 0.3) {
+            self.expireView.alpha = 1.0
+        }
     }
+    
     
     func initialSetup() {
         containerView.backgroundColor = UIColor.clear
         containerView.isHidden = true
-        expireView.setupButtonName(name: "Spin")
         spinerView.hideSpinView()
+        expireViewInitialSetup()
+    }
+    
+    func expireViewInitialSetup() {
+        self.expireView.alpha = 0.0
+        expireView.setupButtonName(name: "Spin")
+        expireView.isUserInteractionEnabled = false
+        
+    }
+    
+    func populateExpireView(game: Games) {
         expireView.populateView(isShowTerms: false, game: self.game) {
             self.spinDummyImgView.isHidden = true
             self.spinerView.unHideSpinView()
@@ -56,7 +82,6 @@ class SpinHomeController: UIViewController {
     func spinButtonTapped(action: SpinerContainerViewAction) {
         switch action {
         case .spinTapped:
-            
             print("Spin button tapped")
             self.assignRewards()
         default:
