@@ -16,8 +16,13 @@ class GameListVM {
         let searchQuerry: [[String: String]]!
         
         if let gid = gameid {
-            searchQuerry = [["filterOn": "GameId",
+            if gid.isEmpty {
+                searchQuerry = [["filterOn": "GameType",
+                                 "filterValue": gameType]]
+            } else {
+                searchQuerry = [["filterOn": "GameId",
                              "filterValue": gid]]
+            }
         } else {
             searchQuerry = [["filterOn": "GameType",
                              "filterValue": gameType]]

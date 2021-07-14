@@ -22,11 +22,11 @@ class Utility {
     static func errorHandler(target: UIViewController, error: GameError?) {
         switch error {
         case .noActiveGames:
-            Utility.showAlert(message: "No Active Games Available") { (done) in
+            target.view.showAlert(message: "No Active Games Available") { (done) in
                 target.dismiss(animated: true, completion: nil)
             }
         case .noGames:
-            Utility.showAlert(message: "No Games Available") { (done) in
+            target.view.showAlert(message: "No Games Available") { (done) in
                 target.dismiss(animated: true, completion: nil)
             }
         default:
@@ -35,7 +35,7 @@ class Utility {
     }
     
     
-   static func showAlert(singelBtn: Bool = true,ok: String = "Ok", cancel: String = "Cancel",title: String = "Alert",message: String, complition:((AlertAction)->Void)?) {
+    static func showAlert(target: UIViewController? = nil, singelBtn: Bool = true,ok: String = "Ok", cancel: String = "Cancel",title: String = "Alert",message: String, complition:((AlertAction)->Void)?) {
         DispatchQueue.main.async {
             
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
@@ -47,8 +47,12 @@ class Utility {
             complition?(.cancel)
             }))
         }
-            let rootView = UIApplication.shared.windows.last?.rootViewController
-        rootView?.present(alert, animated: true, completion: nil)
+            let rootView = UIApplication.shared.windows.first?.rootViewController
+            if let tar = target {
+                tar.present(alert, animated: true, completion: nil)
+            } else {
+                rootView?.present(alert, animated: true, completion: nil)
+            }
         }
     }
     

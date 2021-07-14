@@ -11,7 +11,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var msisdnTextField: UITextField!
     @IBOutlet weak var gameIdTxtFld: UITextField!
     @IBOutlet weak var gameNameButton: UIButton!
-    
+    @IBOutlet weak var openGameButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
         initialSetup()
@@ -21,12 +21,15 @@ class ViewController: UIViewController {
         self.msisdnTextField.text = "9902390324"
         self.gameIdTxtFld.text = "51"
         self.gameNameButton.setTitle("SpinNWin", for: .normal)
+        self.gameNameButton.layer.cornerRadius = 5.0
+        self.gameNameButton.layer.borderWidth = 0.5
+        self.gameNameButton.layer.borderColor = UIColor.lightGray.cgColor
     }
     
     
     
     @IBAction func gameNameAction() {
-        presentAlert(withTitle: "Title", message: "Message")
+        presentAlert(withTitle: "", message: "Please select a game name.")
     }
     
     @IBAction func openGameAction() {
@@ -41,9 +44,7 @@ class ViewController: UIViewController {
     
     func presentAlert(withTitle title: String, message : String) {
       let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
-      let OKAction = UIAlertAction(title: "OK", style: .default) { action in
-          print("You've pressed OK Button")
-      }
+      
       let predict = UIAlertAction(title: "PredictNWin", style: .default) { action in
           self.gameNameButton.setTitle("PredictNWin", for: .normal)
       }
@@ -53,7 +54,6 @@ class ViewController: UIViewController {
       let refer = UIAlertAction(title: "ReferNWin", style: .default) { action in
           self.gameNameButton.setTitle("ReferNWin", for: .normal)
       }
-        alertController.addAction(OKAction)
         alertController.addAction(predict)
         alertController.addAction(spin)
         alertController.addAction(refer)

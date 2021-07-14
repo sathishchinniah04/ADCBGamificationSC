@@ -24,7 +24,7 @@ extension UIView {
         }
     }
     
-    func showAlert(singelBtn: Bool = true,ok: String = "Ok", cancel: String = "Cancel",title: String = "Alert",message: String, complition:((AlertAction)->Void)?) {
+    func showAlert(target: UIViewController? = nil, singelBtn: Bool = true,ok: String = "Ok", cancel: String = "Cancel",title: String = "Alert",message: String, complition:((AlertAction)->Void)?) {
         DispatchQueue.main.async {
             
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
@@ -37,7 +37,11 @@ extension UIView {
             }))
         }
             let rootView = UIApplication.shared.windows.last?.rootViewController
-        rootView?.present(alert, animated: true, completion: nil)
+            if let tar = target {
+                tar.present(alert, animated: true, completion: nil)
+            } else {
+                rootView?.present(alert, animated: true, completion: nil)
+            }
         }
     }
     
