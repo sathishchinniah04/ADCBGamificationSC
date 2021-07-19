@@ -20,8 +20,8 @@ public class Game {
         StoreManager.shared.language = language
         IQKeyboardManager.shared.enable = true
         IQKeyboardManager.shared.goNext()
-        
         StoreManager.shared.accessToken = "J0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9"
+        
         getControllerRef(controller: controller, gameType: gameType, gameId: gameId)
         //loadGameList(controller: controller)
     }

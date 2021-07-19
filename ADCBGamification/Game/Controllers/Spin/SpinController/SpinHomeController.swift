@@ -116,6 +116,7 @@ class SpinHomeController: UIViewController {
             self.navigationController?.popToRootViewController(animated: true)
         case .knowMoreTapped:
             print("Know more tapped")
+            KnowMoreViewHelper.show()
         case .rewardTapped:
             print("Reward  tapped")
         case .spinAgainTapped:

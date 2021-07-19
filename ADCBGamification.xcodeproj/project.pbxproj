@@ -137,6 +137,9 @@
 		33EDB0EB2692CE870040DCD4 /* CustomNavView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33EDB0EA2692CE870040DCD4 /* CustomNavView.swift */; };
 		33EDB0EF2692D0A70040DCD4 /* CustomNavView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 33EDB0EE2692D0A70040DCD4 /* CustomNavView.xib */; };
 		33EDB0F42692D9F00040DCD4 /* CustomNavViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33EDB0F32692D9F00040DCD4 /* CustomNavViewController.swift */; };
+		33EE795D26A52F9C006AB306 /* KnowMoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33EE795C26A52F9C006AB306 /* KnowMoreView.swift */; };
+		33EE796126A52FA8006AB306 /* KnowMoreView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 33EE796026A52FA8006AB306 /* KnowMoreView.xib */; };
+		33EE796526A52FBF006AB306 /* KnowMoreViewHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33EE796426A52FBF006AB306 /* KnowMoreViewHelper.swift */; };
 		33F59CCC26932818005B009A /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F59CCB26932818005B009A /* UIImageView+Extension.swift */; };
 		33F59CD2269330C0005B009A /* PredictMatchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F59CD0269330C0005B009A /* PredictMatchTableViewCell.swift */; };
 		33F59CD3269330C0005B009A /* PredictMatchTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 33F59CD1269330C0005B009A /* PredictMatchTableViewCell.xib */; };
@@ -306,6 +309,9 @@
 		33EDB0EA2692CE870040DCD4 /* CustomNavView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavView.swift; sourceTree = "<group>"; };
 		33EDB0EE2692D0A70040DCD4 /* CustomNavView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomNavView.xib; sourceTree = "<group>"; };
 		33EDB0F32692D9F00040DCD4 /* CustomNavViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavViewController.swift; sourceTree = "<group>"; };
+		33EE795C26A52F9C006AB306 /* KnowMoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KnowMoreView.swift; sourceTree = "<group>"; };
+		33EE796026A52FA8006AB306 /* KnowMoreView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KnowMoreView.xib; sourceTree = "<group>"; };
+		33EE796426A52FBF006AB306 /* KnowMoreViewHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KnowMoreViewHelper.swift; sourceTree = "<group>"; };
 		33F59CCB26932818005B009A /* UIImageView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
 		33F59CD0269330C0005B009A /* PredictMatchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PredictMatchTableViewCell.swift; sourceTree = "<group>"; };
 		33F59CD1269330C0005B009A /* PredictMatchTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PredictMatchTableViewCell.xib; sourceTree = "<group>"; };
@@ -986,6 +992,16 @@
 			path = NavigationController;
 			sourceTree = "<group>";
 		};
+		33EE795B26A52F5D006AB306 /* KnowMore */ = {
+			isa = PBXGroup;
+			children = (
+				33EE795C26A52F9C006AB306 /* KnowMoreView.swift */,
+				33EE796026A52FA8006AB306 /* KnowMoreView.xib */,
+				33EE796426A52FBF006AB306 /* KnowMoreViewHelper.swift */,
+			);
+			path = KnowMore;
+			sourceTree = "<group>";
+		};
 		33F59CCF269330A0005B009A /* PredictMatchTableViewCell */ = {
 			isa = PBXGroup;
 			children = (
@@ -1091,6 +1107,7 @@
 		33FC31BD2697126C00868D9E /* SpinView */ = {
 			isa = PBXGroup;
 			children = (
+				33EE795B26A52F5D006AB306 /* KnowMore */,
 				33FC31BE2697127600868D9E /* SpinSuccessView */,
 			);
 			path = SpinView;
@@ -1241,6 +1258,7 @@
 				33EDB0EF2692D0A70040DCD4 /* CustomNavView.xib in Resources */,
 				33EDB0D6268ED8200040DCD4 /* Predict.storyboard in Resources */,
 				3320FFD72682EBC4001809AA /* SpinerContainerView.xib in Resources */,
+				33EE796126A52FA8006AB306 /* KnowMoreView.xib in Resources */,
 				33FC31A82695B18800868D9E /* GameListTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1298,6 +1316,7 @@
 				3320FFB22682EBC4001809AA /* IQBarButtonItem.swift in Sources */,
 				3320FFDB2682EBC4001809AA /* SpinningWheelAnimator.swift in Sources */,
 				3320FFB12682EBC4001809AA /* IQTitleBarButtonItem.swift in Sources */,
+				33EE796526A52FBF006AB306 /* KnowMoreViewHelper.swift in Sources */,
 				33542A68269CA76A008CE8C2 /* CompletedTableViewCell.swift in Sources */,
 				33FC31B22696DC9F00868D9E /* SpinOffers.swift in Sources */,
 				3320FFC52682EBC4001809AA /* IQKeyboardManager+UITextFieldViewNotification.swift in Sources */,
@@ -1378,6 +1397,7 @@
 				3320FFC32682EBC4001809AA /* IQUIView+Hierarchy.swift in Sources */,
 				33542A7B269CA853008CE8C2 /* PageCollectionCell.swift in Sources */,
 				33EDB0C2268ED7B10040DCD4 /* PredictIntroController.swift in Sources */,
+				33EE795D26A52F9C006AB306 /* KnowMoreView.swift in Sources */,
 				3320FFA92682EBC4001809AA /* TermsView.swift in Sources */,
 				33EDB0C9268ED7C90040DCD4 /* MatchListController.swift in Sources */,
 			);
