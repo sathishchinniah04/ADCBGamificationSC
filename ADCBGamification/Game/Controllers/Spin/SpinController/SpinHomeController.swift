@@ -14,6 +14,7 @@ class SpinHomeController: UIViewController {
     @IBOutlet weak var activityIndicatorView: UIActivityIndicatorView!
     var spinerView = SpinerContainerHelper()
     var game: Games?
+    var isDirectLoad: Bool = false
     var spinOffers: SpinOffers?
     var spinSuccessView = SpinSuccessViewHelper()
     override func viewDidLoad() {
@@ -24,7 +25,22 @@ class SpinHomeController: UIViewController {
             updateOnResponce(game: gam, error: nil)
         }
     }
-    
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        print("viewWillAppear")
+        if !isDirectLoad {return}
+        let con = self.navigationController
+        (con as? CustomNavViewController)?.hideBackButton(isHide: true)
+    }
+
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        if isDirectLoad {return}
+        print("viewWillDisappear")
+        let con = self.navigationController
+        (con as? CustomNavViewController)?.hideBackButton(isHide: false)
+    }
     
     func updateOnResponce(game: Games?,error: GameError?) {
         if let gam = game {

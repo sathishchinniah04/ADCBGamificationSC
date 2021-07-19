@@ -111,6 +111,7 @@
 		335933B026941FC200CF6AAF /* CustomNeumophicButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = 335933AF26941FC200CF6AAF /* CustomNeumophicButton.xib */; };
 		336B67AB2697E24C008E419B /* PredictGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 336B67AA2697E24C008E419B /* PredictGame.swift */; };
 		336B67AF26980C08008E419B /* PredictViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 336B67AE26980C08008E419B /* PredictViewModel.swift */; };
+		336D809D26A5E15E00B7699B /* CallBack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 336D809C26A5E15E00B7699B /* CallBack.swift */; };
 		337E17CE269DC53C00C14135 /* ADCBGameListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 337E17CD269DC53C00C14135 /* ADCBGameListController.swift */; };
 		337E17D5269DC60400C14135 /* ADCBGameListCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 337E17D3269DC60400C14135 /* ADCBGameListCollectionCell.swift */; };
 		337E17D6269DC60400C14135 /* ADCBGameListCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 337E17D4269DC60400C14135 /* ADCBGameListCollectionCell.xib */; };
@@ -283,6 +284,7 @@
 		335933AF26941FC200CF6AAF /* CustomNeumophicButton.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomNeumophicButton.xib; sourceTree = "<group>"; };
 		336B67AA2697E24C008E419B /* PredictGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PredictGame.swift; sourceTree = "<group>"; };
 		336B67AE26980C08008E419B /* PredictViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PredictViewModel.swift; sourceTree = "<group>"; };
+		336D809C26A5E15E00B7699B /* CallBack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallBack.swift; sourceTree = "<group>"; };
 		337E17CD269DC53C00C14135 /* ADCBGameListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADCBGameListController.swift; sourceTree = "<group>"; };
 		337E17D3269DC60400C14135 /* ADCBGameListCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADCBGameListCollectionCell.swift; sourceTree = "<group>"; };
 		337E17D4269DC60400C14135 /* ADCBGameListCollectionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ADCBGameListCollectionCell.xib; sourceTree = "<group>"; };
@@ -446,6 +448,7 @@
 		3320FF4A2682EBC3001809AA /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				336D809B26A5E14700B7699B /* Singelton */,
 				336B67A726974AC6008E419B /* CommonMethod */,
 				33FC31D126973C8F00868D9E /* CustomTimer */,
 				33FC318226958D1F00868D9E /* Utility */,
@@ -820,6 +823,14 @@
 			children = (
 			);
 			path = CommonMethod;
+			sourceTree = "<group>";
+		};
+		336D809B26A5E14700B7699B /* Singelton */ = {
+			isa = PBXGroup;
+			children = (
+				336D809C26A5E15E00B7699B /* CallBack.swift */,
+			);
+			path = Singelton;
 			sourceTree = "<group>";
 		};
 		337E17CC269DC51700C14135 /* ADCBGameListController */ = {
@@ -1301,6 +1312,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3320FFC42682EBC4001809AA /* IQNSArray+Sort.swift in Sources */,
+				336D809D26A5E15E00B7699B /* CallBack.swift in Sources */,
 				3320FFC72682EBC4001809AA /* NeumorphicTextField.swift in Sources */,
 				3320FFBE2682EBC4001809AA /* IQKeyboardManager+Toolbar.swift in Sources */,
 				3320FFBC2682EBC4001809AA /* IQKeyboardManager+Debug.swift in Sources */,

@@ -33,12 +33,21 @@ class ViewController: UIViewController {
     }
     
     @IBAction func openGameAction() {
-        Game.open(controller: self, msisdn: self.msisdnTextField.text!, language: "EN", gameType: self.gameNameButton.titleLabel!.text!, gameId: gameIdTxtFld.text!)
+        Game.open(controller: self, msisdn: self.msisdnTextField.text!, language: "EN", gameType: self.gameNameButton.titleLabel!.text!, gameId: gameIdTxtFld.text!, complition: callBackHander(action:))
+    }
+    
+    func callBackHander(action: GameAction) {
+        switch action {
+        case .backButton:
+            print("Back button tapped")
+        case .closeButton:
+            print("Close button tapped")
+        }
     }
     
     @IBAction func openGameListButtonAction() {
         DispatchQueue.main.async {
-            Game.openGameList(controller: self, msisdn: self.msisdnTextField.text!, language: "EN")
+            Game.openGameList(controller: self, msisdn: self.msisdnTextField.text!, language: "EN", complition: self.callBackHander(action:))
         }
     }
     

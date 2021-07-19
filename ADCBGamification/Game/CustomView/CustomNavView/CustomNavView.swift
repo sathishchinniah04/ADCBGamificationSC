@@ -47,8 +47,17 @@ enum CustomNavViewAction {
         
     }
     
+    func hideBackButton(isHide: Bool) {
+        backButton.isHidden = isHide
+    }
+    
+    func hideHomeButton(isHide: Bool) {
+        homeButton.isHidden = isHide
+    }
+    
     @IBAction func backButtonAction() {
         handler?(.back)
+        CallBack.shared.handle?(.back)
         let cont = sController?.getTopController()
         if  cont?.navigationController?.viewControllers.count ?? 0 <= 1 {
             cont?.dismiss(animated: true, completion: nil)
@@ -60,7 +69,8 @@ enum CustomNavViewAction {
     @IBAction func homeButtonAction() {
         print("Home button tapped")
         handler?(.home)
-        sController?.dismiss(animated: true, completion: nil)
+        CallBack.shared.handle?(.close)
+        //sController?.dismiss(animated: true, completion: nil)
     }
     
     func populateView(sController: UIViewController, complition:((CustomNavViewAction)->Void)? = nil) {

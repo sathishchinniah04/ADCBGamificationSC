@@ -20,6 +20,20 @@ class ADCBGameListController: UIViewController {
         
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        print("viewWillAppear")
+        let con = self.navigationController
+        (con as? CustomNavViewController)?.hideBackButton(isHide: true)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        print("viewWillDisappear")
+        let con = self.navigationController
+        (con as? CustomNavViewController)?.hideBackButton(isHide: false)
+    }
+    
     func tableViewSetup() {
         gamesCollectionView.delegate = self
         gamesCollectionView.dataSource = self

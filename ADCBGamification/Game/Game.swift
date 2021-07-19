@@ -10,21 +10,37 @@ enum GameError {
     case noActiveGames
     case noGames
 }
+
+public enum GameAction {
+    case backButton
+    case closeButton
+}
+
 public class Game {
     
     private static var controllerRef: UIViewController?
     
-    public static func open(controller: UIViewController, msisdn: String, language: String, gameType: String, gameId: String?) {
+    public static func open(controller: UIViewController, msisdn: String, language: String, gameType: String, gameId: String?, complition:((GameAction)->Void)?) {
         getUrlFromInfoPlist()
         StoreManager.shared.msisdn = msisdn
         StoreManager.shared.language = language
         IQKeyboardManager.shared.enable = true
         IQKeyboardManager.shared.goNext()
         StoreManager.shared.accessToken = "J0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9"
-        
+        //complition = gameActionHandler(complition: <#T##((GameAction) -> Void)?##((GameAction) -> Void)?##(GameAction) -> Void#>)
+        //complition = gameActionHandler(complition:)
         getControllerRef(controller: controller, gameType: gameType, gameId: gameId)
         //loadGameList(controller: controller)
+        CallBack.shared.callBacKAction { (action) in
+            switch action {
+            case .back:
+                complition?(.backButton)
+            case .close:
+                complition?(.closeButton)
+            }
+        }
     }
+    
     
 //    public static func openGameList(controller: UIViewController, msisdn: String, language: String) {
 //        getUrlFromInfoPlist()
@@ -39,7 +55,7 @@ public class Game {
 //        loadGameList(controller: controller)
 //    }
     
-    public static func openGameList(controller: UIViewController, msisdn: String, language: String) {
+    public static func openGameList(controller: UIViewController, msisdn: String, language: String, complition:((GameAction)->Void)?) {
         getUrlFromInfoPlist()
         StoreManager.shared.msisdn = msisdn
         StoreManager.shared.language = language
@@ -48,6 +64,14 @@ public class Game {
         
         StoreManager.shared.accessToken = "J0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9"
         paginationLoad(target: controller)
+        CallBack.shared.callBacKAction { (action) in
+            switch action {
+            case .back:
+                complition?(.backButton)
+            case .close:
+                complition?(.closeButton)
+            }
+        }
     }
     
     static func paginationLoad(target: UIViewController) {
@@ -78,6 +102,7 @@ public class Game {
     private class func getControllerRef(controller: UIViewController, gameType: String, gameId: String?) {
         if gameType == "PredictNWin" {
            let cont = self.navigateToController(controller: controller, storyboard: "Predict", id: "PredictIntroController") as? PredictIntroController
+            cont?.isDirectLoad = true
             getGameList(gameType: gameType, gameId: gameId) { (games, error) in
                 DispatchQueue.main.async {
                     cont?.updateOnResponce(game: games, error: error)
@@ -85,6 +110,7 @@ public class Game {
             }
         } else if gameType == "SpinNWin" {
             let cont = self.navigateToController(controller: controller, storyboard: "Spin", id: "SpinHomeController") as? SpinHomeController
+            cont?.isDirectLoad = true
             getGameList(gameType: gameType, gameId: gameId) { (game, error) in
                 DispatchQueue.main.async {
                     cont?.updateOnResponce(game: game, error: error)
@@ -92,6 +118,7 @@ public class Game {
             }
         } else if gameType == "ReferNWin" {
             let cont = self.navigateToController(controller: controller, storyboard: "Refer", id: "ReferIntroController") as? ReferIntroController
+            cont?.isDirectLoad = true
             getGameList(gameType: gameType, gameId: gameId) { (games, error)  in
                 DispatchQueue.main.async {
                     cont?.updateOnResponce(game: games, error: error)

@@ -23,6 +23,14 @@ class CustomNavViewController: UINavigationController {
         self.view.addSubview(nav)
     }
     
+    func hideBackButton(isHide: Bool) {
+        nav.hideBackButton(isHide: isHide)
+    }
+    
+    func hideHomeButton(isHide: Bool) {
+        nav.hideHomeButton(isHide: isHide)
+    }
+    
     func changeTitle(title: String?) {
         nav.titleLabel.text = title ?? "simply"
     }

@@ -11,10 +11,36 @@ class PredictIntroController: UIViewController {
     @IBOutlet weak var expireView: ExpireView!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     var game: Games?
-    
+    var isDirectLoad: Bool = false
     override func viewDidLoad() {
         super.viewDidLoad()
         self.initialSetup()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        print("viewWillAppear")
+        if !isDirectLoad {return}
+        let con = self.navigationController
+        (con as? CustomNavViewController)?.hideBackButton(isHide: true)
+    }
+
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        if isDirectLoad {return}
+        print("viewWillDisappear")
+        let con = self.navigationController
+        (con as? CustomNavViewController)?.hideBackButton(isHide: false)
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        print("viewDidAppear")
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        print("viewDidDisappear")
     }
     
     func initialSetup() {
@@ -49,11 +75,11 @@ class PredictIntroController: UIViewController {
         }
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        let _ = self.navigationController
-        //(con as? CustomNavViewController)?.changeTitle(title: "SKY")
-    }
+//    override func viewDidAppear(_ animated: Bool) {
+//        super.viewDidAppear(animated)
+//        let _ = self.navigationController
+//        //(con as? CustomNavViewController)?.changeTitle(title: "SKY")
+//    }
     
     func nextController() {
         let cont = UIStoryboard(name: "Predict", bundle: Bundle(for: Self.self)).instantiateViewController(withIdentifier: "MatchListController") as! MatchListController

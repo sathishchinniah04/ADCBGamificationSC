@@ -12,6 +12,7 @@ class ReferIntroController: UIViewController {
     @IBOutlet weak var expireView: ExpireView!
     @IBOutlet weak var activityIndicatorView: UIActivityIndicatorView!
     var game: Games?
+    var isDirectLoad: Bool = false
     override func viewDidLoad() {
         super.viewDidLoad()
 //        self.expireView.populateView(isShowTerms: false, game: game, complition: expireViewHandle)
@@ -19,6 +20,22 @@ class ReferIntroController: UIViewController {
         initialSetup()
     }
     
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        print("viewWillAppear")
+        if !isDirectLoad {return}
+        let con = self.navigationController
+        (con as? CustomNavViewController)?.hideBackButton(isHide: true)
+    }
+
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        if isDirectLoad {return}
+        print("viewWillDisappear")
+        let con = self.navigationController
+        (con as? CustomNavViewController)?.hideBackButton(isHide: false)
+    }
     func initialSetup() {
         expireView.isUserInteractionEnabled = false
         expireView.alpha = 0.0
