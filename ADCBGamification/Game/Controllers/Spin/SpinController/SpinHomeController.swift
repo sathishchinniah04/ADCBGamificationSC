@@ -31,7 +31,7 @@ class SpinHomeController: UIViewController {
         print("viewWillAppear")
         if !isDirectLoad {return}
         let con = self.navigationController
-        (con as? CustomNavViewController)?.hideBackButton(isHide: true)
+      //  (con as? CustomNavViewController)?.hideBackButton(isHide: true)
     }
 
     override func viewWillDisappear(_ animated: Bool) {
@@ -39,7 +39,7 @@ class SpinHomeController: UIViewController {
         if isDirectLoad {return}
         print("viewWillDisappear")
         let con = self.navigationController
-        (con as? CustomNavViewController)?.hideBackButton(isHide: false)
+      //  (con as? CustomNavViewController)?.hideBackButton(isHide: false)
     }
     
     func updateOnResponce(game: Games?,error: GameError?) {

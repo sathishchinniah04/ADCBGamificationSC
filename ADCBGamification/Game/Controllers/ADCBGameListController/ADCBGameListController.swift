@@ -24,14 +24,14 @@ class ADCBGameListController: UIViewController {
         super.viewWillAppear(animated)
         print("viewWillAppear")
         let con = self.navigationController
-        (con as? CustomNavViewController)?.hideBackButton(isHide: true)
+        //(con as? CustomNavViewController)?.hideBackButton(isHide: true)
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         print("viewWillDisappear")
         let con = self.navigationController
-        (con as? CustomNavViewController)?.hideBackButton(isHide: false)
+        //(con as? CustomNavViewController)?.hideBackButton(isHide: false)
     }
     
     func tableViewSetup() {

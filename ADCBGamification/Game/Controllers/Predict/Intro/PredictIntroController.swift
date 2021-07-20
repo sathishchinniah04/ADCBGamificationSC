@@ -22,7 +22,7 @@ class PredictIntroController: UIViewController {
         print("viewWillAppear")
         if !isDirectLoad {return}
         let con = self.navigationController
-        (con as? CustomNavViewController)?.hideBackButton(isHide: true)
+      //  (con as? CustomNavViewController)?.hideBackButton(isHide: true)
     }
 
     override func viewWillDisappear(_ animated: Bool) {
@@ -30,7 +30,7 @@ class PredictIntroController: UIViewController {
         if isDirectLoad {return}
         print("viewWillDisappear")
         let con = self.navigationController
-        (con as? CustomNavViewController)?.hideBackButton(isHide: false)
+            //   (con as? CustomNavViewController)?.hideBackButton(isHide: false)
     }
     
     override func viewDidAppear(_ animated: Bool) {

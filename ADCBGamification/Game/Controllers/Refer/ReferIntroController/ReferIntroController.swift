@@ -26,7 +26,7 @@ class ReferIntroController: UIViewController {
         print("viewWillAppear")
         if !isDirectLoad {return}
         let con = self.navigationController
-        (con as? CustomNavViewController)?.hideBackButton(isHide: true)
+       // (con as? CustomNavViewController)?.hideBackButton(isHide: true)
     }
 
     override func viewWillDisappear(_ animated: Bool) {
@@ -34,7 +34,7 @@ class ReferIntroController: UIViewController {
         if isDirectLoad {return}
         print("viewWillDisappear")
         let con = self.navigationController
-        (con as? CustomNavViewController)?.hideBackButton(isHide: false)
+       // (con as? CustomNavViewController)?.hideBackButton(isHide: false)
     }
     func initialSetup() {
         expireView.isUserInteractionEnabled = false

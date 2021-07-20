@@ -67,7 +67,7 @@ public class Game {
         CallBack.shared.callBacKAction { (action) in
             switch action {
             case .back:
-                complition?(.backButton)
+                    complition?(.backButton)
             case .close:
                 complition?(.closeButton)
             }
