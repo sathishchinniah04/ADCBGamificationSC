@@ -52,8 +52,15 @@ class SpinerContainerView: UIView {
     }
     
     func stopAnimationAtIndex(index: String, complition:(()->Void)?) {
+        DispatchQueue.main.async {
+            self.wheelContainerView.transform = CGAffineTransform(rotationAngle: CGFloat(Double.pi))
+        }
         let ind = self.offer?.firstIndex(where: {$0.rewardId == index}) ?? 0
-        self.startRotate(index: ind, complition: complition)
+        print("index  found is \(ind)")
+        DispatchQueue.main.async {
+            self.startRotate(index: ind, complition: complition)
+        }
+        
     }
     
     func populateSpinner(offer: [Offers],complition:((SpinerContainerViewAction)->Void)?) {
@@ -125,10 +132,13 @@ class SpinerContainerView: UIView {
     }
 
     private func startRotate(index: Int = 0, complition:(()->Void?)? = nil) {
+        print("Index is \(index)")
         DispatchQueue.main.async {
             self.fortuneWheel?.startAnimating(fininshIndex: index,offset: CGFloat(-1*self.getOffset(slices: self.slices.count)), { (done) in
                 print("done")
-                complition?()
+                DispatchQueue.main.asyncAfter(deadline: .now()+1) {
+                    complition?()
+                }
             })
         }
     }

@@ -22,14 +22,21 @@
                             <rect key="frame" x="0.0" y="0.0" width="300" height="300"/>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </view>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="3d Circle effect" translatesAutoresizingMaskIntoConstraints="NO" id="a5Y-la-k1F">
+                            <rect key="frame" x="0.0" y="0.0" width="300" height="300"/>
+                        </imageView>
                     </subviews>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
+                        <constraint firstAttribute="bottom" secondItem="a5Y-la-k1F" secondAttribute="bottom" id="9zb-mr-k62"/>
                         <constraint firstItem="9eb-Z0-EFe" firstAttribute="width" secondItem="ZS7-oq-Kzz" secondAttribute="width" id="Caf-Mt-VgM"/>
                         <constraint firstItem="9eb-Z0-EFe" firstAttribute="centerX" secondItem="ZS7-oq-Kzz" secondAttribute="centerX" id="I7A-6n-0XK"/>
                         <constraint firstItem="9eb-Z0-EFe" firstAttribute="centerY" secondItem="ZS7-oq-Kzz" secondAttribute="centerY" id="Z8g-ko-DiD"/>
                         <constraint firstItem="9eb-Z0-EFe" firstAttribute="height" secondItem="ZS7-oq-Kzz" secondAttribute="height" id="cFm-dg-cX2"/>
+                        <constraint firstAttribute="trailing" secondItem="a5Y-la-k1F" secondAttribute="trailing" id="cnf-Kp-pjQ"/>
+                        <constraint firstItem="a5Y-la-k1F" firstAttribute="top" secondItem="ZS7-oq-Kzz" secondAttribute="top" id="fUw-Ua-rfp"/>
                         <constraint firstAttribute="height" constant="300" id="h9H-ZK-nNb"/>
+                        <constraint firstItem="a5Y-la-k1F" firstAttribute="leading" secondItem="ZS7-oq-Kzz" secondAttribute="leading" id="kNP-VS-Atc"/>
                         <constraint firstAttribute="width" constant="300" id="oSU-N8-Cfj"/>
                     </constraints>
                 </view>
@@ -82,6 +89,7 @@
         </view>
     </objects>
     <resources>
+        <image name="3d Circle effect" width="488" height="485"/>
         <image name="SpinPointer" width="22" height="41.5"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
