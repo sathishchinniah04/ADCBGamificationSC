@@ -16,4 +16,5 @@ class SpinOffers: Decodable {
 class Offers: Decodable {
     var rewardId: String?
     var rewardTitle: String?
+    var defaultReward: Bool?
 }

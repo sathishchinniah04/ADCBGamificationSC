@@ -89,7 +89,7 @@
         </view>
     </objects>
     <resources>
-        <image name="3d Circle effect" width="488" height="485"/>
+        <image name="3d Circle effect" width="325" height="323"/>
         <image name="SpinPointer" width="22" height="41.5"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

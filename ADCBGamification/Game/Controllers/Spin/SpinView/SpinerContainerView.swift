@@ -55,12 +55,16 @@ class SpinerContainerView: UIView {
         DispatchQueue.main.async {
             self.wheelContainerView.transform = CGAffineTransform(rotationAngle: CGFloat(Double.pi))
         }
-        let ind = self.offer?.firstIndex(where: {$0.rewardId == index}) ?? 0
-        print("index  found is \(ind)")
-        DispatchQueue.main.async {
-            self.startRotate(index: ind, complition: complition)
-        }
-        
+        if let ind = self.offer?.firstIndex(where: {$0.rewardId == index}) {
+            print("index  found is \(ind)")
+            DispatchQueue.main.async {
+                self.startRotate(index: ind, complition: complition)
+            }
+        } else {
+            DispatchQueue.main.async {
+                self.startRotate(index: 1, complition: complition)
+            }
+        }        
     }
     
     func populateSpinner(offer: [Offers],complition:((SpinerContainerViewAction)->Void)?) {
@@ -71,7 +75,14 @@ class SpinerContainerView: UIView {
     
     func spinSetup(offer: [Offers]) {
         for item in offer {
+            print("item.defaultReward \(item.defaultReward)")
+            
             slices.append(CarnivalWheelSlice.init(title: "\(item.rewardTitle ?? "")"))
+            slices.append(CarnivalWheelSlice.init(title: ""))
+            if item.defaultReward ?? false {
+                slices.removeLast()
+                slices.removeLast()
+            }
         }
         fortuneWheel = TTFortuneWheel(frame: wheelContainerView.bounds, slices:slices)
         self.fortuneWheel?.transform = CGAffineTransform(rotationAngle: -CGFloat(Double.pi/2))
@@ -131,6 +142,11 @@ class SpinerContainerView: UIView {
         }
     }
 
+    func enableSpinButton() {
+        self.spinNowButton.alpha = 1.0
+        self.spinNowButton.isUserInteractionEnabled = true
+    }
+    
     private func startRotate(index: Int = 0, complition:(()->Void?)? = nil) {
         print("Index is \(index)")
         DispatchQueue.main.async {
@@ -146,6 +162,8 @@ class SpinerContainerView: UIView {
     @IBAction func spinNowButtonAction() {
         self.fortuneWheel?.startAnimating()
         self.handle?(.spinTapped)
+        self.spinNowButton.alpha = 0.3
+        self.spinNowButton.isUserInteractionEnabled = false
 //        startRotate(index: 3) { () -> Void? in
 //            print("spinNowButtonAction ")
 //        }

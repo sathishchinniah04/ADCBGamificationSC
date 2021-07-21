@@ -7,32 +7,32 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "075201E3-B227-410F-B5F6-D189B7D61ACD"
+            uuid = "9AC86E6B-C25B-4DDA-867E-3228A4C95C18"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "ADCBGamification/Game/Game.swift"
+            filePath = "ADCBGamification/Game/Controllers/Spin/SpinView/SpinerContainerView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "37"
-            endingLineNumber = "37"
-            landmarkName = "open(controller:msisdn:language:gameType:gameId:complition:)"
+            startingLineNumber = "65"
+            endingLineNumber = "65"
+            landmarkName = "stopAnimationAtIndex(index:complition:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "FB725931-FFAA-461F-BF8B-C5F6E4C0BFF2"
+            uuid = "918AB861-BC1A-42BC-A8B3-3EAC4750E781"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "ADCBGamification/Game/Game.swift"
+            filePath = "ADCBGamification/Game/Controllers/Spin/SpinView/SpinerContainerView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "39"
-            endingLineNumber = "39"
-            landmarkName = "open(controller:msisdn:language:gameType:gameId:complition:)"
+            startingLineNumber = "61"
+            endingLineNumber = "61"
+            landmarkName = "stopAnimationAtIndex(index:complition:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

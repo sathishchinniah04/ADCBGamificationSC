@@ -18,6 +18,10 @@ class SpinerContainerHelper {
         }
     }
     
+    func enableSpinButton() {
+        self.view?.enableSpinButton()
+    }
+    
     func stopAnimationAtIndex(index: String, complition:(()->Void)?) {
         self.view?.stopAnimationAtIndex(index: index, complition: complition)
     }
