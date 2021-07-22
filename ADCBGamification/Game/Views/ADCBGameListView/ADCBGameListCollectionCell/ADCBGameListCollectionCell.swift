@@ -14,9 +14,13 @@ class ADCBGameListCollectionCell: UICollectionViewCell {
     @IBOutlet weak var gameLogoImageView: UIImageView!
     var timer: Timer?
     var game: Games?
+    //var spinFailView = SpinSuccessViewHelper()
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+//        spinFailView.loadScreen { (done) in
+//            self.spinFailView.animateAndRemove()
+//        }
     }
 
     override func prepareForReuse() {

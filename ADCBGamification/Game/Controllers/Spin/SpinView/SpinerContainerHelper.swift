@@ -22,7 +22,7 @@ class SpinerContainerHelper {
         self.view?.enableSpinButton()
     }
     
-    func stopAnimationAtIndex(achivementId: String, complition:(()->Void)?) {
+    func stopAnimationAtIndex(achivementId: String, complition:((Bool)->Void)?) {
         self.view?.stopAnimationAtIndex(achivementId: achivementId, complition: complition)
     }
     

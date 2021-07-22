@@ -17,6 +17,7 @@ class SpinHomeController: UIViewController {
     var isDirectLoad: Bool = false
     var spinOffers: SpinOffers?
     var spinSuccessView = SpinSuccessViewHelper()
+    var spinFailView = SpinFailViewHelper()
     override func viewDidLoad() {
         super.viewDidLoad()    
         self.initialSetup()
@@ -114,18 +115,29 @@ class SpinHomeController: UIViewController {
         guard let gameId = self.game?.gameId else { return }
         SpinViewOfferVM.assignReward(gameId: gameId) { (spinAssignReward) in
             if let inde = spinAssignReward.responseObject?.first?.achievmentId  {
-                self.spinerView.stopAnimationAtIndex(achivementId: inde, complition: self.spinnerStopped)
+                self.spinerView.stopAnimationAtIndex(achivementId: inde, complition: self.spinnerStopped(isPass:))
             } else {
-                self.spinerView.stopAnimationAtIndex(achivementId: "1", complition: self.spinnerStopped)
+                self.spinerView.stopAnimationAtIndex(achivementId: "1", complition: self.spinnerStopped(isPass:))
             }
         }
     }
     
-    func spinnerStopped() {
+    func spinnerStopped(isPass: Bool) {
         print("spinner stpped")
-        spinSuccessView.loadScreen(action: successScreenActionHandler(action:))
+        if isPass {
+            spinSuccessView.loadScreen(action: successScreenActionHandler(action:))
+        } else {
+            spinFailView.loadScreen(action: failScreenActionHandler(action:))
+        }
     }
-    
+    func failScreenActionHandler(action: SpinFailViewAction) {
+        switch action {
+        case .gamePage:
+            spinFailView.animateAndRemove()
+        default:
+            break
+        }
+    }
     func successScreenActionHandler(action: SpinSuccessViewAction) {
         switch action {
         case .homePageTapped:
