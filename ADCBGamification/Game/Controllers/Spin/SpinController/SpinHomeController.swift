@@ -114,9 +114,9 @@ class SpinHomeController: UIViewController {
         guard let gameId = self.game?.gameId else { return }
         SpinViewOfferVM.assignReward(gameId: gameId) { (spinAssignReward) in
             if let inde = spinAssignReward.responseObject?.first?.achievmentId  {
-                self.spinerView.stopAnimationAtIndex(index: inde, complition: self.spinnerStopped)
+                self.spinerView.stopAnimationAtIndex(achivementId: inde, complition: self.spinnerStopped)
             } else {
-                self.spinerView.stopAnimationAtIndex(index: "1", complition: self.spinnerStopped)
+                self.spinerView.stopAnimationAtIndex(achivementId: "1", complition: self.spinnerStopped)
             }
         }
     }
@@ -141,7 +141,7 @@ class SpinHomeController: UIViewController {
         case .spinAgainTapped:
             self.spinSuccessView.animateAndRemove()
             self.spinerView.enableSpinButton()
-            self.navigationController?.popViewController(animated: true)
+            //self.navigationController?.popViewController(animated: true)
             print("Spin again tapped")
         default:
             break

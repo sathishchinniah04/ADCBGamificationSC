@@ -51,14 +51,21 @@ class SpinerContainerView: UIView {
         fortuneWheel?.clipsToBounds = false
     }
     
-    func stopAnimationAtIndex(index: String, complition:(()->Void)?) {
+    func stopAnimationAtIndex(achivementId: String, complition:(()->Void)?) {
+        print("achivementId \(achivementId)")
         DispatchQueue.main.async {
             self.wheelContainerView.transform = CGAffineTransform(rotationAngle: CGFloat(Double.pi))
         }
-        if let ind = self.offer?.firstIndex(where: {$0.rewardId == index}) {
-            print("index  found is \(ind)")
+        if achivementId == "-1" {
+            self.startRotate(index: 1, complition: complition)
+            return
+        }
+        
+        if let ind = self.offer?.firstIndex(where: {$0.rewardId == achivementId}) {
+            
+            print("index  found is \(ind) self.offer count is == \(self.offer?.count)")
             DispatchQueue.main.async {
-                self.startRotate(index: ind, complition: complition)
+                self.startRotate(index: ind*2, complition: complition)
             }
         } else {
             DispatchQueue.main.async {
@@ -79,6 +86,7 @@ class SpinerContainerView: UIView {
             
             slices.append(CarnivalWheelSlice.init(title: "\(item.rewardTitle ?? "")"))
             slices.append(CarnivalWheelSlice.init(title: ""))
+            //self.offer?.append(Offers())
             if item.defaultReward ?? false {
                 slices.removeLast()
                 slices.removeLast()

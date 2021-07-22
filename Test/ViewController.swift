@@ -18,7 +18,7 @@ class ViewController: UIViewController {
     }
     
     func initialSetup() {
-        self.msisdnTextField.text = "9902390324"
+        self.msisdnTextField.text = "9902390347"
         self.gameIdTxtFld.text = "51"
         self.gameNameButton.setTitle("SpinNWin", for: .normal)
         self.gameNameButton.layer.cornerRadius = 5.0

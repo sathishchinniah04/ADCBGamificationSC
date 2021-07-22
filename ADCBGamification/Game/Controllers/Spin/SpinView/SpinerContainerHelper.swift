@@ -22,8 +22,8 @@ class SpinerContainerHelper {
         self.view?.enableSpinButton()
     }
     
-    func stopAnimationAtIndex(index: String, complition:(()->Void)?) {
-        self.view?.stopAnimationAtIndex(index: index, complition: complition)
+    func stopAnimationAtIndex(achivementId: String, complition:(()->Void)?) {
+        self.view?.stopAnimationAtIndex(achivementId: achivementId, complition: complition)
     }
     
     func populateSpinner(offer: [Offers],complition:((SpinerContainerViewAction)->Void)?) {
