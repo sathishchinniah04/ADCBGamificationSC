@@ -55,7 +55,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Rg8-QX-k6w">
-                                <rect key="frame" x="0.0" y="89" width="414" height="773"/>
+                                <rect key="frame" x="0.0" y="83" width="414" height="779"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="AHH-yk-XZ8">
                                     <size key="itemSize" width="414" height="128"/>
@@ -76,15 +76,25 @@
                                 </cells>
                             </collectionView>
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="XiW-Wo-Aln">
-                                <rect key="frame" x="188.5" y="457" width="37" height="37"/>
+                                <rect key="frame" x="188.5" y="454" width="37" height="37"/>
                                 <color key="color" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </activityIndicatorView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="guB-3a-TUC">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="75"/>
+                                <color key="backgroundColor" red="1" green="0.8784313725490196" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="75" id="OCG-sE-rqG"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Rgz-Wg-eTu"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="guB-3a-TUC" firstAttribute="top" secondItem="PNW-8C-ohd" secondAttribute="top" id="7Ci-lv-lJ7"/>
                             <constraint firstItem="XiW-Wo-Aln" firstAttribute="centerY" secondItem="Rg8-QX-k6w" secondAttribute="centerY" id="Dib-fP-82a"/>
-                            <constraint firstItem="Rg8-QX-k6w" firstAttribute="top" secondItem="Rgz-Wg-eTu" secondAttribute="top" constant="45" id="Ylz-UB-Aiu"/>
+                            <constraint firstItem="Rgz-Wg-eTu" firstAttribute="trailing" secondItem="guB-3a-TUC" secondAttribute="trailing" id="RRY-6P-2B0"/>
+                            <constraint firstItem="guB-3a-TUC" firstAttribute="leading" secondItem="Rgz-Wg-eTu" secondAttribute="leading" id="SQ1-ow-Lne"/>
+                            <constraint firstItem="Rg8-QX-k6w" firstAttribute="top" secondItem="guB-3a-TUC" secondAttribute="bottom" constant="8" id="WXi-Ah-ASY"/>
                             <constraint firstItem="Rgz-Wg-eTu" firstAttribute="trailing" secondItem="Rg8-QX-k6w" secondAttribute="trailing" id="dPh-N0-OIz"/>
                             <constraint firstItem="XiW-Wo-Aln" firstAttribute="centerX" secondItem="Rg8-QX-k6w" secondAttribute="centerX" id="sHP-mt-Vsa"/>
                             <constraint firstItem="Rgz-Wg-eTu" firstAttribute="bottom" secondItem="Rg8-QX-k6w" secondAttribute="bottom" id="w0F-7k-aew"/>

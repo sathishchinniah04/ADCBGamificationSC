@@ -131,7 +131,7 @@ class SpinHomeController: UIViewController {
         //v.frame = spinDummyImgView.frame
         //v.center.x = spinDummyImgView.center.x-50
         spinDummyImgView.addSubview(v)
-        spinDummyImgView.transform = CGAffineTransform(scaleX: scaleX, y: scaleY).translatedBy(x: -35, y: 0)
+        spinDummyImgView.transform = CGAffineTransform(scaleX: scaleX, y: scaleY).translatedBy(x: -50, y: 0)
         
     }
     
@@ -140,7 +140,7 @@ class SpinHomeController: UIViewController {
         print("gaping = \(gap)")
         UIView.animate(withDuration: 0.5) {
                 //self.spinDummyImgView.transform = .identity
-            self.spinDummyImgView.transform = CGAffineTransform(translationX: -35, y: (-1*gap)/1.0)
+            self.spinDummyImgView.transform = CGAffineTransform(translationX: -50, y: (-1*gap)/1.0)
             }
     }
     

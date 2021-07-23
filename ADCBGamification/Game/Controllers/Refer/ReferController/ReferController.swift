@@ -12,7 +12,7 @@ class ReferController: UIViewController {
     @IBOutlet weak var referCodeView: UIView!
     @IBOutlet weak var referCodeLabel: UILabel!
     @IBOutlet weak var shareButton: NeumorphicButton!
-    @IBOutlet weak var inviteButton: NeumorphicButton!
+    @IBOutlet weak var chooseContactButton: NeumorphicButton!
     //@IBOutlet weak var chooseContactButton: ReferContactButton!
     @IBOutlet weak var activityIndicatorView: UIActivityIndicatorView!
     //var referSuccessView = ReferSuccessPopupHelper()
@@ -21,18 +21,20 @@ class ReferController: UIViewController {
         super.viewDidLoad()
         self.addDottedLine()
         self.neumorphicButtonSetup()
+        chooseContactButton.alpha = 0.3
+        chooseContactButton.isUserInteractionEnabled = false
         getReferCode()
         buttonUserInteraction(enable: false)
-        self.inviteButton.buttonState(isPressed: true)
-        self.inviteButton.setButtonTitle(title: "Choose Contact",titleColor: TTUtils.uiColor(from: 0x222165))
-        self.inviteButton.populateView { (done) in
+        self.chooseContactButton.buttonState(isPressed: true)
+        self.chooseContactButton.setButtonTitle(title: "Choose Contact",titleColor: TTUtils.uiColor(from: 0x222165))
+        self.chooseContactButton.populateView { (done) in
             self.openContactList()
         }
     }
     
     func buttonUserInteraction(enable: Bool) {
         DispatchQueue.main.async {
-            self.inviteButton.isUserInteractionEnabled = enable
+            self.chooseContactButton.isUserInteractionEnabled = enable
             self.shareButton.isUserInteractionEnabled = enable
         }
     }
@@ -41,6 +43,8 @@ class ReferController: UIViewController {
         referCodeLabel.text = "Loading"
         ReferViewModel.getReferalCode { (data) in
             DispatchQueue.main.async {
+                self.chooseContactButton.alpha = 1.0
+                self.chooseContactButton.isUserInteractionEnabled = true
                 self.activityIndicatorView.stopAnimating()
                 self.referCodeLabel.text = data.referralCode
                 self.referCode = data.referralCode ?? ""

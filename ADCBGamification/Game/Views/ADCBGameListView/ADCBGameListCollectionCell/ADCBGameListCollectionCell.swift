@@ -38,11 +38,8 @@ class ADCBGameListCollectionCell: UICollectionViewCell {
     }
     
     func cellColor(index: Int) {
-        if index%2 == 0 {
-            self.containerView.backgroundColor = UIColor.uiColor(from: 0xFFE000)
-        } else {
-            self.containerView.backgroundColor = UIColor.uiColor(from: 0xCE9328)
-        }
+        self.containerView.addShadow(cornerRadius: 10, shadowRadius: 2, opacity: 0.4, color: UIColor.black)
+        self.containerView.backgroundColor = UIColor.white
     }
     
     func setImage(game: Games) {
@@ -53,7 +50,7 @@ class ADCBGameListCollectionCell: UICollectionViewCell {
         } else if game.gameType == "PredictNWin" {
             gameNameImg = "PredictList"
         } else if game.gameType == "ReferNWin" {
-            gameNameImg = "ReferList"
+            gameNameImg = "Invite"
             
         } else {
             gameNameImg = ""

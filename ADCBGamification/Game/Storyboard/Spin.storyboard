@@ -25,10 +25,10 @@
                                 <rect key="frame" x="0.0" y="54" width="300" height="63"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="SGV-Kl-EeD">
-                                <rect key="frame" x="92" y="158" width="230" height="230"/>
+                                <rect key="frame" x="107" y="188" width="200" height="200"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="230" id="NWh-eP-RWc"/>
-                                    <constraint firstAttribute="height" constant="230" id="UU3-qb-tof"/>
+                                    <constraint firstAttribute="width" constant="200" id="NWh-eP-RWc"/>
+                                    <constraint firstAttribute="height" constant="200" id="UU3-qb-tof"/>
                                 </constraints>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wNb-S9-CRs" customClass="ExpireView" customModule="ADCBGamification" customModuleProvider="target">
