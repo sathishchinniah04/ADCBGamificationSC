@@ -18,6 +18,7 @@ class SpinSuccessView: UIView {
     @IBOutlet weak var knowMoreButton: UIButton!
     @IBOutlet weak var homePageButton: UIButton!
     @IBOutlet weak var spinAgainButton: UIButton!
+    @IBOutlet weak var descLabel: UILabel!
     @IBOutlet weak var containerView: UIView!
     
     var handle:((SpinSuccessViewAction)->Void)?
@@ -26,9 +27,14 @@ class SpinSuccessView: UIView {
         return UINib(nibName: "SpinSuccessView", bundle: Bundle(for: Self.self)).instantiate(withOwner: self, options: nil).first as! SpinSuccessView
     }
     
-    func populateView(action:((SpinSuccessViewAction)->Void)?) {
+    func populateView(info: SpinAssignReward?,action:((SpinSuccessViewAction)->Void)?) {
         self.handle = action
         appearanceSetup()
+        setupLabel(info: info)
+    }
+    
+    func setupLabel(info: SpinAssignReward?) {
+        self.descLabel.text = info?.responseObject?.first?.displayDetails?.first?.name ?? ""
     }
     
     func appearanceSetup() {

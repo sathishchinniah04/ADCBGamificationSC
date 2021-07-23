@@ -11,14 +11,14 @@ class SpinSuccessViewHelper {
     private var view: SpinSuccessView?
     private var rootView = UIApplication.shared.windows.first
     
-    func loadScreen(action:((SpinSuccessViewAction)->Void)?) {
+    func loadScreen(info: SpinAssignReward?, action:((SpinSuccessViewAction)->Void)?) {
         DispatchQueue.main.async {
             self.removeView()
             self.rootView = UIApplication.shared.windows.first
             self.view = SpinSuccessView.loadXib()
             self.view?.frame = UIScreen.main.bounds
             self.rootView?.addSubview(self.view!)
-            self.view?.populateView(action: action)
+            self.view?.populateView(info: info, action: action)
             self.animateUp()
         }
     }

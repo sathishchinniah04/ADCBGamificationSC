@@ -9,6 +9,7 @@ import Foundation
 enum CallBackAction {
     case back
     case close
+    case spinReward
 }
 class CallBack {
     static let shared = CallBack()

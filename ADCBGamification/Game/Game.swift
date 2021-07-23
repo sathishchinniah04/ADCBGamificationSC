@@ -14,6 +14,7 @@ enum GameError {
 public enum GameAction {
     case backButton
     case closeButton
+    case spinReward
 }
 
 public class Game {
@@ -37,6 +38,8 @@ public class Game {
                 complition?(.backButton)
             case .close:
                 complition?(.closeButton)
+            case .spinReward:
+                complition?(.spinReward)
             }
         }
     }
@@ -70,6 +73,8 @@ public class Game {
                     complition?(.backButton)
             case .close:
                 complition?(.closeButton)
+            case .spinReward:
+                complition?(.spinReward)
             }
         }
     }

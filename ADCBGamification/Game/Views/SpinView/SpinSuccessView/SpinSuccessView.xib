@@ -256,6 +256,7 @@ Enjoy 10% off at Starbucks!</string>
             </constraints>
             <connections>
                 <outlet property="containerView" destination="IAH-G8-iQf" id="Hwi-t3-BVb"/>
+                <outlet property="descLabel" destination="Cv6-6m-HDP" id="qYh-Vf-Jlq"/>
                 <outlet property="homePageButton" destination="eQC-VT-XrO" id="BLo-XF-IEx"/>
                 <outlet property="knowMoreButton" destination="g9m-97-Rjs" id="jaj-5F-uJ1"/>
                 <outlet property="rewardButton" destination="MTc-43-SJc" id="Orn-Hi-Kqe"/>
@@ -268,7 +269,7 @@ Enjoy 10% off at Starbucks!</string>
         <image name="Clouds" width="300" height="63"/>
         <image name="CurveClip" width="187.5" height="211"/>
         <image name="Mobile" width="137" height="250"/>
-        <image name="ohNo" width="52.5" height="52.5"/>
+        <image name="ohNo" width="130" height="104"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

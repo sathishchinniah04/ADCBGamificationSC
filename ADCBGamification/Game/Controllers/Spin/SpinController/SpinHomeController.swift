@@ -164,7 +164,7 @@ class SpinHomeController: UIViewController {
     func spinnerStopped(isPass: Bool) {
         print("spinner stpped")
         if isPass {
-            spinSuccessView.loadScreen(action: successScreenActionHandler(action:))
+            spinSuccessView.loadScreen(info: self.spinAssignReward, action: successScreenActionHandler(action:))
         } else {
             spinFailView.loadScreen(action: failScreenActionHandler(action:))
         }
@@ -183,13 +183,16 @@ class SpinHomeController: UIViewController {
         case .homePageTapped:
             print("home page tapped")
             self.spinSuccessView.animateAndRemove()
-            
             self.navigationController?.popToRootViewController(animated: true)
         case .knowMoreTapped:
             print("Know more tapped")
             KnowMoreViewHelper.show(info: self.spinAssignReward)
         case .rewardTapped:
             print("Reward  tapped")
+            CallBack.shared.handle?(.spinReward)
+            CallBack.shared.handle?(.close)
+            spinSuccessView.removeView()
+            self.dismiss(animated: true, completion: nil)
         case .spinAgainTapped:
             self.spinSuccessView.animateAndRemove()
             self.spinerView.enableSpinButton()
