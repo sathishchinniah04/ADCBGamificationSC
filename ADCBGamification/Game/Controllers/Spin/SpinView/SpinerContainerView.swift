@@ -8,10 +8,12 @@
 import UIKit
 enum SpinerContainerViewAction {
         case spinTapped
+        case view(UIView)
 }
 
 class SpinerContainerView: UIView {
     @IBOutlet weak var containerView: UIView!
+    @IBOutlet weak var mainContainerView: UIView!
     @IBOutlet weak var wheelContainerView: UIView!
     @IBOutlet weak var spinCenterView: UIView!
     @IBOutlet weak var spinNowButton: UIButton!
@@ -36,7 +38,7 @@ class SpinerContainerView: UIView {
     func addCenterViewRadius() {
         DispatchQueue.main.async {
             self.spinNowButton.addCustomShadow(cornerRadius: 10, opacity: 0.4, color: UIColor.darkBlueColor(), offSet: CGSize(width: 4, height: 4))
-            self.spinCenterView.backgroundColor = UIColor.yellow
+            self.spinCenterView.backgroundColor = UIColor.customYellowColor()
             self.spinCenterView.layer.cornerRadius = self.spinCenterView.frame.width/2
             self.spinCenterView.layer.borderWidth = 3
             self.spinCenterView.layer.borderColor = UIColor.white.cgColor
@@ -84,6 +86,8 @@ class SpinerContainerView: UIView {
         self.offer = offer
         spinSetup(offer: offer)
         self.handle = complition
+        //self.mainContainerView.transform = CGAffineTransform(scaleX: 0.5, y: 0.5)
+        complition?(.view(self.mainContainerView))
     }
     
     func spinSetup(offer: [Offers]) {
@@ -176,7 +180,7 @@ class SpinerContainerView: UIView {
     @IBAction func spinNowButtonAction() {
         self.fortuneWheel?.startAnimating()
         self.handle?(.spinTapped)
-        self.spinNowButton.alpha = 0.3
+        self.spinNowButton.alpha = 0.0
         self.spinNowButton.isUserInteractionEnabled = false
 //        startRotate(index: 3) { () -> Void? in
 //            print("spinNowButtonAction ")

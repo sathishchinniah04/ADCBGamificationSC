@@ -83,13 +83,13 @@ class SpinHomeController: UIViewController {
         self.spinDummyImgView.alpha = 1.0
         self.spinerView.enableSpinButton(hide: true)
         expireView.populateView(isShowTerms: false, game: self.game) {
+            self.scaleToOrginalSize()
             UIView.animate(withDuration: 0.8) {
                 //self.spinDummyImgView.isHidden = true
-                self.spinDummyImgView.alpha = 0.0
+                self.spinDummyImgView.alpha = 1.0
             } completion: { (done) in
                 self.assignRewards()
             }
-            
             self.spinerView.unHideSpinView()
             self.containerView.isHidden = false
             self.expireView.isHidden = true
@@ -113,9 +113,33 @@ class SpinHomeController: UIViewController {
         case .spinTapped:
             print("Spin button tapped")
             self.assignRewards()
+        case .view(let spinView):
+            self.scalingSpinerView(v: spinView)
+            
         default:
             break
         }
+    }
+    
+    func scalingSpinerView(v: UIView) {
+        let v = v
+        
+        let scaleX = spinDummyImgView.frame.size.width/v.frame.size.width
+        let scaleY = spinDummyImgView.frame.size.height/v.frame.size.height
+        //v.frame = spinDummyImgView.frame
+        //v.center.x = spinDummyImgView.center.x-50
+        spinDummyImgView.addSubview(v)
+        spinDummyImgView.transform = CGAffineTransform(scaleX: scaleX, y: scaleY).translatedBy(x: -35, y: 0)
+        
+    }
+    
+    func scaleToOrginalSize() {
+        let gap = spinDummyImgView.center.y - self.view.center.y
+        print("gaping = \(gap)")
+        UIView.animate(withDuration: 0.5) {
+                //self.spinDummyImgView.transform = .identity
+            self.spinDummyImgView.transform = CGAffineTransform(translationX: -35, y: (-1*gap)/1.0)
+            }
     }
     
     func getSpinOffers() {

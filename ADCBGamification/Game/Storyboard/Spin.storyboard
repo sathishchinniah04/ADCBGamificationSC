@@ -24,10 +24,11 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Clouds" translatesAutoresizingMaskIntoConstraints="NO" id="vJN-O7-seS">
                                 <rect key="frame" x="0.0" y="54" width="300" height="63"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Spin" translatesAutoresizingMaskIntoConstraints="NO" id="SGV-Kl-EeD">
-                                <rect key="frame" x="30" y="169" width="354" height="354"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="SGV-Kl-EeD">
+                                <rect key="frame" x="92" y="193" width="230" height="230"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="SGV-Kl-EeD" secondAttribute="height" multiplier="1:1" id="zae-vP-IuS"/>
+                                    <constraint firstAttribute="width" constant="230" id="NWh-eP-RWc"/>
+                                    <constraint firstAttribute="height" constant="230" id="UU3-qb-tof"/>
                                 </constraints>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wNb-S9-CRs" customClass="ExpireView" customModule="ADCBGamification" customModuleProvider="target">
@@ -55,7 +56,6 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="wNb-S9-CRs" firstAttribute="centerX" secondItem="peg-KZ-704" secondAttribute="centerX" id="0XT-mI-hD7"/>
-                            <constraint firstItem="SGV-Kl-EeD" firstAttribute="leading" secondItem="peg-KZ-704" secondAttribute="leading" constant="30" id="1RE-cg-YEE"/>
                             <constraint firstItem="otW-Vk-P3R" firstAttribute="centerY" secondItem="2DE-sR-4BU" secondAttribute="centerY" multiplier="0.85" id="1es-h9-EZt"/>
                             <constraint firstItem="fIY-xv-g70" firstAttribute="top" secondItem="peg-KZ-704" secondAttribute="top" constant="45" id="3B6-vR-KxL"/>
                             <constraint firstItem="O5H-9N-Ue9" firstAttribute="leading" secondItem="2DE-sR-4BU" secondAttribute="leading" id="3YB-7M-SHh"/>
@@ -67,12 +67,12 @@
                             <constraint firstItem="vJN-O7-seS" firstAttribute="top" secondItem="peg-KZ-704" secondAttribute="top" constant="10" id="Llh-e3-3db"/>
                             <constraint firstItem="otW-Vk-P3R" firstAttribute="centerX" secondItem="2DE-sR-4BU" secondAttribute="centerX" id="WKj-xY-sdZ"/>
                             <constraint firstItem="wNb-S9-CRs" firstAttribute="leading" secondItem="peg-KZ-704" secondAttribute="leading" constant="30" id="Ycx-0X-YRR"/>
-                            <constraint firstItem="SGV-Kl-EeD" firstAttribute="bottom" secondItem="O5H-9N-Ue9" secondAttribute="bottom" constant="30" id="adi-Ti-GMR"/>
                             <constraint firstItem="O5H-9N-Ue9" firstAttribute="top" secondItem="2DE-sR-4BU" secondAttribute="top" id="avL-4s-3KO"/>
                             <constraint firstItem="peg-KZ-704" firstAttribute="trailing" secondItem="O5H-9N-Ue9" secondAttribute="trailing" id="cj8-00-lTf"/>
                             <constraint firstItem="SGV-Kl-EeD" firstAttribute="centerX" secondItem="2DE-sR-4BU" secondAttribute="centerX" id="eW4-Jf-JSq"/>
                             <constraint firstItem="peg-KZ-704" firstAttribute="bottom" secondItem="wNb-S9-CRs" secondAttribute="bottom" constant="40" id="fBa-Fh-GSs"/>
                             <constraint firstItem="O5H-9N-Ue9" firstAttribute="height" secondItem="2DE-sR-4BU" secondAttribute="height" multiplier="0.55" id="fOO-UA-MxV"/>
+                            <constraint firstItem="SGV-Kl-EeD" firstAttribute="bottom" secondItem="O5H-9N-Ue9" secondAttribute="bottom" constant="-70" id="gqw-7i-cEU"/>
                             <constraint firstItem="wNb-S9-CRs" firstAttribute="top" secondItem="O5H-9N-Ue9" secondAttribute="bottom" constant="35" id="icH-BI-MOj"/>
                             <constraint firstItem="fIY-xv-g70" firstAttribute="leading" secondItem="peg-KZ-704" secondAttribute="leading" id="vTH-kJ-12B"/>
                         </constraints>
@@ -92,7 +92,6 @@
     <resources>
         <image name="Clouds" width="300" height="63"/>
         <image name="CurveClip" width="187.5" height="211"/>
-        <image name="Spin" width="318" height="319"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
