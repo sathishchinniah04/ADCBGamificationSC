@@ -18,8 +18,13 @@ class SpinerContainerHelper {
         }
     }
     
+    
     func enableSpinButton() {
         self.view?.enableSpinButton()
+    }
+    
+    func enableSpinButton(hide: Bool) {
+        self.view?.spinNowButton.isHidden = hide
     }
     
     func stopAnimationAtIndex(achivementId: String, complition:((Bool)->Void)?) {

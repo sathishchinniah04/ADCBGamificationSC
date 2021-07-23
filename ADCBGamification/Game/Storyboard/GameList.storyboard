@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="uKH-pV-egK">
-                                <rect key="frame" x="0.0" y="89" width="414" height="773"/>
+                                <rect key="frame" x="0.0" y="109" width="414" height="753"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="TMF-SB-Say">
@@ -30,7 +30,7 @@
                         <viewLayoutGuide key="safeArea" id="QWr-7d-K6T"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="uKH-pV-egK" firstAttribute="top" secondItem="QWr-7d-K6T" secondAttribute="top" constant="45" id="5EL-1I-GIz"/>
+                            <constraint firstItem="uKH-pV-egK" firstAttribute="top" secondItem="QWr-7d-K6T" secondAttribute="top" constant="65" id="5EL-1I-GIz"/>
                             <constraint firstItem="QWr-7d-K6T" firstAttribute="bottom" secondItem="uKH-pV-egK" secondAttribute="bottom" id="6cV-kj-VAp"/>
                             <constraint firstItem="QWr-7d-K6T" firstAttribute="trailing" secondItem="uKH-pV-egK" secondAttribute="trailing" id="IYz-EY-m79"/>
                             <constraint firstItem="TMF-SB-Say" firstAttribute="centerY" secondItem="ksa-2z-Jhj" secondAttribute="centerY" id="Yph-kg-gNa"/>

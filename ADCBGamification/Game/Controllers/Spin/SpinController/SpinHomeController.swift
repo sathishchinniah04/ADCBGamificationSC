@@ -10,6 +10,7 @@ import UIKit
 class SpinHomeController: UIViewController {
     @IBOutlet weak var expireView: ExpireView!
     @IBOutlet weak var containerView: UIView!
+
     @IBOutlet weak var spinDummyImgView: UIImageView!
     @IBOutlet weak var activityIndicatorView: UIActivityIndicatorView!
     var spinerView = SpinerContainerHelper()
@@ -25,6 +26,7 @@ class SpinHomeController: UIViewController {
         if let gam = game {
             updateOnResponce(game: gam, error: nil)
         }
+        
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -79,17 +81,19 @@ class SpinHomeController: UIViewController {
     
     func populateExpireView(game: Games) {
         self.spinDummyImgView.alpha = 1.0
+        self.spinerView.enableSpinButton(hide: true)
         expireView.populateView(isShowTerms: false, game: self.game) {
             UIView.animate(withDuration: 0.8) {
                 //self.spinDummyImgView.isHidden = true
                 self.spinDummyImgView.alpha = 0.0
             } completion: { (done) in
-                print("")
+                self.assignRewards()
             }
             
             self.spinerView.unHideSpinView()
             self.containerView.isHidden = false
             self.expireView.isHidden = true
+            
         }
     }
     
@@ -98,6 +102,7 @@ class SpinHomeController: UIViewController {
         self.spinerView.loadSpinner(sourceView: self.containerView)
         //self.expireView.isHidden = true
         DispatchQueue.main.asyncAfter(deadline: .now()+0.2) {
+            self.spinerView.enableSpinButton(hide: true)
             guard let off = self.spinOffers?.offers else { return }
             self.spinerView.populateSpinner(offer: off,complition: self.spinButtonTapped(action:))
         }
@@ -141,6 +146,7 @@ class SpinHomeController: UIViewController {
         switch action {
         case .gamePage:
             spinFailView.animateAndRemove()
+            self.navigationController?.popViewController(animated: true)
         default:
             break
         }
@@ -160,6 +166,7 @@ class SpinHomeController: UIViewController {
         case .spinAgainTapped:
             self.spinSuccessView.animateAndRemove()
             self.spinerView.enableSpinButton()
+            self.spinerView.enableSpinButton(hide: false)
             //self.navigationController?.popViewController(animated: true)
             print("Spin again tapped")
         default:
