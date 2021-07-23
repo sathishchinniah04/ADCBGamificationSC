@@ -100,6 +100,7 @@ class ReferController: UIViewController {
     
     func openContactList() {
         let cont = UIStoryboard(name: "Refer", bundle: Bundle(for: Self.self)).instantiateViewController(withIdentifier: "ContactListController") as! ContactListController
+        cont.referCode = self.referCode
         cont.handle = {(name, ph) in
 //            self.chooseContactButton.titleLabel.text = name
 //            self.chooseContactButton.textField.text = ph

@@ -28,10 +28,10 @@
                     <rect key="frame" x="0.0" y="148" width="414" height="197"/>
                 </imageView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HIL-NA-1vj">
-                    <rect key="frame" x="25" y="219" width="364" height="458"/>
+                    <rect key="frame" x="25" y="218.5" width="364" height="459"/>
                     <subviews>
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="HBo-tS-yp8">
-                            <rect key="frame" x="25" y="30" width="314" height="398"/>
+                            <rect key="frame" x="25" y="30" width="314" height="399"/>
                             <subviews>
                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="O7I-1N-Yh4">
                                     <rect key="frame" x="0.0" y="0.0" width="314" height="313.5"/>
@@ -112,16 +112,16 @@ participation</string>
                                     </constraints>
                                 </stackView>
                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="51X-B6-gt2">
-                                    <rect key="frame" x="0.0" y="370.5" width="314" height="27.5"/>
+                                    <rect key="frame" x="0.0" y="370.5" width="314" height="28.5"/>
                                     <subviews>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VzQ-LZ-cgh">
-                                            <rect key="frame" x="126.5" y="0.0" width="61" height="27.5"/>
+                                            <rect key="frame" x="121.5" y="0.0" width="71" height="28.5"/>
                                             <state key="normal">
                                                 <attributedString key="attributedTitle">
                                                     <fragment content="Homepage">
                                                         <attributes>
                                                             <color key="NSColor" red="0.13333333333333333" green="0.12941176470588234" blue="0.396078431372549" alpha="1" colorSpace="calibratedRGB"/>
-                                                            <font key="NSFont" size="14" name=".SFNS-Regular"/>
+                                                            <font key="NSFont" metaFont="system" size="14"/>
                                                             <integer key="NSUnderline" value="1"/>
                                                         </attributes>
                                                     </fragment>

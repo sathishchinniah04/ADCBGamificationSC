@@ -62,16 +62,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CurveClip" translatesAutoresizingMaskIntoConstraints="NO" id="O1D-93-f0H">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="404.66666666666669"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="368"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Predict" translatesAutoresizingMaskIntoConstraints="NO" id="Ifq-Y2-VVs">
-                                <rect key="frame" x="30" y="50.666666666666657" width="354" height="354"/>
+                                <rect key="frame" x="30" y="14" width="354" height="354"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="Ifq-Y2-VVs" secondAttribute="height" multiplier="1:1" id="W7H-zh-VKn"/>
                                 </constraints>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0zs-1g-UM0" customClass="ExpireView" customModule="ADCBGamification" customModuleProvider="target">
-                                <rect key="frame" x="30" y="439.66666666666674" width="354" height="256.33333333333326"/>
+                                <rect key="frame" x="30" y="376" width="354" height="320"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="xxf-cY-7Q7">
@@ -82,8 +82,8 @@
                         <viewLayoutGuide key="safeArea" id="F75-gm-2pA"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="O1D-93-f0H" firstAttribute="height" secondItem="9LS-1p-Or3" secondAttribute="height" multiplier="0.55" id="7wa-X5-mOd"/>
-                            <constraint firstItem="0zs-1g-UM0" firstAttribute="top" secondItem="O1D-93-f0H" secondAttribute="bottom" constant="35" id="E0m-Ms-9XD"/>
+                            <constraint firstItem="O1D-93-f0H" firstAttribute="height" secondItem="9LS-1p-Or3" secondAttribute="height" multiplier="0.5" id="7wa-X5-mOd"/>
+                            <constraint firstItem="0zs-1g-UM0" firstAttribute="top" secondItem="O1D-93-f0H" secondAttribute="bottom" constant="8" id="E0m-Ms-9XD"/>
                             <constraint firstItem="0zs-1g-UM0" firstAttribute="centerX" secondItem="F75-gm-2pA" secondAttribute="centerX" id="JaJ-b4-4JZ"/>
                             <constraint firstItem="F75-gm-2pA" firstAttribute="trailing" secondItem="O1D-93-f0H" secondAttribute="trailing" id="Mvk-nf-CKr"/>
                             <constraint firstItem="Ifq-Y2-VVs" firstAttribute="width" secondItem="Ifq-Y2-VVs" secondAttribute="height" multiplier="1:1" id="O1d-sS-Y32"/>

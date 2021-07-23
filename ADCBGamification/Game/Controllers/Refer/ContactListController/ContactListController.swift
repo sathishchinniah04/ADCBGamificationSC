@@ -14,14 +14,20 @@ class ContactListController: UIViewController {
     @IBOutlet weak var chooseContactButton: ReferContactButton!
     @IBOutlet weak var inviteButton: NeumorphicButton!
     @IBOutlet weak var inviteButtonContainerView: UIView!
+    var referSuccessViewHelper = ReferSuccessViewHelper()
     var handle: ((_ name: String,_ ph: String)->Void)?
     var contacts = [FetchedContact]()
     var newList  = [FetchedContact]()
+    var referCode: String = ""
+    var bPart: String?
     override func viewDidLoad() {
         super.viewDidLoad()
         buttonSetup()
         setupTableView()
         fetchContact()
+        inviteButton.populateView { (done) in
+            self.inviteApiCall()
+        }
         //neumorphicEffect()
     }
     
@@ -34,6 +40,20 @@ class ContactListController: UIViewController {
             self.contacts = contacts
             self.newList = contacts
             self.contactTableView.reloadData()
+        }
+    }
+    
+    func inviteApiCall() {
+        let no = bPart?.replacingOccurrences(of: " ", with: "").replacingOccurrences(of: "-", with: "")
+        ReferViewModel.recordRefer(referCode: self.referCode, bParty: no ?? "") { (data) in
+            print("data is \(data)")
+            DispatchQueue.main.async {
+                self.referSuccessViewHelper.loadScreen(info: nil){_ in
+                    self.referSuccessViewHelper.animateAndRemove()
+                    self.dismiss(animated: true, completion: nil)
+                    self.dismiss(animated: true, completion: nil)
+                }
+            }
         }
     }
     
@@ -120,6 +140,7 @@ class ContactListController: UIViewController {
         chooseContactButton.textField.text = contact.telephone
         self.unHideInviteButon()
         self.handle?(contact.firstName + " " + contact.lastName, contact.telephone)
+        self.bPart = contact.telephone
        // self.dismiss(animated: true, completion: nil)
     }
     

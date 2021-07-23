@@ -129,6 +129,9 @@
 		33CD21A0269BDCC400CB71AC /* ReferViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33CD219F269BDCC200CB71AC /* ReferViewModel.swift */; };
 		33CD21A4269BDEE400CB71AC /* ReferCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33CD21A3269BDEE400CB71AC /* ReferCode.swift */; };
 		33CD21A8269BE49E00CB71AC /* ReferNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33CD21A7269BE49E00CB71AC /* ReferNotification.swift */; };
+		33DCF8FE26AAD6D600B17523 /* ReferSuccessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33DCF8FB26AAD6D600B17523 /* ReferSuccessView.swift */; };
+		33DCF8FF26AAD6D600B17523 /* ReferSuccessView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 33DCF8FC26AAD6D600B17523 /* ReferSuccessView.xib */; };
+		33DCF90026AAD6D600B17523 /* ReferSuccessViewHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33DCF8FD26AAD6D600B17523 /* ReferSuccessViewHelper.swift */; };
 		33E158B526A9AFD800B0615B /* SpinFailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33E158B426A9AFD800B0615B /* SpinFailView.swift */; };
 		33E158BB26A9B00500B0615B /* SpinFailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 33E158BA26A9B00500B0615B /* SpinFailView.xib */; };
 		33E158BF26A9B01300B0615B /* SpinFailViewHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33E158BE26A9B01300B0615B /* SpinFailViewHelper.swift */; };
@@ -325,6 +328,9 @@
 		33CD219F269BDCC200CB71AC /* ReferViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReferViewModel.swift; sourceTree = "<group>"; };
 		33CD21A3269BDEE400CB71AC /* ReferCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReferCode.swift; sourceTree = "<group>"; };
 		33CD21A7269BE49E00CB71AC /* ReferNotification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReferNotification.swift; sourceTree = "<group>"; };
+		33DCF8FB26AAD6D600B17523 /* ReferSuccessView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReferSuccessView.swift; sourceTree = "<group>"; };
+		33DCF8FC26AAD6D600B17523 /* ReferSuccessView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ReferSuccessView.xib; sourceTree = "<group>"; };
+		33DCF8FD26AAD6D600B17523 /* ReferSuccessViewHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReferSuccessViewHelper.swift; sourceTree = "<group>"; };
 		33E158B426A9AFD800B0615B /* SpinFailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpinFailView.swift; sourceTree = "<group>"; };
 		33E158BA26A9B00500B0615B /* SpinFailView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SpinFailView.xib; sourceTree = "<group>"; };
 		33E158BE26A9B01300B0615B /* SpinFailViewHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpinFailViewHelper.swift; sourceTree = "<group>"; };
@@ -926,6 +932,7 @@
 		338116932699AC2000C8F35E /* ReferViews */ = {
 			isa = PBXGroup;
 			children = (
+				33DCF8FA26AAD6D600B17523 /* ReferSuccessView */,
 				338116942699AC2800C8F35E /* ContactView */,
 			);
 			path = ReferViews;
@@ -956,6 +963,16 @@
 				33CD219B269AF4EE00CB71AC /* PredictSuccessHelper.swift */,
 			);
 			path = PredictSuccessView;
+			sourceTree = "<group>";
+		};
+		33DCF8FA26AAD6D600B17523 /* ReferSuccessView */ = {
+			isa = PBXGroup;
+			children = (
+				33DCF8FB26AAD6D600B17523 /* ReferSuccessView.swift */,
+				33DCF8FC26AAD6D600B17523 /* ReferSuccessView.xib */,
+				33DCF8FD26AAD6D600B17523 /* ReferSuccessViewHelper.swift */,
+			);
+			path = ReferSuccessView;
 			sourceTree = "<group>";
 		};
 		33E158B326A9AF8E00B0615B /* SpinFailView */ = {
@@ -1338,6 +1355,7 @@
 				33E158D626AA530D00B0615B /* OpenSans-LightItalic.ttf in Resources */,
 				33E158CE26AA530D00B0615B /* OpenSans-ExtraBoldItalic.ttf in Resources */,
 				3320FFA72682EBC4001809AA /* Spin.storyboard in Resources */,
+				33DCF8FF26AAD6D600B17523 /* ReferSuccessView.xib in Resources */,
 				335933B026941FC200CF6AAF /* CustomNeumophicButton.xib in Resources */,
 				33E158D226AA530D00B0615B /* OpenSans-SemiBoldItalic.ttf in Resources */,
 				3320FFC82682EBC4001809AA /* NeumorphicTextField.xib in Resources */,
@@ -1450,6 +1468,7 @@
 				336B67AB2697E24C008E419B /* PredictGame.swift in Sources */,
 				3320FFDF2682EBC4001809AA /* SpinningWheelSliceImpl.swift in Sources */,
 				3320FFA52682EBC4001809AA /* Game.swift in Sources */,
+				33DCF90026AAD6D600B17523 /* ReferSuccessViewHelper.swift in Sources */,
 				3320FFA42682EBC4001809AA /* UIController+Extension.swift in Sources */,
 				337E17CE269DC53C00C14135 /* ADCBGameListController.swift in Sources */,
 				3320FFB52682EBC4001809AA /* IQInvocation.swift in Sources */,
@@ -1511,6 +1530,7 @@
 				3320FFCA2682EBC4001809AA /* NeumorphicButton.swift in Sources */,
 				3320FFC22682EBC4001809AA /* IQUITextFieldView+Additions.swift in Sources */,
 				3320FFDA2682EBC4001809AA /* TTFortuneWheel.swift in Sources */,
+				33DCF8FE26AAD6D600B17523 /* ReferSuccessView.swift in Sources */,
 				338116822699432500C8F35E /* ContactListController.swift in Sources */,
 				3320FFCB2682EBC4001809AA /* ReferViewController.swift in Sources */,
 				33FC31AE2696D7CA00868D9E /* SpinViewOfferVM.swift in Sources */,

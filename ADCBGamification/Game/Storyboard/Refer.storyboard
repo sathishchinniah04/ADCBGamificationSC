@@ -26,18 +26,18 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CurveClip" translatesAutoresizingMaskIntoConstraints="NO" id="XUZ-wa-BVQ">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="493"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="448"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Clouds" translatesAutoresizingMaskIntoConstraints="NO" id="Ny5-Fe-xMM">
                                 <rect key="frame" x="0.0" y="54" width="300" height="63"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ic6-ia-DtR" customClass="ExpireView" customModule="ADCBGamification" customModuleProvider="target">
-                                <rect key="frame" x="30" y="528" width="354" height="294"/>
+                                <rect key="frame" x="30" y="458" width="354" height="364"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ReferLogo" translatesAutoresizingMaskIntoConstraints="NO" id="Tc1-oJ-i1w">
-                                <rect key="frame" x="30" y="139" width="354" height="354"/>
+                                <rect key="frame" x="30" y="94" width="354" height="354"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="Tc1-oJ-i1w" secondAttribute="height" multiplier="1:1" id="wwO-em-n64"/>
                                 </constraints>
@@ -54,10 +54,10 @@
                             <constraint firstItem="Off-2c-xZL" firstAttribute="centerY" secondItem="8Yo-nW-oOk" secondAttribute="centerY" id="Dlm-nN-4At"/>
                             <constraint firstItem="Ny5-Fe-xMM" firstAttribute="top" secondItem="HH6-ca-mjg" secondAttribute="top" constant="10" id="E0P-nC-TZ8"/>
                             <constraint firstItem="Tc1-oJ-i1w" firstAttribute="leading" secondItem="8Yo-nW-oOk" secondAttribute="leading" constant="30" id="HW0-Nl-YeS"/>
-                            <constraint firstItem="XUZ-wa-BVQ" firstAttribute="height" secondItem="8Yo-nW-oOk" secondAttribute="height" multiplier="0.55" id="KHP-6y-5QI"/>
+                            <constraint firstItem="XUZ-wa-BVQ" firstAttribute="height" secondItem="8Yo-nW-oOk" secondAttribute="height" multiplier="0.5" id="KHP-6y-5QI"/>
                             <constraint firstItem="Off-2c-xZL" firstAttribute="centerX" secondItem="8Yo-nW-oOk" secondAttribute="centerX" id="P86-Ln-Ahv"/>
                             <constraint firstItem="Tc1-oJ-i1w" firstAttribute="bottom" secondItem="XUZ-wa-BVQ" secondAttribute="bottom" id="Tcq-bu-HPt"/>
-                            <constraint firstItem="ic6-ia-DtR" firstAttribute="top" secondItem="XUZ-wa-BVQ" secondAttribute="bottom" constant="35" id="YQR-Bj-0y6"/>
+                            <constraint firstItem="ic6-ia-DtR" firstAttribute="top" secondItem="XUZ-wa-BVQ" secondAttribute="bottom" constant="10" id="YQR-Bj-0y6"/>
                             <constraint firstItem="XUZ-wa-BVQ" firstAttribute="leading" secondItem="8Yo-nW-oOk" secondAttribute="leading" id="aoe-k8-ZCr"/>
                             <constraint firstItem="XUZ-wa-BVQ" firstAttribute="top" secondItem="8Yo-nW-oOk" secondAttribute="top" id="bTO-Io-jcX"/>
                             <constraint firstItem="HH6-ca-mjg" firstAttribute="bottom" secondItem="ic6-ia-DtR" secondAttribute="bottom" constant="40" id="cJ5-dU-LoH"/>
@@ -86,7 +86,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CurveClip" translatesAutoresizingMaskIntoConstraints="NO" id="8dx-cD-jGi">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="493"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="448"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SxZ-Z0-WFX">
@@ -138,7 +138,7 @@
                         <color key="backgroundColor" red="0.97245341539999997" green="0.97261589770000001" blue="0.9724320769" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="SxZ-Z0-WFX" firstAttribute="top" secondItem="VVJ-kW-l7L" secondAttribute="top" id="3ar-gc-zy7"/>
-                            <constraint firstItem="8dx-cD-jGi" firstAttribute="height" secondItem="42W-hh-2wZ" secondAttribute="height" multiplier="0.55" id="6iq-GC-Ffw"/>
+                            <constraint firstItem="8dx-cD-jGi" firstAttribute="height" secondItem="42W-hh-2wZ" secondAttribute="height" multiplier="0.5" id="6iq-GC-Ffw"/>
                             <constraint firstItem="PZY-07-X08" firstAttribute="leading" secondItem="VVJ-kW-l7L" secondAttribute="leading" constant="20" id="B5D-ae-4xO"/>
                             <constraint firstItem="VVJ-kW-l7L" firstAttribute="trailing" secondItem="SxZ-Z0-WFX" secondAttribute="trailing" id="Et5-2h-lSt"/>
                             <constraint firstItem="8dx-cD-jGi" firstAttribute="leading" secondItem="VVJ-kW-l7L" secondAttribute="leading" id="SaL-7a-AiQ"/>
@@ -170,20 +170,20 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CurveClip" translatesAutoresizingMaskIntoConstraints="NO" id="GG1-Ex-sQ9">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="493"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="448"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Clouds" translatesAutoresizingMaskIntoConstraints="NO" id="QcB-vb-CBN">
                                 <rect key="frame" x="0.0" y="54" width="300" height="63"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ReferLogo" translatesAutoresizingMaskIntoConstraints="NO" id="Yjb-c9-aHn">
-                                <rect key="frame" x="30" y="139" width="354" height="354"/>
+                                <rect key="frame" x="30" y="94" width="354" height="354"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="Yjb-c9-aHn" secondAttribute="height" multiplier="1:1" id="4dv-gT-YvP"/>
                                 </constraints>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="Bv6-l7-cTD">
-                                <rect key="frame" x="30" y="525" width="354" height="45"/>
+                                <rect key="frame" x="30" y="480" width="354" height="45"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SZK-Kx-QzH" customClass="NeumorphicButton" customModule="ADCBGamification" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="354" height="45"/>
@@ -195,7 +195,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Zve-f3-Hol">
-                                <rect key="frame" x="73" y="654" width="268.5" height="79.5"/>
+                                <rect key="frame" x="73" y="609" width="268.5" height="79.5"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="LgF-aF-OfC">
                                         <rect key="frame" x="0.0" y="0.0" width="268.5" height="79.5"/>
@@ -228,7 +228,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="iq8-Er-Ty5">
-                                <rect key="frame" x="199" y="602" width="16.5" height="22"/>
+                                <rect key="frame" x="199" y="557" width="16.5" height="22"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="or" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Nh-q7-GLj">
                                         <rect key="frame" x="0.0" y="0.0" width="16.5" height="22"/>
@@ -239,7 +239,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="PDu-Pq-V5j">
-                                <rect key="frame" x="225.5" y="612.5" width="158.5" height="1"/>
+                                <rect key="frame" x="225.5" y="567.5" width="158.5" height="1"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lOq-gB-iUA">
                                         <rect key="frame" x="0.0" y="0.0" width="158.5" height="1"/>
@@ -251,7 +251,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="HWn-Y7-7Zo">
-                                <rect key="frame" x="30" y="612.5" width="159" height="1"/>
+                                <rect key="frame" x="30" y="567.5" width="159" height="1"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cwB-0o-9RR">
                                         <rect key="frame" x="0.0" y="0.0" width="159" height="1"/>
@@ -263,7 +263,7 @@
                                 </subviews>
                             </stackView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8gm-Ye-CoG" customClass="NeumorphicButton" customModule="ADCBGamification" customModuleProvider="target">
-                                <rect key="frame" x="291.5" y="683.5" width="50" height="50"/>
+                                <rect key="frame" x="291.5" y="638.5" width="50" height="50"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="8gm-Ye-CoG" secondAttribute="height" multiplier="8:8" id="dQm-AR-JOw"/>
@@ -277,7 +277,7 @@
                         <viewLayoutGuide key="safeArea" id="t9B-6s-wkc"/>
                         <color key="backgroundColor" red="0.97254901960784312" green="0.97254901960784312" blue="0.97254901960784312" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="GG1-Ex-sQ9" firstAttribute="height" secondItem="gV3-aM-XOC" secondAttribute="height" multiplier="0.55" id="0vS-Cp-q4p"/>
+                            <constraint firstItem="GG1-Ex-sQ9" firstAttribute="height" secondItem="gV3-aM-XOC" secondAttribute="height" multiplier="0.5" id="0vS-Cp-q4p"/>
                             <constraint firstItem="8gm-Ye-CoG" firstAttribute="trailing" secondItem="sWE-jm-dk4" secondAttribute="trailing" id="1bs-ju-pxo"/>
                             <constraint firstItem="dni-3P-yCj" firstAttribute="centerX" secondItem="gV3-aM-XOC" secondAttribute="centerX" id="4zv-aJ-XUU"/>
                             <constraint firstItem="Yjb-c9-aHn" firstAttribute="bottom" secondItem="GG1-Ex-sQ9" secondAttribute="bottom" id="7u5-Hh-tUQ"/>
