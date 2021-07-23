@@ -10,7 +10,7 @@ import UIKit
 class ReferViewController: UIViewController {
     @IBOutlet weak var segmentControl: UISegmentedControl!
     @IBOutlet weak var tblView: ReferTableView!
-    var successScreen = ReferSuccessPopupHelper()
+    //var successScreen = ReferSuccessPopupHelper()
     var termsViewHelper = TermsViewHelper()
     override func viewDidLoad() {
         super.viewDidLoad()

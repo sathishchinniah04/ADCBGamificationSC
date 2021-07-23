@@ -12,7 +12,7 @@ class CustomNavViewController: UINavigationController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let ststusBarH = UIApplication.shared.statusBarFrame.size.height+20
+        let ststusBarH = UIApplication.shared.statusBarFrame.size.height+0
         let topView = UIView(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: ststusBarH))
         topView.backgroundColor = .clear//.customYellowColor()
         self.view.addSubview(topView)

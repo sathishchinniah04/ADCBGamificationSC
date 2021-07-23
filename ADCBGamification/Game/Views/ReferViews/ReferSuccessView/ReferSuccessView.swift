@@ -28,7 +28,7 @@ class ReferSuccessView: UIView {
     func populateView(info: SpinAssignReward?,action:((ReferSuccessViewAction)->Void)?) {
         self.handle = action
         appearanceSetup()
-        setupLabel(info: info)
+       // setupLabel(info: info)
     }
     
     func setupLabel(info: SpinAssignReward?) {

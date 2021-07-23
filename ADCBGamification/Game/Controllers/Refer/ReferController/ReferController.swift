@@ -15,7 +15,7 @@ class ReferController: UIViewController {
     @IBOutlet weak var inviteButton: NeumorphicButton!
     //@IBOutlet weak var chooseContactButton: ReferContactButton!
     @IBOutlet weak var activityIndicatorView: UIActivityIndicatorView!
-    var referSuccessView = ReferSuccessPopupHelper()
+    //var referSuccessView = ReferSuccessPopupHelper()
     var referCode: String = ""
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -58,12 +58,12 @@ class ReferController: UIViewController {
     
     
     func onRecordSuccess(info: ReferCode) {
-        self.referSuccessView.show {
-            DispatchQueue.main.async {
-                self.referSuccessView.animateAndRemove()
-                self.navigationController?.popViewController(animated: true)
-            }
-        }
+//        self.referSuccessView.show {
+//            DispatchQueue.main.async {
+//                self.referSuccessView.animateAndRemove()
+//                self.navigationController?.popViewController(animated: true)
+//            }
+//        }
     }
     
     func onRecordFailure(info: ReferCode) {

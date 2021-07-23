@@ -72,9 +72,6 @@
 		3320FFC92682EBC4001809AA /* NeumorphicButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3320FF7A2682EBC3001809AA /* NeumorphicButton.xib */; };
 		3320FFCA2682EBC4001809AA /* NeumorphicButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3320FF7B2682EBC3001809AA /* NeumorphicButton.swift */; };
 		3320FFCB2682EBC4001809AA /* ReferViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3320FF7D2682EBC3001809AA /* ReferViewController.swift */; };
-		3320FFCC2682EBC4001809AA /* ReferSuccessPopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3320FF7F2682EBC3001809AA /* ReferSuccessPopupView.swift */; };
-		3320FFCD2682EBC4001809AA /* ReferSuccessPopupHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3320FF802682EBC3001809AA /* ReferSuccessPopupHelper.swift */; };
-		3320FFCE2682EBC4001809AA /* ReferSuccessPopupView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3320FF812682EBC3001809AA /* ReferSuccessPopupView.xib */; };
 		3320FFCF2682EBC4001809AA /* ReferTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3320FF822682EBC4001809AA /* ReferTableView.swift */; };
 		3320FFD02682EBC4001809AA /* HistoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3320FF852682EBC4001809AA /* HistoryTableViewCell.swift */; };
 		3320FFD12682EBC4001809AA /* NewRefferView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3320FF862682EBC4001809AA /* NewRefferView.xib */; };
@@ -272,9 +269,6 @@
 		3320FF7A2682EBC3001809AA /* NeumorphicButton.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NeumorphicButton.xib; sourceTree = "<group>"; };
 		3320FF7B2682EBC3001809AA /* NeumorphicButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NeumorphicButton.swift; sourceTree = "<group>"; };
 		3320FF7D2682EBC3001809AA /* ReferViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReferViewController.swift; sourceTree = "<group>"; };
-		3320FF7F2682EBC3001809AA /* ReferSuccessPopupView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReferSuccessPopupView.swift; sourceTree = "<group>"; };
-		3320FF802682EBC3001809AA /* ReferSuccessPopupHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReferSuccessPopupHelper.swift; sourceTree = "<group>"; };
-		3320FF812682EBC3001809AA /* ReferSuccessPopupView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ReferSuccessPopupView.xib; sourceTree = "<group>"; };
 		3320FF822682EBC4001809AA /* ReferTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReferTableView.swift; sourceTree = "<group>"; };
 		3320FF852682EBC4001809AA /* HistoryTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryTableViewCell.swift; sourceTree = "<group>"; };
 		3320FF862682EBC4001809AA /* NewRefferView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NewRefferView.xib; sourceTree = "<group>"; };
@@ -626,7 +620,6 @@
 				3320FF732682EBC3001809AA /* ReferIntroController */,
 				3320FF752682EBC3001809AA /* Neumorphic */,
 				3320FF7C2682EBC3001809AA /* ReferController */,
-				3320FF7E2682EBC3001809AA /* SuccessPopup */,
 				3320FF822682EBC4001809AA /* ReferTableView.swift */,
 				3320FF832682EBC4001809AA /* Views */,
 			);
@@ -675,16 +668,6 @@
 				338116722698A39800C8F35E /* ReferController.swift */,
 			);
 			path = ReferController;
-			sourceTree = "<group>";
-		};
-		3320FF7E2682EBC3001809AA /* SuccessPopup */ = {
-			isa = PBXGroup;
-			children = (
-				3320FF7F2682EBC3001809AA /* ReferSuccessPopupView.swift */,
-				3320FF802682EBC3001809AA /* ReferSuccessPopupHelper.swift */,
-				3320FF812682EBC3001809AA /* ReferSuccessPopupView.xib */,
-			);
-			path = SuccessPopup;
 			sourceTree = "<group>";
 		};
 		3320FF832682EBC4001809AA /* Views */ = {
@@ -1385,7 +1368,6 @@
 				33CD2198269AF4DD00CB71AC /* PredictSuccessView.xib in Resources */,
 				33542A67269CA76A008CE8C2 /* CompletedTableViewCell.xib in Resources */,
 				3320FFC92682EBC4001809AA /* NeumorphicButton.xib in Resources */,
-				3320FFCE2682EBC4001809AA /* ReferSuccessPopupView.xib in Resources */,
 				33E158D426AA530D00B0615B /* OpenSans-Italic.ttf in Resources */,
 				3320FFAD2682EBC4001809AA /* GamificationAssets.xcassets in Resources */,
 				33EDB0EF2692D0A70040DCD4 /* CustomNavView.xib in Resources */,
@@ -1474,7 +1456,6 @@
 				3320FFB52682EBC4001809AA /* IQInvocation.swift in Sources */,
 				3320FFC12682EBC4001809AA /* IQUIViewController+Additions.swift in Sources */,
 				33FC318426958D2F00868D9E /* Utility.swift in Sources */,
-				3320FFCC2682EBC4001809AA /* ReferSuccessPopupView.swift in Sources */,
 				3320FFA22682EBC4001809AA /* UIView+Extension.swift in Sources */,
 				3320FFB82682EBC4001809AA /* IQKeyboardManagerConstants.swift in Sources */,
 				3320FFAE2682EBC4001809AA /* IQTextView.swift in Sources */,
@@ -1538,7 +1519,6 @@
 				3320FFAA2682EBC4001809AA /* TermsViewHelper.swift in Sources */,
 				3320FFD62682EBC4001809AA /* SpinerContainerHelper.swift in Sources */,
 				3320FFB42682EBC4001809AA /* IQUIView+IQKeyboardToolbar.swift in Sources */,
-				3320FFCD2682EBC4001809AA /* ReferSuccessPopupHelper.swift in Sources */,
 				33FC31A02695B08300868D9E /* GameListController.swift in Sources */,
 				335933AC26941F0E00CF6AAF /* CustomNeumophicButton.swift in Sources */,
 				3381168C2699A78600C8F35E /* FetchedContacts.swift in Sources */,
