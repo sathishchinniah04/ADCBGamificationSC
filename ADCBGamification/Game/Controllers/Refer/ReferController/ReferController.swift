@@ -28,6 +28,7 @@ class ReferController: UIViewController {
         self.chooseContactButton.buttonState(isPressed: true)
         self.chooseContactButton.setButtonTitle(title: "Choose Contact",titleColor: TTUtils.uiColor(from: 0x222165))
         self.chooseContactButton.populateView { (done) in
+            self.chooseContactButton.setButtonTitle(title: "Choose Contact",titleColor: TTUtils.uiColor(from: 0x222165))
             self.openContactList()
         }
     }

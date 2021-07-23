@@ -33,12 +33,13 @@ class NetworkManager {
         guard let ur = URL(string: url) else { complition?(nil, .invalidUrl); return}
         let urReq = urlReq ?? URLRequest(url: ur)
         print("urlReq \(urReq)")
+        print("urlReq \(urReq)")
         var req = createCommonRequest(url: ur, urlReq: urReq, methodType: .post)
         if let reData = requestData {
             print("req pac = \(reData)")
             let jsonData = try? JSONSerialization.data(withJSONObject: reData, options:[.fragmentsAllowed])
-//            let intoStr = String(data: jsonData!, encoding: .utf8)
-//            print("req pac into json formate = \(intoStr!)")
+            let intoStr = String(data: jsonData!, encoding: .utf8)
+            print("req pac into json formate = \(intoStr!)")
             req.httpBody = jsonData//Data(intoStr!.utf8)
     }
         task(req: req, complition: complition)
@@ -57,12 +58,21 @@ class NetworkManager {
         let task = URLSession.shared.dataTask(with: req) { (data, resp, error) in
             printStatement(req: req, data: data, resp: resp, error: error)
             parseData(data: data, resp: resp, error: error, complition: complition)
+            if let httpResponse = resp as? HTTPURLResponse{
+                if  let dict = httpResponse.allHeaderFields as? [String: String] {
+                let message = dict["Share_Message"]
+                    print("message is \(String(describing: message))")
+                    Constants.referMessage = message ?? ""
+                }
+            }
         }
         task.resume()
     }
     
     private static func printStatement(req: URLRequest, data: Data?, resp: URLResponse?, error: Error?) {
         print("\n\n\n")
+        
+        print("responce is \(resp)\n\n\n")
         if let data = data {
             print("data into String \(String(data: data, encoding: .utf8))")
         }

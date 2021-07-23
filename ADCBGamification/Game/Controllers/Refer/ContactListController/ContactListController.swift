@@ -31,8 +31,20 @@ class ContactListController: UIViewController {
             self.inviteApiCall()
         }
         //neumorphicEffect()
+        
+        delete()
+        chooseContactButton.textField.keyboardType = .phonePad
     }
     
+    func delete() {
+        DispatchQueue.main.async {
+
+        self.unHideInviteButon()
+        
+        self.inviteButton.isUserInteractionEnabled = true
+        self.inviteButton.alpha = 1.0
+        }
+    }
     
     
     func fetchContact() {
@@ -46,14 +58,28 @@ class ContactListController: UIViewController {
     }
     
     func inviteApiCall() {
+        
+        self.bPart = self.chooseContactButton.textField.text!
+        if self.bPart!.isEmpty {
+            self.view.showAlert(message: "Please eneter a valid mobile number") { (done) in
+                self.inviteButton.setButtonTitle(title: "Invite", titleColor: UIColor.darkBlueColor())
+            }
+            return}
+        
         let no = bPart?.replacingOccurrences(of: " ", with: "").replacingOccurrences(of: "-", with: "")
         ReferViewModel.recordRefer(referCode: self.referCode, bParty: no ?? "") { (data) in
             print("data is \(data)")
+        }
+        DispatchQueue.main.asyncAfter(deadline: .now()+1) {
             DispatchQueue.main.async {
-                self.referSuccessViewHelper.loadScreen(info: nil){_ in
-                    self.referSuccessViewHelper.animateAndRemove()
-                    self.dismiss(animated: true, completion: nil)
-                    self.dismiss(animated: true, completion: nil)
+                self.referSuccessViewHelper.loadScreen(info: nil){ action in
+                    switch action {
+                    case .homePageTapped:
+                        self.referSuccessViewHelper.animateAndRemove()
+                        self.dismiss(animated: true, completion: nil)   
+                    case .referAgain:
+                        self.referSuccessViewHelper.animateAndRemove()
+                    }
                 }
             }
         }
@@ -74,7 +100,7 @@ class ContactListController: UIViewController {
             self.chooseContactButton.textField.clearButtonMode = .always
             self.chooseContactButton.textField.becomeFirstResponder()
             self.neumorphicEffect()
-            self.inviteButtonContainerView.isHidden = true
+            self.inviteButtonContainerView.isHidden = false
         }
     }
     
@@ -101,6 +127,9 @@ class ContactListController: UIViewController {
         switch action {
         case .onEdit(let text):
             self.onEditionTextField(text: text)
+            self.chooseContactButton.titleLabel.alpha = 1.0
+            self.chooseContactButton.titleLabel.isHidden = false
+            self.chooseContactButton.titleLabel.text = "Enter a contact name or mobile number"
         case .cleared:
             print("text field cleared")
             self.newList = self.contacts

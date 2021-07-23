@@ -63,7 +63,7 @@ class PredictMatchController: UIViewController {
                 self.navigationController?.popToRootViewController(animated: true)
             }
         case .share:
-            let message = "Hey! I have predicted a game the match is *\(teamA)* and *\(teamB)*."
+            let message = Constants.referMessage
             self.openActivityController(text: message)
         default:
             break
@@ -73,6 +73,7 @@ class PredictMatchController: UIViewController {
     @IBAction func submitAnswer() {
         guard let gId = game?.gameId else { return }
         guard let event = eventsList else { return }
+        Constants.referMessage = ""
         PredictViewModel.submitAnswer(gameId: gId, event: event, index: selectedIndex, complition: onSuccess)
         print("submit ans")
     }

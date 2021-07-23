@@ -15,11 +15,15 @@ class Constants {
     static let spinAssignReward = "\(baseUrl)Gamification-1.0/Gamification/executeEvent"
     static let predictgameDetail = "\(baseUrl)Gamification-1.0/Gamification/gameEngine/predictionGameDetails/"
     static let getReferCodeUrl = "\(baseUrl)Gamification-1.0/Gamification/gameManagement/game/referral/"
-    static let recordReferUrl = "\(baseUrl)Gamification-1.0/Gamification/gameManagement/game/recordReferral/"
+    static let recordReferUrl = "\(baseUrl)Gamification-1.0/Gamification/gameManagement/game/referral/"
     static let sendNotificationUrl = "\(baseUrl)Gamification-1.0/Gamification/gameManagement/game/referral/"
     
-    static let spinGetSpinOffer = "http://cvm-game.20.74.146.216.nip.io/Gamification-1.0/Gamification/gameEngine/executeGame"
     
+    
+    //http://cvm-game.20.74.146.216.nip.io/Gamification-1.0/Gamification/gameManagement/game/referral/activation/notifications
+    
+    static let spinGetSpinOffer = "http://cvm-game.20.74.146.216.nip.io/Gamification-1.0/Gamification/gameEngine/executeGame"
+    static var referMessage = ""
     
     static var leagueName:String = ""
     //static let spinAssignReward = "http://cvm-game.20.74.146.216.nip.io/Gamification-1.0/Gamification/executeEvent"

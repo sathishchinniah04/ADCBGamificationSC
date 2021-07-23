@@ -25,22 +25,34 @@ class ReferViewModel {
     }
     
     static func recordRefer(referCode: String, bParty: String ,complition:((ReferCode)->Void)?) {
-        let service = "activation"
+        let service = "activation/notifications"
         let urlStr = Constants.recordReferUrl+service
         guard let url = URL(string: urlStr) else { return }
         var urlReq = URLRequest(url: url)
         urlReq.setValue(Utility.getRandonNo(), forHTTPHeaderField: "requestId")
         urlReq.setValue(StoreManager.shared.msisdn, forHTTPHeaderField: "customerId")
         urlReq.setValue(StoreManager.shared.language, forHTTPHeaderField: "language")
-        urlReq.setValue(bParty, forHTTPHeaderField: "msisdn")
-        urlReq.setValue(referCode, forHTTPHeaderField: "referralCode")
-        NetworkManager.postRequest(struct: ReferCode.self, url: urlStr, urlReq: urlReq) { (data , error) in
+        //urlReq.setValue(bParty, forHTTPHeaderField: "msisdn")
+        //urlReq.setValue(referCode, forHTTPHeaderField: "referralCode")
+    
+        let dict = ["phoneNumber": bParty,"name":""]
+        
+        NetworkManager.postRequest(struct: ReferCode.self, url: urlStr, urlReq: urlReq, requestData: dict) { (data, error) in
             if let dat = data {
                 print("data is \(dat)")
                 complition?(dat)
             }
-            print("Error is \(error)")
         }
+        
+        //urlReq.setValue(bParty, forHTTPHeaderField: "msisdn")
+        //urlReq.setValue(referCode, forHTTPHeaderField: "referralCode")
+//        NetworkManager.postRequest(struct: ReferCode.self, url: urlStr, urlReq: urlReq) { (data , error) in
+//            if let dat = data {
+//                print("data is \(dat)")
+//                complition?(dat)
+//            }
+//            print("Error is \(error)")
+//        }
     }
     
     static func notifyToUser() {
