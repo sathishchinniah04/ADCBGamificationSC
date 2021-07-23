@@ -25,6 +25,8 @@ class ContactListController: UIViewController {
         buttonSetup()
         setupTableView()
         fetchContact()
+        inviteButton.alpha = 0.3
+        inviteButton.isUserInteractionEnabled = false
         inviteButton.populateView { (done) in
             self.inviteApiCall()
         }
@@ -141,6 +143,8 @@ class ContactListController: UIViewController {
         self.unHideInviteButon()
         self.handle?(contact.firstName + " " + contact.lastName, contact.telephone)
         self.bPart = contact.telephone
+        self.inviteButton.isUserInteractionEnabled = true
+        self.inviteButton.alpha = 1.0
        // self.dismiss(animated: true, completion: nil)
     }
     
