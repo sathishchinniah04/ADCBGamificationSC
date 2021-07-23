@@ -8,6 +8,14 @@
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="OpenSans-Regular.ttf">
+            <string>OpenSans-Regular</string>
+        </array>
+        <array key="OpenSans-SemiBold.ttf">
+            <string>OpenSans-SemiBold</string>
+        </array>
+    </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="QuestionView" customModule="ADCBGamification" customModuleProvider="target">
             <connections>
@@ -29,40 +37,45 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="E3T-So-Z93">
                     <rect key="frame" x="0.0" y="0.0" width="414" height="393"/>
                     <subviews>
-                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="5a1-BL-xlG">
-                            <rect key="frame" x="0.0" y="0.0" width="414" height="347"/>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="5a1-BL-xlG">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="354.5"/>
                             <subviews>
-                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="JNE-4t-tEu">
-                                    <rect key="frame" x="147" y="0.0" width="120.5" height="50"/>
+                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="13" translatesAutoresizingMaskIntoConstraints="NO" id="wUu-E3-XfY">
+                                    <rect key="frame" x="56.5" y="0.0" width="301.5" height="90.5"/>
                                     <subviews>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="D0M-qR-YQ9">
-                                            <rect key="frame" x="0.0" y="0.0" width="120.5" height="50"/>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="JNE-4t-tEu">
+                                            <rect key="frame" x="87.5" y="0.0" width="126.5" height="50"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Question 1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KP8-PO-nts">
-                                                    <rect key="frame" x="20" y="8" width="80.5" height="34"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="10"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="D0M-qR-YQ9">
+                                                    <rect key="frame" x="0.0" y="0.0" width="126.5" height="50"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Question 1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KP8-PO-nts">
+                                                            <rect key="frame" x="20" y="8" width="86.5" height="34"/>
+                                                            <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="14"/>
+                                                            <color key="textColor" red="0.10980392160000001" green="0.10980392160000001" blue="0.10980392160000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <color key="backgroundColor" red="0.8666666666666667" green="0.8666666666666667" blue="0.8666666666666667" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="bottom" secondItem="KP8-PO-nts" secondAttribute="bottom" constant="8" id="acy-2e-j7W"/>
+                                                        <constraint firstItem="KP8-PO-nts" firstAttribute="leading" secondItem="D0M-qR-YQ9" secondAttribute="leading" constant="20" id="lzK-6c-wxQ"/>
+                                                        <constraint firstAttribute="trailing" secondItem="KP8-PO-nts" secondAttribute="trailing" constant="20" id="n5e-e4-VDM"/>
+                                                        <constraint firstItem="KP8-PO-nts" firstAttribute="top" secondItem="D0M-qR-YQ9" secondAttribute="top" constant="8" id="oMA-cC-MTs"/>
+                                                    </constraints>
+                                                </view>
                                             </subviews>
-                                            <color key="backgroundColor" systemColor="systemGray4Color"/>
-                                            <constraints>
-                                                <constraint firstAttribute="bottom" secondItem="KP8-PO-nts" secondAttribute="bottom" constant="8" id="acy-2e-j7W"/>
-                                                <constraint firstItem="KP8-PO-nts" firstAttribute="leading" secondItem="D0M-qR-YQ9" secondAttribute="leading" constant="20" id="lzK-6c-wxQ"/>
-                                                <constraint firstAttribute="trailing" secondItem="KP8-PO-nts" secondAttribute="trailing" constant="20" id="n5e-e4-VDM"/>
-                                                <constraint firstItem="KP8-PO-nts" firstAttribute="top" secondItem="D0M-qR-YQ9" secondAttribute="top" constant="8" id="oMA-cC-MTs"/>
-                                            </constraints>
-                                        </view>
+                                        </stackView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="who is going to win this match?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R73-1I-dve">
+                                            <rect key="frame" x="0.0" y="63" width="301.5" height="27.5"/>
+                                            <fontDescription key="fontDescription" name="OpenSans-SemiBold" family="Open Sans" pointSize="20"/>
+                                            <color key="textColor" red="0.1333333333" green="0.12941176469999999" blue="0.33725490200000002" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                     </subviews>
                                 </stackView>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="who is going to win this match?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R73-1I-dve">
-                                    <rect key="frame" x="101.5" y="70" width="211" height="17"/>
-                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
-                                    <nil key="textColor"/>
-                                    <nil key="highlightedColor"/>
-                                </label>
                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="3Qs-d2-pNa">
-                                    <rect key="frame" x="20" y="107" width="374" height="240"/>
+                                    <rect key="frame" x="20" y="114.5" width="374" height="240"/>
                                     <subviews>
                                         <view tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qAX-Bm-QJh" customClass="CustomNeumophicButton" customModule="ADCBGamification" customModuleProvider="target">
                                             <rect key="frame" x="0.0" y="0.0" width="374" height="45"/>
@@ -115,9 +128,6 @@
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemGray4Color">
-            <color red="0.81960784313725488" green="0.81960784313725488" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

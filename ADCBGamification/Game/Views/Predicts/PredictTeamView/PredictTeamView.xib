@@ -7,6 +7,20 @@
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="OpenSans-ExtraBold.ttf">
+            <string>OpenSans-ExtraBold</string>
+        </array>
+        <array key="OpenSans-Light.ttf">
+            <string>OpenSans-Light</string>
+        </array>
+        <array key="OpenSans-Regular.ttf">
+            <string>OpenSans-Regular</string>
+        </array>
+        <array key="OpenSans-SemiBold.ttf">
+            <string>OpenSans-SemiBold</string>
+        </array>
+    </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PredictTeamView" customModule="ADCBGamification" customModuleProvider="target">
             <connections>
@@ -31,16 +45,16 @@
                     <rect key="frame" x="0.0" y="0.0" width="661" height="247"/>
                     <subviews>
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="17n-d9-AOt">
-                            <rect key="frame" x="0.0" y="0.0" width="661" height="183"/>
+                            <rect key="frame" x="0.0" y="0.0" width="661" height="188"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="UAE League Cup" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JDG-lh-POg">
-                                    <rect key="frame" x="0.0" y="0.0" width="661" height="19"/>
-                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
-                                    <nil key="textColor"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="661" height="22"/>
+                                    <fontDescription key="fontDescription" name="OpenSans-SemiBold" family="Open Sans" pointSize="16"/>
+                                    <color key="textColor" red="0.1333333333" green="0.12941176469999999" blue="0.33725490200000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="Yx2-sK-r3x">
-                                    <rect key="frame" x="0.0" y="19" width="661" height="152"/>
+                                    <rect key="frame" x="0.0" y="22" width="661" height="152"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fe8-du-Nac">
                                             <rect key="frame" x="0.0" y="0.0" width="260" height="152"/>
@@ -52,9 +66,9 @@
                                                             <rect key="frame" x="90" y="0.0" width="60" height="60"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ktw-fR-Lyy">
-                                                                    <rect key="frame" x="5" y="21.5" width="50" height="17"/>
-                                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
-                                                                    <nil key="textColor"/>
+                                                                    <rect key="frame" x="5" y="20.5" width="50" height="19.5"/>
+                                                                    <fontDescription key="fontDescription" name="OpenSans-ExtraBold" family="Open Sans" pointSize="14"/>
+                                                                    <color key="textColor" red="0.1333333333" green="0.12941176469999999" blue="0.33725490200000002" alpha="1" colorSpace="calibratedRGB"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="l3I-TR-hVN">
@@ -76,9 +90,9 @@
                                                             </constraints>
                                                         </view>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E7q-SX-7G1">
-                                                            <rect key="frame" x="104.5" y="117.5" width="31" height="14.5"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                                            <nil key="textColor"/>
+                                                            <rect key="frame" x="105" y="115.5" width="30.5" height="16.5"/>
+                                                            <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="12"/>
+                                                            <color key="textColor" red="0.11372549019607843" green="0.14509803921568626" blue="0.1764705882352941" alpha="1" colorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
@@ -116,9 +130,9 @@
                                                             <rect key="frame" x="90" y="0.0" width="60" height="60"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kT1-Er-6qk">
-                                                                    <rect key="frame" x="5" y="21.5" width="50" height="17"/>
-                                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
-                                                                    <nil key="textColor"/>
+                                                                    <rect key="frame" x="5" y="20.5" width="50" height="19.5"/>
+                                                                    <fontDescription key="fontDescription" name="OpenSans-ExtraBold" family="Open Sans" pointSize="14"/>
+                                                                    <color key="textColor" red="0.1333333333" green="0.12941176469999999" blue="0.33725490200000002" alpha="1" colorSpace="calibratedRGB"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0cO-BC-jtH">
@@ -142,9 +156,9 @@
                                                             </constraints>
                                                         </view>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tgf-zD-tmd">
-                                                            <rect key="frame" x="104.5" y="117.5" width="31" height="14.5"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                                            <nil key="textColor"/>
+                                                            <rect key="frame" x="105" y="115.5" width="30.5" height="16.5"/>
+                                                            <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="12"/>
+                                                            <color key="textColor" red="0.1137254902" green="0.1450980392" blue="0.1764705882" alpha="1" colorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
@@ -161,9 +175,9 @@
                                     </subviews>
                                 </stackView>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Today, starts in 02hr 30mins" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7uE-oD-soG">
-                                    <rect key="frame" x="0.0" y="171" width="661" height="12"/>
-                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="10"/>
-                                    <color key="textColor" red="0.10980392160000001" green="0.10980392160000001" blue="0.10980392160000001" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
+                                    <rect key="frame" x="0.0" y="174" width="661" height="14"/>
+                                    <fontDescription key="fontDescription" name="OpenSans-Light" family="Open Sans" pointSize="10"/>
+                                    <color key="textColor" red="0.10980392156862745" green="0.10980392156862745" blue="0.10980392156862745" alpha="1" colorSpace="calibratedRGB"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                             </subviews>

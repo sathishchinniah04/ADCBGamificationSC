@@ -12,12 +12,12 @@ class CustomNavViewController: UINavigationController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let ststusBarH = UIApplication.shared.statusBarFrame.size.height
+        let ststusBarH = UIApplication.shared.statusBarFrame.size.height+20
         let topView = UIView(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: ststusBarH))
-        topView.backgroundColor = .customYellowColor()
+        topView.backgroundColor = .clear//.customYellowColor()
         self.view.addSubview(topView)
         //self.delegate = self
-        nav.backgroundColor = .customYellowColor()
+        nav.backgroundColor = .clear//.customYellowColor()
         nav.frame = CGRect(x: 0, y: ststusBarH, width: UIScreen.main.bounds.width, height: 45)
         nav.populateView(sController: self,complition: navHandler(action:))
         self.view.addSubview(nav)

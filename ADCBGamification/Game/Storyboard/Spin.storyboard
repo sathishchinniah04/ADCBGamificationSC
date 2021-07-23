@@ -21,18 +21,18 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="493"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Clouds" translatesAutoresizingMaskIntoConstraints="NO" id="vJN-O7-seS">
+                                <rect key="frame" x="0.0" y="54" width="300" height="63"/>
+                            </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Spin" translatesAutoresizingMaskIntoConstraints="NO" id="SGV-Kl-EeD">
-                                <rect key="frame" x="30" y="139" width="354" height="354"/>
+                                <rect key="frame" x="30" y="169" width="354" height="354"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="SGV-Kl-EeD" secondAttribute="height" multiplier="1:1" id="zae-vP-IuS"/>
                                 </constraints>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wNb-S9-CRs" customClass="ExpireView" customModule="ADCBGamification" customModuleProvider="target">
-                                <rect key="frame" x="30" y="772" width="354" height="50"/>
+                                <rect key="frame" x="30" y="528" width="354" height="294"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" placeholder="YES" id="79e-xM-Joy"/>
-                                </constraints>
                             </view>
                             <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fIY-xv-g70">
                                 <rect key="frame" x="0.0" y="89" width="414" height="773"/>
@@ -63,14 +63,17 @@
                             <constraint firstItem="1au-yG-VVq" firstAttribute="centerY" secondItem="2DE-sR-4BU" secondAttribute="centerY" id="Eex-H7-I2m"/>
                             <constraint firstItem="peg-KZ-704" firstAttribute="bottom" secondItem="fIY-xv-g70" secondAttribute="bottom" id="FYx-7v-906"/>
                             <constraint firstItem="peg-KZ-704" firstAttribute="trailing" secondItem="fIY-xv-g70" secondAttribute="trailing" id="HCY-Ku-Bq8"/>
+                            <constraint firstItem="vJN-O7-seS" firstAttribute="leading" secondItem="peg-KZ-704" secondAttribute="leading" id="Jpl-Wq-fbj"/>
+                            <constraint firstItem="vJN-O7-seS" firstAttribute="top" secondItem="peg-KZ-704" secondAttribute="top" constant="10" id="Llh-e3-3db"/>
                             <constraint firstItem="otW-Vk-P3R" firstAttribute="centerX" secondItem="2DE-sR-4BU" secondAttribute="centerX" id="WKj-xY-sdZ"/>
                             <constraint firstItem="wNb-S9-CRs" firstAttribute="leading" secondItem="peg-KZ-704" secondAttribute="leading" constant="30" id="Ycx-0X-YRR"/>
-                            <constraint firstItem="SGV-Kl-EeD" firstAttribute="bottom" secondItem="O5H-9N-Ue9" secondAttribute="bottom" id="adi-Ti-GMR"/>
+                            <constraint firstItem="SGV-Kl-EeD" firstAttribute="bottom" secondItem="O5H-9N-Ue9" secondAttribute="bottom" constant="30" id="adi-Ti-GMR"/>
                             <constraint firstItem="O5H-9N-Ue9" firstAttribute="top" secondItem="2DE-sR-4BU" secondAttribute="top" id="avL-4s-3KO"/>
                             <constraint firstItem="peg-KZ-704" firstAttribute="trailing" secondItem="O5H-9N-Ue9" secondAttribute="trailing" id="cj8-00-lTf"/>
                             <constraint firstItem="SGV-Kl-EeD" firstAttribute="centerX" secondItem="2DE-sR-4BU" secondAttribute="centerX" id="eW4-Jf-JSq"/>
                             <constraint firstItem="peg-KZ-704" firstAttribute="bottom" secondItem="wNb-S9-CRs" secondAttribute="bottom" constant="40" id="fBa-Fh-GSs"/>
                             <constraint firstItem="O5H-9N-Ue9" firstAttribute="height" secondItem="2DE-sR-4BU" secondAttribute="height" multiplier="0.55" id="fOO-UA-MxV"/>
+                            <constraint firstItem="wNb-S9-CRs" firstAttribute="top" secondItem="O5H-9N-Ue9" secondAttribute="bottom" constant="35" id="icH-BI-MOj"/>
                             <constraint firstItem="fIY-xv-g70" firstAttribute="leading" secondItem="peg-KZ-704" secondAttribute="leading" id="vTH-kJ-12B"/>
                         </constraints>
                     </view>
@@ -87,6 +90,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Clouds" width="300" height="63"/>
         <image name="CurveClip" width="187.5" height="211"/>
         <image name="Spin" width="318" height="319"/>
         <systemColor name="systemBackgroundColor">

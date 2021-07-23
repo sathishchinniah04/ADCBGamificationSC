@@ -21,12 +21,13 @@ public class CarnivalWheelSlice: FortuneWheelSliceProtocol {
     public var title: String
     public var degree: CGFloat = 0.0
     
-    var lightGra = UIColor(red: 220.0/256.0, green: 220.0/256.0, blue: 220.0/256.0, alpha: 1)
-    var offWhite = UIColor(red: 253.0/256.0, green: 253.0/256.0, blue: 253.0/256.0, alpha: 1)
+    var lightGra = TTUtils.uiColor(from:0xDDDDDD)
+    //UIColor(red: 220.0/256.0, green: 220.0/256.0, blue: 220.0/256.0, alpha: 1)
+    var offWhite = TTUtils.uiColor(from:0xFFFFFF)//UIColor(red: 253.0/256.0, green: 253.0/256.0, blue: 253.0/256.0, alpha: 1)
     
     public var backgroundColor: UIColor? {
         switch style {
-        case .brickRed: return UIColor.lightText//TTUtils.uiColor(from:0xE27230)
+        case .brickRed: return TTUtils.uiColor(from:0xE27230)
         case .sandYellow: return lightGra//TTUtils.uiColor(from:0xFFF7C2)
         case .babyBlue: return UIColor.blue//TTUtils.uiColor(from:0x93D0C4)
         case .deepBlue: return offWhite//TTUtils.uiColor(from:0xDF190D)
@@ -47,14 +48,17 @@ public class CarnivalWheelSlice: FortuneWheelSliceProtocol {
     }
         
     public var font: UIFont {
+        let font = UIFont(name: "OpenSans-ExtraBold", size: 13.0) ?? UIFont.boldSystemFont(ofSize: 15)
         switch style {
-        case .brickRed: return UIFont(name: "Montserrat-Bold", size: 14.0) ?? UIFont.boldSystemFont(ofSize: 15)
+        
+        
+        case .brickRed: return font
             //UIFont.boldSystemFont(ofSize: 25)
-        case .sandYellow: return UIFont(name: "Montserrat-Bold", size: 14.0) ?? UIFont.boldSystemFont(ofSize: 15)
+        case .sandYellow: return font
             //UIFont.boldSystemFont(ofSize: 25)
-        case .babyBlue: return UIFont(name: "Montserrat-Bold", size: 14.0) ?? UIFont.boldSystemFont(ofSize: 15)
+        case .babyBlue: return font
             //UIFont.boldSystemFont(ofSize: 25)
-        case .deepBlue: return UIFont(name: "Montserrat-Bold", size: 14.0) ?? UIFont.boldSystemFont(ofSize: 15)
+        case .deepBlue: return font
             
         }
     }
