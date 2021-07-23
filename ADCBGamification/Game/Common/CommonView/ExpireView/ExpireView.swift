@@ -96,7 +96,7 @@ class ExpireView: UIView {
     
     func onLock(game: Games) {
         button.alpha = 0.15
-        //button.isUserInteractionEnabled = false
+        button.isUserInteractionEnabled = false
         let date = game.executionPeriod?.startDateTime ?? ""
         hourMinteAlignmentCheck(date: date, value: "Available in")
     }
