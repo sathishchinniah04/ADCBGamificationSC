@@ -19,8 +19,14 @@ class KnowMoreView: UIView {
         return UINib(nibName: "KnowMoreView", bundle: Bundle(for: Self.self)).instantiate(withOwner: self, options: nil).first as! KnowMoreView
     }
     
-    func populateView() {
+    func populateView(info: SpinAssignReward?) {
         appearenceSetup()
+        labelSetup(info: info)
+    }
+    
+    func labelSetup(info: SpinAssignReward?) {
+        titleLabel.text = info?.responseObject?.first?.displayDetails?.first?.name ?? ""
+        subTitleLabel.text = info?.responseObject?.first?.displayDetails?.first?.description ?? ""
     }
     
     func appearenceSetup() {

@@ -30,7 +30,7 @@
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="BTl-Aq-mfX">
                                                     <rect key="frame" x="39.5" y="0.0" width="120" height="120"/>
                                                     <subviews>
-                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3K2-sK-e7I">
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ohNo" translatesAutoresizingMaskIntoConstraints="NO" id="3K2-sK-e7I">
                                                             <rect key="frame" x="0.0" y="0.0" width="120" height="120"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="120" id="sls-0e-Lfv"/>
@@ -109,6 +109,7 @@ Redeem this voucher instore and for online orders.</string>
         </view>
     </objects>
     <resources>
+        <image name="ohNo" width="52.5" height="52.5"/>
         <image name="spinClose" width="22" height="22"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

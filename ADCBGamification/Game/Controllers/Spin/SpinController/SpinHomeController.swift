@@ -17,6 +17,7 @@ class SpinHomeController: UIViewController {
     var game: Games?
     var isDirectLoad: Bool = false
     var spinOffers: SpinOffers?
+    var spinAssignReward: SpinAssignReward?
     var spinSuccessView = SpinSuccessViewHelper()
     var spinFailView = SpinFailViewHelper()
     override func viewDidLoad() {
@@ -26,7 +27,7 @@ class SpinHomeController: UIViewController {
         if let gam = game {
             updateOnResponce(game: gam, error: nil)
         }
-        
+        activityIndicatorView.startAnimating()
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -122,6 +123,7 @@ class SpinHomeController: UIViewController {
     }
     
     func scalingSpinerView(v: UIView) {
+        self.activityIndicatorView.stopAnimating()
         let v = v
         
         let scaleX = spinDummyImgView.frame.size.width/v.frame.size.width
@@ -150,6 +152,7 @@ class SpinHomeController: UIViewController {
     func assignRewards() {
         guard let gameId = self.game?.gameId else { return }
         SpinViewOfferVM.assignReward(gameId: gameId) { (spinAssignReward) in
+            self.spinAssignReward = spinAssignReward
             if let inde = spinAssignReward.responseObject?.first?.achievmentId  {
                 self.spinerView.stopAnimationAtIndex(achivementId: inde, complition: self.spinnerStopped(isPass:))
             } else {
@@ -184,7 +187,7 @@ class SpinHomeController: UIViewController {
             self.navigationController?.popToRootViewController(animated: true)
         case .knowMoreTapped:
             print("Know more tapped")
-            KnowMoreViewHelper.show()
+            KnowMoreViewHelper.show(info: self.spinAssignReward)
         case .rewardTapped:
             print("Reward  tapped")
         case .spinAgainTapped:
