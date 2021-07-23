@@ -12,8 +12,8 @@ class ReferController: UIViewController {
     @IBOutlet weak var referCodeView: UIView!
     @IBOutlet weak var referCodeLabel: UILabel!
     @IBOutlet weak var shareButton: NeumorphicButton!
-    @IBOutlet weak var inviteButton: UIButton!
-    @IBOutlet weak var chooseContactButton: ReferContactButton!
+    @IBOutlet weak var inviteButton: NeumorphicButton!
+    //@IBOutlet weak var chooseContactButton: ReferContactButton!
     @IBOutlet weak var activityIndicatorView: UIActivityIndicatorView!
     var referSuccessView = ReferSuccessPopupHelper()
     var referCode: String = ""
@@ -23,10 +23,11 @@ class ReferController: UIViewController {
         self.neumorphicButtonSetup()
         getReferCode()
         buttonUserInteraction(enable: false)
-        self.chooseContactButton.buttonState(isPressed: false)
-        self.chooseContactButton.chooseContact.isHidden = true
-        self.chooseContactButton.textField.keyboardType = .phonePad
-        self.chooseContactButton.contactListButton.isHidden = false
+        self.inviteButton.buttonState(isPressed: true)
+        self.inviteButton.setButtonTitle(title: "Choose Contact",titleColor: TTUtils.uiColor(from: 0x222165))
+        self.inviteButton.populateView { (done) in
+            self.openContactList()
+        }
     }
     
     func buttonUserInteraction(enable: Bool) {
@@ -52,32 +53,9 @@ class ReferController: UIViewController {
     func addDottedLine() {
         DispatchQueue.main.async {
             self.referCodeView.addDottedLine()
-            
-            self.chooseContactButton.populateView(complition: self.chooseContactButtonTapped(action:), textAction: nil)
-            
         }
     }
     
-    @IBAction func inviteButtonAction() {
-        if self.chooseContactButton.textField.text!.isEmpty {
-            self.view.showAlert(message: "Please enter mobile number.") { (done) in
-                self.openContactList()
-            }
-        } else {
-            var bParty = self.chooseContactButton.textField.text ?? ""
-            
-            bParty = bParty.components(separatedBy: CharacterSet.decimalDigits.inverted).joined()
-    
-            ReferViewModel.recordRefer(referCode: self.referCode, bParty: bParty) { (data) in
-                print("data is \(data)")
-                if data.respCode == "SC0000" {
-                    self.onRecordSuccess(info: data)
-                } else {
-                    self.onRecordFailure(info: data)
-                }
-            }
-        }
-    }
     
     func onRecordSuccess(info: ReferCode) {
         self.referSuccessView.show {
@@ -123,8 +101,8 @@ class ReferController: UIViewController {
     func openContactList() {
         let cont = UIStoryboard(name: "Refer", bundle: Bundle(for: Self.self)).instantiateViewController(withIdentifier: "ContactListController") as! ContactListController
         cont.handle = {(name, ph) in
-            self.chooseContactButton.titleLabel.text = name
-            self.chooseContactButton.textField.text = ph
+//            self.chooseContactButton.titleLabel.text = name
+//            self.chooseContactButton.textField.text = ph
             
         }
         self.present(cont, animated: true, completion: nil)

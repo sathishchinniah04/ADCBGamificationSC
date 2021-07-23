@@ -31,11 +31,17 @@ class SpinerContainerHelper {
     }
     
     func hideSpinView() {
-        self.view?.isHidden = true
+        self.view?.alpha = 0.0
     }
     
     func unHideSpinView() {
-        self.view?.isHidden = false
+        self.view?.alpha = 0.0
+        UIView.animate(withDuration: 0.8) {
+            //self.view?.isHidden = false
+            self.view?.alpha = 1.0
+        } completion: { (done) in
+            print("")
+        }
     }
     
     func removeView() {

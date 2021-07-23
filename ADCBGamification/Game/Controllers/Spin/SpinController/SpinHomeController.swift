@@ -78,8 +78,15 @@ class SpinHomeController: UIViewController {
     }
     
     func populateExpireView(game: Games) {
+        self.spinDummyImgView.alpha = 1.0
         expireView.populateView(isShowTerms: false, game: self.game) {
-            self.spinDummyImgView.isHidden = true
+            UIView.animate(withDuration: 0.8) {
+                //self.spinDummyImgView.isHidden = true
+                self.spinDummyImgView.alpha = 0.0
+            } completion: { (done) in
+                print("")
+            }
+            
             self.spinerView.unHideSpinView()
             self.containerView.isHidden = false
             self.expireView.isHidden = true

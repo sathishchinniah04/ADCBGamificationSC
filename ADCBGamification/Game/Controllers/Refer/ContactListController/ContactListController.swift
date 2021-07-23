@@ -120,7 +120,7 @@ class ContactListController: UIViewController {
         chooseContactButton.textField.text = contact.telephone
         self.unHideInviteButon()
         self.handle?(contact.firstName + " " + contact.lastName, contact.telephone)
-        self.dismiss(animated: true, completion: nil)
+       // self.dismiss(animated: true, completion: nil)
     }
     
     func inviteButtonAppearance() {

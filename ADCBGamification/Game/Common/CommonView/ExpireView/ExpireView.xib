@@ -44,7 +44,7 @@
                             <rect key="frame" x="0.0" y="0.0" width="414" height="396"/>
                             <subviews>
                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="nYC-7P-LNa">
-                                    <rect key="frame" x="20" y="0.0" width="374" height="335"/>
+                                    <rect key="frame" x="20" y="0.0" width="374" height="330"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="AOu-or-gVc">
                                             <rect key="frame" x="0.0" y="0.0" width="374" height="139"/>
@@ -76,7 +76,7 @@
                                             </subviews>
                                         </stackView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" text="expire in " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="6" translatesAutoresizingMaskIntoConstraints="NO" id="BLo-MQ-iSF">
-                                            <rect key="frame" x="0.0" y="315.5" width="374" height="19.5"/>
+                                            <rect key="frame" x="0.0" y="310.5" width="374" height="19.5"/>
                                             <fontDescription key="fontDescription" name="OpenSans-Light" family="Open Sans" pointSize="14"/>
                                             <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <nil key="highlightedColor"/>
@@ -84,10 +84,10 @@
                                     </subviews>
                                 </stackView>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jkv-PI-h4v">
-                                    <rect key="frame" x="0.0" y="351" width="414" height="45"/>
+                                    <rect key="frame" x="0.0" y="346" width="414" height="50"/>
                                     <color key="backgroundColor" red="0.13068386909999999" green="0.1246742383" blue="0.3787754774" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <constraints>
-                                        <constraint firstAttribute="height" constant="45" id="cJH-2B-PeC"/>
+                                        <constraint firstAttribute="height" constant="50" id="cJH-2B-PeC"/>
                                     </constraints>
                                     <fontDescription key="fontDescription" name="OpenSans-SemiBold" family="Open Sans" pointSize="16"/>
                                     <state key="normal" title="Button">
