@@ -34,6 +34,18 @@ class CustomNavViewController: UINavigationController {
     func changeTitle(title: String?) {
         nav.titleLabel.text = title ?? "simply"
     }
+    
+    func changeTitleAndSubTitle(title: String?, subTitle: String?) {
+        nav.titleLabel.text = title ?? "simply"
+        nav.subTitleLabel.text = subTitle ?? "life"
+        nav.subTitleLabel.isHidden = false
+    }
+    
+    func changeOnlyTitle(title: String?) {
+        nav.titleLabel.text = title ?? "simply"
+        nav.subTitleLabel.isHidden = true
+    }
+    
     func navHandler(action: CustomNavViewAction) {
         switch action {
         case .back:

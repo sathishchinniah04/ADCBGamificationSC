@@ -20,6 +20,7 @@ class SpinHomeController: UIViewController {
     var spinAssignReward: SpinAssignReward?
     var spinSuccessView = SpinSuccessViewHelper()
     var spinFailView = SpinFailViewHelper()
+    var con: UINavigationController?
     override func viewDidLoad() {
         super.viewDidLoad()    
         self.initialSetup()
@@ -34,15 +35,21 @@ class SpinHomeController: UIViewController {
         super.viewWillAppear(animated)
         print("viewWillAppear")
         if !isDirectLoad {return}
-        let con = self.navigationController
-      //  (con as? CustomNavViewController)?.hideBackButton(isHide: true)
+        con = self.navigationController
+       // let con = self.navigationController
+        (con as? CustomNavViewController)?.changeTitleAndSubTitle(title: nil, subTitle: nil)
     }
-
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        con = self.navigationController
+        (con as? CustomNavViewController)?.changeTitleAndSubTitle(title: nil, subTitle: nil)
+    }
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         if isDirectLoad {return}
         print("viewWillDisappear")
-        let con = self.navigationController
+        con = self.navigationController
+        
       //  (con as? CustomNavViewController)?.hideBackButton(isHide: false)
     }
     
@@ -84,6 +91,8 @@ class SpinHomeController: UIViewController {
         self.spinDummyImgView.alpha = 1.0
         self.spinerView.enableSpinButton(hide: true)
         expireView.populateView(isShowTerms: false, game: self.game) {
+            
+            (self.con as? CustomNavViewController)?.changeOnlyTitle(title: "Spin & Win")
             self.scaleToOrginalSize()
             self.spinerView.startRotate()
             self.assignRewards()

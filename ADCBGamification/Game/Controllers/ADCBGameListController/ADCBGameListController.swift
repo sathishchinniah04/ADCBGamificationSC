@@ -10,21 +10,29 @@ import UIKit
 class ADCBGameListController: UIViewController {
     @IBOutlet weak var gamesCollectionView: UICollectionView!
     @IBOutlet weak var activityIndicatorView: UIActivityIndicatorView!
-    
+    @IBOutlet weak var customNavigationView: UIView!
     var games = [Games]()
     var contRef: UIViewController?
     override func viewDidLoad() {
         super.viewDidLoad()
         tableViewSetup()
         getResponce()
-        
+        navigationViewCornerRadius()
+    }
+    
+    func navigationViewCornerRadius() {
+        self.customNavigationView.layoutIfNeeded()
+        DispatchQueue.main.asyncAfter(deadline: .now()) {
+            self.customNavigationView.roundCorners(corners: [.bottomLeft,.bottomRight], bound: self.customNavigationView.bounds, radius: 20.0)
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         print("viewWillAppear")
         let con = self.navigationController
-        //(con as? CustomNavViewController)?.hideBackButton(isHide: true)
+        
+        (con as? CustomNavViewController)?.changeOnlyTitle(title: "Games")
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -39,8 +47,8 @@ class ADCBGameListController: UIViewController {
         gamesCollectionView.dataSource = self
         gamesCollectionView.register(UINib(nibName: "ADCBGameListCollectionCell", bundle: Bundle(for: Self.self)), forCellWithReuseIdentifier: "ADCBGameListCollectionCell")
         gamesCollectionView.register(UINib(nibName: "ListGameCollectionHeaderView", bundle: Bundle(for: Self.self)), forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "ListGameCollectionHeaderView")
-        //registerClass(myFooterViewClass, forSupplementaryViewOfKind: UICollectionElementKindSectionFooter, withReuseIdentifier: "myFooterView")
-        //register(UINib(nibName: "ADCBGameListCollectionCell", bundle: Bundle(for: SeforCellWithReuseIdentifiereIdentifier: "ADCBGameListCollectionCell")
+        gamesCollectionView.register(UINib(nibName: "ListGameCollectionFooterView", bundle: Bundle(for: Self.self)), forSupplementaryViewOfKind: UICollectionView.elementKindSectionFooter, withReuseIdentifier: "ListGameCollectionFooterView")
+        
     }
     
     func getResponce() {
@@ -120,7 +128,7 @@ func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath:
                 return headerView
 
             case UICollectionView.elementKindSectionFooter:
-                let footerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "Footer", for: indexPath)
+                let footerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "ListGameCollectionFooterView", for: indexPath)
                 return footerView
 
             default:
@@ -137,7 +145,9 @@ func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath:
         return siz
     }
     
-    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForFooterInSection section: Int) -> CGSize {
+        return CGSize(width: collectionView.frame.width, height: 30)
+    }
 
     
 }

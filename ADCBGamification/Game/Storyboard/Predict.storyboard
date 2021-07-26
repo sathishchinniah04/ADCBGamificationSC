@@ -21,7 +21,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="448"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Clouds" translatesAutoresizingMaskIntoConstraints="NO" id="6AU-Br-XnY">
-                                <rect key="frame" x="0.0" y="54" width="300" height="63"/>
+                                <rect key="frame" x="0.0" y="44" width="300" height="63"/>
                             </imageView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="6Dq-si-cr6">
                                 <rect key="frame" x="0.0" y="89" width="414" height="773"/>
@@ -46,7 +46,7 @@
                             <constraint firstItem="Eev-2w-yXs" firstAttribute="centerX" secondItem="ha7-iE-AA2" secondAttribute="centerX" id="Vhq-Tx-fW3"/>
                             <constraint firstItem="bzT-Lp-4fO" firstAttribute="leading" secondItem="ha7-iE-AA2" secondAttribute="leading" id="lMt-hW-D5m"/>
                             <constraint firstItem="ha7-iE-AA2" firstAttribute="bottom" secondItem="6Dq-si-cr6" secondAttribute="bottom" id="ph9-Rc-dVM"/>
-                            <constraint firstItem="6AU-Br-XnY" firstAttribute="top" secondItem="ha7-iE-AA2" secondAttribute="top" constant="10" id="xJk-yT-sEt"/>
+                            <constraint firstItem="6AU-Br-XnY" firstAttribute="top" secondItem="ha7-iE-AA2" secondAttribute="top" id="xJk-yT-sEt"/>
                         </constraints>
                     </view>
                     <connections>
@@ -70,13 +70,13 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="448"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Clouds" translatesAutoresizingMaskIntoConstraints="NO" id="tdu-bk-ghL">
-                                <rect key="frame" x="0.0" y="54" width="300" height="63"/>
+                                <rect key="frame" x="0.0" y="44" width="300" height="63"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Predict" translatesAutoresizingMaskIntoConstraints="NO" id="Ifq-Y2-VVs">
                                 <rect key="frame" x="30" y="134" width="354" height="314"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0zs-1g-UM0" customClass="ExpireView" customModule="ADCBGamification" customModuleProvider="target">
-                                <rect key="frame" x="30" y="456" width="354" height="366"/>
+                                <rect key="frame" x="30" y="468" width="354" height="354"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="xxf-cY-7Q7">
@@ -88,13 +88,13 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="O1D-93-f0H" firstAttribute="height" secondItem="9LS-1p-Or3" secondAttribute="height" multiplier="0.5" id="7wa-X5-mOd"/>
-                            <constraint firstItem="0zs-1g-UM0" firstAttribute="top" secondItem="O1D-93-f0H" secondAttribute="bottom" constant="8" id="E0m-Ms-9XD"/>
+                            <constraint firstItem="0zs-1g-UM0" firstAttribute="top" secondItem="O1D-93-f0H" secondAttribute="bottom" constant="20" id="E0m-Ms-9XD"/>
                             <constraint firstItem="0zs-1g-UM0" firstAttribute="centerX" secondItem="F75-gm-2pA" secondAttribute="centerX" id="JaJ-b4-4JZ"/>
                             <constraint firstItem="F75-gm-2pA" firstAttribute="trailing" secondItem="O1D-93-f0H" secondAttribute="trailing" id="Mvk-nf-CKr"/>
                             <constraint firstItem="tdu-bk-ghL" firstAttribute="leading" secondItem="F75-gm-2pA" secondAttribute="leading" id="NAf-my-7iB"/>
                             <constraint firstItem="Ifq-Y2-VVs" firstAttribute="leading" secondItem="F75-gm-2pA" secondAttribute="leading" constant="30" id="Qgr-Vy-tbU"/>
                             <constraint firstItem="0zs-1g-UM0" firstAttribute="leading" secondItem="F75-gm-2pA" secondAttribute="leading" constant="30" id="TYA-d3-N2f"/>
-                            <constraint firstItem="tdu-bk-ghL" firstAttribute="top" secondItem="F75-gm-2pA" secondAttribute="top" constant="10" id="a8G-9v-tLC"/>
+                            <constraint firstItem="tdu-bk-ghL" firstAttribute="top" secondItem="F75-gm-2pA" secondAttribute="top" id="a8G-9v-tLC"/>
                             <constraint firstItem="Ifq-Y2-VVs" firstAttribute="top" secondItem="F75-gm-2pA" secondAttribute="top" constant="90" id="bnI-Rk-yHq"/>
                             <constraint firstItem="xxf-cY-7Q7" firstAttribute="centerY" secondItem="9LS-1p-Or3" secondAttribute="centerY" id="jiN-aX-18L"/>
                             <constraint firstItem="O1D-93-f0H" firstAttribute="top" secondItem="9LS-1p-Or3" secondAttribute="top" id="qJA-QL-DME"/>

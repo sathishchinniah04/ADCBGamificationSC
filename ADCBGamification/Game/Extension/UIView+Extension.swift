@@ -150,6 +150,11 @@ extension UIView {
         
         self.layer.insertSublayer(lightLayer, at: 0)
     }
-    
+    func roundCorners(corners: UIRectCorner,bound:CGRect, radius: CGFloat) {
+            let path = UIBezierPath(roundedRect: bound, byRoundingCorners: corners, cornerRadii: CGSize(width: radius, height: radius))
+            let mask = CAShapeLayer()
+            mask.path = path.cgPath
+            layer.mask = mask
+        }
     
 }

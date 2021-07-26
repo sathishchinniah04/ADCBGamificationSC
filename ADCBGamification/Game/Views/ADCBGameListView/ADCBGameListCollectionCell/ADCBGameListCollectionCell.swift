@@ -9,8 +9,11 @@ import UIKit
 
 class ADCBGameListCollectionCell: UICollectionViewCell {
     @IBOutlet weak var gameLabel: UILabel!
+    @IBOutlet weak var expireInLabel: UILabel!
+    @IBOutlet weak var lockDayLabel: UILabel!
     @IBOutlet weak var timeLabel: UILabel!
     @IBOutlet weak var containerView: UIView!
+    //@IBOutlet weak var logoContainerView: UIImageView!
     @IBOutlet weak var gameLogoImageView: UIImageView!
     var timer: Timer?
     var game: Games?
@@ -35,10 +38,19 @@ class ADCBGameListCollectionCell: UICollectionViewCell {
         setImage(game: game)
         setLabel(game: game)
         cellColor(index: index)
+        cornerRadiusSetup()
+        lockDayLabel.isHidden = true
+    }
+    
+    func cornerRadiusSetup() {
+        DispatchQueue.main.async {
+            self.gameLogoImageView.layer.cornerRadius = self.gameLogoImageView.frame.height/2
+            
+        }
     }
     
     func cellColor(index: Int) {
-        self.containerView.addShadow(cornerRadius: 10, shadowRadius: 2, opacity: 0.4, color: UIColor.black)
+        self.containerView.addShadow(cornerRadius: 10, shadowRadius: 3, opacity: 0.1, color: UIColor.black)
         self.containerView.backgroundColor = UIColor.white
     }
     
@@ -96,17 +108,20 @@ class ADCBGameListCollectionCell: UICollectionViewCell {
     
     func onLock(game: Games) {
         let date = game.executionPeriod?.startDateTime ?? ""
-        hourMinteAlignmentCheck(date: date, value: "Available in")
+        expireInLabel.text = "Available in"
+        hourMinteAlignmentCheck(date: date, value: "")
     }
     
     func onActive(game: Games) {
         let date = game.executionPeriod?.endDateTime ?? ""
-        hourMinteAlignmentCheck(date: date, value: "Expires in")
+        expireInLabel.text = "Expire in"
+        hourMinteAlignmentCheck(date: date, value: "")
     }
     
     func hourMinteAlignmentCheck(date: String, value: String) {
         DispatchQueue.main.async {
-            self.timeLabel.text = value + " \(Utility.secondsToHoursMinutesSeconds(seconds: Utility.convertStringIntoDate(date: date)).0)h  \(Utility.secondsToHoursMinutesSeconds(seconds: Utility.convertStringIntoDate(date: date)).1)min \(Utility.secondsToHoursMinutesSeconds(seconds: Utility.convertStringIntoDate(date: date)).2)sec"
+            self.timeLabel.text = value + " \(Utility.secondsToHoursMinutesSeconds(seconds: Utility.convertStringIntoDate(date: date)).0)h  \(Utility.secondsToHoursMinutesSeconds(seconds: Utility.convertStringIntoDate(date: date)).1)min"
         }
+        //\(Utility.secondsToHoursMinutesSeconds(seconds: Utility.convertStringIntoDate(date: date)).2)sec"
     }
 }

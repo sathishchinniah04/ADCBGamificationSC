@@ -22,7 +22,7 @@
             <objects>
                 <viewController storyboardIdentifier="ReferIntroController" id="Umo-k5-hCF" customClass="ReferIntroController" customModule="ADCBGamification" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8Yo-nW-oOk">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CurveClip" translatesAutoresizingMaskIntoConstraints="NO" id="XUZ-wa-BVQ">
@@ -30,10 +30,10 @@
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Clouds" translatesAutoresizingMaskIntoConstraints="NO" id="Ny5-Fe-xMM">
-                                <rect key="frame" x="0.0" y="54" width="300" height="63"/>
+                                <rect key="frame" x="0.0" y="44" width="300" height="63"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ic6-ia-DtR" customClass="ExpireView" customModule="ADCBGamification" customModuleProvider="target">
-                                <rect key="frame" x="30" y="458" width="354" height="364"/>
+                                <rect key="frame" x="30" y="468" width="354" height="354"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ReferLogo" translatesAutoresizingMaskIntoConstraints="NO" id="Tc1-oJ-i1w">
@@ -49,12 +49,12 @@
                         <constraints>
                             <constraint firstItem="Tc1-oJ-i1w" firstAttribute="centerX" secondItem="XUZ-wa-BVQ" secondAttribute="centerX" id="7SY-hG-W2q"/>
                             <constraint firstItem="Off-2c-xZL" firstAttribute="centerY" secondItem="8Yo-nW-oOk" secondAttribute="centerY" id="Dlm-nN-4At"/>
-                            <constraint firstItem="Ny5-Fe-xMM" firstAttribute="top" secondItem="HH6-ca-mjg" secondAttribute="top" constant="10" id="E0P-nC-TZ8"/>
+                            <constraint firstItem="Ny5-Fe-xMM" firstAttribute="top" secondItem="HH6-ca-mjg" secondAttribute="top" id="E0P-nC-TZ8"/>
                             <constraint firstItem="Tc1-oJ-i1w" firstAttribute="leading" secondItem="8Yo-nW-oOk" secondAttribute="leading" constant="30" id="HW0-Nl-YeS"/>
                             <constraint firstItem="XUZ-wa-BVQ" firstAttribute="height" secondItem="8Yo-nW-oOk" secondAttribute="height" multiplier="0.5" id="KHP-6y-5QI"/>
                             <constraint firstItem="Off-2c-xZL" firstAttribute="centerX" secondItem="8Yo-nW-oOk" secondAttribute="centerX" id="P86-Ln-Ahv"/>
                             <constraint firstItem="Tc1-oJ-i1w" firstAttribute="bottom" secondItem="XUZ-wa-BVQ" secondAttribute="bottom" id="Tcq-bu-HPt"/>
-                            <constraint firstItem="ic6-ia-DtR" firstAttribute="top" secondItem="XUZ-wa-BVQ" secondAttribute="bottom" constant="10" id="YQR-Bj-0y6"/>
+                            <constraint firstItem="ic6-ia-DtR" firstAttribute="top" secondItem="XUZ-wa-BVQ" secondAttribute="bottom" constant="20" id="YQR-Bj-0y6"/>
                             <constraint firstItem="XUZ-wa-BVQ" firstAttribute="leading" secondItem="8Yo-nW-oOk" secondAttribute="leading" id="aoe-k8-ZCr"/>
                             <constraint firstItem="XUZ-wa-BVQ" firstAttribute="top" secondItem="8Yo-nW-oOk" secondAttribute="top" id="bTO-Io-jcX"/>
                             <constraint firstItem="HH6-ca-mjg" firstAttribute="bottom" secondItem="ic6-ia-DtR" secondAttribute="bottom" constant="40" id="cJ5-dU-LoH"/>
@@ -80,7 +80,7 @@
             <objects>
                 <viewController storyboardIdentifier="ReferViewController" id="vAT-ls-gbd" customClass="ReferViewController" customModule="ADCBGamification" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="42W-hh-2wZ">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CurveClip" translatesAutoresizingMaskIntoConstraints="NO" id="8dx-cD-jGi">
@@ -164,7 +164,7 @@
             <objects>
                 <viewController storyboardIdentifier="ReferController" id="TVV-eO-t0j" customClass="ReferController" customModule="ADCBGamification" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gV3-aM-XOC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CurveClip" translatesAutoresizingMaskIntoConstraints="NO" id="GG1-Ex-sQ9">
@@ -172,7 +172,7 @@
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Clouds" translatesAutoresizingMaskIntoConstraints="NO" id="QcB-vb-CBN">
-                                <rect key="frame" x="0.0" y="54" width="300" height="63"/>
+                                <rect key="frame" x="0.0" y="44" width="300" height="63"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ReferLogo" translatesAutoresizingMaskIntoConstraints="NO" id="Yjb-c9-aHn">
                                 <rect key="frame" x="30" y="134" width="354" height="314"/>
@@ -294,7 +294,7 @@
                             <constraint firstItem="dni-3P-yCj" firstAttribute="centerY" secondItem="gV3-aM-XOC" secondAttribute="centerY" id="jUi-zX-qQt"/>
                             <constraint firstItem="Zve-f3-Hol" firstAttribute="top" secondItem="iq8-Er-Ty5" secondAttribute="bottom" constant="30" id="kTK-lz-ZB5"/>
                             <constraint firstItem="8gm-Ye-CoG" firstAttribute="leading" secondItem="13o-H8-mbQ" secondAttribute="trailing" constant="30" id="kx5-Ob-f6n"/>
-                            <constraint firstItem="QcB-vb-CBN" firstAttribute="top" secondItem="t9B-6s-wkc" secondAttribute="top" constant="10" id="nXu-Rn-TTl"/>
+                            <constraint firstItem="QcB-vb-CBN" firstAttribute="top" secondItem="t9B-6s-wkc" secondAttribute="top" id="nXu-Rn-TTl"/>
                             <constraint firstItem="GG1-Ex-sQ9" firstAttribute="top" secondItem="gV3-aM-XOC" secondAttribute="top" id="nb8-re-gXd"/>
                             <constraint firstItem="8gm-Ye-CoG" firstAttribute="bottom" secondItem="sWE-jm-dk4" secondAttribute="bottom" id="otq-6Q-IE9"/>
                             <constraint firstItem="HWn-Y7-7Zo" firstAttribute="leading" secondItem="t9B-6s-wkc" secondAttribute="leading" constant="30" id="pmi-ce-BXu"/>
@@ -321,7 +321,7 @@
             <objects>
                 <viewController storyboardIdentifier="ContactListController" id="7hu-A8-FJZ" customClass="ContactListController" customModule="ADCBGamification" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="E3h-MP-Cf0">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pbt-nx-Apd" customClass="ReferContactButton" customModule="ADCBGamification" customModuleProvider="target">

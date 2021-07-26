@@ -56,7 +56,7 @@
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Rg8-QX-k6w">
                                 <rect key="frame" x="0.0" y="119" width="414" height="743"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" red="0.97254901960784312" green="0.97254901960784312" blue="0.97254901960784312" alpha="1" colorSpace="calibratedRGB"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="AHH-yk-XZ8">
                                     <size key="itemSize" width="414" height="128"/>
                                     <size key="headerReferenceSize" width="50" height="0.0"/>
@@ -127,6 +127,7 @@
                     </view>
                     <connections>
                         <outlet property="activityIndicatorView" destination="XiW-Wo-Aln" id="FqM-EI-Z1V"/>
+                        <outlet property="customNavigationView" destination="guB-3a-TUC" id="qCD-BV-jAs"/>
                         <outlet property="gamesCollectionView" destination="Rg8-QX-k6w" id="rCW-66-gYv"/>
                     </connections>
                 </viewController>

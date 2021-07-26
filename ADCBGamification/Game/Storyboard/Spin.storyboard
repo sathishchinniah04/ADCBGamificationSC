@@ -22,7 +22,7 @@
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Clouds" translatesAutoresizingMaskIntoConstraints="NO" id="vJN-O7-seS">
-                                <rect key="frame" x="0.0" y="54" width="300" height="63"/>
+                                <rect key="frame" x="0.0" y="44" width="300" height="63"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="SGV-Kl-EeD">
                                 <rect key="frame" x="107" y="188" width="200" height="200"/>
@@ -64,7 +64,7 @@
                             <constraint firstItem="peg-KZ-704" firstAttribute="bottom" secondItem="fIY-xv-g70" secondAttribute="bottom" id="FYx-7v-906"/>
                             <constraint firstItem="peg-KZ-704" firstAttribute="trailing" secondItem="fIY-xv-g70" secondAttribute="trailing" id="HCY-Ku-Bq8"/>
                             <constraint firstItem="vJN-O7-seS" firstAttribute="leading" secondItem="peg-KZ-704" secondAttribute="leading" id="Jpl-Wq-fbj"/>
-                            <constraint firstItem="vJN-O7-seS" firstAttribute="top" secondItem="peg-KZ-704" secondAttribute="top" constant="10" id="Llh-e3-3db"/>
+                            <constraint firstItem="vJN-O7-seS" firstAttribute="top" secondItem="peg-KZ-704" secondAttribute="top" id="Llh-e3-3db"/>
                             <constraint firstItem="otW-Vk-P3R" firstAttribute="centerX" secondItem="2DE-sR-4BU" secondAttribute="centerX" id="WKj-xY-sdZ"/>
                             <constraint firstItem="wNb-S9-CRs" firstAttribute="leading" secondItem="peg-KZ-704" secondAttribute="leading" constant="30" id="Ycx-0X-YRR"/>
                             <constraint firstItem="O5H-9N-Ue9" firstAttribute="top" secondItem="2DE-sR-4BU" secondAttribute="top" id="avL-4s-3KO"/>
