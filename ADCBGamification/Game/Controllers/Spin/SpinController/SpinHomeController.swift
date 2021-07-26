@@ -20,6 +20,7 @@ class SpinHomeController: UIViewController {
     var spinAssignReward: SpinAssignReward?
     var spinSuccessView = SpinSuccessViewHelper()
     var spinFailView = SpinFailViewHelper()
+    var gameIndex: IndexPath?
     var con: UINavigationController?
     override func viewDidLoad() {
         super.viewDidLoad()    
@@ -96,6 +97,9 @@ class SpinHomeController: UIViewController {
             self.scaleToOrginalSize()
             self.spinerView.startRotate()
             self.assignRewards()
+            if let ind = self.gameIndex {
+                CallBack.shared.handle?(.gamePlayed(ind))
+            }
             UIView.animate(withDuration: 0.8) {
                 //self.spinDummyImgView.isHidden = true
                 self.spinDummyImgView.alpha = 1.0

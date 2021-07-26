@@ -61,7 +61,8 @@ class ExpireView: UIView {
         view.frame = bounds
         view.autoresizingMask = [.flexibleWidth,.flexibleHeight]
         addSubview(view)
-        button.addCustomShadow(cornerRadius: 10, shadowRadius: 4, opacity: 0.3, color: UIColor.blue, offSet: CGSize(width: 4, height: 4))
+        let shadowColor = UIColor(red: 34.0/256.0, green: 33.0/256.0, blue: 101.0/256.0, alpha: 0.33)
+        button.addCustomShadow(cornerRadius: 10, shadowRadius: 6, opacity: 1, color: shadowColor, offSet: CGSize(width: 6, height: 6))
         button.isHidden = hidePlayButton
         containerStackView.spacing = mainStackSpace
         secondStackView.spacing = secondStackSpace

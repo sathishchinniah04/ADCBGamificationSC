@@ -97,6 +97,8 @@
 		3349799926AEBA3500B909C8 /* ListGameCollectionHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3349799726AEBA3400B909C8 /* ListGameCollectionHeaderView.xib */; };
 		334979A126AEC7FA00B909C8 /* ListGameCollectionFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3349799F26AEC7FA00B909C8 /* ListGameCollectionFooterView.swift */; };
 		334979A226AEC7FA00B909C8 /* ListGameCollectionFooterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 334979A026AEC7FA00B909C8 /* ListGameCollectionFooterView.xib */; };
+		334979A726AEE34400B909C8 /* GenericNeumorphicButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 334979A626AEE34300B909C8 /* GenericNeumorphicButton.swift */; };
+		334979AB26AEE35600B909C8 /* GenericNeumorphicButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = 334979AA26AEE35600B909C8 /* GenericNeumorphicButton.xib */; };
 		33542A67269CA76A008CE8C2 /* CompletedTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 33542A5F269CA76A008CE8C2 /* CompletedTableViewCell.xib */; };
 		33542A68269CA76A008CE8C2 /* CompletedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33542A60269CA76A008CE8C2 /* CompletedTableViewCell.swift */; };
 		33542A69269CA76A008CE8C2 /* CompletedTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33542A62269CA76A008CE8C2 /* CompletedTableView.swift */; };
@@ -297,6 +299,8 @@
 		3349799726AEBA3400B909C8 /* ListGameCollectionHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListGameCollectionHeaderView.xib; sourceTree = "<group>"; };
 		3349799F26AEC7FA00B909C8 /* ListGameCollectionFooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListGameCollectionFooterView.swift; sourceTree = "<group>"; };
 		334979A026AEC7FA00B909C8 /* ListGameCollectionFooterView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListGameCollectionFooterView.xib; sourceTree = "<group>"; };
+		334979A626AEE34300B909C8 /* GenericNeumorphicButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericNeumorphicButton.swift; sourceTree = "<group>"; };
+		334979AA26AEE35600B909C8 /* GenericNeumorphicButton.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GenericNeumorphicButton.xib; sourceTree = "<group>"; };
 		33542A5F269CA76A008CE8C2 /* CompletedTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CompletedTableViewCell.xib; sourceTree = "<group>"; };
 		33542A60269CA76A008CE8C2 /* CompletedTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompletedTableViewCell.swift; sourceTree = "<group>"; };
 		33542A62269CA76A008CE8C2 /* CompletedTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompletedTableView.swift; sourceTree = "<group>"; };
@@ -799,6 +803,15 @@
 			path = ListGameFooterView;
 			sourceTree = "<group>";
 		};
+		334979A526AEE31500B909C8 /* NeumorphicButton */ = {
+			isa = PBXGroup;
+			children = (
+				334979A626AEE34300B909C8 /* GenericNeumorphicButton.swift */,
+				334979AA26AEE35600B909C8 /* GenericNeumorphicButton.xib */,
+			);
+			path = NeumorphicButton;
+			sourceTree = "<group>";
+		};
 		33542A5C269CA747008CE8C2 /* GameListController */ = {
 			isa = PBXGroup;
 			children = (
@@ -1100,6 +1113,7 @@
 		33EDB0E62692CD720040DCD4 /* CustomView */ = {
 			isa = PBXGroup;
 			children = (
+				334979A526AEE31500B909C8 /* NeumorphicButton */,
 				3381167726993DAB00C8F35E /* ReferContactButton */,
 				33EDB0E72692CD880040DCD4 /* CustomNavView */,
 			);
@@ -1397,6 +1411,7 @@
 				33FC319B2695B04300868D9E /* GameList.storyboard in Resources */,
 				33CD2198269AF4DD00CB71AC /* PredictSuccessView.xib in Resources */,
 				33542A67269CA76A008CE8C2 /* CompletedTableViewCell.xib in Resources */,
+				334979AB26AEE35600B909C8 /* GenericNeumorphicButton.xib in Resources */,
 				3320FFC92682EBC4001809AA /* NeumorphicButton.xib in Resources */,
 				33E158D426AA530D00B0615B /* OpenSans-Italic.ttf in Resources */,
 				3320FFAD2682EBC4001809AA /* GamificationAssets.xcassets in Resources */,
@@ -1541,6 +1556,7 @@
 				3320FFB92682EBC4001809AA /* IQKeyboardManager+Position.swift in Sources */,
 				3320FFCA2682EBC4001809AA /* NeumorphicButton.swift in Sources */,
 				3320FFC22682EBC4001809AA /* IQUITextFieldView+Additions.swift in Sources */,
+				334979A726AEE34400B909C8 /* GenericNeumorphicButton.swift in Sources */,
 				3320FFDA2682EBC4001809AA /* TTFortuneWheel.swift in Sources */,
 				33DCF8FE26AAD6D600B17523 /* ReferSuccessView.swift in Sources */,
 				3349799826AEBA3500B909C8 /* ListGameCollectionHeaderView.swift in Sources */,

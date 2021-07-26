@@ -10,6 +10,7 @@ enum CallBackAction {
     case back
     case close
     case spinReward
+    case gamePlayed(IndexPath)
 }
 class CallBack {
     static let shared = CallBack()

@@ -42,6 +42,16 @@ class ADCBGameListCollectionCell: UICollectionViewCell {
         lockDayLabel.isHidden = true
     }
     
+    func disableCell() {
+        DispatchQueue.main.async {
+            self.lockDayLabel.isHidden = false
+            self.gameLogoImageView.backgroundColor = TTUtils.uiColor(from: 0xE0E0E0)
+            self.containerView.backgroundColor = TTUtils.uiColor(from: 0xEAEAEA)
+            self.isUserInteractionEnabled = false
+            self.gameLabel.textColor = UIColor.gray
+        }
+    }
+    
     func cornerRadiusSetup() {
         DispatchQueue.main.async {
             self.gameLogoImageView.layer.cornerRadius = self.gameLogoImageView.frame.height/2

@@ -18,6 +18,7 @@ class ADCBGameListController: UIViewController {
         tableViewSetup()
         getResponce()
         navigationViewCornerRadius()
+        playerGameHandler()
     }
     
     func navigationViewCornerRadius() {
@@ -26,6 +27,22 @@ class ADCBGameListController: UIViewController {
             self.customNavigationView.roundCorners(corners: [.bottomLeft,.bottomRight], bound: self.customNavigationView.bounds, radius: 20.0)
         }
     }
+    
+    func playerGameHandler() {
+        CallBack.shared.callBacKAction { (action) in
+            switch action {
+            case .gamePlayed(let index):
+                DispatchQueue.main.async {
+                    let cell = self.gamesCollectionView.cellForItem(at: index) as? ADCBGameListCollectionCell
+                    cell?.disableCell()
+                }
+                print("gamePlayed")
+            default :
+                print("Default action")
+            }
+        }
+    }
+    
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -61,25 +78,26 @@ class ADCBGameListController: UIViewController {
         }
     }
     
-    func moveToController(sName: String, id: String, gameType: String, game: Games) {
+    func moveToController(sName: String, id: String, gameType: String, game: Games, index: IndexPath) {
         let contr = UIStoryboard(name: sName, bundle: Bundle(for: Self.self)).instantiateViewController(withIdentifier: id)
         if gameType == "PredictNWin" {
             (contr as? PredictIntroController)?.game = game
         } else if gameType == "SpinNWin" {
             (contr as? SpinHomeController)?.game = game
+            (contr as? SpinHomeController)?.gameIndex = index
         } else if gameType == "ReferNWin" {
             (contr as? ReferIntroController)?.game = game
         }
         self.navigationController?.pushViewController(contr, animated: true)
     }
     
-    func getControllerRef(gameType: String, game: Games) {
+    func getControllerRef(gameType: String, game: Games, index: IndexPath) {
         if gameType == "SpinNWin" {
-            self.moveToController(sName: "Spin", id: "SpinHomeController", gameType: gameType, game: game)
+            self.moveToController(sName: "Spin", id: "SpinHomeController", gameType: gameType, game: game, index: index)
         } else if gameType == "PredictNWin" {
-            self.moveToController(sName: "Predict", id: "PredictIntroController", gameType: gameType, game: game)
+            self.moveToController(sName: "Predict", id: "PredictIntroController", gameType: gameType, game: game, index: index)
         } else if gameType == "ReferNWin" {
-            self.moveToController(sName: "Refer", id: "ReferIntroController", gameType: gameType, game: game)
+            self.moveToController(sName: "Refer", id: "ReferIntroController", gameType: gameType, game: game, index: index)
         } else {
             print("no game type ")
         }
@@ -110,7 +128,7 @@ func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath:
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let gameType = games[indexPath.row].gameType
         let game = games[indexPath.row]
-        getControllerRef(gameType: gameType, game: game)
+        getControllerRef(gameType: gameType, game: game,index: indexPath)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {

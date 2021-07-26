@@ -40,6 +40,8 @@ public class Game {
                 complition?(.closeButton)
             case .spinReward:
                 complition?(.spinReward)
+            default :
+                print("default called")
             }
         }
     }
@@ -75,6 +77,8 @@ public class Game {
                 complition?(.closeButton)
             case .spinReward:
                 complition?(.spinReward)
+            default :
+                print("default")
             }
         }
     }
