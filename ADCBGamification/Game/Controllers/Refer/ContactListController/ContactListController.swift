@@ -49,11 +49,13 @@ class ContactListController: UIViewController {
     
     func fetchContact() {
         PhoneContactVM.getContacts { (contacts) in
-            self.contacts.removeAll()
-            self.newList.removeAll()
-            self.contacts = contacts
-            self.newList = contacts
-            self.contactTableView.reloadData()
+            DispatchQueue.main.async {
+                self.contacts.removeAll()
+                self.newList.removeAll()
+                self.contacts = contacts
+                self.newList = contacts
+                self.contactTableView.reloadData()
+            }
         }
     }
     
