@@ -38,6 +38,8 @@ class ADCBGameListController: UIViewController {
         gamesCollectionView.delegate = self
         gamesCollectionView.dataSource = self
         gamesCollectionView.register(UINib(nibName: "ADCBGameListCollectionCell", bundle: Bundle(for: Self.self)), forCellWithReuseIdentifier: "ADCBGameListCollectionCell")
+        gamesCollectionView.register(UINib(nibName: "ListGameCollectionHeaderView", bundle: Bundle(for: Self.self)), forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "ListGameCollectionHeaderView")
+        //registerClass(myFooterViewClass, forSupplementaryViewOfKind: UICollectionElementKindSectionFooter, withReuseIdentifier: "myFooterView")
         //register(UINib(nibName: "ADCBGameListCollectionCell", bundle: Bundle(for: SeforCellWithReuseIdentifiereIdentifier: "ADCBGameListCollectionCell")
     }
     
@@ -50,29 +52,6 @@ class ADCBGameListController: UIViewController {
             }
         }
     }
-}
-
-extension ADCBGameListController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
-func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-    return games.count
-}
-
-func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-    let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ADCBGameListCollectionCell", for: indexPath) as! ADCBGameListCollectionCell
-    cell.populateView(game: self.games[indexPath.row], index: indexPath.row)
-    return cell
-}
-
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let gameType = games[indexPath.row].gameType
-        let game = games[indexPath.row]
-        getControllerRef(gameType: gameType, game: game)
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: collectionView.frame.size.width, height: collectionView.frame.size.width/2.28)
-    }
-    
     
     func moveToController(sName: String, id: String, gameType: String, game: Games) {
         let contr = UIStoryboard(name: sName, bundle: Bundle(for: Self.self)).instantiateViewController(withIdentifier: id)
@@ -97,6 +76,68 @@ func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath:
             print("no game type ")
         }
     }
+    func heightForView(text:String, font:UIFont, width:CGFloat) -> CGFloat{
+        let label:UILabel = UILabel(frame: CGRect(x: 0, y: 0, width: width, height: CGFloat.greatestFiniteMagnitude))
+        label.numberOfLines = 0
+        label.lineBreakMode = NSLineBreakMode.byWordWrapping
+        label.font = font
+        label.text = text
+
+        label.sizeToFit()
+        return label.frame.height
+    }
+}
+
+extension ADCBGameListController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    return games.count
+}
+
+func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+    let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ADCBGameListCollectionCell", for: indexPath) as! ADCBGameListCollectionCell
+    cell.populateView(game: self.games[indexPath.row], index: indexPath.row)
+    return cell
+}
+
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let gameType = games[indexPath.row].gameType
+        let game = games[indexPath.row]
+        getControllerRef(gameType: gameType, game: game)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: collectionView.frame.size.width, height: collectionView.frame.size.width/2.28)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        switch kind {
+
+            case UICollectionView.elementKindSectionHeader:
+
+                let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "ListGameCollectionHeaderView", for: indexPath) as! ListGameCollectionHeaderView
+                headerView.backgroundColor = .clear
+                headerView.populateView(title: "Enjoy the games and earn more rewards. We wish you goodluck!")
+                return headerView
+
+            case UICollectionView.elementKindSectionFooter:
+                let footerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "Footer", for: indexPath)
+                return footerView
+
+            default:
+
+                assert(false, "Unexpected element kind")
+            }
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
+        let indexPath = IndexPath(row: 0, section: section)
+            let headerView = self.collectionView(collectionView, viewForSupplementaryElementOfKind: UICollectionView.elementKindSectionHeader, at: indexPath)
+        //OpenSans-Regular
+        let siz = headerView.systemLayoutSizeFitting(CGSize(width: collectionView.frame.width, height: UIView.layoutFittingExpandedSize.height), withHorizontalFittingPriority: .required, verticalFittingPriority: .fittingSizeLevel)
+        return siz
+    }
+    
+    
 
     
 }

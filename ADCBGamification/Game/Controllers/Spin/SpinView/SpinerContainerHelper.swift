@@ -27,6 +27,10 @@ class SpinerContainerHelper {
         self.view?.spinNowButton.isHidden = hide
     }
     
+    func startRotate() {
+        self.view?.fortuneWheel?.startAnimating()
+    }
+    
     func stopAnimationAtIndex(achivementId: String, complition:((Bool)->Void)?) {
         self.view?.stopAnimationAtIndex(achivementId: achivementId, complition: complition)
     }

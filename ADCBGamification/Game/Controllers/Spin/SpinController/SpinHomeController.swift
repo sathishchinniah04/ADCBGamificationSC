@@ -85,11 +85,13 @@ class SpinHomeController: UIViewController {
         self.spinerView.enableSpinButton(hide: true)
         expireView.populateView(isShowTerms: false, game: self.game) {
             self.scaleToOrginalSize()
+            self.spinerView.startRotate()
+            self.assignRewards()
             UIView.animate(withDuration: 0.8) {
                 //self.spinDummyImgView.isHidden = true
                 self.spinDummyImgView.alpha = 1.0
             } completion: { (done) in
-                self.assignRewards()
+                print("Animation done")
             }
             self.spinerView.unHideSpinView()
             self.containerView.isHidden = false

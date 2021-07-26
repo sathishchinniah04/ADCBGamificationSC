@@ -93,6 +93,8 @@
 		3320FFE22682EBC4001809AA /* CarnivalWheelSlice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3320FF9F2682EBC4001809AA /* CarnivalWheelSlice.swift */; };
 		3320FFEA2682ED8F001809AA /* ADCBGamification.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3320FF0C2682EA9F001809AA /* ADCBGamification.framework */; };
 		3320FFEB2682ED8F001809AA /* ADCBGamification.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3320FF0C2682EA9F001809AA /* ADCBGamification.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		3349799826AEBA3500B909C8 /* ListGameCollectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3349799626AEBA3400B909C8 /* ListGameCollectionHeaderView.swift */; };
+		3349799926AEBA3500B909C8 /* ListGameCollectionHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3349799726AEBA3400B909C8 /* ListGameCollectionHeaderView.xib */; };
 		33542A67269CA76A008CE8C2 /* CompletedTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 33542A5F269CA76A008CE8C2 /* CompletedTableViewCell.xib */; };
 		33542A68269CA76A008CE8C2 /* CompletedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33542A60269CA76A008CE8C2 /* CompletedTableViewCell.swift */; };
 		33542A69269CA76A008CE8C2 /* CompletedTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33542A62269CA76A008CE8C2 /* CompletedTableView.swift */; };
@@ -289,6 +291,8 @@
 		3320FF9D2682EBC4001809AA /* SpinningWheelSlice .swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SpinningWheelSlice .swift"; sourceTree = "<group>"; };
 		3320FF9E2682EBC4001809AA /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3320FF9F2682EBC4001809AA /* CarnivalWheelSlice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarnivalWheelSlice.swift; sourceTree = "<group>"; };
+		3349799626AEBA3400B909C8 /* ListGameCollectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListGameCollectionHeaderView.swift; sourceTree = "<group>"; };
+		3349799726AEBA3400B909C8 /* ListGameCollectionHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListGameCollectionHeaderView.xib; sourceTree = "<group>"; };
 		33542A5F269CA76A008CE8C2 /* CompletedTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CompletedTableViewCell.xib; sourceTree = "<group>"; };
 		33542A60269CA76A008CE8C2 /* CompletedTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompletedTableViewCell.swift; sourceTree = "<group>"; };
 		33542A62269CA76A008CE8C2 /* CompletedTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompletedTableView.swift; sourceTree = "<group>"; };
@@ -773,6 +777,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		3349799526AEB9CD00B909C8 /* ListGameHeaderView */ = {
+			isa = PBXGroup;
+			children = (
+				3349799626AEBA3400B909C8 /* ListGameCollectionHeaderView.swift */,
+				3349799726AEBA3400B909C8 /* ListGameCollectionHeaderView.xib */,
+			);
+			path = ListGameHeaderView;
+			sourceTree = "<group>";
+		};
 		33542A5C269CA747008CE8C2 /* GameListController */ = {
 			isa = PBXGroup;
 			children = (
@@ -881,6 +894,7 @@
 		337E17D1269DC5CB00C14135 /* ADCBGameListView */ = {
 			isa = PBXGroup;
 			children = (
+				3349799526AEB9CD00B909C8 /* ListGameHeaderView */,
 				337E17D2269DC5D800C14135 /* ADCBGameListCollectionCell */,
 			);
 			path = ADCBGameListView;
@@ -1352,6 +1366,7 @@
 				3357ED8C2693209300607F50 /* PredictTeamView.xib in Resources */,
 				338116992699AC4900C8F35E /* CustomContactCell.xib in Resources */,
 				33E158CD26AA530D00B0615B /* OpenSans-Bold.ttf in Resources */,
+				3349799926AEBA3500B909C8 /* ListGameCollectionHeaderView.xib in Resources */,
 				33E158D526AA530D00B0615B /* OpenSans-Regular.ttf in Resources */,
 				33EDB0E32692CCB40040DCD4 /* MatchTableViewCell.xib in Resources */,
 				3320FFD12682EBC4001809AA /* NewRefferView.xib in Resources */,
@@ -1512,6 +1527,7 @@
 				3320FFC22682EBC4001809AA /* IQUITextFieldView+Additions.swift in Sources */,
 				3320FFDA2682EBC4001809AA /* TTFortuneWheel.swift in Sources */,
 				33DCF8FE26AAD6D600B17523 /* ReferSuccessView.swift in Sources */,
+				3349799826AEBA3500B909C8 /* ListGameCollectionHeaderView.swift in Sources */,
 				338116822699432500C8F35E /* ContactListController.swift in Sources */,
 				3320FFCB2682EBC4001809AA /* ReferViewController.swift in Sources */,
 				33FC31AE2696D7CA00868D9E /* SpinViewOfferVM.swift in Sources */,

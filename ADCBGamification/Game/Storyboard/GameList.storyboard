@@ -55,7 +55,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Rg8-QX-k6w">
-                                <rect key="frame" x="0.0" y="107" width="414" height="755"/>
+                                <rect key="frame" x="0.0" y="119" width="414" height="743"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="AHH-yk-XZ8">
                                     <size key="itemSize" width="414" height="128"/>
@@ -75,6 +75,7 @@
                                     </collectionViewCell>
                                 </cells>
                                 <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="LaX-fD-A6n">
+                                    <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </collectionReusableView>
                                 <collectionReusableView key="sectionFooterView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="tgR-Xj-5v6">
@@ -83,14 +84,22 @@
                                 </collectionReusableView>
                             </collectionView>
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="XiW-Wo-Aln">
-                                <rect key="frame" x="188.5" y="466" width="37" height="37"/>
+                                <rect key="frame" x="188.5" y="472" width="37" height="37"/>
                                 <color key="color" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </activityIndicatorView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="guB-3a-TUC">
-                                <rect key="frame" x="0.0" y="44" width="414" height="55"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="75"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Clouds" translatesAutoresizingMaskIntoConstraints="NO" id="svh-lY-aFj">
+                                        <rect key="frame" x="0.0" y="0.0" width="300" height="75"/>
+                                    </imageView>
+                                </subviews>
                                 <color key="backgroundColor" red="1" green="0.8784313725490196" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="55" id="OCG-sE-rqG"/>
+                                    <constraint firstAttribute="bottom" secondItem="svh-lY-aFj" secondAttribute="bottom" id="GGG-S3-5D5"/>
+                                    <constraint firstAttribute="height" constant="75" id="OCG-sE-rqG"/>
+                                    <constraint firstItem="svh-lY-aFj" firstAttribute="top" secondItem="guB-3a-TUC" secondAttribute="top" id="UVa-t2-EfP"/>
+                                    <constraint firstItem="svh-lY-aFj" firstAttribute="leading" secondItem="guB-3a-TUC" secondAttribute="leading" id="XJO-np-ANP"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f1s-RZ-HVw">
@@ -108,12 +117,12 @@
                             <constraint firstItem="Rgz-Wg-eTu" firstAttribute="trailing" secondItem="guB-3a-TUC" secondAttribute="trailing" id="RRY-6P-2B0"/>
                             <constraint firstItem="guB-3a-TUC" firstAttribute="leading" secondItem="Rgz-Wg-eTu" secondAttribute="leading" id="SQ1-ow-Lne"/>
                             <constraint firstItem="f1s-RZ-HVw" firstAttribute="leading" secondItem="PNW-8C-ohd" secondAttribute="leading" id="VmN-p7-Ajm"/>
-                            <constraint firstItem="Rg8-QX-k6w" firstAttribute="top" secondItem="guB-3a-TUC" secondAttribute="bottom" constant="8" id="WXi-Ah-ASY"/>
                             <constraint firstAttribute="trailing" secondItem="f1s-RZ-HVw" secondAttribute="trailing" id="XAU-Fp-OWj"/>
                             <constraint firstItem="Rgz-Wg-eTu" firstAttribute="trailing" secondItem="Rg8-QX-k6w" secondAttribute="trailing" id="dPh-N0-OIz"/>
                             <constraint firstItem="XiW-Wo-Aln" firstAttribute="centerX" secondItem="Rg8-QX-k6w" secondAttribute="centerX" id="sHP-mt-Vsa"/>
                             <constraint firstItem="Rgz-Wg-eTu" firstAttribute="bottom" secondItem="Rg8-QX-k6w" secondAttribute="bottom" id="w0F-7k-aew"/>
                             <constraint firstItem="Rg8-QX-k6w" firstAttribute="leading" secondItem="Rgz-Wg-eTu" secondAttribute="leading" id="we8-XB-5Fc"/>
+                            <constraint firstItem="Rg8-QX-k6w" firstAttribute="top" secondItem="guB-3a-TUC" secondAttribute="bottom" id="ywv-61-oMi"/>
                         </constraints>
                     </view>
                     <connections>
@@ -123,10 +132,11 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mBf-F5-8GE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="514" y="293"/>
+            <point key="canvasLocation" x="876.81159420289862" y="219.64285714285714"/>
         </scene>
     </scenes>
     <resources>
+        <image name="Clouds" width="300" height="63"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

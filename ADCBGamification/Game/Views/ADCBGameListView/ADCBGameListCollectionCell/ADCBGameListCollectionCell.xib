@@ -18,25 +18,31 @@
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ew4-J8-FKb">
-                        <rect key="frame" x="20" y="5" width="327" height="155"/>
+                        <rect key="frame" x="30" y="5" width="307" height="155"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SpinList" translatesAutoresizingMaskIntoConstraints="NO" id="obU-ak-bHg">
-                                <rect key="frame" x="15" y="15" width="125" height="125"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SpinList" translatesAutoresizingMaskIntoConstraints="NO" id="obU-ak-bHg">
+                                <rect key="frame" x="10" y="10" width="135" height="135"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="obU-ak-bHg" secondAttribute="height" multiplier="1:1" id="B0e-EK-u8k"/>
                                 </constraints>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="Cnc-0R-vW1">
-                                <rect key="frame" x="160" y="59" width="157" height="37.5"/>
+                                <rect key="frame" x="165" y="50" width="132" height="55.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W08-4r-bgG">
-                                        <rect key="frame" x="0.0" y="0.0" width="157" height="19.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="132" height="19.5"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
-                                        <nil key="textColor"/>
+                                        <color key="textColor" red="0.13333333333333333" green="0.12941176470588234" blue="0.396078431372549" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Expires in" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="7" translatesAutoresizingMaskIntoConstraints="NO" id="IN9-gJ-2PJ">
+                                        <rect key="frame" x="0.0" y="21.5" width="132" height="16"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                        <color key="textColor" red="0.3294117647" green="0.3294117647" blue="0.33725490200000002" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="7" translatesAutoresizingMaskIntoConstraints="NO" id="J5C-Hf-EDK">
-                                        <rect key="frame" x="0.0" y="21.5" width="157" height="16"/>
+                                        <rect key="frame" x="0.0" y="39.5" width="132" height="16"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                         <color key="textColor" red="0.32941176470588235" green="0.32941176470588235" blue="0.33725490196078434" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -44,14 +50,14 @@
                                 </subviews>
                             </stackView>
                         </subviews>
-                        <color key="backgroundColor" red="0.80784313725490198" green="0.57647058823529407" blue="0.15686274509803921" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="obU-ak-bHg" firstAttribute="leading" secondItem="ew4-J8-FKb" secondAttribute="leading" constant="15" id="Aro-QL-ZPR"/>
-                            <constraint firstItem="obU-ak-bHg" firstAttribute="top" secondItem="ew4-J8-FKb" secondAttribute="top" constant="15" id="QGE-ym-ftN"/>
+                            <constraint firstItem="obU-ak-bHg" firstAttribute="leading" secondItem="ew4-J8-FKb" secondAttribute="leading" constant="10" id="Aro-QL-ZPR"/>
+                            <constraint firstItem="obU-ak-bHg" firstAttribute="top" secondItem="ew4-J8-FKb" secondAttribute="top" constant="10" id="QGE-ym-ftN"/>
                             <constraint firstItem="Cnc-0R-vW1" firstAttribute="centerY" secondItem="ew4-J8-FKb" secondAttribute="centerY" id="b8s-tw-OAM"/>
                             <constraint firstAttribute="trailing" secondItem="Cnc-0R-vW1" secondAttribute="trailing" constant="10" id="iQO-wZ-Q09"/>
                             <constraint firstItem="Cnc-0R-vW1" firstAttribute="leading" secondItem="obU-ak-bHg" secondAttribute="trailing" constant="20" id="ih2-4E-Szm"/>
-                            <constraint firstAttribute="bottom" secondItem="obU-ak-bHg" secondAttribute="bottom" constant="15" id="wea-l9-1yD"/>
+                            <constraint firstAttribute="bottom" secondItem="obU-ak-bHg" secondAttribute="bottom" constant="10" id="wea-l9-1yD"/>
                         </constraints>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -65,8 +71,8 @@
             <constraints>
                 <constraint firstAttribute="bottom" secondItem="ew4-J8-FKb" secondAttribute="bottom" constant="5" id="1o2-jE-c6g"/>
                 <constraint firstItem="ew4-J8-FKb" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="5" id="OOn-bS-uoZ"/>
-                <constraint firstItem="ew4-J8-FKb" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="20" id="aUr-dd-5xi"/>
-                <constraint firstAttribute="trailing" secondItem="ew4-J8-FKb" secondAttribute="trailing" constant="20" id="cPJ-PL-IYv"/>
+                <constraint firstItem="ew4-J8-FKb" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="30" id="aUr-dd-5xi"/>
+                <constraint firstAttribute="trailing" secondItem="ew4-J8-FKb" secondAttribute="trailing" constant="30" id="cPJ-PL-IYv"/>
             </constraints>
             <size key="customSize" width="367" height="165"/>
             <connections>
@@ -79,6 +85,6 @@
         </collectionViewCell>
     </objects>
     <resources>
-        <image name="SpinList" width="230" height="231"/>
+        <image name="SpinList" width="127" height="126"/>
     </resources>
 </document>
