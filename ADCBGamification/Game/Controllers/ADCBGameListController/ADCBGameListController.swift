@@ -150,7 +150,8 @@ func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath:
                 return footerView
 
             default:
-
+                let footerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "ListGameCollectionFooterView", for: indexPath)
+                return footerView
                 assert(false, "Unexpected element kind")
             }
     }
