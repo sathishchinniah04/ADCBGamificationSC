@@ -18,6 +18,7 @@ class ViewController: UIViewController {
     }
     
     func initialSetup() {
+        // new change 
         self.msisdnTextField.text = "9902390347"
         self.gameIdTxtFld.text = "51"
         self.gameNameButton.setTitle("SpinNWin", for: .normal)
