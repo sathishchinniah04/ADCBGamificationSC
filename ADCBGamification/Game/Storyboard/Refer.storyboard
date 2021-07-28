@@ -358,11 +358,11 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="YAy-Jv-GQE">
                                 <rect key="frame" x="0.0" y="161" width="414" height="735"/>
                                 <subviews>
-                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="N8C-f9-hdr">
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="N8C-f9-hdr">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="635"/>
-                                        <color key="backgroundColor" red="0.91764705879999997" green="0.91764705879999997" blue="0.91764705879999997" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" priority="250" constant="645" id="KYa-q0-tEy"/>
+                                            <constraint firstAttribute="height" priority="999" constant="655" id="KYa-q0-tEy"/>
                                         </constraints>
                                     </tableView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="cys-Tx-eHk">
@@ -388,9 +388,17 @@
                                                 </constraints>
                                             </view>
                                         </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="90" id="sJz-b2-xhH"/>
+                                        </constraints>
                                     </stackView>
                                 </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </stackView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="uMU-gR-cmt">
+                                <rect key="frame" x="188.5" y="429.5" width="37" height="37"/>
+                                <color key="color" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="l6C-P7-Juc"/>
                         <color key="backgroundColor" red="0.91764705879999997" green="0.91764705879999997" blue="0.91764705879999997" alpha="1" colorSpace="calibratedRGB"/>
@@ -399,20 +407,24 @@
                             <constraint firstItem="l6C-P7-Juc" firstAttribute="trailing" secondItem="pbt-nx-Apd" secondAttribute="trailing" constant="25" id="2yb-Yf-btR"/>
                             <constraint firstAttribute="bottom" secondItem="YAy-Jv-GQE" secondAttribute="bottom" id="4Zq-dr-AVi"/>
                             <constraint firstItem="5WR-6z-2ZY" firstAttribute="leading" secondItem="l6C-P7-Juc" secondAttribute="leading" id="I0b-uI-B2e"/>
+                            <constraint firstItem="uMU-gR-cmt" firstAttribute="centerY" secondItem="E3h-MP-Cf0" secondAttribute="centerY" id="MuJ-Mu-nfp"/>
                             <constraint firstItem="pbt-nx-Apd" firstAttribute="top" secondItem="l6C-P7-Juc" secondAttribute="top" constant="30" id="QoE-x7-GGp"/>
                             <constraint firstItem="YAy-Jv-GQE" firstAttribute="top" secondItem="5WR-6z-2ZY" secondAttribute="bottom" id="URb-Qn-iyl"/>
                             <constraint firstItem="pbt-nx-Apd" firstAttribute="leading" secondItem="l6C-P7-Juc" secondAttribute="leading" constant="25" id="USu-qf-0Pv"/>
                             <constraint firstItem="l6C-P7-Juc" firstAttribute="trailing" secondItem="5WR-6z-2ZY" secondAttribute="trailing" id="cR3-Cb-8X1"/>
                             <constraint firstAttribute="bottom" secondItem="YAy-Jv-GQE" secondAttribute="bottom" id="em2-Uc-F4h"/>
+                            <constraint firstItem="uMU-gR-cmt" firstAttribute="centerX" secondItem="E3h-MP-Cf0" secondAttribute="centerX" id="u1k-Xd-K9Q"/>
                             <constraint firstItem="5WR-6z-2ZY" firstAttribute="top" secondItem="pbt-nx-Apd" secondAttribute="bottom" constant="15" id="vJ4-AQ-nm4"/>
                             <constraint firstItem="YAy-Jv-GQE" firstAttribute="trailing" secondItem="l6C-P7-Juc" secondAttribute="trailing" id="yDc-aU-Ggn"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="activityIndicatorView" destination="uMU-gR-cmt" id="5MJ-d3-ekl"/>
                         <outlet property="chooseContactButton" destination="pbt-nx-Apd" id="paq-4m-bac"/>
                         <outlet property="contactTableView" destination="N8C-f9-hdr" id="mZb-8Q-zha"/>
                         <outlet property="inviteButton" destination="cA1-V0-Mn1" id="JnO-dR-4Pl"/>
                         <outlet property="inviteButtonContainerView" destination="YLQ-kn-WGP" id="JGO-cd-KEl"/>
+                        <outlet property="tableViewHeightConstraint" destination="KYa-q0-tEy" id="1X7-Dx-xCT"/>
                     </connections>
                 </viewController>
             </objects>

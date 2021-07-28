@@ -16,8 +16,8 @@ class ContactListController: UIViewController {
     @IBOutlet weak var inviteButtonContainerView: UIView!
     
     //@IBOutlet weak var simplylifeUserLabel: UILabel!
-   // @IBOutlet weak var tableViewHeightConstraints: NSLayoutConstraint!
-    //@IBOutlet weak var activityIndicatorView: UIActivityIndicatorView!
+    @IBOutlet weak var tableViewHeightConstraint: NSLayoutConstraint!
+    @IBOutlet weak var activityIndicatorView: UIActivityIndicatorView!
     
     var referSuccessViewHelper = ReferSuccessViewHelper()
     var handle: ((_ name: String,_ ph: String)->Void)?
@@ -25,6 +25,9 @@ class ContactListController: UIViewController {
     var newList  = [FetchedContact]()
     var referCode: String = ""
     var bPart: String?
+    var footerHeight = 0
+    var errorMsg = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         buttonSetup()
@@ -159,6 +162,7 @@ class ContactListController: UIViewController {
                 $0.telephone.range(of: text, options: [.caseInsensitive, .diacriticInsensitive ]) != nil
         }
         
+        
         if self.newList.isEmpty, !text.isEmpty , text.isNumeric {
             let unknownContact = FetchedContact(firstName: "Unknown", lastName: "contact", telephone: text, image: nil, unknowContact: true)
             self.newList.insert(unknownContact, at: 0)
@@ -182,28 +186,23 @@ class ContactListController: UIViewController {
         }
         
     }
+
     func onCellTap(indexPath: IndexPath) {
         self.view.endEditing(true)
         
         let contact = self.newList[indexPath.row]
         self.inviteButton.alpha = 0.0
-    
-        //tableViewHeightConstraints.constant = 100
         
-        //self.simplylifeUserLabel.isHidden = false
+        ReferViewModel.checkSimpleLifeUser(number: contact.telephone) { message, err  in
+            self.activityIndicatorView.stopAnimating()
+            if !message.isEmpty {
+                self.errorMsg = "Sorry, this contact is already a Simplylife user"
+                self.footerHeight = 0
+                self.contactTableView.reloadData()
+            }
+        }
         
-        //TODO : Call the api call for simplelife user or not check
-        
-//        ReferViewModel.checkSimpleLifeUser(number: contact.telephone) { message, err  in
-//            self.activityIndicatorView.stopAnimating()
-//            if !message.isEmpty {
-//                self.simplylifeUserLabel.isHidden = false
-//                self.simplylifeUserLabel.text = message
-//            }
-//        }
-        
-        
-        chooseContactButton.titleLabel.isHidden = false
+        /*chooseContactButton.titleLabel.isHidden = false
         chooseContactButton.titleLabel.text = contact.firstName + " " + contact.lastName
         chooseContactButton.buttonState(isPressed: false)
         self.chooseContactButton.titleLabel.alpha = 1.0
@@ -211,7 +210,7 @@ class ContactListController: UIViewController {
         self.unHideInviteButon()
         self.handle?(contact.firstName + " " + contact.lastName, contact.telephone)
         self.bPart = contact.telephone
-        self.inviteButton.isUserInteractionEnabled = true
+        self.inviteButton.isUserInteractionEnabled = true */
         //self.inviteButton.alpha = 1.0
        // self.dismiss(animated: true, completion: nil)
     }
@@ -235,8 +234,29 @@ extension ContactListController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let selectedCell = tableView.cellForRow(at: indexPath) as! CustomContactCell
         selectedCell.isSelectedVal = true
+        //activityIndicatorView.isHidden = false
         //activityIndicatorView.startAnimating()
         onCellTap(indexPath: indexPath)
+    }
+    
+    func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+        
+        let footerView = UIView(frame: CGRect(x: 0, y: 0, width: tableView.frame.size.width, height: 50))
+        footerView.backgroundColor = .clear
+        let titleLabel = UILabel(frame: CGRect(x: 0, y: 0, width: tableView.frame.size.width, height: 30))
+        titleLabel.numberOfLines = 0;
+        titleLabel.text  = errorMsg
+        titleLabel.lineBreakMode = .byWordWrapping
+        titleLabel.backgroundColor = UIColor.clear
+        titleLabel.font = UIFont(name: "OpenSans-Regular", size: 14)
+        titleLabel.frame.origin = CGPoint(x: ((footerView.frame.width) - (titleLabel.intrinsicContentSize.width))/2, y: footerView.frame.height / 2)
+        titleLabel.textColor = #colorLiteral(red: 0.3294117647, green: 0.3294117647, blue: 0.337254902, alpha: 1)
+        footerView.addSubview(titleLabel)
+        return footerView
+    }
+
+    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        return CGFloat(footerHeight)
     }
     
 }
