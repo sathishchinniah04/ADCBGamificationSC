@@ -8,13 +8,16 @@
 import UIKit
 
 class ExpireView: UIView {
-    @IBOutlet weak var button: UIButton!
+    
     @IBOutlet weak var gameNameLabel: UILabel!
     @IBOutlet weak var gameNameSubTitleLabel: UILabel!
     @IBOutlet weak var expireLabel: UILabel!
     @IBOutlet weak var descLabel: UILabel!
     @IBOutlet weak var containerStackView: UIStackView!
     @IBOutlet weak var secondStackView: UIStackView!
+    @IBOutlet weak var genericButton: GenericNeumorphicButton!
+    
+    
     private var termsView = TermsViewHelper()
     private var handler: (()->Void)?
     private var isShowTerms: Bool = true
@@ -38,7 +41,7 @@ class ExpireView: UIView {
     
     @IBInspectable var hidePlayButton: Bool = false {
         didSet {
-            button.isHidden = hidePlayButton
+            genericButton.button.isHidden = hidePlayButton
         }
     }
     
@@ -61,9 +64,7 @@ class ExpireView: UIView {
         view.frame = bounds
         view.autoresizingMask = [.flexibleWidth,.flexibleHeight]
         addSubview(view)
-        let shadowColor = UIColor(red: 34.0/256.0, green: 33.0/256.0, blue: 101.0/256.0, alpha: 0.33)
-        button.addCustomShadow(cornerRadius: 10, shadowRadius: 6, opacity: 1, color: shadowColor, offSet: CGSize(width: 6, height: 6))
-        button.isHidden = hidePlayButton
+        
         containerStackView.spacing = mainStackSpace
         secondStackView.spacing = secondStackSpace
     }
@@ -79,7 +80,19 @@ class ExpireView: UIView {
         }
         checkGameStatus(game: gam)
         labelSetup(game: gam)
+        self.genericButton.tapHandler = {
+            if isShowTerms {
+                self.termsView.show {
+                    print("fsdfsdfdss")
+                    self.handler?()
+                }
+            } else {
+                self.handler?()
+            }
+        }
+        
     }
+    
     
     func labelSetup(game: Games) {
         gameNameLabel.text = game.gameTitle
@@ -96,15 +109,15 @@ class ExpireView: UIView {
     }
     
     func onLock(game: Games) {
-        button.alpha = 0.15
-        button.isUserInteractionEnabled = false
+        genericButton.alpha = 0.15
+        genericButton.isUserInteractionEnabled = false
         let date = game.executionPeriod?.startDateTime ?? ""
         hourMinteAlignmentCheck(date: date, value: "Available in")
     }
     
     func onActive(game: Games) {
-        button.alpha = 1.0
-        button.isUserInteractionEnabled = true
+        genericButton.alpha = 1.0
+        genericButton.isUserInteractionEnabled = true
         let date = game.executionPeriod?.endDateTime ?? ""
         hourMinteAlignmentCheck(date: date, value: "Expires in")
     }
@@ -116,23 +129,12 @@ class ExpireView: UIView {
     }
     
     func setupButtonName(name: String) {
-        button.setTitle(name, for: .normal)
+        self.genericButton.setupButtonName(name: name)
     }
     
     func setupLabel() {
         gameNameLabel.text = "Refer & Win"
         expireLabel.text = "Expire is 02h 33mins"
-    }
-    
-    @IBAction func playButtonAction() {
-        if isShowTerms {
-            termsView.show {
-                print("fsdfsdfdss")
-                self.handler?()
-            }
-        } else {
-            self.handler?()
-        }
     }
     
 }

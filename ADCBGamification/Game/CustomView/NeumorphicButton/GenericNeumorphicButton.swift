@@ -7,9 +7,48 @@
 
 import UIKit
 
-class GenericNeumorphicButton: UIView {
+@IBDesignable class GenericNeumorphicButton: UIView {
     @IBOutlet weak var firstContainerView: UIView!
     @IBOutlet weak var secondContainerView: UIView!
+    @IBOutlet weak var button: UIButton!
+    var tapHandler:(()->Void)?
+    @IBInspectable var btnColor: UIColor? = UIColor.specialBtnColor() {
+        didSet {
+            secondContainerView.backgroundColor = btnColor
+        }
+    }
+    
+    @IBInspectable var topOffSetColor: UIColor? = UIColor.white {
+        didSet {
+            shadowSetup()
+        }
+    }
+    
+    @IBInspectable var topOffSet: CGSize = CGSize(width: -6, height: -6) {
+        didSet {
+            shadowSetup()
+        }
+    }
+    
+    @IBInspectable var shadowRadius: CGFloat = 10 {
+        didSet {
+            shadowSetup()
+        }
+    }
+    
+    @IBInspectable var botttomOffSet: CGSize = CGSize(width: 6, height: 6) {
+        didSet {
+            shadowSetup()
+        }
+    }
+    
+    @IBInspectable var bottomOffSetColor: UIColor? = UIColor.specialBtnColor().withAlphaComponent(0.33) {
+        didSet {
+            shadowSetup()
+        }
+    }
+    
+    
     
     var view: UIView?
     func loadXib() -> UIView {
@@ -37,13 +76,23 @@ class GenericNeumorphicButton: UIView {
         view?.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         self.addSubview(view!)
         shadowSetup()
+        appearenceSetup()
+    }
+    
+    func appearenceSetup() {
+        secondContainerView.backgroundColor = btnColor
+    }
+    
+    func setupButtonName(name: String) {
+        button.setTitle(name, for: .normal)
     }
     
     func shadowSetup() {
-        secondContainerView.backgroundColor = TTUtils.uiColor(from: 0xF8F8F8)
-        let bottomC = UIColor.black.withAlphaComponent(0.3)
-        let topC = UIColor.white.withAlphaComponent(1.0)
-        firstContainerView.addCustomShadow(cornerRadius: 10, shadowRadius: 3, opacity: 1, color: bottomC, offSet: CGSize(width: 3, height: 3))
-        secondContainerView.addCustomShadow(cornerRadius: 10, shadowRadius: 4, opacity: 1, color: topC, offSet: CGSize(width: -4, height: -4))
+        firstContainerView.addCustomShadow(cornerRadius: shadowRadius, shadowRadius: 6, opacity: 1, color: bottomOffSetColor!, offSet: botttomOffSet)
+        secondContainerView.addCustomShadow(cornerRadius: shadowRadius, shadowRadius: 6, opacity: 1, color: topOffSetColor!, offSet: topOffSet)
+    }
+    
+    @IBAction func buttonTapped() {
+        self.tapHandler?()
     }
 }

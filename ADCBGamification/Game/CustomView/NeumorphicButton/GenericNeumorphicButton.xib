@@ -1,15 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17701"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="OpenSans-SemiBold.ttf">
+            <string>OpenSans-SemiBold</string>
+        </array>
+    </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="GenericNeumorphicButton">
             <connections>
+                <outlet property="button" destination="zc5-XY-joR" id="uCs-10-aGp"/>
                 <outlet property="firstContainerView" destination="QSB-7a-xPO" id="znP-gE-btY"/>
                 <outlet property="secondContainerView" destination="Zc7-a6-9S4" id="tEH-IC-MLy"/>
             </connections>
@@ -25,16 +31,30 @@
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zc7-a6-9S4">
                     <rect key="frame" x="0.0" y="0.0" width="414" height="200"/>
-                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <color key="backgroundColor" red="0.13333333333333333" green="0.12941176470588234" blue="0.396078431372549" alpha="1" colorSpace="calibratedRGB"/>
                 </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zc5-XY-joR">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="200"/>
+                    <fontDescription key="fontDescription" name="OpenSans-SemiBold" family="Open Sans" pointSize="16"/>
+                    <state key="normal" title="Button Name">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <connections>
+                        <action selector="buttonTapped" destination="-1" eventType="touchUpInside" id="84g-q4-hbQ"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstAttribute="bottom" secondItem="Zc7-a6-9S4" secondAttribute="bottom" id="7g8-Ff-kjF"/>
                 <constraint firstAttribute="trailing" secondItem="Zc7-a6-9S4" secondAttribute="trailing" id="8df-rT-Tcq"/>
+                <constraint firstItem="zc5-XY-joR" firstAttribute="height" secondItem="Zc7-a6-9S4" secondAttribute="height" id="B0W-oU-Vdp"/>
                 <constraint firstItem="QSB-7a-xPO" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="EFz-hV-3Zw"/>
+                <constraint firstItem="zc5-XY-joR" firstAttribute="centerY" secondItem="Zc7-a6-9S4" secondAttribute="centerY" id="ICF-xc-rPU"/>
+                <constraint firstItem="zc5-XY-joR" firstAttribute="width" secondItem="Zc7-a6-9S4" secondAttribute="width" id="ZPV-al-mP0"/>
                 <constraint firstItem="Zc7-a6-9S4" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="bdC-fG-Dd5"/>
                 <constraint firstItem="QSB-7a-xPO" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="k6w-eH-Nl3"/>
+                <constraint firstItem="zc5-XY-joR" firstAttribute="centerX" secondItem="Zc7-a6-9S4" secondAttribute="centerX" id="nYh-sJ-5R7"/>
                 <constraint firstItem="Zc7-a6-9S4" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="qaJ-DS-LB5"/>
                 <constraint firstAttribute="bottom" secondItem="QSB-7a-xPO" secondAttribute="bottom" id="v48-uf-zdX"/>
                 <constraint firstAttribute="trailing" secondItem="QSB-7a-xPO" secondAttribute="trailing" id="wpc-Le-JW5"/>

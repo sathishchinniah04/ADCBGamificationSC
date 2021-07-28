@@ -69,7 +69,8 @@ class PredictIntroController: UIViewController {
     }
     
     func expireViewSetup() {
-        expireView.button.setTitle("Predict Now", for: .normal)
+        
+        expireView.setupButtonName(name: "Predict Now")
         expireView.populateView(isShowTerms: false, game: self.game) {
           self.nextController()
         }

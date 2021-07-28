@@ -17,6 +17,10 @@ extension UIColor {
             )
         }
 
+    class func specialBtnColor() -> UIColor {
+         return UIColor(red: 34.0/256.0, green: 33.0/256.0, blue: 101.0/256.0, alpha: 1)
+     }
+    
     class func darkBlueColor() -> UIColor {
          return UIColor(red: 33.0/256.0, green: 32.0/256.0, blue: 97.0/256.0, alpha: 1)
      }

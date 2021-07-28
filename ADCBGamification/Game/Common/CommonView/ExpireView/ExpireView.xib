@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -16,19 +16,16 @@
         <array key="OpenSans-Regular.ttf">
             <string>OpenSans-Regular</string>
         </array>
-        <array key="OpenSans-SemiBold.ttf">
-            <string>OpenSans-SemiBold</string>
-        </array>
     </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ExpireView" customModule="ADCBGamification" customModuleProvider="target">
             <connections>
-                <outlet property="button" destination="jkv-PI-h4v" id="lIl-dT-U7Q"/>
                 <outlet property="containerStackView" destination="nYC-7P-LNa" id="KGu-YX-ZCL"/>
                 <outlet property="descLabel" destination="g6i-Vh-D9n" id="cx1-oT-gnV"/>
                 <outlet property="expireLabel" destination="BLo-MQ-iSF" id="080-ic-kf4"/>
                 <outlet property="gameNameLabel" destination="ZpA-KF-iFY" id="mcj-9T-AIq"/>
                 <outlet property="gameNameSubTitleLabel" destination="heg-QQ-ejD" id="W3v-EQ-wRi"/>
+                <outlet property="genericButton" destination="qeP-tU-kam" id="Xr5-zy-9ov"/>
                 <outlet property="secondStackView" destination="AOu-or-gVc" id="4lD-tA-fQc"/>
             </connections>
         </placeholder>
@@ -83,25 +80,17 @@
                                         </label>
                                     </subviews>
                                 </stackView>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jkv-PI-h4v">
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qeP-tU-kam" customClass="GenericNeumorphicButton" customModule="ADCBGamification" customModuleProvider="target">
                                     <rect key="frame" x="0.0" y="346" width="414" height="50"/>
-                                    <color key="backgroundColor" red="0.13068386909999999" green="0.1246742383" blue="0.3787754774" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
-                                        <constraint firstAttribute="height" constant="50" id="cJH-2B-PeC"/>
+                                        <constraint firstAttribute="height" constant="50" id="cgg-ox-9Z0"/>
                                     </constraints>
-                                    <fontDescription key="fontDescription" name="OpenSans-SemiBold" family="Open Sans" pointSize="16"/>
-                                    <state key="normal" title="Button">
-                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    </state>
-                                    <connections>
-                                        <action selector="playButtonAction" destination="-1" eventType="touchUpInside" id="p66-5p-KC2"/>
-                                    </connections>
-                                </button>
+                                </view>
                             </subviews>
                             <constraints>
                                 <constraint firstItem="nYC-7P-LNa" firstAttribute="leading" secondItem="9hH-O7-8ve" secondAttribute="leading" constant="20" id="3TM-b1-mqH"/>
-                                <constraint firstItem="jkv-PI-h4v" firstAttribute="leading" secondItem="9hH-O7-8ve" secondAttribute="leading" id="ZNQ-kG-mn8"/>
-                                <constraint firstItem="jkv-PI-h4v" firstAttribute="centerX" secondItem="9hH-O7-8ve" secondAttribute="centerX" id="dTD-au-kFs"/>
+                                <constraint firstItem="qeP-tU-kam" firstAttribute="leading" secondItem="9hH-O7-8ve" secondAttribute="leading" id="pEH-io-gUq"/>
                             </constraints>
                         </stackView>
                     </subviews>
