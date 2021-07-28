@@ -131,11 +131,17 @@ class ContactListController: UIViewController {
             self.onEditionTextField(text: text)
             self.chooseContactButton.titleLabel.alpha = 1.0
             self.chooseContactButton.titleLabel.isHidden = false
-            self.chooseContactButton.titleLabel.text = "Enter a contact name or mobile number"
+            if text.isEmpty {
+                self.chooseContactButton.placeHolder = "Enter a contact name or mobile number"
+                self.chooseContactButton.titleLabel.alpha = 0.0
+            }
+           
         case .cleared:
+            //Enter a contact name or mobile number
             print("text field cleared")
             self.newList = self.contacts
-            self.chooseContactButton.titleLabel.text = self.chooseContactButton.textField.placeholder
+            self.chooseContactButton.titleLabel.text = ""
+                //self.chooseContactButton.textField.placeholder
             self.contactTableView.reloadData()
         default:
             break

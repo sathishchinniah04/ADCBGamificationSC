@@ -33,8 +33,9 @@ class ADCBGameListController: UIViewController {
             switch action {
             case .gamePlayed(let index):
                 DispatchQueue.main.async {
-                    let cell = self.gamesCollectionView.cellForItem(at: index) as? ADCBGameListCollectionCell
-                    cell?.disableCell()
+                    //: TODOD - Disabling is handled based on the game.executionStatus
+                    /* let cell = self.gamesCollectionView.cellForItem(at: index) as? ADCBGameListCollectionCell
+                     cell?.disableCell() */
                 }
                 print("gamePlayed")
             default :

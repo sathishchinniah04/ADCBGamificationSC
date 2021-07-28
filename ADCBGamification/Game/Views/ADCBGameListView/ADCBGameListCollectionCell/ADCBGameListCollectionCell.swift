@@ -7,7 +7,12 @@
 
 import UIKit
 
+enum GameStatus: String, CaseIterable {
+    case Active, InActive
+}
+
 class ADCBGameListCollectionCell: UICollectionViewCell {
+    
     @IBOutlet weak var gameLabel: UILabel!
     @IBOutlet weak var expireInLabel: UILabel!
     @IBOutlet weak var lockDayLabel: UILabel!
@@ -21,11 +26,11 @@ class ADCBGameListCollectionCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-//        spinFailView.loadScreen { (done) in
-//            self.spinFailView.animateAndRemove()
-//        }
+        //        spinFailView.loadScreen { (done) in
+        //            self.spinFailView.animateAndRemove()
+        //        }
     }
-
+    
     override func prepareForReuse() {
         super.prepareForReuse()
         self.startTimer()
@@ -35,6 +40,9 @@ class ADCBGameListCollectionCell: UICollectionViewCell {
         self.game = game
         guard let game = game else { return }
         self.startTimer()
+        if game.executionStatus?.lowercased() != GameStatus.Active.rawValue.lowercased() {
+           disableCell()
+        }
         setImage(game: game)
         setLabel(game: game)
         cellColor(index: index)
@@ -88,7 +96,7 @@ class ADCBGameListCollectionCell: UICollectionViewCell {
         }
     }
     
-     @objc private func updateTime() {
+    @objc private func updateTime() {
         guard let game = game else { return }
         //print("running")
         self.setLabel(game: game)
@@ -102,9 +110,9 @@ class ADCBGameListCollectionCell: UICollectionViewCell {
     
     func setLabel(game: Games) {
         self.gameLabel.text = game.gameTitle
-//        CustomTimer.shared.startTimer {
-//            self.checkGameStatus(game: game)
-//        }
+        //        CustomTimer.shared.startTimer {
+        //            self.checkGameStatus(game: game)
+        //        }
         self.checkGameStatus(game: game)
     }
     
@@ -117,20 +125,36 @@ class ADCBGameListCollectionCell: UICollectionViewCell {
     }
     
     func onLock(game: Games) {
+        
         let date = game.executionPeriod?.startDateTime ?? ""
         expireInLabel.text = "Available in"
-        hourMinteAlignmentCheck(date: date, value: "")
+        let numberOfDays = Calendar.current.dateComponents([.day], from: Date(), to: Utility.convertStringToDate(date: date)).day ?? 0
+        hourMinteAlignmentCheck(date: date, value: numberOfDays)
     }
     
     func onActive(game: Games) {
+        
         let date = game.executionPeriod?.endDateTime ?? ""
         expireInLabel.text = "Expire in"
-        hourMinteAlignmentCheck(date: date, value: "")
+        let numberOfDays = Calendar.current.dateComponents([.day], from: Date(), to: Utility.convertStringToDate(date: date)).day ?? 0
+        hourMinteAlignmentCheck(date: date, value: numberOfDays)
     }
     
-    func hourMinteAlignmentCheck(date: String, value: String) {
+    func hourMinteAlignmentCheck(date: String, value: Int) {
+        
         DispatchQueue.main.async {
-            self.timeLabel.text = value + " \(Utility.secondsToHoursMinutesSeconds(seconds: Utility.convertStringIntoDate(date: date)).0)h  \(Utility.secondsToHoursMinutesSeconds(seconds: Utility.convertStringIntoDate(date: date)).1)min"
+            
+            var daysCount = ""
+            
+            if value == 0 {
+                daysCount = "Today"
+            } else if value > 1 {
+                daysCount = "\(value)" + "day(s)"
+            } else {
+                daysCount = "\(value)" + "day"
+            }
+            
+            self.timeLabel.text = daysCount + " \(Utility.secondsToHoursMinutesSeconds(seconds: Utility.convertStringIntoDate(date: date)).0)hr  \(Utility.secondsToHoursMinutesSeconds(seconds: Utility.convertStringIntoDate(date: date)).1)min"
         }
         //\(Utility.secondsToHoursMinutesSeconds(seconds: Utility.convertStringIntoDate(date: date)).2)sec"
     }
