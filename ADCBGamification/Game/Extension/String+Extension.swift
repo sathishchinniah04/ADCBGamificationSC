@@ -17,4 +17,8 @@ extension String {
                 let emailTest = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
                 return emailTest.evaluate(with: self)
     }
+    
+    var isNumeric: Bool {
+         return !(self.isEmpty) && self.allSatisfy { $0.isNumber }
+    }
 }

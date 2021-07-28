@@ -319,6 +319,7 @@
         <!--Contact List Controller-->
         <scene sceneID="8Ru-lT-cVs">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cFP-kp-aNs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="ContactListController" id="7hu-A8-FJZ" customClass="ContactListController" customModule="ADCBGamification" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="E3h-MP-Cf0">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -354,11 +355,11 @@
                                     <constraint firstItem="qmQ-w6-zbe" firstAttribute="leading" secondItem="5WR-6z-2ZY" secondAttribute="leading" constant="25" id="sWY-yM-PTS"/>
                                 </constraints>
                             </view>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="YAy-Jv-GQE">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="YAy-Jv-GQE">
                                 <rect key="frame" x="0.0" y="161" width="414" height="735"/>
                                 <subviews>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="N8C-f9-hdr">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="645"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="635"/>
                                         <color key="backgroundColor" red="0.91764705879999997" green="0.91764705879999997" blue="0.91764705879999997" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" priority="250" constant="645" id="KYa-q0-tEy"/>
@@ -414,7 +415,6 @@
                         <outlet property="inviteButtonContainerView" destination="YLQ-kn-WGP" id="JGO-cd-KEl"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="cFP-kp-aNs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3534.7826086956525" y="478.79464285714283"/>
         </scene>

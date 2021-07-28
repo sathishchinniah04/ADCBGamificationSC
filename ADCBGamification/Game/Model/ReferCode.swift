@@ -15,3 +15,9 @@ class ReferCode: Decodable {
     var requestId: String?
     var timestamp: String?
 }
+
+
+class SimpleLifeUser: Decodable {
+    var code: String?
+    var message: String?
+}

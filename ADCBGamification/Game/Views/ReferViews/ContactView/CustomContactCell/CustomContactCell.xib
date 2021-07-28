@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -27,7 +26,7 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fin-0S-chR">
-                        <rect key="frame" x="20" y="5" width="280" height="55"/>
+                        <rect key="frame" x="20" y="15" width="280" height="55"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="mBl-Dy-Mxn">
                                 <rect key="frame" x="0.0" y="0.0" width="55" height="55"/>
@@ -41,11 +40,11 @@
                                                 <color key="textColor" red="0.1333333333" green="0.12941176469999999" blue="0.39607843139999999" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="BPk-9y-p8I">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="unknown_contact" translatesAutoresizingMaskIntoConstraints="NO" id="BPk-9y-p8I">
                                                 <rect key="frame" x="0.0" y="0.0" width="55" height="55"/>
                                             </imageView>
                                         </subviews>
-                                        <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                        <color key="backgroundColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstItem="oph-6r-exG" firstAttribute="leading" secondItem="MiE-SQ-cVi" secondAttribute="leading" constant="5" id="1Xb-71-LeL"/>
                                             <constraint firstItem="BPk-9y-p8I" firstAttribute="leading" secondItem="MiE-SQ-cVi" secondAttribute="leading" id="6Xv-qs-n2g"/>
@@ -78,7 +77,7 @@
                                 </subviews>
                             </stackView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="mBl-Dy-Mxn" firstAttribute="top" secondItem="fin-0S-chR" secondAttribute="top" id="ft9-lx-sYF"/>
                             <constraint firstAttribute="trailing" secondItem="YrD-gA-y4h" secondAttribute="trailing" constant="10" id="hBz-fS-1ne"/>
@@ -99,7 +98,7 @@
                     <constraint firstAttribute="trailing" secondItem="fin-0S-chR" secondAttribute="trailing" constant="20" id="KdZ-vh-6F1"/>
                     <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="fin-0S-chR" secondAttribute="bottom" constant="5" id="aMt-ij-Vls"/>
                     <constraint firstItem="fin-0S-chR" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="akW-fG-awe"/>
-                    <constraint firstItem="fin-0S-chR" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="gvq-50-QUt"/>
+                    <constraint firstItem="fin-0S-chR" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="15" id="gvq-50-QUt"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
@@ -115,11 +114,6 @@
         </tableViewCell>
     </objects>
     <resources>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemYellowColor">
-            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
+        <image name="unknown_contact" width="30" height="40"/>
     </resources>
 </document>

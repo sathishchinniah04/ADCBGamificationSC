@@ -71,6 +71,37 @@ class ReferViewModel {
         }
     }
     
+    static func checkSimpleLifeUser(number: String , complition:((String, Error)->Void)?) {
+        
+        let service = "getCustomerProfile"
+        
+        let urlStr = Constants.simpleLiferUserCheck + service
+        
+        guard let url = URL(string: urlStr) else { return }
+        
+        var urlReq = URLRequest(url: url)
+        
+        urlReq.setValue(Utility.getRandonNo(), forHTTPHeaderField: "X-CORELATION-ID")
+        
+        urlReq.setValue(number, forHTTPHeaderField: "msisdn")
+ 
+    
+       // let dict = ["phoneNumber": bParty,"name":""]
+        
+        NetworkManager.getRequest(struct: SimpleLifeUser.self, url: urlStr) { (data, error) in
+            
+            print("Error is \(String(describing: error))")
+            
+            if let dat = data {
+                print("data is \(dat)")
+                complition?("", error as! Error)
+            } else {
+                complition?("", error as! Error)
+            }
+        }
+
+    }
+    
 //    static func getRecordHistory(referCode: String, complition:((ReferCode)->Void)?) {
 //
 //

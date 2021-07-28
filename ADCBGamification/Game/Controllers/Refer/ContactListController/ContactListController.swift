@@ -14,6 +14,11 @@ class ContactListController: UIViewController {
     @IBOutlet weak var chooseContactButton: ReferContactButton!
     @IBOutlet weak var inviteButton: NeumorphicButton!
     @IBOutlet weak var inviteButtonContainerView: UIView!
+    
+    //@IBOutlet weak var simplylifeUserLabel: UILabel!
+   // @IBOutlet weak var tableViewHeightConstraints: NSLayoutConstraint!
+    //@IBOutlet weak var activityIndicatorView: UIActivityIndicatorView!
+    
     var referSuccessViewHelper = ReferSuccessViewHelper()
     var handle: ((_ name: String,_ ph: String)->Void)?
     var contacts = [FetchedContact]()
@@ -30,6 +35,7 @@ class ContactListController: UIViewController {
         inviteButton.populateView { (done) in
             self.inviteApiCall()
         }
+        //simplylifeUserLabel.isHidden = true
         //neumorphicEffect()
         
         delete()
@@ -134,14 +140,13 @@ class ContactListController: UIViewController {
             if text.isEmpty {
                 self.chooseContactButton.placeHolder = "Enter a contact name or mobile number"
                 self.chooseContactButton.titleLabel.alpha = 0.0
+                self.inviteButton.alpha = 1.0
             }
            
         case .cleared:
-            //Enter a contact name or mobile number
             print("text field cleared")
             self.newList = self.contacts
             self.chooseContactButton.titleLabel.text = ""
-                //self.chooseContactButton.textField.placeholder
             self.contactTableView.reloadData()
         default:
             break
@@ -153,7 +158,15 @@ class ContactListController: UIViewController {
             $0.firstName.range(of: text, options: [.caseInsensitive, .diacriticInsensitive ]) != nil ||
                 $0.telephone.range(of: text, options: [.caseInsensitive, .diacriticInsensitive ]) != nil
         }
+        
+        if self.newList.isEmpty, !text.isEmpty , text.isNumeric {
+            let unknownContact = FetchedContact(firstName: "Unknown", lastName: "contact", telephone: text, image: nil, unknowContact: true)
+            self.newList.insert(unknownContact, at: 0)
+            self.inviteButton.alpha = 0.0
+        }
+        
         if text.isEmpty {
+            self.newList.removeAll()
             self.newList = self.contacts
         }
         self.contactTableView.reloadData()
@@ -171,7 +184,25 @@ class ContactListController: UIViewController {
     }
     func onCellTap(indexPath: IndexPath) {
         self.view.endEditing(true)
+        
         let contact = self.newList[indexPath.row]
+        self.inviteButton.alpha = 0.0
+    
+        //tableViewHeightConstraints.constant = 100
+        
+        //self.simplylifeUserLabel.isHidden = false
+        
+        //TODO : Call the api call for simplelife user or not check
+        
+//        ReferViewModel.checkSimpleLifeUser(number: contact.telephone) { message, err  in
+//            self.activityIndicatorView.stopAnimating()
+//            if !message.isEmpty {
+//                self.simplylifeUserLabel.isHidden = false
+//                self.simplylifeUserLabel.text = message
+//            }
+//        }
+        
+        
         chooseContactButton.titleLabel.isHidden = false
         chooseContactButton.titleLabel.text = contact.firstName + " " + contact.lastName
         chooseContactButton.buttonState(isPressed: false)
@@ -181,7 +212,7 @@ class ContactListController: UIViewController {
         self.handle?(contact.firstName + " " + contact.lastName, contact.telephone)
         self.bPart = contact.telephone
         self.inviteButton.isUserInteractionEnabled = true
-        self.inviteButton.alpha = 1.0
+        //self.inviteButton.alpha = 1.0
        // self.dismiss(animated: true, completion: nil)
     }
     
@@ -202,6 +233,9 @@ extension ContactListController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let selectedCell = tableView.cellForRow(at: indexPath) as! CustomContactCell
+        selectedCell.isSelectedVal = true
+        //activityIndicatorView.startAnimating()
         onCellTap(indexPath: indexPath)
     }
     
