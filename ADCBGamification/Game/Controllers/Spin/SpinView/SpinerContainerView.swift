@@ -8,7 +8,7 @@
 import UIKit
 enum SpinerContainerViewAction {
         case spinTapped
-        case view(UIView)
+    case view(UIView, _ containerView: UIView)
 }
 
 class SpinerContainerView: UIView {
@@ -87,7 +87,7 @@ class SpinerContainerView: UIView {
         spinSetup(offer: offer)
         self.handle = complition
         //self.mainContainerView.transform = CGAffineTransform(scaleX: 0.5, y: 0.5)
-        complition?(.view(self.mainContainerView))
+        complition?(.view(self.mainContainerView, self.wheelContainerView))
     }
     
     func spinSetup(offer: [Offers]) {

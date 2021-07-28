@@ -129,23 +129,31 @@ class SpinHomeController: UIViewController {
         case .spinTapped:
             print("Spin button tapped")
             self.assignRewards()
-        case .view(let spinView):
-            self.scalingSpinerView(v: spinView)
+        case .view(let spinView, let wContainerView):
+            self.scalingSpinerView(v: spinView, wContaner:wContainerView)
             
         default:
             break
         }
     }
     
-    func scalingSpinerView(v: UIView) {
+    func scalingSpinerView(v: UIView, wContaner: UIView) {
         self.activityIndicatorView.stopAnimating()
         let v = v
         
         let scaleX = spinDummyImgView.frame.size.width/v.frame.size.width
         let scaleY = spinDummyImgView.frame.size.height/v.frame.size.height
-        //v.frame = spinDummyImgView.frame
-        //v.center.x = spinDummyImgView.center.x-50
         spinDummyImgView.addSubview(v)
+        let rotateValue = CGFloat(Double.pi/2)
+        UIView.animate(withDuration: 2.4) {
+            wContaner.transform = CGAffineTransform(rotationAngle: rotateValue)
+        } completion: { done in
+            UIView.animate(withDuration: 2.4) {
+                wContaner.transform = CGAffineTransform(rotationAngle: -rotateValue)
+            }
+        }
+
+            
         spinDummyImgView.transform = CGAffineTransform(scaleX: scaleX, y: scaleY).translatedBy(x: -50, y: 0)
         
     }
