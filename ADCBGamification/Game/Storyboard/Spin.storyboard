@@ -21,16 +21,17 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="448"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0gg-gf-sLk" customClass="AnimationView" customModule="ADCBGamification" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="89" width="414" height="688"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7pc-Ro-PzS" customClass="AnimationView" customModule="ADCBGamification" customModuleProvider="target">
-                                <rect key="frame" x="57" y="159" width="300" height="263"/>
+                                <rect key="frame" x="43" y="149" width="330" height="299"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="300" id="Zli-hw-RCR"/>
-                                    <constraint firstAttribute="height" constant="263" id="gVG-3w-XZd"/>
+                                    <constraint firstAttribute="width" constant="330" id="Zli-hw-RCR"/>
+                                    <constraint firstAttribute="height" constant="299" id="gVG-3w-XZd"/>
                                 </constraints>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="animationName" value="home"/>
-                                </userDefinedRuntimeAttributes>
                             </view>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Clouds" translatesAutoresizingMaskIntoConstraints="NO" id="vJN-O7-seS">
                                 <rect key="frame" x="0.0" y="44" width="300" height="63"/>
@@ -74,11 +75,13 @@
                             <constraint firstItem="1au-yG-VVq" firstAttribute="centerY" secondItem="2DE-sR-4BU" secondAttribute="centerY" id="Eex-H7-I2m"/>
                             <constraint firstItem="peg-KZ-704" firstAttribute="bottom" secondItem="fIY-xv-g70" secondAttribute="bottom" id="FYx-7v-906"/>
                             <constraint firstItem="peg-KZ-704" firstAttribute="trailing" secondItem="fIY-xv-g70" secondAttribute="trailing" id="HCY-Ku-Bq8"/>
-                            <constraint firstItem="7pc-Ro-PzS" firstAttribute="top" secondItem="O5H-9N-Ue9" secondAttribute="bottom" constant="-289" id="JcM-fl-xM4"/>
+                            <constraint firstItem="7pc-Ro-PzS" firstAttribute="top" secondItem="O5H-9N-Ue9" secondAttribute="bottom" constant="-299" id="JcM-fl-xM4"/>
                             <constraint firstItem="vJN-O7-seS" firstAttribute="leading" secondItem="peg-KZ-704" secondAttribute="leading" id="Jpl-Wq-fbj"/>
                             <constraint firstItem="vJN-O7-seS" firstAttribute="top" secondItem="peg-KZ-704" secondAttribute="top" id="Llh-e3-3db"/>
                             <constraint firstItem="otW-Vk-P3R" firstAttribute="centerX" secondItem="2DE-sR-4BU" secondAttribute="centerX" id="WKj-xY-sdZ"/>
+                            <constraint firstItem="peg-KZ-704" firstAttribute="bottom" secondItem="0gg-gf-sLk" secondAttribute="bottom" constant="85" id="XNu-Md-Bfc"/>
                             <constraint firstItem="wNb-S9-CRs" firstAttribute="leading" secondItem="peg-KZ-704" secondAttribute="leading" constant="30" id="Ycx-0X-YRR"/>
+                            <constraint firstItem="0gg-gf-sLk" firstAttribute="top" secondItem="peg-KZ-704" secondAttribute="top" constant="45" id="aBT-8A-ClW"/>
                             <constraint firstItem="O5H-9N-Ue9" firstAttribute="top" secondItem="2DE-sR-4BU" secondAttribute="top" id="avL-4s-3KO"/>
                             <constraint firstItem="peg-KZ-704" firstAttribute="trailing" secondItem="O5H-9N-Ue9" secondAttribute="trailing" id="cj8-00-lTf"/>
                             <constraint firstItem="SGV-Kl-EeD" firstAttribute="centerX" secondItem="2DE-sR-4BU" secondAttribute="centerX" id="eW4-Jf-JSq"/>
@@ -86,15 +89,18 @@
                             <constraint firstItem="O5H-9N-Ue9" firstAttribute="height" secondItem="2DE-sR-4BU" secondAttribute="height" multiplier="0.5" id="fOO-UA-MxV"/>
                             <constraint firstItem="SGV-Kl-EeD" firstAttribute="bottom" secondItem="O5H-9N-Ue9" secondAttribute="bottom" constant="-60" id="gqw-7i-cEU"/>
                             <constraint firstItem="wNb-S9-CRs" firstAttribute="top" secondItem="O5H-9N-Ue9" secondAttribute="bottom" constant="20" id="icH-BI-MOj"/>
-                            <constraint firstItem="7pc-Ro-PzS" firstAttribute="centerX" secondItem="O5H-9N-Ue9" secondAttribute="centerX" id="tMQ-aj-MkN"/>
+                            <constraint firstAttribute="trailing" secondItem="0gg-gf-sLk" secondAttribute="trailing" id="ssd-VA-xuF"/>
+                            <constraint firstItem="7pc-Ro-PzS" firstAttribute="centerX" secondItem="O5H-9N-Ue9" secondAttribute="centerX" constant="1" id="tMQ-aj-MkN"/>
                             <constraint firstItem="fIY-xv-g70" firstAttribute="leading" secondItem="peg-KZ-704" secondAttribute="leading" id="vTH-kJ-12B"/>
+                            <constraint firstItem="0gg-gf-sLk" firstAttribute="leading" secondItem="peg-KZ-704" secondAttribute="leading" id="y7E-C6-tUT"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="activityIndicatorView" destination="1au-yG-VVq" id="jk7-gu-5Fa"/>
                         <outlet property="containerView" destination="fIY-xv-g70" id="Bcd-vT-Hnw"/>
                         <outlet property="expireView" destination="wNb-S9-CRs" id="o8M-YK-KvH"/>
-                        <outlet property="lottiAnimationView" destination="7pc-Ro-PzS" id="wWM-r7-7pF"/>
+                        <outlet property="homeAnimationStaticView" destination="7pc-Ro-PzS" id="xzl-uE-jtO"/>
+                        <outlet property="lottiSpinAnimationView" destination="0gg-gf-sLk" id="FqL-Re-EAV"/>
                         <outlet property="spinDummyImgView" destination="SGV-Kl-EeD" id="lj1-hE-UfA"/>
                     </connections>
                 </viewController>

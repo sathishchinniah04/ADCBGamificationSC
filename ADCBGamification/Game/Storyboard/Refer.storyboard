@@ -319,7 +319,6 @@
         <!--Contact List Controller-->
         <scene sceneID="8Ru-lT-cVs">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="cFP-kp-aNs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="ContactListController" id="7hu-A8-FJZ" customClass="ContactListController" customModule="ADCBGamification" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="E3h-MP-Cf0">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -427,6 +426,7 @@
                         <outlet property="tableViewHeightConstraint" destination="KYa-q0-tEy" id="1X7-Dx-xCT"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cFP-kp-aNs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3534.7826086956525" y="478.79464285714283"/>
         </scene>

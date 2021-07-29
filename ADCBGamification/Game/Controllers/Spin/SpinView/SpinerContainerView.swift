@@ -12,11 +12,13 @@ enum SpinerContainerViewAction {
 }
 
 class SpinerContainerView: UIView {
+    
     @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var mainContainerView: UIView!
     @IBOutlet weak var wheelContainerView: UIView!
     @IBOutlet weak var spinCenterView: UIView!
     @IBOutlet weak var spinNowButton: UIButton!
+    
     var offer: [Offers]?
     var fortuneWheel: TTFortuneWheel?
     var slices: [CarnivalWheelSlice] = []
@@ -54,6 +56,7 @@ class SpinerContainerView: UIView {
     }
     
     func stopAnimationAtIndex(achivementId: String, complition:((Bool)->Void)?) {
+     
         print("achivementId \(achivementId)")
         DispatchQueue.main.async {
             self.wheelContainerView.transform = CGAffineTransform(rotationAngle: CGFloat(Double.pi))
@@ -70,7 +73,8 @@ class SpinerContainerView: UIView {
             print("index  found is \(ind) self.offer count is == \(self.offer?.count)")
             DispatchQueue.main.async {
                 self.startRotate(index: ind*2) { () -> Void? in
-                    complition?(true)
+                    return complition?(true)
+            
                 }//(index: ind*2, complition: complition)
             }
         } else {
