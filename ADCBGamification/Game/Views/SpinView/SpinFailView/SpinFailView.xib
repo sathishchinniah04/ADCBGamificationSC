@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -246,6 +246,7 @@
             </constraints>
             <connections>
                 <outlet property="containerView" destination="DVy-v3-TUb" id="45q-yu-I50"/>
+                <outlet property="imageView" destination="NO2-F8-Ffb" id="Tpd-vO-MEX"/>
             </connections>
             <point key="canvasLocation" x="395.6521739130435" y="5.3571428571428568"/>
         </view>
@@ -254,7 +255,7 @@
         <image name="Clouds" width="300" height="63"/>
         <image name="CurveClip" width="187.5" height="211"/>
         <image name="Mobile" width="137" height="250"/>
-        <image name="Sad" width="195" height="156"/>
+        <image name="Sad" width="130" height="104"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

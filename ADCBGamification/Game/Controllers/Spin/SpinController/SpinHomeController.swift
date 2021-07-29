@@ -175,7 +175,7 @@ class SpinHomeController: UIViewController {
         let scaleY = spinDummyImgView.frame.size.height/v.frame.size.height
         spinDummyImgView.addSubview(v)
         spinDummyImgView.transform = CGAffineTransform(scaleX: scaleX, y: scaleY).translatedBy(x: -50, y: 0)
-    
+        
         wContaner.transform = CGAffineTransform(rotationAngle: 0.5)
         rotate()
         timer =  Timer.scheduledTimer(withTimeInterval: 15.0, repeats: true) { (timer) in
@@ -268,13 +268,7 @@ class SpinHomeController: UIViewController {
             }
             
         } else {
-            DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
-                self.spinAnimationView?.play()
-            }
-            DispatchQueue.main.asyncAfter(deadline: .now() + 7) {
                 self.spinFailView.loadScreen(action: self.failScreenActionHandler(action:))
-            }
-            
         }
     }
     

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -258,6 +258,7 @@ Enjoy 10% off at Starbucks!</string>
                 <outlet property="containerView" destination="IAH-G8-iQf" id="Hwi-t3-BVb"/>
                 <outlet property="descLabel" destination="Cv6-6m-HDP" id="qYh-Vf-Jlq"/>
                 <outlet property="homePageButton" destination="eQC-VT-XrO" id="BLo-XF-IEx"/>
+                <outlet property="imageView" destination="oDq-NS-RoN" id="jSV-AO-EZi"/>
                 <outlet property="knowMoreButton" destination="g9m-97-Rjs" id="jaj-5F-uJ1"/>
                 <outlet property="rewardButton" destination="MTc-43-SJc" id="Orn-Hi-Kqe"/>
                 <outlet property="spinAgainButton" destination="wBQ-IV-oOm" id="MEd-hS-cQs"/>
