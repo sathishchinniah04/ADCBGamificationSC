@@ -7,12 +7,15 @@
 
 import UIKit
 
+
 class SpinHomeController: UIViewController {
+    
     @IBOutlet weak var expireView: ExpireView!
     @IBOutlet weak var containerView: UIView!
-
+    @IBOutlet weak var lottiAnimationView: AnimationView!
     @IBOutlet weak var spinDummyImgView: UIImageView!
     @IBOutlet weak var activityIndicatorView: UIActivityIndicatorView!
+    
     var spinerView = SpinerContainerHelper()
     var game: Games?
     var isDirectLoad: Bool = false
@@ -22,6 +25,9 @@ class SpinHomeController: UIViewController {
     var spinFailView = SpinFailViewHelper()
     var gameIndex: IndexPath?
     var con: UINavigationController?
+    var wheelView: UIView?
+    var timer = Timer()
+    
     override func viewDidLoad() {
         super.viewDidLoad()    
         self.initialSetup()
@@ -92,7 +98,7 @@ class SpinHomeController: UIViewController {
         self.spinDummyImgView.alpha = 1.0
         self.spinerView.enableSpinButton(hide: true)
         expireView.populateView(isShowTerms: false, game: self.game) {
-            
+            self.timer.invalidate()
             (self.con as? CustomNavViewController)?.changeOnlyTitle(title: "Spin & Win")
             self.scaleToOrginalSize()
             self.spinerView.startRotate()
@@ -140,23 +146,70 @@ class SpinHomeController: UIViewController {
     func scalingSpinerView(v: UIView, wContaner: UIView) {
         self.activityIndicatorView.stopAnimating()
         let v = v
-        
+        wheelView = wContaner
         let scaleX = spinDummyImgView.frame.size.width/v.frame.size.width
         let scaleY = spinDummyImgView.frame.size.height/v.frame.size.height
         spinDummyImgView.addSubview(v)
-        let rotateValue = CGFloat(Double.pi/2)
-        UIView.animate(withDuration: 2.4) {
-            wContaner.transform = CGAffineTransform(rotationAngle: rotateValue)
-        } completion: { done in
-            UIView.animate(withDuration: 2.4) {
-                wContaner.transform = CGAffineTransform(rotationAngle: -rotateValue)
-            }
-        }
-
-            
         spinDummyImgView.transform = CGAffineTransform(scaleX: scaleX, y: scaleY).translatedBy(x: -50, y: 0)
         
+        wContaner.transform = CGAffineTransform(rotationAngle: 0.5)
+        rotate()
+        timer =  Timer.scheduledTimer(withTimeInterval: 15.0, repeats: true) { (timer) in
+            self.rotate()
+        }
     }
+    
+
+    
+    // MARK : Animations
+   
+    func rotate() {
+        
+        self.lottiAnimationView.contentMode = .scaleAspectFit
+        self.lottiAnimationView.loopMode = .loop
+        
+        DispatchQueue.main.asyncAfter(deadline: .now()) {
+            self.lottiAnimationView.stop()
+            UIView.animate(withDuration: 1.0, delay: 0.5, options: [], animations: { () -> Void in
+                let rotate = CABasicAnimation(keyPath: "transform.rotation")
+                rotate.fromValue = 0
+                rotate.toValue = 5.5 * Double.random(in: 2..<6)
+                rotate.duration = 5.0
+                rotate.fillMode = CAMediaTimingFillMode.forwards
+                rotate.isRemovedOnCompletion = false
+                self.wheelView?.layer.add(rotate, forKey: "transform.rotation")
+            }) { _ in
+                UIView.animate(withDuration: 0.1) {
+                    self.wheelView?.layer.removeAnimation(forKey: "rotationAnimation")
+                }
+                DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
+                    self.lottiAnimationView.play()
+                }
+                
+                DispatchQueue.main.asyncAfter(deadline: .now() + 7) {
+                    self.lottiAnimationView.stop()
+                    UIView.animate(withDuration: 1.0, delay: 0.5, options: [], animations: { () -> Void in
+                        let rotate = CABasicAnimation(keyPath: "transform.rotation")
+                        rotate.toValue = 0
+                        rotate.fromValue = 5.5 * Double.random(in: 2..<6)
+                        rotate.duration = 5.0
+                        rotate.fillMode = CAMediaTimingFillMode.forwards
+                        rotate.isRemovedOnCompletion = false
+                        self.wheelView?.layer.add(rotate, forKey: "transform.rotation")
+                    }) { _ in
+                        UIView.animate(withDuration: 0.5) {
+                            self.wheelView?.layer.removeAnimation(forKey: "rotationAnimation")
+                        }
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
+                            self.lottiAnimationView.play()
+                        }
+                    }
+                }
+            }
+            
+        }
+    }
+    
     
     func scaleToOrginalSize() {
         let gap = spinDummyImgView.center.y - self.view.center.y

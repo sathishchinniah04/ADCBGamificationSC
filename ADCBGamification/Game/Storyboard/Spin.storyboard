@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -21,6 +21,17 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="448"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7pc-Ro-PzS" customClass="AnimationView" customModule="ADCBGamification" customModuleProvider="target">
+                                <rect key="frame" x="57" y="159" width="300" height="263"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="Zli-hw-RCR"/>
+                                    <constraint firstAttribute="height" constant="263" id="gVG-3w-XZd"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="animationName" value="home"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Clouds" translatesAutoresizingMaskIntoConstraints="NO" id="vJN-O7-seS">
                                 <rect key="frame" x="0.0" y="44" width="300" height="63"/>
                             </imageView>
@@ -63,6 +74,7 @@
                             <constraint firstItem="1au-yG-VVq" firstAttribute="centerY" secondItem="2DE-sR-4BU" secondAttribute="centerY" id="Eex-H7-I2m"/>
                             <constraint firstItem="peg-KZ-704" firstAttribute="bottom" secondItem="fIY-xv-g70" secondAttribute="bottom" id="FYx-7v-906"/>
                             <constraint firstItem="peg-KZ-704" firstAttribute="trailing" secondItem="fIY-xv-g70" secondAttribute="trailing" id="HCY-Ku-Bq8"/>
+                            <constraint firstItem="7pc-Ro-PzS" firstAttribute="top" secondItem="O5H-9N-Ue9" secondAttribute="bottom" constant="-289" id="JcM-fl-xM4"/>
                             <constraint firstItem="vJN-O7-seS" firstAttribute="leading" secondItem="peg-KZ-704" secondAttribute="leading" id="Jpl-Wq-fbj"/>
                             <constraint firstItem="vJN-O7-seS" firstAttribute="top" secondItem="peg-KZ-704" secondAttribute="top" id="Llh-e3-3db"/>
                             <constraint firstItem="otW-Vk-P3R" firstAttribute="centerX" secondItem="2DE-sR-4BU" secondAttribute="centerX" id="WKj-xY-sdZ"/>
@@ -74,6 +86,7 @@
                             <constraint firstItem="O5H-9N-Ue9" firstAttribute="height" secondItem="2DE-sR-4BU" secondAttribute="height" multiplier="0.5" id="fOO-UA-MxV"/>
                             <constraint firstItem="SGV-Kl-EeD" firstAttribute="bottom" secondItem="O5H-9N-Ue9" secondAttribute="bottom" constant="-60" id="gqw-7i-cEU"/>
                             <constraint firstItem="wNb-S9-CRs" firstAttribute="top" secondItem="O5H-9N-Ue9" secondAttribute="bottom" constant="20" id="icH-BI-MOj"/>
+                            <constraint firstItem="7pc-Ro-PzS" firstAttribute="centerX" secondItem="O5H-9N-Ue9" secondAttribute="centerX" id="tMQ-aj-MkN"/>
                             <constraint firstItem="fIY-xv-g70" firstAttribute="leading" secondItem="peg-KZ-704" secondAttribute="leading" id="vTH-kJ-12B"/>
                         </constraints>
                     </view>
@@ -81,6 +94,7 @@
                         <outlet property="activityIndicatorView" destination="1au-yG-VVq" id="jk7-gu-5Fa"/>
                         <outlet property="containerView" destination="fIY-xv-g70" id="Bcd-vT-Hnw"/>
                         <outlet property="expireView" destination="wNb-S9-CRs" id="o8M-YK-KvH"/>
+                        <outlet property="lottiAnimationView" destination="7pc-Ro-PzS" id="wWM-r7-7pF"/>
                         <outlet property="spinDummyImgView" destination="SGV-Kl-EeD" id="lj1-hE-UfA"/>
                     </connections>
                 </viewController>

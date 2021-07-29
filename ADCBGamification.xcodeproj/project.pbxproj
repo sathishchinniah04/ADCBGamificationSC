@@ -193,6 +193,278 @@
 		33FC31CA26971A9800868D9E /* SpinSuccessViewHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33FC31C926971A9800868D9E /* SpinSuccessViewHelper.swift */; };
 		33FC31CE26973C5100868D9E /* ExpireViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33FC31CD26973C5100868D9E /* ExpireViewModel.swift */; };
 		33FC31D326973CA000868D9E /* CustomTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33FC31D226973CA000868D9E /* CustomTimer.swift */; };
+		F58A64F726B22CCB00D5713F /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = F58A644126B22CCB00D5713F /* LICENSE */; };
+		F58A64F826B22CCB00D5713F /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = F58A644126B22CCB00D5713F /* LICENSE */; };
+		F58A64F926B22CCB00D5713F /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = F58A644226B22CCB00D5713F /* README.md */; };
+		F58A64FA26B22CCB00D5713F /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = F58A644226B22CCB00D5713F /* README.md */; };
+		F58A64FB26B22CCB00D5713F /* AnimationViewInitializers.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A644726B22CCB00D5713F /* AnimationViewInitializers.swift */; };
+		F58A64FC26B22CCB00D5713F /* AnimationViewInitializers.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A644726B22CCB00D5713F /* AnimationViewInitializers.swift */; };
+		F58A64FD26B22CCB00D5713F /* AnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A644826B22CCB00D5713F /* AnimationView.swift */; };
+		F58A64FE26B22CCB00D5713F /* AnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A644826B22CCB00D5713F /* AnimationView.swift */; };
+		F58A64FF26B22CCB00D5713F /* AnimationPublic.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A644926B22CCB00D5713F /* AnimationPublic.swift */; };
+		F58A650026B22CCB00D5713F /* AnimationPublic.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A644926B22CCB00D5713F /* AnimationPublic.swift */; };
+		F58A650126B22CCB00D5713F /* AnimationImageProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A644B26B22CCB00D5713F /* AnimationImageProvider.swift */; };
+		F58A650226B22CCB00D5713F /* AnimationImageProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A644B26B22CCB00D5713F /* AnimationImageProvider.swift */; };
+		F58A650326B22CCB00D5713F /* CompatibleAnimationKeypath.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A644E26B22CCB00D5713F /* CompatibleAnimationKeypath.swift */; };
+		F58A650426B22CCB00D5713F /* CompatibleAnimationKeypath.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A644E26B22CCB00D5713F /* CompatibleAnimationKeypath.swift */; };
+		F58A650526B22CCB00D5713F /* CompatibleAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A644F26B22CCB00D5713F /* CompatibleAnimationView.swift */; };
+		F58A650626B22CCB00D5713F /* CompatibleAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A644F26B22CCB00D5713F /* CompatibleAnimationView.swift */; };
+		F58A650726B22CCB00D5713F /* FilepathImageProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A645026B22CCB00D5713F /* FilepathImageProvider.swift */; };
+		F58A650826B22CCB00D5713F /* FilepathImageProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A645026B22CCB00D5713F /* FilepathImageProvider.swift */; };
+		F58A650926B22CCB00D5713F /* AnimatedSwitch.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A645126B22CCB00D5713F /* AnimatedSwitch.swift */; };
+		F58A650A26B22CCB00D5713F /* AnimatedSwitch.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A645126B22CCB00D5713F /* AnimatedSwitch.swift */; };
+		F58A650B26B22CCB00D5713F /* BundleImageProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A645226B22CCB00D5713F /* BundleImageProvider.swift */; };
+		F58A650C26B22CCB00D5713F /* BundleImageProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A645226B22CCB00D5713F /* BundleImageProvider.swift */; };
+		F58A650D26B22CCB00D5713F /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A645326B22CCB00D5713F /* UIColorExtension.swift */; };
+		F58A650E26B22CCB00D5713F /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A645326B22CCB00D5713F /* UIColorExtension.swift */; };
+		F58A650F26B22CCB00D5713F /* AnimatedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A645426B22CCB00D5713F /* AnimatedButton.swift */; };
+		F58A651026B22CCB00D5713F /* AnimatedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A645426B22CCB00D5713F /* AnimatedButton.swift */; };
+		F58A651126B22CCB00D5713F /* LottieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A645526B22CCB00D5713F /* LottieView.swift */; };
+		F58A651226B22CCB00D5713F /* LottieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A645526B22CCB00D5713F /* LottieView.swift */; };
+		F58A651326B22CCB00D5713F /* AnimationSubview.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A645626B22CCB00D5713F /* AnimationSubview.swift */; };
+		F58A651426B22CCB00D5713F /* AnimationSubview.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A645626B22CCB00D5713F /* AnimationSubview.swift */; };
+		F58A651526B22CCB00D5713F /* AnimatedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A645726B22CCB00D5713F /* AnimatedControl.swift */; };
+		F58A651626B22CCB00D5713F /* AnimatedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A645726B22CCB00D5713F /* AnimatedControl.swift */; };
+		F58A651726B22CCB00D5713F /* AnimationTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A645926B22CCB00D5713F /* AnimationTime.swift */; };
+		F58A651826B22CCB00D5713F /* AnimationTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A645926B22CCB00D5713F /* AnimationTime.swift */; };
+		F58A651926B22CCB00D5713F /* Vectors.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A645A26B22CCB00D5713F /* Vectors.swift */; };
+		F58A651A26B22CCB00D5713F /* Vectors.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A645A26B22CCB00D5713F /* Vectors.swift */; };
+		F58A651B26B22CCB00D5713F /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A645B26B22CCB00D5713F /* Color.swift */; };
+		F58A651C26B22CCB00D5713F /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A645B26B22CCB00D5713F /* Color.swift */; };
+		F58A651D26B22CCB00D5713F /* AnimationCacheProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A645D26B22CCB00D5713F /* AnimationCacheProvider.swift */; };
+		F58A651E26B22CCB00D5713F /* AnimationCacheProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A645D26B22CCB00D5713F /* AnimationCacheProvider.swift */; };
+		F58A651F26B22CCB00D5713F /* LRUAnimationCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A645E26B22CCB00D5713F /* LRUAnimationCache.swift */; };
+		F58A652026B22CCB00D5713F /* LRUAnimationCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A645E26B22CCB00D5713F /* LRUAnimationCache.swift */; };
+		F58A652126B22CCB00D5713F /* AnimationTextProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A646026B22CCB00D5713F /* AnimationTextProvider.swift */; };
+		F58A652226B22CCB00D5713F /* AnimationTextProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A646026B22CCB00D5713F /* AnimationTextProvider.swift */; };
+		F58A652326B22CCB00D5713F /* AnimationKeypath.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A646226B22CCB00D5713F /* AnimationKeypath.swift */; };
+		F58A652426B22CCB00D5713F /* AnimationKeypath.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A646226B22CCB00D5713F /* AnimationKeypath.swift */; };
+		F58A652526B22CCB00D5713F /* AnyValueProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A646326B22CCB00D5713F /* AnyValueProvider.swift */; };
+		F58A652626B22CCB00D5713F /* AnyValueProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A646326B22CCB00D5713F /* AnyValueProvider.swift */; };
+		F58A652726B22CCB00D5713F /* ColorValueProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A646526B22CCB00D5713F /* ColorValueProvider.swift */; };
+		F58A652826B22CCB00D5713F /* ColorValueProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A646526B22CCB00D5713F /* ColorValueProvider.swift */; };
+		F58A652926B22CCB00D5713F /* FloatValueProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A646626B22CCB00D5713F /* FloatValueProvider.swift */; };
+		F58A652A26B22CCB00D5713F /* FloatValueProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A646626B22CCB00D5713F /* FloatValueProvider.swift */; };
+		F58A652B26B22CCB00D5713F /* SizeValueProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A646726B22CCB00D5713F /* SizeValueProvider.swift */; };
+		F58A652C26B22CCB00D5713F /* SizeValueProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A646726B22CCB00D5713F /* SizeValueProvider.swift */; };
+		F58A652D26B22CCB00D5713F /* GradientValueProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A646826B22CCB00D5713F /* GradientValueProvider.swift */; };
+		F58A652E26B22CCB00D5713F /* GradientValueProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A646826B22CCB00D5713F /* GradientValueProvider.swift */; };
+		F58A652F26B22CCB00D5713F /* PointValueProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A646926B22CCB00D5713F /* PointValueProvider.swift */; };
+		F58A653026B22CCB00D5713F /* PointValueProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A646926B22CCB00D5713F /* PointValueProvider.swift */; };
+		F58A653126B22CCB00D5713F /* AnimationFontProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A646B26B22CCB00D5713F /* AnimationFontProvider.swift */; };
+		F58A653226B22CCB00D5713F /* AnimationFontProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A646B26B22CCB00D5713F /* AnimationFontProvider.swift */; };
+		F58A653326B22CCB00D5713F /* CompositionLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A646F26B22CCB00D5713F /* CompositionLayer.swift */; };
+		F58A653426B22CCB00D5713F /* CompositionLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A646F26B22CCB00D5713F /* CompositionLayer.swift */; };
+		F58A653526B22CCB00D5713F /* NullCompositionLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A647026B22CCB00D5713F /* NullCompositionLayer.swift */; };
+		F58A653626B22CCB00D5713F /* NullCompositionLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A647026B22CCB00D5713F /* NullCompositionLayer.swift */; };
+		F58A653726B22CCB00D5713F /* TextCompositionLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A647126B22CCB00D5713F /* TextCompositionLayer.swift */; };
+		F58A653826B22CCB00D5713F /* TextCompositionLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A647126B22CCB00D5713F /* TextCompositionLayer.swift */; };
+		F58A653926B22CCB00D5713F /* SolidCompositionLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A647226B22CCB00D5713F /* SolidCompositionLayer.swift */; };
+		F58A653A26B22CCB00D5713F /* SolidCompositionLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A647226B22CCB00D5713F /* SolidCompositionLayer.swift */; };
+		F58A653B26B22CCB00D5713F /* PreCompositionLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A647326B22CCB00D5713F /* PreCompositionLayer.swift */; };
+		F58A653C26B22CCB00D5713F /* PreCompositionLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A647326B22CCB00D5713F /* PreCompositionLayer.swift */; };
+		F58A653D26B22CCB00D5713F /* ImageCompositionLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A647426B22CCB00D5713F /* ImageCompositionLayer.swift */; };
+		F58A653E26B22CCB00D5713F /* ImageCompositionLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A647426B22CCB00D5713F /* ImageCompositionLayer.swift */; };
+		F58A653F26B22CCB00D5713F /* ShapeCompositionLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A647526B22CCB00D5713F /* ShapeCompositionLayer.swift */; };
+		F58A654026B22CCB00D5713F /* ShapeCompositionLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A647526B22CCB00D5713F /* ShapeCompositionLayer.swift */; };
+		F58A654126B22CCB00D5713F /* MaskContainerLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A647626B22CCB00D5713F /* MaskContainerLayer.swift */; };
+		F58A654226B22CCB00D5713F /* MaskContainerLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A647626B22CCB00D5713F /* MaskContainerLayer.swift */; };
+		F58A654326B22CCB00D5713F /* AnimationContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A647726B22CCB00D5713F /* AnimationContainer.swift */; };
+		F58A654426B22CCB00D5713F /* AnimationContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A647726B22CCB00D5713F /* AnimationContainer.swift */; };
+		F58A654526B22CCB00D5713F /* LayerFontProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A647926B22CCB00D5713F /* LayerFontProvider.swift */; };
+		F58A654626B22CCB00D5713F /* LayerFontProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A647926B22CCB00D5713F /* LayerFontProvider.swift */; };
+		F58A654726B22CCB00D5713F /* TextLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A647A26B22CCB00D5713F /* TextLayer.swift */; };
+		F58A654826B22CCB00D5713F /* TextLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A647A26B22CCB00D5713F /* TextLayer.swift */; };
+		F58A654926B22CCB00D5713F /* LayerTransformNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A647B26B22CCB00D5713F /* LayerTransformNode.swift */; };
+		F58A654A26B22CCB00D5713F /* LayerTransformNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A647B26B22CCB00D5713F /* LayerTransformNode.swift */; };
+		F58A654B26B22CCB00D5713F /* InvertedMatteLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A647C26B22CCB00D5713F /* InvertedMatteLayer.swift */; };
+		F58A654C26B22CCB00D5713F /* InvertedMatteLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A647C26B22CCB00D5713F /* InvertedMatteLayer.swift */; };
+		F58A654D26B22CCB00D5713F /* LayerImageProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A647D26B22CCB00D5713F /* LayerImageProvider.swift */; };
+		F58A654E26B22CCB00D5713F /* LayerImageProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A647D26B22CCB00D5713F /* LayerImageProvider.swift */; };
+		F58A654F26B22CCB00D5713F /* LayerTextProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A647E26B22CCB00D5713F /* LayerTextProvider.swift */; };
+		F58A655026B22CCB00D5713F /* LayerTextProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A647E26B22CCB00D5713F /* LayerTextProvider.swift */; };
+		F58A655126B22CCB00D5713F /* CompositionLayersInitializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A647F26B22CCB00D5713F /* CompositionLayersInitializer.swift */; };
+		F58A655226B22CCB00D5713F /* CompositionLayersInitializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A647F26B22CCB00D5713F /* CompositionLayersInitializer.swift */; };
+		F58A655326B22CCB00D5713F /* TrimPathNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A648326B22CCB00D5713F /* TrimPathNode.swift */; };
+		F58A655426B22CCB00D5713F /* TrimPathNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A648326B22CCB00D5713F /* TrimPathNode.swift */; };
+		F58A655526B22CCB00D5713F /* GroupNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A648526B22CCB00D5713F /* GroupNode.swift */; };
+		F58A655626B22CCB00D5713F /* GroupNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A648526B22CCB00D5713F /* GroupNode.swift */; };
+		F58A655726B22CCB00D5713F /* GradientFillRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A648826B22CCB00D5713F /* GradientFillRenderer.swift */; };
+		F58A655826B22CCB00D5713F /* GradientFillRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A648826B22CCB00D5713F /* GradientFillRenderer.swift */; };
+		F58A655926B22CCB00D5713F /* GradientStrokeRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A648926B22CCB00D5713F /* GradientStrokeRenderer.swift */; };
+		F58A655A26B22CCB00D5713F /* GradientStrokeRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A648926B22CCB00D5713F /* GradientStrokeRenderer.swift */; };
+		F58A655B26B22CCB00D5713F /* FillRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A648A26B22CCB00D5713F /* FillRenderer.swift */; };
+		F58A655C26B22CCB00D5713F /* FillRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A648A26B22CCB00D5713F /* FillRenderer.swift */; };
+		F58A655D26B22CCB00D5713F /* StrokeRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A648B26B22CCB00D5713F /* StrokeRenderer.swift */; };
+		F58A655E26B22CCB00D5713F /* StrokeRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A648B26B22CCB00D5713F /* StrokeRenderer.swift */; };
+		F58A655F26B22CCB00D5713F /* GroupOutputNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A648C26B22CCB00D5713F /* GroupOutputNode.swift */; };
+		F58A656026B22CCB00D5713F /* GroupOutputNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A648C26B22CCB00D5713F /* GroupOutputNode.swift */; };
+		F58A656126B22CCB00D5713F /* PathOutputNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A648D26B22CCB00D5713F /* PathOutputNode.swift */; };
+		F58A656226B22CCB00D5713F /* PathOutputNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A648D26B22CCB00D5713F /* PathOutputNode.swift */; };
+		F58A656326B22CCB00D5713F /* PassThroughOutputNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A648E26B22CCB00D5713F /* PassThroughOutputNode.swift */; };
+		F58A656426B22CCB00D5713F /* PassThroughOutputNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A648E26B22CCB00D5713F /* PassThroughOutputNode.swift */; };
+		F58A656526B22CCB00D5713F /* EllipseNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A649026B22CCB00D5713F /* EllipseNode.swift */; };
+		F58A656626B22CCB00D5713F /* EllipseNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A649026B22CCB00D5713F /* EllipseNode.swift */; };
+		F58A656726B22CCB00D5713F /* PolygonNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A649126B22CCB00D5713F /* PolygonNode.swift */; };
+		F58A656826B22CCB00D5713F /* PolygonNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A649126B22CCB00D5713F /* PolygonNode.swift */; };
+		F58A656926B22CCB00D5713F /* RectNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A649226B22CCB00D5713F /* RectNode.swift */; };
+		F58A656A26B22CCB00D5713F /* RectNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A649226B22CCB00D5713F /* RectNode.swift */; };
+		F58A656B26B22CCB00D5713F /* ShapeNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A649326B22CCB00D5713F /* ShapeNode.swift */; };
+		F58A656C26B22CCB00D5713F /* ShapeNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A649326B22CCB00D5713F /* ShapeNode.swift */; };
+		F58A656D26B22CCB00D5713F /* StarNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A649426B22CCB00D5713F /* StarNode.swift */; };
+		F58A656E26B22CCB00D5713F /* StarNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A649426B22CCB00D5713F /* StarNode.swift */; };
+		F58A656F26B22CCB00D5713F /* TextAnimatorNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A649626B22CCB00D5713F /* TextAnimatorNode.swift */; };
+		F58A657026B22CCB00D5713F /* TextAnimatorNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A649626B22CCB00D5713F /* TextAnimatorNode.swift */; };
+		F58A657126B22CCB00D5713F /* GradientFillNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A649826B22CCB00D5713F /* GradientFillNode.swift */; };
+		F58A657226B22CCB00D5713F /* GradientFillNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A649826B22CCB00D5713F /* GradientFillNode.swift */; };
+		F58A657326B22CCB00D5713F /* StrokeNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A649926B22CCB00D5713F /* StrokeNode.swift */; };
+		F58A657426B22CCB00D5713F /* StrokeNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A649926B22CCB00D5713F /* StrokeNode.swift */; };
+		F58A657526B22CCB00D5713F /* FillNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A649A26B22CCB00D5713F /* FillNode.swift */; };
+		F58A657626B22CCB00D5713F /* FillNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A649A26B22CCB00D5713F /* FillNode.swift */; };
+		F58A657726B22CCB00D5713F /* GradientStrokeNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A649B26B22CCB00D5713F /* GradientStrokeNode.swift */; };
+		F58A657826B22CCB00D5713F /* GradientStrokeNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A649B26B22CCB00D5713F /* GradientStrokeNode.swift */; };
+		F58A657926B22CCB00D5713F /* ValueContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A649D26B22CCB00D5713F /* ValueContainer.swift */; };
+		F58A657A26B22CCB00D5713F /* ValueContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A649D26B22CCB00D5713F /* ValueContainer.swift */; };
+		F58A657B26B22CCB00D5713F /* NodeProperty.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A649E26B22CCB00D5713F /* NodeProperty.swift */; };
+		F58A657C26B22CCB00D5713F /* NodeProperty.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A649E26B22CCB00D5713F /* NodeProperty.swift */; };
+		F58A657D26B22CCB00D5713F /* AnyNodeProperty.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A64A026B22CCB00D5713F /* AnyNodeProperty.swift */; };
+		F58A657E26B22CCB00D5713F /* AnyNodeProperty.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A64A026B22CCB00D5713F /* AnyNodeProperty.swift */; };
+		F58A657F26B22CCB00D5713F /* NodePropertyMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A64A126B22CCB00D5713F /* NodePropertyMap.swift */; };
+		F58A658026B22CCB00D5713F /* NodePropertyMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A64A126B22CCB00D5713F /* NodePropertyMap.swift */; };
+		F58A658126B22CCB00D5713F /* KeypathSearchable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A64A226B22CCB00D5713F /* KeypathSearchable.swift */; };
+		F58A658226B22CCB00D5713F /* KeypathSearchable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A64A226B22CCB00D5713F /* KeypathSearchable.swift */; };
+		F58A658326B22CCB00D5713F /* AnyValueContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A64A326B22CCB00D5713F /* AnyValueContainer.swift */; };
+		F58A658426B22CCB00D5713F /* AnyValueContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A64A326B22CCB00D5713F /* AnyValueContainer.swift */; };
+		F58A658526B22CCB00D5713F /* KeyframeInterpolator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A64A526B22CCB00D5713F /* KeyframeInterpolator.swift */; };
+		F58A658626B22CCB00D5713F /* KeyframeInterpolator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A64A526B22CCB00D5713F /* KeyframeInterpolator.swift */; };
+		F58A658726B22CCB00D5713F /* SingleValueProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A64A626B22CCB00D5713F /* SingleValueProvider.swift */; };
+		F58A658826B22CCB00D5713F /* SingleValueProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A64A626B22CCB00D5713F /* SingleValueProvider.swift */; };
+		F58A658926B22CCB00D5713F /* GroupInterpolator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A64A726B22CCB00D5713F /* GroupInterpolator.swift */; };
+		F58A658A26B22CCB00D5713F /* GroupInterpolator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A64A726B22CCB00D5713F /* GroupInterpolator.swift */; };
+		F58A658B26B22CCB00D5713F /* ItemsExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A64A926B22CCB00D5713F /* ItemsExtension.swift */; };
+		F58A658C26B22CCB00D5713F /* ItemsExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A64A926B22CCB00D5713F /* ItemsExtension.swift */; };
+		F58A658D26B22CCB00D5713F /* ShapeRenderLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A64AB26B22CCB00D5713F /* ShapeRenderLayer.swift */; };
+		F58A658E26B22CCB00D5713F /* ShapeRenderLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A64AB26B22CCB00D5713F /* ShapeRenderLayer.swift */; };
+		F58A658F26B22CCB00D5713F /* ShapeContainerLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A64AC26B22CCB00D5713F /* ShapeContainerLayer.swift */; };
+		F58A659026B22CCB00D5713F /* ShapeContainerLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A64AC26B22CCB00D5713F /* ShapeContainerLayer.swift */; };
+		F58A659126B22CCB00D5713F /* PathNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A64AE26B22CCB00D5713F /* PathNode.swift */; };
+		F58A659226B22CCB00D5713F /* PathNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A64AE26B22CCB00D5713F /* PathNode.swift */; };
+		F58A659326B22CCB00D5713F /* RenderNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A64AF26B22CCB00D5713F /* RenderNode.swift */; };
+		F58A659426B22CCB00D5713F /* RenderNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A64AF26B22CCB00D5713F /* RenderNode.swift */; };
+		F58A659526B22CCB00D5713F /* AnimatorNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A64B026B22CCB00D5713F /* AnimatorNode.swift */; };
+		F58A659626B22CCB00D5713F /* AnimatorNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A64B026B22CCB00D5713F /* AnimatorNode.swift */; };
+		F58A659726B22CCB00D5713F /* Ellipse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A64B326B22CCB00D5713F /* Ellipse.swift */; };
+		F58A659826B22CCB00D5713F /* Ellipse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A64B326B22CCB00D5713F /* Ellipse.swift */; };
+		F58A659926B22CCB00D5713F /* Trim.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A64B426B22CCB00D5713F /* Trim.swift */; };
+		F58A659A26B22CCB00D5713F /* Trim.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A64B426B22CCB00D5713F /* Trim.swift */; };
+		F58A659B26B22CCB00D5713F /* ShapeItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A64B526B22CCB00D5713F /* ShapeItem.swift */; };
+		F58A659C26B22CCB00D5713F /* ShapeItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A64B526B22CCB00D5713F /* ShapeItem.swift */; };
+		F58A659D26B22CCB00D5713F /* Shape.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A64B626B22CCB00D5713F /* Shape.swift */; };
+		F58A659E26B22CCB00D5713F /* Shape.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A64B626B22CCB00D5713F /* Shape.swift */; };
+		F58A659F26B22CCB00D5713F /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A64B726B22CCB00D5713F /* Group.swift */; };
+		F58A65A026B22CCB00D5713F /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A64B726B22CCB00D5713F /* Group.swift */; };
+		F58A65A126B22CCB00D5713F /* ShapeTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A64B826B22CCB00D5713F /* ShapeTransform.swift */; };
+		F58A65A226B22CCB00D5713F /* ShapeTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A64B826B22CCB00D5713F /* ShapeTransform.swift */; };
+		F58A65A326B22CCB00D5713F /* Merge.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A64B926B22CCB00D5713F /* Merge.swift */; };
+		F58A65A426B22CCB00D5713F /* Merge.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A64B926B22CCB00D5713F /* Merge.swift */; };
+		F58A65A526B22CCB00D5713F /* FillI.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A64BA26B22CCB00D5713F /* FillI.swift */; };
+		F58A65A626B22CCB00D5713F /* FillI.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A64BA26B22CCB00D5713F /* FillI.swift */; };
+		F58A65A726B22CCB00D5713F /* Repeater.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A64BB26B22CCB00D5713F /* Repeater.swift */; };
+		F58A65A826B22CCB00D5713F /* Repeater.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A64BB26B22CCB00D5713F /* Repeater.swift */; };
+		F58A65A926B22CCB00D5713F /* GradientFill.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A64BC26B22CCB00D5713F /* GradientFill.swift */; };
+		F58A65AA26B22CCB00D5713F /* GradientFill.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A64BC26B22CCB00D5713F /* GradientFill.swift */; };
+		F58A65AB26B22CCB00D5713F /* GradientStroke.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A64BD26B22CCB00D5713F /* GradientStroke.swift */; };
+		F58A65AC26B22CCB00D5713F /* GradientStroke.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A64BD26B22CCB00D5713F /* GradientStroke.swift */; };
+		F58A65AD26B22CCB00D5713F /* Stroke.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A64BE26B22CCB00D5713F /* Stroke.swift */; };
+		F58A65AE26B22CCB00D5713F /* Stroke.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A64BE26B22CCB00D5713F /* Stroke.swift */; };
+		F58A65AF26B22CCB00D5713F /* Rectangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A64BF26B22CCB00D5713F /* Rectangle.swift */; };
+		F58A65B026B22CCB00D5713F /* Rectangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A64BF26B22CCB00D5713F /* Rectangle.swift */; };
+		F58A65B126B22CCB00D5713F /* Star.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A64C026B22CCB00D5713F /* Star.swift */; };
+		F58A65B226B22CCB00D5713F /* Star.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A64C026B22CCB00D5713F /* Star.swift */; };
+		F58A65B326B22CCB00D5713F /* SolidLayerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A64C226B22CCB00D5713F /* SolidLayerModel.swift */; };
+		F58A65B426B22CCB00D5713F /* SolidLayerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A64C226B22CCB00D5713F /* SolidLayerModel.swift */; };
+		F58A65B526B22CCB00D5713F /* LayerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A64C326B22CCB00D5713F /* LayerModel.swift */; };
+		F58A65B626B22CCB00D5713F /* LayerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A64C326B22CCB00D5713F /* LayerModel.swift */; };
+		F58A65B726B22CCB00D5713F /* ImageLayerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A64C426B22CCB00D5713F /* ImageLayerModel.swift */; };
+		F58A65B826B22CCB00D5713F /* ImageLayerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A64C426B22CCB00D5713F /* ImageLayerModel.swift */; };
+		F58A65B926B22CCB00D5713F /* TextLayerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A64C526B22CCB00D5713F /* TextLayerModel.swift */; };
+		F58A65BA26B22CCB00D5713F /* TextLayerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A64C526B22CCB00D5713F /* TextLayerModel.swift */; };
+		F58A65BB26B22CCB00D5713F /* PreCompLayerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A64C626B22CCB00D5713F /* PreCompLayerModel.swift */; };
+		F58A65BC26B22CCB00D5713F /* PreCompLayerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A64C626B22CCB00D5713F /* PreCompLayerModel.swift */; };
+		F58A65BD26B22CCB00D5713F /* ShapeLayerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A64C726B22CCB00D5713F /* ShapeLayerModel.swift */; };
+		F58A65BE26B22CCB00D5713F /* ShapeLayerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A64C726B22CCB00D5713F /* ShapeLayerModel.swift */; };
+		F58A65BF26B22CCB00D5713F /* Animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A64C826B22CCB00D5713F /* Animation.swift */; };
+		F58A65C026B22CCB00D5713F /* Animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A64C826B22CCB00D5713F /* Animation.swift */; };
+		F58A65C126B22CCB00D5713F /* DashPattern.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A64CA26B22CCB00D5713F /* DashPattern.swift */; };
+		F58A65C226B22CCB00D5713F /* DashPattern.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A64CA26B22CCB00D5713F /* DashPattern.swift */; };
+		F58A65C326B22CCB00D5713F /* Transform.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A64CB26B22CCB00D5713F /* Transform.swift */; };
+		F58A65C426B22CCB00D5713F /* Transform.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A64CB26B22CCB00D5713F /* Transform.swift */; };
+		F58A65C526B22CCB00D5713F /* Mask.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A64CC26B22CCB00D5713F /* Mask.swift */; };
+		F58A65C626B22CCB00D5713F /* Mask.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A64CC26B22CCB00D5713F /* Mask.swift */; };
+		F58A65C726B22CCB00D5713F /* Marker.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A64CD26B22CCB00D5713F /* Marker.swift */; };
+		F58A65C826B22CCB00D5713F /* Marker.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A64CD26B22CCB00D5713F /* Marker.swift */; };
+		F58A65C926B22CCB00D5713F /* KeyedDecodingContainerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A64CF26B22CCB00D5713F /* KeyedDecodingContainerExtensions.swift */; };
+		F58A65CA26B22CCB00D5713F /* KeyedDecodingContainerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A64CF26B22CCB00D5713F /* KeyedDecodingContainerExtensions.swift */; };
+		F58A65CB26B22CCB00D5713F /* KeyframeGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A64D126B22CCB00D5713F /* KeyframeGroup.swift */; };
+		F58A65CC26B22CCB00D5713F /* KeyframeGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A64D126B22CCB00D5713F /* KeyframeGroup.swift */; };
+		F58A65CD26B22CCB00D5713F /* Keyframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A64D226B22CCB00D5713F /* Keyframe.swift */; };
+		F58A65CE26B22CCB00D5713F /* Keyframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A64D226B22CCB00D5713F /* Keyframe.swift */; };
+		F58A65CF26B22CCB00D5713F /* MTResultData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A64D426B22CCB00D5713F /* MTResultData.swift */; };
+		F58A65D026B22CCB00D5713F /* MTResultData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A64D426B22CCB00D5713F /* MTResultData.swift */; };
+		F58A65D126B22CCB00D5713F /* TextDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A64D626B22CCB00D5713F /* TextDocument.swift */; };
+		F58A65D226B22CCB00D5713F /* TextDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A64D626B22CCB00D5713F /* TextDocument.swift */; };
+		F58A65D326B22CCB00D5713F /* Glyph.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A64D726B22CCB00D5713F /* Glyph.swift */; };
+		F58A65D426B22CCB00D5713F /* Glyph.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A64D726B22CCB00D5713F /* Glyph.swift */; };
+		F58A65D526B22CCB00D5713F /* TextAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A64D826B22CCB00D5713F /* TextAnimator.swift */; };
+		F58A65D626B22CCB00D5713F /* TextAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A64D826B22CCB00D5713F /* TextAnimator.swift */; };
+		F58A65D726B22CCB00D5713F /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A64D926B22CCB00D5713F /* Font.swift */; };
+		F58A65D826B22CCB00D5713F /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A64D926B22CCB00D5713F /* Font.swift */; };
+		F58A65D926B22CCB00D5713F /* ImageAsset.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A64DB26B22CCB00D5713F /* ImageAsset.swift */; };
+		F58A65DA26B22CCB00D5713F /* ImageAsset.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A64DB26B22CCB00D5713F /* ImageAsset.swift */; };
+		F58A65DB26B22CCB00D5713F /* PrecompAsset.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A64DC26B22CCB00D5713F /* PrecompAsset.swift */; };
+		F58A65DC26B22CCB00D5713F /* PrecompAsset.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A64DC26B22CCB00D5713F /* PrecompAsset.swift */; };
+		F58A65DD26B22CCB00D5713F /* AssetLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A64DD26B22CCB00D5713F /* AssetLibrary.swift */; };
+		F58A65DE26B22CCB00D5713F /* AssetLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A64DD26B22CCB00D5713F /* AssetLibrary.swift */; };
+		F58A65DF26B22CCB00D5713F /* Asset.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A64DE26B22CCB00D5713F /* Asset.swift */; };
+		F58A65E026B22CCB00D5713F /* Asset.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A64DE26B22CCB00D5713F /* Asset.swift */; };
+		F58A65E126B22CCB00D5713F /* MTSuccessData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A64E026B22CCB00D5713F /* MTSuccessData.swift */; };
+		F58A65E226B22CCB00D5713F /* MTSuccessData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A64E026B22CCB00D5713F /* MTSuccessData.swift */; };
+		F58A65E326B22CCB00D5713F /* LayerDebugging.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A64E326B22CCB00D5713F /* LayerDebugging.swift */; };
+		F58A65E426B22CCB00D5713F /* LayerDebugging.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A64E326B22CCB00D5713F /* LayerDebugging.swift */; };
+		F58A65E526B22CCB00D5713F /* AnimatorNodeDebugging.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A64E426B22CCB00D5713F /* AnimatorNodeDebugging.swift */; };
+		F58A65E626B22CCB00D5713F /* AnimatorNodeDebugging.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A64E426B22CCB00D5713F /* AnimatorNodeDebugging.swift */; };
+		F58A65E726B22CCB00D5713F /* CGFloatExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A64E626B22CCB00D5713F /* CGFloatExtensions.swift */; };
+		F58A65E826B22CCB00D5713F /* CGFloatExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A64E626B22CCB00D5713F /* CGFloatExtensions.swift */; };
+		F58A65E926B22CCB00D5713F /* AnimationKeypathExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A64E726B22CCB00D5713F /* AnimationKeypathExtension.swift */; };
+		F58A65EA26B22CCB00D5713F /* AnimationKeypathExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A64E726B22CCB00D5713F /* AnimationKeypathExtension.swift */; };
+		F58A65EB26B22CCB00D5713F /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A64E826B22CCB00D5713F /* StringExtensions.swift */; };
+		F58A65EC26B22CCB00D5713F /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A64E826B22CCB00D5713F /* StringExtensions.swift */; };
+		F58A65ED26B22CCB00D5713F /* MathKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A64E926B22CCB00D5713F /* MathKit.swift */; };
+		F58A65EE26B22CCB00D5713F /* MathKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A64E926B22CCB00D5713F /* MathKit.swift */; };
+		F58A65EF26B22CCB00D5713F /* BezierPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A64EB26B22CCB00D5713F /* BezierPath.swift */; };
+		F58A65F026B22CCB00D5713F /* BezierPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A64EB26B22CCB00D5713F /* BezierPath.swift */; };
+		F58A65F126B22CCB00D5713F /* CompoundBezierPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A64EC26B22CCB00D5713F /* CompoundBezierPath.swift */; };
+		F58A65F226B22CCB00D5713F /* CompoundBezierPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A64EC26B22CCB00D5713F /* CompoundBezierPath.swift */; };
+		F58A65F326B22CCB00D5713F /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A64ED26B22CCB00D5713F /* ColorExtension.swift */; };
+		F58A65F426B22CCB00D5713F /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A64ED26B22CCB00D5713F /* ColorExtension.swift */; };
+		F58A65F526B22CCB00D5713F /* PathElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A64EE26B22CCB00D5713F /* PathElement.swift */; };
+		F58A65F626B22CCB00D5713F /* PathElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A64EE26B22CCB00D5713F /* PathElement.swift */; };
+		F58A65F726B22CCB00D5713F /* CurveVertex.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A64EF26B22CCB00D5713F /* CurveVertex.swift */; };
+		F58A65F826B22CCB00D5713F /* CurveVertex.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A64EF26B22CCB00D5713F /* CurveVertex.swift */; };
+		F58A65F926B22CCB00D5713F /* VectorsExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A64F026B22CCB00D5713F /* VectorsExtensions.swift */; };
+		F58A65FA26B22CCB00D5713F /* VectorsExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A64F026B22CCB00D5713F /* VectorsExtensions.swift */; };
+		F58A65FB26B22CCB00D5713F /* InterpolatableExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A64F226B22CCB00D5713F /* InterpolatableExtensions.swift */; };
+		F58A65FC26B22CCB00D5713F /* InterpolatableExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A64F226B22CCB00D5713F /* InterpolatableExtensions.swift */; };
+		F58A65FD26B22CCB00D5713F /* Interpolatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A64F326B22CCB00D5713F /* Interpolatable.swift */; };
+		F58A65FE26B22CCB00D5713F /* Interpolatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A64F326B22CCB00D5713F /* Interpolatable.swift */; };
+		F58A65FF26B22CCB00D5713F /* KeyframeExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A64F426B22CCB00D5713F /* KeyframeExtensions.swift */; };
+		F58A660026B22CCB00D5713F /* KeyframeExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A64F426B22CCB00D5713F /* KeyframeExtensions.swift */; };
+		F58A660126B22CCB00D5713F /* AnimationContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A64F626B22CCB00D5713F /* AnimationContext.swift */; };
+		F58A660226B22CCB00D5713F /* AnimationContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58A64F626B22CCB00D5713F /* AnimationContext.swift */; };
+		F58A660C26B22EEC00D5713F /* home.json in Resources */ = {isa = PBXBuildFile; fileRef = F58A660A26B22EEC00D5713F /* home.json */; };
+		F58A660D26B22EEC00D5713F /* home.json in Resources */ = {isa = PBXBuildFile; fileRef = F58A660A26B22EEC00D5713F /* home.json */; };
+		F58A660E26B22EEC00D5713F /* sample.json in Resources */ = {isa = PBXBuildFile; fileRef = F58A660B26B22EEC00D5713F /* sample.json */; };
+		F58A660F26B22EEC00D5713F /* sample.json in Resources */ = {isa = PBXBuildFile; fileRef = F58A660B26B22EEC00D5713F /* sample.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -395,6 +667,142 @@
 		33FC31C926971A9800868D9E /* SpinSuccessViewHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpinSuccessViewHelper.swift; sourceTree = "<group>"; };
 		33FC31CD26973C5100868D9E /* ExpireViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpireViewModel.swift; sourceTree = "<group>"; };
 		33FC31D226973CA000868D9E /* CustomTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTimer.swift; sourceTree = "<group>"; };
+		F58A644126B22CCB00D5713F /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		F58A644226B22CCB00D5713F /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		F58A644726B22CCB00D5713F /* AnimationViewInitializers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimationViewInitializers.swift; sourceTree = "<group>"; };
+		F58A644826B22CCB00D5713F /* AnimationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimationView.swift; sourceTree = "<group>"; };
+		F58A644926B22CCB00D5713F /* AnimationPublic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimationPublic.swift; sourceTree = "<group>"; };
+		F58A644B26B22CCB00D5713F /* AnimationImageProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimationImageProvider.swift; sourceTree = "<group>"; };
+		F58A644E26B22CCB00D5713F /* CompatibleAnimationKeypath.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompatibleAnimationKeypath.swift; sourceTree = "<group>"; };
+		F58A644F26B22CCB00D5713F /* CompatibleAnimationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompatibleAnimationView.swift; sourceTree = "<group>"; };
+		F58A645026B22CCB00D5713F /* FilepathImageProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilepathImageProvider.swift; sourceTree = "<group>"; };
+		F58A645126B22CCB00D5713F /* AnimatedSwitch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimatedSwitch.swift; sourceTree = "<group>"; };
+		F58A645226B22CCB00D5713F /* BundleImageProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BundleImageProvider.swift; sourceTree = "<group>"; };
+		F58A645326B22CCB00D5713F /* UIColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
+		F58A645426B22CCB00D5713F /* AnimatedButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimatedButton.swift; sourceTree = "<group>"; };
+		F58A645526B22CCB00D5713F /* LottieView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LottieView.swift; sourceTree = "<group>"; };
+		F58A645626B22CCB00D5713F /* AnimationSubview.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimationSubview.swift; sourceTree = "<group>"; };
+		F58A645726B22CCB00D5713F /* AnimatedControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimatedControl.swift; sourceTree = "<group>"; };
+		F58A645926B22CCB00D5713F /* AnimationTime.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimationTime.swift; sourceTree = "<group>"; };
+		F58A645A26B22CCB00D5713F /* Vectors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Vectors.swift; sourceTree = "<group>"; };
+		F58A645B26B22CCB00D5713F /* Color.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		F58A645D26B22CCB00D5713F /* AnimationCacheProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimationCacheProvider.swift; sourceTree = "<group>"; };
+		F58A645E26B22CCB00D5713F /* LRUAnimationCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LRUAnimationCache.swift; sourceTree = "<group>"; };
+		F58A646026B22CCB00D5713F /* AnimationTextProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimationTextProvider.swift; sourceTree = "<group>"; };
+		F58A646226B22CCB00D5713F /* AnimationKeypath.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimationKeypath.swift; sourceTree = "<group>"; };
+		F58A646326B22CCB00D5713F /* AnyValueProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnyValueProvider.swift; sourceTree = "<group>"; };
+		F58A646526B22CCB00D5713F /* ColorValueProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorValueProvider.swift; sourceTree = "<group>"; };
+		F58A646626B22CCB00D5713F /* FloatValueProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FloatValueProvider.swift; sourceTree = "<group>"; };
+		F58A646726B22CCB00D5713F /* SizeValueProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SizeValueProvider.swift; sourceTree = "<group>"; };
+		F58A646826B22CCB00D5713F /* GradientValueProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradientValueProvider.swift; sourceTree = "<group>"; };
+		F58A646926B22CCB00D5713F /* PointValueProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PointValueProvider.swift; sourceTree = "<group>"; };
+		F58A646B26B22CCB00D5713F /* AnimationFontProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimationFontProvider.swift; sourceTree = "<group>"; };
+		F58A646F26B22CCB00D5713F /* CompositionLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompositionLayer.swift; sourceTree = "<group>"; };
+		F58A647026B22CCB00D5713F /* NullCompositionLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NullCompositionLayer.swift; sourceTree = "<group>"; };
+		F58A647126B22CCB00D5713F /* TextCompositionLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextCompositionLayer.swift; sourceTree = "<group>"; };
+		F58A647226B22CCB00D5713F /* SolidCompositionLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SolidCompositionLayer.swift; sourceTree = "<group>"; };
+		F58A647326B22CCB00D5713F /* PreCompositionLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreCompositionLayer.swift; sourceTree = "<group>"; };
+		F58A647426B22CCB00D5713F /* ImageCompositionLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCompositionLayer.swift; sourceTree = "<group>"; };
+		F58A647526B22CCB00D5713F /* ShapeCompositionLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShapeCompositionLayer.swift; sourceTree = "<group>"; };
+		F58A647626B22CCB00D5713F /* MaskContainerLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaskContainerLayer.swift; sourceTree = "<group>"; };
+		F58A647726B22CCB00D5713F /* AnimationContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimationContainer.swift; sourceTree = "<group>"; };
+		F58A647926B22CCB00D5713F /* LayerFontProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LayerFontProvider.swift; sourceTree = "<group>"; };
+		F58A647A26B22CCB00D5713F /* TextLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextLayer.swift; sourceTree = "<group>"; };
+		F58A647B26B22CCB00D5713F /* LayerTransformNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LayerTransformNode.swift; sourceTree = "<group>"; };
+		F58A647C26B22CCB00D5713F /* InvertedMatteLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InvertedMatteLayer.swift; sourceTree = "<group>"; };
+		F58A647D26B22CCB00D5713F /* LayerImageProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LayerImageProvider.swift; sourceTree = "<group>"; };
+		F58A647E26B22CCB00D5713F /* LayerTextProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LayerTextProvider.swift; sourceTree = "<group>"; };
+		F58A647F26B22CCB00D5713F /* CompositionLayersInitializer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompositionLayersInitializer.swift; sourceTree = "<group>"; };
+		F58A648326B22CCB00D5713F /* TrimPathNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrimPathNode.swift; sourceTree = "<group>"; };
+		F58A648526B22CCB00D5713F /* GroupNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupNode.swift; sourceTree = "<group>"; };
+		F58A648826B22CCB00D5713F /* GradientFillRenderer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradientFillRenderer.swift; sourceTree = "<group>"; };
+		F58A648926B22CCB00D5713F /* GradientStrokeRenderer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradientStrokeRenderer.swift; sourceTree = "<group>"; };
+		F58A648A26B22CCB00D5713F /* FillRenderer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FillRenderer.swift; sourceTree = "<group>"; };
+		F58A648B26B22CCB00D5713F /* StrokeRenderer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StrokeRenderer.swift; sourceTree = "<group>"; };
+		F58A648C26B22CCB00D5713F /* GroupOutputNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupOutputNode.swift; sourceTree = "<group>"; };
+		F58A648D26B22CCB00D5713F /* PathOutputNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PathOutputNode.swift; sourceTree = "<group>"; };
+		F58A648E26B22CCB00D5713F /* PassThroughOutputNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PassThroughOutputNode.swift; sourceTree = "<group>"; };
+		F58A649026B22CCB00D5713F /* EllipseNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EllipseNode.swift; sourceTree = "<group>"; };
+		F58A649126B22CCB00D5713F /* PolygonNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PolygonNode.swift; sourceTree = "<group>"; };
+		F58A649226B22CCB00D5713F /* RectNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RectNode.swift; sourceTree = "<group>"; };
+		F58A649326B22CCB00D5713F /* ShapeNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShapeNode.swift; sourceTree = "<group>"; };
+		F58A649426B22CCB00D5713F /* StarNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StarNode.swift; sourceTree = "<group>"; };
+		F58A649626B22CCB00D5713F /* TextAnimatorNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextAnimatorNode.swift; sourceTree = "<group>"; };
+		F58A649826B22CCB00D5713F /* GradientFillNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradientFillNode.swift; sourceTree = "<group>"; };
+		F58A649926B22CCB00D5713F /* StrokeNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StrokeNode.swift; sourceTree = "<group>"; };
+		F58A649A26B22CCB00D5713F /* FillNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FillNode.swift; sourceTree = "<group>"; };
+		F58A649B26B22CCB00D5713F /* GradientStrokeNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradientStrokeNode.swift; sourceTree = "<group>"; };
+		F58A649D26B22CCB00D5713F /* ValueContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ValueContainer.swift; sourceTree = "<group>"; };
+		F58A649E26B22CCB00D5713F /* NodeProperty.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NodeProperty.swift; sourceTree = "<group>"; };
+		F58A64A026B22CCB00D5713F /* AnyNodeProperty.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnyNodeProperty.swift; sourceTree = "<group>"; };
+		F58A64A126B22CCB00D5713F /* NodePropertyMap.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NodePropertyMap.swift; sourceTree = "<group>"; };
+		F58A64A226B22CCB00D5713F /* KeypathSearchable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeypathSearchable.swift; sourceTree = "<group>"; };
+		F58A64A326B22CCB00D5713F /* AnyValueContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnyValueContainer.swift; sourceTree = "<group>"; };
+		F58A64A526B22CCB00D5713F /* KeyframeInterpolator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyframeInterpolator.swift; sourceTree = "<group>"; };
+		F58A64A626B22CCB00D5713F /* SingleValueProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SingleValueProvider.swift; sourceTree = "<group>"; };
+		F58A64A726B22CCB00D5713F /* GroupInterpolator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupInterpolator.swift; sourceTree = "<group>"; };
+		F58A64A926B22CCB00D5713F /* ItemsExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemsExtension.swift; sourceTree = "<group>"; };
+		F58A64AB26B22CCB00D5713F /* ShapeRenderLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShapeRenderLayer.swift; sourceTree = "<group>"; };
+		F58A64AC26B22CCB00D5713F /* ShapeContainerLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShapeContainerLayer.swift; sourceTree = "<group>"; };
+		F58A64AE26B22CCB00D5713F /* PathNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PathNode.swift; sourceTree = "<group>"; };
+		F58A64AF26B22CCB00D5713F /* RenderNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RenderNode.swift; sourceTree = "<group>"; };
+		F58A64B026B22CCB00D5713F /* AnimatorNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimatorNode.swift; sourceTree = "<group>"; };
+		F58A64B326B22CCB00D5713F /* Ellipse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ellipse.swift; sourceTree = "<group>"; };
+		F58A64B426B22CCB00D5713F /* Trim.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Trim.swift; sourceTree = "<group>"; };
+		F58A64B526B22CCB00D5713F /* ShapeItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShapeItem.swift; sourceTree = "<group>"; };
+		F58A64B626B22CCB00D5713F /* Shape.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Shape.swift; sourceTree = "<group>"; };
+		F58A64B726B22CCB00D5713F /* Group.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Group.swift; sourceTree = "<group>"; };
+		F58A64B826B22CCB00D5713F /* ShapeTransform.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShapeTransform.swift; sourceTree = "<group>"; };
+		F58A64B926B22CCB00D5713F /* Merge.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Merge.swift; sourceTree = "<group>"; };
+		F58A64BA26B22CCB00D5713F /* FillI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FillI.swift; sourceTree = "<group>"; };
+		F58A64BB26B22CCB00D5713F /* Repeater.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Repeater.swift; sourceTree = "<group>"; };
+		F58A64BC26B22CCB00D5713F /* GradientFill.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradientFill.swift; sourceTree = "<group>"; };
+		F58A64BD26B22CCB00D5713F /* GradientStroke.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradientStroke.swift; sourceTree = "<group>"; };
+		F58A64BE26B22CCB00D5713F /* Stroke.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stroke.swift; sourceTree = "<group>"; };
+		F58A64BF26B22CCB00D5713F /* Rectangle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Rectangle.swift; sourceTree = "<group>"; };
+		F58A64C026B22CCB00D5713F /* Star.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Star.swift; sourceTree = "<group>"; };
+		F58A64C226B22CCB00D5713F /* SolidLayerModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SolidLayerModel.swift; sourceTree = "<group>"; };
+		F58A64C326B22CCB00D5713F /* LayerModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LayerModel.swift; sourceTree = "<group>"; };
+		F58A64C426B22CCB00D5713F /* ImageLayerModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageLayerModel.swift; sourceTree = "<group>"; };
+		F58A64C526B22CCB00D5713F /* TextLayerModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextLayerModel.swift; sourceTree = "<group>"; };
+		F58A64C626B22CCB00D5713F /* PreCompLayerModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreCompLayerModel.swift; sourceTree = "<group>"; };
+		F58A64C726B22CCB00D5713F /* ShapeLayerModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShapeLayerModel.swift; sourceTree = "<group>"; };
+		F58A64C826B22CCB00D5713F /* Animation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Animation.swift; sourceTree = "<group>"; };
+		F58A64CA26B22CCB00D5713F /* DashPattern.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashPattern.swift; sourceTree = "<group>"; };
+		F58A64CB26B22CCB00D5713F /* Transform.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Transform.swift; sourceTree = "<group>"; };
+		F58A64CC26B22CCB00D5713F /* Mask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mask.swift; sourceTree = "<group>"; };
+		F58A64CD26B22CCB00D5713F /* Marker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Marker.swift; sourceTree = "<group>"; };
+		F58A64CF26B22CCB00D5713F /* KeyedDecodingContainerExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyedDecodingContainerExtensions.swift; sourceTree = "<group>"; };
+		F58A64D126B22CCB00D5713F /* KeyframeGroup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyframeGroup.swift; sourceTree = "<group>"; };
+		F58A64D226B22CCB00D5713F /* Keyframe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Keyframe.swift; sourceTree = "<group>"; };
+		F58A64D426B22CCB00D5713F /* MTResultData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MTResultData.swift; sourceTree = "<group>"; };
+		F58A64D626B22CCB00D5713F /* TextDocument.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextDocument.swift; sourceTree = "<group>"; };
+		F58A64D726B22CCB00D5713F /* Glyph.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Glyph.swift; sourceTree = "<group>"; };
+		F58A64D826B22CCB00D5713F /* TextAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextAnimator.swift; sourceTree = "<group>"; };
+		F58A64D926B22CCB00D5713F /* Font.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
+		F58A64DB26B22CCB00D5713F /* ImageAsset.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageAsset.swift; sourceTree = "<group>"; };
+		F58A64DC26B22CCB00D5713F /* PrecompAsset.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrecompAsset.swift; sourceTree = "<group>"; };
+		F58A64DD26B22CCB00D5713F /* AssetLibrary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssetLibrary.swift; sourceTree = "<group>"; };
+		F58A64DE26B22CCB00D5713F /* Asset.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Asset.swift; sourceTree = "<group>"; };
+		F58A64E026B22CCB00D5713F /* MTSuccessData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MTSuccessData.swift; sourceTree = "<group>"; };
+		F58A64E326B22CCB00D5713F /* LayerDebugging.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LayerDebugging.swift; sourceTree = "<group>"; };
+		F58A64E426B22CCB00D5713F /* AnimatorNodeDebugging.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimatorNodeDebugging.swift; sourceTree = "<group>"; };
+		F58A64E626B22CCB00D5713F /* CGFloatExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGFloatExtensions.swift; sourceTree = "<group>"; };
+		F58A64E726B22CCB00D5713F /* AnimationKeypathExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimationKeypathExtension.swift; sourceTree = "<group>"; };
+		F58A64E826B22CCB00D5713F /* StringExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
+		F58A64E926B22CCB00D5713F /* MathKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MathKit.swift; sourceTree = "<group>"; };
+		F58A64EB26B22CCB00D5713F /* BezierPath.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BezierPath.swift; sourceTree = "<group>"; };
+		F58A64EC26B22CCB00D5713F /* CompoundBezierPath.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompoundBezierPath.swift; sourceTree = "<group>"; };
+		F58A64ED26B22CCB00D5713F /* ColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
+		F58A64EE26B22CCB00D5713F /* PathElement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PathElement.swift; sourceTree = "<group>"; };
+		F58A64EF26B22CCB00D5713F /* CurveVertex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurveVertex.swift; sourceTree = "<group>"; };
+		F58A64F026B22CCB00D5713F /* VectorsExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VectorsExtensions.swift; sourceTree = "<group>"; };
+		F58A64F226B22CCB00D5713F /* InterpolatableExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InterpolatableExtensions.swift; sourceTree = "<group>"; };
+		F58A64F326B22CCB00D5713F /* Interpolatable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Interpolatable.swift; sourceTree = "<group>"; };
+		F58A64F426B22CCB00D5713F /* KeyframeExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyframeExtensions.swift; sourceTree = "<group>"; };
+		F58A64F626B22CCB00D5713F /* AnimationContext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimationContext.swift; sourceTree = "<group>"; };
+		F58A660A26B22EEC00D5713F /* home.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = home.json; sourceTree = "<group>"; };
+		F58A660B26B22EEC00D5713F /* sample.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = sample.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -463,6 +871,7 @@
 		3320FF3F2682EBC3001809AA /* Game */ = {
 			isa = PBXGroup;
 			children = (
+				F58A660326B22E8F00D5713F /* JSON_Files */,
 				33E158C226AA52F800B0615B /* Font */,
 				33542A5C269CA747008CE8C2 /* GameListController */,
 				33FC317D26958C9000868D9E /* Model */,
@@ -748,6 +1157,7 @@
 		3320FF932682EBC4001809AA /* ThirdParty */ = {
 			isa = PBXGroup;
 			children = (
+				F58A644026B22CCB00D5713F /* lottie-ios */,
 				3320FF942682EBC4001809AA /* TTFortuneWheel */,
 			);
 			path = ThirdParty;
@@ -1277,6 +1687,540 @@
 			path = CustomTimer;
 			sourceTree = "<group>";
 		};
+		F58A644026B22CCB00D5713F /* lottie-ios */ = {
+			isa = PBXGroup;
+			children = (
+				F58A644126B22CCB00D5713F /* LICENSE */,
+				F58A644226B22CCB00D5713F /* README.md */,
+				F58A644326B22CCB00D5713F /* lottie-swift */,
+			);
+			path = "lottie-ios";
+			sourceTree = "<group>";
+		};
+		F58A644326B22CCB00D5713F /* lottie-swift */ = {
+			isa = PBXGroup;
+			children = (
+				F58A644426B22CCB00D5713F /* src */,
+			);
+			path = "lottie-swift";
+			sourceTree = "<group>";
+		};
+		F58A644426B22CCB00D5713F /* src */ = {
+			isa = PBXGroup;
+			children = (
+				F58A644526B22CCB00D5713F /* Public */,
+				F58A646C26B22CCB00D5713F /* Private */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		F58A644526B22CCB00D5713F /* Public */ = {
+			isa = PBXGroup;
+			children = (
+				F58A644626B22CCB00D5713F /* Animation */,
+				F58A644A26B22CCB00D5713F /* ImageProvider */,
+				F58A644C26B22CCB00D5713F /* iOS */,
+				F58A645826B22CCB00D5713F /* Primitives */,
+				F58A645C26B22CCB00D5713F /* AnimationCache */,
+				F58A645F26B22CCB00D5713F /* TextProvider */,
+				F58A646126B22CCB00D5713F /* DynamicProperties */,
+				F58A646A26B22CCB00D5713F /* FontProvider */,
+			);
+			path = Public;
+			sourceTree = "<group>";
+		};
+		F58A644626B22CCB00D5713F /* Animation */ = {
+			isa = PBXGroup;
+			children = (
+				F58A644726B22CCB00D5713F /* AnimationViewInitializers.swift */,
+				F58A644826B22CCB00D5713F /* AnimationView.swift */,
+				F58A644926B22CCB00D5713F /* AnimationPublic.swift */,
+			);
+			path = Animation;
+			sourceTree = "<group>";
+		};
+		F58A644A26B22CCB00D5713F /* ImageProvider */ = {
+			isa = PBXGroup;
+			children = (
+				F58A644B26B22CCB00D5713F /* AnimationImageProvider.swift */,
+			);
+			path = ImageProvider;
+			sourceTree = "<group>";
+		};
+		F58A644C26B22CCB00D5713F /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				F58A644D26B22CCB00D5713F /* Compatibility */,
+				F58A645026B22CCB00D5713F /* FilepathImageProvider.swift */,
+				F58A645126B22CCB00D5713F /* AnimatedSwitch.swift */,
+				F58A645226B22CCB00D5713F /* BundleImageProvider.swift */,
+				F58A645326B22CCB00D5713F /* UIColorExtension.swift */,
+				F58A645426B22CCB00D5713F /* AnimatedButton.swift */,
+				F58A645526B22CCB00D5713F /* LottieView.swift */,
+				F58A645626B22CCB00D5713F /* AnimationSubview.swift */,
+				F58A645726B22CCB00D5713F /* AnimatedControl.swift */,
+			);
+			path = iOS;
+			sourceTree = "<group>";
+		};
+		F58A644D26B22CCB00D5713F /* Compatibility */ = {
+			isa = PBXGroup;
+			children = (
+				F58A644E26B22CCB00D5713F /* CompatibleAnimationKeypath.swift */,
+				F58A644F26B22CCB00D5713F /* CompatibleAnimationView.swift */,
+			);
+			path = Compatibility;
+			sourceTree = "<group>";
+		};
+		F58A645826B22CCB00D5713F /* Primitives */ = {
+			isa = PBXGroup;
+			children = (
+				F58A645926B22CCB00D5713F /* AnimationTime.swift */,
+				F58A645A26B22CCB00D5713F /* Vectors.swift */,
+				F58A645B26B22CCB00D5713F /* Color.swift */,
+			);
+			path = Primitives;
+			sourceTree = "<group>";
+		};
+		F58A645C26B22CCB00D5713F /* AnimationCache */ = {
+			isa = PBXGroup;
+			children = (
+				F58A645D26B22CCB00D5713F /* AnimationCacheProvider.swift */,
+				F58A645E26B22CCB00D5713F /* LRUAnimationCache.swift */,
+			);
+			path = AnimationCache;
+			sourceTree = "<group>";
+		};
+		F58A645F26B22CCB00D5713F /* TextProvider */ = {
+			isa = PBXGroup;
+			children = (
+				F58A646026B22CCB00D5713F /* AnimationTextProvider.swift */,
+			);
+			path = TextProvider;
+			sourceTree = "<group>";
+		};
+		F58A646126B22CCB00D5713F /* DynamicProperties */ = {
+			isa = PBXGroup;
+			children = (
+				F58A646226B22CCB00D5713F /* AnimationKeypath.swift */,
+				F58A646326B22CCB00D5713F /* AnyValueProvider.swift */,
+				F58A646426B22CCB00D5713F /* ValueProviders */,
+			);
+			path = DynamicProperties;
+			sourceTree = "<group>";
+		};
+		F58A646426B22CCB00D5713F /* ValueProviders */ = {
+			isa = PBXGroup;
+			children = (
+				F58A646526B22CCB00D5713F /* ColorValueProvider.swift */,
+				F58A646626B22CCB00D5713F /* FloatValueProvider.swift */,
+				F58A646726B22CCB00D5713F /* SizeValueProvider.swift */,
+				F58A646826B22CCB00D5713F /* GradientValueProvider.swift */,
+				F58A646926B22CCB00D5713F /* PointValueProvider.swift */,
+			);
+			path = ValueProviders;
+			sourceTree = "<group>";
+		};
+		F58A646A26B22CCB00D5713F /* FontProvider */ = {
+			isa = PBXGroup;
+			children = (
+				F58A646B26B22CCB00D5713F /* AnimationFontProvider.swift */,
+			);
+			path = FontProvider;
+			sourceTree = "<group>";
+		};
+		F58A646C26B22CCB00D5713F /* Private */ = {
+			isa = PBXGroup;
+			children = (
+				F58A646D26B22CCB00D5713F /* LayerContainers */,
+				F58A648026B22CCB00D5713F /* NodeRenderSystem */,
+				F58A64B126B22CCB00D5713F /* Model */,
+				F58A64E126B22CCB00D5713F /* Utility */,
+			);
+			path = Private;
+			sourceTree = "<group>";
+		};
+		F58A646D26B22CCB00D5713F /* LayerContainers */ = {
+			isa = PBXGroup;
+			children = (
+				F58A646E26B22CCB00D5713F /* CompLayers */,
+				F58A647726B22CCB00D5713F /* AnimationContainer.swift */,
+				F58A647826B22CCB00D5713F /* Utility */,
+			);
+			path = LayerContainers;
+			sourceTree = "<group>";
+		};
+		F58A646E26B22CCB00D5713F /* CompLayers */ = {
+			isa = PBXGroup;
+			children = (
+				F58A646F26B22CCB00D5713F /* CompositionLayer.swift */,
+				F58A647026B22CCB00D5713F /* NullCompositionLayer.swift */,
+				F58A647126B22CCB00D5713F /* TextCompositionLayer.swift */,
+				F58A647226B22CCB00D5713F /* SolidCompositionLayer.swift */,
+				F58A647326B22CCB00D5713F /* PreCompositionLayer.swift */,
+				F58A647426B22CCB00D5713F /* ImageCompositionLayer.swift */,
+				F58A647526B22CCB00D5713F /* ShapeCompositionLayer.swift */,
+				F58A647626B22CCB00D5713F /* MaskContainerLayer.swift */,
+			);
+			path = CompLayers;
+			sourceTree = "<group>";
+		};
+		F58A647826B22CCB00D5713F /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				F58A647926B22CCB00D5713F /* LayerFontProvider.swift */,
+				F58A647A26B22CCB00D5713F /* TextLayer.swift */,
+				F58A647B26B22CCB00D5713F /* LayerTransformNode.swift */,
+				F58A647C26B22CCB00D5713F /* InvertedMatteLayer.swift */,
+				F58A647D26B22CCB00D5713F /* LayerImageProvider.swift */,
+				F58A647E26B22CCB00D5713F /* LayerTextProvider.swift */,
+				F58A647F26B22CCB00D5713F /* CompositionLayersInitializer.swift */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
+		F58A648026B22CCB00D5713F /* NodeRenderSystem */ = {
+			isa = PBXGroup;
+			children = (
+				F58A648126B22CCB00D5713F /* Nodes */,
+				F58A649C26B22CCB00D5713F /* NodeProperties */,
+				F58A64A826B22CCB00D5713F /* Extensions */,
+				F58A64AA26B22CCB00D5713F /* RenderLayers */,
+				F58A64AD26B22CCB00D5713F /* Protocols */,
+			);
+			path = NodeRenderSystem;
+			sourceTree = "<group>";
+		};
+		F58A648126B22CCB00D5713F /* Nodes */ = {
+			isa = PBXGroup;
+			children = (
+				F58A648226B22CCB00D5713F /* ModifierNodes */,
+				F58A648426B22CCB00D5713F /* RenderContainers */,
+				F58A648626B22CCB00D5713F /* OutputNodes */,
+				F58A648F26B22CCB00D5713F /* PathNodes */,
+				F58A649526B22CCB00D5713F /* Text */,
+				F58A649726B22CCB00D5713F /* RenderNodes */,
+			);
+			path = Nodes;
+			sourceTree = "<group>";
+		};
+		F58A648226B22CCB00D5713F /* ModifierNodes */ = {
+			isa = PBXGroup;
+			children = (
+				F58A648326B22CCB00D5713F /* TrimPathNode.swift */,
+			);
+			path = ModifierNodes;
+			sourceTree = "<group>";
+		};
+		F58A648426B22CCB00D5713F /* RenderContainers */ = {
+			isa = PBXGroup;
+			children = (
+				F58A648526B22CCB00D5713F /* GroupNode.swift */,
+			);
+			path = RenderContainers;
+			sourceTree = "<group>";
+		};
+		F58A648626B22CCB00D5713F /* OutputNodes */ = {
+			isa = PBXGroup;
+			children = (
+				F58A648726B22CCB00D5713F /* Renderables */,
+				F58A648C26B22CCB00D5713F /* GroupOutputNode.swift */,
+				F58A648D26B22CCB00D5713F /* PathOutputNode.swift */,
+				F58A648E26B22CCB00D5713F /* PassThroughOutputNode.swift */,
+			);
+			path = OutputNodes;
+			sourceTree = "<group>";
+		};
+		F58A648726B22CCB00D5713F /* Renderables */ = {
+			isa = PBXGroup;
+			children = (
+				F58A648826B22CCB00D5713F /* GradientFillRenderer.swift */,
+				F58A648926B22CCB00D5713F /* GradientStrokeRenderer.swift */,
+				F58A648A26B22CCB00D5713F /* FillRenderer.swift */,
+				F58A648B26B22CCB00D5713F /* StrokeRenderer.swift */,
+			);
+			path = Renderables;
+			sourceTree = "<group>";
+		};
+		F58A648F26B22CCB00D5713F /* PathNodes */ = {
+			isa = PBXGroup;
+			children = (
+				F58A649026B22CCB00D5713F /* EllipseNode.swift */,
+				F58A649126B22CCB00D5713F /* PolygonNode.swift */,
+				F58A649226B22CCB00D5713F /* RectNode.swift */,
+				F58A649326B22CCB00D5713F /* ShapeNode.swift */,
+				F58A649426B22CCB00D5713F /* StarNode.swift */,
+			);
+			path = PathNodes;
+			sourceTree = "<group>";
+		};
+		F58A649526B22CCB00D5713F /* Text */ = {
+			isa = PBXGroup;
+			children = (
+				F58A649626B22CCB00D5713F /* TextAnimatorNode.swift */,
+			);
+			path = Text;
+			sourceTree = "<group>";
+		};
+		F58A649726B22CCB00D5713F /* RenderNodes */ = {
+			isa = PBXGroup;
+			children = (
+				F58A649826B22CCB00D5713F /* GradientFillNode.swift */,
+				F58A649926B22CCB00D5713F /* StrokeNode.swift */,
+				F58A649A26B22CCB00D5713F /* FillNode.swift */,
+				F58A649B26B22CCB00D5713F /* GradientStrokeNode.swift */,
+			);
+			path = RenderNodes;
+			sourceTree = "<group>";
+		};
+		F58A649C26B22CCB00D5713F /* NodeProperties */ = {
+			isa = PBXGroup;
+			children = (
+				F58A649D26B22CCB00D5713F /* ValueContainer.swift */,
+				F58A649E26B22CCB00D5713F /* NodeProperty.swift */,
+				F58A649F26B22CCB00D5713F /* Protocols */,
+				F58A64A426B22CCB00D5713F /* ValueProviders */,
+			);
+			path = NodeProperties;
+			sourceTree = "<group>";
+		};
+		F58A649F26B22CCB00D5713F /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				F58A64A026B22CCB00D5713F /* AnyNodeProperty.swift */,
+				F58A64A126B22CCB00D5713F /* NodePropertyMap.swift */,
+				F58A64A226B22CCB00D5713F /* KeypathSearchable.swift */,
+				F58A64A326B22CCB00D5713F /* AnyValueContainer.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		F58A64A426B22CCB00D5713F /* ValueProviders */ = {
+			isa = PBXGroup;
+			children = (
+				F58A64A526B22CCB00D5713F /* KeyframeInterpolator.swift */,
+				F58A64A626B22CCB00D5713F /* SingleValueProvider.swift */,
+				F58A64A726B22CCB00D5713F /* GroupInterpolator.swift */,
+			);
+			path = ValueProviders;
+			sourceTree = "<group>";
+		};
+		F58A64A826B22CCB00D5713F /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				F58A64A926B22CCB00D5713F /* ItemsExtension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		F58A64AA26B22CCB00D5713F /* RenderLayers */ = {
+			isa = PBXGroup;
+			children = (
+				F58A64AB26B22CCB00D5713F /* ShapeRenderLayer.swift */,
+				F58A64AC26B22CCB00D5713F /* ShapeContainerLayer.swift */,
+			);
+			path = RenderLayers;
+			sourceTree = "<group>";
+		};
+		F58A64AD26B22CCB00D5713F /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				F58A64AE26B22CCB00D5713F /* PathNode.swift */,
+				F58A64AF26B22CCB00D5713F /* RenderNode.swift */,
+				F58A64B026B22CCB00D5713F /* AnimatorNode.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		F58A64B126B22CCB00D5713F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F58A64B226B22CCB00D5713F /* ShapeItems */,
+				F58A64C126B22CCB00D5713F /* Layers */,
+				F58A64C826B22CCB00D5713F /* Animation.swift */,
+				F58A64C926B22CCB00D5713F /* Objects */,
+				F58A64CE26B22CCB00D5713F /* Extensions */,
+				F58A64D026B22CCB00D5713F /* Keyframes */,
+				F58A64D326B22CCB00D5713F /* MTResultData */,
+				F58A64D526B22CCB00D5713F /* Text */,
+				F58A64DA26B22CCB00D5713F /* Assets */,
+				F58A64DF26B22CCB00D5713F /* MTSuccessData */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F58A64B226B22CCB00D5713F /* ShapeItems */ = {
+			isa = PBXGroup;
+			children = (
+				F58A64B326B22CCB00D5713F /* Ellipse.swift */,
+				F58A64B426B22CCB00D5713F /* Trim.swift */,
+				F58A64B526B22CCB00D5713F /* ShapeItem.swift */,
+				F58A64B626B22CCB00D5713F /* Shape.swift */,
+				F58A64B726B22CCB00D5713F /* Group.swift */,
+				F58A64B826B22CCB00D5713F /* ShapeTransform.swift */,
+				F58A64B926B22CCB00D5713F /* Merge.swift */,
+				F58A64BA26B22CCB00D5713F /* FillI.swift */,
+				F58A64BB26B22CCB00D5713F /* Repeater.swift */,
+				F58A64BC26B22CCB00D5713F /* GradientFill.swift */,
+				F58A64BD26B22CCB00D5713F /* GradientStroke.swift */,
+				F58A64BE26B22CCB00D5713F /* Stroke.swift */,
+				F58A64BF26B22CCB00D5713F /* Rectangle.swift */,
+				F58A64C026B22CCB00D5713F /* Star.swift */,
+			);
+			path = ShapeItems;
+			sourceTree = "<group>";
+		};
+		F58A64C126B22CCB00D5713F /* Layers */ = {
+			isa = PBXGroup;
+			children = (
+				F58A64C226B22CCB00D5713F /* SolidLayerModel.swift */,
+				F58A64C326B22CCB00D5713F /* LayerModel.swift */,
+				F58A64C426B22CCB00D5713F /* ImageLayerModel.swift */,
+				F58A64C526B22CCB00D5713F /* TextLayerModel.swift */,
+				F58A64C626B22CCB00D5713F /* PreCompLayerModel.swift */,
+				F58A64C726B22CCB00D5713F /* ShapeLayerModel.swift */,
+			);
+			path = Layers;
+			sourceTree = "<group>";
+		};
+		F58A64C926B22CCB00D5713F /* Objects */ = {
+			isa = PBXGroup;
+			children = (
+				F58A64CA26B22CCB00D5713F /* DashPattern.swift */,
+				F58A64CB26B22CCB00D5713F /* Transform.swift */,
+				F58A64CC26B22CCB00D5713F /* Mask.swift */,
+				F58A64CD26B22CCB00D5713F /* Marker.swift */,
+			);
+			path = Objects;
+			sourceTree = "<group>";
+		};
+		F58A64CE26B22CCB00D5713F /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				F58A64CF26B22CCB00D5713F /* KeyedDecodingContainerExtensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		F58A64D026B22CCB00D5713F /* Keyframes */ = {
+			isa = PBXGroup;
+			children = (
+				F58A64D126B22CCB00D5713F /* KeyframeGroup.swift */,
+				F58A64D226B22CCB00D5713F /* Keyframe.swift */,
+			);
+			path = Keyframes;
+			sourceTree = "<group>";
+		};
+		F58A64D326B22CCB00D5713F /* MTResultData */ = {
+			isa = PBXGroup;
+			children = (
+				F58A64D426B22CCB00D5713F /* MTResultData.swift */,
+			);
+			path = MTResultData;
+			sourceTree = "<group>";
+		};
+		F58A64D526B22CCB00D5713F /* Text */ = {
+			isa = PBXGroup;
+			children = (
+				F58A64D626B22CCB00D5713F /* TextDocument.swift */,
+				F58A64D726B22CCB00D5713F /* Glyph.swift */,
+				F58A64D826B22CCB00D5713F /* TextAnimator.swift */,
+				F58A64D926B22CCB00D5713F /* Font.swift */,
+			);
+			path = Text;
+			sourceTree = "<group>";
+		};
+		F58A64DA26B22CCB00D5713F /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				F58A64DB26B22CCB00D5713F /* ImageAsset.swift */,
+				F58A64DC26B22CCB00D5713F /* PrecompAsset.swift */,
+				F58A64DD26B22CCB00D5713F /* AssetLibrary.swift */,
+				F58A64DE26B22CCB00D5713F /* Asset.swift */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		F58A64DF26B22CCB00D5713F /* MTSuccessData */ = {
+			isa = PBXGroup;
+			children = (
+				F58A64E026B22CCB00D5713F /* MTSuccessData.swift */,
+			);
+			path = MTSuccessData;
+			sourceTree = "<group>";
+		};
+		F58A64E126B22CCB00D5713F /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				F58A64E226B22CCB00D5713F /* Debugging */,
+				F58A64E526B22CCB00D5713F /* Extensions */,
+				F58A64EA26B22CCB00D5713F /* Primitives */,
+				F58A64F126B22CCB00D5713F /* Interpolatable */,
+				F58A64F526B22CCB00D5713F /* Helpers */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
+		F58A64E226B22CCB00D5713F /* Debugging */ = {
+			isa = PBXGroup;
+			children = (
+				F58A64E326B22CCB00D5713F /* LayerDebugging.swift */,
+				F58A64E426B22CCB00D5713F /* AnimatorNodeDebugging.swift */,
+			);
+			path = Debugging;
+			sourceTree = "<group>";
+		};
+		F58A64E526B22CCB00D5713F /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				F58A64E626B22CCB00D5713F /* CGFloatExtensions.swift */,
+				F58A64E726B22CCB00D5713F /* AnimationKeypathExtension.swift */,
+				F58A64E826B22CCB00D5713F /* StringExtensions.swift */,
+				F58A64E926B22CCB00D5713F /* MathKit.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		F58A64EA26B22CCB00D5713F /* Primitives */ = {
+			isa = PBXGroup;
+			children = (
+				F58A64EB26B22CCB00D5713F /* BezierPath.swift */,
+				F58A64EC26B22CCB00D5713F /* CompoundBezierPath.swift */,
+				F58A64ED26B22CCB00D5713F /* ColorExtension.swift */,
+				F58A64EE26B22CCB00D5713F /* PathElement.swift */,
+				F58A64EF26B22CCB00D5713F /* CurveVertex.swift */,
+				F58A64F026B22CCB00D5713F /* VectorsExtensions.swift */,
+			);
+			path = Primitives;
+			sourceTree = "<group>";
+		};
+		F58A64F126B22CCB00D5713F /* Interpolatable */ = {
+			isa = PBXGroup;
+			children = (
+				F58A64F226B22CCB00D5713F /* InterpolatableExtensions.swift */,
+				F58A64F326B22CCB00D5713F /* Interpolatable.swift */,
+				F58A64F426B22CCB00D5713F /* KeyframeExtensions.swift */,
+			);
+			path = Interpolatable;
+			sourceTree = "<group>";
+		};
+		F58A64F526B22CCB00D5713F /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				F58A64F626B22CCB00D5713F /* AnimationContext.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		F58A660326B22E8F00D5713F /* JSON_Files */ = {
+			isa = PBXGroup;
+			children = (
+				F58A660A26B22EEC00D5713F /* home.json */,
+				F58A660B26B22EEC00D5713F /* sample.json */,
+			);
+			path = JSON_Files;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -1385,7 +2329,10 @@
 				33E158D226AA530D00B0615B /* OpenSans-SemiBoldItalic.ttf in Resources */,
 				3320FFC82682EBC4001809AA /* NeumorphicTextField.xib in Resources */,
 				3320FFA62682EBC4001809AA /* Refer.storyboard in Resources */,
+				F58A660E26B22EEC00D5713F /* sample.json in Resources */,
+				F58A660C26B22EEC00D5713F /* home.json in Resources */,
 				33E158D026AA530D00B0615B /* OpenSans-BoldItalic.ttf in Resources */,
+				F58A64F926B22CCB00D5713F /* README.md in Resources */,
 				3320FFD32682EBC4001809AA /* NewReferTableViewCell.xib in Resources */,
 				33F59CDE26933283005B009A /* QuestionView.xib in Resources */,
 				33FC31C62697129B00868D9E /* SpinSuccessView.xib in Resources */,
@@ -1411,6 +2358,7 @@
 				33FC319B2695B04300868D9E /* GameList.storyboard in Resources */,
 				33CD2198269AF4DD00CB71AC /* PredictSuccessView.xib in Resources */,
 				33542A67269CA76A008CE8C2 /* CompletedTableViewCell.xib in Resources */,
+				F58A64F726B22CCB00D5713F /* LICENSE in Resources */,
 				334979AB26AEE35600B909C8 /* GenericNeumorphicButton.xib in Resources */,
 				3320FFC92682EBC4001809AA /* NeumorphicButton.xib in Resources */,
 				33E158D426AA530D00B0615B /* OpenSans-Italic.ttf in Resources */,
@@ -1437,7 +2385,11 @@
 				33E158EA26AA533000B0615B /* OpenSans-SemiBoldItalic.ttf in Resources */,
 				3320FF332682EB13001809AA /* LaunchScreen.storyboard in Resources */,
 				3320FF302682EB13001809AA /* Assets.xcassets in Resources */,
+				F58A660D26B22EEC00D5713F /* home.json in Resources */,
+				F58A64F826B22CCB00D5713F /* LICENSE in Resources */,
 				3320FF2E2682EB10001809AA /* Main.storyboard in Resources */,
+				F58A660F26B22EEC00D5713F /* sample.json in Resources */,
+				F58A64FA26B22CCB00D5713F /* README.md in Resources */,
 				33E158E426AA533000B0615B /* OpenSans-ExtraBoldItalic.ttf in Resources */,
 				33E158E926AA533000B0615B /* OpenSans-LightItalic.ttf in Resources */,
 			);
@@ -1470,8 +2422,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F58A656526B22CCB00D5713F /* EllipseNode.swift in Sources */,
+				F58A653926B22CCB00D5713F /* SolidCompositionLayer.swift in Sources */,
+				F58A658126B22CCB00D5713F /* KeypathSearchable.swift in Sources */,
+				F58A655126B22CCB00D5713F /* CompositionLayersInitializer.swift in Sources */,
+				F58A65D926B22CCB00D5713F /* ImageAsset.swift in Sources */,
+				F58A65B726B22CCB00D5713F /* ImageLayerModel.swift in Sources */,
+				F58A654F26B22CCB00D5713F /* LayerTextProvider.swift in Sources */,
 				3320FFC42682EBC4001809AA /* IQNSArray+Sort.swift in Sources */,
 				33E158BF26A9B01300B0615B /* SpinFailViewHelper.swift in Sources */,
+				F58A657326B22CCB00D5713F /* StrokeNode.swift in Sources */,
+				F58A652126B22CCB00D5713F /* AnimationTextProvider.swift in Sources */,
 				336D809D26A5E15E00B7699B /* CallBack.swift in Sources */,
 				3320FFC72682EBC4001809AA /* NeumorphicTextField.swift in Sources */,
 				3320FFBE2682EBC4001809AA /* IQKeyboardManager+Toolbar.swift in Sources */,
@@ -1479,101 +2440,224 @@
 				3381167926993DE500C8F35E /* ReferContactButton.swift in Sources */,
 				336B67AF26980C08008E419B /* PredictViewModel.swift in Sources */,
 				3320FFAC2682EBC4001809AA /* ExpireView.swift in Sources */,
+				F58A65ED26B22CCB00D5713F /* MathKit.swift in Sources */,
+				F58A65CD26B22CCB00D5713F /* Keyframe.swift in Sources */,
+				F58A659326B22CCB00D5713F /* RenderNode.swift in Sources */,
+				F58A65FD26B22CCB00D5713F /* Interpolatable.swift in Sources */,
+				F58A65B526B22CCB00D5713F /* LayerModel.swift in Sources */,
 				33542A69269CA76A008CE8C2 /* CompletedTableView.swift in Sources */,
 				33542A78269CA853008CE8C2 /* CollectionDataSource.swift in Sources */,
 				334979A126AEC7FA00B909C8 /* ListGameCollectionFooterView.swift in Sources */,
 				33FC31CE26973C5100868D9E /* ExpireViewModel.swift in Sources */,
 				33CD21A4269BDEE400CB71AC /* ReferCode.swift in Sources */,
 				3320FFA32682EBC4001809AA /* String+Extension.swift in Sources */,
+				F58A653726B22CCB00D5713F /* TextCompositionLayer.swift in Sources */,
 				3320FFBA2682EBC4001809AA /* IQKeyboardReturnKeyHandler.swift in Sources */,
+				F58A65E726B22CCB00D5713F /* CGFloatExtensions.swift in Sources */,
 				3320FFB22682EBC4001809AA /* IQBarButtonItem.swift in Sources */,
+				F58A65D526B22CCB00D5713F /* TextAnimator.swift in Sources */,
 				3320FFDB2682EBC4001809AA /* SpinningWheelAnimator.swift in Sources */,
+				F58A65E926B22CCB00D5713F /* AnimationKeypathExtension.swift in Sources */,
+				F58A65A726B22CCB00D5713F /* Repeater.swift in Sources */,
+				F58A650926B22CCB00D5713F /* AnimatedSwitch.swift in Sources */,
 				3320FFB12682EBC4001809AA /* IQTitleBarButtonItem.swift in Sources */,
+				F58A658926B22CCB00D5713F /* GroupInterpolator.swift in Sources */,
+				F58A655726B22CCB00D5713F /* GradientFillRenderer.swift in Sources */,
+				F58A651B26B22CCB00D5713F /* Color.swift in Sources */,
 				33EE796526A52FBF006AB306 /* KnowMoreViewHelper.swift in Sources */,
 				33542A68269CA76A008CE8C2 /* CompletedTableViewCell.swift in Sources */,
 				33FC31B22696DC9F00868D9E /* SpinOffers.swift in Sources */,
 				3320FFC52682EBC4001809AA /* IQKeyboardManager+UITextFieldViewNotification.swift in Sources */,
+				F58A656B26B22CCB00D5713F /* ShapeNode.swift in Sources */,
+				F58A65FB26B22CCB00D5713F /* InterpolatableExtensions.swift in Sources */,
+				F58A651326B22CCB00D5713F /* AnimationSubview.swift in Sources */,
 				336B67AB2697E24C008E419B /* PredictGame.swift in Sources */,
+				F58A656726B22CCB00D5713F /* PolygonNode.swift in Sources */,
 				3320FFDF2682EBC4001809AA /* SpinningWheelSliceImpl.swift in Sources */,
+				F58A65EF26B22CCB00D5713F /* BezierPath.swift in Sources */,
+				F58A65F726B22CCB00D5713F /* CurveVertex.swift in Sources */,
+				F58A654726B22CCB00D5713F /* TextLayer.swift in Sources */,
 				3320FFA52682EBC4001809AA /* Game.swift in Sources */,
+				F58A658F26B22CCB00D5713F /* ShapeContainerLayer.swift in Sources */,
 				33DCF90026AAD6D600B17523 /* ReferSuccessViewHelper.swift in Sources */,
 				3320FFA42682EBC4001809AA /* UIController+Extension.swift in Sources */,
+				F58A65AB26B22CCB00D5713F /* GradientStroke.swift in Sources */,
+				F58A652326B22CCB00D5713F /* AnimationKeypath.swift in Sources */,
+				F58A653526B22CCB00D5713F /* NullCompositionLayer.swift in Sources */,
 				337E17CE269DC53C00C14135 /* ADCBGameListController.swift in Sources */,
+				F58A65A326B22CCB00D5713F /* Merge.swift in Sources */,
+				F58A657926B22CCB00D5713F /* ValueContainer.swift in Sources */,
+				F58A656926B22CCB00D5713F /* RectNode.swift in Sources */,
 				3320FFB52682EBC4001809AA /* IQInvocation.swift in Sources */,
 				3320FFC12682EBC4001809AA /* IQUIViewController+Additions.swift in Sources */,
+				F58A650726B22CCB00D5713F /* FilepathImageProvider.swift in Sources */,
 				33FC318426958D2F00868D9E /* Utility.swift in Sources */,
+				F58A652F26B22CCB00D5713F /* PointValueProvider.swift in Sources */,
+				F58A655926B22CCB00D5713F /* GradientStrokeRenderer.swift in Sources */,
 				3320FFA22682EBC4001809AA /* UIView+Extension.swift in Sources */,
+				F58A65C926B22CCB00D5713F /* KeyedDecodingContainerExtensions.swift in Sources */,
+				F58A64FD26B22CCB00D5713F /* AnimationView.swift in Sources */,
+				F58A657526B22CCB00D5713F /* FillNode.swift in Sources */,
 				3320FFB82682EBC4001809AA /* IQKeyboardManagerConstants.swift in Sources */,
+				F58A652726B22CCB00D5713F /* ColorValueProvider.swift in Sources */,
+				F58A65F326B22CCB00D5713F /* ColorExtension.swift in Sources */,
+				F58A657B26B22CCB00D5713F /* NodeProperty.swift in Sources */,
+				F58A659F26B22CCB00D5713F /* Group.swift in Sources */,
 				3320FFAE2682EBC4001809AA /* IQTextView.swift in Sources */,
+				F58A65BB26B22CCB00D5713F /* PreCompLayerModel.swift in Sources */,
+				F58A650326B22CCB00D5713F /* CompatibleAnimationKeypath.swift in Sources */,
 				33FC31C02697129100868D9E /* SpinSuccessView.swift in Sources */,
+				F58A654526B22CCB00D5713F /* LayerFontProvider.swift in Sources */,
+				F58A65FF26B22CCB00D5713F /* KeyframeExtensions.swift in Sources */,
 				3320FFD82682EBC4001809AA /* SpinHomeController.swift in Sources */,
+				F58A65DF26B22CCB00D5713F /* Asset.swift in Sources */,
+				F58A653326B22CCB00D5713F /* CompositionLayer.swift in Sources */,
+				F58A652B26B22CCB00D5713F /* SizeValueProvider.swift in Sources */,
+				F58A65F126B22CCB00D5713F /* CompoundBezierPath.swift in Sources */,
 				3357ED862693207E00607F50 /* PredictTeamView.swift in Sources */,
+				F58A658326B22CCB00D5713F /* AnyValueContainer.swift in Sources */,
+				F58A657726B22CCB00D5713F /* GradientStrokeNode.swift in Sources */,
+				F58A65A926B22CCB00D5713F /* GradientFill.swift in Sources */,
+				F58A65D326B22CCB00D5713F /* Glyph.swift in Sources */,
 				3320FFE02682EBC4001809AA /* SpinningWheelSlice .swift in Sources */,
+				F58A65D726B22CCB00D5713F /* Font.swift in Sources */,
+				F58A65CB26B22CCB00D5713F /* KeyframeGroup.swift in Sources */,
+				F58A653D26B22CCB00D5713F /* ImageCompositionLayer.swift in Sources */,
 				33EDB0E22692CCB40040DCD4 /* MatchTableViewCell.swift in Sources */,
+				F58A655D26B22CCB00D5713F /* StrokeRenderer.swift in Sources */,
 				33542A6A269CA76A008CE8C2 /* GamesViewController.swift in Sources */,
 				3320FFB32682EBC4001809AA /* IQToolbar.swift in Sources */,
+				F58A658526B22CCB00D5713F /* KeyframeInterpolator.swift in Sources */,
 				338116882699A46400C8F35E /* PhoneContactVM.swift in Sources */,
+				F58A65B926B22CCB00D5713F /* TextLayerModel.swift in Sources */,
 				33FC31BA2696F82800868D9E /* SpinAssignReward.swift in Sources */,
+				F58A658B26B22CCB00D5713F /* ItemsExtension.swift in Sources */,
 				3320FFAF2682EBC4001809AA /* IQKeyboardManager+Internal.swift in Sources */,
+				F58A655B26B22CCB00D5713F /* FillRenderer.swift in Sources */,
 				33FC317F26958C9B00868D9E /* GameList.swift in Sources */,
+				F58A65DD26B22CCB00D5713F /* AssetLibrary.swift in Sources */,
+				F58A65E126B22CCB00D5713F /* MTSuccessData.swift in Sources */,
 				33E158B526A9AFD800B0615B /* SpinFailView.swift in Sources */,
+				F58A653126B22CCB00D5713F /* AnimationFontProvider.swift in Sources */,
+				F58A65AF26B22CCB00D5713F /* Rectangle.swift in Sources */,
+				F58A660126B22CCB00D5713F /* AnimationContext.swift in Sources */,
+				F58A655F26B22CCB00D5713F /* GroupOutputNode.swift in Sources */,
+				F58A65BD26B22CCB00D5713F /* ShapeLayerModel.swift in Sources */,
+				F58A651526B22CCB00D5713F /* AnimatedControl.swift in Sources */,
+				F58A650D26B22CCB00D5713F /* UIColorExtension.swift in Sources */,
+				F58A657F26B22CCB00D5713F /* NodePropertyMap.swift in Sources */,
 				3320FFDC2682EBC4001809AA /* FortuneWheelLayer.swift in Sources */,
 				3320FFDD2682EBC4001809AA /* Utils.swift in Sources */,
+				F58A651926B22CCB00D5713F /* Vectors.swift in Sources */,
+				F58A650526B22CCB00D5713F /* CompatibleAnimationView.swift in Sources */,
+				F58A650B26B22CCB00D5713F /* BundleImageProvider.swift in Sources */,
 				33EDB0F42692D9F00040DCD4 /* CustomNavViewController.swift in Sources */,
 				3320FFA02682EBC4001809AA /* UIColor+Extension.swift in Sources */,
 				33542A79269CA853008CE8C2 /* ZoomAndSnapFlowLayout.swift in Sources */,
 				3320FFD52682EBC4001809AA /* SpinerContainerView.swift in Sources */,
 				33F59CCC26932818005B009A /* UIImageView+Extension.swift in Sources */,
+				F58A659526B22CCB00D5713F /* AnimatorNode.swift in Sources */,
 				338116732698A39800C8F35E /* ReferController.swift in Sources */,
 				3320FFCF2682EBC4001809AA /* ReferTableView.swift in Sources */,
+				F58A64FB26B22CCB00D5713F /* AnimationViewInitializers.swift in Sources */,
+				F58A65C726B22CCB00D5713F /* Marker.swift in Sources */,
+				F58A65D126B22CCB00D5713F /* TextDocument.swift in Sources */,
+				F58A658D26B22CCB00D5713F /* ShapeRenderLayer.swift in Sources */,
 				33CD21A8269BE49E00CB71AC /* ReferNotification.swift in Sources */,
+				F58A65E526B22CCB00D5713F /* AnimatorNodeDebugging.swift in Sources */,
 				33EDB0D0268ED7F20040DCD4 /* PredictMatchController.swift in Sources */,
+				F58A654B26B22CCB00D5713F /* InvertedMatteLayer.swift in Sources */,
+				F58A656F26B22CCB00D5713F /* TextAnimatorNode.swift in Sources */,
 				3320FFB02682EBC4001809AA /* IQPreviousNextView.swift in Sources */,
+				F58A656326B22CCB00D5713F /* PassThroughOutputNode.swift in Sources */,
 				337E17D5269DC60400C14135 /* ADCBGameListCollectionCell.swift in Sources */,
+				F58A652D26B22CCB00D5713F /* GradientValueProvider.swift in Sources */,
+				F58A64FF26B22CCB00D5713F /* AnimationPublic.swift in Sources */,
 				33FC31CA26971A9800868D9E /* SpinSuccessViewHelper.swift in Sources */,
+				F58A659926B22CCB00D5713F /* Trim.swift in Sources */,
+				F58A65C526B22CCB00D5713F /* Mask.swift in Sources */,
+				F58A651726B22CCB00D5713F /* AnimationTime.swift in Sources */,
 				33CD21A0269BDCC400CB71AC /* ReferViewModel.swift in Sources */,
+				F58A655526B22CCB00D5713F /* GroupNode.swift in Sources */,
+				F58A651126B22CCB00D5713F /* LottieView.swift in Sources */,
+				F58A653B26B22CCB00D5713F /* PreCompositionLayer.swift in Sources */,
 				33CD219C269AF4EE00CB71AC /* PredictSuccessHelper.swift in Sources */,
+				F58A651D26B22CCB00D5713F /* AnimationCacheProvider.swift in Sources */,
+				F58A65A126B22CCB00D5713F /* ShapeTransform.swift in Sources */,
+				F58A65F926B22CCB00D5713F /* VectorsExtensions.swift in Sources */,
 				3320FFC02682EBC4001809AA /* IQUIScrollView+Additions.swift in Sources */,
 				3320FFB72682EBC4001809AA /* IQKeyboardManagerConstantsInternal.swift in Sources */,
 				33F59CD2269330C0005B009A /* PredictMatchTableViewCell.swift in Sources */,
 				33FC317A26958C5D00868D9E /* GameListVM.swift in Sources */,
 				3320FFA12682EBC4001809AA /* UIButton+Extension.swift in Sources */,
+				F58A65E326B22CCB00D5713F /* LayerDebugging.swift in Sources */,
+				F58A651F26B22CCB00D5713F /* LRUAnimationCache.swift in Sources */,
 				33FC316E26957F5C00868D9E /* Constants.swift in Sources */,
+				F58A654D26B22CCB00D5713F /* LayerImageProvider.swift in Sources */,
+				F58A659726B22CCB00D5713F /* Ellipse.swift in Sources */,
 				3320FFBB2682EBC4001809AA /* IQKeyboardManager.swift in Sources */,
 				3320FFC62682EBC4001809AA /* ReferIntroController.swift in Sources */,
 				338116982699AC4900C8F35E /* CustomContactCell.swift in Sources */,
 				3320FFE22682EBC4001809AA /* CarnivalWheelSlice.swift in Sources */,
 				33F59CD8269331E6005B009A /* QuestionView.swift in Sources */,
+				F58A654326B22CCB00D5713F /* AnimationContainer.swift in Sources */,
+				F58A658726B22CCB00D5713F /* SingleValueProvider.swift in Sources */,
 				3320FFB62682EBC4001809AA /* IQKeyboardManager+UIKeyboardNotification.swift in Sources */,
 				3320FFD42682EBC4001809AA /* NewReferTableViewCell.swift in Sources */,
+				F58A659D26B22CCB00D5713F /* Shape.swift in Sources */,
 				33FC31672695758500868D9E /* NetworkManager.swift in Sources */,
+				F58A656D26B22CCB00D5713F /* StarNode.swift in Sources */,
 				33FC317326957FB000868D9E /* StoreManager.swift in Sources */,
+				F58A652526B22CCB00D5713F /* AnyValueProvider.swift in Sources */,
+				F58A65C126B22CCB00D5713F /* DashPattern.swift in Sources */,
 				33CD2194269AF4D300CB71AC /* PredictSuccessView.swift in Sources */,
+				F58A65CF26B22CCB00D5713F /* MTResultData.swift in Sources */,
 				33FC31D326973CA000868D9E /* CustomTimer.swift in Sources */,
 				3320FFBD2682EBC4001809AA /* IQKeyboardManager+OrientationNotification.swift in Sources */,
 				33EDB0EB2692CE870040DCD4 /* CustomNavView.swift in Sources */,
+				F58A652926B22CCB00D5713F /* FloatValueProvider.swift in Sources */,
 				33FC31A72695B18800868D9E /* GameListTableViewCell.swift in Sources */,
 				3320FFB92682EBC4001809AA /* IQKeyboardManager+Position.swift in Sources */,
 				3320FFCA2682EBC4001809AA /* NeumorphicButton.swift in Sources */,
 				3320FFC22682EBC4001809AA /* IQUITextFieldView+Additions.swift in Sources */,
+				F58A659126B22CCB00D5713F /* PathNode.swift in Sources */,
+				F58A657D26B22CCB00D5713F /* AnyNodeProperty.swift in Sources */,
 				334979A726AEE34400B909C8 /* GenericNeumorphicButton.swift in Sources */,
 				3320FFDA2682EBC4001809AA /* TTFortuneWheel.swift in Sources */,
+				F58A65EB26B22CCB00D5713F /* StringExtensions.swift in Sources */,
+				F58A65AD26B22CCB00D5713F /* Stroke.swift in Sources */,
+				F58A657126B22CCB00D5713F /* GradientFillNode.swift in Sources */,
 				33DCF8FE26AAD6D600B17523 /* ReferSuccessView.swift in Sources */,
 				3349799826AEBA3500B909C8 /* ListGameCollectionHeaderView.swift in Sources */,
+				F58A65C326B22CCB00D5713F /* Transform.swift in Sources */,
 				338116822699432500C8F35E /* ContactListController.swift in Sources */,
+				F58A65F526B22CCB00D5713F /* PathElement.swift in Sources */,
+				F58A65DB26B22CCB00D5713F /* PrecompAsset.swift in Sources */,
 				3320FFCB2682EBC4001809AA /* ReferViewController.swift in Sources */,
+				F58A655326B22CCB00D5713F /* TrimPathNode.swift in Sources */,
 				33FC31AE2696D7CA00868D9E /* SpinViewOfferVM.swift in Sources */,
 				3320FFD02682EBC4001809AA /* HistoryTableViewCell.swift in Sources */,
+				F58A650F26B22CCB00D5713F /* AnimatedButton.swift in Sources */,
+				F58A65BF26B22CCB00D5713F /* Animation.swift in Sources */,
 				3320FFAA2682EBC4001809AA /* TermsViewHelper.swift in Sources */,
 				3320FFD62682EBC4001809AA /* SpinerContainerHelper.swift in Sources */,
 				3320FFB42682EBC4001809AA /* IQUIView+IQKeyboardToolbar.swift in Sources */,
 				33FC31A02695B08300868D9E /* GameListController.swift in Sources */,
 				335933AC26941F0E00CF6AAF /* CustomNeumophicButton.swift in Sources */,
 				3381168C2699A78600C8F35E /* FetchedContacts.swift in Sources */,
+				F58A654926B22CCB00D5713F /* LayerTransformNode.swift in Sources */,
 				3320FFC32682EBC4001809AA /* IQUIView+Hierarchy.swift in Sources */,
 				33542A7B269CA853008CE8C2 /* PageCollectionCell.swift in Sources */,
+				F58A65A526B22CCB00D5713F /* FillI.swift in Sources */,
+				F58A659B26B22CCB00D5713F /* ShapeItem.swift in Sources */,
+				F58A65B126B22CCB00D5713F /* Star.swift in Sources */,
+				F58A65B326B22CCB00D5713F /* SolidLayerModel.swift in Sources */,
 				33EDB0C2268ED7B10040DCD4 /* PredictIntroController.swift in Sources */,
+				F58A656126B22CCB00D5713F /* PathOutputNode.swift in Sources */,
 				33EE795D26A52F9C006AB306 /* KnowMoreView.swift in Sources */,
+				F58A654126B22CCB00D5713F /* MaskContainerLayer.swift in Sources */,
+				F58A653F26B22CCB00D5713F /* ShapeCompositionLayer.swift in Sources */,
+				F58A650126B22CCB00D5713F /* AnimationImageProvider.swift in Sources */,
 				3320FFA92682EBC4001809AA /* TermsView.swift in Sources */,
 				33EDB0C9268ED7C90040DCD4 /* MatchListController.swift in Sources */,
 			);
@@ -1583,9 +2667,141 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F58A654E26B22CCB00D5713F /* LayerImageProvider.swift in Sources */,
+				F58A653226B22CCB00D5713F /* AnimationFontProvider.swift in Sources */,
+				F58A655626B22CCB00D5713F /* GroupNode.swift in Sources */,
+				F58A65EE26B22CCB00D5713F /* MathKit.swift in Sources */,
+				F58A653E26B22CCB00D5713F /* ImageCompositionLayer.swift in Sources */,
+				F58A657E26B22CCB00D5713F /* AnyNodeProperty.swift in Sources */,
+				F58A650226B22CCB00D5713F /* AnimationImageProvider.swift in Sources */,
+				F58A65FC26B22CCB00D5713F /* InterpolatableExtensions.swift in Sources */,
+				F58A658826B22CCB00D5713F /* SingleValueProvider.swift in Sources */,
+				F58A656E26B22CCB00D5713F /* StarNode.swift in Sources */,
+				F58A656C26B22CCB00D5713F /* ShapeNode.swift in Sources */,
+				F58A659226B22CCB00D5713F /* PathNode.swift in Sources */,
+				F58A65DA26B22CCB00D5713F /* ImageAsset.swift in Sources */,
+				F58A653426B22CCB00D5713F /* CompositionLayer.swift in Sources */,
+				F58A654C26B22CCB00D5713F /* InvertedMatteLayer.swift in Sources */,
+				F58A659626B22CCB00D5713F /* AnimatorNode.swift in Sources */,
+				F58A65A826B22CCB00D5713F /* Repeater.swift in Sources */,
+				F58A660226B22CCB00D5713F /* AnimationContext.swift in Sources */,
+				F58A653026B22CCB00D5713F /* PointValueProvider.swift in Sources */,
+				F58A653C26B22CCB00D5713F /* PreCompositionLayer.swift in Sources */,
+				F58A652C26B22CCB00D5713F /* SizeValueProvider.swift in Sources */,
+				F58A650826B22CCB00D5713F /* FilepathImageProvider.swift in Sources */,
+				F58A659026B22CCB00D5713F /* ShapeContainerLayer.swift in Sources */,
+				F58A65FE26B22CCB00D5713F /* Interpolatable.swift in Sources */,
+				F58A655C26B22CCB00D5713F /* FillRenderer.swift in Sources */,
+				F58A654A26B22CCB00D5713F /* LayerTransformNode.swift in Sources */,
+				F58A659E26B22CCB00D5713F /* Shape.swift in Sources */,
+				F58A656426B22CCB00D5713F /* PassThroughOutputNode.swift in Sources */,
+				F58A65E026B22CCB00D5713F /* Asset.swift in Sources */,
+				F58A651226B22CCB00D5713F /* LottieView.swift in Sources */,
+				F58A651626B22CCB00D5713F /* AnimatedControl.swift in Sources */,
+				F58A65B426B22CCB00D5713F /* SolidLayerModel.swift in Sources */,
+				F58A654626B22CCB00D5713F /* LayerFontProvider.swift in Sources */,
+				F58A65CC26B22CCB00D5713F /* KeyframeGroup.swift in Sources */,
+				F58A65A226B22CCB00D5713F /* ShapeTransform.swift in Sources */,
+				F58A651026B22CCB00D5713F /* AnimatedButton.swift in Sources */,
+				F58A655026B22CCB00D5713F /* LayerTextProvider.swift in Sources */,
+				F58A65C426B22CCB00D5713F /* Transform.swift in Sources */,
+				F58A64FC26B22CCB00D5713F /* AnimationViewInitializers.swift in Sources */,
+				F58A65EA26B22CCB00D5713F /* AnimationKeypathExtension.swift in Sources */,
+				F58A654226B22CCB00D5713F /* MaskContainerLayer.swift in Sources */,
+				F58A656026B22CCB00D5713F /* GroupOutputNode.swift in Sources */,
+				F58A656826B22CCB00D5713F /* PolygonNode.swift in Sources */,
+				F58A658E26B22CCB00D5713F /* ShapeRenderLayer.swift in Sources */,
+				F58A653A26B22CCB00D5713F /* SolidCompositionLayer.swift in Sources */,
+				F58A654426B22CCB00D5713F /* AnimationContainer.swift in Sources */,
+				F58A65F426B22CCB00D5713F /* ColorExtension.swift in Sources */,
+				F58A65BA26B22CCB00D5713F /* TextLayerModel.swift in Sources */,
+				F58A657626B22CCB00D5713F /* FillNode.swift in Sources */,
+				F58A652226B22CCB00D5713F /* AnimationTextProvider.swift in Sources */,
+				F58A656626B22CCB00D5713F /* EllipseNode.swift in Sources */,
+				F58A652426B22CCB00D5713F /* AnimationKeypath.swift in Sources */,
+				F58A65BE26B22CCB00D5713F /* ShapeLayerModel.swift in Sources */,
+				F58A65C626B22CCB00D5713F /* Mask.swift in Sources */,
+				F58A65D226B22CCB00D5713F /* TextDocument.swift in Sources */,
+				F58A65BC26B22CCB00D5713F /* PreCompLayerModel.swift in Sources */,
+				F58A655826B22CCB00D5713F /* GradientFillRenderer.swift in Sources */,
+				F58A659A26B22CCB00D5713F /* Trim.swift in Sources */,
+				F58A65F826B22CCB00D5713F /* CurveVertex.swift in Sources */,
+				F58A658A26B22CCB00D5713F /* GroupInterpolator.swift in Sources */,
+				F58A65B226B22CCB00D5713F /* Star.swift in Sources */,
+				F58A65D626B22CCB00D5713F /* TextAnimator.swift in Sources */,
+				F58A650426B22CCB00D5713F /* CompatibleAnimationKeypath.swift in Sources */,
+				F58A65F626B22CCB00D5713F /* PathElement.swift in Sources */,
+				F58A651826B22CCB00D5713F /* AnimationTime.swift in Sources */,
+				F58A658026B22CCB00D5713F /* NodePropertyMap.swift in Sources */,
+				F58A651426B22CCB00D5713F /* AnimationSubview.swift in Sources */,
+				F58A64FE26B22CCB00D5713F /* AnimationView.swift in Sources */,
+				F58A65DC26B22CCB00D5713F /* PrecompAsset.swift in Sources */,
+				F58A655A26B22CCB00D5713F /* GradientStrokeRenderer.swift in Sources */,
+				F58A65D426B22CCB00D5713F /* Glyph.swift in Sources */,
+				F58A65A026B22CCB00D5713F /* Group.swift in Sources */,
+				F58A656A26B22CCB00D5713F /* RectNode.swift in Sources */,
+				F58A65D026B22CCB00D5713F /* MTResultData.swift in Sources */,
+				F58A65E626B22CCB00D5713F /* AnimatorNodeDebugging.swift in Sources */,
+				F58A657226B22CCB00D5713F /* GradientFillNode.swift in Sources */,
+				F58A65C826B22CCB00D5713F /* Marker.swift in Sources */,
+				F58A65C226B22CCB00D5713F /* DashPattern.swift in Sources */,
+				F58A65AA26B22CCB00D5713F /* GradientFill.swift in Sources */,
+				F58A65B826B22CCB00D5713F /* ImageLayerModel.swift in Sources */,
+				F58A65CA26B22CCB00D5713F /* KeyedDecodingContainerExtensions.swift in Sources */,
+				F58A650A26B22CCB00D5713F /* AnimatedSwitch.swift in Sources */,
+				F58A652626B22CCB00D5713F /* AnyValueProvider.swift in Sources */,
+				F58A655426B22CCB00D5713F /* TrimPathNode.swift in Sources */,
+				F58A659426B22CCB00D5713F /* RenderNode.swift in Sources */,
+				F58A658C26B22CCB00D5713F /* ItemsExtension.swift in Sources */,
+				F58A657426B22CCB00D5713F /* StrokeNode.swift in Sources */,
+				F58A650E26B22CCB00D5713F /* UIColorExtension.swift in Sources */,
+				F58A654026B22CCB00D5713F /* ShapeCompositionLayer.swift in Sources */,
+				F58A656226B22CCB00D5713F /* PathOutputNode.swift in Sources */,
 				3320FF2B2682EB10001809AA /* ViewController.swift in Sources */,
+				F58A657A26B22CCB00D5713F /* ValueContainer.swift in Sources */,
+				F58A65D826B22CCB00D5713F /* Font.swift in Sources */,
+				F58A65A426B22CCB00D5713F /* Merge.swift in Sources */,
+				F58A65AC26B22CCB00D5713F /* GradientStroke.swift in Sources */,
+				F58A658426B22CCB00D5713F /* AnyValueContainer.swift in Sources */,
+				F58A651C26B22CCB00D5713F /* Color.swift in Sources */,
+				F58A657026B22CCB00D5713F /* TextAnimatorNode.swift in Sources */,
+				F58A65B026B22CCB00D5713F /* Rectangle.swift in Sources */,
+				F58A65DE26B22CCB00D5713F /* AssetLibrary.swift in Sources */,
+				F58A650026B22CCB00D5713F /* AnimationPublic.swift in Sources */,
+				F58A653626B22CCB00D5713F /* NullCompositionLayer.swift in Sources */,
+				F58A658226B22CCB00D5713F /* KeypathSearchable.swift in Sources */,
+				F58A65F026B22CCB00D5713F /* BezierPath.swift in Sources */,
+				F58A657C26B22CCB00D5713F /* NodeProperty.swift in Sources */,
+				F58A65AE26B22CCB00D5713F /* Stroke.swift in Sources */,
+				F58A65E426B22CCB00D5713F /* LayerDebugging.swift in Sources */,
+				F58A65A626B22CCB00D5713F /* FillI.swift in Sources */,
+				F58A660026B22CCB00D5713F /* KeyframeExtensions.swift in Sources */,
+				F58A650C26B22CCB00D5713F /* BundleImageProvider.swift in Sources */,
+				F58A65E826B22CCB00D5713F /* CGFloatExtensions.swift in Sources */,
+				F58A65E226B22CCB00D5713F /* MTSuccessData.swift in Sources */,
+				F58A650626B22CCB00D5713F /* CompatibleAnimationView.swift in Sources */,
+				F58A65FA26B22CCB00D5713F /* VectorsExtensions.swift in Sources */,
+				F58A657826B22CCB00D5713F /* GradientStrokeNode.swift in Sources */,
+				F58A652826B22CCB00D5713F /* ColorValueProvider.swift in Sources */,
+				F58A655226B22CCB00D5713F /* CompositionLayersInitializer.swift in Sources */,
+				F58A65CE26B22CCB00D5713F /* Keyframe.swift in Sources */,
+				F58A652026B22CCB00D5713F /* LRUAnimationCache.swift in Sources */,
+				F58A65C026B22CCB00D5713F /* Animation.swift in Sources */,
+				F58A654826B22CCB00D5713F /* TextLayer.swift in Sources */,
+				F58A659826B22CCB00D5713F /* Ellipse.swift in Sources */,
+				F58A659C26B22CCB00D5713F /* ShapeItem.swift in Sources */,
+				F58A655E26B22CCB00D5713F /* StrokeRenderer.swift in Sources */,
+				F58A658626B22CCB00D5713F /* KeyframeInterpolator.swift in Sources */,
 				3320FF272682EB10001809AA /* AppDelegate.swift in Sources */,
+				F58A65EC26B22CCB00D5713F /* StringExtensions.swift in Sources */,
+				F58A651A26B22CCB00D5713F /* Vectors.swift in Sources */,
+				F58A65B626B22CCB00D5713F /* LayerModel.swift in Sources */,
+				F58A653826B22CCB00D5713F /* TextCompositionLayer.swift in Sources */,
+				F58A651E26B22CCB00D5713F /* AnimationCacheProvider.swift in Sources */,
+				F58A652E26B22CCB00D5713F /* GradientValueProvider.swift in Sources */,
+				F58A652A26B22CCB00D5713F /* FloatValueProvider.swift in Sources */,
 				3320FF292682EB10001809AA /* SceneDelegate.swift in Sources */,
+				F58A65F226B22CCB00D5713F /* CompoundBezierPath.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
