@@ -465,6 +465,10 @@
 		F58A660D26B22EEC00D5713F /* home.json in Resources */ = {isa = PBXBuildFile; fileRef = F58A660A26B22EEC00D5713F /* home.json */; };
 		F58A660E26B22EEC00D5713F /* sample.json in Resources */ = {isa = PBXBuildFile; fileRef = F58A660B26B22EEC00D5713F /* sample.json */; };
 		F58A660F26B22EEC00D5713F /* sample.json in Resources */ = {isa = PBXBuildFile; fileRef = F58A660B26B22EEC00D5713F /* sample.json */; };
+		F594424426B41963006F4E8E /* spin_success_new.json in Resources */ = {isa = PBXBuildFile; fileRef = F594424226B41963006F4E8E /* spin_success_new.json */; };
+		F594424526B41963006F4E8E /* spin_success_new.json in Resources */ = {isa = PBXBuildFile; fileRef = F594424226B41963006F4E8E /* spin_success_new.json */; };
+		F594424626B41963006F4E8E /* sparkle.json in Resources */ = {isa = PBXBuildFile; fileRef = F594424326B41963006F4E8E /* sparkle.json */; };
+		F594424726B41963006F4E8E /* sparkle.json in Resources */ = {isa = PBXBuildFile; fileRef = F594424326B41963006F4E8E /* sparkle.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -803,6 +807,8 @@
 		F58A64F626B22CCB00D5713F /* AnimationContext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimationContext.swift; sourceTree = "<group>"; };
 		F58A660A26B22EEC00D5713F /* home.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = home.json; sourceTree = "<group>"; };
 		F58A660B26B22EEC00D5713F /* sample.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = sample.json; sourceTree = "<group>"; };
+		F594424226B41963006F4E8E /* spin_success_new.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = spin_success_new.json; sourceTree = "<group>"; };
+		F594424326B41963006F4E8E /* sparkle.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = sparkle.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -2215,6 +2221,8 @@
 		F58A660326B22E8F00D5713F /* JSON_Files */ = {
 			isa = PBXGroup;
 			children = (
+				F594424326B41963006F4E8E /* sparkle.json */,
+				F594424226B41963006F4E8E /* spin_success_new.json */,
 				F58A660A26B22EEC00D5713F /* home.json */,
 				F58A660B26B22EEC00D5713F /* sample.json */,
 			);
@@ -2351,10 +2359,12 @@
 				3320FFAB2682EBC4001809AA /* ExpireView.xib in Resources */,
 				33E158D126AA530D00B0615B /* OpenSans-SemiBold.ttf in Resources */,
 				3320FFD22682EBC4001809AA /* HistoryTableViewCell.xib in Resources */,
+				F594424426B41963006F4E8E /* spin_success_new.json in Resources */,
 				33F59CD3269330C0005B009A /* PredictMatchTableViewCell.xib in Resources */,
 				33E158BB26A9B00500B0615B /* SpinFailView.xib in Resources */,
 				33542A7F269CA912008CE8C2 /* Pagination.storyboard in Resources */,
 				337E17D6269DC60400C14135 /* ADCBGameListCollectionCell.xib in Resources */,
+				F594424626B41963006F4E8E /* sparkle.json in Resources */,
 				33FC319B2695B04300868D9E /* GameList.storyboard in Resources */,
 				33CD2198269AF4DD00CB71AC /* PredictSuccessView.xib in Resources */,
 				33542A67269CA76A008CE8C2 /* CompletedTableViewCell.xib in Resources */,
@@ -2389,7 +2399,9 @@
 				F58A64F826B22CCB00D5713F /* LICENSE in Resources */,
 				3320FF2E2682EB10001809AA /* Main.storyboard in Resources */,
 				F58A660F26B22EEC00D5713F /* sample.json in Resources */,
+				F594424526B41963006F4E8E /* spin_success_new.json in Resources */,
 				F58A64FA26B22CCB00D5713F /* README.md in Resources */,
+				F594424726B41963006F4E8E /* sparkle.json in Resources */,
 				33E158E426AA533000B0615B /* OpenSans-ExtraBoldItalic.ttf in Resources */,
 				33E158E926AA533000B0615B /* OpenSans-LightItalic.ttf in Resources */,
 			);

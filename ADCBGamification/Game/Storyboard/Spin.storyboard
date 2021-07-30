@@ -26,11 +26,11 @@
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7pc-Ro-PzS" customClass="AnimationView" customModule="ADCBGamification" customModuleProvider="target">
-                                <rect key="frame" x="43" y="149" width="330" height="299"/>
+                                <rect key="frame" x="43" y="149" width="330" height="320"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="330" id="Zli-hw-RCR"/>
-                                    <constraint firstAttribute="height" constant="299" id="gVG-3w-XZd"/>
+                                    <constraint firstAttribute="height" constant="320" id="gVG-3w-XZd"/>
                                 </constraints>
                             </view>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Clouds" translatesAutoresizingMaskIntoConstraints="NO" id="vJN-O7-seS">
