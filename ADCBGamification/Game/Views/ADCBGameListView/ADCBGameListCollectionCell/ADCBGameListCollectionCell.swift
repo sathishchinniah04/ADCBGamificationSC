@@ -41,7 +41,7 @@ class ADCBGameListCollectionCell: UICollectionViewCell {
         guard let game = game else { return }
         self.startTimer()
         if game.executionStatus?.lowercased() != GameStatus.Active.rawValue.lowercased() {
-          // disableCell()
+           disableCell()
         }
         setImage(game: game)
         setLabel(game: game)
