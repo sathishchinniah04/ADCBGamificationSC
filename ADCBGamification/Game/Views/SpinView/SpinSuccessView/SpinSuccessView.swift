@@ -41,18 +41,9 @@ class SpinSuccessView: UIView {
     func appearanceSetup() {
         
         containerView.addShadow(cornerRadius: 20, shadowRadius: 3, opacity: 0.5, color: UIColor.black)
-        let hover = CABasicAnimation(keyPath: "position")
-        hover.isAdditive = true
-        hover.fromValue = NSValue(cgPoint: CGPoint.zero)
-        hover.toValue = NSValue(cgPoint: CGPoint(x: 0.0, y: -20.0))
-        hover.autoreverses = true
-        hover.duration = 1.0
-        hover.speed = 1.5
-        hover.repeatCount = Float.infinity
-        imageView.layer.add(hover, forKey: "hoverAnimation")
-        
-        DispatchQueue.main.asyncAfter(deadline: .now() + 3.5) {
-            self.imageView.layer.removeAllAnimations()
+        bounceAnimation(imageView)
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+            self.handle?(.knowMoreTapped)
         }
     }
     

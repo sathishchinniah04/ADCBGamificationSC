@@ -1,16 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "SpinPointer@2x-1.png",
+      "filename" : "spinCenter@0.5x.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "SpinPointer@3x.png",
+      "filename" : "spinCenter@1.5x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
+      "filename" : "spinCenter@2x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

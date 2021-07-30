@@ -175,58 +175,106 @@ class SpinHomeController: UIViewController {
         let scaleY = spinDummyImgView.frame.size.height/v.frame.size.height
         spinDummyImgView.addSubview(v)
         spinDummyImgView.transform = CGAffineTransform(scaleX: scaleX, y: scaleY).translatedBy(x: -50, y: 0)
-        
-        wContaner.transform = CGAffineTransform(rotationAngle: 0.5)
+        // wContaner.transform = CGAffineTransform(rotationAngle: 0.5)
         rotate()
-        timer =  Timer.scheduledTimer(withTimeInterval: 15.0, repeats: true) { (timer) in
-            self.rotate()
+        timer =  Timer.scheduledTimer(withTimeInterval: 30.0, repeats: true) { (timer) in
+            // Need to call slow animations
         }
+    
     }
 
     // MARK : Animations
-   
+
     func rotate() {
         
         DispatchQueue.main.asyncAfter(deadline: .now()) {
             self.homeAnimationView?.stop()
-            UIView.animate(withDuration: 1.0, delay: 0.5, options: [], animations: { () -> Void in
+            UIView.animate(withDuration: 1.0, delay: 0.5, options: [.curveEaseInOut], animations: { () -> Void in
                 let rotate = CABasicAnimation(keyPath: "transform.rotation")
                 rotate.fromValue = 0
-                rotate.toValue = 5.5 * Double.random(in: 2..<6)
-                rotate.duration = 5.0
+                rotate.toValue = 1.1 * Float.pi * 2.0
+                rotate.duration = 3.0
                 rotate.fillMode = CAMediaTimingFillMode.forwards
                 rotate.isRemovedOnCompletion = false
                 self.wheelView?.layer.add(rotate, forKey: "transform.rotation")
             }) { _ in
-                UIView.animate(withDuration: 0.1) {
+                
+                UIView.animate(withDuration: 0.2, delay: 0.5, options: [.curveEaseInOut], animations: { () -> Void in
                     self.wheelView?.layer.removeAnimation(forKey: "rotationAnimation")
-                }
-                DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
+                })
+                
+                DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
                     self.homeAnimationView?.play()
                 }
                 
-                DispatchQueue.main.asyncAfter(deadline: .now() + 7) {
+                DispatchQueue.main.asyncAfter(deadline: .now() + 4) {
                     self.homeAnimationView?.stop()
-                    UIView.animate(withDuration: 1.0, delay: 0.5, options: [], animations: { () -> Void in
+                    UIView.animate(withDuration: 1.0, delay: 0.5, options: [.curveEaseInOut], animations: { () -> Void in
                         let rotate = CABasicAnimation(keyPath: "transform.rotation")
                         rotate.toValue = 0
-                        rotate.fromValue = 5.5 * Double.random(in: 2..<6)
-                        rotate.duration = 5.0
+                        rotate.fromValue = 0.9 * Float.pi * 2.0
+                        rotate.duration = 2.0
                         rotate.fillMode = CAMediaTimingFillMode.forwards
                         rotate.isRemovedOnCompletion = false
                         self.wheelView?.layer.add(rotate, forKey: "transform.rotation")
                     }) { _ in
-                        UIView.animate(withDuration: 0.5) {
+
+                        UIView.animate(withDuration: 0.2, delay: 0.5, options: [.curveEaseInOut], animations: { () -> Void in
                             self.wheelView?.layer.removeAnimation(forKey: "rotationAnimation")
-                        }
-                        DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
+                        })
+                        
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
                             self.homeAnimationView?.play()
                         }
+                        
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+                            self.homeAnimationView?.stop()
+                            self.slowClockRotateWheelAnimation()
+                        }
+                       
                     }
                 }
             }
-            
         }
+
+    }
+
+    
+    func slowClockRotateWheelAnimation() {
+
+        CATransaction.begin()
+        CATransaction.setCompletionBlock({
+            DispatchQueue.main.asyncAfter(deadline: .now() - 2) {
+                self.slowAnticlockRotateWheelAnimation()
+            }
+        })
+        
+        let rotate = CABasicAnimation(keyPath: "transform.rotation")
+        rotate.fromValue = 0
+        rotate.toValue = 1.1 * Float.pi * 1.0
+        rotate.duration = 20.0
+        rotate.isRemovedOnCompletion = false
+        //rotate.speed = 0.5
+        self.wheelView?.layer.add(rotate, forKey: "transform.rotation")
+        CATransaction.commit()
+    }
+    
+    func slowAnticlockRotateWheelAnimation() {
+
+        CATransaction.begin()
+        CATransaction.setCompletionBlock({
+            DispatchQueue.main.asyncAfter(deadline: .now()) {
+                self.slowClockRotateWheelAnimation()
+            }
+        })
+        
+        let rotate = CABasicAnimation(keyPath: "transform.rotation")
+        rotate.toValue = 0
+        rotate.fromValue = 1.1 * Float.pi * 1.0
+        rotate.duration = 10.0
+        rotate.isRemovedOnCompletion = false
+        self.wheelView?.layer.add(rotate, forKey: "transform.rotation")
+        CATransaction.commit()
     }
     
     

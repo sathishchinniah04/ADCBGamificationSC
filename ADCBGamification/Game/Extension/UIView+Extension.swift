@@ -15,10 +15,10 @@ extension UIView {
     @available(iOS 13.0, *)
     func blurrEffect(alfa: CGFloat = 1.0, blurEffect: UIBlurEffect = UIBlurEffect(style: UIBlurEffect.Style.systemUltraThinMaterial)) {
         var blurEffectView: UIVisualEffectView?
-            blurEffectView = UIVisualEffectView(effect: blurEffect)
+        blurEffectView = UIVisualEffectView(effect: blurEffect)
         blurEffectView?.alpha = alfa
         blurEffectView?.frame = self.bounds//UIScreen.main.bounds
-            blurEffectView?.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        blurEffectView?.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         if let effe = blurEffectView {
             self.insertSubview(effe, at: 0)
         }
@@ -27,15 +27,15 @@ extension UIView {
     func showAlert(target: UIViewController? = nil, singelBtn: Bool = true,ok: String = "Ok", cancel: String = "Cancel",title: String = "Alert",message: String, complition:((AlertAction)->Void)?) {
         DispatchQueue.main.async {
             
-        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: ok, style: .default, handler: { (action) in
-            complition?(.ok)
-        }))
-        if !singelBtn {
-            alert.addAction(UIAlertAction(title: cancel, style: .cancel, handler: { (action) in
-            complition?(.cancel)
+            let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: ok, style: .default, handler: { (action) in
+                complition?(.ok)
             }))
-        }
+            if !singelBtn {
+                alert.addAction(UIAlertAction(title: cancel, style: .cancel, handler: { (action) in
+                    complition?(.cancel)
+                }))
+            }
             let rootView = UIApplication.shared.windows.last?.rootViewController
             if let tar = target {
                 tar.present(alert, animated: true, completion: nil)
@@ -52,7 +52,7 @@ extension UIView {
         lightShadow1(lightSha: liSha, cornerRadius: cornerRadius, backColor: backColor!)
     }
     
-   private func lightShadow1(lightSha: CALayer, cornerRadius: CGFloat, backColor: UIColor) {
+    private func lightShadow1(lightSha: CALayer, cornerRadius: CGFloat, backColor: UIColor) {
         lightSha.frame = self.bounds
         let path = UIBezierPath(roundedRect: lightSha.bounds.insetBy(dx: 2, dy:2), cornerRadius:cornerRadius)
         let cutout = UIBezierPath(roundedRect: lightSha.bounds, cornerRadius:cornerRadius).reversing()
@@ -121,7 +121,7 @@ extension UIView {
     func addNeumorphicEffect(darkLayer: CALayer?, lightLayer: CALayer?, cornerRadius: CGFloat = 5, isPressed: Bool = true, backColor: UIColor? = UIColor.newmorphicColor()) {
         guard let darkLayer = darkLayer else { return  }
         guard let lightLayer = lightLayer else { return  }
-       
+        
         let darkShadowColor = UIColor.black.withAlphaComponent(1.0).cgColor
         let lightShadow1 = UIColor.white.cgColor
         self.layer.masksToBounds = false
@@ -151,10 +151,46 @@ extension UIView {
         self.layer.insertSublayer(lightLayer, at: 0)
     }
     func roundCorners(corners: UIRectCorner,bound:CGRect, radius: CGFloat) {
-            let path = UIBezierPath(roundedRect: bound, byRoundingCorners: corners, cornerRadii: CGSize(width: radius, height: radius))
-            let mask = CAShapeLayer()
-            mask.path = path.cgPath
-            layer.mask = mask
+        let path = UIBezierPath(roundedRect: bound, byRoundingCorners: corners, cornerRadii: CGSize(width: radius, height: radius))
+        let mask = CAShapeLayer()
+        mask.path = path.cgPath
+        layer.mask = mask
+    }
+    
+    func bounceAnimation(_ image: UIImageView) {
+        
+        UIView.animate(withDuration: 0.1, delay: 0, options: [.curveLinear], animations: {
+            image.frame.origin.y += 30
+        }) {_  in
+            
+            UIView.animateKeyframes(withDuration: 0.3, delay: 0.0, options: []) {
+                image.frame.origin.y -= 10
+            } completion: { _ in
+                UIView.animateKeyframes(withDuration: 0.3, delay: 0.0, options: []) {
+                    image.frame.origin.y += 10
+                } completion: { _ in
+                    UIView.animateKeyframes(withDuration: 0.2, delay: 0.0, options: []) {
+                        image.frame.origin.y -= 8
+                    } completion: { _ in
+                        UIView.animateKeyframes(withDuration: 0.1, delay: 0.0, options: []) {
+                            image.frame.origin.y += 8
+                        } completion: { _ in
+                            UIView.animateKeyframes(withDuration: 0.2, delay: 0.0, options: []) {
+                                image.frame.origin.y -= 2
+                            } completion: { _ in
+                                UIView.animateKeyframes(withDuration: 0.1, delay: 0.0, options: []) {
+                                    image.frame.origin.y += 2
+                                }
+                            }
+                        }
+                    }
+                    
+                }
+                
+            }
+            
         }
+        
+    }
     
 }

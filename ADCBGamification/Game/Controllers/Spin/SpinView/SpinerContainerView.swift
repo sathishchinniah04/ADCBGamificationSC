@@ -16,7 +16,7 @@ class SpinerContainerView: UIView {
     @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var mainContainerView: UIView!
     @IBOutlet weak var wheelContainerView: UIView!
-    @IBOutlet weak var spinCenterView: UIView!
+    //@IBOutlet weak var spinCenterView: UIView!
     @IBOutlet weak var spinNowButton: UIButton!
     
     var offer: [Offers]?
@@ -39,14 +39,17 @@ class SpinerContainerView: UIView {
     
     func addCenterViewRadius() {
         DispatchQueue.main.async {
+            
             self.spinNowButton.addCustomShadow(cornerRadius: 10, opacity: 0.4, color: UIColor.darkBlueColor(), offSet: CGSize(width: 4, height: 4))
-            self.spinCenterView.backgroundColor = UIColor.customYellowColor()
+            
+            /*self.spinCenterView.backgroundColor = UIColor.customYellowColor()
             self.spinCenterView.layer.cornerRadius = self.spinCenterView.frame.width/2
             self.spinCenterView.layer.borderWidth = 3
-            self.spinCenterView.layer.borderColor = UIColor.white.cgColor
+            self.spinCenterView.layer.borderColor = UIColor.white.cgColor*/
+            
             self.containerView.layer.cornerRadius  = self.containerView.frame.width/2
             self.containerView.layer.borderColor = UIColor.white.cgColor
-            self.containerView.layer.borderWidth = 3.0
+            self.containerView.layer.borderWidth = 8.0
         }
     }
     
@@ -110,6 +113,7 @@ class SpinerContainerView: UIView {
         self.fortuneWheel?.transform = CGAffineTransform(rotationAngle: -CGFloat(Double.pi/2))
         fortuneWheel?.frameStroke.width = 0
         fortuneWheel?.layer.borderWidth = 1.0
+        fortuneWheel?.shadow = nil
         fortuneWheel?.layer.cornerRadius = (fortuneWheel?.frame.height)!/2
         fortuneWheel?.equalSlices = true
         wheelContainerView.addSubview(fortuneWheel!)
