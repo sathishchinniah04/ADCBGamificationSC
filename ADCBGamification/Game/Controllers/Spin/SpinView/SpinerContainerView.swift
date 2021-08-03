@@ -65,7 +65,7 @@ class SpinerContainerView: UIView {
             self.wheelContainerView.transform = CGAffineTransform(rotationAngle: CGFloat(Double.pi))
         }
         if achivementId == "-1" {
-            self.startRotate(index: 1) { () -> Void? in
+            self.startRotate(index: 0) { () -> Void? in
                 complition?(false)
             }
             return
