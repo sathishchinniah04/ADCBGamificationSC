@@ -476,6 +476,8 @@
 		F594428F26B91B5C006F4E8E /* Tajawal-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F594428E26B91B5C006F4E8E /* Tajawal-Light.ttf */; };
 		F594429126B91B65006F4E8E /* Tajawal-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F594429026B91B65006F4E8E /* Tajawal-Medium.ttf */; };
 		F594429326B91B6D006F4E8E /* Tajawal-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F594429226B91B6D006F4E8E /* Tajawal-Regular.ttf */; };
+		F594429726B91C4D006F4E8E /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = F594429A26B91C4D006F4E8E /* Localizable.strings */; };
+		F594429826B91C4D006F4E8E /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = F594429A26B91C4D006F4E8E /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -823,6 +825,10 @@
 		F594428E26B91B5C006F4E8E /* Tajawal-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Tajawal-Light.ttf"; sourceTree = "<group>"; };
 		F594429026B91B65006F4E8E /* Tajawal-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Tajawal-Medium.ttf"; sourceTree = "<group>"; };
 		F594429226B91B6D006F4E8E /* Tajawal-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Tajawal-Regular.ttf"; sourceTree = "<group>"; };
+		F594429926B91C4D006F4E8E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		F594429B26B91C57006F4E8E /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Main.strings; sourceTree = "<group>"; };
+		F594429C26B91C58006F4E8E /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		F594429D26B91C58006F4E8E /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Localizable.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -847,6 +853,7 @@
 		3320FF022682EA9F001809AA = {
 			isa = PBXGroup;
 			children = (
+				F594429A26B91C4D006F4E8E /* Localizable.strings */,
 				3320FF0E2682EA9F001809AA /* ADCBGamification */,
 				3320FF252682EB10001809AA /* Test */,
 				3320FF0D2682EA9F001809AA /* Products */,
@@ -2330,6 +2337,7 @@
 			knownRegions = (
 				en,
 				Base,
+				ar,
 			);
 			mainGroup = 3320FF022682EA9F001809AA;
 			productRefGroup = 3320FF0D2682EA9F001809AA /* Products */;
@@ -2363,6 +2371,7 @@
 				F58A660C26B22EEC00D5713F /* home.json in Resources */,
 				33E158D026AA530D00B0615B /* OpenSans-BoldItalic.ttf in Resources */,
 				F594428F26B91B5C006F4E8E /* Tajawal-Light.ttf in Resources */,
+				F594429726B91C4D006F4E8E /* Localizable.strings in Resources */,
 				F58A64F926B22CCB00D5713F /* README.md in Resources */,
 				3320FFD32682EBC4001809AA /* NewReferTableViewCell.xib in Resources */,
 				33F59CDE26933283005B009A /* QuestionView.xib in Resources */,
@@ -2418,6 +2427,7 @@
 				33E158EB26AA533000B0615B /* OpenSans-Italic.ttf in Resources */,
 				33E158EC26AA533000B0615B /* OpenSans-Bold.ttf in Resources */,
 				33E158E526AA533000B0615B /* OpenSans-Regular.ttf in Resources */,
+				F594429826B91C4D006F4E8E /* Localizable.strings in Resources */,
 				33E158E726AA533000B0615B /* OpenSans-SemiBold.ttf in Resources */,
 				33E158E826AA533000B0615B /* OpenSans-ExtraBold.ttf in Resources */,
 				33E158EA26AA533000B0615B /* OpenSans-SemiBoldItalic.ttf in Resources */,
@@ -2860,6 +2870,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				3320FF2D2682EB10001809AA /* Base */,
+				F594429B26B91C57006F4E8E /* ar */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -2868,8 +2879,18 @@
 			isa = PBXVariantGroup;
 			children = (
 				3320FF322682EB13001809AA /* Base */,
+				F594429C26B91C58006F4E8E /* ar */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		F594429A26B91C4D006F4E8E /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F594429926B91C4D006F4E8E /* en */,
+				F594429D26B91C58006F4E8E /* ar */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -2880,6 +2901,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -2945,6 +2967,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
