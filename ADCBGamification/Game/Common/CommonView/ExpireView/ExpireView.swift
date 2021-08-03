@@ -95,8 +95,8 @@ class ExpireView: UIView {
     
     
     func labelSetup(game: Games) {
-        gameNameLabel.text = game.gameTitle
-        gameNameSubTitleLabel.text = game.gameType ?? ""
+        gameNameLabel.text = game.displayDetails?.name
+        gameNameSubTitleLabel.text = game.displayDetails?.synonym   //game.gameType
         descLabel.text = game.displayDetails?.description ?? ""
     }
     
@@ -112,19 +112,19 @@ class ExpireView: UIView {
         genericButton.alpha = 0.15
         genericButton.isUserInteractionEnabled = false
         let date = game.executionPeriod?.startDateTime ?? ""
-        hourMinteAlignmentCheck(date: date, value: "Available in")
+        hourMinteAlignmentCheck(date: date, value: "Available in".localized())
     }
     
     func onActive(game: Games) {
         genericButton.alpha = 1.0
         genericButton.isUserInteractionEnabled = true
         let date = game.executionPeriod?.endDateTime ?? ""
-        hourMinteAlignmentCheck(date: date, value: "Expires in")
+        hourMinteAlignmentCheck(date: date, value: "Expires in".localized())
     }
     
     func hourMinteAlignmentCheck(date: String, value: String) {
         DispatchQueue.main.async {
-            self.expireLabel.text = value + " \(Utility.secondsToHoursMinutesSeconds(seconds: Utility.convertStringIntoDate(date: date)).0)h  \(Utility.secondsToHoursMinutesSeconds(seconds: Utility.convertStringIntoDate(date: date)).1)min \(Utility.secondsToHoursMinutesSeconds(seconds: Utility.convertStringIntoDate(date: date)).2)sec"
+            self.expireLabel.text = value + " \(Utility.secondsToHoursMinutesSeconds(seconds: Utility.convertStringIntoDate(date: date)).0)" + "h".localized() + "\(Utility.secondsToHoursMinutesSeconds(seconds: Utility.convertStringIntoDate(date: date)).1)" + "min".localized() + "\(Utility.secondsToHoursMinutesSeconds(seconds: Utility.convertStringIntoDate(date: date)).2)sec"
         }
     }
     

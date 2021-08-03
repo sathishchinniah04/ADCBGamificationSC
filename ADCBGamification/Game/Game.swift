@@ -17,6 +17,10 @@ public enum GameAction {
     case spinReward
 }
 
+public enum GameLanguage {
+    case EN, AR
+}
+
 public class Game {
     
     private static var controllerRef: UIViewController?

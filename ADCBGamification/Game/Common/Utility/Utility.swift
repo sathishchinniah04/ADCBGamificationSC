@@ -8,6 +8,9 @@
 import UIKit
 
 class Utility {
+    
+    private static let APPLE_LANGUAGE_KEY = "AppleLanguages1"
+
     static func getRandonNo() -> String {
         return String("\(UUID())")
     }
@@ -34,6 +37,10 @@ class Utility {
         }
     }
     
+    static func isRTL() -> Bool {
+        //let lang = UserDefaults.standard.value(forKey: APPLE_LANGUAGE_KEY) as? String ?? "ar"
+        return StoreManager.shared.language == "en" ? false : true
+    }
     
     static func showAlert(target: UIViewController? = nil, singelBtn: Bool = true,ok: String = "Ok", cancel: String = "Cancel",title: String = "Alert",message: String, complition:((AlertAction)->Void)?) {
         DispatchQueue.main.async {

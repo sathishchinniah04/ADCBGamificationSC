@@ -477,7 +477,6 @@
 		F594429126B91B65006F4E8E /* Tajawal-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F594429026B91B65006F4E8E /* Tajawal-Medium.ttf */; };
 		F594429326B91B6D006F4E8E /* Tajawal-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F594429226B91B6D006F4E8E /* Tajawal-Regular.ttf */; };
 		F594429726B91C4D006F4E8E /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = F594429A26B91C4D006F4E8E /* Localizable.strings */; };
-		F594429826B91C4D006F4E8E /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = F594429A26B91C4D006F4E8E /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -2427,7 +2426,6 @@
 				33E158EB26AA533000B0615B /* OpenSans-Italic.ttf in Resources */,
 				33E158EC26AA533000B0615B /* OpenSans-Bold.ttf in Resources */,
 				33E158E526AA533000B0615B /* OpenSans-Regular.ttf in Resources */,
-				F594429826B91C4D006F4E8E /* Localizable.strings in Resources */,
 				33E158E726AA533000B0615B /* OpenSans-SemiBold.ttf in Resources */,
 				33E158E826AA533000B0615B /* OpenSans-ExtraBold.ttf in Resources */,
 				33E158EA26AA533000B0615B /* OpenSans-SemiBoldItalic.ttf in Resources */,

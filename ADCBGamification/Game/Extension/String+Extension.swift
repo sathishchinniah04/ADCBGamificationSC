@@ -21,11 +21,12 @@ extension String {
     var isNumeric: Bool {
          return !(self.isEmpty) && self.allSatisfy { $0.isNumber }
     }
-    
-    func localized() -> String{
-        
-        let path = Bundle.main.path(forResource: StoreManager.shared.language, ofType: "lproj")
+
+    func localized() ->String {
+
+        let path = Bundle(for: Game.self).path(forResource:  StoreManager.shared.language.lowercased(), ofType: "lproj")
         let bundle = Bundle(path: path!)
-        return NSLocalizedString(self, tableName: nil, bundle: bundle!,      value: "", comment: "")
+        return NSLocalizedString(self, tableName: nil, bundle: bundle!, value: "", comment: "")
     }
+    
 }

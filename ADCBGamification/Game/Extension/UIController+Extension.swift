@@ -29,6 +29,15 @@ extension UIViewController{
             }
             return base
         }
+    
+    func checkLeftToRight() {
+        let sementicAttribute: UISemanticContentAttribute = (StoreManager.shared.language.lowercased() == "en") ? .forceLeftToRight : .forceRightToLeft
+            self.navigationController?.navigationBar.semanticContentAttribute = sementicAttribute
+            self.navigationController?.view.semanticContentAttribute = sementicAttribute
+            UIView.userInterfaceLayoutDirection(for: sementicAttribute)
+            UIView.appearance().semanticContentAttribute = sementicAttribute
+            
+        }
 
 }
 extension UINavigationController {

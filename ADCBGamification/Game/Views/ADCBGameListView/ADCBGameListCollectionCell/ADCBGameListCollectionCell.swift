@@ -109,7 +109,7 @@ class ADCBGameListCollectionCell: UICollectionViewCell {
     
     
     func setLabel(game: Games) {
-        self.gameLabel.text = game.gameTitle
+        self.gameLabel.text = game.displayDetails?.name
         //        CustomTimer.shared.startTimer {
         //            self.checkGameStatus(game: game)
         //        }
@@ -127,7 +127,7 @@ class ADCBGameListCollectionCell: UICollectionViewCell {
     func onLock(game: Games) {
         
         let date = game.executionPeriod?.startDateTime ?? ""
-        expireInLabel.text = "Available in"
+        expireInLabel.text = "Available in".localized()
         let numberOfDays = Calendar.current.dateComponents([.day], from: Date(), to: Utility.convertStringToDate(date: date)).day ?? 0
         hourMinteAlignmentCheck(date: date, value: numberOfDays)
     }
@@ -135,7 +135,7 @@ class ADCBGameListCollectionCell: UICollectionViewCell {
     func onActive(game: Games) {
         
         let date = game.executionPeriod?.endDateTime ?? ""
-        expireInLabel.text = "Expire in"
+        expireInLabel.text = "Expire in".localized()
         let numberOfDays = Calendar.current.dateComponents([.day], from: Date(), to: Utility.convertStringToDate(date: date)).day ?? 0
         hourMinteAlignmentCheck(date: date, value: numberOfDays)
     }
@@ -154,7 +154,7 @@ class ADCBGameListCollectionCell: UICollectionViewCell {
                 daysCount = "\(value)" + "day"
             }
             
-            self.timeLabel.text = daysCount + " \(Utility.secondsToHoursMinutesSeconds(seconds: Utility.convertStringIntoDate(date: date)).0)hr  \(Utility.secondsToHoursMinutesSeconds(seconds: Utility.convertStringIntoDate(date: date)).1)min"
+            self.timeLabel.text = daysCount + " \(Utility.secondsToHoursMinutesSeconds(seconds: Utility.convertStringIntoDate(date: date)).0)" + "hr".localized() + "\(Utility.secondsToHoursMinutesSeconds(seconds: Utility.convertStringIntoDate(date: date)).1)" + "min".localized()
         }
         //\(Utility.secondsToHoursMinutesSeconds(seconds: Utility.convertStringIntoDate(date: date)).2)sec"
     }

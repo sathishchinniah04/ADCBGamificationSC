@@ -202,16 +202,17 @@ Enjoy 10% off at Starbucks!</string>
                                             <rect key="frame" x="0.0" y="52.5" width="314" height="28.5"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wBQ-IV-oOm">
-                                                    <rect key="frame" x="122.5" y="0.0" width="69" height="28.5"/>
+                                                    <rect key="frame" x="123" y="0.0" width="68" height="28.5"/>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <state key="normal">
                                                         <attributedString key="attributedTitle">
                                                             <fragment content="Spin Again">
                                                                 <attributes>
-                                                                    <color key="NSColor" red="0.1333333333" green="0.12941176469999999" blue="0.39607843139999999" alpha="1" colorSpace="calibratedRGB"/>
-                                                                    <font key="NSFont" metaFont="system" size="14"/>
-                                                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                    <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                                    <font key="NSFont" size="14" name="HelveticaNeue"/>
+                                                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
                                                                     <integer key="NSUnderline" value="1"/>
+                                                                    <color key="NSUnderlineColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                                                 </attributes>
                                                             </fragment>
                                                         </attributedString>
@@ -256,11 +257,15 @@ Enjoy 10% off at Starbucks!</string>
             <connections>
                 <outlet property="containerView" destination="IAH-G8-iQf" id="Hwi-t3-BVb"/>
                 <outlet property="descLabel" destination="Cv6-6m-HDP" id="qYh-Vf-Jlq"/>
+                <outlet property="goToLabel" destination="HUj-tb-PpK" id="5HJ-ec-toY"/>
                 <outlet property="homePageButton" destination="eQC-VT-XrO" id="BLo-XF-IEx"/>
                 <outlet property="imageView" destination="oDq-NS-RoN" id="jSV-AO-EZi"/>
                 <outlet property="knowMoreButton" destination="g9m-97-Rjs" id="jaj-5F-uJ1"/>
                 <outlet property="rewardButton" destination="MTc-43-SJc" id="Orn-Hi-Kqe"/>
                 <outlet property="spinAgainButton" destination="wBQ-IV-oOm" id="MEd-hS-cQs"/>
+                <outlet property="subTitleLabel" destination="zXg-79-lQE" id="92k-JP-rc1"/>
+                <outlet property="titleHeaderLabel" destination="0yI-gn-b2y" id="cZI-ks-QGe"/>
+                <outlet property="titleLable" destination="D7d-3h-9d3" id="vw5-ty-7rN"/>
             </connections>
             <point key="canvasLocation" x="-186.95652173913044" y="66.964285714285708"/>
         </view>

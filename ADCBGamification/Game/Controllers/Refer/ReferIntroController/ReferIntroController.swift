@@ -37,7 +37,7 @@ class ReferIntroController: UIViewController {
        // (con as? CustomNavViewController)?.hideBackButton(isHide: false)
     }
     func initialSetup() {
-        expireView.setupButtonName(name: "Refer")
+        expireView.setupButtonName(name: "Refer".localized())
         expireView.isUserInteractionEnabled = false
         expireView.alpha = 0.0
         if let gam = game {
@@ -68,7 +68,7 @@ class ReferIntroController: UIViewController {
     
     func expireViewSetup() {
         
-        expireView.setupButtonName(name: "Predict Now")
+        expireView.setupButtonName(name: "Predict Now".localized())
         expireView.populateView(isShowTerms: false, game: self.game) {
           self.nextController()
         }

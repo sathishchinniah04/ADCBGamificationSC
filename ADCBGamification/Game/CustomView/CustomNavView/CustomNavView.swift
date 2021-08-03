@@ -44,7 +44,14 @@ enum CustomNavViewAction {
         view?.frame = self.bounds
         view?.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         self.addSubview(view!)
+        titleLabel.text = "simply".localized()
+        subTitleLabel.text = "life".localized()
         
+        if StoreManager.shared.language == "AR" {
+            backButton.setImage(UIImage(named: "forward", in: Bundle(for: CustomNavView.self), compatibleWith: nil), for: .normal)
+        } else {
+            backButton.setImage(UIImage(named: "back", in: Bundle(for: CustomNavView.self), compatibleWith: nil), for: .normal)
+        }
     }
     
     func hideBackButton(isHide: Bool) {

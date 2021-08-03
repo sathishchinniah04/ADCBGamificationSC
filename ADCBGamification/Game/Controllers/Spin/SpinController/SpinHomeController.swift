@@ -106,7 +106,7 @@ class SpinHomeController: UIViewController {
     
     func expireViewInitialSetup() {
         self.expireView.alpha = 0.0
-        expireView.setupButtonName(name: "Spin")
+        expireView.setupButtonName(name: "Spin".localized())
         expireView.isUserInteractionEnabled = false
         
     }
@@ -117,7 +117,7 @@ class SpinHomeController: UIViewController {
         expireView.populateView(isShowTerms: false, game: self.game) {
             self.spinNowTapped = true
             self.homeAnimationStaticView.isHidden = true
-            (self.con as? CustomNavViewController)?.changeOnlyTitle(title: "Spin & Win")
+            (self.con as? CustomNavViewController)?.changeOnlyTitle(title: "Spin & Win".localized())
             self.scaleToOrginalSize()
             self.spinerView.startRotate()
             self.assignRewards()

@@ -14,6 +14,11 @@ enum SpinSuccessViewAction {
 }
 
 class SpinSuccessView: UIView {
+    
+    @IBOutlet weak var titleHeaderLabel: UILabel!
+    @IBOutlet weak var subTitleLabel: UILabel!
+    @IBOutlet weak var titleLable: UILabel!
+    @IBOutlet weak var goToLabel: UILabel!
     @IBOutlet weak var rewardButton: UIButton!
     @IBOutlet weak var knowMoreButton: UIButton!
     @IBOutlet weak var homePageButton: UIButton!
@@ -35,6 +40,34 @@ class SpinSuccessView: UIView {
     }
     
     func setupLabel(info: SpinAssignReward?) {
+        
+        self.titleLable.text = "Hurray!".localized()
+        self.goToLabel.text = "Go To".localized()
+        self.titleHeaderLabel.text = "simply".localized()
+        self.subTitleLabel.text = "life".localized()
+        
+        if let rewardsAttributedTitle = self.rewardButton.attributedTitle(for: .normal) {
+            let mutableAttributedTitle = NSMutableAttributedString(attributedString: rewardsAttributedTitle)
+            mutableAttributedTitle.replaceCharacters(in: NSMakeRange(0, mutableAttributedTitle.length), with: "Rewards".localized())
+            self.rewardButton.setAttributedTitle(mutableAttributedTitle, for: .normal)
+        }
+        
+        if let homeAttributedTitle = self.rewardButton.attributedTitle(for: .normal) {
+            let mutableAttributedTitle = NSMutableAttributedString(attributedString: homeAttributedTitle)
+            mutableAttributedTitle.replaceCharacters(in: NSMakeRange(0, mutableAttributedTitle.length), with: "Homepage".localized())
+            self.homePageButton.setAttributedTitle(mutableAttributedTitle, for: .normal)
+        }
+        
+        if let spinAttributedTitle = self.rewardButton.attributedTitle(for: .normal) {
+            let mutableAttributedTitle = NSMutableAttributedString(attributedString: spinAttributedTitle)
+            mutableAttributedTitle.replaceCharacters(in: NSMakeRange(0, mutableAttributedTitle.length), with: "Spin Again".localized())
+            self.spinAgainButton.setAttributedTitle(mutableAttributedTitle, for: .normal)
+        }
+        
+        //self.rewardButton.setTitle("Rewards".localized(), for: .normal)
+        //self.homePageButton.setTitle("Homepage".localized(), for: .normal)
+        self.spinAgainButton.setTitle("Spin Again".localized(), for: .normal)
+        
         self.descLabel.text = info?.responseObject?.first?.displayDetails?.first?.name ?? ""
     }
     

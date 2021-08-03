@@ -32,17 +32,17 @@ class CustomNavViewController: UINavigationController {
     }
     
     func changeTitle(title: String?) {
-        nav.titleLabel.text = title ?? "simply"
+        nav.titleLabel.text = title?.localized() ?? "simply".localized()
     }
     
     func changeTitleAndSubTitle(title: String?, subTitle: String?) {
-        nav.titleLabel.text = title ?? "simply"
-        nav.subTitleLabel.text = subTitle ?? "life"
+        nav.titleLabel.text = title?.localized() ?? "simply".localized()
+        nav.subTitleLabel.text = subTitle?.localized() ?? "life".localized()
         nav.subTitleLabel.isHidden = false
     }
     
     func changeOnlyTitle(title: String?) {
-        nav.titleLabel.text = title ?? "simply"
+        nav.titleLabel.text = title?.localized() ?? "simply".localized()
         nav.subTitleLabel.isHidden = true
     }
     

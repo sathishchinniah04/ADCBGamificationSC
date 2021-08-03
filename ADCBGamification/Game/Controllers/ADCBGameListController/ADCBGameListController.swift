@@ -19,6 +19,7 @@ class ADCBGameListController: UIViewController {
         getResponce()
         navigationViewCornerRadius()
         playerGameHandler()
+        //checkLeftToRight()
     }
     
     func navigationViewCornerRadius() {
@@ -50,7 +51,7 @@ class ADCBGameListController: UIViewController {
         print("viewWillAppear")
         let con = self.navigationController
         
-        (con as? CustomNavViewController)?.changeOnlyTitle(title: "Games")
+        (con as? CustomNavViewController)?.changeOnlyTitle(title: "Games".localized())
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -143,7 +144,7 @@ func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath:
 
                 let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "ListGameCollectionHeaderView", for: indexPath) as! ListGameCollectionHeaderView
                 headerView.backgroundColor = .clear
-                headerView.populateView(title: "Enjoy the games and earn more rewards. We wish you goodluck!")
+                headerView.populateView(title: "Enjoy the games and earn more rewards. We wish you goodluck!".localized())
                 return headerView
 
             case UICollectionView.elementKindSectionFooter:

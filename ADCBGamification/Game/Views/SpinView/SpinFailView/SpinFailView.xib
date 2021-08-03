@@ -245,7 +245,13 @@
             </constraints>
             <connections>
                 <outlet property="containerView" destination="DVy-v3-TUb" id="45q-yu-I50"/>
+                <outlet property="goToLabel" destination="Y86-5E-lxT" id="s7i-Dg-cxZ"/>
+                <outlet property="homePageButton" destination="xUq-On-su3" id="ww5-Ds-eHj"/>
                 <outlet property="imageView" destination="NO2-F8-Ffb" id="Tpd-vO-MEX"/>
+                <outlet property="messageLabel" destination="70g-FE-qZ0" id="Aox-pl-00G"/>
+                <outlet property="subTitleLabel" destination="IZP-xT-yy6" id="nvH-cB-0yK"/>
+                <outlet property="titleHeaderLabel" destination="ROz-wn-Osz" id="aBp-BA-X1z"/>
+                <outlet property="titleLable" destination="VQf-GG-gVq" id="dez-86-IWW"/>
             </connections>
             <point key="canvasLocation" x="395.6521739130435" y="5.3571428571428568"/>
         </view>
