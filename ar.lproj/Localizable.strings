@@ -28,3 +28,9 @@
 "min" = "دقيقة";
 "sec" = "ثانية";
 "hr" = "ساعة";
+"Choose Contact" = "اختر جهة اتصال";
+"Enter a contact name or mobile number" = "أدخل اسم جهة الاتصال أو رقم الهاتف المحمول";
+"Invite" = "يدعو";
+"Select the contact to Invite" = "حدد جهة الاتصال لدعوتها";
+"or" = "أو";
+"Share Your Referral Code" = "شارك رمز الإحالة الخاص بك";

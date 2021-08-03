@@ -71,7 +71,7 @@ class ReferViewModel {
         }
     }
     
-    static func checkSimpleLifeUser(number: String , complition:((String, Error)->Void)?) {
+    static func checkSimpleLifeUser(number: String , complition:((String)->Void)?) {
         
         let service = "getCustomerProfile"
         
@@ -91,12 +91,10 @@ class ReferViewModel {
         NetworkManager.getRequest(struct: SimpleLifeUser.self, url: urlStr) { (data, error) in
             
             print("Error is \(String(describing: error))")
-            
-            if let dat = data {
-                print("data is \(dat)")
-                complition?("", error as! Error)
+            if error == nil {
+                complition?("")
             } else {
-                complition?("", error as! Error)
+                complition?("")
             }
         }
 

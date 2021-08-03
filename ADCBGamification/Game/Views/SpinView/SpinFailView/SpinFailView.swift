@@ -27,6 +27,7 @@ class SpinFailView: UIView {
     func populateView(action:((SpinFailViewAction)->Void)?) {
         self.handle = action
         appearanceSetup()
+        checkLeftToRight()
     }
     
     func appearanceSetup() {

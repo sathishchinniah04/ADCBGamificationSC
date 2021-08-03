@@ -19,7 +19,7 @@ class ADCBGameListController: UIViewController {
         getResponce()
         navigationViewCornerRadius()
         playerGameHandler()
-        //checkLeftToRight()
+        checkLeftToRight()
     }
     
     func navigationViewCornerRadius() {

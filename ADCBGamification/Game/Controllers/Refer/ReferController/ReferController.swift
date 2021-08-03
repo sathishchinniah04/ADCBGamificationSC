@@ -9,6 +9,8 @@ import UIKit
 
 class ReferController: UIViewController {
     
+    @IBOutlet weak var orLabel: UILabel!
+    @IBOutlet weak var shareReferalLabel: UILabel!
     @IBOutlet weak var referCodeView: UIView!
     @IBOutlet weak var referCodeLabel: UILabel!
     @IBOutlet weak var shareButton: NeumorphicButton!
@@ -24,13 +26,18 @@ class ReferController: UIViewController {
         chooseContactButton.alpha = 0.3
         chooseContactButton.isUserInteractionEnabled = false
         getReferCode()
+        checkLeftToRight()
         buttonUserInteraction(enable: false)
         self.chooseContactButton.buttonState(isPressed: true)
-        self.chooseContactButton.setButtonTitle(title: "Choose Contact",titleColor: TTUtils.uiColor(from: 0x222165))
+        self.chooseContactButton.setButtonTitle(title: "Choose Contact".localized(),titleColor: TTUtils.uiColor(from: 0x222165))
         self.chooseContactButton.populateView { (done) in
-            self.chooseContactButton.setButtonTitle(title: "Choose Contact",titleColor: TTUtils.uiColor(from: 0x222165))
+            self.chooseContactButton.setButtonTitle(title: "Choose Contact".localized(),titleColor: TTUtils.uiColor(from: 0x222165))
             self.openContactList()
         }
+        
+        orLabel.text = "or".localized()
+        shareReferalLabel.text = "Share Your Referral Code".localized()
+        
     }
     
     func buttonUserInteraction(enable: Bool) {

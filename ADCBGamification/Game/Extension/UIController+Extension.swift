@@ -40,6 +40,16 @@ extension UIViewController{
         }
 
 }
+
+extension UIView {
+    func checkLeftToRight() {
+        let sementicAttribute: UISemanticContentAttribute = (StoreManager.shared.language.lowercased() == "en") ? .forceLeftToRight : .forceRightToLeft
+            UIView.userInterfaceLayoutDirection(for: sementicAttribute)
+            UIView.appearance().semanticContentAttribute = sementicAttribute
+            
+        }
+}
+
 extension UINavigationController {
     func getTopController1(base: UIViewController? = UIApplication.shared.keyWindow?.rootViewController) -> UIViewController? {
             if let nav = base as? UINavigationController {

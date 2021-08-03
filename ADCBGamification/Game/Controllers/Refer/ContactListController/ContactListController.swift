@@ -18,6 +18,7 @@ class ContactListController: UIViewController {
     //@IBOutlet weak var simplylifeUserLabel: UILabel!
     @IBOutlet weak var tableViewHeightConstraint: NSLayoutConstraint!
     @IBOutlet weak var activityIndicatorView: UIActivityIndicatorView!
+    @IBOutlet weak var shareContactLbl: UILabel!
     
     var referSuccessViewHelper = ReferSuccessViewHelper()
     var handle: ((_ name: String,_ ph: String)->Void)?
@@ -40,9 +41,11 @@ class ContactListController: UIViewController {
         }
         //simplylifeUserLabel.isHidden = true
         //neumorphicEffect()
-        
+        checkLeftToRight()
         delete()
         chooseContactButton.textField.keyboardType = .phonePad
+        shareContactLbl.text = "Select the contact to Invite".localized()
+        self.chooseContactButton.placeHolder = "Enter a contact name or mobile number".localized()
     }
     
     func delete() {
@@ -141,7 +144,7 @@ class ContactListController: UIViewController {
             self.chooseContactButton.titleLabel.alpha = 1.0
             self.chooseContactButton.titleLabel.isHidden = false
             if text.isEmpty {
-                self.chooseContactButton.placeHolder = "Enter a contact name or mobile number"
+                self.chooseContactButton.placeHolder = "Enter a contact name or mobile number".localized()
                 self.chooseContactButton.titleLabel.alpha = 0.0
                 self.inviteButton.alpha = 1.0
             }
@@ -193,7 +196,7 @@ class ContactListController: UIViewController {
         let contact = self.newList[indexPath.row]
         self.inviteButton.alpha = 0.0
         
-        ReferViewModel.checkSimpleLifeUser(number: contact.telephone) { message, err  in
+        ReferViewModel.checkSimpleLifeUser(number: contact.telephone) { message  in
             self.activityIndicatorView.stopAnimating()
             if !message.isEmpty {
                 self.errorMsg = "Sorry, this contact is already a Simplylife user"
@@ -217,7 +220,7 @@ class ContactListController: UIViewController {
     
     func inviteButtonAppearance() {
         self.inviteButton.button.titleLabel?.font = UIFont.systemFont(ofSize: 16, weight: .semibold)
-        self.inviteButton.setButtonTitle(title: "Invite", titleColor: UIColor.darkBlueColor())
+        self.inviteButton.setButtonTitle(title: "Invite".localized(), titleColor: UIColor.darkBlueColor())
     }
 }
 extension ContactListController: UITableViewDelegate, UITableViewDataSource {

@@ -41,6 +41,7 @@ class SpinHomeController: UIViewController {
             updateOnResponce(game: gam, error: nil)
         }
         activityIndicatorView.startAnimating()
+        checkLeftToRight()
     }
 
     override func viewWillAppear(_ animated: Bool) {

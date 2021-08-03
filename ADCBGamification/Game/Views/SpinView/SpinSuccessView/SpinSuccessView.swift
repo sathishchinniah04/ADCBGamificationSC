@@ -37,6 +37,7 @@ class SpinSuccessView: UIView {
         self.handle = action
         appearanceSetup()
         setupLabel(info: info)
+        checkLeftToRight()
     }
     
     func setupLabel(info: SpinAssignReward?) {
