@@ -469,6 +469,13 @@
 		F594424526B41963006F4E8E /* spin_success_new.json in Resources */ = {isa = PBXBuildFile; fileRef = F594424226B41963006F4E8E /* spin_success_new.json */; };
 		F594424626B41963006F4E8E /* sparkle.json in Resources */ = {isa = PBXBuildFile; fileRef = F594424326B41963006F4E8E /* sparkle.json */; };
 		F594424726B41963006F4E8E /* sparkle.json in Resources */ = {isa = PBXBuildFile; fileRef = F594424326B41963006F4E8E /* sparkle.json */; };
+		F594428726B91B3F006F4E8E /* Tajawal-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F594428626B91B3F006F4E8E /* Tajawal-Black.ttf */; };
+		F594428926B91B46006F4E8E /* Tajawal-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F594428826B91B46006F4E8E /* Tajawal-Bold.ttf */; };
+		F594428B26B91B4E006F4E8E /* Tajawal-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F594428A26B91B4E006F4E8E /* Tajawal-ExtraBold.ttf */; };
+		F594428D26B91B55006F4E8E /* Tajawal-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F594428C26B91B55006F4E8E /* Tajawal-ExtraLight.ttf */; };
+		F594428F26B91B5C006F4E8E /* Tajawal-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F594428E26B91B5C006F4E8E /* Tajawal-Light.ttf */; };
+		F594429126B91B65006F4E8E /* Tajawal-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F594429026B91B65006F4E8E /* Tajawal-Medium.ttf */; };
+		F594429326B91B6D006F4E8E /* Tajawal-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F594429226B91B6D006F4E8E /* Tajawal-Regular.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -809,6 +816,13 @@
 		F58A660B26B22EEC00D5713F /* sample.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = sample.json; sourceTree = "<group>"; };
 		F594424226B41963006F4E8E /* spin_success_new.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = spin_success_new.json; sourceTree = "<group>"; };
 		F594424326B41963006F4E8E /* sparkle.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = sparkle.json; sourceTree = "<group>"; };
+		F594428626B91B3F006F4E8E /* Tajawal-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Tajawal-Black.ttf"; sourceTree = "<group>"; };
+		F594428826B91B46006F4E8E /* Tajawal-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Tajawal-Bold.ttf"; sourceTree = "<group>"; };
+		F594428A26B91B4E006F4E8E /* Tajawal-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Tajawal-ExtraBold.ttf"; sourceTree = "<group>"; };
+		F594428C26B91B55006F4E8E /* Tajawal-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Tajawal-ExtraLight.ttf"; sourceTree = "<group>"; };
+		F594428E26B91B5C006F4E8E /* Tajawal-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Tajawal-Light.ttf"; sourceTree = "<group>"; };
+		F594429026B91B65006F4E8E /* Tajawal-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Tajawal-Medium.ttf"; sourceTree = "<group>"; };
+		F594429226B91B6D006F4E8E /* Tajawal-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Tajawal-Regular.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1428,6 +1442,13 @@
 		33E158C226AA52F800B0615B /* Font */ = {
 			isa = PBXGroup;
 			children = (
+				F594428626B91B3F006F4E8E /* Tajawal-Black.ttf */,
+				F594428826B91B46006F4E8E /* Tajawal-Bold.ttf */,
+				F594428A26B91B4E006F4E8E /* Tajawal-ExtraBold.ttf */,
+				F594428C26B91B55006F4E8E /* Tajawal-ExtraLight.ttf */,
+				F594428E26B91B5C006F4E8E /* Tajawal-Light.ttf */,
+				F594429026B91B65006F4E8E /* Tajawal-Medium.ttf */,
+				F594429226B91B6D006F4E8E /* Tajawal-Regular.ttf */,
 				33E158C326AA530A00B0615B /* OpenSans-Bold.ttf */,
 				33E158C626AA530B00B0615B /* OpenSans-BoldItalic.ttf */,
 				33E158C526AA530B00B0615B /* OpenSans-ExtraBold.ttf */,
@@ -2328,6 +2349,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				33E158D326AA530D00B0615B /* OpenSans-Light.ttf in Resources */,
+				F594428B26B91B4E006F4E8E /* Tajawal-ExtraBold.ttf in Resources */,
 				33542A7A269CA853008CE8C2 /* PageCollectionCell.xib in Resources */,
 				33E158D626AA530D00B0615B /* OpenSans-LightItalic.ttf in Resources */,
 				33E158CE26AA530D00B0615B /* OpenSans-ExtraBoldItalic.ttf in Resources */,
@@ -2340,15 +2362,19 @@
 				F58A660E26B22EEC00D5713F /* sample.json in Resources */,
 				F58A660C26B22EEC00D5713F /* home.json in Resources */,
 				33E158D026AA530D00B0615B /* OpenSans-BoldItalic.ttf in Resources */,
+				F594428F26B91B5C006F4E8E /* Tajawal-Light.ttf in Resources */,
 				F58A64F926B22CCB00D5713F /* README.md in Resources */,
 				3320FFD32682EBC4001809AA /* NewReferTableViewCell.xib in Resources */,
 				33F59CDE26933283005B009A /* QuestionView.xib in Resources */,
 				33FC31C62697129B00868D9E /* SpinSuccessView.xib in Resources */,
+				F594428D26B91B55006F4E8E /* Tajawal-ExtraLight.ttf in Resources */,
 				33E158CF26AA530D00B0615B /* OpenSans-ExtraBold.ttf in Resources */,
 				3320FFA82682EBC4001809AA /* TermsView.xib in Resources */,
+				F594428726B91B3F006F4E8E /* Tajawal-Black.ttf in Resources */,
 				3357ED8C2693209300607F50 /* PredictTeamView.xib in Resources */,
 				338116992699AC4900C8F35E /* CustomContactCell.xib in Resources */,
 				33E158CD26AA530D00B0615B /* OpenSans-Bold.ttf in Resources */,
+				F594429326B91B6D006F4E8E /* Tajawal-Regular.ttf in Resources */,
 				3349799926AEBA3500B909C8 /* ListGameCollectionHeaderView.xib in Resources */,
 				33E158D526AA530D00B0615B /* OpenSans-Regular.ttf in Resources */,
 				33EDB0E32692CCB40040DCD4 /* MatchTableViewCell.xib in Resources */,
@@ -2360,6 +2386,7 @@
 				33E158D126AA530D00B0615B /* OpenSans-SemiBold.ttf in Resources */,
 				3320FFD22682EBC4001809AA /* HistoryTableViewCell.xib in Resources */,
 				F594424426B41963006F4E8E /* spin_success_new.json in Resources */,
+				F594429126B91B65006F4E8E /* Tajawal-Medium.ttf in Resources */,
 				33F59CD3269330C0005B009A /* PredictMatchTableViewCell.xib in Resources */,
 				33E158BB26A9B00500B0615B /* SpinFailView.xib in Resources */,
 				33542A7F269CA912008CE8C2 /* Pagination.storyboard in Resources */,
@@ -2374,6 +2401,7 @@
 				33E158D426AA530D00B0615B /* OpenSans-Italic.ttf in Resources */,
 				3320FFAD2682EBC4001809AA /* GamificationAssets.xcassets in Resources */,
 				33EDB0EF2692D0A70040DCD4 /* CustomNavView.xib in Resources */,
+				F594428926B91B46006F4E8E /* Tajawal-Bold.ttf in Resources */,
 				33EDB0D6268ED8200040DCD4 /* Predict.storyboard in Resources */,
 				3320FFD72682EBC4001809AA /* SpinerContainerView.xib in Resources */,
 				33EE796126A52FA8006AB306 /* KnowMoreView.xib in Resources */,
