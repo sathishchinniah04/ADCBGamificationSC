@@ -17,6 +17,7 @@ class SpinFailView: UIView {
     @IBOutlet weak var goToLabel: UILabel!
     @IBOutlet weak var messageLabel: UILabel!
     @IBOutlet weak var homePageButton: UIButton!
+    @IBOutlet weak var bgCloudImage: UIImageView!
     
     var handle:((SpinFailViewAction)->Void)?
     
@@ -28,6 +29,7 @@ class SpinFailView: UIView {
         self.handle = action
         appearanceSetup()
         checkLeftToRight()
+        self.bgCloudImage.image = UIImage(named: "Clouds", in: Bundle(for: CustomNavView.self), compatibleWith: nil)
     }
     
     func appearanceSetup() {

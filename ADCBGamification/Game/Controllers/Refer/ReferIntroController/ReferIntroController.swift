@@ -11,6 +11,7 @@ class ReferIntroController: UIViewController {
     
     @IBOutlet weak var expireView: ExpireView!
     @IBOutlet weak var activityIndicatorView: UIActivityIndicatorView!
+    @IBOutlet weak var bgCloudImage: UIImageView!
     var game: Games?
     var isDirectLoad: Bool = false
     override func viewDidLoad() {
@@ -18,6 +19,7 @@ class ReferIntroController: UIViewController {
 //        self.expireView.populateView(isShowTerms: false, game: game, complition: expireViewHandle)
 //
         initialSetup()
+        self.bgCloudImage.image = UIImage(named: "Clouds", in: Bundle(for: CustomNavView.self), compatibleWith: nil)
     }
     
     

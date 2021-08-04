@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -20,8 +20,8 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CurveClip" translatesAutoresizingMaskIntoConstraints="NO" id="bzT-Lp-4fO">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="448"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Clouds" translatesAutoresizingMaskIntoConstraints="NO" id="6AU-Br-XnY">
-                                <rect key="frame" x="0.0" y="44" width="300" height="63"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Clouds" translatesAutoresizingMaskIntoConstraints="NO" id="6AU-Br-XnY">
+                                <rect key="frame" x="0.0" y="44" width="414" height="63"/>
                             </imageView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="6Dq-si-cr6">
                                 <rect key="frame" x="0.0" y="89" width="414" height="773"/>
@@ -46,11 +46,13 @@
                             <constraint firstItem="Eev-2w-yXs" firstAttribute="centerX" secondItem="ha7-iE-AA2" secondAttribute="centerX" id="Vhq-Tx-fW3"/>
                             <constraint firstItem="bzT-Lp-4fO" firstAttribute="leading" secondItem="ha7-iE-AA2" secondAttribute="leading" id="lMt-hW-D5m"/>
                             <constraint firstItem="ha7-iE-AA2" firstAttribute="bottom" secondItem="6Dq-si-cr6" secondAttribute="bottom" id="ph9-Rc-dVM"/>
+                            <constraint firstItem="6AU-Br-XnY" firstAttribute="trailing" secondItem="ha7-iE-AA2" secondAttribute="trailing" id="uFR-Qs-gji"/>
                             <constraint firstItem="6AU-Br-XnY" firstAttribute="top" secondItem="ha7-iE-AA2" secondAttribute="top" id="xJk-yT-sEt"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="activityIndicatorView" destination="Eev-2w-yXs" id="WX8-Hh-TIY"/>
+                        <outlet property="bgCloudImage" destination="6AU-Br-XnY" id="nw2-9d-gby"/>
                         <outlet property="matchTableView" destination="6Dq-si-cr6" id="9cd-YN-bcT"/>
                     </connections>
                 </viewController>
@@ -70,7 +72,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="448"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Clouds" translatesAutoresizingMaskIntoConstraints="NO" id="tdu-bk-ghL">
-                                <rect key="frame" x="0.0" y="44" width="300" height="63"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="63"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Predict" translatesAutoresizingMaskIntoConstraints="NO" id="Ifq-Y2-VVs">
                                 <rect key="frame" x="30" y="134" width="354" height="314"/>
@@ -94,6 +96,7 @@
                             <constraint firstItem="tdu-bk-ghL" firstAttribute="leading" secondItem="F75-gm-2pA" secondAttribute="leading" id="NAf-my-7iB"/>
                             <constraint firstItem="Ifq-Y2-VVs" firstAttribute="leading" secondItem="F75-gm-2pA" secondAttribute="leading" constant="30" id="Qgr-Vy-tbU"/>
                             <constraint firstItem="0zs-1g-UM0" firstAttribute="leading" secondItem="F75-gm-2pA" secondAttribute="leading" constant="30" id="TYA-d3-N2f"/>
+                            <constraint firstItem="tdu-bk-ghL" firstAttribute="trailing" secondItem="F75-gm-2pA" secondAttribute="trailing" id="a3u-NU-1rT"/>
                             <constraint firstItem="tdu-bk-ghL" firstAttribute="top" secondItem="F75-gm-2pA" secondAttribute="top" id="a8G-9v-tLC"/>
                             <constraint firstItem="Ifq-Y2-VVs" firstAttribute="top" secondItem="F75-gm-2pA" secondAttribute="top" constant="90" id="bnI-Rk-yHq"/>
                             <constraint firstItem="xxf-cY-7Q7" firstAttribute="centerY" secondItem="9LS-1p-Or3" secondAttribute="centerY" id="jiN-aX-18L"/>
@@ -107,6 +110,7 @@
                     </view>
                     <connections>
                         <outlet property="activityIndicator" destination="xxf-cY-7Q7" id="bmt-Xw-Fze"/>
+                        <outlet property="bgCloudImage" destination="tdu-bk-ghL" id="TTP-gY-A8J"/>
                         <outlet property="expireView" destination="0zs-1g-UM0" id="Nkd-iS-rPk"/>
                     </connections>
                 </viewController>
@@ -125,8 +129,8 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CurveClip" translatesAutoresizingMaskIntoConstraints="NO" id="otf-wu-BSJ">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="448"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Clouds" translatesAutoresizingMaskIntoConstraints="NO" id="5VT-R3-Pow">
-                                <rect key="frame" x="0.0" y="44" width="300" height="63"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Clouds" translatesAutoresizingMaskIntoConstraints="NO" id="5VT-R3-Pow">
+                                <rect key="frame" x="0.0" y="44" width="414" height="63"/>
                             </imageView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Oaw-BX-70x">
                                 <rect key="frame" x="0.0" y="89" width="414" height="696"/>
@@ -168,6 +172,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="Oaw-BX-70x" firstAttribute="top" secondItem="dKt-wo-pLV" secondAttribute="top" constant="45" id="1CZ-fq-Qpp"/>
+                            <constraint firstItem="5VT-R3-Pow" firstAttribute="trailing" secondItem="dKt-wo-pLV" secondAttribute="trailing" id="3cr-lp-ygL"/>
                             <constraint firstItem="otf-wu-BSJ" firstAttribute="height" secondItem="n2S-G4-qs1" secondAttribute="height" multiplier="0.5" id="7Sw-AM-rJq"/>
                             <constraint firstItem="Oaw-BX-70x" firstAttribute="leading" secondItem="dKt-wo-pLV" secondAttribute="leading" id="8PO-Bj-YNT"/>
                             <constraint firstItem="dKt-wo-pLV" firstAttribute="trailing" secondItem="Oaw-BX-70x" secondAttribute="trailing" id="CYk-7O-G9L"/>
@@ -183,6 +188,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="bgCloudImage" destination="5VT-R3-Pow" id="jWH-Gt-1Or"/>
                         <outlet property="buttonContainerView" destination="4AT-rD-JbW" id="Rh8-he-Vs9"/>
                         <outlet property="submitButton" destination="UVo-Be-85q" id="XaW-HG-Gvo"/>
                         <outlet property="tableView" destination="Oaw-BX-70x" id="caM-Kg-BR5"/>
@@ -196,7 +202,7 @@
     <resources>
         <image name="Clouds" width="300" height="63"/>
         <image name="CurveClip" width="187.5" height="211"/>
-        <image name="Predict" width="200" height="347"/>
+        <image name="Predict" width="133" height="214.5"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

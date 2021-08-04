@@ -26,6 +26,7 @@ class SpinSuccessView: UIView {
     @IBOutlet weak var descLabel: UILabel!
     @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var bgCloudImage: UIImageView!
     
     var handle:((SpinSuccessViewAction)->Void)?
     
@@ -38,6 +39,7 @@ class SpinSuccessView: UIView {
         appearanceSetup()
         setupLabel(info: info)
         checkLeftToRight()
+        self.bgCloudImage.image = UIImage(named: "Clouds", in: Bundle(for: CustomNavView.self), compatibleWith: nil)
     }
     
     func setupLabel(info: SpinAssignReward?) {

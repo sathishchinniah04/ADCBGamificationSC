@@ -10,6 +10,8 @@ import UIKit
 class MatchListController: UIViewController {
     @IBOutlet weak var matchTableView: UITableView!
     @IBOutlet weak var activityIndicatorView: UIActivityIndicatorView!
+    @IBOutlet weak var bgCloudImage: UIImageView!
+    
     var predictGame = PredictGame()
     var game: Games?
     var tournaments: [Tournaments]?
@@ -18,6 +20,7 @@ class MatchListController: UIViewController {
         registorCell()
         tableSetup()
         getMatchList()
+        self.bgCloudImage.image = UIImage(named: "Clouds", in: Bundle(for: CustomNavView.self), compatibleWith: nil)
     }
     
     func tableSetup() {

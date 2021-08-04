@@ -26,8 +26,8 @@
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CurveClip" translatesAutoresizingMaskIntoConstraints="NO" id="apC-av-XxZ">
                     <rect key="frame" x="0.0" y="0.0" width="414" height="493"/>
                 </imageView>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Clouds" translatesAutoresizingMaskIntoConstraints="NO" id="xLg-Vx-zvZ">
-                    <rect key="frame" x="0.0" y="64.5" width="300" height="63"/>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Clouds" translatesAutoresizingMaskIntoConstraints="NO" id="xLg-Vx-zvZ">
+                    <rect key="frame" x="0.0" y="64.5" width="414" height="63"/>
                 </imageView>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Mobile" translatesAutoresizingMaskIntoConstraints="NO" id="NRS-Bg-v13">
                     <rect key="frame" x="138.5" y="107.5" width="137" height="250"/>
@@ -246,6 +246,7 @@ Enjoy 10% off at Starbucks!</string>
                 <constraint firstItem="IAH-G8-iQf" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="30" id="Gec-R6-RCz"/>
                 <constraint firstItem="apC-av-XxZ" firstAttribute="height" secondItem="iN0-l3-epB" secondAttribute="height" multiplier="0.55" id="Hdt-PY-eBl"/>
                 <constraint firstItem="IAH-G8-iQf" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="Idx-gt-CqI"/>
+                <constraint firstItem="xLg-Vx-zvZ" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="JlL-Hh-2nv"/>
                 <constraint firstItem="xLg-Vx-zvZ" firstAttribute="top" secondItem="JZg-t3-0uF" secondAttribute="bottom" constant="-20" id="KG2-hb-VbX"/>
                 <constraint firstItem="JZg-t3-0uF" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="aOh-PY-OMO"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="apC-av-XxZ" secondAttribute="trailing" id="aXU-Kx-Fom"/>
@@ -255,6 +256,7 @@ Enjoy 10% off at Starbucks!</string>
                 <constraint firstItem="IAH-G8-iQf" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="xXl-Gg-Eiy"/>
             </constraints>
             <connections>
+                <outlet property="bgCloudImage" destination="xLg-Vx-zvZ" id="fdB-Q7-QoE"/>
                 <outlet property="containerView" destination="IAH-G8-iQf" id="Hwi-t3-BVb"/>
                 <outlet property="descLabel" destination="Cv6-6m-HDP" id="qYh-Vf-Jlq"/>
                 <outlet property="goToLabel" destination="HUj-tb-PpK" id="5HJ-ec-toY"/>

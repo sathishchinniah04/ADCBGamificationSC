@@ -33,8 +33,8 @@
                                     <constraint firstAttribute="height" constant="320" id="gVG-3w-XZd"/>
                                 </constraints>
                             </view>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Clouds" translatesAutoresizingMaskIntoConstraints="NO" id="vJN-O7-seS">
-                                <rect key="frame" x="0.0" y="44" width="300" height="63"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Clouds" translatesAutoresizingMaskIntoConstraints="NO" id="vJN-O7-seS">
+                                <rect key="frame" x="0.0" y="44" width="414" height="63"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="SGV-Kl-EeD">
                                 <rect key="frame" x="107" y="188" width="200" height="200"/>
@@ -67,6 +67,7 @@
                         <viewLayoutGuide key="safeArea" id="peg-KZ-704"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="vJN-O7-seS" firstAttribute="trailing" secondItem="peg-KZ-704" secondAttribute="trailing" id="0IQ-SE-u9A"/>
                             <constraint firstItem="wNb-S9-CRs" firstAttribute="centerX" secondItem="peg-KZ-704" secondAttribute="centerX" id="0XT-mI-hD7"/>
                             <constraint firstItem="otW-Vk-P3R" firstAttribute="centerY" secondItem="2DE-sR-4BU" secondAttribute="centerY" multiplier="0.85" id="1es-h9-EZt"/>
                             <constraint firstItem="fIY-xv-g70" firstAttribute="top" secondItem="peg-KZ-704" secondAttribute="top" constant="45" id="3B6-vR-KxL"/>
@@ -97,6 +98,7 @@
                     </view>
                     <connections>
                         <outlet property="activityIndicatorView" destination="1au-yG-VVq" id="jk7-gu-5Fa"/>
+                        <outlet property="bgCloudImage" destination="vJN-O7-seS" id="gl1-UY-gDE"/>
                         <outlet property="containerView" destination="fIY-xv-g70" id="Bcd-vT-Hnw"/>
                         <outlet property="expireView" destination="wNb-S9-CRs" id="o8M-YK-KvH"/>
                         <outlet property="homeAnimationStaticView" destination="7pc-Ro-PzS" id="xzl-uE-jtO"/>

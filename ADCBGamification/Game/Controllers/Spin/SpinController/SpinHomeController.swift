@@ -18,6 +18,7 @@ class SpinHomeController: UIViewController {
     
     @IBOutlet weak var spinDummyImgView: UIImageView!
     @IBOutlet weak var activityIndicatorView: UIActivityIndicatorView!
+    @IBOutlet weak var bgCloudImage: UIImageView!
     
     var spinerView = SpinerContainerHelper()
     var game: Games?
@@ -42,6 +43,8 @@ class SpinHomeController: UIViewController {
         }
         activityIndicatorView.startAnimating()
         checkLeftToRight()
+        self.bgCloudImage.image = UIImage(named: "Clouds", in: Bundle(for: CustomNavView.self), compatibleWith: nil)
+
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -336,27 +339,27 @@ class SpinHomeController: UIViewController {
         self.lottiSpinAnimationView.addSubview(self.spinAnimationView!)
         self.spinAnimationView?.play()
         
-        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-            
-            self.spinAnimationView = .init(name: "sparkle")
-            self.spinAnimationView!.frame = self.lottiSpinAnimationView.bounds
-            self.spinAnimationView!.contentMode = .scaleAspectFill
-            self.spinAnimationView!.animationSpeed = 0.5
-            self.spinAnimationView!.loopMode = .playOnce
-            self.lottiSpinAnimationView.addSubview(self.spinAnimationView!)
-            self.spinAnimationView?.play()
-        }
+//        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+//
+//            self.spinAnimationView = .init(name: "sparkle")
+//            self.spinAnimationView!.frame = self.lottiSpinAnimationView.bounds
+//            self.spinAnimationView!.contentMode = .scaleAspectFill
+//            self.spinAnimationView!.animationSpeed = 0.5
+//            self.spinAnimationView!.loopMode = .playOnce
+//            self.lottiSpinAnimationView.addSubview(self.spinAnimationView!)
+//            self.spinAnimationView?.play()
+//        }
         
         
     }
     
     func spinnerStopped(isPass: Bool) {
         print("spinner stpped")
-        if isPass {
+        if !isPass {
             DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
                self.spinSuccessAnimation()
             }
-            DispatchQueue.main.asyncAfter(deadline: .now() + 7.5) {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 6.5) {
             self.spinSuccessView.loadScreen(info: self.spinAssignReward, action: self.successScreenActionHandler(action:))
             }
             

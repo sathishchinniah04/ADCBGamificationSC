@@ -18,6 +18,7 @@ class ReferSuccessView: UIView {
     @IBOutlet weak var spinAgainButton: UIButton!
     @IBOutlet weak var descLabel: UILabel!
     @IBOutlet weak var containerView: UIView!
+    @IBOutlet weak var bgCloudImage: UIImageView!
     
     var handle:((ReferSuccessViewAction)->Void)?
     
@@ -28,6 +29,7 @@ class ReferSuccessView: UIView {
     func populateView(info: SpinAssignReward?,action:((ReferSuccessViewAction)->Void)?) {
         self.handle = action
         appearanceSetup()
+        self.bgCloudImage.image = UIImage(named: "Clouds", in: Bundle(for: CustomNavView.self), compatibleWith: nil)
        // setupLabel(info: info)
     }
     

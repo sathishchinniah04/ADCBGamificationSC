@@ -8,18 +8,23 @@
 import UIKit
 
 class ADCBGameListController: UIViewController {
+    
     @IBOutlet weak var gamesCollectionView: UICollectionView!
     @IBOutlet weak var activityIndicatorView: UIActivityIndicatorView!
     @IBOutlet weak var customNavigationView: UIView!
+    @IBOutlet weak var bgCloudImage: UIImageView!
     var games = [Games]()
     var contRef: UIViewController?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         tableViewSetup()
         getResponce()
         navigationViewCornerRadius()
         playerGameHandler()
         checkLeftToRight()
+        self.bgCloudImage.image = UIImage(named: "Clouds", in: Bundle(for: CustomNavView.self), compatibleWith: nil)
     }
     
     func navigationViewCornerRadius() {

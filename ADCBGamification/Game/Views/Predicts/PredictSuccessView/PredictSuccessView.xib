@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -194,6 +194,7 @@ participation</string>
                 <constraint firstItem="krM-oZ-Fcx" firstAttribute="leading" secondItem="z0B-m1-9Ph" secondAttribute="leading" id="zqd-D2-NsU"/>
             </constraints>
             <connections>
+                <outlet property="bgCloudImage" destination="krM-oZ-Fcx" id="fWS-DY-v3Z"/>
                 <outlet property="containerView" destination="HIL-NA-1vj" id="BBa-Pr-oZw"/>
                 <outlet property="homePageButton" destination="VzQ-LZ-cgh" id="UbN-91-ugu"/>
                 <outlet property="shareButton" destination="3Qk-JG-Zme" id="rs7-aM-O9X"/>

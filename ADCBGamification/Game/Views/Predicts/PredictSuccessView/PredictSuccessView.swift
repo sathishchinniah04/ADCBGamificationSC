@@ -14,6 +14,8 @@ class PredictSuccessView: UIView {
     @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var shareButton: NeumorphicButton!
     @IBOutlet weak var homePageButton: UIButton!
+    @IBOutlet weak var bgCloudImage: UIImageView!
+    
     let blueColor = UIColor(red: 34.0/256.0, green: 33.0/256.0, blue: 101.0/256.0, alpha: 1.0)
     
     var handle:((PredictSuccessViewAction)->Void)?
@@ -26,6 +28,7 @@ class PredictSuccessView: UIView {
         self.handle = complition
         cornerRadius()
         neumorphicEffect()
+        self.bgCloudImage.image = UIImage(named: "Clouds", in: Bundle(for: CustomNavView.self), compatibleWith: nil)
     }
     
     func neumorphicEffect() {

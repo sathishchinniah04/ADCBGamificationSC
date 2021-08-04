@@ -12,6 +12,8 @@ class PredictMatchController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var buttonContainerView: UIView!
     @IBOutlet weak var submitButton: UIButton!
+    @IBOutlet weak var bgCloudImage: UIImageView!
+    
     var eventsList: EventsList?
     var selectedIndex: Int = 0
     var game: Games?
@@ -29,6 +31,8 @@ class PredictMatchController: UIViewController {
             self.tableView.beginUpdates()
             self.tableView.endUpdates()
         }
+        self.bgCloudImage.image = UIImage(named: "Clouds", in: Bundle(for: CustomNavView.self), compatibleWith: nil)
+
     }
 
     func initialSetup() {

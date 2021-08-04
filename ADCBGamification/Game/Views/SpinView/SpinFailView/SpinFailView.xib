@@ -26,8 +26,8 @@
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CurveClip" translatesAutoresizingMaskIntoConstraints="NO" id="Pii-cg-xTm">
                     <rect key="frame" x="0.0" y="0.0" width="414" height="493"/>
                 </imageView>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Clouds" translatesAutoresizingMaskIntoConstraints="NO" id="YLk-rb-PXE">
-                    <rect key="frame" x="0.0" y="64.5" width="300" height="63"/>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Clouds" translatesAutoresizingMaskIntoConstraints="NO" id="YLk-rb-PXE">
+                    <rect key="frame" x="0.0" y="64.5" width="414" height="63"/>
                 </imageView>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Mobile" translatesAutoresizingMaskIntoConstraints="NO" id="Jcq-fF-ACp">
                     <rect key="frame" x="138.5" y="117.5" width="137" height="250"/>
@@ -234,6 +234,7 @@
                 <constraint firstItem="Pii-cg-xTm" firstAttribute="leading" secondItem="43V-d4-wrQ" secondAttribute="leading" id="35z-v1-URn"/>
                 <constraint firstItem="DVy-v3-TUb" firstAttribute="leading" secondItem="43V-d4-wrQ" secondAttribute="leading" constant="30" id="41h-o9-3Lt"/>
                 <constraint firstItem="DVy-v3-TUb" firstAttribute="centerX" secondItem="Mgy-fY-UgW" secondAttribute="centerX" id="4om-6M-DHC"/>
+                <constraint firstItem="YLk-rb-PXE" firstAttribute="trailing" secondItem="43V-d4-wrQ" secondAttribute="trailing" id="8jT-8N-kGB"/>
                 <constraint firstItem="Pii-cg-xTm" firstAttribute="top" secondItem="Mgy-fY-UgW" secondAttribute="top" id="ATe-Ra-JZT"/>
                 <constraint firstItem="YLk-rb-PXE" firstAttribute="top" secondItem="tx1-8d-WNB" secondAttribute="bottom" constant="-20" id="AV7-pP-PuN"/>
                 <constraint firstItem="YLk-rb-PXE" firstAttribute="leading" secondItem="43V-d4-wrQ" secondAttribute="leading" id="In6-7n-wkh"/>
@@ -244,6 +245,7 @@
                 <constraint firstItem="DVy-v3-TUb" firstAttribute="centerY" secondItem="Mgy-fY-UgW" secondAttribute="centerY" constant="0.5" id="yed-m8-vz6"/>
             </constraints>
             <connections>
+                <outlet property="bgCloudImage" destination="YLk-rb-PXE" id="8mM-HN-MvR"/>
                 <outlet property="containerView" destination="DVy-v3-TUb" id="45q-yu-I50"/>
                 <outlet property="goToLabel" destination="Y86-5E-lxT" id="s7i-Dg-cxZ"/>
                 <outlet property="homePageButton" destination="xUq-On-su3" id="ww5-Ds-eHj"/>

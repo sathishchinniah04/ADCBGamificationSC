@@ -17,8 +17,10 @@ class ReferController: UIViewController {
     @IBOutlet weak var chooseContactButton: NeumorphicButton!
     //@IBOutlet weak var chooseContactButton: ReferContactButton!
     @IBOutlet weak var activityIndicatorView: UIActivityIndicatorView!
+    @IBOutlet weak var bgCloudImage: UIImageView!
     //var referSuccessView = ReferSuccessPopupHelper()
     var referCode: String = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.addDottedLine()
@@ -35,6 +37,7 @@ class ReferController: UIViewController {
             self.openContactList()
         }
         
+        self.bgCloudImage.image = UIImage(named: "Clouds", in: Bundle(for: CustomNavView.self), compatibleWith: nil)
         orLabel.text = "or".localized()
         shareReferalLabel.text = "Share Your Referral Code".localized()
         

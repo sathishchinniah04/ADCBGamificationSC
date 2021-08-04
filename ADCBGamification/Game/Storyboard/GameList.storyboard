@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="RvL-uK-7BA">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="RvL-uK-7BA">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
@@ -90,12 +90,13 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="guB-3a-TUC">
                                 <rect key="frame" x="0.0" y="44" width="414" height="75"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Clouds" translatesAutoresizingMaskIntoConstraints="NO" id="svh-lY-aFj">
-                                        <rect key="frame" x="0.0" y="0.0" width="300" height="75"/>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Clouds" translatesAutoresizingMaskIntoConstraints="NO" id="svh-lY-aFj">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="75"/>
                                     </imageView>
                                 </subviews>
                                 <color key="backgroundColor" red="1" green="0.8784313725490196" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="svh-lY-aFj" secondAttribute="trailing" id="8Ln-MO-MPT"/>
                                     <constraint firstAttribute="bottom" secondItem="svh-lY-aFj" secondAttribute="bottom" id="GGG-S3-5D5"/>
                                     <constraint firstAttribute="height" constant="75" id="OCG-sE-rqG"/>
                                     <constraint firstItem="svh-lY-aFj" firstAttribute="top" secondItem="guB-3a-TUC" secondAttribute="top" id="UVa-t2-EfP"/>
@@ -127,6 +128,7 @@
                     </view>
                     <connections>
                         <outlet property="activityIndicatorView" destination="XiW-Wo-Aln" id="FqM-EI-Z1V"/>
+                        <outlet property="bgCloudImage" destination="svh-lY-aFj" id="4fK-G8-9Wz"/>
                         <outlet property="customNavigationView" destination="guB-3a-TUC" id="qCD-BV-jAs"/>
                         <outlet property="gamesCollectionView" destination="Rg8-QX-k6w" id="rCW-66-gYv"/>
                     </connections>
