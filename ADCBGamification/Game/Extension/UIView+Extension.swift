@@ -203,3 +203,12 @@ extension UILabel {
     }
 }
 
+
+extension UIButton {
+    
+    func setSizeFont(sizeFont: Double, fontFamily: String) {
+        self.titleLabel?.font = UIFont(name: fontFamily, size: CGFloat(sizeFont))!
+        self.sizeToFit()
+    }
+}
+

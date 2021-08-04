@@ -33,20 +33,44 @@ class SpinFailView: UIView {
     }
     
     func appearanceSetup() {
+        setupFontFamily()
         self.titleLable.text = "Oh no!".localized()
         self.goToLabel.text = "Go To".localized()
         self.messageLabel.text = "Better luck next time!".localized()
         self.titleHeaderLabel.text = "simply".localized()
         self.subTitleLabel.text = "life".localized()
-        if let attributedTitle = self.homePageButton.attributedTitle(for: .normal) {
+        
+        
+        let fontDict: [NSAttributedString.Key : Any] = [
+            NSAttributedString.Key.font: (StoreManager.shared.language == GameLanguage.AR.rawValue) ? UIFont(name: "Tajawal-Regular", size: 14.0) ?? UIFont.boldSystemFont(ofSize: 1.5) : UIFont(name: "OpenSans-Regular", size: 14.0) ?? UIFont.boldSystemFont(ofSize: 1.5),
+            NSAttributedString.Key.underlineStyle : 1,
+            NSAttributedString.Key.foregroundColor :  UIColor(hexString: "#222165")
+            
+        ]
+        let homeAttString = NSMutableAttributedString()
+        homeAttString.append(NSAttributedString(string: "Rewards".localized(), attributes: fontDict))
+        self.homePageButton.setAttributedTitle(homeAttString, for: .normal)
+    
+       /* if let attributedTitle = self.homePageButton.attributedTitle(for: .normal) {
             let mutableAttributedTitle = NSMutableAttributedString(attributedString: attributedTitle)
             mutableAttributedTitle.replaceCharacters(in: NSMakeRange(0, mutableAttributedTitle.length), with: "Homepage".localized())
             self.homePageButton.setAttributedTitle(mutableAttributedTitle, for: .normal)
-        }
+        } */
         
         containerView.addShadow(cornerRadius: 20, shadowRadius: 3, opacity: 0.5, color: UIColor.black)
         bounceAnimation(imageView)
 
+    }
+    
+    
+    func setupFontFamily() {
+        
+        titleLable.setSizeFont(sizeFont: (StoreManager.shared.language == GameLanguage.AR.rawValue) ?  20.0 : 20.0, fontFamily: (StoreManager.shared.language == GameLanguage.AR.rawValue) ? "Tajawal-Bold" : "OpenSans-Bold")
+        
+        messageLabel.setSizeFont(sizeFont: (StoreManager.shared.language == GameLanguage.AR.rawValue) ?  14.0 : 14.0, fontFamily: (StoreManager.shared.language == GameLanguage.AR.rawValue) ? "Tajawal-Regular" : "OpenSans-Regular")
+        
+        goToLabel.setSizeFont(sizeFont: (StoreManager.shared.language == GameLanguage.AR.rawValue) ?  14.0 : 14.0, fontFamily: (StoreManager.shared.language == GameLanguage.AR.rawValue) ? "Tajawal-Regular" : "OpenSans-Regular")
+        
     }
     
     @IBAction func homePageButtonAction() {

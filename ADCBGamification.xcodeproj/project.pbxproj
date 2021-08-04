@@ -477,6 +477,13 @@
 		F594429126B91B65006F4E8E /* Tajawal-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F594429026B91B65006F4E8E /* Tajawal-Medium.ttf */; };
 		F594429326B91B6D006F4E8E /* Tajawal-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F594429226B91B6D006F4E8E /* Tajawal-Regular.ttf */; };
 		F594429726B91C4D006F4E8E /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = F594429A26B91C4D006F4E8E /* Localizable.strings */; };
+		F594429F26BA77CD006F4E8E /* Tajawal-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F594428626B91B3F006F4E8E /* Tajawal-Black.ttf */; };
+		F59442A026BA77CE006F4E8E /* Tajawal-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F594428826B91B46006F4E8E /* Tajawal-Bold.ttf */; };
+		F59442A126BA77CE006F4E8E /* Tajawal-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F594428A26B91B4E006F4E8E /* Tajawal-ExtraBold.ttf */; };
+		F59442A226BA77CE006F4E8E /* Tajawal-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F594428C26B91B55006F4E8E /* Tajawal-ExtraLight.ttf */; };
+		F59442A326BA77CE006F4E8E /* Tajawal-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F594428E26B91B5C006F4E8E /* Tajawal-Light.ttf */; };
+		F59442A426BA77CE006F4E8E /* Tajawal-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F594429026B91B65006F4E8E /* Tajawal-Medium.ttf */; };
+		F59442A526BA77CE006F4E8E /* Tajawal-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F594429226B91B6D006F4E8E /* Tajawal-Regular.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -2421,6 +2428,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F594429F26BA77CD006F4E8E /* Tajawal-Black.ttf in Resources */,
+				F59442A026BA77CE006F4E8E /* Tajawal-Bold.ttf in Resources */,
+				F59442A126BA77CE006F4E8E /* Tajawal-ExtraBold.ttf in Resources */,
+				F59442A226BA77CE006F4E8E /* Tajawal-ExtraLight.ttf in Resources */,
+				F59442A326BA77CE006F4E8E /* Tajawal-Light.ttf in Resources */,
+				F59442A426BA77CE006F4E8E /* Tajawal-Medium.ttf in Resources */,
+				F59442A526BA77CE006F4E8E /* Tajawal-Regular.ttf in Resources */,
 				33E158ED26AA533000B0615B /* OpenSans-Light.ttf in Resources */,
 				33E158E626AA533000B0615B /* OpenSans-BoldItalic.ttf in Resources */,
 				33E158EB26AA533000B0615B /* OpenSans-Italic.ttf in Resources */,

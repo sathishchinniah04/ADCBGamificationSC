@@ -364,7 +364,8 @@ class SpinHomeController: UIViewController {
             }
             
         } else {
-            self.spinFailView.loadScreen(action: self.failScreenActionHandler(action:))
+            //self.spinFailView.loadScreen(action: self.failScreenActionHandler(action:))
+            self.spinSuccessView.loadScreen(info: self.spinAssignReward, action: self.successScreenActionHandler(action:))
         }
     }
     

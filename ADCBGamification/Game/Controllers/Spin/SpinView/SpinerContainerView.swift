@@ -56,6 +56,7 @@ class SpinerContainerView: UIView {
     func populateView() {
         addCenterViewRadius()
         fortuneWheel?.clipsToBounds = false
+        
     }
     
     func stopAnimationAtIndex(achivementId: String, complition:((Bool)->Void)?) {
@@ -126,7 +127,11 @@ class SpinerContainerView: UIView {
             let st = pair.element as! CarnivalWheelSlice
             
             st.style = .babyBlue
+            
+            
         }
+        
+        
         fortuneWheel?.slices.enumerated().forEach { (pair) in
             let slice = pair.element as? CarnivalWheelSlice
             let offset = pair.offset

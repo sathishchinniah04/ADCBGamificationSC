@@ -87,6 +87,10 @@ import UIKit
         button.setTitle(name, for: .normal)
     }
     
+    func setupButtonFontName(fSize: Double, fName: String) {
+        button.setSizeFont(sizeFont: fSize, fontFamily: fName)
+    }
+    
     func shadowSetup() {
         firstContainerView.addCustomShadow(cornerRadius: shadowRadius, shadowRadius: 6, opacity: 1, color: bottomOffSetColor!, offSet: botttomOffSet)
         secondContainerView.addCustomShadow(cornerRadius: shadowRadius, shadowRadius: 6, opacity: 1, color: topOffSetColor!, offSet: topOffSet)

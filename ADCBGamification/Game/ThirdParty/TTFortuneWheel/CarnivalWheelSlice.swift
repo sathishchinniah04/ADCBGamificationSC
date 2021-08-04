@@ -48,17 +48,18 @@ public class CarnivalWheelSlice: FortuneWheelSliceProtocol {
     }
         
     public var font: UIFont {
-        let font = UIFont(name: "OpenSans-ExtraBold", size: 13.0) ?? UIFont.boldSystemFont(ofSize: 15)
+        let font = (StoreManager.shared.language == GameLanguage.AR.rawValue) ? UIFont(name: "Tajawal-Bold", size: 10.0) : UIFont(name: "OpenSans-Bold", size: 10.0)
+        
+       // let font = UIFont(name: "OpenSans-ExtraBold", size: 1.0) ?? UIFont.boldSystemFont(ofSize: 1.5)
         switch style {
         
-        
-        case .brickRed: return font
+        case .brickRed: return font ?? UIFont.boldSystemFont(ofSize: 1.5)
             //UIFont.boldSystemFont(ofSize: 25)
-        case .sandYellow: return font
+        case .sandYellow: return font ?? UIFont.boldSystemFont(ofSize: 1.5)
             //UIFont.boldSystemFont(ofSize: 25)
-        case .babyBlue: return font
+        case .babyBlue: return font ?? UIFont.boldSystemFont(ofSize: 1.5)
             //UIFont.boldSystemFont(ofSize: 25)
-        case .deepBlue: return font
+        case .deepBlue: return font ?? UIFont.boldSystemFont(ofSize: 1.5)
             
         }
     }

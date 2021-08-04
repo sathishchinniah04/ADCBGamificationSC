@@ -42,14 +42,46 @@ class SpinSuccessView: UIView {
         self.bgCloudImage.image = UIImage(named: "Clouds", in: Bundle(for: CustomNavView.self), compatibleWith: nil)
     }
     
+    func setupFontFamily() {
+        
+        titleLable.setSizeFont(sizeFont: (StoreManager.shared.language == GameLanguage.AR.rawValue) ?  20.0 : 20.0, fontFamily: (StoreManager.shared.language == GameLanguage.AR.rawValue) ? "Tajawal-Bold" : "OpenSans-Bold")
+        
+        descLabel.setSizeFont(sizeFont: (StoreManager.shared.language == GameLanguage.AR.rawValue) ?  14.0 : 14.0, fontFamily: (StoreManager.shared.language == GameLanguage.AR.rawValue) ? "Tajawal-Regular" : "OpenSans-Regular")
+        
+        goToLabel.setSizeFont(sizeFont: (StoreManager.shared.language == GameLanguage.AR.rawValue) ?  14.0 : 14.0, fontFamily: (StoreManager.shared.language == GameLanguage.AR.rawValue) ? "Tajawal-Regular" : "OpenSans-Regular")
+        
+    }
+    
     func setupLabel(info: SpinAssignReward?) {
         
+        setupFontFamily()
         self.titleLable.text = "Hurray!".localized()
         self.goToLabel.text = "Go To".localized()
         self.titleHeaderLabel.text = "simply".localized()
         self.subTitleLabel.text = "life".localized()
+
+        let fontDict: [NSAttributedString.Key : Any] = [
+            NSAttributedString.Key.font: (StoreManager.shared.language == GameLanguage.AR.rawValue) ? UIFont(name: "Tajawal-Regular", size: 14.0) ?? UIFont.boldSystemFont(ofSize: 1.5) : UIFont(name: "OpenSans-Regular", size: 14.0) ?? UIFont.boldSystemFont(ofSize: 1.5),
+            NSAttributedString.Key.underlineStyle : 1,
+            NSAttributedString.Key.foregroundColor :  UIColor(hexString: "#222165")
+            
+        ]
+        let rewardAttString = NSMutableAttributedString()
+        rewardAttString.append(NSAttributedString(string: "Rewards".localized(), attributes: fontDict))
+        self.rewardButton.setAttributedTitle(rewardAttString, for: .normal)
         
-        if let rewardsAttributedTitle = self.rewardButton.attributedTitle(for: .normal) {
+        
+        let homeAttString = NSMutableAttributedString()
+        homeAttString.append(NSAttributedString(string: "Homepage".localized(), attributes: fontDict))
+        self.homePageButton.setAttributedTitle(homeAttString, for: .normal)
+        
+        let spinAttString = NSMutableAttributedString()
+        spinAttString.append(NSAttributedString(string: "Spin Again".localized(), attributes: fontDict))
+        self.spinAgainButton.setAttributedTitle(spinAttString, for: .normal)
+
+  
+        
+      /*  if let rewardsAttributedTitle = self.rewardButton.attributedTitle(for: .normal) {
             let mutableAttributedTitle = NSMutableAttributedString(attributedString: rewardsAttributedTitle)
             mutableAttributedTitle.replaceCharacters(in: NSMakeRange(0, mutableAttributedTitle.length), with: "Rewards".localized())
             self.rewardButton.setAttributedTitle(mutableAttributedTitle, for: .normal)
@@ -65,7 +97,7 @@ class SpinSuccessView: UIView {
             let mutableAttributedTitle = NSMutableAttributedString(attributedString: spinAttributedTitle)
             mutableAttributedTitle.replaceCharacters(in: NSMakeRange(0, mutableAttributedTitle.length), with: "Spin Again".localized())
             self.spinAgainButton.setAttributedTitle(mutableAttributedTitle, for: .normal)
-        }
+        } */
         
         //self.rewardButton.setTitle("Rewards".localized(), for: .normal)
         //self.homePageButton.setTitle("Homepage".localized(), for: .normal)

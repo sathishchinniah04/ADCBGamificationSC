@@ -17,7 +17,7 @@ public enum GameAction {
     case spinReward
 }
 
-public enum GameLanguage {
+public enum GameLanguage: String, CaseIterable {
     case EN, AR
 }
 

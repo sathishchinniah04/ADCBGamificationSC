@@ -7,14 +7,14 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
-        <array key="OpenSans-Bold.ttf">
-            <string>OpenSans-Bold</string>
-        </array>
         <array key="OpenSans-Light.ttf">
             <string>OpenSans-Light</string>
         </array>
         <array key="OpenSans-Regular.ttf">
             <string>OpenSans-Regular</string>
+        </array>
+        <array key="Tajawal-Bold.ttf">
+            <string>Tajawal-Bold</string>
         </array>
     </customFonts>
     <objects>
@@ -44,19 +44,19 @@
                                     <rect key="frame" x="20" y="0.0" width="374" height="330"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="AOu-or-gVc">
-                                            <rect key="frame" x="0.0" y="0.0" width="374" height="139"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="374" height="131.5"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="4mY-c6-DUZ">
-                                                    <rect key="frame" x="0.0" y="0.0" width="374" height="61.5"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="374" height="54"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Game Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZpA-KF-iFY">
-                                                            <rect key="frame" x="0.0" y="0.0" width="374" height="27.5"/>
-                                                            <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="20"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="374" height="20"/>
+                                                            <fontDescription key="fontDescription" name="Tajawal-Bold" family="Tajawal" pointSize="20"/>
                                                             <color key="textColor" red="0.13068386909999999" green="0.1246742383" blue="0.3787754774" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Play and win exciting rewards." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="heg-QQ-ejD">
-                                                            <rect key="frame" x="0.0" y="39.5" width="374" height="22"/>
+                                                            <rect key="frame" x="0.0" y="32" width="374" height="22"/>
                                                             <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="16"/>
                                                             <color key="textColor" red="0.13068386909999999" green="0.1246742383" blue="0.3787754774" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <nil key="highlightedColor"/>
@@ -64,7 +64,7 @@
                                                     </subviews>
                                                 </stackView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="250" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g6i-Vh-D9n">
-                                                    <rect key="frame" x="0.0" y="81.5" width="374" height="57.5"/>
+                                                    <rect key="frame" x="0.0" y="74" width="374" height="57.5"/>
                                                     <string key="text">Play and win exciting rewards.Play and win exciting rewards.Play and win exciting rewards.Play and win exciting rewards.Play and win exciting rewards.</string>
                                                     <fontDescription key="fontDescription" name="OpenSans-Light" family="Open Sans" pointSize="14"/>
                                                     <color key="textColor" red="0.32941176470588235" green="0.32941176470588235" blue="0.33725490196078434" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

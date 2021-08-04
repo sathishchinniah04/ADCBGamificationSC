@@ -67,10 +67,18 @@ class ExpireView: UIView {
         
         containerStackView.spacing = mainStackSpace
         secondStackView.spacing = secondStackSpace
+        setupFontFamily()
     }
     
     func setupFontFamily() {
-        gameNameLabel.setSizeFont(sizeFont: 20.0, fontFamily: "Tajawal Bold")
+        
+        gameNameLabel.setSizeFont(sizeFont: (StoreManager.shared.language == GameLanguage.AR.rawValue) ?  20.0 : 20.0, fontFamily: (StoreManager.shared.language == GameLanguage.AR.rawValue) ? "Tajawal-Bold" : "OpenSans-Bold")
+        
+        gameNameSubTitleLabel.setSizeFont(sizeFont: (StoreManager.shared.language == GameLanguage.AR.rawValue) ?  20.0 : 16.0, fontFamily: (StoreManager.shared.language == GameLanguage.AR.rawValue) ? "Tajawal-Regular" : "OpenSans-Regular")
+        
+        descLabel.setSizeFont(sizeFont: (StoreManager.shared.language == GameLanguage.AR.rawValue) ?  20.0 : 14.0, fontFamily: (StoreManager.shared.language == GameLanguage.AR.rawValue) ? "Tajawal-ExtraLight" : "OpenSans-Light")
+        
+        expireLabel.setSizeFont(sizeFont: (StoreManager.shared.language == GameLanguage.AR.rawValue) ?  20.0 : 14.0, fontFamily: (StoreManager.shared.language == GameLanguage.AR.rawValue) ? "Tajawal-Regular" : "OpenSans-Light")
     }
     
     func populateView(isShowTerms: Bool = true, game: Games?, complition: (()->Void)?) {
@@ -134,6 +142,7 @@ class ExpireView: UIView {
     
     func setupButtonName(name: String) {
         self.genericButton.setupButtonName(name: name)
+        self.genericButton.setupButtonFontName(fSize: (StoreManager.shared.language == GameLanguage.AR.rawValue) ?  16.0 : 16.0, fName: (StoreManager.shared.language == GameLanguage.AR.rawValue) ? "Tajawal-Bold" : "OpenSans-SemiBold")
     }
     
     func setupLabel() {
