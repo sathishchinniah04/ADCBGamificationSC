@@ -9,6 +9,7 @@ import UIKit
 
 class PredictTeamView: UIView {
     var view: UIView?
+    
     @IBOutlet weak var timeLabel: UILabel!
     @IBOutlet weak var leagueNameLabel: UILabel!
     @IBOutlet weak var firstTeamNameLabel: UILabel!
@@ -37,6 +38,7 @@ class PredictTeamView: UIView {
     override func prepareForInterfaceBuilder() {
         super.prepareForInterfaceBuilder()
         initialSetup()
+        setupFontFamily()
     }
     
     func initialSetup() {
@@ -44,6 +46,23 @@ class PredictTeamView: UIView {
         view?.frame = self.bounds
         view?.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         self.addSubview(view!)
+    }
+    
+    func setupFontFamily() {
+        
+        leagueNameLabel.setSizeFont(sizeFont: (StoreManager.shared.language == GameLanguage.AR.rawValue) ?  16.0 : 16.0, fontFamily: (StoreManager.shared.language == GameLanguage.AR.rawValue) ? "Tajawal-Medium" : "OpenSans-SemiBold")
+        
+        timeLabel.setSizeFont(sizeFont: (StoreManager.shared.language == GameLanguage.AR.rawValue) ?  10.0 : 14.0, fontFamily: (StoreManager.shared.language == GameLanguage.AR.rawValue) ? "Tajawal-Light" : "OpenSans-Light")
+        
+        
+        firstTeamNameLabel.setSizeFont(sizeFont: (StoreManager.shared.language == GameLanguage.AR.rawValue) ?  12.0 : 12.0, fontFamily: (StoreManager.shared.language == GameLanguage.AR.rawValue) ? "Tajawal-Regular" : "OpenSans-Regular")
+        
+        firstTeamCharLabel.setSizeFont(sizeFont: (StoreManager.shared.language == GameLanguage.AR.rawValue) ?  14.0 : 14.0, fontFamily: (StoreManager.shared.language == GameLanguage.AR.rawValue) ? "Tajawal-ExtraBold" : "OpenSans-ExtraBold")
+        
+        
+        secondTeamNameLabel.setSizeFont(sizeFont: (StoreManager.shared.language == GameLanguage.AR.rawValue) ?  12.0 : 12.0, fontFamily: (StoreManager.shared.language == GameLanguage.AR.rawValue) ? "Tajawal-Regular" : "OpenSans-Regular")
+        
+        secondTeamCharLabel.setSizeFont(sizeFont: (StoreManager.shared.language == GameLanguage.AR.rawValue) ?  14.0 : 14.0, fontFamily: (StoreManager.shared.language == GameLanguage.AR.rawValue) ? "Tajawal-ExtraBold" : "OpenSans-ExtraBold")
     }
     
     func extraPopulation(time: String) {

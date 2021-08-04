@@ -42,6 +42,7 @@ class SpinerContainerView: UIView {
             
             self.spinNowButton.addCustomShadow(cornerRadius: 10, opacity: 0.4, color: UIColor.darkBlueColor(), offSet: CGSize(width: 4, height: 4))
             
+            self.spinNowButton.setSizeFont(sizeFont: (StoreManager.shared.language == GameLanguage.AR.rawValue) ?  15.0 : 15.0, fontFamily: (StoreManager.shared.language == GameLanguage.AR.rawValue) ? "Tajawal-Medium" : "OpenSans-SemiBold")
             /*self.spinCenterView.backgroundColor = UIColor.customYellowColor()
             self.spinCenterView.layer.cornerRadius = self.spinCenterView.frame.width/2
             self.spinCenterView.layer.borderWidth = 3

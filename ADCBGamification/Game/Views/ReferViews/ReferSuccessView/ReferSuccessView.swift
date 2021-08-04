@@ -17,6 +17,8 @@ class ReferSuccessView: UIView {
     @IBOutlet weak var homePageButton: UIButton!
     @IBOutlet weak var spinAgainButton: UIButton!
     @IBOutlet weak var descLabel: UILabel!
+    @IBOutlet weak var headerLabel: UILabel!
+    @IBOutlet weak var goToLabel: UILabel!
     @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var bgCloudImage: UIImageView!
     
@@ -33,8 +35,35 @@ class ReferSuccessView: UIView {
        // setupLabel(info: info)
     }
     
+    func setupFontFamily() {
+        
+        headerLabel.setSizeFont(sizeFont: (StoreManager.shared.language == GameLanguage.AR.rawValue) ?  20.0 : 20.0, fontFamily: (StoreManager.shared.language == GameLanguage.AR.rawValue) ? "Tajawal-Bold" : "OpenSans-Bold")
+        
+        descLabel.setSizeFont(sizeFont: (StoreManager.shared.language == GameLanguage.AR.rawValue) ?  14.0 : 14.0, fontFamily: (StoreManager.shared.language == GameLanguage.AR.rawValue) ? "Tajawal-Regular" : "OpenSans-Regular")
+        
+        goToLabel.setSizeFont(sizeFont: (StoreManager.shared.language == GameLanguage.AR.rawValue) ?  14.0 : 14.0, fontFamily: (StoreManager.shared.language == GameLanguage.AR.rawValue) ? "Tajawal-Regular" : "OpenSans-Regular")
+        
+    }
+    
+    
     func setupLabel(info: SpinAssignReward?) {
+        setupFontFamily()
         self.descLabel.text = info?.responseObject?.first?.displayDetails?.first?.name ?? ""
+        
+        let fontDict: [NSAttributedString.Key : Any] = [
+            NSAttributedString.Key.font: (StoreManager.shared.language == GameLanguage.AR.rawValue) ? UIFont(name: "Tajawal-Regular", size: 14.0) ?? UIFont.boldSystemFont(ofSize: 1.5) : UIFont(name: "OpenSans-Regular", size: 14.0) ?? UIFont.boldSystemFont(ofSize: 1.5),
+            NSAttributedString.Key.underlineStyle : 1,
+            NSAttributedString.Key.foregroundColor :  UIColor(hexString: "#222165")
+            
+        ]
+        let rewardAttString = NSMutableAttributedString()
+        rewardAttString.append(NSAttributedString(string: "Refer Again".localized(), attributes: fontDict))
+        self.rewardButton.setAttributedTitle(rewardAttString, for: .normal)
+        
+        
+        let homeAttString = NSMutableAttributedString()
+        homeAttString.append(NSAttributedString(string: "Homepage".localized(), attributes: fontDict))
+        self.homePageButton.setAttributedTitle(homeAttString, for: .normal)
     }
     
     func appearanceSetup() {

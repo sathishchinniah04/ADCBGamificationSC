@@ -86,6 +86,7 @@ enum NeumorphicTextFieldAction {
         }
     }
     
+    
     func setImage(name: ImageType?) {
         DispatchQueue.main.async {
             if let val = name {

@@ -44,8 +44,16 @@ class ContactListController: UIViewController {
         checkLeftToRight()
         delete()
         chooseContactButton.textField.keyboardType = .phonePad
+        
         shareContactLbl.text = "Select the contact to Invite".localized()
         self.chooseContactButton.placeHolder = "Enter a contact name or mobile number".localized()
+        
+        inviteButton.setButtonFont(fSize: (StoreManager.shared.language == GameLanguage.AR.rawValue) ?  16.0 : 16.0, fName: (StoreManager.shared.language == GameLanguage.AR.rawValue) ? "Tajawal-Medium" : "OpenSans-SemiBold")
+        
+        shareContactLbl.setSizeFont(sizeFont: (StoreManager.shared.language == GameLanguage.AR.rawValue) ?  14.0 : 14.0, fontFamily: (StoreManager.shared.language == GameLanguage.AR.rawValue) ? "Tajawal-Regular" : "OpenSans-Regular")
+        
+        
+        
     }
     
     func delete() {

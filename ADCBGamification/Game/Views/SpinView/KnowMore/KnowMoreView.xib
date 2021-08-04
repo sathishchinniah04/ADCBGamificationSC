@@ -142,7 +142,9 @@
                 <outlet property="imageView" destination="3K2-sK-e7I" id="GYu-Ie-Y9K"/>
                 <outlet property="infoContainerView" destination="v5o-xZ-lal" id="Ejr-2w-7v3"/>
                 <outlet property="subTitleLabel" destination="04C-j1-Fe7" id="IQC-A0-cgf"/>
-                <outlet property="titleLabel" destination="Z1n-yV-rNK" id="8Ku-3p-cAv"/>
+                <outlet property="titleLabel" destination="sfO-8q-0Jc" id="iQ8-wj-3lF"/>
+                <outlet property="titleMainLbl" destination="Z1n-yV-rNK" id="IJP-kQ-oJS"/>
+                <outlet property="validityLabel" destination="znr-f2-KkK" id="GCq-EJ-bS2"/>
             </connections>
             <point key="canvasLocation" x="-752" y="49"/>
         </view>

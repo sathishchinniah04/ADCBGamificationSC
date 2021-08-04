@@ -66,12 +66,22 @@ class TermsView: UIView {
         
     }
     func setupLabel() {
+        
         titleTopLabel.text = "Terms & Conditions"
         subtitleLabel.text = "Once app is installed by the invitee, You will recieve points."
+        
+        titleTopLabel.setSizeFont(sizeFont: (StoreManager.shared.language == GameLanguage.AR.rawValue) ?  16.0 : 16.0, fontFamily: (StoreManager.shared.language == GameLanguage.AR.rawValue) ? "Tajawal-Bold" : "OpenSans-Bold")
+        
+        subtitleLabel.setSizeFont(sizeFont: (StoreManager.shared.language == GameLanguage.AR.rawValue) ?  14.0 : 14.0, fontFamily: (StoreManager.shared.language == GameLanguage.AR.rawValue) ? "Tajawal-Regular" : "OpenSans-Regular")
+        agreeButton.setSizeFont(sizeFont: (StoreManager.shared.language == GameLanguage.AR.rawValue) ?  14.0 : 14.0, fontFamily: (StoreManager.shared.language == GameLanguage.AR.rawValue) ? "Tajawal-Regular" : "OpenSans-Regular")
+        
+        
+        
     }
     
     func setupButton() {
         continueButton.setButtonTitle(title: "Continue",titleColor: UIColor.blue)
+        continueButton.setButtonFont(fSize: (StoreManager.shared.language == GameLanguage.AR.rawValue) ?  16.0 : 16.0, fName: (StoreManager.shared.language == GameLanguage.AR.rawValue) ? "Tajawal-Medium" : "OpenSans-SemiBold")
         continueButton.populateView { (action) in
             print("Neumorphic effect tapped \(action)")
         }

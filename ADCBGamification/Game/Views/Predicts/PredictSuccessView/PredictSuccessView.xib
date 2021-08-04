@@ -196,7 +196,10 @@ participation</string>
             <connections>
                 <outlet property="bgCloudImage" destination="krM-oZ-Fcx" id="fWS-DY-v3Z"/>
                 <outlet property="containerView" destination="HIL-NA-1vj" id="BBa-Pr-oZw"/>
+                <outlet property="goToLbl" destination="jzf-A8-AIW" id="dMl-FW-g8C"/>
+                <outlet property="headerLbl" destination="TYI-eD-yiz" id="gZg-5e-Kh2"/>
                 <outlet property="homePageButton" destination="VzQ-LZ-cgh" id="UbN-91-ugu"/>
+                <outlet property="messageLbl" destination="0nd-Sg-pBJ" id="LvE-nj-DtZ"/>
                 <outlet property="shareButton" destination="3Qk-JG-Zme" id="rs7-aM-O9X"/>
             </connections>
             <point key="canvasLocation" x="-186.95652173913044" y="66.964285714285708"/>

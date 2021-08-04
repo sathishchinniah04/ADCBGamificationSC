@@ -68,6 +68,10 @@ enum NeumorphicButtonAction {
         self.button.setTitleColor(titleColor, for: .normal)
         self.button.setImage(nil, for: .normal)
     }
+    
+    func setButtonFont(fSize: Double, fName: String) {
+        self.button.setSizeFont(sizeFont: fSize, fontFamily: fName)
+    }
     func setButtonImage(name: String) {
         self.buttonImgName = name
         let img = UIImage(named: name, in: Bundle(for: Self.self), compatibleWith: nil)

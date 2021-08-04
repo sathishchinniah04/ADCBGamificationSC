@@ -257,6 +257,8 @@
                 <outlet property="bgCloudImage" destination="xLg-Vx-zvZ" id="9wx-ZD-esO"/>
                 <outlet property="containerView" destination="IAH-G8-iQf" id="Hwi-t3-BVb"/>
                 <outlet property="descLabel" destination="Cv6-6m-HDP" id="qYh-Vf-Jlq"/>
+                <outlet property="goToLabel" destination="HUj-tb-PpK" id="VTr-Gs-dOm"/>
+                <outlet property="headerLabel" destination="D7d-3h-9d3" id="zSZ-Cj-x7c"/>
                 <outlet property="homePageButton" destination="eQC-VT-XrO" id="BLo-XF-IEx"/>
                 <outlet property="knowMoreButton" destination="g9m-97-Rjs" id="jaj-5F-uJ1"/>
                 <outlet property="rewardButton" destination="MTc-43-SJc" id="Orn-Hi-Kqe"/>

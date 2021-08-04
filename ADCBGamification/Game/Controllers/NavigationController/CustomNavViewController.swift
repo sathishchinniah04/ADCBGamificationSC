@@ -43,6 +43,7 @@ class CustomNavViewController: UINavigationController {
     
     func changeOnlyTitle(title: String?) {
         nav.titleLabel.text = title?.localized() ?? "simply".localized()
+        nav.titleLabel.setSizeFont(sizeFont: (StoreManager.shared.language == GameLanguage.AR.rawValue) ?  17.0 : 17.0, fontFamily: (StoreManager.shared.language == GameLanguage.AR.rawValue) ? "Tajawal-Bold" : "OpenSans-Bold")
         nav.subTitleLabel.isHidden = true
     }
     

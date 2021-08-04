@@ -25,6 +25,7 @@ class ADCBGameListCollectionCell: UICollectionViewCell {
     //var spinFailView = SpinSuccessViewHelper()
     override func awakeFromNib() {
         super.awakeFromNib()
+        setupFontFamily()
         // Initialization code
         //        spinFailView.loadScreen { (done) in
         //            self.spinFailView.animateAndRemove()
@@ -34,6 +35,18 @@ class ADCBGameListCollectionCell: UICollectionViewCell {
     override func prepareForReuse() {
         super.prepareForReuse()
         self.startTimer()
+    }
+    
+    func setupFontFamily() {
+        
+        gameLabel.setSizeFont(sizeFont: (StoreManager.shared.language == GameLanguage.AR.rawValue) ?  16.0 : 16.0, fontFamily: (StoreManager.shared.language == GameLanguage.AR.rawValue) ? "Tajawal-Bold" : "OpenSans-Bold")
+        
+        expireInLabel.setSizeFont(sizeFont: (StoreManager.shared.language == GameLanguage.AR.rawValue) ?  13.0 : 13.0, fontFamily: (StoreManager.shared.language == GameLanguage.AR.rawValue) ? "Tajawal-Regular" : "OpenSans-Regular")
+        
+        timeLabel.setSizeFont(sizeFont: (StoreManager.shared.language == GameLanguage.AR.rawValue) ?  13.0 : 13.0, fontFamily: (StoreManager.shared.language == GameLanguage.AR.rawValue) ? "Tajawal-Regular" : "OpenSans-Regular")
+        
+        lockDayLabel.setSizeFont(sizeFont: (StoreManager.shared.language == GameLanguage.AR.rawValue) ?  13.0 : 13.0, fontFamily: (StoreManager.shared.language == GameLanguage.AR.rawValue) ? "Tajawal-Regular" : "OpenSans-Regular")
+
     }
     
     func populateView(game: Games?, index: Int) {

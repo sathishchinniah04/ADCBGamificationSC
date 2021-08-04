@@ -18,6 +18,10 @@ class QuestionView: UIView {
     @IBOutlet weak var thirdAnswerButton: CustomNeumophicButton!
     @IBOutlet weak var fourthAnswerButton: CustomNeumophicButton!
     
+    @IBOutlet weak var questionHeaderLbl: UILabel!
+    @IBOutlet weak var questionLbl: UILabel!
+    
+    
     var noOfQ: Int = 0
     var handle:((_ qNo: Int,_ indexPath : Int)->Void)?
     var noOfButton: Int = 4
@@ -49,6 +53,19 @@ class QuestionView: UIView {
         self.addSubview(view!)
         hideAllButton()
         buttonSetup()
+        
+        questionHeaderLbl.setSizeFont(sizeFont: (StoreManager.shared.language == GameLanguage.AR.rawValue) ?  14.0 : 14.0, fontFamily: (StoreManager.shared.language == GameLanguage.AR.rawValue) ? "Tajawal-Regular" : "OpenSans-Regular")
+        
+        questionLbl.setSizeFont(sizeFont: (StoreManager.shared.language == GameLanguage.AR.rawValue) ?  20.0 : 20.0, fontFamily: (StoreManager.shared.language == GameLanguage.AR.rawValue) ? "Tajawal-Medium" : "OpenSans-SemiBold")
+        
+        firstAnswerButton.button.setSizeFont(sizeFont: (StoreManager.shared.language == GameLanguage.AR.rawValue) ?  16.0 : 16.0, fontFamily: (StoreManager.shared.language == GameLanguage.AR.rawValue) ? "Tajawal-Medium" : "OpenSans-SemiBold")
+        
+        secondAnswerButton.button.setSizeFont(sizeFont: (StoreManager.shared.language == GameLanguage.AR.rawValue) ?  16.0 : 16.0, fontFamily: (StoreManager.shared.language == GameLanguage.AR.rawValue) ? "Tajawal-Medium" : "OpenSans-SemiBold")
+        
+        thirdAnswerButton.button.setSizeFont(sizeFont: (StoreManager.shared.language == GameLanguage.AR.rawValue) ?  16.0 : 16.0, fontFamily: (StoreManager.shared.language == GameLanguage.AR.rawValue) ? "Tajawal-Medium" : "OpenSans-SemiBold")
+        
+        fourthAnswerButton.button.setSizeFont(sizeFont: (StoreManager.shared.language == GameLanguage.AR.rawValue) ?  16.0 : 16.0, fontFamily: (StoreManager.shared.language == GameLanguage.AR.rawValue) ? "Tajawal-Medium" : "OpenSans-SemiBold")
+        
     }
     
     func buttonSetup() {
