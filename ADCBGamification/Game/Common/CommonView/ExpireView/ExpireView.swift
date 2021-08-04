@@ -69,6 +69,10 @@ class ExpireView: UIView {
         secondStackView.spacing = secondStackSpace
     }
     
+    func setupFontFamily() {
+        gameNameLabel.setSizeFont(sizeFont: 20.0, fontFamily: "Tajawal Bold")
+    }
+    
     func populateView(isShowTerms: Bool = true, game: Games?, complition: (()->Void)?) {
         self.game = game
         self.isShowTerms = isShowTerms

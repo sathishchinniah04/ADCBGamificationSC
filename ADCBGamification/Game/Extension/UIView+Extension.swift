@@ -194,3 +194,12 @@ extension UIView {
     }
     
 }
+
+extension UILabel {
+    
+    func setSizeFont(sizeFont: Double, fontFamily: String) {
+        self.font =  UIFont(name: fontFamily, size: CGFloat(sizeFont))!
+        self.sizeToFit()
+    }
+}
+
