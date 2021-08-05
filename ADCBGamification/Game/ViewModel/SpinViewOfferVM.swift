@@ -8,6 +8,9 @@
 import Foundation
 
 class SpinViewOfferVM {
+    
+    static var networkManager = NetworkManager()
+    
     static func getOffers(gameId: String, complition:((SpinOffers)->Void)?) {
         let urlStr = Constants.spinGetSpinOffer+"/\(gameId)/1/viewOffers"
         guard let url = URL(string: urlStr) else { return }
@@ -15,7 +18,7 @@ class SpinViewOfferVM {
         urlReq.setValue(Utility.getRandonNo(), forHTTPHeaderField: "X_CORRELATION_ID")
         urlReq.setValue(StoreManager.shared.msisdn, forHTTPHeaderField: "customerId")
         urlReq.setValue(StoreManager.shared.language, forHTTPHeaderField: "language")
-        NetworkManager.getRequest(struct: SpinOffers.self, url: urlStr, urlReq: urlReq) { (data, error) in
+        networkManager.getRequest(struct: SpinOffers.self, url: urlStr, urlReq: urlReq) { (data, error) in
             if let dat = data {
                 complition?(dat)
             }
@@ -39,7 +42,7 @@ class SpinViewOfferVM {
         ] as [String : Any]
         
         let urlStr = Constants.spinAssignReward
-        NetworkManager.postRequest(struct: SpinAssignReward.self, url: urlStr, requestData: myDict) { (data, error) in
+        networkManager.postRequest(struct: SpinAssignReward.self, url: urlStr, requestData: myDict) { (data, error) in
             if let data = data {
                 complition?(data)
             }

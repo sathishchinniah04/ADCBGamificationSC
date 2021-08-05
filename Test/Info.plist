@@ -88,6 +88,6 @@
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
 	<key>gameUrl</key>
-	<string>http://cvm-game.20.74.146.216.nip.io/</string>
+	<string>https://cvm-magik-uat.20.74.146.216.nip.io/</string>
 </dict>
 </plist>

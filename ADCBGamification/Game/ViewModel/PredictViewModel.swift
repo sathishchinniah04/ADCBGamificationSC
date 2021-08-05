@@ -8,6 +8,9 @@
 import Foundation
 
 class PredictViewModel {
+    
+    static var networkManager = NetworkManager()
+    
     static func getPredictDetail(gameId: String, complition:((PredictGame)->Void)?) {
         let urlStr = Constants.predictgameDetail+"\(gameId)/1"
         guard let url = URL(string: urlStr) else {print("Inavlid url getPredictDetail"); return }
@@ -19,7 +22,7 @@ class PredictViewModel {
         urlReq.setValue(StoreManager.shared.msisdn, forHTTPHeaderField: "customerId")
         urlReq.setValue(StoreManager.shared.language, forHTTPHeaderField: "language")
         
-        NetworkManager.getRequest(struct: PredictGame.self, url: urlStr, urlReq: urlReq) { (data, error) in
+        networkManager.getRequest(struct: PredictGame.self, url: urlStr, urlReq: urlReq) { (data, error) in
             if let data = data {
                 complition?(data)
             } else {
@@ -38,7 +41,7 @@ class PredictViewModel {
         urlReq.setValue(StoreManager.shared.msisdn, forHTTPHeaderField: "msisdn")
         urlReq.setValue(StoreManager.shared.msisdn, forHTTPHeaderField: "customerId")
         urlReq.setValue(StoreManager.shared.language, forHTTPHeaderField: "language")
-        NetworkManager.postRequest(struct: GameList.self, url: urlStr, urlReq: urlReq, requestData: reqData(event: event, index: index)!) { (data, error) in
+        networkManager.postRequest(struct: GameList.self, url: urlStr, urlReq: urlReq, requestData: reqData(event: event, index: index)!) { (data, error) in
             if let dat = data {
                 print("data is \(dat)")
              complition?()

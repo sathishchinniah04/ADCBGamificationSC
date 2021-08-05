@@ -7,6 +7,9 @@
 
 import Foundation
 class ReferViewModel {
+    
+    static var networkManager = NetworkManager()
+    
     static func getReferalCode(complition:((ReferCode)->Void)?) {
         let service = "activation"
         let urlStr = Constants.getReferCodeUrl+service
@@ -15,7 +18,7 @@ class ReferViewModel {
         urlReq.setValue(Utility.getRandonNo(), forHTTPHeaderField: "requestId")
         urlReq.setValue(StoreManager.shared.msisdn, forHTTPHeaderField: "customerId")
         urlReq.setValue(StoreManager.shared.language, forHTTPHeaderField: "language")
-        NetworkManager.getRequest(struct: ReferCode.self, url: urlStr, urlReq: urlReq) { (data, error) in
+        networkManager.getRequest(struct: ReferCode.self, url: urlStr, urlReq: urlReq) { (data, error) in
             if let dat = data {
                 complition?(dat)
             }
@@ -37,7 +40,7 @@ class ReferViewModel {
     
         let dict = ["phoneNumber": bParty,"name":""]
         
-        NetworkManager.postRequest(struct: ReferCode.self, url: urlStr, urlReq: urlReq, requestData: dict) { (data, error) in
+        networkManager.postRequest(struct: ReferCode.self, url: urlStr, urlReq: urlReq, requestData: dict) { (data, error) in
             if let dat = data {
                 print("data is \(dat)")
                 complition?(dat)
@@ -63,7 +66,7 @@ class ReferViewModel {
         urlReq.setValue(Utility.getRandonNo(), forHTTPHeaderField: "requestId")
         urlReq.setValue(StoreManager.shared.msisdn, forHTTPHeaderField: "customerId")
         urlReq.setValue(StoreManager.shared.language, forHTTPHeaderField: "language")
-        NetworkManager.postRequest(struct: ReferNotification.self, url: urlStr, urlReq: urlReq) { (data, error) in
+        networkManager.postRequest(struct: ReferNotification.self, url: urlStr, urlReq: urlReq) { (data, error) in
             if let da = data {
                 print("data is \(da)")
             }
@@ -88,7 +91,7 @@ class ReferViewModel {
     
        // let dict = ["phoneNumber": bParty,"name":""]
         
-        NetworkManager.getRequest(struct: SimpleLifeUser.self, url: urlStr) { (data, error) in
+        networkManager.getRequest(struct: SimpleLifeUser.self, url: urlStr) { (data, error) in
             
             print("Error is \(String(describing: error))")
             if error == nil {

@@ -16,11 +16,12 @@ enum MethodType: String {
     case get = "GET"
     case post = "POST"
 }
-class NetworkManager {
+
+class NetworkManager: NSObject {
     
     private static let timeOut = 30
     
-    private class func createCommonRequest(url: URL, urlReq: URLRequest, methodType: MethodType) -> URLRequest {
+    private func createCommonRequest(url: URL, urlReq: URLRequest, methodType: MethodType) -> URLRequest {
         var req = urlReq
          //req = URLRequest(url: url,timeoutInterval: TimeInterval(timeOut))
         req.httpMethod = methodType.rawValue
@@ -29,7 +30,7 @@ class NetworkManager {
         return req
     }
     
-    class func postRequest<T:Decodable>(struct: T.Type, url: String, urlReq: URLRequest? = nil, requestData: Dictionary<String, Any>? = nil, complition: ((T?,ErrorType?)->Void)?) {
+     func postRequest<T:Decodable>(struct: T.Type, url: String, urlReq: URLRequest? = nil, requestData: Dictionary<String, Any>? = nil, complition: ((T?,ErrorType?)->Void)?) {
         guard let ur = URL(string: url) else { complition?(nil, .invalidUrl); return}
         let urReq = urlReq ?? URLRequest(url: ur)
         print("urlReq \(urReq)")
@@ -45,7 +46,7 @@ class NetworkManager {
         task(req: req, complition: complition)
     }
     
-    class func getRequest<T:Decodable>(struct: T.Type, url: String, urlReq: URLRequest? = nil, complition:((T?,ErrorType?)->Void)?) {
+     func getRequest<T:Decodable>(struct: T.Type, url: String, urlReq: URLRequest? = nil, complition:((T?,ErrorType?)->Void)?) {
         guard let ur = URL(string: url) else { complition?(nil, .invalidUrl); return}
         let urReq = urlReq ?? URLRequest(url: ur)
         print("urlReq \(urReq)")
@@ -54,10 +55,13 @@ class NetworkManager {
         task(req: req, complition: complition)
     }
     
-    private class func task<T:Decodable>(req: URLRequest, complition:((T?, ErrorType?)->Void?)?) {
-        let task = URLSession.shared.dataTask(with: req) { (data, resp, error) in
-            printStatement(req: req, data: data, resp: resp, error: error)
-            parseData(data: data, resp: resp, error: error, complition: complition)
+    private func task<T:Decodable>(req: URLRequest, complition:((T?, ErrorType?)->Void?)?) {
+        
+        let session = URLSession(configuration: URLSessionConfiguration.default, delegate: self, delegateQueue: nil)
+        
+        let task = session.dataTask(with: req) { (data, resp, error) in
+            self.printStatement(req: req, data: data, resp: resp, error: error)
+            self.parseData(data: data, resp: resp, error: error, complition: complition)
             if let httpResponse = resp as? HTTPURLResponse{
                 if  let dict = httpResponse.allHeaderFields as? [String: String] {
                 let message = dict["Share_Message"]
@@ -69,7 +73,7 @@ class NetworkManager {
         task.resume()
     }
     
-    private static func printStatement(req: URLRequest, data: Data?, resp: URLResponse?, error: Error?) {
+    private func printStatement(req: URLRequest, data: Data?, resp: URLResponse?, error: Error?) {
         print("\n\n\n")
         
         print("responce is \(resp)\n\n\n")
@@ -94,7 +98,7 @@ class NetworkManager {
         print("\n\n\n")
     }
     
-    private class func parseData<T: Decodable>(data: Data?, resp: URLResponse?, error: Error?,complition:((T?, ErrorType?)->Void?)?) {
+    private func parseData<T: Decodable>(data: Data?, resp: URLResponse?, error: Error?,complition:((T?, ErrorType?)->Void?)?) {
         guard let data = data else { complition?(nil,.checkError) ;return}
         do {
             let result = try JSONDecoder().decode(T.self, from: data)
@@ -107,4 +111,15 @@ class NetworkManager {
             complition?(nil, .decodeError(error.localizedDescription))
         }
     }
+}
+
+extension NetworkManager : URLSessionDelegate {
+    
+    public func urlSession(_ session: URLSession, didReceive challenge: URLAuthenticationChallenge, completionHandler: @escaping (URLSession.AuthChallengeDisposition, URLCredential?) -> Void) {
+           //Trust the certificate even if not valid
+           let urlCredential = URLCredential(trust: challenge.protectionSpace.serverTrust!)
+
+           completionHandler(.useCredential, urlCredential)
+        }
+    
 }
