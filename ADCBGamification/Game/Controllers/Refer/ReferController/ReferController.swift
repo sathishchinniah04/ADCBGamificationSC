@@ -47,6 +47,9 @@ class ReferController: UIViewController {
         shareReferalLabel.setSizeFont(sizeFont: (StoreManager.shared.language == GameLanguage.AR.rawValue) ?  14.0 : 14.0, fontFamily: (StoreManager.shared.language == GameLanguage.AR.rawValue) ? "Tajawal-Light" : "OpenSans-Light")
         referCodeLabel.setSizeFont(sizeFont: (StoreManager.shared.language == GameLanguage.AR.rawValue) ?  16.0 : 16.0, fontFamily: (StoreManager.shared.language == GameLanguage.AR.rawValue) ? "Tajawal-Regular" : "OpenSans-Regular")
         
+        let con = self.navigationController
+        (con as? CustomNavViewController)?.changeOnlyTitle(title: "Refer & Win".localized())
+        
     }
     
     func buttonUserInteraction(enable: Bool) {

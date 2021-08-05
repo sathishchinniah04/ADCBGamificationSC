@@ -77,7 +77,7 @@ class SpinerContainerView: UIView {
             
             print("index  found is \(ind) self.offer count is == \(self.offer?.count)")
             DispatchQueue.main.async {
-                self.startRotate(index: ind*2) { () -> Void? in
+                self.startRotate(index: ind*1) { () -> Void? in
                     return complition?(true)
             
                 }//(index: ind*2, complition: complition)

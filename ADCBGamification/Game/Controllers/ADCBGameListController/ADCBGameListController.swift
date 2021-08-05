@@ -55,7 +55,7 @@ class ADCBGameListController: UIViewController {
         super.viewWillAppear(animated)
         print("viewWillAppear")
         let con = self.navigationController
-        
+ 
         (con as? CustomNavViewController)?.changeOnlyTitle(title: "Games".localized())
     }
     

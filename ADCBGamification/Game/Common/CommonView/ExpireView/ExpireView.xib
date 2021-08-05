@@ -44,7 +44,7 @@
                                     <rect key="frame" x="20" y="0.0" width="374" height="330"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="AOu-or-gVc">
-                                            <rect key="frame" x="0.0" y="0.0" width="374" height="131.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="374" height="150.5"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="4mY-c6-DUZ">
                                                     <rect key="frame" x="0.0" y="0.0" width="374" height="54"/>
@@ -63,9 +63,9 @@
                                                         </label>
                                                     </subviews>
                                                 </stackView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="250" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g6i-Vh-D9n">
-                                                    <rect key="frame" x="0.0" y="74" width="374" height="57.5"/>
-                                                    <string key="text">Play and win exciting rewards.Play and win exciting rewards.Play and win exciting rewards.Play and win exciting rewards.Play and win exciting rewards.</string>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="250" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g6i-Vh-D9n">
+                                                    <rect key="frame" x="0.0" y="74" width="374" height="76.5"/>
+                                                    <string key="text">Play and win exciting rewards.Play and win exciting rewards.Play and win exciting rewards.Play and win exciting rewards.Play and win exciting rewards.rewards.Play and win exciting rewards.Play and win exciting rewards.rewards.Play and win exciting rewards.Play and win exciting rewards.</string>
                                                     <fontDescription key="fontDescription" name="OpenSans-Light" family="Open Sans" pointSize="14"/>
                                                     <color key="textColor" red="0.32941176470588235" green="0.32941176470588235" blue="0.33725490196078434" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>

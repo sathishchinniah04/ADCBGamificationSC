@@ -108,8 +108,16 @@ class ExpireView: UIView {
     
     func labelSetup(game: Games) {
         gameNameLabel.text = game.displayDetails?.name
-        gameNameSubTitleLabel.text = game.displayDetails?.synonym   //game.gameType
+        //gameNameSubTitleLabel.text = game.displayDetails?.synonym   //game.gameType
         descLabel.text = game.displayDetails?.description ?? ""
+        
+        if game.gameType == "PredictNWin" {
+            gameNameSubTitleLabel.text = "Play and win exciting rewards!"
+        } else if game.gameType == "SpinNWin" {
+            gameNameSubTitleLabel.text = "Spin the wheel and win exciting prizes"
+       } else if game.gameType == "ReferNWin" {
+        gameNameSubTitleLabel.text = "Invite your friends to join Simplylife and earn exciting rewards"
+       }
     }
     
     func checkGameStatus(game: Games) {
