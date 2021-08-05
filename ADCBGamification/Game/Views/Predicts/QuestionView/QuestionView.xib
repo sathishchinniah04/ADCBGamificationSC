@@ -24,9 +24,7 @@
                 <outlet property="fourthAnswerButton" destination="8R9-1g-R2p" id="Msb-Kc-G9e"/>
                 <outlet property="noOfQuesLabel" destination="KP8-PO-nts" id="PYE-p5-eK4"/>
                 <outlet property="questionContainerView" destination="D0M-qR-YQ9" id="aZx-DU-G3i"/>
-                <outlet property="questionHeaderLbl" destination="KP8-PO-nts" id="b4X-MX-zf6"/>
                 <outlet property="questionLabel" destination="R73-1I-dve" id="sqt-mG-n4r"/>
-                <outlet property="questionLbl" destination="R73-1I-dve" id="PMc-YK-n2Q"/>
                 <outlet property="secondAnswerButton" destination="6vf-9J-dC4" id="ERK-YC-pbh"/>
                 <outlet property="thirdAnswerButton" destination="1cL-Dx-gQS" id="svF-Sk-jsJ"/>
             </connections>

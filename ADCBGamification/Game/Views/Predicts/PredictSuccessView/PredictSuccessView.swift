@@ -12,6 +12,15 @@ enum PredictSuccessViewAction {
 }
 class PredictSuccessView: UIView {
     
+    @IBOutlet weak var titleLbl: UILabel!
+    @IBOutlet weak var subTitleLbl: UILabel!
+    @IBOutlet weak var thumsUpImage: UIImageView! {
+        didSet {
+            thumsUpImage?.layer.cornerRadius = (thumsUpImage?.frame.size.width ?? 0.0) / 2
+            thumsUpImage?.clipsToBounds = true
+        }
+    }
+    
     @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var shareButton: NeumorphicButton!
     
@@ -41,6 +50,15 @@ class PredictSuccessView: UIView {
     
     func setupFontFamily() {
         
+        
+        titleLbl.text = "simply".localized()
+        subTitleLbl.text = "life".localized()
+        headerLbl.text = "Thank you for your  participation".localized()
+        messageLbl.text = "Winners will be announced shortly and you will receive a notification on the App. Stay tuned, enjoy the game!".localized()
+        goToLbl.text = "or".localized()
+        
+        
+        
         headerLbl.setSizeFont(sizeFont: (StoreManager.shared.language == GameLanguage.AR.rawValue) ?  20.0 : 20.0, fontFamily: (StoreManager.shared.language == GameLanguage.AR.rawValue) ? "Tajawal-Bold" : "OpenSans-Bold")
         
         messageLbl.setSizeFont(sizeFont: (StoreManager.shared.language == GameLanguage.AR.rawValue) ?  14.0 : 14.0, fontFamily: (StoreManager.shared.language == GameLanguage.AR.rawValue) ? "Tajawal-Regular" : "OpenSans-Regular")
@@ -62,7 +80,7 @@ class PredictSuccessView: UIView {
     func neumorphicEffect() {
         shareButton.populateView(complition: shareButtonActionHandler(action:))
         shareButton.buttonState(isPressed: true)
-        shareButton.setButtonTitle(title: "Share")
+        shareButton.setButtonTitle(title: "Share".localized())
         shareButton.setButtonFont(fSize: (StoreManager.shared.language == GameLanguage.AR.rawValue) ?  16.0 : 16.0, fName: (StoreManager.shared.language == GameLanguage.AR.rawValue) ? "Tajawal-Medium" : "OpenSans-SemiBold")
                                   
         shareButton.button.titleLabel?.font = UIFont.systemFont(ofSize: 16, weight: .semibold)

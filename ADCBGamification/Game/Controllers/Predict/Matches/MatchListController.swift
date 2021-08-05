@@ -21,6 +21,9 @@ class MatchListController: UIViewController {
         tableSetup()
         getMatchList()
         self.bgCloudImage.image = UIImage(named: "Clouds", in: Bundle(for: CustomNavView.self), compatibleWith: nil)
+        let con = self.navigationController
+ 
+        (con as? CustomNavViewController)?.changeOnlyTitle(title: "Predict & Win".localized())
     }
     
     func tableSetup() {

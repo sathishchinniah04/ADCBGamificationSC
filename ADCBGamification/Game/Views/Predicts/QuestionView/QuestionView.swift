@@ -18,10 +18,6 @@ class QuestionView: UIView {
     @IBOutlet weak var thirdAnswerButton: CustomNeumophicButton!
     @IBOutlet weak var fourthAnswerButton: CustomNeumophicButton!
     
-    @IBOutlet weak var questionHeaderLbl: UILabel!
-    @IBOutlet weak var questionLbl: UILabel!
-    
-    
     var noOfQ: Int = 0
     var handle:((_ qNo: Int,_ indexPath : Int)->Void)?
     var noOfButton: Int = 4
@@ -54,9 +50,9 @@ class QuestionView: UIView {
         hideAllButton()
         buttonSetup()
         
-        questionHeaderLbl.setSizeFont(sizeFont: (StoreManager.shared.language == GameLanguage.AR.rawValue) ?  14.0 : 14.0, fontFamily: (StoreManager.shared.language == GameLanguage.AR.rawValue) ? "Tajawal-Regular" : "OpenSans-Regular")
+        noOfQuesLabel.setSizeFont(sizeFont: (StoreManager.shared.language == GameLanguage.AR.rawValue) ?  14.0 : 14.0, fontFamily: (StoreManager.shared.language == GameLanguage.AR.rawValue) ? "Tajawal-Regular" : "OpenSans-Regular")
         
-        questionLbl.setSizeFont(sizeFont: (StoreManager.shared.language == GameLanguage.AR.rawValue) ?  20.0 : 20.0, fontFamily: (StoreManager.shared.language == GameLanguage.AR.rawValue) ? "Tajawal-Medium" : "OpenSans-SemiBold")
+        questionLabel.setSizeFont(sizeFont: (StoreManager.shared.language == GameLanguage.AR.rawValue) ?  20.0 : 20.0, fontFamily: (StoreManager.shared.language == GameLanguage.AR.rawValue) ? "Tajawal-Medium" : "OpenSans-SemiBold")
         
         firstAnswerButton.button.setSizeFont(sizeFont: (StoreManager.shared.language == GameLanguage.AR.rawValue) ?  16.0 : 16.0, fontFamily: (StoreManager.shared.language == GameLanguage.AR.rawValue) ? "Tajawal-Medium" : "OpenSans-SemiBold")
         
@@ -121,7 +117,7 @@ class QuestionView: UIView {
     
     func labelSetup(index: Int, info: EventsList) {
             questionLabel.text = info.questionList?[index].question
-            noOfQuesLabel.text = "Question \(index+1)"
+        noOfQuesLabel.text = "Question".localized() +  " \(index+1)"
     }
     
     func buttonPopulate(index: Int, info: EventsList) {

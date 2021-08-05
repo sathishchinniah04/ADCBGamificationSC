@@ -112,11 +112,11 @@ class ExpireView: UIView {
         descLabel.text = game.displayDetails?.description ?? ""
         
         if game.gameType == "PredictNWin" {
-            gameNameSubTitleLabel.text = "Play and win exciting rewards!"
+            gameNameSubTitleLabel.text = "Play and win exciting rewards!".localized()
         } else if game.gameType == "SpinNWin" {
-            gameNameSubTitleLabel.text = "Spin the wheel and win exciting prizes"
+            gameNameSubTitleLabel.text = "Spin the wheel and win exciting prizes".localized()
        } else if game.gameType == "ReferNWin" {
-        gameNameSubTitleLabel.text = "Invite your friends to join Simplylife and earn exciting rewards"
+        gameNameSubTitleLabel.text = "Invite your friends to join Simplylife and earn exciting rewards".localized()
        }
     }
     
@@ -154,8 +154,8 @@ class ExpireView: UIView {
     }
     
     func setupLabel() {
-        gameNameLabel.text = "Refer & Win"
-        expireLabel.text = "Expire is 02h 33mins"
+        gameNameLabel.text = "Refer & Win".localized()
+        expireLabel.text = "Expire on".localized() +  "02" + "h".localized() + "33" + "mins".localized()
     }
     
 }

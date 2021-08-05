@@ -160,11 +160,11 @@ class ADCBGameListCollectionCell: UICollectionViewCell {
             var daysCount = ""
             
             if value == 0 {
-                daysCount = "Today"
+                daysCount = "Today".localized()
             } else if value > 1 {
-                daysCount = "\(value)" + "day(s)"
+                daysCount = "\(value)" + "day(s)".localized()
             } else {
-                daysCount = "\(value)" + "day"
+                daysCount = "\(value)" + "day".localized()
             }
             
             self.timeLabel.text = daysCount + " \(Utility.secondsToHoursMinutesSeconds(seconds: Utility.convertStringIntoDate(date: date)).0)" + "hr".localized() + "\(Utility.secondsToHoursMinutesSeconds(seconds: Utility.convertStringIntoDate(date: date)).1)" + "min".localized()

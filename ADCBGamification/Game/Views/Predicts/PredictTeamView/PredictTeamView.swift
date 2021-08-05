@@ -115,9 +115,39 @@ class PredictTeamView: UIView {
         //leagueNameLabel.text = inf.
        // guard let events = inf else { return }
        // imageSetup(info: inf)
+        
         leagueNameLabel.text = Constants.leagueName
         firstTeamNameLabel.text = inf.opponentASynonym
         secondTeamNameLabel.text = inf.opponentBSynonym
+        let numberOfDays = Calendar.current.dateComponents([.day], from: Date(), to: Utility.convertStringToDate(date: inf.MatchDate ?? "")).day ?? 0
+        hourMinteAlignmentCheck(date: inf.MatchDate ?? "", value: numberOfDays)
+    }
+    
+    
+    
+    func hourMinteAlignmentCheck(date: String, value: Int) {
+        
+        let matchDate = Utility.convertStringToDate(date: date)
+        if matchDate < Date() {
+            self.timeLabel.text = "Expired on".localized() + " \(Utility.secondsToHoursMinutesSeconds(seconds: Utility.convertStringIntoDate(date: date)).0)" + " hr ".localized() + "\(Utility.secondsToHoursMinutesSeconds(seconds: Utility.convertStringIntoDate(date: date)).1)" + " min ".localized()
+        } else {
+            DispatchQueue.main.async {
+                
+                var daysCount = ""
+                
+                if value == 0 {
+                    daysCount = "Today".localized()
+                } else if value > 1 {
+                    daysCount = "\(value)" + "day(s)".localized()
+                } else {
+                    daysCount = "\(value)" + "day".localized()
+                }
+             
+                self.timeLabel.text = daysCount + " \(Utility.secondsToHoursMinutesSeconds(seconds: Utility.convertStringIntoDate(date: date)).0)" + " hr ".localized() + "\(Utility.secondsToHoursMinutesSeconds(seconds: Utility.convertStringIntoDate(date: date)).1)" + " min ".localized()
+            }
+        }
+
+        //\(Utility.secondsToHoursMinutesSeconds(seconds: Utility.convertStringIntoDate(date: date)).2)sec"
     }
     
     func imageSetup(info: EventsList) {

@@ -54,7 +54,7 @@ participation</string>
                                         </label>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="thumpsUp" translatesAutoresizingMaskIntoConstraints="NO" id="2Rw-81-jJC">
                                             <rect key="frame" x="107" y="74.5" width="100" height="100"/>
-                                            <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                            <color key="backgroundColor" red="0.78823530669999997" green="0.68235301969999995" blue="0.01176470611" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="100" id="WKM-pe-6nV"/>
                                                 <constraint firstAttribute="width" constant="100" id="mGx-4V-mjb"/>
@@ -172,7 +172,7 @@ participation</string>
                 </stackView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="z0B-m1-9Ph"/>
-            <color key="backgroundColor" red="0.1333333333" green="0.12941176469999999" blue="0.39607843139999999" alpha="1" colorSpace="calibratedRGB"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstItem="0oc-Io-YiN" firstAttribute="height" secondItem="6iB-qM-LIg" secondAttribute="height" multiplier="0.55" id="9GX-rv-D4f"/>
                 <constraint firstItem="ZfO-KO-arH" firstAttribute="centerY" secondItem="0oc-Io-YiN" secondAttribute="centerY" id="DVh-nV-RYs"/>
@@ -201,6 +201,9 @@ participation</string>
                 <outlet property="homePageButton" destination="VzQ-LZ-cgh" id="UbN-91-ugu"/>
                 <outlet property="messageLbl" destination="0nd-Sg-pBJ" id="LvE-nj-DtZ"/>
                 <outlet property="shareButton" destination="3Qk-JG-Zme" id="rs7-aM-O9X"/>
+                <outlet property="subTitleLbl" destination="y3t-6E-yu0" id="nFC-Rr-YTd"/>
+                <outlet property="thumsUpImage" destination="2Rw-81-jJC" id="Fnv-il-TMX"/>
+                <outlet property="titleLbl" destination="qkQ-ZR-bM9" id="X2n-4T-KRn"/>
             </connections>
             <point key="canvasLocation" x="-186.95652173913044" y="66.964285714285708"/>
         </view>
@@ -215,9 +218,6 @@ participation</string>
         </systemColor>
         <systemColor name="systemGray2Color">
             <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemYellowColor">
-            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
