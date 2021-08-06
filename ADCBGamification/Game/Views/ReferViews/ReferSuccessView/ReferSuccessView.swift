@@ -12,6 +12,7 @@ enum ReferSuccessViewAction {
 }
 
 class ReferSuccessView: UIView {
+    
     @IBOutlet weak var rewardButton: UIButton!
     @IBOutlet weak var knowMoreButton: UIButton!
     @IBOutlet weak var homePageButton: UIButton!
@@ -21,6 +22,7 @@ class ReferSuccessView: UIView {
     @IBOutlet weak var goToLabel: UILabel!
     @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var bgCloudImage: UIImageView!
+    @IBOutlet weak var logoImageView: UIImageView!
     
     var handle:((ReferSuccessViewAction)->Void)?
     
@@ -36,6 +38,8 @@ class ReferSuccessView: UIView {
     }
     
     func setupFontFamily() {
+        
+        logoImageView.image = UIImage(named: (StoreManager.shared.language == "AR") ? "Logo_Arabic" : "Logo", in: Bundle(for: CustomNavView.self), compatibleWith: nil)
         
         headerLabel.setSizeFont(sizeFont: (StoreManager.shared.language == GameLanguage.AR.rawValue) ?  20.0 : 20.0, fontFamily: (StoreManager.shared.language == GameLanguage.AR.rawValue) ? "Tajawal-Bold" : "OpenSans-Bold")
         

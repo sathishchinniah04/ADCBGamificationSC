@@ -23,10 +23,12 @@ class PredictIntroController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         print("viewWillAppear")
-        if !isDirectLoad {return}
         let con = self.navigationController
+        (con as? CustomNavViewController)?.showLogo()
+        if !isDirectLoad {return}
+
         //(con as? CustomNavViewController)?.hideBackButton(isHide: true)
-        (con as? CustomNavViewController)?.changeTitleAndSubTitle(title: "simply".localized(), subTitle: "life".localized())
+        //(con as? CustomNavViewController)?.changeTitleAndSubTitle(title: "simply".localized(), subTitle: "life".localized())
     }
 
     override func viewWillDisappear(_ animated: Bool) {

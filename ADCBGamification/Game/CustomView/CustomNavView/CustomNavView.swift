@@ -17,6 +17,7 @@ enum CustomNavViewAction {
     @IBOutlet weak var backButton: UIButton!
     @IBOutlet weak var homeButton: UIButton!
     @IBOutlet weak var bgCloudImage: UIImageView!
+    @IBOutlet weak var logoImageView: UIImageView!
     
     var isDismiss: Bool = false
     var view: UIView?
@@ -42,14 +43,16 @@ enum CustomNavViewAction {
     }
     
     func initialStup() {
-        
+
         view = loadXib()
         view?.frame = self.bounds
         view?.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         self.addSubview(view!)
-        titleLabel.text = "simply".localized()
-        subTitleLabel.text = "life".localized()
-        
+        //titleLabel.text = "simply".localized()
+        //subTitleLabel.text = "life".localized()
+        titleLabel.isHidden = true
+        subTitleLabel.isHidden = true
+        logoImageView.image = UIImage(named: (StoreManager.shared.language == "AR") ? "Logo_Arabic" : "Logo", in: Bundle(for: CustomNavView.self), compatibleWith: nil)
         let backBtnImage = UIImage(named: (StoreManager.shared.language == "AR") ? "forward" : "Back", in: Bundle(for: CustomNavView.self), compatibleWith: nil)
         backButton.setImage(backBtnImage, for: .normal)
     }

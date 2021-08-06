@@ -18,6 +18,7 @@ class SpinFailView: UIView {
     @IBOutlet weak var messageLabel: UILabel!
     @IBOutlet weak var homePageButton: UIButton!
     @IBOutlet weak var bgCloudImage: UIImageView!
+    @IBOutlet weak var logoImageView: UIImageView!
     
     var handle:((SpinFailViewAction)->Void)?
     
@@ -33,12 +34,17 @@ class SpinFailView: UIView {
     }
     
     func appearanceSetup() {
+        self.titleHeaderLabel.isHidden = true
+        self.subTitleLabel.isHidden = true
+        
+        logoImageView.image = UIImage(named: (StoreManager.shared.language == "AR") ? "Logo_Arabic" : "Logo", in: Bundle(for: CustomNavView.self), compatibleWith: nil)
+        
         setupFontFamily()
         self.titleLable.text = "Oh no!".localized()
         self.goToLabel.text = "Go To".localized()
         self.messageLabel.text = "Better luck next time!".localized()
-        self.titleHeaderLabel.text = "simply".localized()
-        self.subTitleLabel.text = "life".localized()
+        //self.titleHeaderLabel.text = "simply".localized()
+        //self.subTitleLabel.text = "life".localized()
         
         
         let fontDict: [NSAttributedString.Key : Any] = [

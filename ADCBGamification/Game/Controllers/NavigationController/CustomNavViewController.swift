@@ -32,7 +32,7 @@ class CustomNavViewController: UINavigationController {
     }
     
     func changeTitle(title: String?) {
-        nav.titleLabel.text = title?.localized() ?? "simply".localized()
+        //nav.titleLabel.text = title?.localized() ?? "simply".localized()
     }
     
     func changeTitleAndSubTitle(title: String?, subTitle: String?) {
@@ -42,8 +42,18 @@ class CustomNavViewController: UINavigationController {
     }
     
     func changeOnlyTitle(title: String?) {
-        nav.titleLabel.text = title?.localized() ?? "simply".localized()
+        
+        nav.titleLabel.text = title?.localized() ?? "Games".localized()
         nav.titleLabel.setSizeFont(sizeFont: (StoreManager.shared.language == GameLanguage.AR.rawValue) ?  17.0 : 17.0, fontFamily: (StoreManager.shared.language == GameLanguage.AR.rawValue) ? "Tajawal-Bold" : "OpenSans-Bold")
+        
+        nav.titleLabel.isHidden = false
+        nav.logoImageView.isHidden = true
+        nav.subTitleLabel.isHidden = true
+    }
+    
+    func showLogo() {
+        nav.titleLabel.isHidden = true
+        nav.logoImageView.isHidden = false
         nav.subTitleLabel.isHidden = true
     }
     

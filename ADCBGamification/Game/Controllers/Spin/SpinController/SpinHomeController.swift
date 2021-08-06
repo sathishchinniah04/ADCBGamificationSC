@@ -50,15 +50,17 @@ class SpinHomeController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         print("viewWillAppear")
-        if !isDirectLoad {return}
         con = self.navigationController
        // let con = self.navigationController
         (con as? CustomNavViewController)?.changeTitleAndSubTitle(title: nil, subTitle: nil)
+        (con as? CustomNavViewController)?.showLogo()
+        if !isDirectLoad {return}
+
     }
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        con = self.navigationController
-        (con as? CustomNavViewController)?.changeTitleAndSubTitle(title: nil, subTitle: nil)
+        //con = self.navigationController
+       // (con as? CustomNavViewController)?.changeTitleAndSubTitle(title: nil, subTitle: nil)
     }
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)

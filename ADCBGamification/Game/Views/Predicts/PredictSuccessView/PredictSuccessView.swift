@@ -14,12 +14,7 @@ class PredictSuccessView: UIView {
     
     @IBOutlet weak var titleLbl: UILabel!
     @IBOutlet weak var subTitleLbl: UILabel!
-    @IBOutlet weak var thumsUpImage: UIImageView! {
-        didSet {
-            thumsUpImage?.layer.cornerRadius = (thumsUpImage?.frame.size.width ?? 0.0) / 2
-            thumsUpImage?.clipsToBounds = true
-        }
-    }
+    @IBOutlet weak var thumsUpImage: UIImageView!
     
     @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var shareButton: NeumorphicButton!
@@ -30,7 +25,7 @@ class PredictSuccessView: UIView {
     @IBOutlet weak var headerLbl: UILabel!
     @IBOutlet weak var messageLbl: UILabel!
     @IBOutlet weak var goToLbl: UILabel!
-    
+    @IBOutlet weak var logoImageView: UIImageView!
     
     let blueColor = UIColor(red: 34.0/256.0, green: 33.0/256.0, blue: 101.0/256.0, alpha: 1.0)
     
@@ -50,9 +45,9 @@ class PredictSuccessView: UIView {
     
     func setupFontFamily() {
         
-        
-        titleLbl.text = "simply".localized()
-        subTitleLbl.text = "life".localized()
+        logoImageView.image = UIImage(named: (StoreManager.shared.language == "AR") ? "Logo_Arabic" : "Logo", in: Bundle(for: CustomNavView.self), compatibleWith: nil)
+        //titleLbl.text = "simply".localized()
+        //subTitleLbl.text = "life".localized()
         headerLbl.text = "Thank you for your  participation".localized()
         messageLbl.text = "Winners will be announced shortly and you will receive a notification on the App. Stay tuned, enjoy the game!".localized()
         goToLbl.text = "or".localized()

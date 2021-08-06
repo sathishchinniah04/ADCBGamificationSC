@@ -23,6 +23,7 @@ class ReferController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         self.addDottedLine()
         self.neumorphicButtonSetup()
         chooseContactButton.alpha = 0.3
@@ -49,7 +50,6 @@ class ReferController: UIViewController {
         
         let con = self.navigationController
         (con as? CustomNavViewController)?.changeOnlyTitle(title: "Refer & Win".localized())
-        
     }
     
     func buttonUserInteraction(enable: Bool) {

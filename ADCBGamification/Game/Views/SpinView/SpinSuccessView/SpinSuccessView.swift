@@ -27,6 +27,7 @@ class SpinSuccessView: UIView {
     @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var bgCloudImage: UIImageView!
+    @IBOutlet weak var logoImageView: UIImageView!
     
     var handle:((SpinSuccessViewAction)->Void)?
     
@@ -54,11 +55,15 @@ class SpinSuccessView: UIView {
     
     func setupLabel(info: SpinAssignReward?) {
         
+        logoImageView.image = UIImage(named: (StoreManager.shared.language == "AR") ? "Logo_Arabic" : "Logo", in: Bundle(for: CustomNavView.self), compatibleWith: nil)
+        
+        titleHeaderLabel.isHidden = true
+        subTitleLabel.isHidden = true
         setupFontFamily()
         self.titleLable.text = "Hurray!".localized()
         self.goToLabel.text = "Go To".localized()
-        self.titleHeaderLabel.text = "simply".localized()
-        self.subTitleLabel.text = "life".localized()
+        //self.titleHeaderLabel.text = "simply".localized()
+        //self.subTitleLabel.text = "life".localized()
 
         let fontDict: [NSAttributedString.Key : Any] = [
             NSAttributedString.Key.font: (StoreManager.shared.language == GameLanguage.AR.rawValue) ? UIFont(name: "Tajawal-Regular", size: 14.0) ?? UIFont.boldSystemFont(ofSize: 1.5) : UIFont(name: "OpenSans-Regular", size: 14.0) ?? UIFont.boldSystemFont(ofSize: 1.5),

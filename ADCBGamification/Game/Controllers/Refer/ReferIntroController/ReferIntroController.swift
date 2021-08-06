@@ -20,23 +20,23 @@ class ReferIntroController: UIViewController {
 //
         initialSetup()
         self.bgCloudImage.image = UIImage(named: "Clouds", in: Bundle(for: CustomNavView.self), compatibleWith: nil)
+
     }
     
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         print("viewWillAppear")
-        if !isDirectLoad {return}
         let con = self.navigationController
-       // (con as? CustomNavViewController)?.hideBackButton(isHide: true)
+        (con as? CustomNavViewController)?.showLogo()
+        if !isDirectLoad {return}
     }
 
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         if isDirectLoad {return}
         print("viewWillDisappear")
-        let con = self.navigationController
-       // (con as? CustomNavViewController)?.hideBackButton(isHide: false)
+
     }
     func initialSetup() {
         expireView.setupButtonName(name: "Refer".localized())

@@ -27,22 +27,29 @@
                     <rect key="frame" x="0.0" y="0.0" width="414" height="493"/>
                 </imageView>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Clouds" translatesAutoresizingMaskIntoConstraints="NO" id="YLk-rb-PXE">
-                    <rect key="frame" x="0.0" y="64.5" width="414" height="63"/>
+                    <rect key="frame" x="0.0" y="66" width="414" height="63"/>
                 </imageView>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Mobile" translatesAutoresizingMaskIntoConstraints="NO" id="Jcq-fF-ACp">
-                    <rect key="frame" x="138.5" y="117.5" width="137" height="250"/>
+                    <rect key="frame" x="138.5" y="119" width="137" height="250"/>
                 </imageView>
                 <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tx1-8d-WNB">
-                    <rect key="frame" x="170" y="64" width="74.5" height="20.5"/>
+                    <rect key="frame" x="157" y="64" width="100" height="22"/>
                     <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="simply" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ROz-wn-Osz">
-                            <rect key="frame" x="0.0" y="0.0" width="52.5" height="20.5"/>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="cQ1-Dp-4Kp">
+                            <rect key="frame" x="0.0" y="0.0" width="100" height="22"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="22" id="Fax-Ca-ZoY"/>
+                                <constraint firstAttribute="width" constant="100" id="uwd-sa-7wn"/>
+                            </constraints>
+                        </imageView>
+                        <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="simply" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ROz-wn-Osz">
+                            <rect key="frame" x="0.0" y="0.0" width="0.0" height="22"/>
                             <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="life" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IZP-xT-yy6">
-                            <rect key="frame" x="52.5" y="0.0" width="22" height="20.5"/>
+                        <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="life" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IZP-xT-yy6">
+                            <rect key="frame" x="0.0" y="0.0" width="0.0" height="22"/>
                             <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
@@ -250,6 +257,7 @@
                 <outlet property="goToLabel" destination="Y86-5E-lxT" id="s7i-Dg-cxZ"/>
                 <outlet property="homePageButton" destination="xUq-On-su3" id="ww5-Ds-eHj"/>
                 <outlet property="imageView" destination="NO2-F8-Ffb" id="Tpd-vO-MEX"/>
+                <outlet property="logoImageView" destination="cQ1-Dp-4Kp" id="PdU-oO-ZwP"/>
                 <outlet property="messageLabel" destination="70g-FE-qZ0" id="Aox-pl-00G"/>
                 <outlet property="subTitleLabel" destination="IZP-xT-yy6" id="nvH-cB-0yK"/>
                 <outlet property="titleHeaderLabel" destination="ROz-wn-Osz" id="aBp-BA-X1z"/>
@@ -261,6 +269,7 @@
     <resources>
         <image name="Clouds" width="300" height="63"/>
         <image name="CurveClip" width="187.5" height="211"/>
+        <image name="Logo" width="102" height="22"/>
         <image name="Mobile" width="137" height="250"/>
         <image name="Sad" width="130" height="104"/>
         <systemColor name="systemBackgroundColor">
