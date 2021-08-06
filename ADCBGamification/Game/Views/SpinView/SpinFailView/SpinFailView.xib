@@ -33,13 +33,13 @@
                     <rect key="frame" x="138.5" y="119" width="137" height="250"/>
                 </imageView>
                 <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tx1-8d-WNB">
-                    <rect key="frame" x="157" y="64" width="100" height="22"/>
+                    <rect key="frame" x="164.5" y="64" width="85" height="22"/>
                     <subviews>
                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="cQ1-Dp-4Kp">
-                            <rect key="frame" x="0.0" y="0.0" width="100" height="22"/>
+                            <rect key="frame" x="0.0" y="0.0" width="85" height="22"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="22" id="Fax-Ca-ZoY"/>
-                                <constraint firstAttribute="width" constant="100" id="uwd-sa-7wn"/>
+                                <constraint firstAttribute="width" constant="85" id="uwd-sa-7wn"/>
                             </constraints>
                         </imageView>
                         <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="simply" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ROz-wn-Osz">

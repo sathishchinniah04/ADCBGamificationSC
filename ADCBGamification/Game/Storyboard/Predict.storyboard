@@ -133,7 +133,7 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="63"/>
                             </imageView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Oaw-BX-70x">
-                                <rect key="frame" x="0.0" y="89" width="414" height="696"/>
+                                <rect key="frame" x="0.0" y="94" width="414" height="691"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4AT-rD-JbW">
@@ -171,7 +171,7 @@
                         <viewLayoutGuide key="safeArea" id="dKt-wo-pLV"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="Oaw-BX-70x" firstAttribute="top" secondItem="dKt-wo-pLV" secondAttribute="top" constant="45" id="1CZ-fq-Qpp"/>
+                            <constraint firstItem="Oaw-BX-70x" firstAttribute="top" secondItem="dKt-wo-pLV" secondAttribute="top" constant="50" id="1CZ-fq-Qpp"/>
                             <constraint firstItem="5VT-R3-Pow" firstAttribute="trailing" secondItem="dKt-wo-pLV" secondAttribute="trailing" id="3cr-lp-ygL"/>
                             <constraint firstItem="otf-wu-BSJ" firstAttribute="height" secondItem="n2S-G4-qs1" secondAttribute="height" multiplier="0.5" id="7Sw-AM-rJq"/>
                             <constraint firstItem="Oaw-BX-70x" firstAttribute="leading" secondItem="dKt-wo-pLV" secondAttribute="leading" id="8PO-Bj-YNT"/>

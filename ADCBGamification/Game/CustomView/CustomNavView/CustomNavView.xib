@@ -51,23 +51,23 @@
                     </connections>
                 </button>
                 <stackView opaque="NO" contentMode="scaleToFill" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="q4e-9g-zji">
-                    <rect key="frame" x="118" y="46" width="178.5" height="23.5"/>
+                    <rect key="frame" x="125.5" y="46" width="163.5" height="23.5"/>
                     <subviews>
                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="oy3-Mw-DVZ">
-                            <rect key="frame" x="0.0" y="0.5" width="100" height="22"/>
+                            <rect key="frame" x="0.0" y="0.5" width="85" height="22"/>
                             <constraints>
-                                <constraint firstAttribute="width" constant="100" id="3LB-dq-c8Q"/>
+                                <constraint firstAttribute="width" constant="85" id="3LB-dq-c8Q"/>
                                 <constraint firstAttribute="height" constant="22" id="iWF-KH-vcT"/>
                             </constraints>
                         </imageView>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="simply" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eo7-na-Kdt">
-                            <rect key="frame" x="100" y="0.0" width="56" height="23.5"/>
+                            <rect key="frame" x="85" y="0.0" width="56" height="23.5"/>
                             <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="17"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="life" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m3B-If-k4R">
-                            <rect key="frame" x="156" y="1.5" width="22.5" height="20.5"/>
+                            <rect key="frame" x="141" y="1.5" width="22.5" height="20.5"/>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
