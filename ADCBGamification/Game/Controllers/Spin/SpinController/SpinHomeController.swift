@@ -188,69 +188,83 @@ class SpinHomeController: UIViewController {
         self.view.layer.removeAllAnimations()
         self.view.layoutIfNeeded()
     }
+    
 
     func rotate() {
-        
+
+
         DispatchQueue.main.asyncAfter(deadline: .now()) {
             self.homeAnimationView?.stop()
-            UIView.animate(withDuration: 1.0, delay: 0.5, options: [.curveLinear], animations: { () -> Void in
+            UIView.animate(withDuration: 1.0, delay: 0.5, options: [], animations: { () -> Void in
                 let rotate = CABasicAnimation(keyPath: "transform.rotation")
                 rotate.fromValue = 0
-                rotate.toValue = 1.1 * Float.pi * 2.0
-                rotate.duration = 3.0
+                rotate.toValue = 1.05 * Float.pi * 2.0
+                rotate.duration = 8
+                rotate.speed = 2
+                DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+                    rotate.speed = 0.5
+                }
+                
                 rotate.fillMode = CAMediaTimingFillMode.forwards
                 rotate.isRemovedOnCompletion = false
+                rotate.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeOut)
                 self.wheelView?.layer.add(rotate, forKey: "transform.rotation")
             }) { _ in
-                
-                UIView.animate(withDuration: 0.2, delay: 0.5, options: [.curveLinear], animations: { () -> Void in
+
+                UIView.animate(withDuration: 0.2, delay: 0.5, options: [.curveEaseOut], animations: { () -> Void in
                     self.wheelView?.layer.removeAnimation(forKey: "rotationAnimation")
                 })
                 // 1
-                DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+                DispatchQueue.main.asyncAfter(deadline: .now() + 4) {
                     if !self.spinNowTapped {
                         self.homeAnimationView?.play()
                     }
                 }
                 
+
                 // 2
-                DispatchQueue.main.asyncAfter(deadline: .now() + 4) {
+                DispatchQueue.main.asyncAfter(deadline: .now() + 6) {
                     if !self.spinNowTapped {
                         self.homeAnimationView?.stop()
-                        UIView.animate(withDuration: 1.0, delay: 0.5, options: [.curveLinear], animations: { () -> Void in
+                        UIView.animate(withDuration: 1.0, delay: 0.5, options: [], animations: { () -> Void in
                             let rotate = CABasicAnimation(keyPath: "transform.rotation")
                             rotate.toValue = 0
-                            rotate.fromValue = 0.9 * Float.pi * 2.0
-                            rotate.duration = 2.0
+                            rotate.fromValue = 1.05 * Float.pi * 2.5
+                            rotate.duration = 8
+                            rotate.speed = 2.0
+                            DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+                                rotate.speed = 0.1
+                            }
                             rotate.fillMode = CAMediaTimingFillMode.forwards
                             rotate.isRemovedOnCompletion = false
+                            rotate.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeOut)
                             self.wheelView?.layer.add(rotate, forKey: "transform.rotation")
                         }) { _ in
-
-                            UIView.animate(withDuration: 0.2, delay: 0.5, options: [.curveLinear], animations: { () -> Void in
+//
+                            UIView.animate(withDuration: 0.2, delay: 0.5, options: [], animations: { () -> Void in
                                 self.wheelView?.layer.removeAnimation(forKey: "rotationAnimation")
                             })
-                            
+
                             // 3
-                            DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+                            DispatchQueue.main.asyncAfter(deadline: .now() + 4) {
                                 if !self.spinNowTapped {
                                     self.homeAnimationView?.play()
                                 }
-                                
+
                             }
-                            
-                            // 4
-                            DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+//
+//                            // 4
+                            DispatchQueue.main.asyncAfter(deadline: .now() + 6) {
                                 if !self.spinNowTapped {
                                     self.homeAnimationView?.stop()
                                     self.slowClockRotateWheelAnimation()
                                 }
-                               
+//
                             }
-                           
+
                         }
                     }
-                    
+
 
                 }
             }
@@ -347,7 +361,7 @@ class SpinHomeController: UIViewController {
         self.spinAnimationView = .init(name: "spin_success_new")
         self.spinAnimationView!.frame = self.lottiSpinAnimationView.bounds
         self.spinAnimationView!.contentMode = .scaleAspectFill
-        self.spinAnimationView!.animationSpeed = 0.5
+        self.spinAnimationView!.animationSpeed = 1.0
         self.spinAnimationView!.loopMode = .playOnce
         self.lottiSpinAnimationView.addSubview(self.spinAnimationView!)
         self.spinAnimationView?.play()
@@ -368,11 +382,12 @@ class SpinHomeController: UIViewController {
     
     func spinnerStopped(isPass: Bool) {
         print("spinner stpped")
-        if isPass {
+        
+        if !isPass {
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
                self.spinSuccessAnimation()
             }
-            DispatchQueue.main.asyncAfter(deadline: .now() + 6.5) {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 3.5) {
                 self.spinSuccessView.loadScreen(info: self.spinAssignReward, action: self.successScreenActionHandler(action:))
             }
             
@@ -438,16 +453,4 @@ class SpinHomeController: UIViewController {
             self.navigationController?.popViewController(animated: true)
         }
     }
-}
-
-extension CATransaction {
-
-    static func disableAnimations(_ completion: () -> Void) {
-        CATransaction.begin()
-        CATransaction.setDisableActions(true)
-        CATransaction.disableActions()
-        completion()
-        CATransaction.commit()
-    }
-
 }
