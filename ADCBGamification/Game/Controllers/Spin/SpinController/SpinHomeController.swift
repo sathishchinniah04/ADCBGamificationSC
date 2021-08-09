@@ -322,11 +322,14 @@ class SpinHomeController: UIViewController {
         guard let gameId = self.game?.gameId else { return }
         SpinViewOfferVM.assignReward(gameId: gameId) { (spinAssignReward) in
             self.spinAssignReward = spinAssignReward
+            
             if let inde = spinAssignReward.responseObject?.first?.achievmentId  {
                 self.spinerView.stopAnimationAtIndex(achivementId: inde, complition: self.spinnerStopped(isPass:))
             } else {
+                
                 self.spinerView.stopAnimationAtIndex(achivementId: "1", complition: self.spinnerStopped(isPass:))
             }
+            
         }
     }
     
@@ -357,7 +360,7 @@ class SpinHomeController: UIViewController {
     
     func spinnerStopped(isPass: Bool) {
         print("spinner stpped")
-        if !isPass {
+        if isPass {
             DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
                self.spinSuccessAnimation()
             }
