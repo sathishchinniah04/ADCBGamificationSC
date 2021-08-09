@@ -122,6 +122,9 @@ class SpinHomeController: UIViewController {
         self.spinerView.enableSpinButton(hide: true)
         expireView.populateView(isShowTerms: false, game: self.game) {
             self.spinNowTapped = true
+            self.nukeAllAnimations()
+            self.wheelView?.layer.removeAllAnimations()
+            //self.wheelView?.layer.removeFromSuperlayer()
             self.homeAnimationStaticView.isHidden = true
             (self.con as? CustomNavViewController)?.changeOnlyTitle(title: "Spin & Win".localized())
             self.scaleToOrginalSize()
@@ -262,7 +265,7 @@ class SpinHomeController: UIViewController {
         CATransaction.setCompletionBlock({
             if !self.spinNowTapped {
                 DispatchQueue.main.asyncAfter(deadline: .now() - 2) {
-                    UIView.animate(withDuration: 0.2, delay: 0.5, options: [.curveEaseInOut], animations: { () -> Void in
+                    UIView.animate(withDuration: 0.2, delay: 0.5, options: [], animations: { () -> Void in
                         self.wheelView?.layer.removeAnimation(forKey: "rotationAnimation")
                     })
                     self.slowAnticlockRotateWheelAnimation()
@@ -273,9 +276,8 @@ class SpinHomeController: UIViewController {
         let rotate = CABasicAnimation(keyPath: "transform.rotation")
         rotate.fromValue = 0
         rotate.toValue = 1.1 * Float.pi * 1.0
-        rotate.duration = 20.0
+        rotate.duration = 10.0
         rotate.isRemovedOnCompletion = true
-        //rotate.speed = 0.5
         self.wheelView?.layer.add(rotate, forKey: "transform.rotation")
         CATransaction.commit()
     }
@@ -286,7 +288,7 @@ class SpinHomeController: UIViewController {
         CATransaction.setCompletionBlock({
             if !self.spinNowTapped {
                 DispatchQueue.main.asyncAfter(deadline: .now()) {
-                    UIView.animate(withDuration: 0.2, delay: 0.5, options: [.curveEaseInOut], animations: { () -> Void in
+                    UIView.animate(withDuration: 0.2, delay: 0.5, options: [], animations: { () -> Void in
                         self.wheelView?.layer.removeAnimation(forKey: "rotationAnimation")
                     })
                     self.slowClockRotateWheelAnimation()
@@ -294,13 +296,19 @@ class SpinHomeController: UIViewController {
             }
         })
         
+        if !self.spinNowTapped {
         let rotate = CABasicAnimation(keyPath: "transform.rotation")
         rotate.toValue = 0
         rotate.fromValue = 1.1 * Float.pi * 1.0
         rotate.duration = 10.0
-        rotate.isRemovedOnCompletion = false
+        rotate.isRemovedOnCompletion = true
         self.wheelView?.layer.add(rotate, forKey: "transform.rotation")
         CATransaction.commit()
+        }
+        
+        if self.spinNowTapped {
+            self.wheelView?.layer.removeAnimation(forKey: "rotationAnimation")
+        }
     }
     
     
@@ -361,11 +369,11 @@ class SpinHomeController: UIViewController {
     func spinnerStopped(isPass: Bool) {
         print("spinner stpped")
         if isPass {
-            DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
                self.spinSuccessAnimation()
             }
             DispatchQueue.main.asyncAfter(deadline: .now() + 6.5) {
-            self.spinSuccessView.loadScreen(info: self.spinAssignReward, action: self.successScreenActionHandler(action:))
+                self.spinSuccessView.loadScreen(info: self.spinAssignReward, action: self.successScreenActionHandler(action:))
             }
             
         } else {
@@ -430,4 +438,16 @@ class SpinHomeController: UIViewController {
             self.navigationController?.popViewController(animated: true)
         }
     }
+}
+
+extension CATransaction {
+
+    static func disableAnimations(_ completion: () -> Void) {
+        CATransaction.begin()
+        CATransaction.setDisableActions(true)
+        CATransaction.disableActions()
+        completion()
+        CATransaction.commit()
+    }
+
 }
