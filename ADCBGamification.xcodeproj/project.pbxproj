@@ -193,8 +193,6 @@
 		33FC31CA26971A9800868D9E /* SpinSuccessViewHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33FC31C926971A9800868D9E /* SpinSuccessViewHelper.swift */; };
 		33FC31CE26973C5100868D9E /* ExpireViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33FC31CD26973C5100868D9E /* ExpireViewModel.swift */; };
 		33FC31D326973CA000868D9E /* CustomTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33FC31D226973CA000868D9E /* CustomTimer.swift */; };
-		6A478CAF26C2C7F300E96B5F /* en.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 6A478CAD26C2C7F300E96B5F /* en.lproj */; };
-		6A478CB026C2C7F300E96B5F /* ar.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 6A478CAE26C2C7F300E96B5F /* ar.lproj */; };
 		F58A64F726B22CCB00D5713F /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = F58A644126B22CCB00D5713F /* LICENSE */; };
 		F58A64F826B22CCB00D5713F /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = F58A644126B22CCB00D5713F /* LICENSE */; };
 		F58A64F926B22CCB00D5713F /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = F58A644226B22CCB00D5713F /* README.md */; };
@@ -688,8 +686,6 @@
 		33FC31C926971A9800868D9E /* SpinSuccessViewHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpinSuccessViewHelper.swift; sourceTree = "<group>"; };
 		33FC31CD26973C5100868D9E /* ExpireViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpireViewModel.swift; sourceTree = "<group>"; };
 		33FC31D226973CA000868D9E /* CustomTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTimer.swift; sourceTree = "<group>"; };
-		6A478CAD26C2C7F300E96B5F /* en.lproj */ = {isa = PBXFileReference; lastKnownFileType = folder; path = en.lproj; sourceTree = "<group>"; };
-		6A478CAE26C2C7F300E96B5F /* ar.lproj */ = {isa = PBXFileReference; lastKnownFileType = folder; path = ar.lproj; sourceTree = "<group>"; };
 		F58A644126B22CCB00D5713F /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		F58A644226B22CCB00D5713F /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		F58A644726B22CCB00D5713F /* AnimationViewInitializers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimationViewInitializers.swift; sourceTree = "<group>"; };
@@ -908,8 +904,6 @@
 		3320FF3F2682EBC3001809AA /* Game */ = {
 			isa = PBXGroup;
 			children = (
-				6A478CAE26C2C7F300E96B5F /* ar.lproj */,
-				6A478CAD26C2C7F300E96B5F /* en.lproj */,
 				F58A660326B22E8F00D5713F /* JSON_Files */,
 				33E158C226AA52F800B0615B /* Font */,
 				33542A5C269CA747008CE8C2 /* GameListController */,
@@ -2371,7 +2365,6 @@
 				33E158D326AA530D00B0615B /* OpenSans-Light.ttf in Resources */,
 				F594428B26B91B4E006F4E8E /* Tajawal-ExtraBold.ttf in Resources */,
 				33542A7A269CA853008CE8C2 /* PageCollectionCell.xib in Resources */,
-				6A478CB026C2C7F300E96B5F /* ar.lproj in Resources */,
 				33E158D626AA530D00B0615B /* OpenSans-LightItalic.ttf in Resources */,
 				33E158CE26AA530D00B0615B /* OpenSans-ExtraBoldItalic.ttf in Resources */,
 				3320FFA72682EBC4001809AA /* Spin.storyboard in Resources */,
@@ -2397,7 +2390,6 @@
 				338116992699AC4900C8F35E /* CustomContactCell.xib in Resources */,
 				33E158CD26AA530D00B0615B /* OpenSans-Bold.ttf in Resources */,
 				F594429326B91B6D006F4E8E /* Tajawal-Regular.ttf in Resources */,
-				6A478CAF26C2C7F300E96B5F /* en.lproj in Resources */,
 				3349799926AEBA3500B909C8 /* ListGameCollectionHeaderView.xib in Resources */,
 				33E158D526AA530D00B0615B /* OpenSans-Regular.ttf in Resources */,
 				33EDB0E32692CCB40040DCD4 /* MatchTableViewCell.xib in Resources */,
