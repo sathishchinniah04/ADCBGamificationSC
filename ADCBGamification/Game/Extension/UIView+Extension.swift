@@ -198,7 +198,7 @@ extension UIView {
 extension UILabel {
     
     func setSizeFont(sizeFont: Double, fontFamily: String) {
-        self.font =  UIFont(name: fontFamily, size: CGFloat(sizeFont))!
+        self.font =  UIFont(name: fontFamily, size: CGFloat(sizeFont)) ?? UIFont.systemFont(ofSize: CGFloat(sizeFont), weight: UIFont.Weight.thin)
         self.sizeToFit()
     }
 }
@@ -207,7 +207,7 @@ extension UILabel {
 extension UIButton {
     
     func setSizeFont(sizeFont: Double, fontFamily: String) {
-        self.titleLabel?.font = UIFont(name: fontFamily, size: CGFloat(sizeFont))!
+        self.titleLabel?.font = UIFont(name: fontFamily, size: CGFloat(sizeFont)) ?? UIFont.systemFont(ofSize: CGFloat(sizeFont), weight: UIFont.Weight.thin)
         self.sizeToFit()
     }
 }
