@@ -49,6 +49,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func openGameAction() {
+        
         Game.open(controller: self, msisdn: self.msisdnTextField.text!, language: self.gameLanguageButton.titleLabel!.text!, gameType: self.gameNameButton.titleLabel!.text!, gameId: gameIdTxtFld.text!, complition: callBackHander(action:))
     }
     
