@@ -25,6 +25,10 @@ public class Game {
     
     private static var controllerRef: UIViewController?
     
+    public static func testFunction() {
+        print("testFunction")
+    }
+    
     public static func open(controller: UIViewController, msisdn: String, language: String, gameType: String, gameId: String?, complition:((GameAction)->Void)?) {
         getUrlFromInfoPlist()
         StoreManager.shared.msisdn = msisdn
