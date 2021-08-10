@@ -193,6 +193,8 @@
 		33FC31CA26971A9800868D9E /* SpinSuccessViewHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33FC31C926971A9800868D9E /* SpinSuccessViewHelper.swift */; };
 		33FC31CE26973C5100868D9E /* ExpireViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33FC31CD26973C5100868D9E /* ExpireViewModel.swift */; };
 		33FC31D326973CA000868D9E /* CustomTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33FC31D226973CA000868D9E /* CustomTimer.swift */; };
+		6A478CB326C2D07D00E96B5F /* en.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 6A478CB126C2D07C00E96B5F /* en.lproj */; };
+		6A478CB426C2D07D00E96B5F /* ar.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 6A478CB226C2D07D00E96B5F /* ar.lproj */; };
 		F58A64F726B22CCB00D5713F /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = F58A644126B22CCB00D5713F /* LICENSE */; };
 		F58A64F826B22CCB00D5713F /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = F58A644126B22CCB00D5713F /* LICENSE */; };
 		F58A64F926B22CCB00D5713F /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = F58A644226B22CCB00D5713F /* README.md */; };
@@ -476,7 +478,6 @@
 		F594428F26B91B5C006F4E8E /* Tajawal-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F594428E26B91B5C006F4E8E /* Tajawal-Light.ttf */; };
 		F594429126B91B65006F4E8E /* Tajawal-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F594429026B91B65006F4E8E /* Tajawal-Medium.ttf */; };
 		F594429326B91B6D006F4E8E /* Tajawal-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F594429226B91B6D006F4E8E /* Tajawal-Regular.ttf */; };
-		F594429726B91C4D006F4E8E /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = F594429A26B91C4D006F4E8E /* Localizable.strings */; };
 		F594429F26BA77CD006F4E8E /* Tajawal-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F594428626B91B3F006F4E8E /* Tajawal-Black.ttf */; };
 		F59442A026BA77CE006F4E8E /* Tajawal-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F594428826B91B46006F4E8E /* Tajawal-Bold.ttf */; };
 		F59442A126BA77CE006F4E8E /* Tajawal-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F594428A26B91B4E006F4E8E /* Tajawal-ExtraBold.ttf */; };
@@ -686,6 +687,8 @@
 		33FC31C926971A9800868D9E /* SpinSuccessViewHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpinSuccessViewHelper.swift; sourceTree = "<group>"; };
 		33FC31CD26973C5100868D9E /* ExpireViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpireViewModel.swift; sourceTree = "<group>"; };
 		33FC31D226973CA000868D9E /* CustomTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTimer.swift; sourceTree = "<group>"; };
+		6A478CB126C2D07C00E96B5F /* en.lproj */ = {isa = PBXFileReference; lastKnownFileType = folder; path = en.lproj; sourceTree = "<group>"; };
+		6A478CB226C2D07D00E96B5F /* ar.lproj */ = {isa = PBXFileReference; lastKnownFileType = folder; path = ar.lproj; sourceTree = "<group>"; };
 		F58A644126B22CCB00D5713F /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		F58A644226B22CCB00D5713F /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		F58A644726B22CCB00D5713F /* AnimationViewInitializers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimationViewInitializers.swift; sourceTree = "<group>"; };
@@ -831,10 +834,8 @@
 		F594428E26B91B5C006F4E8E /* Tajawal-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Tajawal-Light.ttf"; sourceTree = "<group>"; };
 		F594429026B91B65006F4E8E /* Tajawal-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Tajawal-Medium.ttf"; sourceTree = "<group>"; };
 		F594429226B91B6D006F4E8E /* Tajawal-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Tajawal-Regular.ttf"; sourceTree = "<group>"; };
-		F594429926B91C4D006F4E8E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		F594429B26B91C57006F4E8E /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Main.strings; sourceTree = "<group>"; };
 		F594429C26B91C58006F4E8E /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
-		F594429D26B91C58006F4E8E /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Localizable.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -859,7 +860,6 @@
 		3320FF022682EA9F001809AA = {
 			isa = PBXGroup;
 			children = (
-				F594429A26B91C4D006F4E8E /* Localizable.strings */,
 				3320FF0E2682EA9F001809AA /* ADCBGamification */,
 				3320FF252682EB10001809AA /* Test */,
 				3320FF0D2682EA9F001809AA /* Products */,
@@ -950,6 +950,8 @@
 		3320FF4A2682EBC3001809AA /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				6A478CB226C2D07D00E96B5F /* ar.lproj */,
+				6A478CB126C2D07C00E96B5F /* en.lproj */,
 				336D809B26A5E14700B7699B /* Singelton */,
 				336B67A726974AC6008E419B /* CommonMethod */,
 				33FC31D126973C8F00868D9E /* CustomTimer */,
@@ -2377,7 +2379,6 @@
 				F58A660C26B22EEC00D5713F /* home.json in Resources */,
 				33E158D026AA530D00B0615B /* OpenSans-BoldItalic.ttf in Resources */,
 				F594428F26B91B5C006F4E8E /* Tajawal-Light.ttf in Resources */,
-				F594429726B91C4D006F4E8E /* Localizable.strings in Resources */,
 				F58A64F926B22CCB00D5713F /* README.md in Resources */,
 				3320FFD32682EBC4001809AA /* NewReferTableViewCell.xib in Resources */,
 				33F59CDE26933283005B009A /* QuestionView.xib in Resources */,
@@ -2387,9 +2388,11 @@
 				3320FFA82682EBC4001809AA /* TermsView.xib in Resources */,
 				F594428726B91B3F006F4E8E /* Tajawal-Black.ttf in Resources */,
 				3357ED8C2693209300607F50 /* PredictTeamView.xib in Resources */,
+				6A478CB326C2D07D00E96B5F /* en.lproj in Resources */,
 				338116992699AC4900C8F35E /* CustomContactCell.xib in Resources */,
 				33E158CD26AA530D00B0615B /* OpenSans-Bold.ttf in Resources */,
 				F594429326B91B6D006F4E8E /* Tajawal-Regular.ttf in Resources */,
+				6A478CB426C2D07D00E96B5F /* ar.lproj in Resources */,
 				3349799926AEBA3500B909C8 /* ListGameCollectionHeaderView.xib in Resources */,
 				33E158D526AA530D00B0615B /* OpenSans-Regular.ttf in Resources */,
 				33EDB0E32692CCB40040DCD4 /* MatchTableViewCell.xib in Resources */,
@@ -2894,15 +2897,6 @@
 				F594429C26B91C58006F4E8E /* ar */,
 			);
 			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-		F594429A26B91C4D006F4E8E /* Localizable.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				F594429926B91C4D006F4E8E /* en */,
-				F594429D26B91C58006F4E8E /* ar */,
-			);
-			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

@@ -23,7 +23,7 @@ extension String {
     }
 
     func localized() ->String {
-        return "new r"
+       // return "new"
         let path = Bundle(for: Game.self).path(forResource:  StoreManager.shared.language.lowercased(), ofType: "lproj")
         let bundle = Bundle(path: path!)
         return NSLocalizedString(self, tableName: nil, bundle: bundle!, value: "", comment: "")
