@@ -27,7 +27,7 @@ class Constants {
     
     //http://cvm-game.20.74.146.216.nip.io/Gamification-1.0/Gamification/gameManagement/game/referral/activation/notifications
     
-    static let spinGetSpinOffer = "http://cvm-game.20.74.146.216.nip.io/Gamification-1.0/Gamification/gameEngine/executeGame"
+    static let spinGetSpinOffer = "\(baseUrl)Gamification-1.0/Gamification/gameEngine/executeGame"
     static var referMessage = ""
     
     static var leagueName:String = ""
