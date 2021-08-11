@@ -12,17 +12,17 @@ class CustomNavViewController: UINavigationController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("Crash 4")
+        
         let ststusBarH = UIApplication.shared.statusBarFrame.size.height+10
         let topView = UIView(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: ststusBarH))
         topView.backgroundColor = .clear//.customYellowColor()
-        print("Crash 5")
+        
         self.view.addSubview(topView)
         //self.delegate = self
         nav.backgroundColor = .clear//.customYellowColor()
-        print("Crash 6")
+        
         nav.frame = CGRect(x: 0, y: ststusBarH, width: UIScreen.main.bounds.width, height: 45)
-        print("Crash 7")
+        
         nav.populateView(sController: self,complition: navHandler(action:))
         self.view.addSubview(nav)
     }

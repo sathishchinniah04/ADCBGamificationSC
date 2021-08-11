@@ -28,6 +28,7 @@ public class Game {
     
     
     public static func dismissController() {
+        print("Dismiss controler called")
         controllerRef?.dismiss(animated: true, completion: nil)
     }
     
@@ -76,7 +77,7 @@ public class Game {
         StoreManager.shared.language = language
         IQKeyboardManager.shared.enable = true
         IQKeyboardManager.shared.goNext()
-        print("Crash 1")
+        
         StoreManager.shared.accessToken = "J0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9"
         paginationLoad(target: controller)
         CallBack.shared.callBacKAction { (action) in
@@ -94,16 +95,16 @@ public class Game {
     }
     
     static func paginationLoad(target: UIViewController) {
-        print("Crash 2")
+        
         let cont = UIStoryboard(name: "GameList", bundle: Bundle(for: Self.self)).instantiateViewController(withIdentifier: "ADCBGameListController")
-        print("Crash 3")
+        
         let nav = CustomNavViewController(rootViewController: cont)
         nav.navigationBar.isHidden = true
         nav.modalPresentationStyle = .fullScreen
-        print("Crash 13")
+        
         controllerRef = nav
         target.present(nav, animated: true, completion: nil)
-        print("Crash 14")
+        
     }
     
     static func deleteThis(contr: UIViewController) {

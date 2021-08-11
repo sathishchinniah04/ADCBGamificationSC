@@ -14,8 +14,8 @@
             filePath = "ADCBGamification/Game/Game.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "131"
-            endingLineNumber = "131"
+            startingLineNumber = "132"
+            endingLineNumber = "132"
             landmarkName = "getControllerRef(controller:gameType:gameId:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -30,8 +30,8 @@
             filePath = "ADCBGamification/Game/Game.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "139"
-            endingLineNumber = "139"
+            startingLineNumber = "140"
+            endingLineNumber = "140"
             landmarkName = "getControllerRef(controller:gameType:gameId:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -46,26 +46,11 @@
             filePath = "ADCBGamification/Game/Game.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "145"
-            endingLineNumber = "145"
+            startingLineNumber = "146"
+            endingLineNumber = "146"
             landmarkName = "getControllerRef(controller:gameType:gameId:)"
             landmarkType = "7">
             <Locations>
-               <Location
-                  uuid = "48F11E9A-1EB6-4B95-927B-3AD7F6656A18 - b252537e520cb125"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "static ADCBGamification.Game.getControllerRef(controller: __C.UIViewController, gameType: Swift.String, gameId: Swift.Optional&lt;Swift.String&gt;) -&gt; ()"
-                  moduleName = "ADCBGamification"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/shivkumaryadav/Documents/Project/6DRepo/Gamification/ADCBGamification/ADCBGamificationSC/ADCBGamification/Game/Game.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "145"
-                  endingLineNumber = "145"
-                  offsetFromSymbolStart = "1748">
-               </Location>
                <Location
                   uuid = "48F11E9A-1EB6-4B95-927B-3AD7F6656A18 - 57ebd26fff721b29"
                   shouldBeEnabled = "Yes"
@@ -81,6 +66,21 @@
                   endingLineNumber = "146"
                   offsetFromSymbolStart = "188">
                </Location>
+               <Location
+                  uuid = "48F11E9A-1EB6-4B95-927B-3AD7F6656A18 - 270735a9e885c3b1"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; () in closure #3 (Swift.Optional&lt;ADCBGamification.Games&gt;, Swift.Optional&lt;ADCBGamification.GameError&gt;) -&gt; () in static ADCBGamification.Game.getControllerRef(controller: __C.UIViewController, gameType: Swift.String, gameId: Swift.Optional&lt;Swift.String&gt;) -&gt; ()"
+                  moduleName = "ADCBGamification"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/shivkumaryadav/Documents/Project/6DRepo/Gamification/ADCBGamification/ADCBGamificationSC/ADCBGamification/Game/Game.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "147"
+                  endingLineNumber = "147"
+                  offsetFromSymbolStart = "44">
+               </Location>
             </Locations>
          </BreakpointContent>
       </BreakpointProxy>
@@ -94,8 +94,8 @@
             filePath = "ADCBGamification/Game/Game.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "121"
-            endingLineNumber = "121"
+            startingLineNumber = "122"
+            endingLineNumber = "122"
             landmarkName = "navigateToController(controller:storyboard:id:)"
             landmarkType = "7">
          </BreakpointContent>

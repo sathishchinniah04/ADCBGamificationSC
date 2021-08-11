@@ -43,17 +43,17 @@ enum CustomNavViewAction {
     }
     
     func initialStup() {
-        print("Crash 9")
+        
         view = loadXib()
         view?.frame = self.bounds
         view?.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-        print("Crash 10")
+        
         if let v = view {
             self.addSubview(v)
         } else {
             print("Custom nav view not found")
         }
-        print("Crash 11")
+        
         //titleLabel.text = "simply".localized()
         //subTitleLabel.text = "life".localized()
         titleLabel.isHidden = true
@@ -61,7 +61,7 @@ enum CustomNavViewAction {
         logoImageView.image = UIImage(named: (StoreManager.shared.language == "AR") ? "Logo_Arabic" : "Logo", in: Bundle(for: CustomNavView.self), compatibleWith: nil)
         let backBtnImage = UIImage(named: (StoreManager.shared.language == "AR") ? "forward" : "Back", in: Bundle(for: CustomNavView.self), compatibleWith: nil)
         backButton.setImage(backBtnImage, for: .normal)
-        print("Crash 12")
+        
     }
     
     func hideBackButton(isHide: Bool) {
@@ -93,7 +93,7 @@ enum CustomNavViewAction {
     }
     
     func populateView(sController: UIViewController, complition:((CustomNavViewAction)->Void)? = nil) {
-        print("Crash 8")
+        
         self.handler = complition
         self.sController = sController
         
