@@ -35,19 +35,19 @@ class ADCBGameListController: UIViewController {
     }
     
     func playerGameHandler() {
-//        CallBack.shared.callBacKAction { (action) in
-//            switch action {
-//            case .gamePlayed(let index):
-//                DispatchQueue.main.async {
-//                    //: TODOD - Disabling is handled based on the game.executionStatus
-//                    /* let cell = self.gamesCollectionView.cellForItem(at: index) as? ADCBGameListCollectionCell
-//                     cell?.disableCell() */
-//                }
-//                print("gamePlayed")
-//            default :
-//                print("Default action")
-//            }
-//        }
+        CallBack.shared.callBacKAction { (action) in
+            switch action {
+            case .gamePlayed(let index):
+                DispatchQueue.main.async {
+                    //: TODOD - Disabling is handled based on the game.executionStatus
+                    /* let cell = self.gamesCollectionView.cellForItem(at: index) as? ADCBGameListCollectionCell
+                     cell?.disableCell() */
+                }
+                print("gamePlayed")
+            default :
+                print("Default action")
+            }
+        }
     }
     
     
