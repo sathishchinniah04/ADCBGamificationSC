@@ -61,6 +61,9 @@ class ViewController: UIViewController {
             print("Close button tapped")
         case .spinReward:
             print("spinReward button tapped")
+        
+        default:
+            print("default")
         }
     }
     
