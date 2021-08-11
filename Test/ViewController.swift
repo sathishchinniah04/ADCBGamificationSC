@@ -67,6 +67,7 @@ class ViewController: UIViewController {
     @IBAction func openGameListButtonAction() {
         DispatchQueue.main.async {
             Game.openGameList(controller: self, msisdn: self.msisdnTextField.text!, language: self.gameLanguageButton.titleLabel!.text!, complition: self.callBackHander(action:))
+            
         }
     }
     

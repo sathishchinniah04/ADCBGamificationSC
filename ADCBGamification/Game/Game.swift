@@ -25,8 +25,10 @@ public class Game {
     
     private static var controllerRef: UIViewController?
     
-    public static func testFunction() {
-        print("testFunction")
+    
+    
+    public static func dismissController() {
+        controllerRef?.dismiss(animated: true, completion: nil)
     }
     
     public static func open(controller: UIViewController, msisdn: String, language: String, gameType: String, gameId: String?, complition:((GameAction)->Void)?) {
@@ -99,6 +101,7 @@ public class Game {
         nav.navigationBar.isHidden = true
         nav.modalPresentationStyle = .fullScreen
         print("Crash 13")
+        controllerRef = nav
         target.present(nav, animated: true, completion: nil)
         print("Crash 14")
     }
@@ -111,10 +114,11 @@ public class Game {
     private class func navigateToController(controller: UIViewController, storyboard: String, id: String) -> UIViewController {
     
         let cont = UIStoryboard(name: storyboard, bundle: Bundle(for: Game.self)).instantiateViewController(withIdentifier: id)
-        controllerRef = cont
+        
         let nav = CustomNavViewController(rootViewController: cont)
         nav.navigationBar.isHidden = true
         nav.modalPresentationStyle = .fullScreen
+        controllerRef = nav
         controller.present(nav, animated: true, completion: nil)
         return cont
         //getControllerRef(gameType: gameType)
