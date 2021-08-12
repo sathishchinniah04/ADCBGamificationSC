@@ -46,10 +46,13 @@ public class Game {
         CallBack.shared.callBacKAction { (action) in
             switch action {
             case .back:
+                print("game callback 1")
                 complition?(.backButton)
             case .close:
+                print("game callback 2")
                 complition?(.closeButton)
             case .spinReward:
+                print("game callback 3")
                 complition?(.spinReward)
             default :
                 print("default called")
