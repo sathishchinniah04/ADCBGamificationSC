@@ -383,7 +383,7 @@ class SpinHomeController: UIViewController {
     func spinnerStopped(isPass: Bool) {
         print("spinner stpped")
         
-        if !isPass {
+        if isPass {
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
                self.spinSuccessAnimation()
             }
