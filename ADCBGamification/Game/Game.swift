@@ -33,6 +33,7 @@ public class Game {
     }
     
     public static func open(controller: UIViewController, msisdn: String, language: String, gameType: String, gameId: String?, complition:((GameAction)->Void)?) {
+        UIFont.loadMyFonts
         getUrlFromInfoPlist()
         StoreManager.shared.msisdn = msisdn
         StoreManager.shared.language = language
@@ -75,6 +76,7 @@ public class Game {
 //    }
     
     public static func openGameList(controller: UIViewController, msisdn: String, language: String, complition:((GameAction)->Void)?) {
+        UIFont.loadMyFonts
         getUrlFromInfoPlist()
         StoreManager.shared.msisdn = msisdn
         StoreManager.shared.language = language

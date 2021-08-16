@@ -212,3 +212,57 @@ extension UIButton {
     }
 }
 
+
+
+extension UIFont {
+    
+    private class FontClass {}
+    
+    static func loadFontWith(name: String) {
+        
+        let frameworkBundle = Bundle(for: FontClass.self)
+        guard let pathForResourceString = frameworkBundle.path(forResource: name, ofType: "ttf") else {
+            return
+        }
+        
+        guard let fontData = NSData(contentsOfFile: pathForResourceString) else {
+            return
+        }
+        
+        guard let dataProvider = CGDataProvider(data: fontData) else {
+            return
+        }
+        
+        guard let fontRef = CGFont(dataProvider) else {
+            return
+        }
+        
+        var errorRef: Unmanaged<CFError>? = nil
+        
+        if (CTFontManagerRegisterGraphicsFont(fontRef, &errorRef) == false) {
+            NSLog("Failed to register font - register graphics font failed - this font may have already been registered in the main bundle.")
+        }
+    }
+    
+    public static let loadMyFonts: () = {
+        
+        loadFontWith(name: "Tajawal-Black")
+        loadFontWith(name: "Tajawal-Bold")
+        loadFontWith(name: "Tajawal-ExtraBold")
+        loadFontWith(name: "Tajawal-ExtraLight")
+        loadFontWith(name: "Tajawal-Light")
+        loadFontWith(name: "Tajawal-Medium")
+        loadFontWith(name: "Tajawal-Regular")
+        loadFontWith(name: "OpenSans-Bold")
+        loadFontWith(name: "OpenSans-BoldItalic")
+        loadFontWith(name: "OpenSans-ExtraBold")
+        loadFontWith(name: "OpenSans-ExtraBoldItalic")
+        loadFontWith(name: "OpenSans-Italic")
+        loadFontWith(name: "OpenSans-Light")
+        loadFontWith(name: "OpenSans-LightItalic")
+        loadFontWith(name: "OpenSans-Regular")
+        loadFontWith(name: "OpenSans-SemiBold")
+        loadFontWith(name: "OpenSans-SemiBoldItalic")
+    
+    }()
+}

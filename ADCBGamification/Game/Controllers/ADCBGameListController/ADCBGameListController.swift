@@ -18,6 +18,7 @@ class ADCBGameListController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        UIFont.loadMyFonts
         
         tableViewSetup()
         getResponce()
