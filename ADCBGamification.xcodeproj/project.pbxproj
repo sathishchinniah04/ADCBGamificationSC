@@ -485,6 +485,9 @@
 		F59442A326BA77CE006F4E8E /* Tajawal-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F594428E26B91B5C006F4E8E /* Tajawal-Light.ttf */; };
 		F59442A426BA77CE006F4E8E /* Tajawal-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F594429026B91B65006F4E8E /* Tajawal-Medium.ttf */; };
 		F59442A526BA77CE006F4E8E /* Tajawal-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F594429226B91B6D006F4E8E /* Tajawal-Regular.ttf */; };
+		F5A89F7926CBA9CD00685428 /* cert.pem in Resources */ = {isa = PBXBuildFile; fileRef = F5A89F7626CBA9CD00685428 /* cert.pem */; };
+		F5A89F7A26CBA9CD00685428 /* ca.pem in Resources */ = {isa = PBXBuildFile; fileRef = F5A89F7726CBA9CD00685428 /* ca.pem */; };
+		F5A89F7B26CBA9CD00685428 /* key.pem in Resources */ = {isa = PBXBuildFile; fileRef = F5A89F7826CBA9CD00685428 /* key.pem */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -836,6 +839,9 @@
 		F594429226B91B6D006F4E8E /* Tajawal-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Tajawal-Regular.ttf"; sourceTree = "<group>"; };
 		F594429B26B91C57006F4E8E /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Main.strings; sourceTree = "<group>"; };
 		F594429C26B91C58006F4E8E /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		F5A89F7626CBA9CD00685428 /* cert.pem */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = cert.pem; sourceTree = "<group>"; };
+		F5A89F7726CBA9CD00685428 /* ca.pem */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ca.pem; sourceTree = "<group>"; };
+		F5A89F7826CBA9CD00685428 /* key.pem */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = key.pem; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -879,6 +885,9 @@
 		3320FF0E2682EA9F001809AA /* ADCBGamification */ = {
 			isa = PBXGroup;
 			children = (
+				F5A89F7726CBA9CD00685428 /* ca.pem */,
+				F5A89F7626CBA9CD00685428 /* cert.pem */,
+				F5A89F7826CBA9CD00685428 /* key.pem */,
 				3320FF3F2682EBC3001809AA /* Game */,
 				3320FF0F2682EA9F001809AA /* ADCBGamification.h */,
 				3320FF102682EA9F001809AA /* Info.plist */,
@@ -2375,8 +2384,10 @@
 				33E158D226AA530D00B0615B /* OpenSans-SemiBoldItalic.ttf in Resources */,
 				3320FFC82682EBC4001809AA /* NeumorphicTextField.xib in Resources */,
 				3320FFA62682EBC4001809AA /* Refer.storyboard in Resources */,
+				F5A89F7926CBA9CD00685428 /* cert.pem in Resources */,
 				F58A660E26B22EEC00D5713F /* sample.json in Resources */,
 				F58A660C26B22EEC00D5713F /* home.json in Resources */,
+				F5A89F7A26CBA9CD00685428 /* ca.pem in Resources */,
 				33E158D026AA530D00B0615B /* OpenSans-BoldItalic.ttf in Resources */,
 				F594428F26B91B5C006F4E8E /* Tajawal-Light.ttf in Resources */,
 				F58A64F926B22CCB00D5713F /* README.md in Resources */,
@@ -2389,6 +2400,7 @@
 				F594428726B91B3F006F4E8E /* Tajawal-Black.ttf in Resources */,
 				3357ED8C2693209300607F50 /* PredictTeamView.xib in Resources */,
 				6A478CB326C2D07D00E96B5F /* en.lproj in Resources */,
+				F5A89F7B26CBA9CD00685428 /* key.pem in Resources */,
 				338116992699AC4900C8F35E /* CustomContactCell.xib in Resources */,
 				33E158CD26AA530D00B0615B /* OpenSans-Bold.ttf in Resources */,
 				F594429326B91B6D006F4E8E /* Tajawal-Regular.ttf in Resources */,
@@ -3103,7 +3115,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 2PFLFZZ6ZC;
+				DEVELOPMENT_TEAM = XQMMH4H2MF;
 				INFOPLIST_FILE = Test/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -3123,7 +3135,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 2PFLFZZ6ZC;
+				DEVELOPMENT_TEAM = XQMMH4H2MF;
 				INFOPLIST_FILE = Test/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
