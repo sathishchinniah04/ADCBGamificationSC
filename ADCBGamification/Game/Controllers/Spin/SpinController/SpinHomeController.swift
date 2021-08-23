@@ -402,6 +402,11 @@ class SpinHomeController: UIViewController {
         case .gamePage:
             spinFailView.animateAndRemove()
             self.navigationController?.popViewController(animated: true)
+        case .homePage:
+            spinFailView.animateAndRemove()
+            self.dismiss(animated: true) {
+                CallBack.shared.handle?(.homeAction)
+            }
         default:
             break
         }
@@ -412,14 +417,16 @@ class SpinHomeController: UIViewController {
         case .homePageTapped:
             print("home page tapped")
             self.spinSuccessView.animateAndRemove()
-            self.navigationController?.popToRootViewController(animated: true)
+            self.dismiss(animated: true) {
+                CallBack.shared.handle?(.homeAction)
+            }
         case .knowMoreTapped:
             print("Know more tapped")
             KnowMoreViewHelper.show(info: self.spinAssignReward)
         case .rewardTapped:
             print("Reward  tapped")
             CallBack.shared.handle?(.spinReward)
-            CallBack.shared.handle?(.close)
+            CallBack.shared.handle?(.homeAction)
             spinSuccessView.removeView()
             self.dismiss(animated: true, completion: nil)
         case .spinAgainTapped:

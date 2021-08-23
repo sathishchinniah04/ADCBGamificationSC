@@ -8,6 +8,7 @@
 import UIKit
 enum SpinFailViewAction {
     case gamePage
+    case homePage
 }
 class SpinFailViewHelper {
     private var view: SpinFailView?

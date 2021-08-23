@@ -54,7 +54,7 @@ class SpinFailView: UIView {
             
         ]
         let homeAttString = NSMutableAttributedString()
-        homeAttString.append(NSAttributedString(string: "Rewards".localized(), attributes: fontDict))
+        homeAttString.append(NSAttributedString(string: "Homepage".localized(), attributes: fontDict))
         self.homePageButton.setAttributedTitle(homeAttString, for: .normal)
     
        /* if let attributedTitle = self.homePageButton.attributedTitle(for: .normal) {
@@ -83,8 +83,8 @@ class SpinFailView: UIView {
     }
     
     @IBAction func homePageButtonAction() {
-        //handle?(.gamePage)
-        
+        handle?(.homePage)
+
     }
 }
 

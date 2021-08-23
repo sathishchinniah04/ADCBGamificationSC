@@ -13,7 +13,7 @@ enum GameError {
 
 public enum GameAction {
     case backButton
-    case closeButton
+    case homeAction
     case spinReward
 }
 
@@ -49,9 +49,9 @@ public class Game {
             case .back:
                 print("game callback 1")
                 complition?(.backButton)
-            case .close:
+            case .homeAction:
                 print("game callback 2")
-                complition?(.closeButton)
+                complition?(.homeAction)
             case .spinReward:
                 print("game callback 3")
                 complition?(.spinReward)
@@ -89,8 +89,8 @@ public class Game {
             switch action {
             case .back:
                     complition?(.backButton)
-            case .close:
-                complition?(.closeButton)
+            case .homeAction:
+                complition?(.homeAction)
             case .spinReward:
                 complition?(.spinReward)
             default :

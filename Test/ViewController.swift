@@ -57,7 +57,7 @@ class ViewController: UIViewController {
         switch action {
         case .backButton:
             print("Back button tapped")
-        case .closeButton:
+        case .homeAction:
             print("Close button tapped")
         case .spinReward:
             print("spinReward button tapped")

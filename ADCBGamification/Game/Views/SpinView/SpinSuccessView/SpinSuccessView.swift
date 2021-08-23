@@ -134,9 +134,7 @@ class SpinSuccessView: UIView {
     }
     
     @IBAction func homePageButtonAction() {
-        //handle?(.homePageTapped)
-        
-        
+        handle?(.homePageTapped)
     }
     
     @IBAction func spinAgainButtonAction() {

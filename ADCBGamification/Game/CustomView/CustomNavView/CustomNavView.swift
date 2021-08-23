@@ -78,7 +78,7 @@ enum CustomNavViewAction {
         let cont = sController?.getTopController()
         if  cont?.navigationController?.viewControllers.count ?? 0 <= 1 {
             cont?.dismiss(animated: true, completion: nil)
-            CallBack.shared.handle?(.close)
+            CallBack.shared.handle?(.homeAction)
         } else {
             cont?.navigationController?.popViewController(animated: true)
             CallBack.shared.handle?(.back)
@@ -88,7 +88,7 @@ enum CustomNavViewAction {
     @IBAction func homeButtonAction() {
         print("Home button tapped")
         handler?(.home)
-        CallBack.shared.handle?(.close)
+        CallBack.shared.handle?(.homeAction)
         sController?.dismiss(animated: true, completion: nil)
     }
     
