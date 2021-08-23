@@ -57,10 +57,10 @@
                     </subviews>
                 </stackView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DVy-v3-TUb">
-                    <rect key="frame" x="30" y="262.5" width="354" height="372.5"/>
+                    <rect key="frame" x="30" y="262" width="354" height="373"/>
                     <subviews>
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="nGC-PL-m8S">
-                            <rect key="frame" x="20" y="40" width="314" height="292.5"/>
+                            <rect key="frame" x="20" y="40" width="314" height="293"/>
                             <subviews>
                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="aqH-zk-2Ph">
                                     <rect key="frame" x="0.0" y="0.0" width="314" height="153.5"/>
@@ -118,7 +118,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="314" height="19.5"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="xcR-IC-4bZ">
-                                                    <rect key="frame" x="0.0" y="9" width="91.5" height="1"/>
+                                                    <rect key="frame" x="0.0" y="9.5" width="91.5" height="1"/>
                                                     <subviews>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eIp-EW-EbG">
                                                             <rect key="frame" x="0.0" y="0.0" width="91.5" height="1"/>
@@ -142,7 +142,7 @@
                                                     </subviews>
                                                 </stackView>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="PmW-Oj-OEb">
-                                                    <rect key="frame" x="222.5" y="9" width="91.5" height="1"/>
+                                                    <rect key="frame" x="222.5" y="9.5" width="91.5" height="1"/>
                                                     <subviews>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HfM-Qw-L3L">
                                                             <rect key="frame" x="0.0" y="0.0" width="91.5" height="1"/>
@@ -158,18 +158,18 @@
                                     </subviews>
                                 </stackView>
                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="lNu-mG-Sg0">
-                                    <rect key="frame" x="0.0" y="264.5" width="314" height="28"/>
+                                    <rect key="frame" x="0.0" y="264.5" width="314" height="28.5"/>
                                     <subviews>
-                                        <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="5Pt-g7-LpW">
-                                            <rect key="frame" x="0.0" y="0.0" width="314" height="0.0"/>
+                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="5Pt-g7-LpW">
+                                            <rect key="frame" x="0.0" y="0.0" width="314" height="28.5"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BS6-0c-cLk">
-                                                    <rect key="frame" x="0.0" y="0.0" width="56" height="0.0"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="45" height="28.5"/>
                                                     <state key="normal">
                                                         <attributedString key="attributedTitle">
-                                                            <fragment content="Rewards">
+                                                            <fragment content="Games">
                                                                 <attributes>
-                                                                    <color key="NSColor" red="0.1333333333" green="0.12941176469999999" blue="0.39607843139999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                                    <color key="NSColor" red="0.13333333333333333" green="0.12941176470588234" blue="0.396078431372549" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                     <font key="NSFont" metaFont="system" size="14"/>
                                                                     <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                                     <integer key="NSUnderline" value="1"/>
@@ -177,9 +177,12 @@
                                                             </fragment>
                                                         </attributedString>
                                                     </state>
+                                                    <connections>
+                                                        <action selector="gameBtnTap:" destination="Mgy-fY-UgW" eventType="touchUpInside" id="6Ye-wF-ice"/>
+                                                    </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DAt-xh-VTN">
-                                                    <rect key="frame" x="243" y="0.0" width="71" height="0.0"/>
+                                                    <rect key="frame" x="243" y="0.0" width="71" height="28.5"/>
                                                     <state key="normal">
                                                         <attributedString key="attributedTitle">
                                                             <fragment content="Homepage">
@@ -192,14 +195,17 @@
                                                             </fragment>
                                                         </attributedString>
                                                     </state>
+                                                    <connections>
+                                                        <action selector="homePageButtonAction" destination="Mgy-fY-UgW" eventType="touchUpInside" id="cTS-Y6-soN"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                         </stackView>
-                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="8xI-bD-nLF">
-                                            <rect key="frame" x="0.0" y="0.0" width="314" height="28"/>
+                                        <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="8xI-bD-nLF">
+                                            <rect key="frame" x="0.0" y="0.0" width="314" height="0.0"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xUq-On-su3">
-                                                    <rect key="frame" x="121.5" y="0.0" width="71" height="28"/>
+                                                    <rect key="frame" x="121.5" y="0.0" width="71" height="0.0"/>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <state key="normal">
                                                         <attributedString key="attributedTitle">
@@ -213,9 +219,6 @@
                                                             </fragment>
                                                         </attributedString>
                                                     </state>
-                                                    <connections>
-                                                        <action selector="homePageButtonAction" destination="Mgy-fY-UgW" eventType="touchUpInside" id="x2h-ne-mFB"/>
-                                                    </connections>
                                                 </button>
                                             </subviews>
                                         </stackView>
@@ -255,7 +258,7 @@
                 <outlet property="bgCloudImage" destination="YLk-rb-PXE" id="8mM-HN-MvR"/>
                 <outlet property="containerView" destination="DVy-v3-TUb" id="45q-yu-I50"/>
                 <outlet property="goToLabel" destination="Y86-5E-lxT" id="s7i-Dg-cxZ"/>
-                <outlet property="homePageButton" destination="xUq-On-su3" id="ww5-Ds-eHj"/>
+                <outlet property="homePageButton" destination="DAt-xh-VTN" id="JDx-9W-tcW"/>
                 <outlet property="imageView" destination="NO2-F8-Ffb" id="Tpd-vO-MEX"/>
                 <outlet property="logoImageView" destination="cQ1-Dp-4Kp" id="PdU-oO-ZwP"/>
                 <outlet property="messageLabel" destination="70g-FE-qZ0" id="Aox-pl-00G"/>

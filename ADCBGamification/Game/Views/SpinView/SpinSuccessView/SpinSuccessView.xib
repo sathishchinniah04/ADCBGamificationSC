@@ -168,12 +168,12 @@ Enjoy 10% off at Starbucks!</string>
                                             <rect key="frame" x="0.0" y="0.0" width="314" height="28.5"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MTc-43-SJc">
-                                                    <rect key="frame" x="0.0" y="0.0" width="56" height="28.5"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="45" height="28.5"/>
                                                     <state key="normal">
                                                         <attributedString key="attributedTitle">
-                                                            <fragment content="Rewards">
+                                                            <fragment content="Games">
                                                                 <attributes>
-                                                                    <color key="NSColor" red="0.1333333333" green="0.12941176469999999" blue="0.39607843139999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                                    <color key="NSColor" red="0.13333333333333333" green="0.12941176470588234" blue="0.396078431372549" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                     <font key="NSFont" metaFont="system" size="14"/>
                                                                     <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                                     <integer key="NSUnderline" value="1"/>
@@ -182,7 +182,7 @@ Enjoy 10% off at Starbucks!</string>
                                                         </attributedString>
                                                     </state>
                                                     <connections>
-                                                        <action selector="rewardButtonAction" destination="iN0-l3-epB" eventType="touchUpInside" id="01j-0K-I7A"/>
+                                                        <action selector="gameBtnTap" destination="iN0-l3-epB" eventType="touchUpInside" id="wHb-nk-PJP"/>
                                                     </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eQC-VT-XrO">
@@ -215,7 +215,7 @@ Enjoy 10% off at Starbucks!</string>
                                                         <attributedString key="attributedTitle">
                                                             <fragment content="Spin Again">
                                                                 <attributes>
-                                                                    <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                                    <color key="NSColor" red="0.13333333333333333" green="0.12941176470588234" blue="0.396078431372549" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                     <font key="NSFont" size="14" name="HelveticaNeue"/>
                                                                     <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
                                                                     <integer key="NSUnderline" value="1"/>

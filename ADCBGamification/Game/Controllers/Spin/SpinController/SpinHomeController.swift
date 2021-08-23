@@ -428,6 +428,9 @@ class SpinHomeController: UIViewController {
             self.spinerView.enableSpinButton(hide: false)
             //self.navigationController?.popViewController(animated: true)
             print("Spin again tapped")
+        case .gameTapped:
+            self.spinSuccessView.animateAndRemove()
+            self.navigationController?.popToRootViewController(animated: true)
         default:
             break
         }

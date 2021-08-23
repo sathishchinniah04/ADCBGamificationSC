@@ -11,6 +11,7 @@ enum SpinSuccessViewAction {
     case knowMoreTapped
     case homePageTapped
     case spinAgainTapped
+    case gameTapped
 }
 
 class SpinSuccessView: UIView {
@@ -120,8 +121,12 @@ class SpinSuccessView: UIView {
         }
     }
     
-    @IBAction func rewardButtonAction() {
+   /* @IBAction func rewardButtonAction() {
         handle?(.rewardTapped)
+    } */
+    
+    @IBAction func gameBtnTap() {
+        handle?(.gameTapped)
     }
     
     @IBAction func knowMoreButtonAction() {
@@ -129,7 +134,9 @@ class SpinSuccessView: UIView {
     }
     
     @IBAction func homePageButtonAction() {
-        handle?(.homePageTapped)
+        //handle?(.homePageTapped)
+        
+        
     }
     
     @IBAction func spinAgainButtonAction() {

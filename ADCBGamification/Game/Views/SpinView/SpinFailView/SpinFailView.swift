@@ -78,9 +78,13 @@ class SpinFailView: UIView {
         goToLabel.setSizeFont(sizeFont: (StoreManager.shared.language == GameLanguage.AR.rawValue) ?  14.0 : 14.0, fontFamily: (StoreManager.shared.language == GameLanguage.AR.rawValue) ? "Tajawal-Regular" : "OpenSans-Regular")
         
     }
+    @IBAction func gameBtnTap(_ sender: Any) {
+        handle?(.gamePage)
+    }
     
     @IBAction func homePageButtonAction() {
-        handle?(.gamePage)
+        //handle?(.gamePage)
+        
     }
 }
 

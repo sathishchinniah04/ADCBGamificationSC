@@ -114,6 +114,7 @@ class ExpireView: UIView {
         if game.gameType == "PredictNWin" {
             gameNameSubTitleLabel.text = "Play and win exciting rewards!".localized()
         } else if game.gameType == "SpinNWin" {
+            expireLabel.text = ""
             gameNameSubTitleLabel.text = "Spin the wheel and win exciting prizes".localized()
        } else if game.gameType == "ReferNWin" {
         gameNameSubTitleLabel.text = "Invite your friends to join Simplylife and earn exciting rewards".localized()
@@ -144,7 +145,11 @@ class ExpireView: UIView {
     
     func hourMinteAlignmentCheck(date: String, value: String) {
         DispatchQueue.main.async {
-            self.expireLabel.text = value + " \(Utility.secondsToHoursMinutesSeconds(seconds: Utility.convertStringIntoDate(date: date)).0)" + "h".localized() + "\(Utility.secondsToHoursMinutesSeconds(seconds: Utility.convertStringIntoDate(date: date)).1)" + "min".localized() + "\(Utility.secondsToHoursMinutesSeconds(seconds: Utility.convertStringIntoDate(date: date)).2)" + "sec".localized()
+            if self.game?.gameType != "SpinNWin" {
+                self.expireLabel.text = value + " \(Utility.secondsToHoursMinutesSeconds(seconds: Utility.convertStringIntoDate(date: date)).0)" + "h".localized() + "\(Utility.secondsToHoursMinutesSeconds(seconds: Utility.convertStringIntoDate(date: date)).1)" + "min".localized() + "\(Utility.secondsToHoursMinutesSeconds(seconds: Utility.convertStringIntoDate(date: date)).2)" + "sec".localized()
+            } else {
+                self.expireLabel.text = ""
+            }
         }
     }
     
@@ -155,7 +160,11 @@ class ExpireView: UIView {
     
     func setupLabel() {
         gameNameLabel.text = "Refer & Win".localized()
-        expireLabel.text = "Expire on".localized() +  "02" + "h".localized() + "33" + "mins".localized()
+        if self.game?.gameType != "SpinNWin" {
+            expireLabel.text = "Expire on".localized() +  "02" + "h".localized() + "33" + "mins".localized()
+        } else {
+            expireLabel.text = ""
+        }
     }
     
 }
