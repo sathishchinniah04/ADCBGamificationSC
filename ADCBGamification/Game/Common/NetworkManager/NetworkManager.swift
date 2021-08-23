@@ -115,84 +115,84 @@ class NetworkManager: NSObject {
 
 extension NetworkManager : URLSessionDelegate {
     
-//    public func urlSession(_ session: URLSession, didReceive challenge: URLAuthenticationChallenge, completionHandler: @escaping (URLSession.AuthChallengeDisposition, URLCredential?) -> Void) {
-//           //Trust the certificate even if not valid
-//           let urlCredential = URLCredential(trust: challenge.protectionSpace.serverTrust!)
-//
-//           completionHandler(.useCredential, urlCredential)
-//        }
-    
-    
-    public  func urlSession(_ session: URLSession, didReceive challenge: URLAuthenticationChallenge, completionHandler: @escaping (URLSession.AuthChallengeDisposition, URLCredential?) -> Void) {
+    public func urlSession(_ session: URLSession, didReceive challenge: URLAuthenticationChallenge, completionHandler: @escaping (URLSession.AuthChallengeDisposition, URLCredential?) -> Void) {
+           //Trust the certificate even if not valid
+           let urlCredential = URLCredential(trust: challenge.protectionSpace.serverTrust!)
 
-        // Adapted from OWASP https://www.owasp.org/index.php/Certificate_and_Public_Key_Pinning#iOS
-
-        if (challenge.protectionSpace.authenticationMethod == NSURLAuthenticationMethodServerTrust) {
-            if let serverTrust = challenge.protectionSpace.serverTrust {
-                var secresult = SecTrustResultType.invalid
-                let status = SecTrustEvaluate(serverTrust, &secresult)
-
-                if(errSecSuccess == status) {
-                    if let serverCertificate = SecTrustGetCertificateAtIndex(serverTrust, 0) {
-                        let serverCertificateData = SecCertificateCopyData(serverCertificate)
-                        let data = CFDataGetBytePtr(serverCertificateData);
-                        let size = CFDataGetLength(serverCertificateData);
-                        let cert1 = NSData(bytes: data, length: size)
-                        let serverCert = SecCertificateCreateWithData(kCFAllocatorDefault, cert1)
-                        
-                        let bundle = Bundle(for: NetworkManager.self)
-                        
-                        if let path = bundle.path(forResource: "cert", ofType: "pem") {
-                            
-                            do {
-                                let contents = try String(contentsOfFile: path)
-                                
-                                var certPath = contents
-                                
-                                // remove the header string
-                                
-                                let offset = ("-----BEGIN CERTIFICATE-----").count
-                                let index = certPath.index(path.startIndex, offsetBy: offset+1)
-                                certPath = certPath.substring(from: index)
-                                
-                                // remove the tail string
-                                
-                                let tailWord = "-----END CERTIFICATE-----"
-                                if let lowerBound = certPath.range(of: tailWord)?.lowerBound {
-                                    certPath = certPath.substring(to: lowerBound)
-                                }
-                                
-                                guard let data = NSData(base64Encoded: certPath,
-                                                        options:NSData.Base64DecodingOptions.ignoreUnknownCharacters) else {
-                                    return
-                                }
-                                
-                                let selfSignedCert = SecCertificateCreateWithData(kCFAllocatorDefault, data)
-                                
-                                if serverCert == selfSignedCert {
-                                    
-                                    let urlCredential = URLCredential(trust: challenge.protectionSpace.serverTrust!)
-                                    completionHandler(.useCredential, urlCredential)
-                                    
-                                    //completionHandler(URLSession.AuthChallengeDisposition.useCredential, URLCredential(trust:serverTrust))
-                                    //return
-                                } else {
-                                    // Pinning failed
-                                    completionHandler(URLSession.AuthChallengeDisposition.cancelAuthenticationChallenge, nil)
-                                }
-                                
-                            } catch {
-                                // contents could not be loaded
-                                print("Not able to convert to data with the added pem files")
-                            }
-    
-                            
-                        }
-                    }
-                }
-            }
+           completionHandler(.useCredential, urlCredential)
         }
-
-    }
+    
+    
+//    public  func urlSession(_ session: URLSession, didReceive challenge: URLAuthenticationChallenge, completionHandler: @escaping (URLSession.AuthChallengeDisposition, URLCredential?) -> Void) {
+//
+//        // Adapted from OWASP https://www.owasp.org/index.php/Certificate_and_Public_Key_Pinning#iOS
+//
+//        if (challenge.protectionSpace.authenticationMethod == NSURLAuthenticationMethodServerTrust) {
+//            if let serverTrust = challenge.protectionSpace.serverTrust {
+//                var secresult = SecTrustResultType.invalid
+//                let status = SecTrustEvaluate(serverTrust, &secresult)
+//
+//                if(errSecSuccess == status) {
+//                    if let serverCertificate = SecTrustGetCertificateAtIndex(serverTrust, 0) {
+//                        let serverCertificateData = SecCertificateCopyData(serverCertificate)
+//                        let data = CFDataGetBytePtr(serverCertificateData);
+//                        let size = CFDataGetLength(serverCertificateData);
+//                        let cert1 = NSData(bytes: data, length: size)
+//                        let serverCert = SecCertificateCreateWithData(kCFAllocatorDefault, cert1)
+//
+//                        let bundle = Bundle(for: NetworkManager.self)
+//
+//                        if let path = bundle.path(forResource: "cert", ofType: "pem") {
+//
+//                            do {
+//                                let contents = try String(contentsOfFile: path)
+//
+//                                var certPath = contents
+//
+//                                // remove the header string
+//
+//                                let offset = ("-----BEGIN CERTIFICATE-----").count
+//                                let index = certPath.index(path.startIndex, offsetBy: offset+1)
+//                                certPath = certPath.substring(from: index)
+//
+//                                // remove the tail string
+//
+//                                let tailWord = "-----END CERTIFICATE-----"
+//                                if let lowerBound = certPath.range(of: tailWord)?.lowerBound {
+//                                    certPath = certPath.substring(to: lowerBound)
+//                                }
+//
+//                                guard let data = NSData(base64Encoded: certPath,
+//                                                        options:NSData.Base64DecodingOptions.ignoreUnknownCharacters) else {
+//                                    return
+//                                }
+//
+//                                let selfSignedCert = SecCertificateCreateWithData(kCFAllocatorDefault, data)
+//
+//                                if serverCert == selfSignedCert {
+//
+//                                    let urlCredential = URLCredential(trust: challenge.protectionSpace.serverTrust!)
+//                                    completionHandler(.useCredential, urlCredential)
+//
+//                                    //completionHandler(URLSession.AuthChallengeDisposition.useCredential, URLCredential(trust:serverTrust))
+//                                    //return
+//                                } else {
+//                                    // Pinning failed
+//                                    completionHandler(URLSession.AuthChallengeDisposition.cancelAuthenticationChallenge, nil)
+//                                }
+//
+//                            } catch {
+//                                // contents could not be loaded
+//                                print("Not able to convert to data with the added pem files")
+//                            }
+//
+//
+//                        }
+//                    }
+//                }
+//            }
+//        }
+//
+//    }
 }
 

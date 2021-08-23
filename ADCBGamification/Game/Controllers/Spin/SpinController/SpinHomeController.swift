@@ -215,7 +215,7 @@ class SpinHomeController: UIViewController {
                     self.wheelView?.layer.removeAnimation(forKey: "rotationAnimation")
                 })
                 // 1
-                DispatchQueue.main.asyncAfter(deadline: .now() + 4) {
+                DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
                     if !self.spinNowTapped {
                         self.homeAnimationView?.play()
                     }
@@ -223,7 +223,7 @@ class SpinHomeController: UIViewController {
                 
 
                 // 2
-                DispatchQueue.main.asyncAfter(deadline: .now() + 6) {
+                DispatchQueue.main.asyncAfter(deadline: .now() + 4) {
                     if !self.spinNowTapped {
                         self.homeAnimationView?.stop()
                         UIView.animate(withDuration: 1.0, delay: 0.5, options: [], animations: { () -> Void in
@@ -246,7 +246,7 @@ class SpinHomeController: UIViewController {
                             })
 
                             // 3
-                            DispatchQueue.main.asyncAfter(deadline: .now() + 4) {
+                            DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
                                 if !self.spinNowTapped {
                                     self.homeAnimationView?.play()
                                 }
@@ -254,7 +254,7 @@ class SpinHomeController: UIViewController {
                             }
 //
 //                            // 4
-                            DispatchQueue.main.asyncAfter(deadline: .now() + 6) {
+                            DispatchQueue.main.asyncAfter(deadline: .now() + 4) {
                                 if !self.spinNowTapped {
                                     self.homeAnimationView?.stop()
                                     self.slowClockRotateWheelAnimation()
