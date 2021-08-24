@@ -66,6 +66,7 @@ class ViewController: UIViewController {
             print("default")
         }
     }
+
     
     @IBAction func openGameListButtonAction() {
         DispatchQueue.main.async {

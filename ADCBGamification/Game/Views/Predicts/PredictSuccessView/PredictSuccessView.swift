@@ -67,7 +67,7 @@ class PredictSuccessView: UIView {
             
         ]
         let rewardAttString = NSMutableAttributedString()
-        rewardAttString.append(NSAttributedString(string: "Game page".localized(), attributes: fontDict))
+        rewardAttString.append(NSAttributedString(string: "Homepage".localized(), attributes: fontDict))
         self.homePageButton.setAttributedTitle(rewardAttString, for: .normal)
   
     }

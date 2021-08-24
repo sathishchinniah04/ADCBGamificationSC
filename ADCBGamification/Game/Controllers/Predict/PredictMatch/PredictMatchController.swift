@@ -65,9 +65,12 @@ class PredictMatchController: UIViewController {
         switch action {
         case .homePage:
             self.predictSuccessHelper.animateAndRemove()
-            DispatchQueue.main.asyncAfter(deadline: .now()+0.2) {
-                self.navigationController?.popToRootViewController(animated: true)
+            self.dismiss(animated: true) {
+                CallBack.shared.handle?(.homeAction)
             }
+//            DispatchQueue.main.asyncAfter(deadline: .now()+0.2) {
+//                self.navigationController?.popToRootViewController(animated: true)
+//            }
         case .share:
             let message = Constants.referMessage
             self.openActivityController(text: message)
