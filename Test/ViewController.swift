@@ -48,9 +48,8 @@ class ViewController: UIViewController {
         presentAlert(withTitle: "", message: "Please select your language.", forLanguage: true)
     }
     
-    @IBAction func openGameAction() {
-        
-        Game.open(controller: self, msisdn: self.msisdnTextField.text!, language: self.gameLanguageButton.titleLabel!.text!, gameType: self.gameNameButton.titleLabel!.text!, gameId: gameIdTxtFld.text!, complition: callBackHander(action:))
+    @IBAction func openGameAction() {        
+        Game.open(controller: self, msisdn: self.msisdnTextField.text!, language: self.gameLanguageButton.titleLabel!.text!, gameType: self.gameNameButton.titleLabel!.text!, complition: callBackHander(action:))
     }
     
     func callBackHander(action: GameAction) {

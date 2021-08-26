@@ -15,4 +15,27 @@ extension UIImageView {
         layer.shadowOpacity = Float(opacity)
         layer.shadowRadius = shadowRadius
     }
+    
+    func applyBlurEffect() {
+        let blurEffect = UIBlurEffect(style: .light)
+        let blurEffectView = UIVisualEffectView(effect: blurEffect)
+        blurEffectView.frame = bounds
+        blurEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        addSubview(blurEffectView)
+    }
+}
+
+ extension UIView {
+
+    public func addBlur(style: UIBlurEffect.Style = .extraLight) -> UIVisualEffectView {
+        let blurEffect = UIBlurEffect(style: style)
+        let blurBackground = UIVisualEffectView(effect: blurEffect)
+        addSubview(blurBackground)
+        blurBackground.translatesAutoresizingMaskIntoConstraints = false
+        blurBackground.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
+        blurBackground.topAnchor.constraint(equalTo: topAnchor).isActive = true
+        blurBackground.leadingAnchor.constraint(equalTo: leadingAnchor).isActive = true
+        blurBackground.trailingAnchor.constraint(equalTo: trailingAnchor).isActive = true
+        return blurBackground
+    }
 }

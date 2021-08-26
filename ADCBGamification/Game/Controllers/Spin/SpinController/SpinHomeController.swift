@@ -392,8 +392,8 @@ class SpinHomeController: UIViewController {
             }
             
         } else {
-            self.spinFailView.loadScreen(action: self.failScreenActionHandler(action:))
-            //self.spinSuccessView.loadScreen(info: self.spinAssignReward, action: self.successScreenActionHandler(action:))
+            //self.spinFailView.loadScreen(action: self.failScreenActionHandler(action:))
+            self.spinSuccessView.loadScreen(info: self.spinAssignReward, action: self.successScreenActionHandler(action:))
         }
     }
     
@@ -438,9 +438,16 @@ class SpinHomeController: UIViewController {
         case .gameTapped:
             self.spinSuccessView.animateAndRemove()
             self.navigationController?.popToRootViewController(animated: true)
+        case .shareTapped:
+            print("share the content")
+            shareTapped()
         default:
             break
         }
+    }
+    
+    func shareTapped() {
+        
     }
     
     func spinOffersResponce(data: SpinOffers) {

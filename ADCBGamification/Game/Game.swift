@@ -25,40 +25,56 @@ public class Game {
     
     private static var controllerRef: UIViewController?
     
-    
+    public enum GameNames: String, CaseIterable {
+        case SpinNWin
+        case PredictNWin
+        case ReferNWin
+    }
     
     public static func dismissController() {
         print("Dismiss controler called")
         controllerRef?.dismiss(animated: true, completion: nil)
     }
     
-    public static func open(controller: UIViewController, msisdn: String, language: String, gameType: String, gameId: String?, complition:((GameAction)->Void)?) {
-        UIFont.loadMyFonts
-        getUrlFromInfoPlist()
-        StoreManager.shared.msisdn = msisdn
-        StoreManager.shared.language = language
-        IQKeyboardManager.shared.enable = true
-        IQKeyboardManager.shared.goNext()
-        StoreManager.shared.accessToken = "J0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9"
-        //complition = gameActionHandler(complition: <#T##((GameAction) -> Void)?##((GameAction) -> Void)?##(GameAction) -> Void#>)
-        //complition = gameActionHandler(complition:)
-        getControllerRef(controller: controller, gameType: gameType, gameId: gameId)
-        //loadGameList(controller: controller)
-        CallBack.shared.callBacKAction { (action) in
-            switch action {
-            case .back:
-                print("game callback 1")
-                complition?(.backButton)
-            case .homeAction:
-                print("game callback 2")
-                complition?(.homeAction)
-            case .spinReward:
-                print("game callback 3")
-                complition?(.spinReward)
-            default :
-                print("default called")
+    private static func getAllGamesList(_ gmeType: String, withCompletion completion: @escaping (_ gameId: String) -> Void) {
+        GameListVM.getGameList(url: Constants.listGameUrl) {
+            DispatchQueue.main.async {
+                let gameId = GameListVM.allGames.filter({ $0.gameType.lowercased() == gmeType.lowercased() }).first?.gameId
+                completion(gameId ?? "0")
             }
         }
+    }
+    
+    public static func open(controller: UIViewController, msisdn: String, language: String, gameType: String, complition:((GameAction)->Void)?) {
+        UIFont.loadMyFonts
+        getUrlFromInfoPlist()
+        self.getAllGamesList(gameType, withCompletion : {(Id) in
+            StoreManager.shared.msisdn = msisdn
+            StoreManager.shared.language = language
+            IQKeyboardManager.shared.enable = true
+            IQKeyboardManager.shared.goNext()
+            StoreManager.shared.accessToken = "J0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9"
+            //complition = gameActionHandler(complition: <#T##((GameAction) -> Void)?##((GameAction) -> Void)?##(GameAction) -> Void#>)
+            //complition = gameActionHandler(complition:)
+            getControllerRef(controller: controller, gameType: gameType, gameId: Id)
+            //loadGameList(controller: controller)
+            CallBack.shared.callBacKAction { (action) in
+                switch action {
+                case .back:
+                    print("game callback 1")
+                    complition?(.backButton)
+                case .homeAction:
+                    print("game callback 2")
+                    complition?(.homeAction)
+                case .spinReward:
+                    print("game callback 3")
+                    complition?(.spinReward)
+                default :
+                    print("default called")
+                }
+            }
+        })
+
     }
     
     

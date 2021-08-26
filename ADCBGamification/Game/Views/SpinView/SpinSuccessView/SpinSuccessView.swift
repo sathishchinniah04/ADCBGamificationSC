@@ -6,12 +6,64 @@
 //
 
 import UIKit
+import Foundation
+
+class InstagramManager: NSObject, UIDocumentInteractionControllerDelegate {
+
+    private let kInstagramURL = "instagram://app"
+    private let kUTI = "com.instagram.exclusivegram"
+    private let kfileNameExtension = "instagram.igo"
+    private let kAlertViewTitle = "Error"
+    private let kAlertViewMessage = "Please install the Instagram application"
+
+    var documentInteractionController = UIDocumentInteractionController()
+
+    // singleton manager
+    class var sharedManager: InstagramManager {
+        struct Singleton {
+            static let instance = InstagramManager()
+        }
+        return Singleton.instance
+    }
+
+    func postImageToInstagramWithCaption(imageInstagram: UIImage, instagramCaption: String, view: UIView) {
+        // called to post image with caption to the instagram application
+
+        let instagramURL = NSURL(string: kInstagramURL)
+        if UIApplication.shared.canOpenURL(instagramURL! as URL) {
+            let jpgPath = (NSTemporaryDirectory() as NSString).appendingPathComponent(kfileNameExtension)
+            //UIImageJPEGRepresentation(imageInstagram, 1.0)!.writeToFile(jpgPath, atomically: true)
+            do {
+                try imageInstagram.jpegData(compressionQuality: 1.0)!.write(to: URL(fileURLWithPath: jpgPath), options: .atomic)
+            } catch let error {
+                print(error)
+            }
+ 
+            let rect = CGRect(x: 0,y: 0,width: 612,height: 612)
+            let fileURL = NSURL.fileURL(withPath: jpgPath)
+            documentInteractionController.url = fileURL
+            documentInteractionController.delegate = self
+            documentInteractionController.uti = kUTI
+
+            // adding caption for the image
+            documentInteractionController.annotation = ["InstagramCaption": instagramCaption]
+            documentInteractionController.presentOpenInMenu(from: rect, in: view, animated: true)
+        } else {
+
+            print(kAlertViewMessage)
+            // alert displayed when the instagram application is not available in the device
+           // UIAlertView(title: kAlertViewTitle, message: kAlertViewMessage, delegate:nil, cancelButtonTitle:"Ok").show()
+        }
+    }
+
+}
 enum SpinSuccessViewAction {
     case rewardTapped
     case knowMoreTapped
     case homePageTapped
     case spinAgainTapped
     case gameTapped
+    case shareTapped
 }
 
 class SpinSuccessView: UIView {
@@ -24,13 +76,28 @@ class SpinSuccessView: UIView {
     @IBOutlet weak var knowMoreButton: UIButton!
     @IBOutlet weak var homePageButton: UIButton!
     @IBOutlet weak var spinAgainButton: UIButton!
-    @IBOutlet weak var descLabel: UILabel!
+    @IBOutlet weak var messageTitleLbl: UILabel!
+    @IBOutlet weak var messageDescLbl: UILabel!
     @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var bgCloudImage: UIImageView!
     @IBOutlet weak var logoImageView: UIImageView!
     
+    @IBOutlet weak var shareMainView: UIView!
+    @IBOutlet weak var shareCloudImage: UIImageView!
+    @IBOutlet weak var shareLogo: UIImageView!
+    @IBOutlet weak var shareCongratzLbl: UILabel!
+    @IBOutlet weak var shareGameTitleLbl: UILabel!
+    @IBOutlet weak var shareContentView: UIView!
+    @IBOutlet weak var shareImageView: UIImageView!
+    @IBOutlet weak var shareMessageLbl: UILabel!
+    @IBOutlet weak var shareExpLbl: UILabel!
+    @IBOutlet weak var shareSubView: UIView!
+    @IBOutlet weak var shareBtn: UIButton!
+    
     var handle:((SpinSuccessViewAction)->Void)?
+    var shareImage: UIImage?
+    
     
     static func loadXib() -> SpinSuccessView {
         return UINib(nibName: "SpinSuccessView", bundle: Bundle(for: Self.self)).instantiate(withOwner: self, options: nil).first as! SpinSuccessView
@@ -42,21 +109,52 @@ class SpinSuccessView: UIView {
         setupLabel(info: info)
         checkLeftToRight()
         self.bgCloudImage.image = UIImage(named: "Clouds", in: Bundle(for: CustomNavView.self), compatibleWith: nil)
+        self.shareCloudImage.image = UIImage(named: "Clouds", in: Bundle(for: CustomNavView.self), compatibleWith: nil)
     }
     
     func setupFontFamily() {
         
+        shareMainView.isHidden = true
         titleLable.setSizeFont(sizeFont: (StoreManager.shared.language == GameLanguage.AR.rawValue) ?  20.0 : 20.0, fontFamily: (StoreManager.shared.language == GameLanguage.AR.rawValue) ? "Tajawal-Bold" : "OpenSans-Bold")
         
-        descLabel.setSizeFont(sizeFont: (StoreManager.shared.language == GameLanguage.AR.rawValue) ?  14.0 : 14.0, fontFamily: (StoreManager.shared.language == GameLanguage.AR.rawValue) ? "Tajawal-Regular" : "OpenSans-Regular")
+        messageTitleLbl.setSizeFont(sizeFont: (StoreManager.shared.language == GameLanguage.AR.rawValue) ?  14.0 : 14.0, fontFamily: (StoreManager.shared.language == GameLanguage.AR.rawValue) ? "Tajawal-Regular" : "OpenSans-Regular")
+        
+        messageDescLbl.setSizeFont(sizeFont: (StoreManager.shared.language == GameLanguage.AR.rawValue) ?  14.0 : 14.0, fontFamily: (StoreManager.shared.language == GameLanguage.AR.rawValue) ? "Tajawal-Regular" : "OpenSans-Regular")
         
         goToLabel.setSizeFont(sizeFont: (StoreManager.shared.language == GameLanguage.AR.rawValue) ?  14.0 : 14.0, fontFamily: (StoreManager.shared.language == GameLanguage.AR.rawValue) ? "Tajawal-Regular" : "OpenSans-Regular")
+  
+        shareGameTitleLbl.setSizeFont(sizeFont: (StoreManager.shared.language == GameLanguage.AR.rawValue) ?  30.0 : 30.0, fontFamily: (StoreManager.shared.language == GameLanguage.AR.rawValue) ? "Tajawal-Bold" : "OpenSans-Bold")
+        
+        shareCongratzLbl.setSizeFont(sizeFont: (StoreManager.shared.language == GameLanguage.AR.rawValue) ?  13.0 : 13.0, fontFamily: (StoreManager.shared.language == GameLanguage.AR.rawValue) ? "Tajawal-Bold" : "OpenSans-Bold")
+        
+        shareMessageLbl.setSizeFont(sizeFont: (StoreManager.shared.language == GameLanguage.AR.rawValue) ?  13.0 : 13.0, fontFamily: (StoreManager.shared.language == GameLanguage.AR.rawValue) ? "Tajawal-Bold" : "OpenSans-Bold")
+        
+        shareExpLbl.setSizeFont(sizeFont: (StoreManager.shared.language == GameLanguage.AR.rawValue) ?  9.0 : 9.0, fontFamily: (StoreManager.shared.language == GameLanguage.AR.rawValue) ? "Tajawal-Regular" : "OpenSans-Regular")
+        
+        
+    }
+
+    func showActionSheetView() {
+        
+        let imageToShare = [ shareImage! ]
+        let activityViewController = UIActivityViewController(activityItems: imageToShare, applicationActivities: nil)
+        activityViewController.popoverPresentationController?.sourceView = self // so that iPads won't crash
+        activityViewController.excludedActivityTypes = [ UIActivity.ActivityType.airDrop, UIActivity.ActivityType.postToFacebook ]
+        
+        if let viewController = UIApplication.topMostViewController {
+            viewController.present(activityViewController, animated: true) {
+               // self.shareMainView.isHidden = true
+            }
+        }
         
     }
     
+
     func setupLabel(info: SpinAssignReward?) {
         
         logoImageView.image = UIImage(named: (StoreManager.shared.language == "AR") ? "Logo_Arabic" : "Logo", in: Bundle(for: CustomNavView.self), compatibleWith: nil)
+        
+        shareLogo.image = UIImage(named: (StoreManager.shared.language == "AR") ? "Logo_Arabic" : "Logo", in: Bundle(for: CustomNavView.self), compatibleWith: nil)
         
         titleHeaderLabel.isHidden = true
         subTitleLabel.isHidden = true
@@ -73,7 +171,7 @@ class SpinSuccessView: UIView {
             
         ]
         let rewardAttString = NSMutableAttributedString()
-        rewardAttString.append(NSAttributedString(string: "Rewards".localized(), attributes: fontDict))
+        rewardAttString.append(NSAttributedString(string: "Games".localized(), attributes: fontDict))
         self.rewardButton.setAttributedTitle(rewardAttString, for: .normal)
         
         
@@ -109,19 +207,38 @@ class SpinSuccessView: UIView {
         //self.homePageButton.setTitle("Homepage".localized(), for: .normal)
         self.spinAgainButton.setTitle("Spin Again".localized(), for: .normal)
         
-        self.descLabel.text = info?.responseObject?.first?.displayDetails?.first?.name ?? ""
+        self.messageTitleLbl.text = "You have won a " + (info?.responseObject?.first?.achievementType ?? "")
+        self.messageDescLbl.text = info?.responseObject?.first?.displayDetails?.first?.name ?? ""
+        
     }
     
     func appearanceSetup() {
         
+        shareSubView.addShadow(cornerRadius: 20, shadowRadius: 3, opacity: 0.5, color: UIColor.black)
         containerView.addShadow(cornerRadius: 20, shadowRadius: 3, opacity: 0.5, color: UIColor.black)
         bounceAnimation(imageView)
-        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+       /* DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
             self.handle?(.knowMoreTapped)
-        }
+        }*/
     }
     
-   /* @IBAction func rewardButtonAction() {
+    @IBAction func whatsUpShareTap(_ sender: Any) {
+        print("whatsapp")
+    }
+    
+    @IBAction func fbShareTap(_ sender: Any) {
+        print("fb")
+    }
+    
+    @IBAction func instagramShareTap(_ sender: Any) {
+        print("insta")
+    }
+    
+    @IBAction func emailShareTap(_ sender: Any) {
+        print("email")
+    }
+    
+    /* @IBAction func rewardButtonAction() {
         handle?(.rewardTapped)
     } */
     
@@ -141,4 +258,63 @@ class SpinSuccessView: UIView {
         handle?(.spinAgainTapped)
     }
     
+    @IBAction func shareBtnTap(_ sender: Any) {
+        shareImage = captureUIImageFromUIView(shareContentView)
+        shareMainView.isHidden = false
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+            self.showActionSheetView()
+        }
+    }
+      
+    //MARK: Share view
+    
+    // Convert view in to image
+    
+    
+    fileprivate func captureUIImageFromUIView(_ view: UIView?) -> UIImage {
+
+         guard (view != nil) else{
+            let errorImage = UIImage(named: "Error Image") ?? UIImage()
+            return errorImage
+         }
+         if #available(iOS 10.0, *) {
+             let renderer = UIGraphicsImageRenderer(size: view!.bounds.size)
+             let capturedImage = renderer.image {
+                 (ctx) in
+                 view!.drawHierarchy(in: view!.bounds, afterScreenUpdates: true)
+             }
+             return capturedImage
+         } else {
+             UIGraphicsBeginImageContextWithOptions((view!.bounds.size), view!.isOpaque, 0.0)
+             view!.drawHierarchy(in: view!.bounds, afterScreenUpdates: false)
+             let capturedImage = UIGraphicsGetImageFromCurrentImageContext()
+             UIGraphicsEndImageContext()
+             return capturedImage!
+         }
+    }
+    
+    
 }
+
+extension UIApplication {
+    /// The top most view controller
+    static var topMostViewController: UIViewController? {
+        return UIApplication.shared.keyWindow?.rootViewController?.visibleView
+    }
+}
+
+extension UIViewController {
+    /// The visible view controller from a given view controller
+    var visibleView: UIViewController? {
+        if let navigationController = self as? UINavigationController {
+            return navigationController.topViewController?.visibleView
+        } else if let tabBarController = self as? UITabBarController {
+            return tabBarController.selectedViewController?.visibleView
+        } else if let presentedViewController = presentedViewController {
+            return presentedViewController.visibleView
+        } else {
+            return self
+        }
+    }
+}
+

@@ -43,11 +43,11 @@ class SpinViewOfferVM {
         
         let urlStr = Constants.spinAssignReward
         networkManager.postRequest(struct: SpinAssignReward.self, url: urlStr, requestData: myDict) { (data, error) in
+            print("Data is \(String(describing: data))")
+            print("error is \(String(describing: error))")
             if let data = data {
                 complition?(data)
             }
-            print("Data is \(String(describing: data))")
-            print("error is \(String(describing: error))")
         }
     }
 }
