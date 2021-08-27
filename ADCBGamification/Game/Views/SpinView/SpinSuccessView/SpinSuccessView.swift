@@ -115,6 +115,14 @@ class SpinSuccessView: UIView {
     func setupFontFamily() {
         
         shareMainView.isHidden = true
+        shareGameTitleLbl.text = "Spin & Win".localized()
+        shareGameTitleLbl.text = "Congratulation".localized()
+        
+        
+        
+        shareBtn.setTitle("Share".localized(), for: .normal)
+        shareBtn.setSizeFont(sizeFont: (StoreManager.shared.language == GameLanguage.AR.rawValue) ?  16.0 : 16.0, fontFamily: (StoreManager.shared.language == GameLanguage.AR.rawValue) ? "Tajawal-SemiBold" : "OpenSans-SemiBold")
+        
         titleLable.setSizeFont(sizeFont: (StoreManager.shared.language == GameLanguage.AR.rawValue) ?  20.0 : 20.0, fontFamily: (StoreManager.shared.language == GameLanguage.AR.rawValue) ? "Tajawal-Bold" : "OpenSans-Bold")
         
         messageTitleLbl.setSizeFont(sizeFont: (StoreManager.shared.language == GameLanguage.AR.rawValue) ?  14.0 : 14.0, fontFamily: (StoreManager.shared.language == GameLanguage.AR.rawValue) ? "Tajawal-Regular" : "OpenSans-Regular")
