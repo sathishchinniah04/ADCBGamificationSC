@@ -46,6 +46,7 @@ class PredictSuccessView: UIView {
     @IBOutlet weak var headingLbl: UILabel!
     @IBOutlet weak var shareMessageLbl: UILabel!
 
+    @IBOutlet weak var subContentView: UIView!
     var eventDetails: EventsList?
     var shareImage: UIImage?
     
@@ -102,7 +103,7 @@ class PredictSuccessView: UIView {
     func setupFontFamily() {
         
         shareMainView.isHidden = true
-        shareContentView.addShadow(cornerRadius: 20, shadowRadius: 3, opacity: 0.5, color: UIColor.black)
+        subContentView.addShadow(cornerRadius: 20, shadowRadius: 3, opacity: 0.5, color: UIColor.black)
         shareLogo.image = UIImage(named: (StoreManager.shared.language == "AR") ? "Logo_Arabic" : "Logo", in: Bundle(for: CustomNavView.self), compatibleWith: nil)
         logoImageView.image = UIImage(named: (StoreManager.shared.language == "AR") ? "Logo_Arabic" : "Logo", in: Bundle(for: CustomNavView.self), compatibleWith: nil)
         //titleLbl.text = "simply".localized()

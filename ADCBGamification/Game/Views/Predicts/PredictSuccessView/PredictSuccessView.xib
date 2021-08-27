@@ -508,11 +508,12 @@ participation</string>
                 <outlet property="messageLbl" destination="0nd-Sg-pBJ" id="Br7-8K-Deh"/>
                 <outlet property="shareButton" destination="3Qk-JG-Zme" id="rs7-aM-O9X"/>
                 <outlet property="shareCloudImage" destination="NKC-Re-usz" id="9se-eb-ekF"/>
-                <outlet property="shareContentView" destination="ZDi-NO-QlN" id="E3m-EY-G3R"/>
+                <outlet property="shareContentView" destination="iEb-bb-3Oa" id="Ig3-Ve-SwB"/>
                 <outlet property="shareGameTitleLbl" destination="ay7-VB-l5P" id="YYe-4f-FrS"/>
                 <outlet property="shareLogo" destination="1I6-i1-H7k" id="mVc-2A-73K"/>
                 <outlet property="shareMainView" destination="m7E-xf-cb7" id="QTI-VF-XpS"/>
                 <outlet property="shareMessageLbl" destination="THV-Ht-m7H" id="8Gg-Ei-Ikf"/>
+                <outlet property="subContentView" destination="ZDi-NO-QlN" id="BOO-Ky-AfW"/>
                 <outlet property="subTitleLbl" destination="y3t-6E-yu0" id="nFC-Rr-YTd"/>
                 <outlet property="thumsUpImage" destination="2Rw-81-jJC" id="Fnv-il-TMX"/>
                 <outlet property="titleLbl" destination="qkQ-ZR-bM9" id="X2n-4T-KRn"/>
