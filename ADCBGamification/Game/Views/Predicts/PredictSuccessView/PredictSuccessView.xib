@@ -506,6 +506,7 @@ participation</string>
                 <outlet property="homePageButton" destination="cl7-LS-aoR" id="Vhc-5t-MLF"/>
                 <outlet property="logoImageView" destination="GHo-Y8-UkT" id="nlY-A3-Pgv"/>
                 <outlet property="messageLbl" destination="0nd-Sg-pBJ" id="Br7-8K-Deh"/>
+                <outlet property="shareBtn" destination="1m8-ap-C42" id="E1y-g2-App"/>
                 <outlet property="shareButton" destination="3Qk-JG-Zme" id="rs7-aM-O9X"/>
                 <outlet property="shareCloudImage" destination="NKC-Re-usz" id="9se-eb-ekF"/>
                 <outlet property="shareContentView" destination="iEb-bb-3Oa" id="Ig3-Ve-SwB"/>

@@ -46,7 +46,9 @@ class PredictSuccessView: UIView {
     @IBOutlet weak var headingLbl: UILabel!
     @IBOutlet weak var shareMessageLbl: UILabel!
 
+    @IBOutlet weak var shareBtn: UIButton!
     @IBOutlet weak var subContentView: UIView!
+    
     var eventDetails: EventsList?
     var shareImage: UIImage?
     
@@ -101,6 +103,14 @@ class PredictSuccessView: UIView {
     }
     
     func setupFontFamily() {
+        
+        shareGameTitleLbl.text = "Predict & Win".localized()
+        headingLbl.text = "Thank you for your participation".localized()
+        shareMessageLbl.text = "Winner will be announced shortly and you will receive a notification on the App. Stay tuned, enjoy the game !".localized()
+        
+        
+        shareBtn.setTitle("Share".localized(), for: .normal)
+        shareBtn.setSizeFont(sizeFont: (StoreManager.shared.language == GameLanguage.AR.rawValue) ?  16.0 : 16.0, fontFamily: (StoreManager.shared.language == GameLanguage.AR.rawValue) ? "Tajawal-SemiBold" : "OpenSans-SemiBold")
         
         shareMainView.isHidden = true
         subContentView.addShadow(cornerRadius: 20, shadowRadius: 3, opacity: 0.5, color: UIColor.black)
