@@ -419,6 +419,11 @@
                 <constraint firstItem="Sze-Hl-Lez" firstAttribute="centerY" secondItem="EoE-2C-3aV" secondAttribute="centerY" constant="0.5" id="sRa-Nc-APr"/>
                 <constraint firstItem="zzs-pO-hER" firstAttribute="trailing" secondItem="osd-Bu-Ix9" secondAttribute="trailing" id="zeZ-PZ-13N"/>
             </constraints>
+            <variation key="default">
+                <mask key="subviews">
+                    <exclude reference="mtE-Df-FqJ"/>
+                </mask>
+            </variation>
             <connections>
                 <outlet property="bgCloudImage" destination="rYa-6u-0UA" id="aee-GW-fS9"/>
                 <outlet property="containerView" destination="Sze-Hl-Lez" id="oku-Tz-ZOj"/>

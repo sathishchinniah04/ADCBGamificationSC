@@ -14,6 +14,7 @@ class PredictMatchController: UIViewController {
     @IBOutlet weak var submitButton: UIButton!
     @IBOutlet weak var bgCloudImage: UIImageView!
     
+    var selectedEvent: EventsList?
     var eventsList: EventsList?
     var selectedIndex: Int = 0
     var game: Games?
@@ -58,7 +59,7 @@ class PredictMatchController: UIViewController {
     }
     
     func onSuccess() {
-        predictSuccessHelper.show(complition: predictSuccessPopupHandler(action:))
+        predictSuccessHelper.show(event: selectedEvent, complition: predictSuccessPopupHandler(action:))
     }
     
     func predictSuccessPopupHandler(action: PredictSuccessViewAction) {
@@ -74,6 +75,9 @@ class PredictMatchController: UIViewController {
         case .share:
             let message = Constants.referMessage
             self.openActivityController(text: message)
+        case .gamePage:
+            self.predictSuccessHelper.animateAndRemove()
+            self.navigationController?.popToRootViewController(animated: true)
         default:
             break
         }
@@ -82,6 +86,7 @@ class PredictMatchController: UIViewController {
     @IBAction func submitAnswer() {
         guard let gId = game?.gameId else { return }
         guard let event = eventsList else { return }
+        selectedEvent = event
         Constants.referMessage = ""
         PredictViewModel.submitAnswer(gameId: gId, event: event, index: selectedIndex, complition: onSuccess)
         print("submit ans")

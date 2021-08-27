@@ -10,14 +10,15 @@ import UIKit
 class PredictSuccessHelper {
     var view: PredictSuccessView?
     var rootView = UIApplication.shared.windows.first
+   
     
-    func show(complition: ((PredictSuccessViewAction)->Void)?) {
+    func show(event:EventsList?, complition: ((PredictSuccessViewAction)->Void)?) {
         DispatchQueue.main.async {
             self.removeView()
             self.view = PredictSuccessView.loadXib()
             self.view?.frame = UIScreen.main.bounds
             self.rootView?.addSubview(self.view!)
-            self.view?.populateView(complition: complition)
+            self.view?.populateView(eventList: event, complition: complition)
             self.animatefadeup()
         }
     }
