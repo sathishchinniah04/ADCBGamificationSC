@@ -79,6 +79,19 @@ class Utility {
         }
     
     
+    static func convertDateFormat(inputDate: String) -> String {
+//on 18 Aug 2021
+         let olDateFormatter = DateFormatter()
+         olDateFormatter.dateFormat = "yyyy-MM-dd"
+
+         let oldDate = olDateFormatter.date(from: inputDate)
+
+         let convertDateFormatter = DateFormatter()
+         convertDateFormatter.dateFormat = "dd MMM yyyy"
+
+         return convertDateFormatter.string(from: oldDate!)
+    }
+    
     static func convertStringToDate(date: String) -> Date {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"

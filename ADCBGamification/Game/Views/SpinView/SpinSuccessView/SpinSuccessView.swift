@@ -140,7 +140,9 @@ class SpinSuccessView: UIView {
         let activityViewController = UIActivityViewController(activityItems: imageToShare, applicationActivities: nil)
         activityViewController.popoverPresentationController?.sourceView = self // so that iPads won't crash
         activityViewController.excludedActivityTypes = [ UIActivity.ActivityType.airDrop, UIActivity.ActivityType.postToFacebook ]
-        
+        activityViewController.completionWithItemsHandler = {(activityType: UIActivity.ActivityType?, completed: Bool, returnedItems:[Any]?, error: Error?) in
+            self.shareMainView.isHidden = true
+        }
         if let viewController = UIApplication.topMostViewController {
             viewController.present(activityViewController, animated: true) {
                // self.shareMainView.isHidden = true
@@ -205,12 +207,31 @@ class SpinSuccessView: UIView {
         
         //self.rewardButton.setTitle("Rewards".localized(), for: .normal)
         //self.homePageButton.setTitle("Homepage".localized(), for: .normal)
+        
         self.spinAgainButton.setTitle("Spin Again".localized(), for: .normal)
         
         self.messageTitleLbl.text = "You have won a " + (info?.responseObject?.first?.achievementType ?? "")
         self.messageDescLbl.text = info?.responseObject?.first?.displayDetails?.first?.name ?? ""
         
+        self.shareMessageLbl.text = "You have won a " + (info?.responseObject?.first?.achievementType ?? "") + (info?.responseObject?.first?.displayDetails?.first?.name ?? "")
+
+        if (info?.responseObject?.first?.expiryDate?.isEmpty ?? "".isEmpty || info?.responseObject?.first?.expiryDate == nil) {
+            self.shareExpLbl.text = ""
+        } else {
+            self.shareExpLbl.text = "on " + Utility.convertDateFormat(inputDate: info?.responseObject?.first?.expiryDate ?? "")
+        }
+    
     }
+    
+    override func didMoveToWindow() {
+        print("screen changed")
+    }
+    
+    override func willMove(toWindow newWindow: UIWindow?) {
+        print("will move")
+    }
+    
+    
     
     func appearanceSetup() {
         

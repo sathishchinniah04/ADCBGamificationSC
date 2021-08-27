@@ -146,7 +146,7 @@ class ADCBGameListCollectionCell: UICollectionViewCell {
     }
     
     func onActive(game: Games) {
-        
+
         let date = game.executionPeriod?.endDateTime ?? ""
         expireInLabel.text = "Expires in".localized()
         let numberOfDays = Calendar.current.dateComponents([.day], from: Date(), to: Utility.convertStringToDate(date: date)).day ?? 0
@@ -167,7 +167,7 @@ class ADCBGameListCollectionCell: UICollectionViewCell {
                 daysCount = "\(value)" + "day".localized()
             }
             
-            self.timeLabel.text = daysCount + " \(Utility.secondsToHoursMinutesSeconds(seconds: Utility.convertStringIntoDate(date: date)).0)" + "hr ".localized() + "\(Utility.secondsToHoursMinutesSeconds(seconds: Utility.convertStringIntoDate(date: date)).1)" + "min".localized()
+            self.timeLabel.text = daysCount + " \(Utility.secondsToHoursMinutesSeconds(seconds: Utility.convertStringIntoDate(date: date)).0)" + "hr ".localized() + "\(Utility.secondsToHoursMinutesSeconds(seconds: Utility.convertStringIntoDate(date: date)).1)" + "mins".localized()
         }
         //\(Utility.secondsToHoursMinutesSeconds(seconds: Utility.convertStringIntoDate(date: date)).2)sec"
     }
