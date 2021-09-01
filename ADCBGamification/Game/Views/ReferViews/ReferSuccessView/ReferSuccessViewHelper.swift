@@ -11,14 +11,16 @@ class ReferSuccessViewHelper {
     private var view: ReferSuccessView?
     private var rootView = UIApplication.shared.windows.first
     
-    func loadScreen(info: SpinAssignReward?, action:((ReferSuccessViewAction)->Void)?) {
+    func loadScreen(status: ReferralStatus?, message: String , info: SpinAssignReward?, action:((ReferSuccessViewAction)->Void)?) {
         DispatchQueue.main.async {
             self.removeView()
             self.rootView = UIApplication.shared.windows.first
             self.view = ReferSuccessView.loadXib()
             self.view?.frame = UIScreen.main.bounds
             self.rootView?.addSubview(self.view!)
-            self.view?.populateView(info: info, action: action)
+            self.view?.populateView(info: info,status: status!, action: action)
+            self.view?.referalStatus = status
+            self.view?.txtMessage = message
             self.animateUp()
         }
     }

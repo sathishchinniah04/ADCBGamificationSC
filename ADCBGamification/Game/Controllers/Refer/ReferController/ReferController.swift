@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ReferController: UIViewController {
+class ReferController: UIViewController, ReferDateDelegate {
     
     @IBOutlet weak var orLabel: UILabel!
     @IBOutlet weak var shareReferalLabel: UILabel!
@@ -122,9 +122,16 @@ class ReferController: UIViewController {
         }
     }
     
+    func referAction() {
+        self.dismiss(animated: true) {
+            CallBack.shared.handle?(.homeAction)
+        }
+    }
+    
     func openContactList() {
         let cont = UIStoryboard(name: "Refer", bundle: Bundle(for: Self.self)).instantiateViewController(withIdentifier: "ContactListController") as! ContactListController
         cont.referCode = self.referCode
+        cont.delegate = self
         cont.handle = {(name, ph) in
 //            self.chooseContactButton.titleLabel.text = name
 //            self.chooseContactButton.textField.text = ph

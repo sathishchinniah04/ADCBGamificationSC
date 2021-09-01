@@ -18,7 +18,9 @@ class Constants {
     static let recordReferUrl = "\(baseUrl)Gamification-1.0/Gamification/gameManagement/game/referral/"
     static let sendNotificationUrl = "\(baseUrl)Gamification-1.0/Gamification/gameManagement/game/referral/"
     
-    static let simpleLiferUserCheck = "\(baseUrl)LMS-1.0/LMS/1/1/"
+   // https://gameuat.intclstl.com/Gamification-1.0/Gamification/1/1/getCustomerProfile
+    
+    static let simpleLiferUserCheck = "\(baseUrl)Gamification-1.0/Gamification/1/1/"
     
     
    // URL: http://10.0.0.95:9082/LMS-1.0/LMS/{tenant}/{version}/getCustomerProfile

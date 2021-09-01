@@ -71,7 +71,7 @@
                                             <color key="textColor" red="0.13333333333333333" green="0.12941176470588234" blue="0.396078431372549" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ohNo" translatesAutoresizingMaskIntoConstraints="NO" id="oDq-NS-RoN">
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="oDq-NS-RoN">
                                             <rect key="frame" x="107" y="42.5" width="100" height="100"/>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
@@ -269,6 +269,7 @@
                 <outlet property="homePageButton" destination="eQC-VT-XrO" id="BLo-XF-IEx"/>
                 <outlet property="knowMoreButton" destination="g9m-97-Rjs" id="jaj-5F-uJ1"/>
                 <outlet property="logoImageView" destination="1Yb-HO-tJI" id="IA4-n3-jl8"/>
+                <outlet property="referHeaderImage" destination="oDq-NS-RoN" id="ga0-qv-iTR"/>
                 <outlet property="rewardButton" destination="MTc-43-SJc" id="Orn-Hi-Kqe"/>
                 <outlet property="spinAgainButton" destination="wBQ-IV-oOm" id="MEd-hS-cQs"/>
             </connections>
@@ -280,7 +281,6 @@
         <image name="CurveClip" width="187.5" height="211"/>
         <image name="Logo" width="102" height="22"/>
         <image name="Mobile" width="137" height="250"/>
-        <image name="ohNo" width="130" height="104"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

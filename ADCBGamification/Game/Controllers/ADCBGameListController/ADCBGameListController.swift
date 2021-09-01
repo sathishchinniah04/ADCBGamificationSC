@@ -19,7 +19,14 @@ class ADCBGameListController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         UIFont.loadMyFonts
-        
+        if #available(iOS 13.0, *) {
+            //UIApplication.shared.windows.over
+           // overrideUserInterfaceStyle = .light
+            
+            UIWindow().overrideUserInterfaceStyle = .light
+        } else {
+            // Fallback on earlier versions
+        }
         tableViewSetup()
         getResponce()
         navigationViewCornerRadius()
@@ -178,3 +185,4 @@ func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath:
 
     
 }
+

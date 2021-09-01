@@ -27,7 +27,7 @@ class ReferViewModel {
         }
     }
     
-    static func recordRefer(referCode: String, bParty: String ,complition:((ReferCode)->Void)?) {
+    static func recordRefer(referCode: String, bParty: String ,complition:((ReferCode?, _ error: ErrorType?)->Void)?) {
         let service = "activation/notifications"
         let urlStr = Constants.recordReferUrl+service
         guard let url = URL(string: urlStr) else { return }
@@ -38,12 +38,15 @@ class ReferViewModel {
         //urlReq.setValue(bParty, forHTTPHeaderField: "msisdn")
         //urlReq.setValue(referCode, forHTTPHeaderField: "referralCode")
     
-        let dict = ["phoneNumber": bParty,"name":""]
+        let dict = ["phoneNumber": bParty]
         
         networkManager.postRequest(struct: ReferCode.self, url: urlStr, urlReq: urlReq, requestData: dict) { (data, error) in
             if let dat = data {
                 print("data is \(dat)")
-                complition?(dat)
+                complition?(dat, nil)
+            } else if let err = error {
+                print("data is \(err)")
+                complition?(nil, err)
             }
         }
         
@@ -74,7 +77,7 @@ class ReferViewModel {
         }
     }
     
-    static func checkSimpleLifeUser(number: String , complition:((String)->Void)?) {
+    static func checkSimpleLifeUser(number: String , complition:((SimpleLifeUser?, _ error: ErrorType?)->Void)?) {
         
         let service = "getCustomerProfile"
         
@@ -95,9 +98,9 @@ class ReferViewModel {
             
             print("Error is \(String(describing: error))")
             if error == nil {
-                complition?("")
+                complition?(data, nil)
             } else {
-                complition?("")
+                complition?(nil, error)
             }
         }
 

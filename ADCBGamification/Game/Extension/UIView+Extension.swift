@@ -212,7 +212,13 @@ extension UIButton {
     }
 }
 
-
+extension UIWindow {
+    
+    @available(iOS 12.0, *)
+    var changeToLightMode: UIUserInterfaceStyle {
+        return .light
+    }
+}
 
 extension UIFont {
     

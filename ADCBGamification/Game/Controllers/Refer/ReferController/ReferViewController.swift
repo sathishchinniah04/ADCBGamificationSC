@@ -8,6 +8,8 @@
 import UIKit
 
 class ReferViewController: UIViewController {
+
+    
     @IBOutlet weak var segmentControl: UISegmentedControl!
     @IBOutlet weak var tblView: ReferTableView!
     //var successScreen = ReferSuccessPopupHelper()
@@ -41,6 +43,7 @@ class ReferViewController: UIViewController {
             break
         }
     }
+    
     
     @IBAction func segmentAction(_ sender: UISegmentedControl) {
         print("sendrr \(sender.selectedSegmentIndex)")

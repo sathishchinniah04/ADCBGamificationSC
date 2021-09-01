@@ -47,6 +47,13 @@ public class Game {
     
     public static func open(controller: UIViewController, msisdn: String, language: String, gameType: String, complition:((GameAction)->Void)?) {
         UIFont.loadMyFonts
+        UIApplication.shared.windows.forEach { window in
+            if #available(iOS 13.0, *) {
+                window.overrideUserInterfaceStyle = .light
+            } else {
+                // Fallback on earlier versions
+            }
+        }
         getUrlFromInfoPlist()
         self.getAllGamesList(gameType, withCompletion : {(Id) in
             StoreManager.shared.msisdn = msisdn
@@ -93,6 +100,13 @@ public class Game {
     
     public static func openGameList(controller: UIViewController, msisdn: String, language: String, complition:((GameAction)->Void)?) {
         UIFont.loadMyFonts
+        UIApplication.shared.windows.forEach { window in
+            if #available(iOS 13.0, *) {
+                window.overrideUserInterfaceStyle = .light
+            } else {
+                // Fallback on earlier versions
+            }
+        }
         getUrlFromInfoPlist()
         StoreManager.shared.msisdn = msisdn
         StoreManager.shared.language = language

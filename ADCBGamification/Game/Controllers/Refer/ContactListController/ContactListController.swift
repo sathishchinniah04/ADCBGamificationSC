@@ -8,6 +8,13 @@
 import UIKit
 import ContactsUI
 
+enum ReferralStatus {
+    case success, failure
+}
+
+protocol ReferDateDelegate {
+    func referAction()
+}
 class ContactListController: UIViewController {
     
     @IBOutlet weak var contactTableView: UITableView!
@@ -28,6 +35,7 @@ class ContactListController: UIViewController {
     var bPart: String?
     var footerHeight = 0
     var errorMsg = ""
+    var delegate: ReferDateDelegate? = nil
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -82,29 +90,69 @@ class ContactListController: UIViewController {
     func inviteApiCall() {
         
         self.bPart = self.chooseContactButton.textField.text!
+        
         if self.bPart!.isEmpty {
+            
             self.view.showAlert(message: "Please eneter a valid mobile number") { (done) in
                 self.inviteButton.setButtonTitle(title: "Invite", titleColor: UIColor.darkBlueColor())
             }
-            return}
+            return
+            
+        }
         
         let no = bPart?.replacingOccurrences(of: " ", with: "").replacingOccurrences(of: "-", with: "")
-        ReferViewModel.recordRefer(referCode: self.referCode, bParty: no ?? "") { (data) in
+        
+        ReferViewModel.recordRefer(referCode: self.referCode, bParty: no ?? "") { (data, err) in
+            
             print("data is \(data)")
+            if data == nil {
+                self.referWinFailPopup(.success, nil)
+            } else {
+                self.referWinFailPopup(.success, "")
+            }
+            
         }
-        DispatchQueue.main.asyncAfter(deadline: .now()+1) {
+    }
+    
+    func referWinFailPopup(_ status: ReferralStatus, _ msg: String?) {
+       
+       
             DispatchQueue.main.async {
-                self.referSuccessViewHelper.loadScreen(info: nil){ action in
+                self.dismiss(animated: false) {
+                self.referSuccessViewHelper.loadScreen(status: status, message: msg ?? "" ,info: nil){ action in
                     switch action {
                     case .homePageTapped:
                         self.referSuccessViewHelper.animateAndRemove()
-                        self.dismiss(animated: true, completion: nil)   
+                        self.dismiss(animated: true) {
+                            self.delegate?.referAction()
+                        }
                     case .referAgain:
                         self.referSuccessViewHelper.animateAndRemove()
                     }
                 }
             }
         }
+
+        switch status {
+        case .success:
+            break;
+        case .failure:
+            break;
+        default:
+            break;
+        }
+//            DispatchQueue.main.async {
+//                self.referSuccessViewHelper.loadScreen(info: nil){ action in
+//                    switch action {
+//                    case .homePageTapped:
+//                        self.referSuccessViewHelper.animateAndRemove()
+//                        self.dismiss(animated: true, completion: nil)
+//                    case .referAgain:
+//                        self.referSuccessViewHelper.animateAndRemove()
+//                    }
+//                }
+//            }
+       
     }
     
     func setupTableView() {
@@ -200,20 +248,56 @@ class ContactListController: UIViewController {
 
     func onCellTap(indexPath: IndexPath) {
         self.view.endEditing(true)
-        
         let contact = self.newList[indexPath.row]
         self.inviteButton.alpha = 0.0
         
-        ReferViewModel.checkSimpleLifeUser(number: contact.telephone) { message  in
-            self.activityIndicatorView.stopAnimating()
-            if !message.isEmpty {
-                self.errorMsg = "Sorry, this contact is already a Simplylife user"
-                self.footerHeight = 0
-                self.contactTableView.reloadData()
+        ReferViewModel.checkSimpleLifeUser(number: contact.telephone) { data, err   in
+            DispatchQueue.main.async {
+                self.activityIndicatorView.stopAnimating()
+                if err == nil {
+                    if data?.status == 200 {
+                        self.errorMsg = "Sorry, this contact is already a Simplylife user"
+                        self.footerHeight = 0
+                        self.contactTableView.reloadData()
+                        self.chooseContactButton.titleLabel.isHidden = false
+                        self.chooseContactButton.titleLabel.text = contact.firstName + " " + contact.lastName
+                        self.chooseContactButton.buttonState(isPressed: false)
+                        self.chooseContactButton.titleLabel.alpha = 1.0
+                        self.chooseContactButton.textField.text = contact.telephone
+                        self.unHideInviteButon()
+                        self.handle?(contact.firstName + " " + contact.lastName, contact.telephone)
+                        self.bPart = contact.telephone
+                        self.inviteButton.isUserInteractionEnabled = false
+                        self.inviteButton.alpha = 0.0
+                    } else if data?.status == 400 {
+                        self.errorMsg = ""
+                        self.footerHeight = 0
+                        self.contactTableView.reloadData()
+                        self.chooseContactButton.titleLabel.isHidden = false
+                        self.chooseContactButton.titleLabel.text = contact.firstName + " " + contact.lastName
+                        self.chooseContactButton.buttonState(isPressed: false)
+                        self.chooseContactButton.titleLabel.alpha = 1.0
+                        self.chooseContactButton.textField.text = contact.telephone
+                        self.unHideInviteButon()
+                        self.handle?(contact.firstName + " " + contact.lastName, contact.telephone)
+                        self.bPart = contact.telephone
+                        self.inviteButton.isUserInteractionEnabled = true
+                        self.inviteButton.alpha = 1.0
+                    } else {
+                        self.showToast(message: data?.error ?? "Something went wring. Try again !")
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                            self.dismiss(animated: true, completion: nil)
+                        }
+                    }
+                } else {
+                    self.dismiss(animated: true, completion: nil)
+                }
+                
             }
+
         }
         
-        /*chooseContactButton.titleLabel.isHidden = false
+       /* chooseContactButton.titleLabel.isHidden = false
         chooseContactButton.titleLabel.text = contact.firstName + " " + contact.lastName
         chooseContactButton.buttonState(isPressed: false)
         self.chooseContactButton.titleLabel.alpha = 1.0
@@ -221,8 +305,8 @@ class ContactListController: UIViewController {
         self.unHideInviteButon()
         self.handle?(contact.firstName + " " + contact.lastName, contact.telephone)
         self.bPart = contact.telephone
-        self.inviteButton.isUserInteractionEnabled = true */
-        //self.inviteButton.alpha = 1.0
+        self.inviteButton.isUserInteractionEnabled = true 
+        self.inviteButton.alpha = 1.0 */
        // self.dismiss(animated: true, completion: nil)
     }
     
@@ -244,9 +328,15 @@ extension ContactListController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let selectedCell = tableView.cellForRow(at: indexPath) as! CustomContactCell
+        let contactData = self.newList[indexPath.row]
         selectedCell.isSelectedVal = true
-        //activityIndicatorView.isHidden = false
-        //activityIndicatorView.startAnimating()
+        activityIndicatorView.isHidden = false
+        activityIndicatorView.startAnimating()
+        chooseContactButton.titleLabel.isHidden = false
+        self.chooseContactButton.titleLabel.alpha = 1.0
+        chooseContactButton.titleLabel.text = contactData.firstName + contactData.lastName
+        //chooseContactButton.placeHolder = contactData.telephone
+        self.chooseContactButton.textField.text = contactData.telephone
         onCellTap(indexPath: indexPath)
     }
     

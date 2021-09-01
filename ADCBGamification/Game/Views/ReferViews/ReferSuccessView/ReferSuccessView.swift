@@ -23,6 +23,9 @@ class ReferSuccessView: UIView {
     @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var bgCloudImage: UIImageView!
     @IBOutlet weak var logoImageView: UIImageView!
+    var referalStatus : ReferralStatus?
+    @IBOutlet weak var referHeaderImage: UIImageView!
+    var txtMessage: String?
     
     var handle:((ReferSuccessViewAction)->Void)?
     
@@ -30,11 +33,11 @@ class ReferSuccessView: UIView {
         return UINib(nibName: "ReferSuccessView", bundle: Bundle(for: Self.self)).instantiate(withOwner: self, options: nil).first as! ReferSuccessView
     }
     
-    func populateView(info: SpinAssignReward?,action:((ReferSuccessViewAction)->Void)?) {
+    func populateView(info: SpinAssignReward?, status: ReferralStatus, action:((ReferSuccessViewAction)->Void)?) {
         self.handle = action
         appearanceSetup()
         self.bgCloudImage.image = UIImage(named: "Clouds", in: Bundle(for: CustomNavView.self), compatibleWith: nil)
-       // setupLabel(info: info)
+        setupLabel(info: info, status: status)
     }
     
     func setupFontFamily() {
@@ -50,9 +53,8 @@ class ReferSuccessView: UIView {
     }
     
     
-    func setupLabel(info: SpinAssignReward?) {
+    func setupLabel(info: SpinAssignReward?, status: ReferralStatus?) {
         setupFontFamily()
-        self.descLabel.text = info?.responseObject?.first?.displayDetails?.first?.name ?? ""
         
         let fontDict: [NSAttributedString.Key : Any] = [
             NSAttributedString.Key.font: (StoreManager.shared.language == GameLanguage.AR.rawValue) ? UIFont(name: "Tajawal-Regular", size: 14.0) ?? UIFont.boldSystemFont(ofSize: 1.5) : UIFont(name: "OpenSans-Regular", size: 14.0) ?? UIFont.boldSystemFont(ofSize: 1.5),
@@ -68,6 +70,21 @@ class ReferSuccessView: UIView {
         let homeAttString = NSMutableAttributedString()
         homeAttString.append(NSAttributedString(string: "Homepage".localized(), attributes: fontDict))
         self.homePageButton.setAttributedTitle(homeAttString, for: .normal)
+        
+        
+        if status == .failure {
+            self.headerLabel.text = "Something went wrong"
+            self.headerLabel.textColor = #colorLiteral(red: 0.6196078431, green: 0.09803921569, blue: 0.08235294118, alpha: 1)
+            self.descLabel.text = info?.responseObject?.first?.displayDetails?.first?.name ?? ""
+            self.referHeaderImage.image = UIImage(named: "referFail", in: Bundle(for: ReferSuccessView.self), compatibleWith: nil)
+
+        } else if status == .success  {
+            self.headerLabel.text = "Successful"
+            self.headerLabel.textColor = #colorLiteral(red: 0.1333333333, green: 0.1294117647, blue: 0.3960784314, alpha: 1)
+            self.descLabel.text = "Your invite was not sent. Please try again"
+            self.referHeaderImage.image = UIImage(named: "ohNo", in: Bundle(for: ReferSuccessView.self), compatibleWith: nil)
+
+        }
     }
     
     func appearanceSetup() {
