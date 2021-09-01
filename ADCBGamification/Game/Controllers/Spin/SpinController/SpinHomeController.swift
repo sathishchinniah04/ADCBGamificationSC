@@ -344,14 +344,12 @@ class SpinHomeController: UIViewController {
         guard let gameId = self.game?.gameId else { return }
         SpinViewOfferVM.assignReward(gameId: gameId) { (spinAssignReward) in
             self.spinAssignReward = spinAssignReward
-            
             if let inde = spinAssignReward.responseObject?.first?.achievmentId  {
+                print(inde)
                 self.spinerView.stopAnimationAtIndex(achivementId: inde, complition: self.spinnerStopped(isPass:))
             } else {
-                
                 self.spinerView.stopAnimationAtIndex(achivementId: "1", complition: self.spinnerStopped(isPass:))
             }
-            
         }
     }
     
@@ -392,8 +390,8 @@ class SpinHomeController: UIViewController {
             }
             
         } else {
-            //self.spinFailView.loadScreen(action: self.failScreenActionHandler(action:))
-            self.spinSuccessView.loadScreen(info: self.spinAssignReward, action: self.successScreenActionHandler(action:))
+            self.spinFailView.loadScreen(action: self.failScreenActionHandler(action:))
+            //self.spinSuccessView.loadScreen(info: self.spinAssignReward, action: self.successScreenActionHandler(action:))
         }
     }
     

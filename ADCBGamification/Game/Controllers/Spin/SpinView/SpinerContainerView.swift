@@ -66,18 +66,67 @@ class SpinerContainerView: UIView {
         DispatchQueue.main.async {
             self.wheelContainerView.transform = CGAffineTransform(rotationAngle: CGFloat(Double.pi))
         }
+        
+        let count = slices.count/2
+        
+       // var id = achivementId
+       // id = "3"
+        
+        //slices
+        
         if achivementId == "-1" {
-            self.startRotate(index: 0) { () -> Void? in
+            self.startRotate(index: 1) { () -> Void? in
                 complition?(false)
             }
             return
         }
         
+        if achivementId == "0" {
+            self.startRotate(index: 1) { () -> Void? in
+                complition?(false)
+            }
+            return
+        }
+        
+        /*  if achivementId == "1" {
+            self.startRotate(index: 1 * count) { () -> Void? in
+                complition?(false)
+            }
+            return
+        }
+        
+       if id == "2" {
+            self.startRotate(index: 2 * count) { () -> Void? in
+                complition?(false)
+            }
+            return
+        }
+        
+        if id == "3" {
+            self.startRotate(index: 3 * count) { () -> Void? in
+                complition?(false)
+            }
+            return
+        }
+        
+        
+        if id == "4" {
+            self.startRotate(index: 4 * count) { () -> Void? in
+                complition?(false)
+            }
+            return
+        } */
+        
+       
+        
+        print("count is", count)
+        
         if let ind = self.offer?.firstIndex(where: {$0.rewardId == achivementId}) {
             
             print("index  found is \(ind) self.offer count is == \(self.offer?.count)")
+            
             DispatchQueue.main.async {
-                self.startRotate(index: ind*1) { () -> Void? in
+                self.startRotate(index: ind * count) { () -> Void? in
                     return complition?(true)
             
                 }//(index: ind*2, complition: complition)
@@ -100,6 +149,9 @@ class SpinerContainerView: UIView {
     }
     
     func spinSetup(offer: [Offers]) {
+        
+        print(offer.map({ $0.rewardTitle }).count)
+        
         for item in offer {
             print("item.defaultReward \(item.defaultReward)")
             
