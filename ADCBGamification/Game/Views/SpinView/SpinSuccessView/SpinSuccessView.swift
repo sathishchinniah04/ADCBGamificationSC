@@ -116,7 +116,7 @@ class SpinSuccessView: UIView {
         
         shareMainView.isHidden = true
         shareGameTitleLbl.text = "Spin & Win".localized()
-        shareGameTitleLbl.text = "Congratulation".localized()
+        shareCongratzLbl.text = "Congratulation".localized()
         
         
         
