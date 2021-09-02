@@ -51,7 +51,7 @@ class PredictMatchTableViewCell: UITableViewCell {
     func setupForFirstIndex(index: Int) {
         if index == 0 {
             self.predictTeamView.isHidden = false
-            self.titleLabel.isHidden = false
+            self.titleLabel.isHidden = true
             self.spacerView.isHidden = false
             self.predictTeamContainerView.isHidden = false
         } else {

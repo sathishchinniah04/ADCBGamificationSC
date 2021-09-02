@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="331px" height="198px" viewBox="0 0 331 198" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>CDC50BFD-0255-43D5-98D2-8C415C9F62F0@1.5x</title>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="315" height="182" rx="10"></rect>
+        <filter x="-3.8%" y="-6.6%" width="107.6%" height="113.2%" filterUnits="objectBoundingBox" id="filter-2">
+            <feOffset dx="4" dy="4" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.1 0" type="matrix" in="shadowBlurOuter1" result="shadowMatrixOuter1"></feColorMatrix>
+            <feOffset dx="-4" dy="-4" in="SourceAlpha" result="shadowOffsetOuter2"></feOffset>
+            <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter2" result="shadowBlurOuter2"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 1   0 0 0 0 1   0 0 0 0 1  0 0 0 1 0" type="matrix" in="shadowBlurOuter2" result="shadowMatrixOuter2"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="shadowMatrixOuter2"></feMergeNode>
+            </feMerge>
+        </filter>
+    </defs>
+    <g id="All-Games" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Icons" transform="translate(-21.000000, -1423.000000)">
+            <g id="Group-4" transform="translate(29.000000, 1431.000000)">
+                <g id="Base">
+                    <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+                    <use fill="#F8F8F8" fill-rule="evenodd" xlink:href="#path-1"></use>
+                </g>
+                <rect id="Rectangle" stroke="#979797" fill="#D8D8D8" opacity="0" x="16" y="55" width="120" height="75"></rect>
+                <rect id="Rectangle-Copy" stroke="#979797" fill="#D8D8D8" opacity="0" x="179" y="55" width="120" height="75"></rect>
+            </g>
+        </g>
+    </g>
+</svg>

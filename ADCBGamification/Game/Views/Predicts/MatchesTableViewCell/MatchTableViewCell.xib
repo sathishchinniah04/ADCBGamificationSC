@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -21,17 +20,24 @@
                     <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QPe-Qh-FOs">
                         <rect key="frame" x="20" y="10" width="310" height="159"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="predictBgView" translatesAutoresizingMaskIntoConstraints="NO" id="pyr-RY-Wpa">
+                                <rect key="frame" x="0.0" y="0.0" width="310" height="159"/>
+                            </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7QK-1w-W4H" customClass="PredictTeamView" customModule="ADCBGamification" customModuleProvider="target">
                                 <rect key="frame" x="20" y="20" width="270" height="119"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" red="0.97254908080000002" green="0.97254908080000002" blue="0.97254908080000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="7QK-1w-W4H" firstAttribute="top" secondItem="QPe-Qh-FOs" secondAttribute="top" constant="20" id="2Ug-HR-vxz"/>
                             <constraint firstAttribute="bottom" secondItem="7QK-1w-W4H" secondAttribute="bottom" constant="20" id="CEE-HP-8wR"/>
+                            <constraint firstAttribute="trailing" secondItem="pyr-RY-Wpa" secondAttribute="trailing" id="KRS-aL-FcI"/>
                             <constraint firstItem="7QK-1w-W4H" firstAttribute="centerX" secondItem="QPe-Qh-FOs" secondAttribute="centerX" id="Mq9-OL-b92"/>
+                            <constraint firstAttribute="bottom" secondItem="pyr-RY-Wpa" secondAttribute="bottom" id="Rwp-C1-OiR"/>
                             <constraint firstItem="7QK-1w-W4H" firstAttribute="leading" secondItem="QPe-Qh-FOs" secondAttribute="leading" constant="20" id="ZBz-ad-4RZ"/>
+                            <constraint firstItem="pyr-RY-Wpa" firstAttribute="leading" secondItem="QPe-Qh-FOs" secondAttribute="leading" id="eZo-qt-yyT"/>
+                            <constraint firstItem="pyr-RY-Wpa" firstAttribute="top" secondItem="QPe-Qh-FOs" secondAttribute="top" id="qnw-X0-juz"/>
                         </constraints>
                     </view>
                 </subviews>
@@ -53,8 +59,6 @@
         </tableViewCell>
     </objects>
     <resources>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
+        <image name="predictBgView" width="331" height="198"/>
     </resources>
 </document>
