@@ -485,6 +485,7 @@
 		F59442A326BA77CE006F4E8E /* Tajawal-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F594428E26B91B5C006F4E8E /* Tajawal-Light.ttf */; };
 		F59442A426BA77CE006F4E8E /* Tajawal-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F594429026B91B65006F4E8E /* Tajawal-Medium.ttf */; };
 		F59442A526BA77CE006F4E8E /* Tajawal-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F594429226B91B6D006F4E8E /* Tajawal-Regular.ttf */; };
+		F59FFAAF26E10FA200539F30 /* tick_back_animation.json in Resources */ = {isa = PBXBuildFile; fileRef = F59FFAAE26E10FA200539F30 /* tick_back_animation.json */; };
 		F5A89F7926CBA9CD00685428 /* cert.pem in Resources */ = {isa = PBXBuildFile; fileRef = F5A89F7626CBA9CD00685428 /* cert.pem */; };
 		F5A89F7A26CBA9CD00685428 /* ca.pem in Resources */ = {isa = PBXBuildFile; fileRef = F5A89F7726CBA9CD00685428 /* ca.pem */; };
 		F5A89F7B26CBA9CD00685428 /* key.pem in Resources */ = {isa = PBXBuildFile; fileRef = F5A89F7826CBA9CD00685428 /* key.pem */; };
@@ -839,6 +840,7 @@
 		F594429226B91B6D006F4E8E /* Tajawal-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Tajawal-Regular.ttf"; sourceTree = "<group>"; };
 		F594429B26B91C57006F4E8E /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Main.strings; sourceTree = "<group>"; };
 		F594429C26B91C58006F4E8E /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		F59FFAAE26E10FA200539F30 /* tick_back_animation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = tick_back_animation.json; sourceTree = "<group>"; };
 		F5A89F7626CBA9CD00685428 /* cert.pem */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = cert.pem; sourceTree = "<group>"; };
 		F5A89F7726CBA9CD00685428 /* ca.pem */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ca.pem; sourceTree = "<group>"; };
 		F5A89F7826CBA9CD00685428 /* key.pem */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = key.pem; sourceTree = "<group>"; };
@@ -2266,6 +2268,7 @@
 		F58A660326B22E8F00D5713F /* JSON_Files */ = {
 			isa = PBXGroup;
 			children = (
+				F59FFAAE26E10FA200539F30 /* tick_back_animation.json */,
 				F594424326B41963006F4E8E /* sparkle.json */,
 				F594424226B41963006F4E8E /* spin_success_new.json */,
 				F58A660A26B22EEC00D5713F /* home.json */,
@@ -2431,6 +2434,7 @@
 				33E158D426AA530D00B0615B /* OpenSans-Italic.ttf in Resources */,
 				3320FFAD2682EBC4001809AA /* GamificationAssets.xcassets in Resources */,
 				33EDB0EF2692D0A70040DCD4 /* CustomNavView.xib in Resources */,
+				F59FFAAF26E10FA200539F30 /* tick_back_animation.json in Resources */,
 				F594428926B91B46006F4E8E /* Tajawal-Bold.ttf in Resources */,
 				33EDB0D6268ED8200040DCD4 /* Predict.storyboard in Resources */,
 				3320FFD72682EBC4001809AA /* SpinerContainerView.xib in Resources */,

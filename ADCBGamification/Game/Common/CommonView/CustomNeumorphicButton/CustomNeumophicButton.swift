@@ -12,6 +12,7 @@ class CustomNeumophicButton: UIView {
     var darkL: CALayer?
     var lightL: CALayer?
     @IBOutlet weak var btnContainerView: UIView!
+    @IBOutlet weak var bgImage: UIImageView!
     @IBOutlet weak var button: UIButton!
     var handler: (()->Void)?
     func loadXib() ->UIView {
@@ -48,11 +49,15 @@ class CustomNeumophicButton: UIView {
         lightL?.removeFromSuperlayer()
         darkL = nil
         lightL = nil
-        darkL = CALayer()
-        lightL = CALayer()
-        button.customShadow(lightSha: lightL!, cornerRadius: 5, backColor: UIColor.customYellowColor(), shadowColor: UIColor.white, shadowRadius: 2,opacity: 0.3, dx: 0, dy: 0)
-        button.customShadow(lightSha: darkL!, cornerRadius: 5, backColor: UIColor.customYellowColor(), shadowColor: UIColor.black,shadowRadius: 1, opacity: 0.8,dx: -1, dy: -1)
-        button.addCustomShadow(cornerRadius: 5, shadowRadius: 2, opacity: 0.5, color: UIColor.clear, offset: CGSize(width: 2, height: 2))
+//        darkL = CALayer()
+//        lightL = CALayer()
+        button.backgroundColor = .clear
+      //  self.bgImage.image = UIImage(named: "pnwQuesSelec", in: Bundle(for: CustomNeumophicButton.self), compatibleWith: nil)
+        
+////        button.customShadow(lightSha: lightL!, cornerRadius: 5, backColor: UIColor.customYellowColor(), shadowColor: UIColor.white, shadowRadius: 2,opacity: 0.3, dx: 0, dy: 0)
+////        button.customShadow(lightSha: darkL!, cornerRadius: 5, backColor: UIColor.customYellowColor(), shadowColor: UIColor.black,shadowRadius: 1, opacity: 0.8,dx: -1, dy: -1)
+////        button.addCustomShadow(cornerRadius: 5, shadowRadius: 2, opacity: 0.5, color: UIColor.clear, offset: CGSize(width: 2, height: 2))
+        
     }
     
     func unSelectedState() {
@@ -60,10 +65,11 @@ class CustomNeumophicButton: UIView {
         lightL?.removeFromSuperlayer()
         darkL = nil
         lightL = nil
-        button.backgroundColor = UIColor.white
-        button.layer.cornerRadius = 5
+        button.backgroundColor = .clear
+      //  self.bgImage.image = UIImage(named: "pnwQuesDisab", in: Bundle(for: CustomNeumophicButton.self), compatibleWith: nil)
+       // button.layer.cornerRadius = 5
         
-        button.addCustomShadow(cornerRadius: 5, shadowRadius: 2, opacity: 0.2, color: UIColor.black, offset: CGSize(width: 2, height: 2))
+       // button.addCustomShadow(cornerRadius: 5, shadowRadius: 2, opacity: 0.2, color: UIColor.black, offset: CGSize(width: 2, height: 2))
     }
     
     @IBAction func buttonTapped() {

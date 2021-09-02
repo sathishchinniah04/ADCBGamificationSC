@@ -1,15 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "pnwView@3x.png",
+      "filename" : "pnwQuesDisab.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
+      "filename" : "pnwQuesDisab@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
+      "filename" : "pnwQuesDisab@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

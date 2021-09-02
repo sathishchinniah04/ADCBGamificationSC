@@ -7,11 +7,15 @@
 
 import UIKit
 
-class MatchListController: UIViewController {
+
+
+class MatchListController: UIViewController, PredictDateDelegate {
+ 
+    
     @IBOutlet weak var matchTableView: UITableView!
     @IBOutlet weak var activityIndicatorView: UIActivityIndicatorView!
     @IBOutlet weak var bgCloudImage: UIImageView!
-    
+  
     var predictGame = PredictGame()
     var game: Games?
     var tournaments: [Tournaments]?
@@ -54,6 +58,13 @@ class MatchListController: UIViewController {
         self.tournaments = info.predictionList?.first?.tournaments
         self.matchTableView.reloadData()
     }
+    
+    func predictAction() {
+        self.dismiss(animated: true) {
+            CallBack.shared.handle?(.homeAction)
+        }
+    }
+    
     func onFailure(info: PredictGame) {
         self.view.showAlert(singelBtn: true, ok: "Ok", title: "Alert", message: info.respDesc ?? "") { (done) in
             self.navigationController?.popViewController(animated: true)
@@ -91,7 +102,10 @@ extension MatchListController: UITableViewDelegate, UITableViewDataSource {
         controller.eventsList = event
         controller.selectedIndex = index.row
         controller.game = game
+        controller.delegate = self
+        controller.modalPresentationStyle = .overFullScreen
         //self.present(controller, animated: true, completion: nil)
-        self.navigationController?.pushViewController(controller, animated: true)
+        self.present(controller, animated: true, completion: nil)
+        //self.navigationController?.pushViewController(controller, animated: true)
     }
 }

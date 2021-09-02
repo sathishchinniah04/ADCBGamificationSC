@@ -42,13 +42,13 @@
                     <rect key="frame" x="0.0" y="148" width="414" height="197"/>
                 </imageView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HIL-NA-1vj">
-                    <rect key="frame" x="25" y="204.5" width="364" height="487.5"/>
+                    <rect key="frame" x="25" y="174.5" width="364" height="547.5"/>
                     <subviews>
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="HBo-tS-yp8">
-                            <rect key="frame" x="25" y="30" width="314" height="427.5"/>
+                            <rect key="frame" x="25" y="30" width="314" height="487.5"/>
                             <subviews>
                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="O7I-1N-Yh4">
-                                    <rect key="frame" x="0.0" y="0.0" width="314" height="342"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="314" height="402"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TYI-eD-yiz">
                                             <rect key="frame" x="59.5" y="0.0" width="195.5" height="54.5"/>
@@ -58,21 +58,41 @@ participation</string>
                                             <color key="textColor" red="0.1333333333" green="0.12941176469999999" blue="0.39607843139999999" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="successThumsUp" translatesAutoresizingMaskIntoConstraints="NO" id="2Rw-81-jJC">
-                                            <rect key="frame" x="107" y="74.5" width="100" height="100"/>
-                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ehP-aS-Yvy">
+                                            <rect key="frame" x="77" y="74.5" width="160" height="160"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="successThumsUp" translatesAutoresizingMaskIntoConstraints="NO" id="2Rw-81-jJC">
+                                                    <rect key="frame" x="30" y="30" width="100" height="100"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="100" id="WKM-pe-6nV"/>
+                                                        <constraint firstAttribute="width" constant="100" id="mGx-4V-mjb"/>
+                                                    </constraints>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                            <integer key="value" value="50"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </imageView>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oFe-XG-m0f" customClass="AnimationView" customModule="ADCBGamification" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="0.0" width="160" height="160"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </view>
+                                            </subviews>
+                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                             <constraints>
-                                                <constraint firstAttribute="height" constant="100" id="WKM-pe-6nV"/>
-                                                <constraint firstAttribute="width" constant="100" id="mGx-4V-mjb"/>
+                                                <constraint firstItem="oFe-XG-m0f" firstAttribute="top" secondItem="ehP-aS-Yvy" secondAttribute="top" id="6eG-7J-nbb"/>
+                                                <constraint firstAttribute="width" constant="160" id="DiU-LB-VbV"/>
+                                                <constraint firstItem="2Rw-81-jJC" firstAttribute="centerY" secondItem="ehP-aS-Yvy" secondAttribute="centerY" id="Mrr-uY-xUW"/>
+                                                <constraint firstAttribute="trailing" secondItem="oFe-XG-m0f" secondAttribute="trailing" id="SB7-yl-jy5"/>
+                                                <constraint firstAttribute="bottom" secondItem="oFe-XG-m0f" secondAttribute="bottom" id="dh1-4x-RJr"/>
+                                                <constraint firstItem="2Rw-81-jJC" firstAttribute="centerX" secondItem="ehP-aS-Yvy" secondAttribute="centerX" id="rQN-tv-QCb"/>
+                                                <constraint firstItem="oFe-XG-m0f" firstAttribute="leading" secondItem="ehP-aS-Yvy" secondAttribute="leading" id="syK-9O-MQU"/>
+                                                <constraint firstAttribute="height" constant="160" id="wgM-z0-4Te"/>
                                             </constraints>
-                                            <userDefinedRuntimeAttributes>
-                                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                    <integer key="value" value="50"/>
-                                                </userDefinedRuntimeAttribute>
-                                            </userDefinedRuntimeAttributes>
-                                        </imageView>
+                                        </view>
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="gmu-8q-nV0">
-                                            <rect key="frame" x="0.0" y="194.5" width="314" height="147.5"/>
+                                            <rect key="frame" x="0.0" y="254.5" width="314" height="147.5"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Winners will be announced shortly and you will receive a notification on the App. Stay tuned, enjoy the game!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0nd-Sg-pBJ">
                                                     <rect key="frame" x="0.0" y="0.0" width="314" height="57.5"/>
@@ -123,7 +143,7 @@ participation</string>
                                     </constraints>
                                 </stackView>
                                 <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="YAl-s1-7fU">
-                                    <rect key="frame" x="0.0" y="362" width="314" height="17"/>
+                                    <rect key="frame" x="0.0" y="422" width="314" height="17"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fK5-gM-Ebu">
                                             <rect key="frame" x="0.0" y="8" width="112" height="1"/>
@@ -154,7 +174,7 @@ participation</string>
                                     </constraints>
                                 </stackView>
                                 <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="7AP-oB-wNN">
-                                    <rect key="frame" x="0.0" y="399" width="314" height="28.5"/>
+                                    <rect key="frame" x="0.0" y="459" width="314" height="28.5"/>
                                     <subviews>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1OO-Za-ZQu">
                                             <rect key="frame" x="0.0" y="0.0" width="45" height="28.5"/>
@@ -195,7 +215,7 @@ participation</string>
                                     </subviews>
                                 </stackView>
                                 <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="51X-B6-gt2">
-                                    <rect key="frame" x="0.0" y="427.5" width="314" height="0.0"/>
+                                    <rect key="frame" x="0.0" y="487.5" width="314" height="0.0"/>
                                     <subviews>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VzQ-LZ-cgh">
                                             <rect key="frame" x="120" y="0.0" width="74" height="0.0"/>
@@ -316,13 +336,13 @@ participation</string>
                                                                 <constraint firstAttribute="height" constant="68" id="VCX-e4-Ppt"/>
                                                             </constraints>
                                                         </imageView>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="EN" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HYA-Tz-adf">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ENG" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HYA-Tz-adf">
                                                             <rect key="frame" x="17" y="19" width="29" height="21"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="29" id="ilE-gc-mI7"/>
                                                                 <constraint firstAttribute="height" constant="21" id="oGd-cZ-zHb"/>
                                                             </constraints>
-                                                            <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="12"/>
+                                                            <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="11"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Emirates Club" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7XX-v1-25h">
@@ -376,13 +396,13 @@ participation</string>
                                                                 <constraint firstAttribute="height" constant="66" id="gUW-Ug-T0C"/>
                                                             </constraints>
                                                         </imageView>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="EN" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hYn-jo-kdW">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NEZ" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hYn-jo-kdW">
                                                             <rect key="frame" x="17" y="18" width="29" height="21"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="21" id="D3E-aP-B4d"/>
                                                                 <constraint firstAttribute="width" constant="29" id="clO-IP-ytZ"/>
                                                             </constraints>
-                                                            <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="12"/>
+                                                            <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="11"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Emirates Club" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rbz-k3-UI8">
@@ -505,6 +525,7 @@ participation</string>
                 <outlet property="headingLbl" destination="nyE-Ui-VGM" id="77V-nA-yca"/>
                 <outlet property="homePageButton" destination="cl7-LS-aoR" id="Vhc-5t-MLF"/>
                 <outlet property="logoImageView" destination="GHo-Y8-UkT" id="nlY-A3-Pgv"/>
+                <outlet property="lottiPredictAnimationView" destination="oFe-XG-m0f" id="aoR-Ww-6od"/>
                 <outlet property="messageLbl" destination="0nd-Sg-pBJ" id="Br7-8K-Deh"/>
                 <outlet property="shareBtn" destination="1m8-ap-C42" id="E1y-g2-App"/>
                 <outlet property="shareButton" destination="3Qk-JG-Zme" id="rs7-aM-O9X"/>
@@ -528,7 +549,7 @@ participation</string>
         <image name="Logo" width="102" height="22"/>
         <image name="Mobile" width="137" height="250"/>
         <image name="VS" width="37" height="54.5"/>
-        <image name="pnwView" width="78" height="78"/>
+        <image name="pnwView" width="300" height="300"/>
         <image name="shareBtn" width="331" height="66"/>
         <image name="successThumsUp" width="100" height="100"/>
         <systemColor name="systemBackgroundColor">

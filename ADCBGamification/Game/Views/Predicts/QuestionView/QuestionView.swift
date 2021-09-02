@@ -17,6 +17,7 @@ class QuestionView: UIView {
     @IBOutlet weak var secondAnswerButton: CustomNeumophicButton!
     @IBOutlet weak var thirdAnswerButton: CustomNeumophicButton!
     @IBOutlet weak var fourthAnswerButton: CustomNeumophicButton!
+    @IBOutlet var answersImagesArray: [UIImageView]!
     
     var noOfQ: Int = 0
     var handle:((_ qNo: Int,_ indexPath : Int)->Void)?
@@ -69,27 +70,70 @@ class QuestionView: UIView {
         secondAnswerButton.handler = secButtonHandler
         thirdAnswerButton.handler = thirdButtonHandler
         fourthAnswerButton.handler = fourthButtonHandler
+        
     }
     
     func firstButtonHandler() {
+        
+        for (_, list) in self.eventsList?.questionList?[index].predOptions?.enumerated() ?? [].enumerated() {
+            list.isSelected = false
+        }
+        
+        for (index, image) in self.answersImagesArray.enumerated() {
+            if index == 0 {
+                image.image = UIImage(named: "pnwQuesSelec", in: Bundle(for: QuestionView.self), compatibleWith: nil)
+            } else {
+                image.image = UIImage(named: "pnwQuesDisab", in: Bundle(for: QuestionView.self), compatibleWith: nil)
+            }
+        }
         self.eventsList?.questionList?[index].predOptions?[0].isSelected = true
-        buttonContainerStackView.isUserInteractionEnabled = false
+        buttonContainerStackView.isUserInteractionEnabled = true
         handle?(0, self.index)
     }
     func secButtonHandler() {
-        
+        for (_, list) in self.eventsList?.questionList?[index].predOptions?.enumerated() ?? [].enumerated() {
+            list.isSelected = false
+        }
+        for (index, image) in self.answersImagesArray.enumerated() {
+            if index == 1 {
+                image.image = UIImage(named: "pnwQuesSelec", in: Bundle(for: QuestionView.self), compatibleWith: nil)
+            } else {
+                image.image = UIImage(named: "pnwQuesDisab", in: Bundle(for: QuestionView.self), compatibleWith: nil)
+            }
+        }
         self.eventsList?.questionList?[index].predOptions?[1].isSelected = true
-        buttonContainerStackView.isUserInteractionEnabled = false
+        
+        buttonContainerStackView.isUserInteractionEnabled = true
         handle?(1, self.index)
     }
     func thirdButtonHandler() {
+        for (_, list) in self.eventsList?.questionList?[index].predOptions?.enumerated() ?? [].enumerated() {
+            list.isSelected = false
+        }
+        for (index, image) in self.answersImagesArray.enumerated() {
+            if index == 2 {
+                image.image = UIImage(named: "pnwQuesSelec", in: Bundle(for: QuestionView.self), compatibleWith: nil)
+            } else {
+                image.image = UIImage(named: "pnwQuesDisab", in: Bundle(for: QuestionView.self), compatibleWith: nil)
+            }
+        }
         self.eventsList?.questionList?[index].predOptions?[2].isSelected = true
-        buttonContainerStackView.isUserInteractionEnabled = false
+        buttonContainerStackView.isUserInteractionEnabled = true
         handle?(2, self.index)
     }
     func fourthButtonHandler() {
+        for (_, list) in self.eventsList?.questionList?[index].predOptions?.enumerated() ?? [].enumerated() {
+            list.isSelected = false
+        }
+        for (index, image) in self.answersImagesArray.enumerated() {
+            if index == 3 {
+                image.image = UIImage(named: "pnwQuesSelec", in: Bundle(for: QuestionView.self), compatibleWith: nil)
+            } else {
+                image.image = UIImage(named: "pnwQuesDisab", in: Bundle(for: QuestionView.self), compatibleWith: nil)
+            }
+        }
         self.eventsList?.questionList?[index].predOptions?[3].isSelected = true
-        buttonContainerStackView.isUserInteractionEnabled = false
+        buttonContainerStackView.isUserInteractionEnabled = true
         handle?(3, self.index)
     }
     

@@ -7,13 +7,35 @@
 
 import UIKit
 
+protocol PredictDateDelegate {
+    func predictAction()
+}
+
 class PredictMatchController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var buttonContainerView: UIView!
     @IBOutlet weak var submitButton: UIButton!
     @IBOutlet weak var bgCloudImage: UIImageView!
-    
+    @IBOutlet weak var mainView: UIView!
+    @IBOutlet weak var contentView: UIView! {
+        didSet {
+            contentView.clipsToBounds = true
+            contentView.layer.cornerRadius = 20
+            if #available(iOS 11.0, *) {
+                contentView.layer.maskedCorners = [.layerMaxXMinYCorner, .layerMinXMinYCorner]
+            } else {
+                // Fallback on earlier versions
+            }
+        }
+    }
+    @IBOutlet weak var contentViewTopConstraint: NSLayoutConstraint!
+    @IBOutlet weak var topSeperatorLbl: UILabel! {
+        didSet {
+            topSeperatorLbl.layer.cornerRadius = 3.5
+        }
+    }
+    var delegate: PredictDateDelegate? = nil
     var selectedEvent: EventsList?
     var eventsList: EventsList?
     var selectedIndex: Int = 0
@@ -27,7 +49,8 @@ class PredictMatchController: UIViewController {
         initialSetup()
         navInitialSetup()
         tableSetup()
-        self.buttonContainerView.addShadow(cornerRadius:0, shadowRadius: 2, opacity: 0.5)
+        contentViewTopConstraint.constant = 80
+        //self.buttonContainerView.addShadow(cornerRadius:0, shadowRadius: 2, opacity: 0.5)
         DispatchQueue.main.asyncAfter(deadline: .now()+1) {
             self.tableView.beginUpdates()
             self.tableView.endUpdates()
@@ -35,7 +58,61 @@ class PredictMatchController: UIViewController {
         self.bgCloudImage.image = UIImage(named: "Clouds", in: Bundle(for: CustomNavView.self), compatibleWith: nil)
         self.submitButton.setTitle("Confirm & Submit".localized(), for: .normal)
         self.submitButton.setSizeFont(sizeFont: (StoreManager.shared.language == GameLanguage.AR.rawValue) ?  16.0 : 16.0, fontFamily: (StoreManager.shared.language == GameLanguage.AR.rawValue) ? "Tajawal-Medium" : "OpenSans-SemiBold")
+        
+        let con = self.navigationController
+ 
+        (con as? CustomNavViewController)?.changeOnlyTitle(title: "Predict & Win".localized())
+        
+        
+        addSwipe()
 
+    }
+    
+    func addSwipe() {
+        let directions: [UISwipeGestureRecognizer.Direction] = [.right, .left, .up, .down]
+        for direction in directions {
+            let gesture = UISwipeGestureRecognizer(target: self, action: #selector(handleSwipe))
+            gesture.direction = direction
+            self.contentView.addGestureRecognizer(gesture)
+        }
+    }
+
+    @objc func handleSwipe(sender: UISwipeGestureRecognizer) {
+        let direction = sender.direction
+        switch direction {
+            case .right:
+                print("Gesture direction: Right")
+            case .left:
+                print("Gesture direction: Left")
+            case .up:
+                print("Gesture direction: Up")
+                UIView.animate(withDuration: 0.5, delay: 0.0, options: [], animations: {
+
+                    self.contentViewTopConstraint.constant = 20
+                    UIView.animate(withDuration: 0.5) {
+                        self.contentView.layoutIfNeeded()
+                    }
+                    
+//                    if self.contentView.frame.origin.y > 150 {
+//                        let screenSize = UIScreen.main.bounds.size
+//
+//                        let x = screenSize.width - self.contentView.frame.size.width
+//                        let y = self.contentView.frame.origin.y - 100
+//
+//                        self.contentView.frame = CGRect(x: x, y: y, width: self.contentView.frame.size.width, height: self.contentView.frame.size.height + 100)
+//                    }
+
+                })
+               
+            case .down:
+                print("Gesture direction: Down")
+               
+                    self.dismiss(animated: true, completion: nil)
+                
+            default:
+                print("Unrecognized Gesture Direction")
+        }
+        
     }
 
     func initialSetup() {
@@ -59,16 +136,21 @@ class PredictMatchController: UIViewController {
     }
     
     func onSuccess() {
-        predictSuccessHelper.show(event: selectedEvent, complition: predictSuccessPopupHandler(action:))
+       
+            self.predictSuccessHelper.show(event: self.selectedEvent, complition: self.predictSuccessPopupHandler(action:))
+
     }
     
     func predictSuccessPopupHandler(action: PredictSuccessViewAction) {
         switch action {
         case .homePage:
             self.predictSuccessHelper.animateAndRemove()
-            self.dismiss(animated: true) {
-                CallBack.shared.handle?(.homeAction)
+            self.dismiss(animated: false) {
+                self.delegate?.predictAction()
             }
+//            self.dismiss(animated: true) {
+//                CallBack.shared.handle?(.homeAction)
+//            }
 //            DispatchQueue.main.asyncAfter(deadline: .now()+0.2) {
 //                self.navigationController?.popToRootViewController(animated: true)
 //            }
@@ -104,6 +186,12 @@ extension PredictMatchController: UITableViewDelegate, UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "PredictMatchTableViewCell") as! PredictMatchTableViewCell
 
         let questions = eventsList?.questionList?[indexPath.row].question
+        
+        if eventsList?.questionList?.count ?? 0 > 1 {
+            cell.seperatorView.isHidden = false
+        } else {
+            cell.seperatorView.isHidden = true
+        }
         cell.populateView(index: indexPath.row, info: eventsList, complition: answerButtonTapped(action:))
         return cell
     }
@@ -125,4 +213,13 @@ extension PredictMatchController: UITableViewDelegate, UITableViewDataSource {
         }
     }
     
+}
+
+extension UIView {
+   func roundCorners(corners: UIRectCorner, radius: CGFloat) {
+        let path = UIBezierPath(roundedRect: bounds, byRoundingCorners: corners, cornerRadii: CGSize(width: radius, height: radius))
+        let mask = CAShapeLayer()
+        mask.path = path.cgPath
+        layer.mask = mask
+    }
 }

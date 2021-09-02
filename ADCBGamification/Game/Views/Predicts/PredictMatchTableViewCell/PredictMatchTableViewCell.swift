@@ -16,6 +16,8 @@ class PredictMatchTableViewCell: UITableViewCell {
     @IBOutlet weak var spacerView: UIView!
     @IBOutlet weak var predictTeamView: PredictTeamView!
     @IBOutlet weak var questionView: QuestionView!
+    @IBOutlet weak var seperatorView: UIView!
+
     var handle:((PredictMatchTableViewCellAction)->Void)?
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -38,7 +40,7 @@ class PredictMatchTableViewCell: UITableViewCell {
     
     func appearenceSetup() {
         predictTeamContainerView.addShadow(cornerRadius: 10, shadowRadius: 6, opacity: 0.09)
-        titleLabel.text = "Predict the answers".localized()
+        titleLabel.text = "Predict & Win".localized()
         titleLabel.setSizeFont(sizeFont: (StoreManager.shared.language == GameLanguage.AR.rawValue) ?  20.0 : 20.0, fontFamily: (StoreManager.shared.language == GameLanguage.AR.rawValue) ? "Tajawal-Bold" : "OpenSans-Bold")
         
     }
@@ -51,7 +53,7 @@ class PredictMatchTableViewCell: UITableViewCell {
     func setupForFirstIndex(index: Int) {
         if index == 0 {
             self.predictTeamView.isHidden = false
-            self.titleLabel.isHidden = true
+            self.titleLabel.isHidden = false
             self.spacerView.isHidden = false
             self.predictTeamContainerView.isHidden = false
         } else {

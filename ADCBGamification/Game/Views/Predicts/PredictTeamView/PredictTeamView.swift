@@ -71,7 +71,7 @@ class PredictTeamView: UIView {
     
     func populateView(index: Int, info: EventsList?) {
         DispatchQueue.main.async {
-            self.appearenceSetup()
+            //self.appearenceSetup()
             self.labelSetup(index: index, info: info)
             //self.getChars(index: index, info: info)
         }

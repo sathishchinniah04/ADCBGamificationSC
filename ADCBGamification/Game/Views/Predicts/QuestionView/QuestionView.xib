@@ -5,7 +5,6 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -20,25 +19,29 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="QuestionView" customModule="ADCBGamification" customModuleProvider="target">
             <connections>
                 <outlet property="buttonContainerStackView" destination="3Qs-d2-pNa" id="hw7-rt-a7j"/>
-                <outlet property="firstAnswerButton" destination="qAX-Bm-QJh" id="Dco-BV-qZR"/>
-                <outlet property="fourthAnswerButton" destination="8R9-1g-R2p" id="Msb-Kc-G9e"/>
+                <outlet property="firstAnswerButton" destination="qOW-3d-X2G" id="Q1S-EO-Vqn"/>
+                <outlet property="fourthAnswerButton" destination="vog-wD-7eO" id="tCX-Lh-oEz"/>
                 <outlet property="noOfQuesLabel" destination="KP8-PO-nts" id="PYE-p5-eK4"/>
                 <outlet property="questionContainerView" destination="D0M-qR-YQ9" id="aZx-DU-G3i"/>
                 <outlet property="questionLabel" destination="R73-1I-dve" id="sqt-mG-n4r"/>
-                <outlet property="secondAnswerButton" destination="6vf-9J-dC4" id="ERK-YC-pbh"/>
-                <outlet property="thirdAnswerButton" destination="1cL-Dx-gQS" id="svF-Sk-jsJ"/>
+                <outlet property="secondAnswerButton" destination="1KM-gc-lzD" id="99K-IQ-Xgr"/>
+                <outlet property="thirdAnswerButton" destination="wT8-eW-EvQ" id="WIM-RH-hey"/>
+                <outletCollection property="answersImagesArray" destination="6n5-pS-qgQ" collectionClass="NSMutableArray" id="Kxn-AC-5fJ"/>
+                <outletCollection property="answersImagesArray" destination="xWS-It-nkd" collectionClass="NSMutableArray" id="ANf-wZ-7G8"/>
+                <outletCollection property="answersImagesArray" destination="WWb-z8-DGu" collectionClass="NSMutableArray" id="2VW-9q-tZn"/>
+                <outletCollection property="answersImagesArray" destination="ECj-Zl-DUP" collectionClass="NSMutableArray" id="BDX-fe-Xpi"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB">
-            <rect key="frame" x="0.0" y="0.0" width="414" height="393"/>
+            <rect key="frame" x="0.0" y="0.0" width="414" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="E3T-So-Z93">
-                    <rect key="frame" x="0.0" y="0.0" width="414" height="393"/>
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="600"/>
                     <subviews>
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="5a1-BL-xlG">
-                            <rect key="frame" x="0.0" y="0.0" width="414" height="354.5"/>
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="414.5"/>
                             <subviews>
                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="13" translatesAutoresizingMaskIntoConstraints="NO" id="wUu-E3-XfY">
                                     <rect key="frame" x="56.5" y="0.0" width="301.5" height="90.5"/>
@@ -75,26 +78,71 @@
                                     </subviews>
                                 </stackView>
                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="3Qs-d2-pNa">
-                                    <rect key="frame" x="20" y="114.5" width="374" height="240"/>
+                                    <rect key="frame" x="20" y="114.5" width="374" height="300"/>
                                     <subviews>
-                                        <view tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qAX-Bm-QJh" customClass="CustomNeumophicButton" customModule="ADCBGamification" customModuleProvider="target">
-                                            <rect key="frame" x="0.0" y="0.0" width="374" height="45"/>
-                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <view tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qOW-3d-X2G" customClass="CustomNeumophicButton" customModule="ADCBGamification" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="0.0" width="374" height="60"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pnwQuesDisab" translatesAutoresizingMaskIntoConstraints="NO" id="6n5-pS-qgQ">
+                                                    <rect key="frame" x="0.0" y="0.0" width="374" height="60"/>
+                                                </imageView>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
-                                                <constraint firstAttribute="height" constant="45" id="SVl-fc-FGT"/>
+                                                <constraint firstAttribute="height" constant="60" id="3KM-IX-y4M"/>
+                                                <constraint firstItem="6n5-pS-qgQ" firstAttribute="top" secondItem="qOW-3d-X2G" secondAttribute="top" id="4cW-wM-0kq"/>
+                                                <constraint firstAttribute="trailing" secondItem="6n5-pS-qgQ" secondAttribute="trailing" id="Sfx-Ll-JJr"/>
+                                                <constraint firstAttribute="bottom" secondItem="6n5-pS-qgQ" secondAttribute="bottom" id="bNU-jE-ev4"/>
+                                                <constraint firstItem="6n5-pS-qgQ" firstAttribute="leading" secondItem="qOW-3d-X2G" secondAttribute="leading" id="mqG-X6-jsI"/>
                                             </constraints>
                                         </view>
-                                        <view tag="2" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6vf-9J-dC4" customClass="CustomNeumophicButton" customModule="ADCBGamification" customModuleProvider="target">
-                                            <rect key="frame" x="0.0" y="65" width="374" height="45"/>
-                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <view tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1KM-gc-lzD" customClass="CustomNeumophicButton" customModule="ADCBGamification" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="80" width="374" height="60"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pnwQuesDisab" translatesAutoresizingMaskIntoConstraints="NO" id="xWS-It-nkd">
+                                                    <rect key="frame" x="0.0" y="0.0" width="374" height="60"/>
+                                                </imageView>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstItem="xWS-It-nkd" firstAttribute="top" secondItem="1KM-gc-lzD" secondAttribute="top" id="HWE-0X-FtJ"/>
+                                                <constraint firstAttribute="height" constant="60" id="I3x-T3-9E8"/>
+                                                <constraint firstAttribute="bottom" secondItem="xWS-It-nkd" secondAttribute="bottom" id="ZPX-NN-jk8"/>
+                                                <constraint firstAttribute="trailing" secondItem="xWS-It-nkd" secondAttribute="trailing" id="a7Z-ew-m6k"/>
+                                                <constraint firstItem="xWS-It-nkd" firstAttribute="leading" secondItem="1KM-gc-lzD" secondAttribute="leading" id="bFf-h2-CzJ"/>
+                                            </constraints>
                                         </view>
-                                        <view tag="3" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1cL-Dx-gQS" customClass="CustomNeumophicButton" customModule="ADCBGamification" customModuleProvider="target">
-                                            <rect key="frame" x="0.0" y="130" width="374" height="45"/>
-                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <view tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wT8-eW-EvQ" customClass="CustomNeumophicButton" customModule="ADCBGamification" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="160" width="374" height="60"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pnwQuesDisab" translatesAutoresizingMaskIntoConstraints="NO" id="WWb-z8-DGu">
+                                                    <rect key="frame" x="0.0" y="0.0" width="374" height="60"/>
+                                                </imageView>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstItem="WWb-z8-DGu" firstAttribute="leading" secondItem="wT8-eW-EvQ" secondAttribute="leading" id="4V8-R5-esO"/>
+                                                <constraint firstAttribute="height" constant="60" id="7LG-bB-TkZ"/>
+                                                <constraint firstAttribute="trailing" secondItem="WWb-z8-DGu" secondAttribute="trailing" id="W84-1D-wDa"/>
+                                                <constraint firstItem="WWb-z8-DGu" firstAttribute="top" secondItem="wT8-eW-EvQ" secondAttribute="top" id="awH-wv-oRB"/>
+                                                <constraint firstAttribute="bottom" secondItem="WWb-z8-DGu" secondAttribute="bottom" id="bXo-fV-UHG"/>
+                                            </constraints>
                                         </view>
-                                        <view tag="4" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8R9-1g-R2p" customClass="CustomNeumophicButton" customModule="ADCBGamification" customModuleProvider="target">
-                                            <rect key="frame" x="0.0" y="195" width="374" height="45"/>
-                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <view tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vog-wD-7eO" customClass="CustomNeumophicButton" customModule="ADCBGamification" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="240" width="374" height="60"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pnwQuesDisab" translatesAutoresizingMaskIntoConstraints="NO" id="ECj-Zl-DUP">
+                                                    <rect key="frame" x="0.0" y="0.0" width="374" height="60"/>
+                                                </imageView>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="60" id="bcq-mJ-f5h"/>
+                                                <constraint firstAttribute="trailing" secondItem="ECj-Zl-DUP" secondAttribute="trailing" id="cBO-A6-eFl"/>
+                                                <constraint firstItem="ECj-Zl-DUP" firstAttribute="leading" secondItem="vog-wD-7eO" secondAttribute="leading" id="cTf-KF-YoJ"/>
+                                                <constraint firstAttribute="bottom" secondItem="ECj-Zl-DUP" secondAttribute="bottom" id="dgA-WK-bxr"/>
+                                                <constraint firstItem="ECj-Zl-DUP" firstAttribute="top" secondItem="vog-wD-7eO" secondAttribute="top" id="hsa-Gq-WYe"/>
+                                            </constraints>
                                         </view>
                                     </subviews>
                                 </stackView>
@@ -126,8 +174,6 @@
         </view>
     </objects>
     <resources>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
+        <image name="pnwQuesDisab" width="331" height="66"/>
     </resources>
 </document>

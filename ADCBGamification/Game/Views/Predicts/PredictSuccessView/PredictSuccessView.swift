@@ -48,10 +48,11 @@ class PredictSuccessView: UIView {
 
     @IBOutlet weak var shareBtn: UIButton!
     @IBOutlet weak var subContentView: UIView!
+    @IBOutlet weak var lottiPredictAnimationView: AnimationView!
     
     var eventDetails: EventsList?
     var shareImage: UIImage?
-    
+    private var predictAnimationView: AnimationView?
     let blueColor = UIColor(red: 34.0/256.0, green: 33.0/256.0, blue: 101.0/256.0, alpha: 1.0)
     
     var handle:((PredictSuccessViewAction)->Void)?
@@ -60,6 +61,15 @@ class PredictSuccessView: UIView {
         UINib(nibName: "PredictSuccessView", bundle: Bundle(for: Self.self)).instantiate(withOwner: self, options: nil).first as! PredictSuccessView
     }
         
+    func animationSetUp() {
+        predictAnimationView = .init(name: "tick_back_animation")
+        predictAnimationView!.frame = lottiPredictAnimationView.bounds
+        predictAnimationView!.contentMode = .scaleAspectFit
+        predictAnimationView!.loopMode = .playOnce
+        lottiPredictAnimationView.addSubview(predictAnimationView!)
+        self.predictAnimationView?.play()
+    }
+    
     func populateView(eventList :EventsList?, complition: ((PredictSuccessViewAction)->Void)?) {
         self.handle = complition
         self.eventDetails = eventList
@@ -103,7 +113,7 @@ class PredictSuccessView: UIView {
     }
     
     func setupFontFamily() {
-        
+        self.animationSetUp()
         shareGameTitleLbl.text = "Predict & Win".localized()
         headingLbl.text = "Thank you for your participation".localized()
         shareMessageLbl.text = "Winner will be announced shortly and you will receive a notification on the App. Stay tuned, enjoy the game !".localized()
@@ -122,9 +132,15 @@ class PredictSuccessView: UIView {
         messageLbl.text = "Winners will be announced shortly and you will receive a notification on the App. Stay tuned, enjoy the game!".localized()
         goToLbl.text = "Go To".localized()
      
-        eventPlayerOneTitle.text = eventDetails?.opponentASynonym
-        eventPlayerTwoTitle.text = eventDetails?.opponentBSynonym
-        self.getChars(info: eventDetails)
+      
+        eventInitialLbl.text = eventDetails?.opponentASynonym
+        eventTwoInitialLbl.text = eventDetails?.opponentBSynonym
+        
+        eventPlayerOneTitle.text = eventDetails?.OpponentA
+        eventPlayerTwoTitle.text = eventDetails?.OpponentB
+        
+        
+      //  self.getChars(info: eventDetails)
         
         eventPlayerOneTitle.setSizeFont(sizeFont: (StoreManager.shared.language == GameLanguage.AR.rawValue) ?  10.0 : 10.0, fontFamily: (StoreManager.shared.language == GameLanguage.AR.rawValue) ? "Tajawal-SemiBold" : "OpenSans-SemiBold")
         
