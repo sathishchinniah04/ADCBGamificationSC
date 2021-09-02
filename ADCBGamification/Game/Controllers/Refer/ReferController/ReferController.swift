@@ -13,6 +13,7 @@ class ReferController: UIViewController, ReferDateDelegate {
     @IBOutlet weak var shareReferalLabel: UILabel!
     @IBOutlet weak var referCodeView: UIView!
     @IBOutlet weak var referCodeLabel: UILabel!
+    @IBOutlet weak var referMessageLabel: UILabel!
     @IBOutlet weak var shareButton: NeumorphicButton!
     @IBOutlet weak var chooseContactButton: NeumorphicButton!
     //@IBOutlet weak var chooseContactButton: ReferContactButton!
@@ -67,6 +68,7 @@ class ReferController: UIViewController, ReferDateDelegate {
                 self.chooseContactButton.isUserInteractionEnabled = true
                 self.activityIndicatorView.stopAnimating()
                 self.referCodeLabel.text = data.referralCode
+                self.referMessageLabel.text = data.rewardMessage
                 self.referCode = data.referralCode ?? ""
                 self.buttonUserInteraction(enable: true)
                 self.referCodeView.layoutIfNeeded()

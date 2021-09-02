@@ -36,8 +36,8 @@
                                 <rect key="frame" x="30" y="468" width="354" height="354"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ReferLogo" translatesAutoresizingMaskIntoConstraints="NO" id="Tc1-oJ-i1w">
-                                <rect key="frame" x="30" y="134" width="354" height="314"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="referFirstBg" translatesAutoresizingMaskIntoConstraints="NO" id="Tc1-oJ-i1w">
+                                <rect key="frame" x="30" y="151" width="354" height="314"/>
                             </imageView>
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="Off-2c-xZL">
                                 <rect key="frame" x="188.5" y="429.5" width="37" height="37"/>
@@ -54,7 +54,7 @@
                             <constraint firstItem="Tc1-oJ-i1w" firstAttribute="leading" secondItem="8Yo-nW-oOk" secondAttribute="leading" constant="30" id="HW0-Nl-YeS"/>
                             <constraint firstItem="XUZ-wa-BVQ" firstAttribute="height" secondItem="8Yo-nW-oOk" secondAttribute="height" multiplier="0.5" id="KHP-6y-5QI"/>
                             <constraint firstItem="Off-2c-xZL" firstAttribute="centerX" secondItem="8Yo-nW-oOk" secondAttribute="centerX" id="P86-Ln-Ahv"/>
-                            <constraint firstItem="Tc1-oJ-i1w" firstAttribute="bottom" secondItem="XUZ-wa-BVQ" secondAttribute="bottom" id="Tcq-bu-HPt"/>
+                            <constraint firstItem="Tc1-oJ-i1w" firstAttribute="bottom" secondItem="XUZ-wa-BVQ" secondAttribute="bottom" constant="17" id="Tcq-bu-HPt"/>
                             <constraint firstItem="ic6-ia-DtR" firstAttribute="top" secondItem="XUZ-wa-BVQ" secondAttribute="bottom" constant="20" id="YQR-Bj-0y6"/>
                             <constraint firstItem="XUZ-wa-BVQ" firstAttribute="leading" secondItem="8Yo-nW-oOk" secondAttribute="leading" id="aoe-k8-ZCr"/>
                             <constraint firstItem="XUZ-wa-BVQ" firstAttribute="top" secondItem="8Yo-nW-oOk" secondAttribute="top" id="bTO-Io-jcX"/>
@@ -62,7 +62,7 @@
                             <constraint firstItem="ic6-ia-DtR" firstAttribute="centerX" secondItem="HH6-ca-mjg" secondAttribute="centerX" id="iS2-a1-aqB"/>
                             <constraint firstItem="ic6-ia-DtR" firstAttribute="leading" secondItem="HH6-ca-mjg" secondAttribute="leading" constant="30" id="pbI-zY-eWY"/>
                             <constraint firstItem="Ny5-Fe-xMM" firstAttribute="leading" secondItem="HH6-ca-mjg" secondAttribute="leading" id="vbu-na-BzJ"/>
-                            <constraint firstItem="Tc1-oJ-i1w" firstAttribute="top" secondItem="HH6-ca-mjg" secondAttribute="top" constant="90" id="vpN-wD-0mz"/>
+                            <constraint firstItem="Tc1-oJ-i1w" firstAttribute="top" secondItem="HH6-ca-mjg" secondAttribute="top" constant="107" id="vpN-wD-0mz"/>
                             <constraint firstItem="HH6-ca-mjg" firstAttribute="trailing" secondItem="XUZ-wa-BVQ" secondAttribute="trailing" id="xsm-v0-awZ"/>
                         </constraints>
                     </view>
@@ -176,8 +176,8 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Clouds" translatesAutoresizingMaskIntoConstraints="NO" id="QcB-vb-CBN">
                                 <rect key="frame" x="0.0" y="44" width="414" height="63"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ReferLogo" translatesAutoresizingMaskIntoConstraints="NO" id="Yjb-c9-aHn">
-                                <rect key="frame" x="30" y="134" width="354" height="314"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="referSecondBg" translatesAutoresizingMaskIntoConstraints="NO" id="Yjb-c9-aHn">
+                                <rect key="frame" x="30" y="134" width="354" height="333"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="Bv6-l7-cTD">
                                 <rect key="frame" x="30" y="480" width="354" height="45"/>
@@ -270,6 +270,16 @@
                                 <rect key="frame" x="188.5" y="429.5" width="37" height="37"/>
                                 <color key="color" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </activityIndicatorView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vjx-Rz-V4k">
+                                <rect key="frame" x="131" y="137" width="232" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="232" id="Voo-0u-PAp"/>
+                                    <constraint firstAttribute="height" constant="80" id="sCx-TV-WXu"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="16"/>
+                                <color key="textColor" red="0.1333333333" green="0.12941176469999999" blue="0.39607843139999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="t9B-6s-wkc"/>
                         <color key="backgroundColor" red="0.97254901960784312" green="0.97254901960784312" blue="0.97254901960784312" alpha="1" colorSpace="calibratedRGB"/>
@@ -277,7 +287,8 @@
                             <constraint firstItem="GG1-Ex-sQ9" firstAttribute="height" secondItem="gV3-aM-XOC" secondAttribute="height" multiplier="0.5" id="0vS-Cp-q4p"/>
                             <constraint firstItem="8gm-Ye-CoG" firstAttribute="trailing" secondItem="sWE-jm-dk4" secondAttribute="trailing" id="1bs-ju-pxo"/>
                             <constraint firstItem="dni-3P-yCj" firstAttribute="centerX" secondItem="gV3-aM-XOC" secondAttribute="centerX" id="4zv-aJ-XUU"/>
-                            <constraint firstItem="Yjb-c9-aHn" firstAttribute="bottom" secondItem="GG1-Ex-sQ9" secondAttribute="bottom" id="7u5-Hh-tUQ"/>
+                            <constraint firstItem="Vjx-Rz-V4k" firstAttribute="leading" secondItem="Yjb-c9-aHn" secondAttribute="trailing" constant="-253" id="5lb-KM-WzC"/>
+                            <constraint firstItem="Yjb-c9-aHn" firstAttribute="bottom" secondItem="GG1-Ex-sQ9" secondAttribute="bottom" constant="19" id="7u5-Hh-tUQ"/>
                             <constraint firstAttribute="trailing" secondItem="GG1-Ex-sQ9" secondAttribute="trailing" id="Ahe-ep-9il"/>
                             <constraint firstItem="PDu-Pq-V5j" firstAttribute="leading" secondItem="iq8-Er-Ty5" secondAttribute="trailing" constant="10" id="ELJ-aI-3mu"/>
                             <constraint firstItem="Bv6-l7-cTD" firstAttribute="top" secondItem="GG1-Ex-sQ9" secondAttribute="bottom" constant="32" id="JoE-aj-7rQ"/>
@@ -300,6 +311,7 @@
                             <constraint firstItem="QcB-vb-CBN" firstAttribute="top" secondItem="t9B-6s-wkc" secondAttribute="top" id="nXu-Rn-TTl"/>
                             <constraint firstItem="GG1-Ex-sQ9" firstAttribute="top" secondItem="gV3-aM-XOC" secondAttribute="top" id="nb8-re-gXd"/>
                             <constraint firstItem="8gm-Ye-CoG" firstAttribute="bottom" secondItem="sWE-jm-dk4" secondAttribute="bottom" id="otq-6Q-IE9"/>
+                            <constraint firstItem="Yjb-c9-aHn" firstAttribute="top" secondItem="Vjx-Rz-V4k" secondAttribute="bottom" constant="-83" id="pdK-Iz-OtQ"/>
                             <constraint firstItem="HWn-Y7-7Zo" firstAttribute="leading" secondItem="t9B-6s-wkc" secondAttribute="leading" constant="30" id="pmi-ce-BXu"/>
                             <constraint firstItem="t9B-6s-wkc" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="Zve-f3-Hol" secondAttribute="bottom" constant="30" id="rJl-g8-Lfx"/>
                             <constraint firstItem="QcB-vb-CBN" firstAttribute="leading" secondItem="t9B-6s-wkc" secondAttribute="leading" id="u9k-Zd-aEG"/>
@@ -314,6 +326,7 @@
                         <outlet property="orLabel" destination="3Nh-q7-GLj" id="USk-qA-A1H"/>
                         <outlet property="referCodeLabel" destination="13o-H8-mbQ" id="cFm-BS-EaA"/>
                         <outlet property="referCodeView" destination="sWE-jm-dk4" id="vSf-4r-ohm"/>
+                        <outlet property="referMessageLabel" destination="Vjx-Rz-V4k" id="8sU-Yk-jYF"/>
                         <outlet property="shareButton" destination="8gm-Ye-CoG" id="a2a-15-Mo4"/>
                         <outlet property="shareReferalLabel" destination="Bur-DY-auV" id="7ez-lG-afb"/>
                     </connections>
@@ -441,7 +454,8 @@
     <resources>
         <image name="Clouds" width="300" height="63"/>
         <image name="CurveClip" width="187.5" height="211"/>
-        <image name="ReferLogo" width="238" height="296"/>
+        <image name="referFirstBg" width="326" height="285"/>
+        <image name="referSecondBg" width="319" height="296"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
