@@ -73,7 +73,7 @@ class PredictTeamView: UIView {
         DispatchQueue.main.async {
             self.appearenceSetup()
             self.labelSetup(index: index, info: info)
-            self.getChars(index: index, info: info)
+            //self.getChars(index: index, info: info)
         }
     }
     
@@ -115,12 +115,16 @@ class PredictTeamView: UIView {
         //leagueNameLabel.text = inf.
        // guard let events = inf else { return }
        // imageSetup(info: inf)
-        
+        //inf.opponentASynonym  inf.opponentBSynonym
         leagueNameLabel.text = Constants.leagueName
-        firstTeamNameLabel.text = inf.opponentASynonym
-        secondTeamNameLabel.text = inf.opponentBSynonym
-        let numberOfDays = Calendar.current.dateComponents([.day], from: Date(), to: Utility.convertStringToDate(date: inf.MatchDate ?? "")).day ?? 0
-        hourMinteAlignmentCheck(date: inf.MatchDate ?? "", value: numberOfDays)
+        firstTeamNameLabel.text = inf.OpponentA
+        secondTeamNameLabel.text = inf.OpponentB
+        
+        firstTeamCharLabel.text = inf.opponentASynonym
+        secondTeamCharLabel.text = inf.opponentBSynonym
+        
+        let numberOfDays = Calendar.current.dateComponents([.day], from: Date(), to: Utility.convertStringToDate(date: inf.predictionLockingTime ?? "")).day ?? 0
+        hourMinteAlignmentCheck(date: inf.predictionLockingTime ?? "", value: numberOfDays)
     }
     
     
@@ -128,6 +132,7 @@ class PredictTeamView: UIView {
     func hourMinteAlignmentCheck(date: String, value: Int) {
         
         let matchDate = Utility.convertStringToDate(date: date)
+        
         if matchDate < Date() {
             self.timeLabel.text = "Expired on".localized() + " \(Utility.secondsToHoursMinutesSeconds(seconds: Utility.convertStringIntoDate(date: date)).0) " + "hr".localized() + " \(Utility.secondsToHoursMinutesSeconds(seconds: Utility.convertStringIntoDate(date: date)).1) " + "min".localized()
         } else {
@@ -143,7 +148,19 @@ class PredictTeamView: UIView {
                     daysCount = "\(value)" + "day".localized()
                 }
              
-                self.timeLabel.text = daysCount + " \(Utility.secondsToHoursMinutesSeconds(seconds: Utility.convertStringIntoDate(date: date)).0) " + "hr".localized() + " \(Utility.secondsToHoursMinutesSeconds(seconds: Utility.convertStringIntoDate(date: date)).1) " + "min".localized()
+                let expDate = Utility.convertStringToDate(date: date)
+                
+                let calendar = Calendar.current
+
+                let currentDateComp = calendar.dateComponents([.hour, .minute], from: Date())
+                let expDateComp = calendar.dateComponents([.hour, .minute], from: expDate)
+
+                let hours =  Int(expDateComp.hour ?? 0) - Int(currentDateComp.hour ?? 0)
+            
+                let min = Int(expDateComp.minute ?? 0) - Int(currentDateComp.minute ?? 0)
+
+                self.timeLabel.text = "Starts in " + daysCount + "  \(hours)" + "hr ".localized() + "\(min)" + "mins".localized()
+                //self.timeLabel.text = daysCount + " \(Utility.secondsToHoursMinutesSeconds(seconds: Utility.convertStringIntoDate(date: date)).0) " + "hr".localized() + " \(Utility.secondsToHoursMinutesSeconds(seconds: Utility.convertStringIntoDate(date: date)).1) " + "min".localized()
             }
         }
 

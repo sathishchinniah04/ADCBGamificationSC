@@ -120,7 +120,7 @@ class PredictSuccessView: UIView {
         //subTitleLbl.text = "life".localized()
         headerLbl.text = "Thank you for your  participation".localized()
         messageLbl.text = "Winners will be announced shortly and you will receive a notification on the App. Stay tuned, enjoy the game!".localized()
-        goToLbl.text = "or".localized()
+        goToLbl.text = "Go To".localized()
      
         eventPlayerOneTitle.text = eventDetails?.opponentASynonym
         eventPlayerTwoTitle.text = eventDetails?.opponentBSynonym

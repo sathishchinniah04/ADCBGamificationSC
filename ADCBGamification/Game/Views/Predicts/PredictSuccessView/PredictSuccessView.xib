@@ -126,23 +126,23 @@ participation</string>
                                     <rect key="frame" x="0.0" y="362" width="314" height="17"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fK5-gM-Ebu">
-                                            <rect key="frame" x="0.0" y="8" width="124.5" height="1"/>
+                                            <rect key="frame" x="0.0" y="8" width="112" height="1"/>
                                             <color key="backgroundColor" red="0.91764705879999997" green="0.91764705879999997" blue="0.91764705879999997" alpha="1" colorSpace="calibratedRGB"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="1" id="VrO-ZU-02W"/>
                                             </constraints>
                                         </view>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="or" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jzf-A8-AIW">
-                                            <rect key="frame" x="144.5" y="0.0" width="25" height="17"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Go To " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jzf-A8-AIW">
+                                            <rect key="frame" x="132" y="0.0" width="50" height="17"/>
                                             <constraints>
-                                                <constraint firstAttribute="width" constant="25" id="5aN-PV-L8L"/>
+                                                <constraint firstAttribute="width" constant="50" id="5aN-PV-L8L"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <color key="textColor" red="0.3294117647" green="0.3294117647" blue="0.33725490200000002" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gNL-zP-dEg">
-                                            <rect key="frame" x="189.5" y="8" width="124.5" height="1"/>
+                                            <rect key="frame" x="202" y="8" width="112" height="1"/>
                                             <color key="backgroundColor" red="0.91764705879999997" green="0.91764705879999997" blue="0.91764705879999997" alpha="1" colorSpace="calibratedRGB"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="1" id="KLk-mW-PBv"/>
