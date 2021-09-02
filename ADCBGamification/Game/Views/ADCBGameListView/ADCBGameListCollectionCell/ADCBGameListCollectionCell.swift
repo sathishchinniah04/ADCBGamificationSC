@@ -147,7 +147,7 @@ class ADCBGameListCollectionCell: UICollectionViewCell {
     
     func onActive(game: Games) {
 
-        let date = game.executionPeriod?.endDateTime ?? ""
+        let date = game.validityPeriod?.endDateTime ?? ""
         expireInLabel.text = "Expires in".localized()
         let numberOfDays = Calendar.current.dateComponents([.day], from: Date(), to: Utility.convertStringToDate(date: date)).day ?? 0
         hourMinteAlignmentCheck(date: date, value: numberOfDays)
@@ -167,8 +167,46 @@ class ADCBGameListCollectionCell: UICollectionViewCell {
                 daysCount = "\(value)" + "day".localized()
             }
             
-            self.timeLabel.text = daysCount + " \(Utility.secondsToHoursMinutesSeconds(seconds: Utility.convertStringIntoDate(date: date)).0)" + "hr ".localized() + "\(Utility.secondsToHoursMinutesSeconds(seconds: Utility.convertStringIntoDate(date: date)).1)" + "mins".localized()
+            
+            let expDate = Utility.convertStringToDate(date: date)
+            
+            let calendar = Calendar.current
+
+            let currentDateComp = calendar.dateComponents([.hour, .minute], from: Date())
+            let expDateComp = calendar.dateComponents([.hour, .minute], from: expDate)
+
+            let hours =  Int(expDateComp.hour ?? 0) - Int(currentDateComp.hour ?? 0)
+        
+            let min = Int(expDateComp.minute ?? 0) - Int(currentDateComp.minute ?? 0)
+
+            self.timeLabel.text = daysCount + " \(hours)" + "hr ".localized() + "\(min)" + "mins".localized()
+            
         }
         //\(Utility.secondsToHoursMinutesSeconds(seconds: Utility.convertStringIntoDate(date: date)).2)sec"
     }
+    
+    func timeString(time: TimeInterval) -> String {
+         let hour = Int(time) / 3600
+         let minute = Int(time) / 60 % 60
+         let second = Int(time) % 60
+
+         // return formated string
+         return String(format: "%02i:%02i:%02i", hour, minute, second)
+     }
 }
+
+extension TimeInterval{
+
+        func stringFromTimeInterval() -> String {
+
+            let time = NSInteger(self)
+
+            let ms = Int((self.truncatingRemainder(dividingBy: 1)) * 1000)
+            let seconds = time % 60
+            let minutes = (time / 60) % 60
+            let hours = (time / 3600)
+
+            return String(format: "%0.2d:%0.2d:%0.2d.%0.3d",hours,minutes,seconds,ms)
+
+        }
+    }

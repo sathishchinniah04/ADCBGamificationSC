@@ -79,6 +79,20 @@ class Utility {
         }
     
     
+    static func convertStringIntoDateTimeInterval(date: String) ->  TimeInterval? {
+        let isoDate = date
+        let dateFormatter = DateFormatter()
+        dateFormatter.locale = Locale(identifier: "en_US_POSIX")
+        dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
+        if let date = dateFormatter.date(from:isoDate) {
+            let timeInterval = date.timeIntervalSinceNow
+            return timeInterval
+        } else {
+            return nil
+        }
+    }
+    
+    
     static func convertDateFormat(inputDate: String) -> String {
 //on 18 Aug 2021
          let olDateFormatter = DateFormatter()
@@ -103,4 +117,22 @@ class Utility {
         static func secondsToHoursMinutesSeconds (seconds : Int) -> (String, String, String) {
             return (String(format: "%02d",seconds / 3600), String(format: "%02d", (seconds % 3600) / 60), String(format: "%02d", (seconds % 3600) % 60))
         }
+    
+    static func findDateDiff(time1Str: String, time2Str: String) -> String {
+        let timeformatter = DateFormatter()
+        timeformatter.dateFormat = "hh:mm a"
+
+        guard let time1 = timeformatter.date(from: time1Str),
+            let time2 = timeformatter.date(from: time2Str) else { return "" }
+
+        //You can directly use from here if you have two dates
+
+        let interval = time2.timeIntervalSince(time1)
+        let hour = interval / 3600;
+        let minute = interval.truncatingRemainder(dividingBy: 3600) / 60
+        let intervalInt = Int(interval)
+        return "\(intervalInt < 0 ? "-" : "+") \(Int(hour)) Hours \(Int(minute)) Minutes"
+    }
+    
+
 }
