@@ -33,7 +33,7 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="63"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ic6-ia-DtR" customClass="ExpireView" customModule="ADCBGamification" customModuleProvider="target">
-                                <rect key="frame" x="30" y="468" width="354" height="354"/>
+                                <rect key="frame" x="30" y="468" width="354" height="374"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="referFirstBg" translatesAutoresizingMaskIntoConstraints="NO" id="Tc1-oJ-i1w">
@@ -58,7 +58,7 @@
                             <constraint firstItem="ic6-ia-DtR" firstAttribute="top" secondItem="XUZ-wa-BVQ" secondAttribute="bottom" constant="20" id="YQR-Bj-0y6"/>
                             <constraint firstItem="XUZ-wa-BVQ" firstAttribute="leading" secondItem="8Yo-nW-oOk" secondAttribute="leading" id="aoe-k8-ZCr"/>
                             <constraint firstItem="XUZ-wa-BVQ" firstAttribute="top" secondItem="8Yo-nW-oOk" secondAttribute="top" id="bTO-Io-jcX"/>
-                            <constraint firstItem="HH6-ca-mjg" firstAttribute="bottom" secondItem="ic6-ia-DtR" secondAttribute="bottom" constant="40" id="cJ5-dU-LoH"/>
+                            <constraint firstItem="HH6-ca-mjg" firstAttribute="bottom" secondItem="ic6-ia-DtR" secondAttribute="bottom" constant="20" id="cJ5-dU-LoH"/>
                             <constraint firstItem="ic6-ia-DtR" firstAttribute="centerX" secondItem="HH6-ca-mjg" secondAttribute="centerX" id="iS2-a1-aqB"/>
                             <constraint firstItem="ic6-ia-DtR" firstAttribute="leading" secondItem="HH6-ca-mjg" secondAttribute="leading" constant="30" id="pbI-zY-eWY"/>
                             <constraint firstItem="Ny5-Fe-xMM" firstAttribute="leading" secondItem="HH6-ca-mjg" secondAttribute="leading" id="vbu-na-BzJ"/>

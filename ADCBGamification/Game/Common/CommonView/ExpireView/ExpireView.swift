@@ -16,6 +16,7 @@ class ExpireView: UIView {
     @IBOutlet weak var containerStackView: UIStackView!
     @IBOutlet weak var secondStackView: UIStackView!
     @IBOutlet weak var genericButton: GenericNeumorphicButton!
+    @IBOutlet weak var descTextView: UITextView!
     
     
     private var termsView = TermsViewHelper()
@@ -78,6 +79,8 @@ class ExpireView: UIView {
         
         descLabel.setSizeFont(sizeFont: (StoreManager.shared.language == GameLanguage.AR.rawValue) ?  20.0 : 14.0, fontFamily: (StoreManager.shared.language == GameLanguage.AR.rawValue) ? "Tajawal-ExtraLight" : "OpenSans-Light")
         
+        descTextView.setSizeFont(sizeFont: (StoreManager.shared.language == GameLanguage.AR.rawValue) ?  20.0 : 14.0, fontFamily: (StoreManager.shared.language == GameLanguage.AR.rawValue) ? "Tajawal-ExtraLight" : "OpenSans-Light")
+        
         expireLabel.setSizeFont(sizeFont: (StoreManager.shared.language == GameLanguage.AR.rawValue) ?  20.0 : 14.0, fontFamily: (StoreManager.shared.language == GameLanguage.AR.rawValue) ? "Tajawal-Regular" : "OpenSans-Light")
     }
     
@@ -110,7 +113,7 @@ class ExpireView: UIView {
         gameNameLabel.text = game.displayDetails?.name
         //gameNameSubTitleLabel.text = game.displayDetails?.synonym   //game.gameType
         descLabel.text = game.displayDetails?.description ?? ""
-        
+        descTextView.text = game.displayDetails?.description ?? ""
         if game.gameType == "PredictNWin" {
             expireLabel.text = ""
             gameNameSubTitleLabel.text = "Play and win exciting rewards!".localized()

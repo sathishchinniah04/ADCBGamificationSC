@@ -195,6 +195,7 @@
 		33FC31D326973CA000868D9E /* CustomTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33FC31D226973CA000868D9E /* CustomTimer.swift */; };
 		6A478CB326C2D07D00E96B5F /* en.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 6A478CB126C2D07C00E96B5F /* en.lproj */; };
 		6A478CB426C2D07D00E96B5F /* ar.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 6A478CB226C2D07D00E96B5F /* ar.lproj */; };
+		F55AE37626E1438F005B6F0E /* tick_back_animation.json in Resources */ = {isa = PBXBuildFile; fileRef = F59FFAAE26E10FA200539F30 /* tick_back_animation.json */; };
 		F58A64F726B22CCB00D5713F /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = F58A644126B22CCB00D5713F /* LICENSE */; };
 		F58A64F826B22CCB00D5713F /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = F58A644126B22CCB00D5713F /* LICENSE */; };
 		F58A64F926B22CCB00D5713F /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = F58A644226B22CCB00D5713F /* README.md */; };
@@ -2464,6 +2465,7 @@
 				33E158EA26AA533000B0615B /* OpenSans-SemiBoldItalic.ttf in Resources */,
 				3320FF332682EB13001809AA /* LaunchScreen.storyboard in Resources */,
 				3320FF302682EB13001809AA /* Assets.xcassets in Resources */,
+				F55AE37626E1438F005B6F0E /* tick_back_animation.json in Resources */,
 				F58A660D26B22EEC00D5713F /* home.json in Resources */,
 				F58A64F826B22CCB00D5713F /* LICENSE in Resources */,
 				3320FF2E2682EB10001809AA /* Main.storyboard in Resources */,
