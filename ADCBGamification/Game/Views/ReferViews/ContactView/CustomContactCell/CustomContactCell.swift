@@ -45,7 +45,7 @@ class CustomContactCell: UITableViewCell {
             imageContainerView.backgroundColor = #colorLiteral(red: 0.9176470588, green: 0.9176470588, blue: 0.9176470588, alpha: 1)
         } else {
             initialCharLabel.isHidden = false
-            imageContainerView.backgroundColor = #colorLiteral(red: 1, green: 0.8, blue: 0, alpha: 1)
+            imageContainerView.backgroundColor = #colorLiteral(red: 1, green: 0.8784313725, blue: 0, alpha: 1)
         }
         
         labelSetup(info: info)

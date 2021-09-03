@@ -55,6 +55,38 @@ class NetworkManager: NSObject {
         task(req: req, complition: complition)
     }
     
+    
+     func plainPostRequest(url: String, urlReq: URLRequest? = nil, requestData: Dictionary<String, Any>? = nil, complition: ((String?,ErrorType?)->Void)?) {
+        guard let ur = URL(string: url) else { complition?(nil, .invalidUrl); return}
+        let urReq = urlReq ?? URLRequest(url: ur)
+        print("urlReq \(urReq)")
+        print("urlReq \(urReq)")
+        var req = createCommonRequest(url: ur, urlReq: urReq, methodType: .post)
+        if let reData = requestData {
+            print("req pac = \(reData)")
+            let jsonData = try? JSONSerialization.data(withJSONObject: reData, options:[.fragmentsAllowed])
+            let intoStr = String(data: jsonData!, encoding: .utf8)
+            print("req pac into json formate = \(intoStr!)")
+            req.httpBody = jsonData//Data(intoStr!.utf8)
+    }
+        plainTask(req: req, complition: complition)
+    }
+    
+    private func plainTask(req: URLRequest, complition:((String?, ErrorType?)->Void?)?) {
+        
+        let session = URLSession(configuration: URLSessionConfiguration.default, delegate: self, delegateQueue: nil)
+        
+        let task = session.dataTask(with: req) { (data, resp, error) in
+        
+            if let httpResponse = resp as? HTTPURLResponse {
+                complition!("\(httpResponse.statusCode)", nil)
+            }
+        }
+        task.resume()
+    }
+    
+    
+    
     private func task<T:Decodable>(req: URLRequest, complition:((T?, ErrorType?)->Void?)?) {
         
         let session = URLSession(configuration: URLSessionConfiguration.default, delegate: self, delegateQueue: nil)
@@ -97,7 +129,7 @@ class NetworkManager: NSObject {
         
         print("\n\n\n")
     }
-    
+
     private func parseData<T: Decodable>(data: Data?, resp: URLResponse?, error: Error?,complition:((T?, ErrorType?)->Void?)?) {
         guard let data = data else { complition?(nil,.checkError) ;return}
         do {

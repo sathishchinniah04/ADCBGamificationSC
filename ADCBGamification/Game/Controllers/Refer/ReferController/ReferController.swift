@@ -142,6 +142,7 @@ class ReferController: UIViewController, ReferDateDelegate {
 //            self.chooseContactButton.textField.text = ph
             
         }
+        cont.modalPresentationStyle = .overFullScreen
         self.present(cont, animated: true, completion: nil)
     }
     
