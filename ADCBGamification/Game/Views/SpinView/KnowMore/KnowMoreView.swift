@@ -35,13 +35,42 @@ class KnowMoreView: UIView {
         
         subTitleLabel.setSizeFont(sizeFont: (StoreManager.shared.language == GameLanguage.AR.rawValue) ?  14.0 : 14.0, fontFamily: (StoreManager.shared.language == GameLanguage.AR.rawValue) ? "Tajawal-Light" : "OpenSans-Light")
         
-        validityLabel.setSizeFont(sizeFont: (StoreManager.shared.language == GameLanguage.AR.rawValue) ?  15.0 : 15.0, fontFamily: (StoreManager.shared.language == GameLanguage.AR.rawValue) ? "Tajawal-Bold" : "OpenSans-Bold")
+        validityLabel.setSizeFont(sizeFont: (StoreManager.shared.language == GameLanguage.AR.rawValue) ?  14.0 : 14.0, fontFamily: (StoreManager.shared.language == GameLanguage.AR.rawValue) ? "Tajawal-Light" : "OpenSans-Light")
         
     }
     
     func labelSetup(info: SpinAssignReward?) {
+        
         titleLabel.text = info?.responseObject?.first?.displayDetails?.first?.name ?? ""
-        subTitleLabel.text = info?.responseObject?.first?.displayDetails?.first?.description ?? ""
+       
+        if let timeVal = info?.responseObject?.first?.expiryDate {
+            let date = Utility.convertDateWithFormat(inputDate: timeVal, currFormat: "yyyy-MM-dd", expFormat: "MMM d, yyyy h:mm a")
+            validityLabel.text = "Valid till".localized() + " " + date
+        } else {
+            validityLabel.isHidden = true
+        }
+        
+        
+        if let desc = info?.responseObject?.first?.displayDetails?.first?.description {
+            subTitleLabel.text = desc
+        } else {
+            subTitleLabel.isHidden = true
+        }
+        
+        if let imageUrls = info?.responseObject?.first?.displayDetails?.first?.imageList?.first?.name {
+            if let url = URL(string: imageUrls) {
+                let data = try? Data(contentsOf: url)
+                if let imageData = data {
+                    imageView.image = UIImage(data: imageData)
+                    imageView.layer.masksToBounds = true
+                    imageView.layer.cornerRadius = imageView.frame.width / 2
+                    imageView.contentMode = .scaleToFill
+                  
+                }
+            }
+        }
+
+
     }
     
     func appearenceSetup() {

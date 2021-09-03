@@ -106,6 +106,20 @@ class Utility {
          return convertDateFormatter.string(from: oldDate!)
     }
     
+    
+    static func convertDateWithFormat(inputDate: String, currFormat: String, expFormat: String) -> String {
+
+         let olDateFormatter = DateFormatter()
+         olDateFormatter.dateFormat = currFormat
+
+         let oldDate = olDateFormatter.date(from: inputDate)
+
+         let convertDateFormatter = DateFormatter()
+         convertDateFormatter.dateFormat = expFormat
+
+         return convertDateFormatter.string(from: oldDate!)
+    }
+    
     static func convertStringToDate(date: String) -> Date {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
