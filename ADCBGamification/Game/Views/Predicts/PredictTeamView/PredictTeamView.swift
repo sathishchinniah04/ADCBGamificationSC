@@ -155,11 +155,17 @@ class PredictTeamView: UIView {
                 let currentDateComp = calendar.dateComponents([.hour, .minute], from: Date())
                 let expDateComp = calendar.dateComponents([.hour, .minute], from: expDate)
 
-                let hours =  Int(expDateComp.hour ?? 0) - Int(currentDateComp.hour ?? 0)
+                let hours =  Int(currentDateComp.hour ?? 0) - Int(expDateComp.hour ?? 0)
             
-                let min = Int(expDateComp.minute ?? 0) - Int(currentDateComp.minute ?? 0)
+                let min = Int(currentDateComp.minute ?? 0) - Int(expDateComp.minute ?? 0)
 
-                self.timeLabel.text = "Starts in " + daysCount + "  \(hours)" + "hr ".localized() + "\(min)" + "mins".localized()
+                if value == 0 {
+                    self.timeLabel.text = "Today, Starts in " + "\(abs(hours))" + "hr ".localized() + "\(abs(min))" + "mins".localized()
+
+                } else {
+                    self.timeLabel.text = "Starts in " + daysCount + " \(abs(hours))" + "hr ".localized() + "\(abs(min))" + "mins".localized()
+
+                } 
                 //self.timeLabel.text = daysCount + " \(Utility.secondsToHoursMinutesSeconds(seconds: Utility.convertStringIntoDate(date: date)).0) " + "hr".localized() + " \(Utility.secondsToHoursMinutesSeconds(seconds: Utility.convertStringIntoDate(date: date)).1) " + "min".localized()
             }
         }
