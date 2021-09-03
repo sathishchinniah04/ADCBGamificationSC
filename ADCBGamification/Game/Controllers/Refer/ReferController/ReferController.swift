@@ -112,7 +112,8 @@ class ReferController: UIViewController, ReferDateDelegate {
     
     func referButtonHandle(action: NeumorphicButtonAction) {
         print("Tapped refer")
-        self.openActivityController(text: sharingMessage + " " + (self.referCodeLabel.text ?? ""))
+        print(sharingMessage)
+        self.openActivityController(text: sharingMessage)
     }
     
     func chooseContactButtonTapped(action: ReferContactButtonAction) {
