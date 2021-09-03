@@ -116,7 +116,9 @@ class PredictMatchController: UIViewController {
     }
 
     func initialSetup() {
-        self.submitButton.alpha = 0.2
+        //self.submitButton.alpha = 0.2
+        self.submitButton.backgroundColor = #colorLiteral(red: 0.9176470588, green: 0.9176470588, blue: 0.9176470588, alpha: 1)
+        self.submitButton.setTitleColor(#colorLiteral(red: 0.6274509804, green: 0.6274509804, blue: 0.6274509804, alpha: 1), for: .normal)
         self.submitButton.isUserInteractionEnabled = false
     }
     
@@ -209,6 +211,8 @@ extension PredictMatchController: UITableViewDelegate, UITableViewDataSource {
         guard let eve = eventsList else { return }
         if PredictViewModel.checkAllQuestionAnswered(event: eve, index: selectedIndex) {
             self.submitButton.alpha = 1.0
+            self.submitButton.backgroundColor = #colorLiteral(red: 0.1333333333, green: 0.1294117647, blue: 0.3960784314, alpha: 1)
+            self.submitButton.setTitleColor(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1), for: .normal)
             self.submitButton.isUserInteractionEnabled = true
         }
     }

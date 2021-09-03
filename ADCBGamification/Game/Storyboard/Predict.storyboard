@@ -137,7 +137,7 @@
                                 <rect key="frame" x="0.0" y="124" width="414" height="772"/>
                                 <subviews>
                                     <tableView contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="AgJ-0e-Cxb">
-                                        <rect key="frame" x="0.0" y="20" width="414" height="624"/>
+                                        <rect key="frame" x="0.0" y="20" width="414" height="652"/>
                                         <color key="backgroundColor" red="0.97254901960784312" green="0.97254901960784312" blue="0.97254901960784312" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <prototypes>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="lb8-85-v1w">
@@ -153,7 +153,7 @@
                                         </prototypes>
                                     </tableView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gtC-SJ-SJM">
-                                        <rect key="frame" x="0.0" y="652" width="414" height="90"/>
+                                        <rect key="frame" x="0.0" y="672" width="414" height="100"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="E1Y-72-Hjw">
                                                 <rect key="frame" x="0.0" y="0.0" width="414" height="1"/>
@@ -182,15 +182,15 @@
                                                 </connections>
                                             </button>
                                         </subviews>
-                                        <color key="backgroundColor" red="0.97254901959999995" green="0.97254901959999995" blue="0.97254901959999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <color key="backgroundColor" red="0.97254901960784312" green="0.97254901960784312" blue="0.97254901960784312" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="trailing" secondItem="E1Y-72-Hjw" secondAttribute="trailing" id="5VW-Yk-PJD"/>
                                             <constraint firstItem="N1D-oC-afc" firstAttribute="top" secondItem="gtC-SJ-SJM" secondAttribute="top" constant="20" id="6ou-e8-pkc"/>
                                             <constraint firstItem="E1Y-72-Hjw" firstAttribute="top" secondItem="gtC-SJ-SJM" secondAttribute="top" id="DO9-hq-QYo"/>
                                             <constraint firstAttribute="trailing" secondItem="N1D-oC-afc" secondAttribute="trailing" constant="20" id="FaX-e6-Ar6"/>
                                             <constraint firstItem="N1D-oC-afc" firstAttribute="leading" secondItem="gtC-SJ-SJM" secondAttribute="leading" constant="20" id="Gmp-eJ-LJZ"/>
-                                            <constraint firstAttribute="bottom" secondItem="N1D-oC-afc" secondAttribute="bottom" constant="20" id="PlP-vh-Qe6"/>
-                                            <constraint firstItem="N1D-oC-afc" firstAttribute="centerY" secondItem="gtC-SJ-SJM" secondAttribute="centerY" id="Wfj-6G-m44"/>
+                                            <constraint firstAttribute="bottom" secondItem="N1D-oC-afc" secondAttribute="bottom" constant="30" id="PlP-vh-Qe6"/>
+                                            <constraint firstItem="N1D-oC-afc" firstAttribute="centerY" secondItem="gtC-SJ-SJM" secondAttribute="centerY" constant="-5" id="Wfj-6G-m44"/>
                                             <constraint firstItem="E1Y-72-Hjw" firstAttribute="leading" secondItem="gtC-SJ-SJM" secondAttribute="leading" id="azA-I0-pkm"/>
                                             <constraint firstItem="N1D-oC-afc" firstAttribute="centerX" secondItem="gtC-SJ-SJM" secondAttribute="centerX" id="wvC-mq-z2W"/>
                                         </constraints>
@@ -222,7 +222,7 @@
                                 <constraints>
                                     <constraint firstItem="mDc-ea-iVN" firstAttribute="top" secondItem="KVC-KJ-I65" secondAttribute="top" id="083-zM-pRs"/>
                                     <constraint firstItem="mDc-ea-iVN" firstAttribute="leading" secondItem="KVC-KJ-I65" secondAttribute="leading" id="7wv-OV-E2p"/>
-                                    <constraint firstItem="gtC-SJ-SJM" firstAttribute="top" secondItem="AgJ-0e-Cxb" secondAttribute="bottom" constant="8" symbolic="YES" id="CcG-3D-ix8"/>
+                                    <constraint firstItem="gtC-SJ-SJM" firstAttribute="top" secondItem="AgJ-0e-Cxb" secondAttribute="bottom" id="CcG-3D-ix8"/>
                                     <constraint firstAttribute="trailing" secondItem="AgJ-0e-Cxb" secondAttribute="trailing" id="H2r-g7-Inv"/>
                                     <constraint firstItem="gtC-SJ-SJM" firstAttribute="leading" secondItem="KVC-KJ-I65" secondAttribute="leading" id="KoY-5h-wQv"/>
                                     <constraint firstItem="AgJ-0e-Cxb" firstAttribute="leading" secondItem="KVC-KJ-I65" secondAttribute="leading" id="LDg-4M-HE8"/>
@@ -231,7 +231,7 @@
                                     <constraint firstAttribute="trailing" secondItem="mDc-ea-iVN" secondAttribute="trailing" id="egU-dh-8VY"/>
                                     <constraint firstAttribute="trailing" secondItem="AgJ-0e-Cxb" secondAttribute="trailing" id="pIO-C0-Dkt"/>
                                     <constraint firstItem="AgJ-0e-Cxb" firstAttribute="leading" secondItem="KVC-KJ-I65" secondAttribute="leading" id="tmg-AH-BWT"/>
-                                    <constraint firstAttribute="bottom" secondItem="gtC-SJ-SJM" secondAttribute="bottom" constant="30" id="ysw-ve-4It"/>
+                                    <constraint firstAttribute="bottom" secondItem="gtC-SJ-SJM" secondAttribute="bottom" id="ysw-ve-4It"/>
                                 </constraints>
                             </view>
                             <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Clouds" translatesAutoresizingMaskIntoConstraints="NO" id="0b9-pc-h4k">

@@ -40,7 +40,7 @@ class PredictMatchTableViewCell: UITableViewCell {
     
     func appearenceSetup() {
         predictTeamContainerView.addShadow(cornerRadius: 10, shadowRadius: 6, opacity: 0.09)
-        titleLabel.text = "Predict & Win".localized()
+        titleLabel.text = "Predict and Win".localized()
         titleLabel.setSizeFont(sizeFont: (StoreManager.shared.language == GameLanguage.AR.rawValue) ?  20.0 : 20.0, fontFamily: (StoreManager.shared.language == GameLanguage.AR.rawValue) ? "Tajawal-Bold" : "OpenSans-Bold")
         
     }

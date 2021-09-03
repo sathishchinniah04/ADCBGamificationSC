@@ -21,6 +21,7 @@ class ReferController: UIViewController, ReferDateDelegate {
     @IBOutlet weak var bgCloudImage: UIImageView!
     //var referSuccessView = ReferSuccessPopupHelper()
     var referCode: String = ""
+    var sharingMessage: String = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -69,6 +70,7 @@ class ReferController: UIViewController, ReferDateDelegate {
                 self.activityIndicatorView.stopAnimating()
                 self.referCodeLabel.text = data.referralCode
                 self.referMessageLabel.text = data.rewardMessage
+                self.sharingMessage = data.referralMessage ?? ""
                 self.referCode = data.referralCode ?? ""
                 self.buttonUserInteraction(enable: true)
                 self.referCodeView.layoutIfNeeded()
@@ -110,7 +112,7 @@ class ReferController: UIViewController, ReferDateDelegate {
     
     func referButtonHandle(action: NeumorphicButtonAction) {
         print("Tapped refer")
-        self.openActivityController(text: "Hey! check out the referral code and use this while registering. *\(referCode)*")
+        self.openActivityController(text: sharingMessage + (self.referCodeLabel.text ?? ""))
     }
     
     func chooseContactButtonTapped(action: ReferContactButtonAction) {

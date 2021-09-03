@@ -122,6 +122,12 @@ class ADCBGameListCollectionCell: UICollectionViewCell {
     
     
     func setLabel(game: Games) {
+        
+        if game.gameType == "ReferNWin" {
+            self.timeLabel.isHidden = true
+            self.expireInLabel.isHidden = true
+        }
+        
         self.gameLabel.text = game.displayDetails?.name
         //        CustomTimer.shared.startTimer {
         //            self.checkGameStatus(game: game)
