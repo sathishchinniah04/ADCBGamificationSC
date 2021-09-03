@@ -246,9 +246,9 @@ class SpinSuccessView: UIView {
         shareSubView.addShadow(cornerRadius: 20, shadowRadius: 3, opacity: 0.5, color: UIColor.black)
         containerView.addShadow(cornerRadius: 20, shadowRadius: 3, opacity: 0.5, color: UIColor.black)
         bounceAnimation(imageView)
-       /* DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
             self.handle?(.knowMoreTapped)
-        }*/
+        }
     }
     
     @IBAction func whatsUpShareTap(_ sender: Any) {

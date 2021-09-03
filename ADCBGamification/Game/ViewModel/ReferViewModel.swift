@@ -87,14 +87,14 @@ class ReferViewModel {
         
         var urlReq = URLRequest(url: url)
         
-        urlReq.setValue(Utility.getRandonNo(), forHTTPHeaderField: "X-CORELATION-ID")
+        urlReq.setValue(StoreManager.shared.msisdn, forHTTPHeaderField: "X-CORELATION-ID")
         
         urlReq.setValue(number, forHTTPHeaderField: "msisdn")
  
     
        // let dict = ["phoneNumber": bParty,"name":""]
         
-        networkManager.getRequest(struct: SimpleLifeUser.self, url: urlStr) { (data, error) in
+        networkManager.getRequest(struct: SimpleLifeUser.self, url: urlStr, urlReq: urlReq) { (data, error) in
             
             print("Error is \(String(describing: error))")
             if error == nil {

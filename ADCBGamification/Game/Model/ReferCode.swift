@@ -24,4 +24,8 @@ class SimpleLifeUser: Decodable {
     var message: String?
     var timestamp: String?
     var path: String?
+    var errorCode: Int?
+    var errorDescription: String?
+    var errorMessage: String?
+    
 }
