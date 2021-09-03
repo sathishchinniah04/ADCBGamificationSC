@@ -212,7 +212,8 @@ class ContactListController: UIViewController, UITextFieldDelegate {
     }
     
     func inviteApiCall() {
-        
+        activityIndicatorView.isHidden = false
+        activityIndicatorView.startAnimating()
         self.bPart = self.titleLbl.text!
         
         if self.bPart!.isEmpty {
@@ -229,6 +230,7 @@ class ContactListController: UIViewController, UITextFieldDelegate {
         ReferViewModel.referInviteApiCall(bParty: no ?? "") { (data, err) in
             
             print("data is \(data)")
+            self.activityIndicatorView.stopAnimating()
             if data == nil {
                 self.referWinFailPopup(.failure, nil)
             } else {
