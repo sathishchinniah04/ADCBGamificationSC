@@ -218,15 +218,15 @@ class SpinSuccessView: UIView {
         
         self.spinAgainButton.setTitle("Spin Again".localized(), for: .normal)
         
-        self.messageTitleLbl.text = "You have won a " + (info?.responseObject?.first?.achievementType ?? "")
-        self.messageDescLbl.text = info?.responseObject?.first?.displayDetails?.first?.name ?? ""
+        self.messageTitleLbl.text = "You have won ".localized() + " \(info?.responseObject?.first?.displayDetails?.first?.name ?? "")"
+        self.messageDescLbl.text = ""
         
         self.shareMessageLbl.text = (info?.responseObject?.first?.displayDetails?.first?.name ?? "")
 
         if (info?.responseObject?.first?.expiryDate?.isEmpty ?? "".isEmpty || info?.responseObject?.first?.expiryDate == nil) {
             self.shareExpLbl.text = ""
         } else {
-            self.shareExpLbl.text = "on " + Utility.convertDateFormat(inputDate: info?.responseObject?.first?.expiryDate ?? "")
+            self.shareExpLbl.text = "on ".localized() + Utility.convertDateFormat(inputDate: info?.responseObject?.first?.expiryDate ?? "")
         }
     
     }

@@ -111,12 +111,18 @@ class Utility {
 
          let olDateFormatter = DateFormatter()
          olDateFormatter.dateFormat = currFormat
-
+        
+        
          let oldDate = olDateFormatter.date(from: inputDate)
 
-         let convertDateFormatter = DateFormatter()
+        let convertDateFormatter = DateFormatter()
+        if isRTL() {
+            let hijriCalendar = Calendar.init(identifier: Calendar.Identifier.islamicCivil)
+            convertDateFormatter.calendar = hijriCalendar
+            convertDateFormatter.locale = Locale(identifier: "ar_SA")
+        }
+         
          convertDateFormatter.dateFormat = expFormat
-
          return convertDateFormatter.string(from: oldDate!)
     }
     

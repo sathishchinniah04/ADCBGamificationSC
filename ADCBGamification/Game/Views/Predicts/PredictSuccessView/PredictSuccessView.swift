@@ -128,8 +128,8 @@ class PredictSuccessView: UIView {
         logoImageView.image = UIImage(named: (StoreManager.shared.language == "AR") ? "Logo_Arabic" : "Logo", in: Bundle(for: CustomNavView.self), compatibleWith: nil)
         //titleLbl.text = "simply".localized()
         //subTitleLbl.text = "life".localized()
-        headerLbl.text = "Thank you for your  participation".localized()
-        messageLbl.text = "Winners will be announced shortly and you will receive a notification on the App. Stay tuned, enjoy the game!".localized()
+        headerLbl.text = "Thank you for your participation".localized()
+        messageLbl.text = "Winner will be announced shortly and you will receive a notification on the App. Stay tuned, enjoy the game !".localized()
         goToLbl.text = "Go To".localized()
      
       
