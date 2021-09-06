@@ -257,6 +257,7 @@
             <connections>
                 <outlet property="bgCloudImage" destination="YLk-rb-PXE" id="8mM-HN-MvR"/>
                 <outlet property="containerView" destination="DVy-v3-TUb" id="45q-yu-I50"/>
+                <outlet property="gamePageButton" destination="BS6-0c-cLk" id="Rjt-i0-pUU"/>
                 <outlet property="goToLabel" destination="Y86-5E-lxT" id="s7i-Dg-cxZ"/>
                 <outlet property="homePageButton" destination="DAt-xh-VTN" id="JDx-9W-tcW"/>
                 <outlet property="imageView" destination="NO2-F8-Ffb" id="Tpd-vO-MEX"/>

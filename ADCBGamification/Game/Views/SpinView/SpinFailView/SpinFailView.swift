@@ -17,6 +17,7 @@ class SpinFailView: UIView {
     @IBOutlet weak var goToLabel: UILabel!
     @IBOutlet weak var messageLabel: UILabel!
     @IBOutlet weak var homePageButton: UIButton!
+    @IBOutlet weak var gamePageButton: UIButton!
     @IBOutlet weak var bgCloudImage: UIImageView!
     @IBOutlet weak var logoImageView: UIImageView!
     
@@ -56,6 +57,10 @@ class SpinFailView: UIView {
         let homeAttString = NSMutableAttributedString()
         homeAttString.append(NSAttributedString(string: "Homepage".localized(), attributes: fontDict))
         self.homePageButton.setAttributedTitle(homeAttString, for: .normal)
+        
+        let gameAttString = NSMutableAttributedString()
+        gameAttString.append(NSAttributedString(string: "Games".localized(), attributes: fontDict))
+        self.gamePageButton.setAttributedTitle(gameAttString, for: .normal)
     
        /* if let attributedTitle = self.homePageButton.attributedTitle(for: .normal) {
             let mutableAttributedTitle = NSMutableAttributedString(attributedString: attributedTitle)

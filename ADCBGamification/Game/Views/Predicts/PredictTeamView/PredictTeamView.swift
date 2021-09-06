@@ -160,10 +160,10 @@ class PredictTeamView: UIView {
                 let min = Int(currentDateComp.minute ?? 0) - Int(expDateComp.minute ?? 0)
 
                 if value == 0 {
-                    self.timeLabel.text = "Today, Starts in " + "\(abs(hours))" + "hr ".localized() + "\(abs(min))" + "mins".localized()
+                    self.timeLabel.text = "Today, Starts in".localized() + " \(abs(hours))" + "hr".localized() + " \(abs(min))" + "mins".localized()
 
                 } else {
-                    self.timeLabel.text = "Starts in " + daysCount + " \(abs(hours))" + "hr ".localized() + "\(abs(min))" + "mins".localized()
+                    self.timeLabel.text = "Starts in".localized() + " \(daysCount)" + " \(abs(hours))" + "hr".localized() + " \(abs(min))" + "mins".localized()
 
                 } 
                 //self.timeLabel.text = daysCount + " \(Utility.secondsToHoursMinutesSeconds(seconds: Utility.convertStringIntoDate(date: date)).0) " + "hr".localized() + " \(Utility.secondsToHoursMinutesSeconds(seconds: Utility.convertStringIntoDate(date: date)).1) " + "min".localized()
