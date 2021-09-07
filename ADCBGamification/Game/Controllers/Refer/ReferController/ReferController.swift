@@ -14,6 +14,7 @@ class ReferController: UIViewController, ReferDateDelegate {
     @IBOutlet weak var referCodeView: UIView!
     @IBOutlet weak var referCodeLabel: UILabel!
     @IBOutlet weak var referMessageLabel: UILabel!
+    @IBOutlet weak var referMessageLabelEnglish: UILabel!
     @IBOutlet weak var shareButton: NeumorphicButton!
     @IBOutlet weak var chooseContactButton: NeumorphicButton!
     //@IBOutlet weak var chooseContactButton: ReferContactButton!
@@ -39,6 +40,15 @@ class ReferController: UIViewController, ReferDateDelegate {
             self.chooseContactButton.setButtonTitle(title: "Choose Contact".localized(),titleColor: TTUtils.uiColor(from: 0x222165))
             self.openContactList()
         }
+        if StoreManager.shared.language == GameLanguage.EN.rawValue {
+            referMessageLabel.isHidden = true
+            referMessageLabelEnglish.isHidden = false
+        } else {
+            referMessageLabel.isHidden = false
+            referMessageLabelEnglish.isHidden = true
+        }
+
+        
         self.chooseContactButton.setButtonFont(fSize: (StoreManager.shared.language == GameLanguage.AR.rawValue) ?  16.0 : 16.0, fName: (StoreManager.shared.language == GameLanguage.AR.rawValue) ? "Tajawal-Medium" : "OpenSans-SemiBold")
         
         self.bgCloudImage.image = UIImage(named: "Clouds", in: Bundle(for: CustomNavView.self), compatibleWith: nil)
@@ -70,6 +80,7 @@ class ReferController: UIViewController, ReferDateDelegate {
                 self.activityIndicatorView.stopAnimating()
                 self.referCodeLabel.text = data.referralCode
                 self.referMessageLabel.text = data.rewardMessage
+                self.referMessageLabelEnglish.text = data.rewardMessage
                 self.sharingMessage = data.referralMessage ?? ""
                 self.referCode = data.referralCode ?? ""
                 self.buttonUserInteraction(enable: true)
