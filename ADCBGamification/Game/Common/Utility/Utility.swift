@@ -116,10 +116,13 @@ class Utility {
          let oldDate = olDateFormatter.date(from: inputDate)
 
         let convertDateFormatter = DateFormatter()
-        if isRTL() {
+        if (StoreManager.shared.language.lowercased() == "ar".lowercased()) {
             let hijriCalendar = Calendar.init(identifier: Calendar.Identifier.islamicCivil)
             convertDateFormatter.calendar = hijriCalendar
             convertDateFormatter.locale = Locale(identifier: "ar_SA")
+        } else {
+            convertDateFormatter.calendar = Calendar.init(identifier: Calendar.Identifier.gregorian)
+            convertDateFormatter.locale = Locale(identifier: "en_US_POSIX")
         }
          
          convertDateFormatter.dateFormat = expFormat
