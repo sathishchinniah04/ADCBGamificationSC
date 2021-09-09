@@ -154,6 +154,8 @@ extension NetworkManager : URLSessionDelegate {
            completionHandler(.useCredential, urlCredential)
         }
     
+}
+    
     
 //    public  func urlSession(_ session: URLSession, didReceive challenge: URLAuthenticationChallenge, completionHandler: @escaping (URLSession.AuthChallengeDisposition, URLCredential?) -> Void) {
 //
@@ -226,5 +228,5 @@ extension NetworkManager : URLSessionDelegate {
 //        }
 //
 //    }
-}
+//}
 
