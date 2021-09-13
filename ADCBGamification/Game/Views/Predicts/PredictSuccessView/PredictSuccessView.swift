@@ -115,8 +115,8 @@ class PredictSuccessView: UIView {
     func setupFontFamily() {
         self.animationSetUp()
         shareGameTitleLbl.text = "Predict & Win".localized()
-        headingLbl.text = "Thank you for your participation".localized()
-        shareMessageLbl.text = "Winner will be announced shortly and you will receive a notification on the App. Stay tuned, enjoy the game !".localized()
+        headingLbl.text = "It was fun playing predict & Win".localized()
+        shareMessageLbl.text = "Predict and get rewarded. Stay tuned, enjoy the game.".localized()
         
         
         shareBtn.setTitle("Share".localized(), for: .normal)

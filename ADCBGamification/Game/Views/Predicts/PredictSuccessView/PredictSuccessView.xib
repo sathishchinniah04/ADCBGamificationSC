@@ -313,7 +313,7 @@ participation</string>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZDi-NO-QlN">
                                     <rect key="frame" x="52" y="123" width="250" height="284"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Thank you for your participation" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nyE-Ui-VGM">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="It was fun playing predict &amp; Win" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nyE-Ui-VGM">
                                             <rect key="frame" x="53.5" y="20" width="143" height="38"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="38" id="2Ya-b2-c4q"/>
@@ -345,10 +345,10 @@ participation</string>
                                                             <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="11"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Emirates Club" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7XX-v1-25h">
-                                                            <rect key="frame" x="2" y="56" width="60" height="11"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Emirates Club" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7XX-v1-25h">
+                                                            <rect key="frame" x="2" y="56" width="60" height="22"/>
                                                             <constraints>
-                                                                <constraint firstAttribute="height" constant="11" id="jtp-7Z-ibm"/>
+                                                                <constraint firstAttribute="height" constant="22" id="jtp-7Z-ibm"/>
                                                             </constraints>
                                                             <fontDescription key="fontDescription" name="OpenSans-SemiBold" family="Open Sans" pointSize="8"/>
                                                             <nil key="textColor"/>
@@ -405,10 +405,10 @@ participation</string>
                                                             <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="11"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Emirates Club" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rbz-k3-UI8">
-                                                            <rect key="frame" x="1" y="56" width="60" height="11"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Emirates Club" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rbz-k3-UI8">
+                                                            <rect key="frame" x="1" y="56" width="60" height="22"/>
                                                             <constraints>
-                                                                <constraint firstAttribute="height" constant="11" id="boo-hT-Exb"/>
+                                                                <constraint firstAttribute="height" constant="22" id="boo-hT-Exb"/>
                                                             </constraints>
                                                             <fontDescription key="fontDescription" name="OpenSans-SemiBold" family="Open Sans" pointSize="8"/>
                                                             <nil key="textColor"/>
@@ -434,8 +434,8 @@ participation</string>
                                                 <constraint firstAttribute="height" constant="69" id="mP0-wI-zb0"/>
                                             </constraints>
                                         </stackView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Winner will be announced shortly and you will receive a notification on the App. Stay tuned, enjoy the game !" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="THV-Ht-m7H">
-                                            <rect key="frame" x="15" y="192" width="220" height="63"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Predict and get rewarded. Stay tuned, enjoy the game." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="THV-Ht-m7H">
+                                            <rect key="frame" x="37" y="192" width="169" height="63"/>
                                             <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="12"/>
                                             <color key="textColor" red="0.32941176470588235" green="0.32941176470588235" blue="0.33725490196078434" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
@@ -447,12 +447,12 @@ participation</string>
                                         <constraint firstAttribute="height" constant="284" id="4nk-gW-it0"/>
                                         <constraint firstAttribute="trailing" secondItem="gjB-rj-eoC" secondAttribute="trailing" constant="21" id="9II-ot-rY0"/>
                                         <constraint firstItem="THV-Ht-m7H" firstAttribute="top" secondItem="gjB-rj-eoC" secondAttribute="bottom" constant="30" id="SVp-ZG-DJo"/>
-                                        <constraint firstItem="THV-Ht-m7H" firstAttribute="leading" secondItem="ZDi-NO-QlN" secondAttribute="leading" constant="15" id="TIi-4b-N8v"/>
+                                        <constraint firstItem="THV-Ht-m7H" firstAttribute="leading" secondItem="ZDi-NO-QlN" secondAttribute="leading" constant="37" id="TIi-4b-N8v"/>
                                         <constraint firstAttribute="width" constant="250" id="W7E-Zc-Uc7"/>
                                         <constraint firstItem="nyE-Ui-VGM" firstAttribute="centerX" secondItem="ZDi-NO-QlN" secondAttribute="centerX" constant="-0.25" id="iNc-8q-znd"/>
                                         <constraint firstAttribute="bottom" secondItem="THV-Ht-m7H" secondAttribute="bottom" constant="29" id="mJg-5w-Mga"/>
                                         <constraint firstItem="nyE-Ui-VGM" firstAttribute="top" secondItem="ZDi-NO-QlN" secondAttribute="top" constant="20" id="ozD-76-USz"/>
-                                        <constraint firstAttribute="trailing" secondItem="THV-Ht-m7H" secondAttribute="trailing" constant="15" id="qpW-wE-I3p"/>
+                                        <constraint firstAttribute="trailing" secondItem="THV-Ht-m7H" secondAttribute="trailing" constant="44" id="qpW-wE-I3p"/>
                                         <constraint firstItem="gjB-rj-eoC" firstAttribute="leading" secondItem="ZDi-NO-QlN" secondAttribute="leading" constant="21" id="tOv-FO-j9n"/>
                                     </constraints>
                                 </view>
