@@ -81,14 +81,23 @@
                                 <rect key="frame" x="30" y="468" width="354" height="354"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
-                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="xxf-cY-7Q7">
-                                <rect key="frame" x="188.5" y="429.5" width="37" height="37"/>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" hidesWhenStopped="YES" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="xxf-cY-7Q7">
+                                <rect key="frame" x="188.5" y="470.5" width="37" height="37"/>
                                 <color key="color" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </activityIndicatorView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="U4D-t7-PCO">
+                                <rect key="frame" x="255" y="443" width="26" height="17"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="26" id="9JO-Wc-u9c"/>
+                                    <constraint firstAttribute="height" constant="17" id="u9v-1d-t11"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="F75-gm-2pA"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="U4D-t7-PCO" firstAttribute="top" secondItem="Ifq-Y2-VVs" secondAttribute="bottom" constant="-5" id="51V-OO-Gle"/>
                             <constraint firstItem="O1D-93-f0H" firstAttribute="height" secondItem="9LS-1p-Or3" secondAttribute="height" multiplier="0.5" id="7wa-X5-mOd"/>
                             <constraint firstItem="0zs-1g-UM0" firstAttribute="top" secondItem="O1D-93-f0H" secondAttribute="bottom" constant="20" id="E0m-Ms-9XD"/>
                             <constraint firstItem="0zs-1g-UM0" firstAttribute="centerX" secondItem="F75-gm-2pA" secondAttribute="centerX" id="JaJ-b4-4JZ"/>
@@ -96,6 +105,7 @@
                             <constraint firstItem="tdu-bk-ghL" firstAttribute="leading" secondItem="F75-gm-2pA" secondAttribute="leading" id="NAf-my-7iB"/>
                             <constraint firstItem="Ifq-Y2-VVs" firstAttribute="leading" secondItem="F75-gm-2pA" secondAttribute="leading" constant="30" id="Qgr-Vy-tbU"/>
                             <constraint firstItem="0zs-1g-UM0" firstAttribute="leading" secondItem="F75-gm-2pA" secondAttribute="leading" constant="30" id="TYA-d3-N2f"/>
+                            <constraint firstItem="U4D-t7-PCO" firstAttribute="leading" secondItem="Ifq-Y2-VVs" secondAttribute="trailing" constant="-129" id="Zw2-cK-jbs"/>
                             <constraint firstItem="tdu-bk-ghL" firstAttribute="trailing" secondItem="F75-gm-2pA" secondAttribute="trailing" id="a3u-NU-1rT"/>
                             <constraint firstItem="tdu-bk-ghL" firstAttribute="top" secondItem="F75-gm-2pA" secondAttribute="top" id="a8G-9v-tLC"/>
                             <constraint firstItem="Ifq-Y2-VVs" firstAttribute="top" secondItem="F75-gm-2pA" secondAttribute="top" constant="90" id="bnI-Rk-yHq"/>
