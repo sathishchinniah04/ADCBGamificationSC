@@ -83,8 +83,11 @@
                                         <view tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qOW-3d-X2G" customClass="CustomNeumophicButton" customModule="ADCBGamification" customModuleProvider="target">
                                             <rect key="frame" x="0.0" y="0.0" width="374" height="60"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pnwQuesDisab" translatesAutoresizingMaskIntoConstraints="NO" id="6n5-pS-qgQ">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pnwQuesDisab" translatesAutoresizingMaskIntoConstraints="NO" id="6n5-pS-qgQ">
                                                     <rect key="frame" x="0.0" y="0.0" width="374" height="60"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="60" id="jcq-yq-tDj"/>
+                                                    </constraints>
                                                 </imageView>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -99,8 +102,11 @@
                                         <view tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1KM-gc-lzD" customClass="CustomNeumophicButton" customModule="ADCBGamification" customModuleProvider="target">
                                             <rect key="frame" x="0.0" y="80" width="374" height="60"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pnwQuesDisab" translatesAutoresizingMaskIntoConstraints="NO" id="xWS-It-nkd">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pnwQuesDisab" translatesAutoresizingMaskIntoConstraints="NO" id="xWS-It-nkd">
                                                     <rect key="frame" x="0.0" y="0.0" width="374" height="60"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="60" id="2Sx-Oc-7F5"/>
+                                                    </constraints>
                                                 </imageView>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -115,7 +121,7 @@
                                         <view tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wT8-eW-EvQ" customClass="CustomNeumophicButton" customModule="ADCBGamification" customModuleProvider="target">
                                             <rect key="frame" x="0.0" y="160" width="374" height="60"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pnwQuesDisab" translatesAutoresizingMaskIntoConstraints="NO" id="WWb-z8-DGu">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pnwQuesDisab" translatesAutoresizingMaskIntoConstraints="NO" id="WWb-z8-DGu">
                                                     <rect key="frame" x="0.0" y="0.0" width="374" height="60"/>
                                                 </imageView>
                                             </subviews>
@@ -131,7 +137,7 @@
                                         <view tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vog-wD-7eO" customClass="CustomNeumophicButton" customModule="ADCBGamification" customModuleProvider="target">
                                             <rect key="frame" x="0.0" y="240" width="374" height="60"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pnwQuesDisab" translatesAutoresizingMaskIntoConstraints="NO" id="ECj-Zl-DUP">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pnwQuesDisab" translatesAutoresizingMaskIntoConstraints="NO" id="ECj-Zl-DUP">
                                                     <rect key="frame" x="0.0" y="0.0" width="374" height="60"/>
                                                 </imageView>
                                             </subviews>
