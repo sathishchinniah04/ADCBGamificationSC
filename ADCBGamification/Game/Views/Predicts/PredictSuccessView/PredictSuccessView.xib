@@ -324,10 +324,10 @@ participation</string>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <stackView opaque="NO" contentMode="scaleToFill" spacing="11" translatesAutoresizingMaskIntoConstraints="NO" id="gjB-rj-eoC">
-                                            <rect key="frame" x="21" y="93" width="208" height="69"/>
+                                            <rect key="frame" x="21" y="93" width="208" height="80"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="y4R-CO-3WC">
-                                                    <rect key="frame" x="0.0" y="0.0" width="62" height="69"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="62" height="80"/>
                                                     <subviews>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pnwView" translatesAutoresizingMaskIntoConstraints="NO" id="tlb-6H-168">
                                                             <rect key="frame" x="2" y="1" width="60" height="68"/>
@@ -348,7 +348,7 @@ participation</string>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Emirates Club" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7XX-v1-25h">
                                                             <rect key="frame" x="2" y="56" width="60" height="22"/>
                                                             <constraints>
-                                                                <constraint firstAttribute="height" constant="22" id="jtp-7Z-ibm"/>
+                                                                <constraint firstAttribute="height" relation="lessThanOrEqual" constant="22" id="jtp-7Z-ibm"/>
                                                             </constraints>
                                                             <fontDescription key="fontDescription" name="OpenSans-SemiBold" family="Open Sans" pointSize="8"/>
                                                             <nil key="textColor"/>
@@ -357,7 +357,8 @@ participation</string>
                                                     </subviews>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="69" id="8EO-VA-nIA"/>
+                                                        <constraint firstAttribute="bottom" secondItem="7XX-v1-25h" secondAttribute="bottom" constant="2" id="7Pp-RK-jxV"/>
+                                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="69" id="8EO-VA-nIA"/>
                                                         <constraint firstItem="7XX-v1-25h" firstAttribute="top" secondItem="HYA-Tz-adf" secondAttribute="bottom" constant="16" id="QQW-hk-1py"/>
                                                         <constraint firstItem="HYA-Tz-adf" firstAttribute="centerX" secondItem="tlb-6H-168" secondAttribute="centerX" constant="-0.5" id="Vaf-l1-QNh"/>
                                                         <constraint firstItem="tlb-6H-168" firstAttribute="top" secondItem="y4R-CO-3WC" secondAttribute="top" constant="1" id="WE3-gu-L65"/>
@@ -370,7 +371,7 @@ participation</string>
                                                     </constraints>
                                                 </view>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rlv-l4-kbB">
-                                                    <rect key="frame" x="73" y="0.0" width="62" height="69"/>
+                                                    <rect key="frame" x="73" y="0.0" width="62" height="80"/>
                                                     <subviews>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="VS" translatesAutoresizingMaskIntoConstraints="NO" id="Min-CD-QNi">
                                                             <rect key="frame" x="0.0" y="8" width="62" height="50"/>
@@ -378,7 +379,6 @@ participation</string>
                                                     </subviews>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="69" id="2nl-8H-cpz"/>
                                                         <constraint firstAttribute="trailing" secondItem="Min-CD-QNi" secondAttribute="trailing" id="3QR-wp-POs"/>
                                                         <constraint firstItem="Min-CD-QNi" firstAttribute="leading" secondItem="rlv-l4-kbB" secondAttribute="leading" id="9wD-Hx-OBY"/>
                                                         <constraint firstAttribute="width" constant="62" id="Lmc-Yd-KnE"/>
@@ -387,7 +387,7 @@ participation</string>
                                                     </constraints>
                                                 </view>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UR8-ut-v9E">
-                                                    <rect key="frame" x="146" y="0.0" width="62" height="69"/>
+                                                    <rect key="frame" x="146" y="0.0" width="62" height="80"/>
                                                     <subviews>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pnwView" translatesAutoresizingMaskIntoConstraints="NO" id="fNF-Nb-3I9">
                                                             <rect key="frame" x="2" y="1" width="59" height="66"/>
@@ -408,7 +408,7 @@ participation</string>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Emirates Club" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rbz-k3-UI8">
                                                             <rect key="frame" x="1" y="56" width="60" height="22"/>
                                                             <constraints>
-                                                                <constraint firstAttribute="height" constant="22" id="boo-hT-Exb"/>
+                                                                <constraint firstAttribute="height" relation="lessThanOrEqual" constant="22" id="boo-hT-Exb"/>
                                                             </constraints>
                                                             <fontDescription key="fontDescription" name="OpenSans-SemiBold" family="Open Sans" pointSize="8"/>
                                                             <nil key="textColor"/>
@@ -418,12 +418,12 @@ participation</string>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
                                                         <constraint firstAttribute="trailing" secondItem="fNF-Nb-3I9" secondAttribute="trailing" constant="1" id="3BH-L7-aE4"/>
+                                                        <constraint firstAttribute="bottom" secondItem="Rbz-k3-UI8" secondAttribute="bottom" constant="2" id="3iw-Ku-a7L"/>
                                                         <constraint firstItem="fNF-Nb-3I9" firstAttribute="leading" secondItem="UR8-ut-v9E" secondAttribute="leading" constant="2" id="Akq-8m-kQc"/>
                                                         <constraint firstAttribute="trailing" secondItem="Rbz-k3-UI8" secondAttribute="trailing" constant="1" id="HJj-Ic-Jvo"/>
                                                         <constraint firstItem="fNF-Nb-3I9" firstAttribute="top" secondItem="hYn-jo-kdW" secondAttribute="bottom" constant="-38" id="I1k-KE-0cN"/>
                                                         <constraint firstItem="hYn-jo-kdW" firstAttribute="centerX" secondItem="fNF-Nb-3I9" secondAttribute="centerX" id="Qwg-7R-qNi"/>
                                                         <constraint firstItem="Rbz-k3-UI8" firstAttribute="leading" secondItem="UR8-ut-v9E" secondAttribute="leading" constant="1" id="R2m-fx-jBT"/>
-                                                        <constraint firstAttribute="height" constant="69" id="SxP-nL-TPZ"/>
                                                         <constraint firstAttribute="width" constant="62" id="fNO-cD-BoK"/>
                                                         <constraint firstItem="fNF-Nb-3I9" firstAttribute="top" secondItem="UR8-ut-v9E" secondAttribute="top" constant="1" id="jRY-MF-aaw"/>
                                                         <constraint firstItem="Rbz-k3-UI8" firstAttribute="top" secondItem="hYn-jo-kdW" secondAttribute="bottom" constant="17" id="uIB-6l-W4S"/>
@@ -431,11 +431,11 @@ participation</string>
                                                 </view>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="height" constant="69" id="mP0-wI-zb0"/>
+                                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="75" id="mP0-wI-zb0"/>
                                             </constraints>
                                         </stackView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Predict and get rewarded. Stay tuned, enjoy the game." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="THV-Ht-m7H">
-                                            <rect key="frame" x="37" y="192" width="169" height="63"/>
+                                            <rect key="frame" x="37" y="203" width="169" height="52"/>
                                             <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="12"/>
                                             <color key="textColor" red="0.32941176470588235" green="0.32941176470588235" blue="0.33725490196078434" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>

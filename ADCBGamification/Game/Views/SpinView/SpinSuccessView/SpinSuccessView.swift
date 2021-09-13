@@ -221,7 +221,7 @@ class SpinSuccessView: UIView {
         self.messageTitleLbl.text = "You have won ".localized() + " \(info?.responseObject?.first?.displayDetails?.first?.name ?? "")"
         self.messageDescLbl.text = ""
         
-        self.shareMessageLbl.text = (info?.responseObject?.first?.displayDetails?.first?.name ?? "")
+        self.shareMessageLbl.text = (info?.responseObject?.first?.displayDetails?.first?.description ?? "")
 
         if (info?.responseObject?.first?.expiryDate?.isEmpty ?? "".isEmpty || info?.responseObject?.first?.expiryDate == nil) {
             self.shareExpLbl.text = ""
