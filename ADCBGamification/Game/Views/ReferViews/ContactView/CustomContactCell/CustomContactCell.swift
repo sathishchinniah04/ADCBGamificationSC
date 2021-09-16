@@ -15,6 +15,8 @@ class CustomContactCell: UITableViewCell {
     @IBOutlet weak var contactLabel: UILabel!
     @IBOutlet weak var initialCharLabel: UILabel!
     @IBOutlet weak var userImageView: UIImageView!
+    @IBOutlet weak var verifyBtn: UIButton!
+    var verifyBtnAction : (() -> Void)? = nil
     
     var isSelectedVal: Bool = false {
         didSet {
@@ -33,6 +35,8 @@ class CustomContactCell: UITableViewCell {
         contactNameLabel.setSizeFont(sizeFont: (StoreManager.shared.language == GameLanguage.AR.rawValue) ?  14.0 : 14.0, fontFamily: (StoreManager.shared.language == GameLanguage.AR.rawValue) ? "Tajawal-Regular" : "OpenSans-Regular")
         
         contactLabel.setSizeFont(sizeFont: (StoreManager.shared.language == GameLanguage.AR.rawValue) ?  12.0 : 12.0, fontFamily: (StoreManager.shared.language == GameLanguage.AR.rawValue) ? "Tajawal-Regular" : "OpenSans-Regular")
+        
+        verifyBtn.setSizeFont(sizeFont: (StoreManager.shared.language == GameLanguage.AR.rawValue) ?  14.0 : 14.0, fontFamily: (StoreManager.shared.language == GameLanguage.AR.rawValue) ? "Tajawal-Regular" : "OpenSans-Regular")
 
     }
 
@@ -40,10 +44,12 @@ class CustomContactCell: UITableViewCell {
         cornerSetup()
         
         if info.unknowContact == true {
+            verifyBtn.isHidden = false
             initialCharLabel.isHidden = true
             userImageView.isHidden = false
             imageContainerView.backgroundColor = #colorLiteral(red: 0.9176470588, green: 0.9176470588, blue: 0.9176470588, alpha: 1)
         } else {
+            verifyBtn.isHidden = true
             initialCharLabel.isHidden = false
             imageContainerView.backgroundColor = #colorLiteral(red: 1, green: 0.8784313725, blue: 0, alpha: 1)
         }
@@ -77,6 +83,9 @@ class CustomContactCell: UITableViewCell {
         }
     }
     
+    @IBAction func verifyBtnTap(_ sender: Any) {
+        verifyBtnAction!()
+    }
     
     func cornerSetup() {
         DispatchQueue.main.async {

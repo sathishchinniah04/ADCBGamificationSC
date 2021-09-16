@@ -50,11 +50,8 @@ class ContactListController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var contentViewTopConstraint: NSLayoutConstraint!
     @IBOutlet weak var tableViewHeightConstraints: NSLayoutConstraint!
     @IBOutlet weak var emptySpaceView: UIView!
-    
     @IBOutlet weak var bottomStackView: UIStackView!
-    
-    
-    
+    @IBOutlet weak var verifyMessageview: UIView!
     
     var referSuccessViewHelper = ReferSuccessViewHelper()
     var handle: ((_ name: String,_ ph: String)->Void)?
@@ -68,7 +65,7 @@ class ContactListController: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.verifyMessageview.isHidden = true
         hidebaseView()
         self.inviteButton.isHidden = false
         messageView.isHidden = true
@@ -98,7 +95,7 @@ class ContactListController: UIViewController, UITextFieldDelegate {
         //neumorphicEffect()
         checkLeftToRight()
         delete()
-        titleLbl.keyboardType = .phonePad
+       // titleLbl.keyboardType = .phonePad
         
       //  chooseContactButton.textField.keyboardType = .phonePad
         
@@ -347,16 +344,20 @@ class ContactListController: UIViewController, UITextFieldDelegate {
     }
     
     func onEditionTextField(text: String) {
+      
         self.newList = self.contacts.filter {
             $0.firstName.range(of: text, options: [.caseInsensitive, .diacriticInsensitive ]) != nil ||
                 $0.telephone.range(of: text, options: [.caseInsensitive, .diacriticInsensitive ]) != nil
         }
         
         
-        if self.newList.isEmpty, !text.isEmpty , text.isNumeric {
+        if self.newList.isEmpty, !text.isEmpty , text.isNumeric, !text.isAlphanumeric {
             let unknownContact = FetchedContact(firstName: "Unknown", lastName: "contact", telephone: text, image: nil, unknowContact: true)
             self.newList.insert(unknownContact, at: 0)
             //self.inviteButton.alpha = 0.0
+            self.verifyMessageview.isHidden = false
+        } else {
+            self.verifyMessageview.isHidden = true
         }
         
         if text.isEmpty {
@@ -388,7 +389,7 @@ class ContactListController: UIViewController, UITextFieldDelegate {
         self.contactTableView.reloadData()
         //self.inviteButton.alpha = 0.0
         self.titleTopConstraints.constant = 25
-        
+        self.verifyMessageview.isHidden = true
         
         ReferViewModel.checkSimpleLifeUser(number: contact.telephone) { data, err   in
             DispatchQueue.main.async {
@@ -495,11 +496,22 @@ extension ContactListController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "CustomContactCell") as! CustomContactCell
+        cell.verifyBtnAction = {
+            let contactData = self.newList[indexPath.row]
+            cell.isSelectedVal = true
+            self.activityIndicatorView.isHidden = false
+            self.activityIndicatorView.startAnimating()
+            self.placeHolderLbl.isHidden = false
+            self.placeHolderLbl.text = contactData.firstName + contactData.lastName
+            self.titleLbl.text = contactData.telephone
+            self.onCellTap(indexPath: indexPath)
+        }
         cell.populateView(info: self.newList[indexPath.row])
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
         let selectedCell = tableView.cellForRow(at: indexPath) as! CustomContactCell
         let contactData = self.newList[indexPath.row]
         selectedCell.isSelectedVal = true
@@ -537,3 +549,5 @@ extension ContactListController: UITableViewDelegate, UITableViewDataSource {
     }
     
 }
+
+
