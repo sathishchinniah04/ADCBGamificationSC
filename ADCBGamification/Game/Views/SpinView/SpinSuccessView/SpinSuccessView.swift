@@ -97,6 +97,7 @@ class SpinSuccessView: UIView {
     
     var handle:((SpinSuccessViewAction)->Void)?
     var shareImage: UIImage?
+    var shareMessage: String?
     
     
     static func loadXib() -> SpinSuccessView {
@@ -144,7 +145,7 @@ class SpinSuccessView: UIView {
 
     func showActionSheetView() {
         
-        let imageToShare = [ shareImage!, self.shareMessageLbl.text ?? "" ] as [Any]
+        let imageToShare = [ shareImage!] as [Any]
         let activityViewController = UIActivityViewController(activityItems: imageToShare, applicationActivities: nil)
         activityViewController.popoverPresentationController?.sourceView = self // so that iPads won't crash
         activityViewController.excludedActivityTypes = [ UIActivity.ActivityType.airDrop, UIActivity.ActivityType.postToFacebook ]
