@@ -144,7 +144,7 @@ class SpinSuccessView: UIView {
 
     func showActionSheetView() {
         
-        let imageToShare = [ shareImage! ]
+        let imageToShare = [ shareImage!, self.shareMessageLbl.text ?? "" ] as [Any]
         let activityViewController = UIActivityViewController(activityItems: imageToShare, applicationActivities: nil)
         activityViewController.popoverPresentationController?.sourceView = self // so that iPads won't crash
         activityViewController.excludedActivityTypes = [ UIActivity.ActivityType.airDrop, UIActivity.ActivityType.postToFacebook ]
@@ -218,7 +218,7 @@ class SpinSuccessView: UIView {
         
         self.spinAgainButton.setTitle("Spin Again".localized(), for: .normal)
         
-        self.messageTitleLbl.text = "You have won ".localized() + " \(info?.responseObject?.first?.displayDetails?.first?.name ?? "")"
+        self.messageTitleLbl.text = "You have won ".localized() + "\(info?.responseObject?.first?.displayDetails?.first?.name ?? "")"
         self.messageDescLbl.text = ""
         
         self.shareMessageLbl.text = (info?.responseObject?.first?.displayDetails?.first?.description ?? "")

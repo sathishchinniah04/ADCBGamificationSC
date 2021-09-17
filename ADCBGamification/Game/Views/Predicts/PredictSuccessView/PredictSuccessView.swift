@@ -52,6 +52,7 @@ class PredictSuccessView: UIView {
     
     var eventDetails: EventsList?
     var shareImage: UIImage?
+    var shareCaption = ""
     private var predictAnimationView: AnimationView?
     let blueColor = UIColor(red: 34.0/256.0, green: 33.0/256.0, blue: 101.0/256.0, alpha: 1.0)
     
@@ -223,7 +224,7 @@ class PredictSuccessView: UIView {
     
     func showActionSheetView() {
         
-        let imageToShare = [ shareImage! ]
+        let imageToShare = [shareImage!, Constants.referMessage] as [Any]
         let activityViewController = UIActivityViewController(activityItems: imageToShare, applicationActivities: nil)
         activityViewController.popoverPresentationController?.sourceView = self // so that iPads won't crash
         activityViewController.excludedActivityTypes = [ UIActivity.ActivityType.airDrop, UIActivity.ActivityType.postToFacebook ]
