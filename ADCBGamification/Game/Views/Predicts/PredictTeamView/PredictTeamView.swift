@@ -123,8 +123,8 @@ class PredictTeamView: UIView {
         firstTeamCharLabel.text = inf.opponentASynonym
         secondTeamCharLabel.text = inf.opponentBSynonym
         
-        let numberOfDays = Calendar.current.dateComponents([.day], from: Date(), to: Utility.convertStringToDate(date: inf.predictionLockingTime ?? "")).day ?? 0
-        hourMinteAlignmentCheck(date: inf.predictionLockingTime ?? "", value: numberOfDays)
+        let numberOfDays = Calendar.current.dateComponents([.day], from: Date(), to: Utility.convertStringToDate(date: inf.MatchDate ?? "")).day ?? 0
+        hourMinteAlignmentCheck(date: inf.MatchDate ?? "", value: numberOfDays)
     }
     
     
