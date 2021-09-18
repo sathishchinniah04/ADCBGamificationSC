@@ -161,7 +161,9 @@ class PredictMatchController: UIViewController {
             self.openActivityController(text: message)
         case .gamePage:
             self.predictSuccessHelper.animateAndRemove()
-            self.navigationController?.popToRootViewController(animated: true)
+            self.dismiss(animated: true) {
+                self.navigationController?.popViewController(animated: true)
+            }
         default:
             break
         }
