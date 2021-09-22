@@ -145,7 +145,7 @@ class SpinSuccessView: UIView {
 
     func showActionSheetView() {
         
-        let imageToShare = [ shareImage!] as [Any]
+        let imageToShare = [ shareImage!, self.shareMessageLbl.text ?? ""] as [Any]
         let activityViewController = UIActivityViewController(activityItems: imageToShare, applicationActivities: nil)
         activityViewController.setValue(Constants.commonEmailSubject, forKey: "Subject")
         activityViewController.popoverPresentationController?.sourceView = self // so that iPads won't crash
