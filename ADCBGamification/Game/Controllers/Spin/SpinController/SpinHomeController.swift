@@ -19,6 +19,7 @@ class SpinHomeController: UIViewController {
     @IBOutlet weak var spinDummyImgView: UIImageView!
     @IBOutlet weak var activityIndicatorView: UIActivityIndicatorView!
     @IBOutlet weak var bgCloudImage: UIImageView!
+    @IBOutlet weak var spinHomeBgView: UIImageView!
     
     var spinerView = SpinerContainerHelper()
     var game: Games?
@@ -37,7 +38,9 @@ class SpinHomeController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()    
         self.initialSetup()
-        self.animationSetUp()
+        self.spinDummyImgView.isHidden = true
+        self.homeAnimationStaticView.isHidden = true
+       // self.animationSetUp()
         if let gam = game {
             updateOnResponce(game: gam, error: nil)
         }
@@ -127,6 +130,8 @@ class SpinHomeController: UIViewController {
             //self.wheelView?.layer.removeFromSuperlayer()
             self.homeAnimationStaticView.isHidden = true
             (self.con as? CustomNavViewController)?.changeOnlyTitle(title: "Spin & Win".localized())
+            self.spinHomeBgView.isHidden = true
+            self.spinDummyImgView.isHidden = false
             self.scaleToOrginalSize()
             self.spinerView.startRotate()
             self.assignRewards()
@@ -171,6 +176,7 @@ class SpinHomeController: UIViewController {
     }
     
     func scalingSpinerView(v: UIView, wContaner: UIView) {
+        self.spinDummyImgView.isHidden = true
         self.activityIndicatorView.stopAnimating()
         let v = v
         wheelView = wContaner
@@ -179,7 +185,7 @@ class SpinHomeController: UIViewController {
         spinDummyImgView.addSubview(v)
         spinDummyImgView.transform = CGAffineTransform(scaleX: scaleX, y: scaleY).translatedBy(x: -50, y: 0)
         // wContaner.transform = CGAffineTransform(rotationAngle: 0.5)
-        rotate()
+        //rotate()
     }
 
     // MARK : Animations
