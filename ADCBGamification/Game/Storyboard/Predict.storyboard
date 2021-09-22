@@ -74,8 +74,8 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Clouds" translatesAutoresizingMaskIntoConstraints="NO" id="tdu-bk-ghL">
                                 <rect key="frame" x="0.0" y="44" width="414" height="63"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Predict" translatesAutoresizingMaskIntoConstraints="NO" id="Ifq-Y2-VVs">
-                                <rect key="frame" x="30" y="134" width="354" height="314"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="predictWinNewBG" translatesAutoresizingMaskIntoConstraints="NO" id="Ifq-Y2-VVs">
+                                <rect key="frame" x="30" y="147" width="354" height="314"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0zs-1g-UM0" customClass="ExpireView" customModule="ADCBGamification" customModuleProvider="target">
                                 <rect key="frame" x="30" y="468" width="354" height="354"/>
@@ -97,7 +97,7 @@
                         <viewLayoutGuide key="safeArea" id="F75-gm-2pA"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="U4D-t7-PCO" firstAttribute="top" secondItem="Ifq-Y2-VVs" secondAttribute="bottom" constant="-5" id="51V-OO-Gle"/>
+                            <constraint firstItem="U4D-t7-PCO" firstAttribute="top" secondItem="Ifq-Y2-VVs" secondAttribute="bottom" constant="-18" id="51V-OO-Gle"/>
                             <constraint firstItem="O1D-93-f0H" firstAttribute="height" secondItem="9LS-1p-Or3" secondAttribute="height" multiplier="0.5" id="7wa-X5-mOd"/>
                             <constraint firstItem="0zs-1g-UM0" firstAttribute="top" secondItem="O1D-93-f0H" secondAttribute="bottom" constant="20" id="E0m-Ms-9XD"/>
                             <constraint firstItem="0zs-1g-UM0" firstAttribute="centerX" secondItem="F75-gm-2pA" secondAttribute="centerX" id="JaJ-b4-4JZ"/>
@@ -108,13 +108,13 @@
                             <constraint firstItem="U4D-t7-PCO" firstAttribute="leading" secondItem="Ifq-Y2-VVs" secondAttribute="trailing" constant="-129" id="Zw2-cK-jbs"/>
                             <constraint firstItem="tdu-bk-ghL" firstAttribute="trailing" secondItem="F75-gm-2pA" secondAttribute="trailing" id="a3u-NU-1rT"/>
                             <constraint firstItem="tdu-bk-ghL" firstAttribute="top" secondItem="F75-gm-2pA" secondAttribute="top" id="a8G-9v-tLC"/>
-                            <constraint firstItem="Ifq-Y2-VVs" firstAttribute="top" secondItem="F75-gm-2pA" secondAttribute="top" constant="90" id="bnI-Rk-yHq"/>
+                            <constraint firstItem="Ifq-Y2-VVs" firstAttribute="top" secondItem="F75-gm-2pA" secondAttribute="top" constant="103" id="bnI-Rk-yHq"/>
                             <constraint firstItem="xxf-cY-7Q7" firstAttribute="centerY" secondItem="9LS-1p-Or3" secondAttribute="centerY" id="jiN-aX-18L"/>
                             <constraint firstItem="O1D-93-f0H" firstAttribute="top" secondItem="9LS-1p-Or3" secondAttribute="top" id="qJA-QL-DME"/>
                             <constraint firstItem="F75-gm-2pA" firstAttribute="bottom" secondItem="0zs-1g-UM0" secondAttribute="bottom" constant="40" id="qpv-jn-NT6"/>
                             <constraint firstItem="O1D-93-f0H" firstAttribute="leading" secondItem="F75-gm-2pA" secondAttribute="leading" id="tPC-AS-WDR"/>
                             <constraint firstItem="Ifq-Y2-VVs" firstAttribute="centerX" secondItem="O1D-93-f0H" secondAttribute="centerX" id="xZ9-5h-LjJ"/>
-                            <constraint firstItem="Ifq-Y2-VVs" firstAttribute="bottom" secondItem="O1D-93-f0H" secondAttribute="bottom" id="xds-2d-30z"/>
+                            <constraint firstItem="Ifq-Y2-VVs" firstAttribute="bottom" secondItem="O1D-93-f0H" secondAttribute="bottom" constant="13" id="xds-2d-30z"/>
                             <constraint firstItem="xxf-cY-7Q7" firstAttribute="centerX" secondItem="9LS-1p-Or3" secondAttribute="centerX" id="yaR-oM-c6Z"/>
                         </constraints>
                     </view>
@@ -295,7 +295,7 @@
     <resources>
         <image name="Clouds" width="300" height="63"/>
         <image name="CurveClip" width="187.5" height="211"/>
-        <image name="Predict" width="133" height="214.5"/>
+        <image name="predictWinNewBG" width="308" height="280"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
