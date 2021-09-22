@@ -15,6 +15,7 @@ class ReferCode: Decodable {
     var requestId: String?
     var timestamp: String?
     var referralMessage: String?
+    var emailSubject: String?
 }
 
 

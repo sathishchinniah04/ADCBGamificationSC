@@ -23,7 +23,7 @@ class ReferController: UIViewController, ReferDateDelegate {
     //var referSuccessView = ReferSuccessPopupHelper()
     var referCode: String = ""
     var sharingMessage: String = ""
-    
+    var emailSubject = ""
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -78,6 +78,7 @@ class ReferController: UIViewController, ReferDateDelegate {
                 self.chooseContactButton.alpha = 1.0
                 self.chooseContactButton.isUserInteractionEnabled = true
                 self.activityIndicatorView.stopAnimating()
+                self.emailSubject = data.emailSubject ?? ""
                 self.referCodeLabel.text = data.referralCode
                 self.referMessageLabel.text = data.rewardMessage
                 self.referMessageLabelEnglish.text = data.rewardMessage
@@ -124,7 +125,7 @@ class ReferController: UIViewController, ReferDateDelegate {
     func referButtonHandle(action: NeumorphicButtonAction) {
         print("Tapped refer")
         print(sharingMessage)
-        self.openActivityController(text: sharingMessage)
+        self.openActivityController(text: sharingMessage, emailSubj: self.emailSubject)
     }
     
     func chooseContactButtonTapped(action: ReferContactButtonAction) {
