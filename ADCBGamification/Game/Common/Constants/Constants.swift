@@ -31,7 +31,7 @@ class Constants {
     
     static let spinGetSpinOffer = "\(baseUrl)Gamification-1.0/Gamification/gameEngine/executeGame"
     static var referMessage = ""
-    
+    static var commonEmailSubject = ""
     static var leagueName:String = ""
     //static let spinAssignReward = "http://cvm-game.20.74.146.216.nip.io/Gamification-1.0/Gamification/executeEvent"
 }

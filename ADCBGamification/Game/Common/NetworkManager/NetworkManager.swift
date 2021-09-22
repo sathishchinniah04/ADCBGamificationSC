@@ -97,9 +97,12 @@ class NetworkManager: NSObject {
             if let httpResponse = resp as? HTTPURLResponse{
                 if  let dict = httpResponse.allHeaderFields as? [String: String] {
                 let message = dict["Share_Message"]
+                    let emailSub = dict["emailSubject"]
                     print("message is \(String(describing: message))")
                     Constants.referMessage = message ?? ""
+                    Constants.commonEmailSubject = emailSub ?? ""
                 }
+                
             }
         }
         task.resume()

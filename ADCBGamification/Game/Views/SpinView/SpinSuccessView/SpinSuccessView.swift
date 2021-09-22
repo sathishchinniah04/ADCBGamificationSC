@@ -147,7 +147,7 @@ class SpinSuccessView: UIView {
         
         let imageToShare = [ shareImage!] as [Any]
         let activityViewController = UIActivityViewController(activityItems: imageToShare, applicationActivities: nil)
-        activityViewController.setValue(Constants.referMessage, forKey: "Subject")
+        activityViewController.setValue(Constants.commonEmailSubject, forKey: "Subject")
         activityViewController.popoverPresentationController?.sourceView = self // so that iPads won't crash
         activityViewController.excludedActivityTypes = [ UIActivity.ActivityType.airDrop, UIActivity.ActivityType.postToFacebook ]
         activityViewController.completionWithItemsHandler = {(activityType: UIActivity.ActivityType?, completed: Bool, returnedItems:[Any]?, error: Error?) in

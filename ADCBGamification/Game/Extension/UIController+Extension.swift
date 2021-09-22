@@ -8,7 +8,7 @@
 import UIKit
 
 extension UIViewController{
-    func openActivityController(text: String, emailSubj: String) {
+    func openActivityController(text: String, emailSubj: String = "") {
         DispatchQueue.main.async {
             let activityVC = UIActivityViewController(activityItems: [text], applicationActivities: nil)
             activityVC.setValue(emailSubj, forKey: "Subject")
