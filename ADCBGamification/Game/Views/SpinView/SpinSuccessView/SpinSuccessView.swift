@@ -147,10 +147,12 @@ class SpinSuccessView: UIView {
         
         let imageToShare = [ shareImage!] as [Any]
         let activityViewController = UIActivityViewController(activityItems: imageToShare, applicationActivities: nil)
+        activityViewController.setValue(Constants.referMessage, forKey: "Subject")
         activityViewController.popoverPresentationController?.sourceView = self // so that iPads won't crash
         activityViewController.excludedActivityTypes = [ UIActivity.ActivityType.airDrop, UIActivity.ActivityType.postToFacebook ]
         activityViewController.completionWithItemsHandler = {(activityType: UIActivity.ActivityType?, completed: Bool, returnedItems:[Any]?, error: Error?) in
             self.shareMainView.isHidden = true
+            Constants.referMessage = ""
         }
         if let viewController = UIApplication.topMostViewController {
             viewController.present(activityViewController, animated: true) {
@@ -219,10 +221,10 @@ class SpinSuccessView: UIView {
         
         self.spinAgainButton.setTitle("Spin Again".localized(), for: .normal)
         
-        self.messageTitleLbl.text = "You have won ".localized() + "\(info?.responseObject?.first?.displayDetails?.first?.name ?? "")"
-        self.messageDescLbl.text = ""
+        self.messageTitleLbl.text = "You have won ".localized() + "\(info?.responseObject?.first?.displayDetails?.first?.synonym ?? "")"
+        self.messageDescLbl.text = "\(info?.responseObject?.first?.displayDetails?.first?.name ?? "")"
         
-        self.shareMessageLbl.text = (info?.responseObject?.first?.displayDetails?.first?.description ?? "")
+        self.shareMessageLbl.text =  "I won a".localized() + " " + (info?.responseObject?.first?.displayDetails?.first?.description ?? "") + " " + "by playing a Spin & Win".localized()
 
         if (info?.responseObject?.first?.expiryDate?.isEmpty ?? "".isEmpty || info?.responseObject?.first?.expiryDate == nil) {
             self.shareExpLbl.text = ""

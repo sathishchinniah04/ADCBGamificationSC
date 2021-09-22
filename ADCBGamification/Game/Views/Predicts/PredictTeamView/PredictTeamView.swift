@@ -108,8 +108,6 @@ class PredictTeamView: UIView {
         }
     }
     
-    
-    
     func labelSetup(index: Int, info: EventsList?) {
         guard let inf = info else { return }
         //leagueNameLabel.text = inf.
