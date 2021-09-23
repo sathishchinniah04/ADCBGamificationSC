@@ -37,6 +37,16 @@ class CustomContactCell: UITableViewCell {
         contactLabel.setSizeFont(sizeFont: (StoreManager.shared.language == GameLanguage.AR.rawValue) ?  12.0 : 12.0, fontFamily: (StoreManager.shared.language == GameLanguage.AR.rawValue) ? "Tajawal-Regular" : "OpenSans-Regular")
         
         verifyBtn.setSizeFont(sizeFont: (StoreManager.shared.language == GameLanguage.AR.rawValue) ?  14.0 : 14.0, fontFamily: (StoreManager.shared.language == GameLanguage.AR.rawValue) ? "Tajawal-Regular" : "OpenSans-Regular")
+        
+        let fontDict: [NSAttributedString.Key : Any] = [
+            NSAttributedString.Key.font: (StoreManager.shared.language == GameLanguage.AR.rawValue) ? UIFont(name: "Tajawal-Regular", size: 14.0) ?? UIFont.boldSystemFont(ofSize: 1.5) : UIFont(name: "OpenSans-Regular", size: 14.0) ?? UIFont.boldSystemFont(ofSize: 1.5),
+            NSAttributedString.Key.underlineStyle : 1,
+            NSAttributedString.Key.foregroundColor :  UIColor(hexString: "#222165")
+            
+        ]
+        let homeAttString = NSMutableAttributedString()
+        homeAttString.append(NSAttributedString(string: "Verify".localized(), attributes: fontDict))
+        self.verifyBtn.setAttributedTitle(homeAttString, for: .normal)
 
     }
 
