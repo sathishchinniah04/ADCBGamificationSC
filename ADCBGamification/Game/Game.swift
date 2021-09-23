@@ -56,6 +56,7 @@ public class Game {
         }
         getUrlFromInfoPlist()
         self.getAllGamesList(gameType, withCompletion : {(Id) in
+            print("Game Language", language)
             StoreManager.shared.msisdn = msisdn
             StoreManager.shared.language = language
             IQKeyboardManager.shared.enable = true

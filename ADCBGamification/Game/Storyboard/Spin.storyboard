@@ -34,7 +34,10 @@
                                 </constraints>
                             </view>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Clouds" translatesAutoresizingMaskIntoConstraints="NO" id="vJN-O7-seS">
-                                <rect key="frame" x="0.0" y="44" width="414" height="10"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="63"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="63" id="asx-5Y-2K9"/>
+                                </constraints>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="SGV-Kl-EeD">
                                 <rect key="frame" x="107" y="319" width="200" height="200"/>
@@ -99,23 +102,24 @@
                             <constraint firstItem="fIY-xv-g70" firstAttribute="top" secondItem="peg-KZ-704" secondAttribute="top" constant="45" id="3B6-vR-KxL"/>
                             <constraint firstItem="O5H-9N-Ue9" firstAttribute="leading" secondItem="2DE-sR-4BU" secondAttribute="leading" id="3YB-7M-SHh"/>
                             <constraint firstItem="1au-yG-VVq" firstAttribute="centerX" secondItem="2DE-sR-4BU" secondAttribute="centerX" id="9Ig-wR-aeO"/>
+                            <constraint firstItem="st0-RW-x1X" firstAttribute="leading" secondItem="peg-KZ-704" secondAttribute="leading" id="Cfg-A6-1c0"/>
                             <constraint firstItem="1au-yG-VVq" firstAttribute="centerY" secondItem="2DE-sR-4BU" secondAttribute="centerY" id="Eex-H7-I2m"/>
                             <constraint firstItem="peg-KZ-704" firstAttribute="bottom" secondItem="fIY-xv-g70" secondAttribute="bottom" id="FYx-7v-906"/>
                             <constraint firstItem="peg-KZ-704" firstAttribute="trailing" secondItem="fIY-xv-g70" secondAttribute="trailing" id="HCY-Ku-Bq8"/>
                             <constraint firstItem="7pc-Ro-PzS" firstAttribute="top" secondItem="O5H-9N-Ue9" secondAttribute="bottom" constant="-299" id="JcM-fl-xM4"/>
                             <constraint firstItem="vJN-O7-seS" firstAttribute="leading" secondItem="peg-KZ-704" secondAttribute="leading" id="Jpl-Wq-fbj"/>
                             <constraint firstItem="vJN-O7-seS" firstAttribute="top" secondItem="peg-KZ-704" secondAttribute="top" id="Llh-e3-3db"/>
-                            <constraint firstItem="st0-RW-x1X" firstAttribute="top" secondItem="vJN-O7-seS" secondAttribute="bottom" constant="75" id="QEi-n3-CPj"/>
-                            <constraint firstItem="st0-RW-x1X" firstAttribute="centerX" secondItem="vJN-O7-seS" secondAttribute="centerX" id="W8v-w3-z4A"/>
                             <constraint firstItem="otW-Vk-P3R" firstAttribute="centerX" secondItem="2DE-sR-4BU" secondAttribute="centerX" id="WKj-xY-sdZ"/>
                             <constraint firstItem="peg-KZ-704" firstAttribute="bottom" secondItem="0gg-gf-sLk" secondAttribute="bottom" constant="85" id="XNu-Md-Bfc"/>
                             <constraint firstItem="wNb-S9-CRs" firstAttribute="leading" secondItem="peg-KZ-704" secondAttribute="leading" constant="30" id="Ycx-0X-YRR"/>
                             <constraint firstItem="0gg-gf-sLk" firstAttribute="top" secondItem="peg-KZ-704" secondAttribute="top" constant="45" id="aBT-8A-ClW"/>
                             <constraint firstItem="O5H-9N-Ue9" firstAttribute="top" secondItem="2DE-sR-4BU" secondAttribute="top" id="avL-4s-3KO"/>
                             <constraint firstItem="peg-KZ-704" firstAttribute="trailing" secondItem="O5H-9N-Ue9" secondAttribute="trailing" id="cj8-00-lTf"/>
+                            <constraint firstItem="st0-RW-x1X" firstAttribute="top" secondItem="vJN-O7-seS" secondAttribute="bottom" constant="22" id="cpU-6b-8C3"/>
                             <constraint firstItem="SGV-Kl-EeD" firstAttribute="centerX" secondItem="2DE-sR-4BU" secondAttribute="centerX" id="eW4-Jf-JSq"/>
                             <constraint firstItem="peg-KZ-704" firstAttribute="bottom" secondItem="wNb-S9-CRs" secondAttribute="bottom" constant="40" id="fBa-Fh-GSs"/>
                             <constraint firstItem="O5H-9N-Ue9" firstAttribute="height" secondItem="2DE-sR-4BU" secondAttribute="height" multiplier="0.5" id="fOO-UA-MxV"/>
+                            <constraint firstItem="st0-RW-x1X" firstAttribute="trailing" secondItem="peg-KZ-704" secondAttribute="trailing" id="gMi-Eg-rp3"/>
                             <constraint firstItem="SGV-Kl-EeD" firstAttribute="bottom" secondItem="O5H-9N-Ue9" secondAttribute="bottom" constant="71" id="gqw-7i-cEU"/>
                             <constraint firstItem="wNb-S9-CRs" firstAttribute="top" secondItem="O5H-9N-Ue9" secondAttribute="bottom" constant="20" id="icH-BI-MOj"/>
                             <constraint firstItem="wNb-S9-CRs" firstAttribute="top" secondItem="st0-RW-x1X" secondAttribute="bottom" constant="8" id="pEQ-uc-K7H"/>

@@ -80,8 +80,8 @@ class ReferController: UIViewController, ReferDateDelegate {
                 self.activityIndicatorView.stopAnimating()
                 self.emailSubject = data.emailSubject ?? ""
                 self.referCodeLabel.text = data.referralCode
-                self.referMessageLabel.text = data.rewardMessage
-                self.referMessageLabelEnglish.text = data.rewardMessage
+//                self.referMessageLabel.text = data.rewardMessage
+//                self.referMessageLabelEnglish.text = data.rewardMessage
                 self.sharingMessage = data.referralMessage ?? ""
                 self.referCode = data.referralCode ?? ""
                 self.buttonUserInteraction(enable: true)
