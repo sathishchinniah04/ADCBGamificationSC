@@ -37,7 +37,7 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="63"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="SGV-Kl-EeD">
-                                <rect key="frame" x="107" y="188" width="200" height="200"/>
+                                <rect key="frame" x="107" y="319" width="200" height="200"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="NWh-eP-RWc"/>
                                     <constraint firstAttribute="height" constant="200" id="UU3-qb-tof"/>
@@ -49,7 +49,7 @@
                             </view>
                             <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fIY-xv-g70">
                                 <rect key="frame" x="0.0" y="89" width="414" height="773"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                             <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="otW-Vk-P3R">
                                 <rect key="frame" x="57" y="231" width="300" height="300"/>
@@ -70,6 +70,25 @@
                                     <constraint firstAttribute="width" constant="300" id="f9L-7h-5kr"/>
                                 </constraints>
                             </imageView>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Usl-3o-dke">
+                                <rect key="frame" x="30" y="775" width="354" height="50"/>
+                                <color key="backgroundColor" red="0.1333333333" green="0.12941176469999999" blue="0.39607843139999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="5X0-k0-y6X"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                                <state key="normal" title="Spin">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="spinBtnAction:" destination="INV-Uo-N1h" eventType="touchUpInside" id="VVG-Zk-ZQn"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="peg-KZ-704"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -97,12 +116,15 @@
                             <constraint firstItem="SGV-Kl-EeD" firstAttribute="centerX" secondItem="2DE-sR-4BU" secondAttribute="centerX" id="eW4-Jf-JSq"/>
                             <constraint firstItem="peg-KZ-704" firstAttribute="bottom" secondItem="wNb-S9-CRs" secondAttribute="bottom" constant="40" id="fBa-Fh-GSs"/>
                             <constraint firstItem="O5H-9N-Ue9" firstAttribute="height" secondItem="2DE-sR-4BU" secondAttribute="height" multiplier="0.5" id="fOO-UA-MxV"/>
-                            <constraint firstItem="SGV-Kl-EeD" firstAttribute="bottom" secondItem="O5H-9N-Ue9" secondAttribute="bottom" constant="-60" id="gqw-7i-cEU"/>
+                            <constraint firstItem="SGV-Kl-EeD" firstAttribute="bottom" secondItem="O5H-9N-Ue9" secondAttribute="bottom" constant="71" id="gqw-7i-cEU"/>
                             <constraint firstItem="wNb-S9-CRs" firstAttribute="top" secondItem="O5H-9N-Ue9" secondAttribute="bottom" constant="20" id="icH-BI-MOj"/>
                             <constraint firstAttribute="trailing" secondItem="0gg-gf-sLk" secondAttribute="trailing" id="ssd-VA-xuF"/>
                             <constraint firstItem="7pc-Ro-PzS" firstAttribute="centerX" secondItem="O5H-9N-Ue9" secondAttribute="centerX" constant="1" id="tMQ-aj-MkN"/>
                             <constraint firstItem="fIY-xv-g70" firstAttribute="leading" secondItem="peg-KZ-704" secondAttribute="leading" id="vTH-kJ-12B"/>
+                            <constraint firstItem="peg-KZ-704" firstAttribute="bottom" secondItem="Usl-3o-dke" secondAttribute="bottom" constant="37" id="wYq-Xg-5nv"/>
                             <constraint firstItem="0gg-gf-sLk" firstAttribute="leading" secondItem="peg-KZ-704" secondAttribute="leading" id="y7E-C6-tUT"/>
+                            <constraint firstItem="peg-KZ-704" firstAttribute="trailing" secondItem="Usl-3o-dke" secondAttribute="trailing" constant="30" id="ytU-vC-eKc"/>
+                            <constraint firstItem="Usl-3o-dke" firstAttribute="leading" secondItem="peg-KZ-704" secondAttribute="leading" constant="30" id="zmy-8Y-yoZ"/>
                         </constraints>
                     </view>
                     <connections>
@@ -112,6 +134,7 @@
                         <outlet property="expireView" destination="wNb-S9-CRs" id="o8M-YK-KvH"/>
                         <outlet property="homeAnimationStaticView" destination="7pc-Ro-PzS" id="xzl-uE-jtO"/>
                         <outlet property="lottiSpinAnimationView" destination="0gg-gf-sLk" id="FqL-Re-EAV"/>
+                        <outlet property="spinBtn" destination="Usl-3o-dke" id="A7t-Zx-sUJ"/>
                         <outlet property="spinDummyImgView" destination="SGV-Kl-EeD" id="lj1-hE-UfA"/>
                         <outlet property="spinHomeBgView" destination="st0-RW-x1X" id="SHD-9S-wvV"/>
                     </connections>
