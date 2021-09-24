@@ -133,7 +133,7 @@ class PredictTeamView: UIView {
         
         //let matchDate = Utility.convertStringToDate(date: date)
         
-        let currMatachDate = Utility.convertDateWithFormat(inputDate: date, currFormat: "yyyy-MM-dd", expFormat: "yyyy-MM-dd HH:mm:ss")
+       let currMatachDate = Utility.convertDateWithFormat(inputDate: date, currFormat: "yyyy-MM-dd", expFormat: "yyyy-MM-dd HH:mm:ss")
         
         let matchDate = Utility.convertStringToDate(date: currMatachDate)
         
@@ -153,15 +153,17 @@ class PredictTeamView: UIView {
                     daysCount = "\(value)" + "day".localized()
                 }
              
-                let expDate = Utility.convertStringToDate(date: date)
+               // let expDate = Utility.convertStringToDate(date: date)
                 
                 let calendar = Calendar.current
 
                 let currentDateComp = calendar.dateComponents([.hour, .minute], from: Date())
                 
-                let expDateComp = calendar.dateComponents([.hour, .minute], from: expDate)
+                let expDateComp = calendar.dateComponents([.hour, .minute], from: matchDate)
+                
                 
                 var hours =  Int(currentDateComp.hour ?? 0) - Int(expDateComp.hour ?? 0)
+                hours = (hours - 24)
             
                 let min = Int(currentDateComp.minute ?? 0) - Int(expDateComp.minute ?? 0)
                 

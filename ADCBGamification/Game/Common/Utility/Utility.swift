@@ -107,6 +107,33 @@ class Utility {
     }
     
     
+    static func convertDateWithFormatForPredicNWin(inputDate: String, currFormat: String, expFormat: String) -> String {
+
+        var currInputDate = inputDate
+         let olDateFormatter = DateFormatter()
+        if currFormat == "yyyy-MM-dd HH:mm:ss" {
+            currInputDate = currInputDate + " 24:00:00"
+        }
+         olDateFormatter.dateFormat = currFormat
+        
+        
+         let oldDate = olDateFormatter.date(from: currInputDate)
+
+        let convertDateFormatter = DateFormatter()
+        if (StoreManager.shared.language.lowercased() == "ar".lowercased()) {
+            let hijriCalendar = Calendar.init(identifier: Calendar.Identifier.islamicCivil)
+            convertDateFormatter.calendar = hijriCalendar
+            convertDateFormatter.locale = Locale(identifier: "ar_SA")
+        } else {
+            convertDateFormatter.calendar = Calendar.init(identifier: Calendar.Identifier.gregorian)
+            convertDateFormatter.locale = Locale(identifier: "en_US_POSIX")
+        }
+         
+         convertDateFormatter.dateFormat = expFormat
+         return convertDateFormatter.string(from: oldDate!)
+    }
+    
+    
     static func convertDateWithFormat(inputDate: String, currFormat: String, expFormat: String) -> String {
 
          let olDateFormatter = DateFormatter()
