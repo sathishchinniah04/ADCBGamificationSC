@@ -90,7 +90,7 @@ class SpinHomeController: UIViewController {
     @IBAction func spinBtnAction(_ sender: Any) {
         
         self.spinNowTapped = true
-    
+        self.spinBtn.isHidden = true
         self.spinerView.startRotate()
         self.assignRewards()
         if let ind = self.gameIndex {
