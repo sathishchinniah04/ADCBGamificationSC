@@ -23,8 +23,8 @@ class ReferIntroController: UIViewController {
         super.viewDidLoad()
 //        self.expireView.populateView(isShowTerms: false, game: game, complition: expireViewHandle)
 //
-        referEngLblLeftConstraints.constant = 112
-        referArbLblLeftConstraints.constant = 180
+
+        
         setupLabelConstraints()
         setupArabicLabelConstraints()
         if StoreManager.shared.language == GameLanguage.EN.rawValue {
@@ -49,29 +49,39 @@ class ReferIntroController: UIViewController {
         if !isDirectLoad {return}
     }
 
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        print("values", referArbLblLeftConstraints.constant)
+    }
     
     func setupLabelConstraints() {
-        
+       
         let device = UIDevice.current.modelName
-        switch device {
-        case "iPhone 11 Pro", "iPhone 11 Pro Max":
+        if (device == "iPhone 11 Pro" || device == "iPhone 11 Pro Max") {
             referEngLblLeftConstraints.constant = 105
-        default:
+        } else {
             referEngLblLeftConstraints.constant = 112
+        }
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+            self.referMessageLabelEnglish.layoutIfNeeded()
         }
     }
     
     
     func setupArabicLabelConstraints() {
-        
+       
         let device = UIDevice.current.modelName
-        switch device {
-        case "iPhone 11":
+        if (device == "iPhone 11") {
             referArbLblLeftConstraints.constant = 210
-        default:
+        } else {
             referArbLblLeftConstraints.constant = 180
         }
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+            self.referMessageLabel.layoutIfNeeded()
+        }
     }
+    
+    
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         if isDirectLoad {return}

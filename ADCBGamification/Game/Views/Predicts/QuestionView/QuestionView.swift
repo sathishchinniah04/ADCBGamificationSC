@@ -86,7 +86,7 @@ class QuestionView: UIView {
                
             } else {
 //                image.contentMode = .scaleAspectFill
-                image.image = UIImage(named: "pnwDis", in: Bundle(for: QuestionView.self), compatibleWith: nil)
+                image.image = UIImage(named: "pnwQuesDisab", in: Bundle(for: QuestionView.self), compatibleWith: nil)
             }
         }
         self.eventsList?.questionList?[index].predOptions?[0].isSelected = true
@@ -103,7 +103,7 @@ class QuestionView: UIView {
                 image.image = UIImage(named: "PNWSelectedNew", in: Bundle(for: QuestionView.self), compatibleWith: nil)
             } else {
 //                image.contentMode = .scaleAspectFill
-                image.image = UIImage(named: "pnwDis", in: Bundle(for: QuestionView.self), compatibleWith: nil)
+                image.image = UIImage(named: "pnwQuesDisab", in: Bundle(for: QuestionView.self), compatibleWith: nil)
             }
         }
         self.eventsList?.questionList?[index].predOptions?[1].isSelected = true
