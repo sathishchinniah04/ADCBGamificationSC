@@ -9,6 +9,7 @@ import UIKit
 
 class ReferController: UIViewController, ReferDateDelegate {
     
+    @IBOutlet weak var referArbLblLeftConstraints: NSLayoutConstraint!
     @IBOutlet weak var referEngLblLeftConstraints: NSLayoutConstraint!
     @IBOutlet weak var orLabel: UILabel!
     @IBOutlet weak var shareReferalLabel: UILabel!
@@ -28,6 +29,8 @@ class ReferController: UIViewController, ReferDateDelegate {
     var myDefaultSize: CGFloat = 112.0
     override func viewDidLoad() {
         super.viewDidLoad()
+        referEngLblLeftConstraints.constant = 112
+       // referArbLblLeftConstraints.constant = 180
         self.setupLabelConstraints()
         self.addDottedLine()
         self.neumorphicButtonSetup()
@@ -76,6 +79,19 @@ class ReferController: UIViewController, ReferDateDelegate {
             referEngLblLeftConstraints.constant = 112
         }
     }
+    
+//    func setupArabicLabelConstraints() {
+//
+//        let device = UIDevice.current.modelName
+//        switch device {
+//        case "iPhone 11 Pro", "iPhone 11 Pro Max":
+//            referArbLblLeftConstraints.constant = 175
+//        case "iPhone 6s Plus":
+//            referArbLblLeftConstraints.constant = 175
+//        default:
+//            referArbLblLeftConstraints.constant = 180
+//        }
+//    }
     
     func buttonUserInteraction(enable: Bool) {
         DispatchQueue.main.async {
