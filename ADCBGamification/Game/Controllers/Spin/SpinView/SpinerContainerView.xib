@@ -91,7 +91,7 @@
                         <constraint firstAttribute="height" constant="45" id="Igq-k8-AiJ"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
-                    <state key="normal" title="Spin Now">
+                    <state key="normal" title="Spin">
                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </state>
                     <connections>

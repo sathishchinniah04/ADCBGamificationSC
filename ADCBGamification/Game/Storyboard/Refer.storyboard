@@ -195,19 +195,19 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Zve-f3-Hol">
-                                <rect key="frame" x="73" y="609" width="268.5" height="79.5"/>
+                                <rect key="frame" x="73" y="606" width="268.5" height="76.5"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="LgF-aF-OfC">
-                                        <rect key="frame" x="0.0" y="0.0" width="268.5" height="79.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="268.5" height="76.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Share Your Referral Code" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bur-DY-auV">
-                                                <rect key="frame" x="0.0" y="0.0" width="268.5" height="19.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="268.5" height="16.5"/>
                                                 <fontDescription key="fontDescription" name="OpenSans-Light" family="Open Sans" pointSize="14"/>
                                                 <color key="textColor" red="0.32941176470588235" green="0.32941176470588235" blue="0.33725490196078434" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sWE-jm-dk4">
-                                                <rect key="frame" x="0.0" y="29.5" width="268.5" height="50"/>
+                                                <rect key="frame" x="0.0" y="26.5" width="268.5" height="50"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GRD2021" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="13o-H8-mbQ">
                                                         <rect key="frame" x="13" y="14" width="195.5" height="22"/>
@@ -229,10 +229,10 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="iq8-Er-Ty5">
-                                <rect key="frame" x="199" y="557" width="16.5" height="22"/>
+                                <rect key="frame" x="199.5" y="557" width="15" height="19"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="or" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Nh-q7-GLj">
-                                        <rect key="frame" x="0.0" y="0.0" width="16.5" height="22"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="15" height="19"/>
                                         <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="16"/>
                                         <color key="textColor" red="0.62745098039215685" green="0.62745098039215685" blue="0.62745098039215685" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -240,10 +240,10 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="PDu-Pq-V5j">
-                                <rect key="frame" x="225.5" y="567.5" width="158.5" height="1"/>
+                                <rect key="frame" x="224.5" y="566" width="159.5" height="1"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lOq-gB-iUA">
-                                        <rect key="frame" x="0.0" y="0.0" width="158.5" height="1"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="159.5" height="1"/>
                                         <color key="backgroundColor" red="0.8666666666666667" green="0.8666666666666667" blue="0.8666666666666667" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="1" id="BG4-KT-xj6"/>
@@ -252,10 +252,10 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="HWn-Y7-7Zo">
-                                <rect key="frame" x="30" y="567.5" width="159" height="1"/>
+                                <rect key="frame" x="30" y="566" width="159.5" height="1"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cwB-0o-9RR">
-                                        <rect key="frame" x="0.0" y="0.0" width="159" height="1"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="159.5" height="1"/>
                                         <color key="backgroundColor" red="0.8666666666666667" green="0.8666666666666667" blue="0.8666666666666667" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="1" id="FhP-gE-0My"/>
@@ -264,7 +264,7 @@
                                 </subviews>
                             </stackView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8gm-Ye-CoG" customClass="NeumorphicButton" customModule="ADCBGamification" customModuleProvider="target">
-                                <rect key="frame" x="291.5" y="638.5" width="50" height="50"/>
+                                <rect key="frame" x="291.5" y="632.5" width="50" height="50"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="8gm-Ye-CoG" secondAttribute="height" multiplier="8:8" id="dQm-AR-JOw"/>
@@ -388,7 +388,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My contacts" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1gZ-jh-Squ">
-                                                <rect key="frame" x="146.5" y="55" width="121" height="23.5"/>
+                                                <rect key="frame" x="152" y="55" width="110.5" height="23.5"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="23.5" id="wUM-R2-sYc"/>
                                                 </constraints>
@@ -403,7 +403,7 @@
                                                         <rect key="frame" x="0.0" y="0.0" width="354" height="50"/>
                                                     </imageView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter a contact name or mobile number" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qyd-sD-PDh">
-                                                        <rect key="frame" x="20" y="7" width="293" height="16.5"/>
+                                                        <rect key="frame" x="20" y="7" width="293" height="14"/>
                                                         <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="12"/>
                                                         <color key="textColor" red="0.3294117647" green="0.3294117647" blue="0.33725490200000002" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
@@ -450,7 +450,7 @@
                                                 <rect key="frame" x="0.0" y="159.5" width="414" height="45"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select the contact to Invite" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hFC-53-ku0">
-                                                        <rect key="frame" x="25" y="13" width="364" height="19.5"/>
+                                                        <rect key="frame" x="25" y="14.5" width="364" height="16.5"/>
                                                         <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="14"/>
                                                         <color key="textColor" red="0.1333333333" green="0.12941176469999999" blue="0.39607843139999999" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
@@ -501,7 +501,7 @@
                                                         <rect key="frame" x="0.0" y="417.5" width="414" height="44"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Selected customer not found" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wHK-fq-avR">
-                                                                <rect key="frame" x="112.5" y="-20" width="189" height="19.5"/>
+                                                                <rect key="frame" x="116" y="-20" width="182" height="16.5"/>
                                                                 <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="14"/>
                                                                 <color key="textColor" red="0.3294117647" green="0.3294117647" blue="0.33725490200000002" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <nil key="highlightedColor"/>

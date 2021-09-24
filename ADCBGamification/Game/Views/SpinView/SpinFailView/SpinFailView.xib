@@ -27,10 +27,10 @@
                     <rect key="frame" x="0.0" y="0.0" width="414" height="493"/>
                 </imageView>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Clouds" translatesAutoresizingMaskIntoConstraints="NO" id="YLk-rb-PXE">
-                    <rect key="frame" x="0.0" y="66" width="414" height="63"/>
+                    <rect key="frame" x="0.0" y="44" width="414" height="63"/>
                 </imageView>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Mobile" translatesAutoresizingMaskIntoConstraints="NO" id="Jcq-fF-ACp">
-                    <rect key="frame" x="138.5" y="119" width="137" height="250"/>
+                    <rect key="frame" x="138.5" y="97" width="137" height="250"/>
                 </imageView>
                 <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tx1-8d-WNB">
                     <rect key="frame" x="164.5" y="64" width="85" height="22"/>
@@ -246,10 +246,10 @@
                 <constraint firstItem="DVy-v3-TUb" firstAttribute="centerX" secondItem="Mgy-fY-UgW" secondAttribute="centerX" id="4om-6M-DHC"/>
                 <constraint firstItem="YLk-rb-PXE" firstAttribute="trailing" secondItem="43V-d4-wrQ" secondAttribute="trailing" id="8jT-8N-kGB"/>
                 <constraint firstItem="Pii-cg-xTm" firstAttribute="top" secondItem="Mgy-fY-UgW" secondAttribute="top" id="ATe-Ra-JZT"/>
-                <constraint firstItem="YLk-rb-PXE" firstAttribute="top" secondItem="tx1-8d-WNB" secondAttribute="bottom" constant="-20" id="AV7-pP-PuN"/>
                 <constraint firstItem="YLk-rb-PXE" firstAttribute="leading" secondItem="43V-d4-wrQ" secondAttribute="leading" id="In6-7n-wkh"/>
                 <constraint firstItem="Jcq-fF-ACp" firstAttribute="top" secondItem="YLk-rb-PXE" secondAttribute="bottom" constant="-10" id="Q0Q-N2-XjD"/>
                 <constraint firstItem="Pii-cg-xTm" firstAttribute="height" secondItem="Mgy-fY-UgW" secondAttribute="height" multiplier="0.55" id="WEk-Pm-AUF"/>
+                <constraint firstItem="YLk-rb-PXE" firstAttribute="top" secondItem="43V-d4-wrQ" secondAttribute="top" id="YEK-kl-tmG"/>
                 <constraint firstItem="tx1-8d-WNB" firstAttribute="top" secondItem="43V-d4-wrQ" secondAttribute="top" constant="20" id="cTx-02-cLV"/>
                 <constraint firstItem="43V-d4-wrQ" firstAttribute="trailing" secondItem="Pii-cg-xTm" secondAttribute="trailing" id="hvW-gV-Yhr"/>
                 <constraint firstItem="DVy-v3-TUb" firstAttribute="centerY" secondItem="Mgy-fY-UgW" secondAttribute="centerY" constant="0.5" id="yed-m8-vz6"/>

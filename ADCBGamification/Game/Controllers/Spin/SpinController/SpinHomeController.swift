@@ -39,6 +39,7 @@ class SpinHomeController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()    
         self.initialSetup()
+        self.spinBtn.setTitle("Spin".localized(), for: .normal)
         self.spinDummyImgView.isHidden = true
         self.homeAnimationStaticView.isHidden = true
        // self.animationSetUp()
