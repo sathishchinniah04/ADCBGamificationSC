@@ -163,9 +163,10 @@ class PredictTeamView: UIView {
                 
                 
                 var hours =  Int(currentDateComp.hour ?? 0) - Int(expDateComp.hour ?? 0)
-                hours = (hours - 24)
+                hours = (hours - 23)
             
-                let min = Int(currentDateComp.minute ?? 0) - Int(expDateComp.minute ?? 0)
+                var min = Int(currentDateComp.minute ?? 0) - Int(expDateComp.minute ?? 0)
+                min = (min - 59)
                 
                 if (hours == 0 && min == 0 ) {
                     hours = 12
