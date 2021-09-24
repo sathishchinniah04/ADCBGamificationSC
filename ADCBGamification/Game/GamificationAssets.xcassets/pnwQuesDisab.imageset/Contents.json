@@ -1,17 +1,15 @@
 {
   "images" : [
     {
-      "filename" : "pnwQuesDisab.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "pnwQuesDisab@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "pnwQuesDisab@3x.png",
+      "filename" : "Disabled Button Copy@1.5x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

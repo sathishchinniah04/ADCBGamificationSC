@@ -94,7 +94,7 @@
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="peg-KZ-704"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.97254901960784312" green="0.97254901960784312" blue="0.97254901960784312" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="vJN-O7-seS" firstAttribute="trailing" secondItem="peg-KZ-704" secondAttribute="trailing" id="0IQ-SE-u9A"/>
                             <constraint firstItem="wNb-S9-CRs" firstAttribute="centerX" secondItem="peg-KZ-704" secondAttribute="centerX" id="0XT-mI-hD7"/>

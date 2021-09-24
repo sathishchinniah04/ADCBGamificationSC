@@ -40,7 +40,7 @@ class CustomNeumophicButton: UIView {
         view?.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         self.addSubview(view!)
         DispatchQueue.main.async {
-            self.unSelectedState()
+           // self.unSelectedState()
         }
     }
     
@@ -73,7 +73,7 @@ class CustomNeumophicButton: UIView {
     }
     
     @IBAction func buttonTapped() {
-            selectedState()
+            //selectedState()
         self.handler?()
     }
     

@@ -79,7 +79,7 @@
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0zs-1g-UM0" customClass="ExpireView" customModule="ADCBGamification" customModuleProvider="target">
                                 <rect key="frame" x="30" y="468" width="354" height="354"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" hidesWhenStopped="YES" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="xxf-cY-7Q7">
                                 <rect key="frame" x="188.5" y="470.5" width="37" height="37"/>
@@ -95,7 +95,7 @@
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="F75-gm-2pA"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.97254901960784312" green="0.97254901960784312" blue="0.97254901960784312" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="U4D-t7-PCO" firstAttribute="top" secondItem="Ifq-Y2-VVs" secondAttribute="bottom" constant="-18" id="51V-OO-Gle"/>
                             <constraint firstItem="O1D-93-f0H" firstAttribute="height" secondItem="9LS-1p-Or3" secondAttribute="height" multiplier="0.5" id="7wa-X5-mOd"/>

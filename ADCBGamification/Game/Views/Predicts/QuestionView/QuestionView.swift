@@ -81,11 +81,12 @@ class QuestionView: UIView {
         
         for (index, image) in self.answersImagesArray.enumerated() {
             if index == 0 {
-                image.contentMode = .scaleAspectFit
-                image.image = UIImage(named: "pnwQuesSelec", in: Bundle(for: QuestionView.self), compatibleWith: nil)
+//                image.contentMode = .scaleAspectFit
+                image.image = UIImage(named: "pnwSel", in: Bundle(for: QuestionView.self), compatibleWith: nil)
+               
             } else {
-                image.contentMode = .scaleAspectFill
-                image.image = UIImage(named: "pnwQuesDisab", in: Bundle(for: QuestionView.self), compatibleWith: nil)
+//                image.contentMode = .scaleAspectFill
+                image.image = UIImage(named: "pnwDis", in: Bundle(for: QuestionView.self), compatibleWith: nil)
             }
         }
         self.eventsList?.questionList?[index].predOptions?[0].isSelected = true
@@ -98,11 +99,11 @@ class QuestionView: UIView {
         }
         for (index, image) in self.answersImagesArray.enumerated() {
             if index == 1 {
-                image.contentMode = .scaleAspectFit
-                image.image = UIImage(named: "pnwQuesSelec", in: Bundle(for: QuestionView.self), compatibleWith: nil)
+//                image.contentMode = .scaleAspectFit
+                image.image = UIImage(named: "pnwSel", in: Bundle(for: QuestionView.self), compatibleWith: nil)
             } else {
-                image.contentMode = .scaleAspectFill
-                image.image = UIImage(named: "pnwQuesDisab", in: Bundle(for: QuestionView.self), compatibleWith: nil)
+//                image.contentMode = .scaleAspectFill
+                image.image = UIImage(named: "pnwDis", in: Bundle(for: QuestionView.self), compatibleWith: nil)
             }
         }
         self.eventsList?.questionList?[index].predOptions?[1].isSelected = true
@@ -116,10 +117,10 @@ class QuestionView: UIView {
         }
         for (index, image) in self.answersImagesArray.enumerated() {
             if index == 2 {
-                image.contentMode = .scaleAspectFit
+               // image.contentMode = .scaleAspectFit
                 image.image = UIImage(named: "pnwQuesSelec", in: Bundle(for: QuestionView.self), compatibleWith: nil)
             } else {
-                image.contentMode = .scaleAspectFill
+              //  image.contentMode = .scaleAspectFill
                 image.image = UIImage(named: "pnwQuesDisab", in: Bundle(for: QuestionView.self), compatibleWith: nil)
             }
         }
@@ -133,10 +134,10 @@ class QuestionView: UIView {
         }
         for (index, image) in self.answersImagesArray.enumerated() {
             if index == 3 {
-                image.contentMode = .scaleAspectFit
+               // image.contentMode = .scaleAspectFit
                 image.image = UIImage(named: "pnwQuesSelec", in: Bundle(for: QuestionView.self), compatibleWith: nil)
             } else {
-                image.contentMode = .scaleAspectFill
+                //image.contentMode = .scaleAspectFill
                 image.image = UIImage(named: "pnwQuesDisab", in: Bundle(for: QuestionView.self), compatibleWith: nil)
             }
         }

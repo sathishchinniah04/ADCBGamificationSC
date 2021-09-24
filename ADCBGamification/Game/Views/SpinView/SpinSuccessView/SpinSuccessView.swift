@@ -221,7 +221,7 @@ class SpinSuccessView: UIView {
         
         self.spinAgainButton.setTitle("Spin Again".localized(), for: .normal)
         
-        self.messageTitleLbl.text = "You have won ".localized() + "\(info?.responseObject?.first?.displayDetails?.first?.synonym ?? "")"
+        self.messageTitleLbl.text = "You have won a".localized() + " \(info?.responseObject?.first?.displayDetails?.first?.synonym ?? "")"
         self.messageDescLbl.text = "\(info?.responseObject?.first?.displayDetails?.first?.name ?? "")"
         
         self.shareMessageLbl.text =  "I won a".localized() + " " + (info?.responseObject?.first?.displayDetails?.first?.synonym ?? "") + " " + "by playing a Spin & Win".localized()
