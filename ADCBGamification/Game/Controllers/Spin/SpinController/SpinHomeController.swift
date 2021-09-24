@@ -146,6 +146,7 @@ class SpinHomeController: UIViewController {
         self.spinerView.enableSpinButton(hide: true)
         expireView.populateView(isShowTerms: false, game: self.game) {
             self.spinHomeBgView.isHidden = true
+            self.spinDummyImgView.isHidden = false
             self.spinNowTapped = true
             self.nukeAllAnimations()
             self.wheelView?.layer.removeAllAnimations()
