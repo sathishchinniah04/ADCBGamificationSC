@@ -121,7 +121,9 @@ class PredictTeamView: UIView {
         firstTeamCharLabel.text = inf.opponentASynonym
         secondTeamCharLabel.text = inf.opponentBSynonym
         
-        let numberOfDays = Calendar.current.dateComponents([.day], from: Date(), to: Utility.convertStringToDate(date: inf.MatchDate ?? "")).day ?? 0
+        let currMatachDate = Utility.convertDateWithFormat(inputDate: inf.MatchDate ?? "", currFormat: "yyyy-MM-dd", expFormat: "yyyy-MM-dd HH:mm:ss")
+        
+        let numberOfDays = Calendar.current.dateComponents([.day], from: Date(), to: Utility.convertStringToDate(date: currMatachDate )).day ?? 0
         hourMinteAlignmentCheck(date: inf.MatchDate ?? "", value: numberOfDays)
     }
     
@@ -129,7 +131,11 @@ class PredictTeamView: UIView {
     
     func hourMinteAlignmentCheck(date: String, value: Int) {
         
-        let matchDate = Utility.convertStringToDate(date: date)
+        //let matchDate = Utility.convertStringToDate(date: date)
+        
+        let currMatachDate = Utility.convertDateWithFormat(inputDate: date, currFormat: "yyyy-MM-dd", expFormat: "yyyy-MM-dd HH:mm:ss")
+        
+        let matchDate = Utility.convertStringToDate(date: currMatachDate)
         
 //        if matchDate < Date() {
 //            self.timeLabel.text = "Expired on".localized() + " \(Utility.secondsToHoursMinutesSeconds(seconds: Utility.convertStringIntoDate(date: date)).0) " + "hr".localized() + " \(Utility.secondsToHoursMinutesSeconds(seconds: Utility.convertStringIntoDate(date: date)).1) " + "min".localized()
@@ -155,9 +161,13 @@ class PredictTeamView: UIView {
                 
                 let expDateComp = calendar.dateComponents([.hour, .minute], from: expDate)
                 
-                let hours =  Int(currentDateComp.hour ?? 0) - Int(expDateComp.hour ?? 0)
+                var hours =  Int(currentDateComp.hour ?? 0) - Int(expDateComp.hour ?? 0)
             
                 let min = Int(currentDateComp.minute ?? 0) - Int(expDateComp.minute ?? 0)
+                
+                if (hours == 0 && min == 0 ) {
+                    hours = 12
+                }
                 
                 if matchDate < Date() {
                     self.timeLabel.text = "Expired on".localized() + " \(abs(expDateComp.hour ?? 0))" + "hr".localized() + " \(abs(expDateComp.minute ?? 0))" + "mins".localized()
