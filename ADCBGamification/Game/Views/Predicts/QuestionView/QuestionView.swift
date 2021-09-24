@@ -82,7 +82,7 @@ class QuestionView: UIView {
         for (index, image) in self.answersImagesArray.enumerated() {
             if index == 0 {
 //                image.contentMode = .scaleAspectFit
-                image.image = UIImage(named: "pnwSel", in: Bundle(for: QuestionView.self), compatibleWith: nil)
+                image.image = UIImage(named: "PNWSelectedNew", in: Bundle(for: QuestionView.self), compatibleWith: nil)
                
             } else {
 //                image.contentMode = .scaleAspectFill
@@ -100,7 +100,7 @@ class QuestionView: UIView {
         for (index, image) in self.answersImagesArray.enumerated() {
             if index == 1 {
 //                image.contentMode = .scaleAspectFit
-                image.image = UIImage(named: "pnwSel", in: Bundle(for: QuestionView.self), compatibleWith: nil)
+                image.image = UIImage(named: "PNWSelectedNew", in: Bundle(for: QuestionView.self), compatibleWith: nil)
             } else {
 //                image.contentMode = .scaleAspectFill
                 image.image = UIImage(named: "pnwDis", in: Bundle(for: QuestionView.self), compatibleWith: nil)
