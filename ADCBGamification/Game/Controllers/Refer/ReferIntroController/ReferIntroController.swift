@@ -12,12 +12,23 @@ class ReferIntroController: UIViewController {
     @IBOutlet weak var expireView: ExpireView!
     @IBOutlet weak var activityIndicatorView: UIActivityIndicatorView!
     @IBOutlet weak var bgCloudImage: UIImageView!
+    @IBOutlet weak var referMessageLabel: UILabel!
+    @IBOutlet weak var referMessageLabelEnglish: UILabel!
+    
     var game: Games?
     var isDirectLoad: Bool = false
     override func viewDidLoad() {
         super.viewDidLoad()
 //        self.expireView.populateView(isShowTerms: false, game: game, complition: expireViewHandle)
 //
+        if StoreManager.shared.language == GameLanguage.EN.rawValue {
+            referMessageLabel.isHidden = true
+            referMessageLabelEnglish.isHidden = false
+        } else {
+            referMessageLabel.isHidden = false
+            referMessageLabelEnglish.isHidden = true
+        }
+        getReferCode()
         initialSetup()
         self.bgCloudImage.image = UIImage(named: "Clouds", in: Bundle(for: CustomNavView.self), compatibleWith: nil)
 
@@ -38,6 +49,19 @@ class ReferIntroController: UIViewController {
         print("viewWillDisappear")
 
     }
+    
+    func getReferCode() {
+        self.activityIndicatorView.startAnimating()
+        ReferViewModel.getReferalCode { (data) in
+            DispatchQueue.main.async {
+                self.activityIndicatorView.stopAnimating()
+                self.referMessageLabel.text = data.rewardMessage
+                self.referMessageLabelEnglish.text = data.rewardMessage
+//
+            }
+        }
+    }
+    
     func initialSetup() {
         expireView.setupButtonName(name: "Refer".localized())
         expireView.isUserInteractionEnabled = false
