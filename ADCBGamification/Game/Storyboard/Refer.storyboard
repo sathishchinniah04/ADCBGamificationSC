@@ -278,6 +278,7 @@
                         <outlet property="bgCloudImage" destination="QcB-vb-CBN" id="8P7-TO-v6t"/>
                         <outlet property="chooseContactButton" destination="SZK-Kx-QzH" id="6fo-re-sIT"/>
                         <outlet property="orLabel" destination="3Nh-q7-GLj" id="USk-qA-A1H"/>
+                        <outlet property="referArbLblLeftConstraints" destination="QbL-Sr-n36" id="bwO-iD-NQ7"/>
                         <outlet property="referCodeLabel" destination="13o-H8-mbQ" id="cFm-BS-EaA"/>
                         <outlet property="referCodeView" destination="sWE-jm-dk4" id="vSf-4r-ohm"/>
                         <outlet property="referEngLblLeftConstraints" destination="1Dp-zY-0VU" id="KZr-Es-gNe"/>
@@ -734,6 +735,8 @@
                         <outlet property="activityIndicatorView" destination="C7N-Zd-Gpj" id="sjE-6V-5gG"/>
                         <outlet property="bgCloudImage" destination="ZL3-S7-rLe" id="6be-11-8v6"/>
                         <outlet property="expireView" destination="Ggq-vx-bq9" id="Gy0-Nb-eTc"/>
+                        <outlet property="referArbLblLeftConstraints" destination="SYT-QV-jHS" id="549-T6-R4P"/>
+                        <outlet property="referEngLblLeftConstraints" destination="5wI-62-3N4" id="3OH-4F-svG"/>
                         <outlet property="referMessageLabel" destination="5Ca-2g-acf" id="kgR-vo-KgJ"/>
                         <outlet property="referMessageLabelEnglish" destination="GN8-yJ-OIg" id="llV-UD-Wf2"/>
                     </connections>

@@ -14,6 +14,8 @@ class ReferIntroController: UIViewController {
     @IBOutlet weak var bgCloudImage: UIImageView!
     @IBOutlet weak var referMessageLabel: UILabel!
     @IBOutlet weak var referMessageLabelEnglish: UILabel!
+    @IBOutlet weak var referArbLblLeftConstraints: NSLayoutConstraint!
+    @IBOutlet weak var referEngLblLeftConstraints: NSLayoutConstraint!
     
     var game: Games?
     var isDirectLoad: Bool = false
@@ -21,6 +23,10 @@ class ReferIntroController: UIViewController {
         super.viewDidLoad()
 //        self.expireView.populateView(isShowTerms: false, game: game, complition: expireViewHandle)
 //
+        referEngLblLeftConstraints.constant = 112
+        referArbLblLeftConstraints.constant = 180
+        setupLabelConstraints()
+        setupArabicLabelConstraints()
         if StoreManager.shared.language == GameLanguage.EN.rawValue {
             referMessageLabel.isHidden = true
             referMessageLabelEnglish.isHidden = false
@@ -43,6 +49,29 @@ class ReferIntroController: UIViewController {
         if !isDirectLoad {return}
     }
 
+    
+    func setupLabelConstraints() {
+        
+        let device = UIDevice.current.modelName
+        switch device {
+        case "iPhone 11 Pro", "iPhone 11 Pro Max":
+            referEngLblLeftConstraints.constant = 105
+        default:
+            referEngLblLeftConstraints.constant = 112
+        }
+    }
+    
+    
+    func setupArabicLabelConstraints() {
+        
+        let device = UIDevice.current.modelName
+        switch device {
+        case "iPhone 11":
+            referArbLblLeftConstraints.constant = 210
+        default:
+            referArbLblLeftConstraints.constant = 180
+        }
+    }
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         if isDirectLoad {return}

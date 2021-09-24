@@ -30,8 +30,9 @@ class ReferController: UIViewController, ReferDateDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         referEngLblLeftConstraints.constant = 112
-       // referArbLblLeftConstraints.constant = 180
+        referArbLblLeftConstraints.constant = 180
         self.setupLabelConstraints()
+        self.setupArabicLabelConstraints()
         self.addDottedLine()
         self.neumorphicButtonSetup()
         chooseContactButton.alpha = 0.3
@@ -80,18 +81,16 @@ class ReferController: UIViewController, ReferDateDelegate {
         }
     }
     
-//    func setupArabicLabelConstraints() {
-//
-//        let device = UIDevice.current.modelName
-//        switch device {
-//        case "iPhone 11 Pro", "iPhone 11 Pro Max":
-//            referArbLblLeftConstraints.constant = 175
-//        case "iPhone 6s Plus":
-//            referArbLblLeftConstraints.constant = 175
-//        default:
-//            referArbLblLeftConstraints.constant = 180
-//        }
-//    }
+    func setupArabicLabelConstraints() {
+        
+        let device = UIDevice.current.modelName
+        switch device {
+        case "iPhone 11":
+            referArbLblLeftConstraints.constant = 210
+        default:
+            referArbLblLeftConstraints.constant = 180
+        }
+    }
     
     func buttonUserInteraction(enable: Bool) {
         DispatchQueue.main.async {
