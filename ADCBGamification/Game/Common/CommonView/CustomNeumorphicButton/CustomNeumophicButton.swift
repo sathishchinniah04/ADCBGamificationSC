@@ -40,7 +40,7 @@ class CustomNeumophicButton: UIView {
         view?.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         self.addSubview(view!)
         DispatchQueue.main.async {
-           // self.unSelectedState()
+            self.unSelectedState()
         }
     }
     
@@ -69,7 +69,7 @@ class CustomNeumophicButton: UIView {
       //  self.bgImage.image = UIImage(named: "pnwQuesDisab", in: Bundle(for: CustomNeumophicButton.self), compatibleWith: nil)
        // button.layer.cornerRadius = 5
         
-       // button.addCustomShadow(cornerRadius: 5, shadowRadius: 2, opacity: 0.2, color: UIColor.black, offset: CGSize(width: 2, height: 2))
+//        button.addCustomShadow(cornerRadius: 5, shadowRadius: 2, opacity: 0.2, color: UIColor.black, offset: CGSize(width: 2, height: 2))
     }
     
     @IBAction func buttonTapped() {

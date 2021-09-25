@@ -13,11 +13,19 @@ class QuestionView: UIView {
     @IBOutlet weak var noOfQuesLabel: UILabel!
     @IBOutlet weak var questionLabel: UILabel!
     @IBOutlet weak var buttonContainerStackView: UIStackView!
-    @IBOutlet weak var firstAnswerButton: CustomNeumophicButton!
-    @IBOutlet weak var secondAnswerButton: CustomNeumophicButton!
-    @IBOutlet weak var thirdAnswerButton: CustomNeumophicButton!
-    @IBOutlet weak var fourthAnswerButton: CustomNeumophicButton!
-    @IBOutlet var answersImagesArray: [UIImageView]!
+    
+    
+    @IBOutlet weak var firstAnswerButton: UIButton!
+    @IBOutlet weak var secondAnswerButton: UIButton!
+    @IBOutlet weak var thirdAnswerButton: UIButton!
+    @IBOutlet weak var fourthAnswerButton: UIButton!
+    
+    
+//    @IBOutlet weak var firstAnswerButton: CustomNeumophicButton!
+//    @IBOutlet weak var secondAnswerButton: CustomNeumophicButton!
+//    @IBOutlet weak var thirdAnswerButton: CustomNeumophicButton!
+//    @IBOutlet weak var fourthAnswerButton: CustomNeumophicButton!
+    @IBOutlet var answersImagesArray: [UIButton]!
     
     var noOfQ: Int = 0
     var handle:((_ qNo: Int,_ indexPath : Int)->Void)?
@@ -43,6 +51,8 @@ class QuestionView: UIView {
         initialSetup()
     }
     
+    
+    
     func initialSetup() {
         view = loaxXib()
         view?.frame = self.bounds
@@ -55,22 +65,44 @@ class QuestionView: UIView {
         
         questionLabel.setSizeFont(sizeFont: (StoreManager.shared.language == GameLanguage.AR.rawValue) ?  20.0 : 20.0, fontFamily: (StoreManager.shared.language == GameLanguage.AR.rawValue) ? "Tajawal-Medium" : "OpenSans-SemiBold")
         
-        firstAnswerButton.button.setSizeFont(sizeFont: (StoreManager.shared.language == GameLanguage.AR.rawValue) ?  16.0 : 16.0, fontFamily: (StoreManager.shared.language == GameLanguage.AR.rawValue) ? "Tajawal-Medium" : "OpenSans-SemiBold")
+        firstAnswerButton.setSizeFont(sizeFont: (StoreManager.shared.language == GameLanguage.AR.rawValue) ?  16.0 : 16.0, fontFamily: (StoreManager.shared.language == GameLanguage.AR.rawValue) ? "Tajawal-Medium" : "OpenSans-SemiBold")
         
-        secondAnswerButton.button.setSizeFont(sizeFont: (StoreManager.shared.language == GameLanguage.AR.rawValue) ?  16.0 : 16.0, fontFamily: (StoreManager.shared.language == GameLanguage.AR.rawValue) ? "Tajawal-Medium" : "OpenSans-SemiBold")
+        secondAnswerButton.setSizeFont(sizeFont: (StoreManager.shared.language == GameLanguage.AR.rawValue) ?  16.0 : 16.0, fontFamily: (StoreManager.shared.language == GameLanguage.AR.rawValue) ? "Tajawal-Medium" : "OpenSans-SemiBold")
         
-        thirdAnswerButton.button.setSizeFont(sizeFont: (StoreManager.shared.language == GameLanguage.AR.rawValue) ?  16.0 : 16.0, fontFamily: (StoreManager.shared.language == GameLanguage.AR.rawValue) ? "Tajawal-Medium" : "OpenSans-SemiBold")
+        thirdAnswerButton.setSizeFont(sizeFont: (StoreManager.shared.language == GameLanguage.AR.rawValue) ?  16.0 : 16.0, fontFamily: (StoreManager.shared.language == GameLanguage.AR.rawValue) ? "Tajawal-Medium" : "OpenSans-SemiBold")
         
-        fourthAnswerButton.button.setSizeFont(sizeFont: (StoreManager.shared.language == GameLanguage.AR.rawValue) ?  16.0 : 16.0, fontFamily: (StoreManager.shared.language == GameLanguage.AR.rawValue) ? "Tajawal-Medium" : "OpenSans-SemiBold")
+        fourthAnswerButton.setSizeFont(sizeFont: (StoreManager.shared.language == GameLanguage.AR.rawValue) ?  16.0 : 16.0, fontFamily: (StoreManager.shared.language == GameLanguage.AR.rawValue) ? "Tajawal-Medium" : "OpenSans-SemiBold")
         
     }
     
-    func buttonSetup() {
-        firstAnswerButton.handler = firstButtonHandler
-        secondAnswerButton.handler = secButtonHandler
-        thirdAnswerButton.handler = thirdButtonHandler
-        fourthAnswerButton.handler = fourthButtonHandler
-        
+    @IBAction func firstBtnAction(_ sender: Any) {
+        firstButtonHandler()
+    }
+    
+    @IBAction func secondBtnAction(_ sender: Any) {
+        secButtonHandler()
+    }
+    
+    
+    @IBAction func thirdBtnAction(_ sender: Any) {
+        thirdButtonHandler()
+    }
+    
+    @IBAction func fourthBtnAction(_ sender: Any) {
+        fourthButtonHandler()
+    }
+        func buttonSetup() {
+//        firstAnswerButton.handler = firstButtonHandler
+//        secondAnswerButton.handler = secButtonHandler
+//        thirdAnswerButton.handler = thirdButtonHandler
+//        fourthAnswerButton.handler = fourthButtonHandler
+            
+            
+            for button in self.answersImagesArray {
+                button.backgroundColor = .white
+                button.addShadowButton(cornerRadius: 10, shadowRadius: 2, opacity: 0.2, color: .lightGray)
+            }
+
     }
     
     func firstButtonHandler() {
@@ -82,11 +114,23 @@ class QuestionView: UIView {
         for (index, image) in self.answersImagesArray.enumerated() {
             if index == 0 {
 //                image.contentMode = .scaleAspectFit
-                image.image = UIImage(named: "PNWEnabled", in: Bundle(for: QuestionView.self), compatibleWith: nil)
+                image.backgroundColor = .clear
+                image.addShadowButton(cornerRadius: 0, shadowRadius: 0, opacity: 0, color: .clear)
+                
+                image.setBackgroundImage(UIImage(named: "PNWImageSelected", in: Bundle(for: QuestionView.self), compatibleWith: nil), for: .normal)
+//                image.imageView?.contentMode = .scaleAspectFit
                
             } else {
 //                image.contentMode = .scaleAspectFill
-                image.image = UIImage(named: "PNWDisabledOld", in: Bundle(for: QuestionView.self), compatibleWith: nil)
+                //image.setBackgroundImage(UIImage(named: "PNWImage", in: Bundle(for: QuestionView.self), compatibleWith: nil), for: .normal)
+//                image.imageView?.contentMode = .scaleAspectFit
+//                image.customShadow(lightSha: lightL!, cornerRadius: 5, backColor: UIColor.customYellowColor(), shadowColor: UIColor.white, shadowRadius: 2,opacity: 0.3, dx: 0, dy: 0)
+//                image.customShadow(lightSha: darkL!, cornerRadius: 5, backColor: UIColor.customYellowColor(), shadowColor: UIColor.black,shadowRadius: 1, opacity: 0.8,dx: -1, dy: -1)
+//                image.addCustomShadow(cornerRadius: 5, shadowRadius: 2, opacity: 0.5, color: UIColor.clear, offset: CGSize(width: 2, height: 2))
+                image.setBackgroundImage(UIImage(named: " ", in: Bundle(for: QuestionView.self), compatibleWith: nil), for: .normal)
+
+                image.backgroundColor = .white
+                image.addShadowButton(cornerRadius: 10, shadowRadius: 2, opacity: 0.2, color: .lightGray)
             }
         }
         self.eventsList?.questionList?[index].predOptions?[0].isSelected = true
@@ -100,10 +144,19 @@ class QuestionView: UIView {
         for (index, image) in self.answersImagesArray.enumerated() {
             if index == 1 {
 //                image.contentMode = .scaleAspectFit
-                image.image = UIImage(named: "PNWEnabled", in: Bundle(for: QuestionView.self), compatibleWith: nil)
+//                image.imageView?.contentMode = .scaleAspectFit
+                image.backgroundColor = .clear
+                image.addShadowButton(cornerRadius: 0, shadowRadius: 0, opacity: 0, color: .clear)
+                image.setBackgroundImage(UIImage(named: "PNWImageSelected", in: Bundle(for: QuestionView.self), compatibleWith: nil), for: .normal)
+//                image.image = UIImage(named: "PNWEnabled", in: Bundle(for: QuestionView.self), compatibleWith: nil)
             } else {
 //                image.contentMode = .scaleAspectFill
-                image.image = UIImage(named: "PNWDisabledOld", in: Bundle(for: QuestionView.self), compatibleWith: nil)
+//                image.image = UIImage(named: "newpnwdisabled", in: Bundle(for: QuestionView.self), compatibleWith: nil)
+//                image.imageView?.contentMode = .scaleAspectFit
+                image.setBackgroundImage(UIImage(named: " ", in: Bundle(for: QuestionView.self), compatibleWith: nil), for: .normal)
+                image.backgroundColor = .white
+                image.addShadowButton(cornerRadius: 10, shadowRadius: 2, opacity: 0.2, color: .lightGray)
+                
             }
         }
         self.eventsList?.questionList?[index].predOptions?[1].isSelected = true
@@ -111,6 +164,9 @@ class QuestionView: UIView {
         buttonContainerStackView.isUserInteractionEnabled = true
         handle?(1, self.index)
     }
+    
+    
+ 
     func thirdButtonHandler() {
         for (_, list) in self.eventsList?.questionList?[index].predOptions?.enumerated() ?? [].enumerated() {
             list.isSelected = false
@@ -118,10 +174,18 @@ class QuestionView: UIView {
         for (index, image) in self.answersImagesArray.enumerated() {
             if index == 2 {
                // image.contentMode = .scaleAspectFit
-                image.image = UIImage(named: "PNWEnabled", in: Bundle(for: QuestionView.self), compatibleWith: nil)
+                image.backgroundColor = .clear
+                image.addShadowButton(cornerRadius: 0, shadowRadius: 0, opacity: 0, color: .clear)
+                image.setBackgroundImage(UIImage(named: "PNWImageSelected", in: Bundle(for: QuestionView.self), compatibleWith: nil), for: .normal)
+//                image.image = UIImage(named: "PNWEnabled", in: Bundle(for: QuestionView.self), compatibleWith: nil)
             } else {
               //  image.contentMode = .scaleAspectFill
-                image.image = UIImage(named: "PNWDisabledOld", in: Bundle(for: QuestionView.self), compatibleWith: nil)
+               // image.setBackgroundImage(UIImage(named: "PNWImage", in: Bundle(for: QuestionView.self), compatibleWith: nil), for: .normal)
+               // image.image = UIImage(named: "newpnwdisabled", in: Bundle(for: QuestionView.self), compatibleWith: nil)
+                image.setBackgroundImage(UIImage(named: " ", in: Bundle(for: QuestionView.self), compatibleWith: nil), for: .normal)
+
+                image.backgroundColor = .white
+                image.addShadowButton(cornerRadius: 10, shadowRadius: 2, opacity: 0.2, color: .lightGray)
             }
         }
         self.eventsList?.questionList?[index].predOptions?[2].isSelected = true
@@ -135,10 +199,18 @@ class QuestionView: UIView {
         for (index, image) in self.answersImagesArray.enumerated() {
             if index == 3 {
                // image.contentMode = .scaleAspectFit
-                image.image = UIImage(named: "PNWEnabled", in: Bundle(for: QuestionView.self), compatibleWith: nil)
+                image.backgroundColor = .clear
+                image.addShadowButton(cornerRadius: 0, shadowRadius: 0, opacity: 0, color: .clear)
+                image.setBackgroundImage(UIImage(named: "PNWImageSelected", in: Bundle(for: QuestionView.self), compatibleWith: nil), for: .normal)
+//                image.image = UIImage(named: "PNWEnabled", in: Bundle(for: QuestionView.self), compatibleWith: nil)
             } else {
                 //image.contentMode = .scaleAspectFill
-                image.image = UIImage(named: "PNWDisabledOld", in: Bundle(for: QuestionView.self), compatibleWith: nil)
+               // image.setBackgroundImage(UIImage(named: "PNWImage", in: Bundle(for: QuestionView.self), compatibleWith: nil), for: .normal)
+//                image.image = UIImage(named: "newpnwdisabled", in: Bundle(for: QuestionView.self), compatibleWith: nil)
+                
+                image.setBackgroundImage(UIImage(named: " ", in: Bundle(for: QuestionView.self), compatibleWith: nil), for: .normal)
+                image.backgroundColor = .white
+                image.addShadowButton(cornerRadius: 10, shadowRadius: 2, opacity: 0.2, color: .lightGray)
             }
         }
         self.eventsList?.questionList?[index].predOptions?[3].isSelected = true
@@ -178,7 +250,7 @@ class QuestionView: UIView {
         if noOfQ == 1 {
             let ans = predOp?[0].text ?? ""// ;let id = "\(predOp?[0].id ?? 0)"
             
-            firstAnswerButton.button.setTitle(ans, for: .normal)
+            firstAnswerButton.setTitle(ans, for: .normal)
             secondAnswerButton.isHidden = true
             thirdAnswerButton.isHidden = true
             fourthAnswerButton.isHidden = true
@@ -189,8 +261,8 @@ class QuestionView: UIView {
             let ans = predOp?[0].text ?? "" //; let id = "\(predOp?[0].id ?? 0)"
             let ans1 = predOp?[1].text ?? ""//; let id1 = "\(predOp?[1].id ?? 0)"
     
-            firstAnswerButton.button.setTitle(ans, for: .normal)
-            secondAnswerButton.button.setTitle(ans1, for: .normal)
+            firstAnswerButton.setTitle(ans, for: .normal)
+            secondAnswerButton.setTitle(ans1, for: .normal)
             thirdAnswerButton.isHidden = true
             fourthAnswerButton.isHidden = true
             predOp?[0].isSelected = false
@@ -201,9 +273,9 @@ class QuestionView: UIView {
             let ans1 = predOp?[1].text ?? ""//; let id1 = "\(predOp?[1].id ?? 0)"
             let ans2 = predOp?[2].text ?? ""// ; let id2 = "\(predOp?[2].id ?? 0)"
             
-            firstAnswerButton.button.setTitle(ans, for: .normal)
-            secondAnswerButton.button.setTitle(ans1, for: .normal)
-            thirdAnswerButton.button.setTitle(ans2, for: .normal)
+            firstAnswerButton.setTitle(ans, for: .normal)
+            secondAnswerButton.setTitle(ans1, for: .normal)
+            thirdAnswerButton.setTitle(ans2, for: .normal)
             fourthAnswerButton.isHidden = true
             predOp?[0].isSelected = false
             predOp?[1].isSelected = false
@@ -217,10 +289,10 @@ class QuestionView: UIView {
             let ans2 = predOp?[2].text ?? "" //; let id2 = "\(predOp?[2].id ?? 0)"
             let ans3 = predOp?[3].text ?? ""//; let id3 = "\(predOp?[3].id ?? 0)"
             
-            firstAnswerButton.button.setTitle(ans, for: .normal)
-            secondAnswerButton.button.setTitle(ans1, for: .normal)
-            thirdAnswerButton.button.setTitle(ans2, for: .normal)
-            fourthAnswerButton.button.setTitle(ans3, for: .normal)
+            firstAnswerButton.setTitle(ans, for: .normal)
+            secondAnswerButton.setTitle(ans1, for: .normal)
+            thirdAnswerButton.setTitle(ans2, for: .normal)
+            fourthAnswerButton.setTitle(ans3, for: .normal)
             predOp?[0].isSelected = false
             predOp?[1].isSelected = false
             predOp?[2].isSelected = false
@@ -241,4 +313,16 @@ class QuestionView: UIView {
         }
     }
     
+}
+
+
+extension UIButton {
+    func addShadowButton(cornerRadius:CGFloat = 5.0,shadowRadius:CGFloat = 4, opacity: CGFloat = 0.1, color:UIColor = UIColor.black) {
+        layer.cornerRadius = cornerRadius
+        layer.masksToBounds = false
+        layer.shadowColor = color.cgColor
+        layer.shadowOffset = CGSize(width: 3, height: 3)
+        layer.shadowOpacity = Float(opacity)
+        layer.shadowRadius = shadowRadius
+    }
 }

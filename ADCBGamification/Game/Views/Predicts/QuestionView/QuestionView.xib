@@ -19,17 +19,17 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="QuestionView" customModule="ADCBGamification" customModuleProvider="target">
             <connections>
                 <outlet property="buttonContainerStackView" destination="3Qs-d2-pNa" id="hw7-rt-a7j"/>
-                <outlet property="firstAnswerButton" destination="qOW-3d-X2G" id="Q1S-EO-Vqn"/>
-                <outlet property="fourthAnswerButton" destination="vog-wD-7eO" id="tCX-Lh-oEz"/>
+                <outlet property="firstAnswerButton" destination="kU2-1P-ZsK" id="0QA-N7-Kaq"/>
+                <outlet property="fourthAnswerButton" destination="mjU-pU-HXd" id="Y9V-we-9ca"/>
                 <outlet property="noOfQuesLabel" destination="KP8-PO-nts" id="PYE-p5-eK4"/>
                 <outlet property="questionContainerView" destination="D0M-qR-YQ9" id="aZx-DU-G3i"/>
                 <outlet property="questionLabel" destination="R73-1I-dve" id="sqt-mG-n4r"/>
-                <outlet property="secondAnswerButton" destination="1KM-gc-lzD" id="99K-IQ-Xgr"/>
-                <outlet property="thirdAnswerButton" destination="wT8-eW-EvQ" id="WIM-RH-hey"/>
-                <outletCollection property="answersImagesArray" destination="6n5-pS-qgQ" collectionClass="NSMutableArray" id="Kxn-AC-5fJ"/>
-                <outletCollection property="answersImagesArray" destination="xWS-It-nkd" collectionClass="NSMutableArray" id="ANf-wZ-7G8"/>
-                <outletCollection property="answersImagesArray" destination="WWb-z8-DGu" collectionClass="NSMutableArray" id="2VW-9q-tZn"/>
-                <outletCollection property="answersImagesArray" destination="ECj-Zl-DUP" collectionClass="NSMutableArray" id="BDX-fe-Xpi"/>
+                <outlet property="secondAnswerButton" destination="WEf-3F-axz" id="MhD-br-93a"/>
+                <outlet property="thirdAnswerButton" destination="XQn-sd-Lzp" id="UuK-Pb-5b4"/>
+                <outletCollection property="answersImagesArray" destination="kU2-1P-ZsK" collectionClass="NSMutableArray" id="lbE-iW-wMV"/>
+                <outletCollection property="answersImagesArray" destination="WEf-3F-axz" collectionClass="NSMutableArray" id="dIe-R0-SdD"/>
+                <outletCollection property="answersImagesArray" destination="XQn-sd-Lzp" collectionClass="NSMutableArray" id="Vhf-4g-vCA"/>
+                <outletCollection property="answersImagesArray" destination="mjU-pU-HXd" collectionClass="NSMutableArray" id="Pth-JF-LWe"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -40,6 +40,12 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="E3T-So-Z93">
                     <rect key="frame" x="0.0" y="0.0" width="414" height="600"/>
                     <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PNWImage" translatesAutoresizingMaskIntoConstraints="NO" id="u1Z-9J-7bI">
+                            <rect key="frame" x="20" y="114.5" width="374" height="60"/>
+                        </imageView>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PNWImage" translatesAutoresizingMaskIntoConstraints="NO" id="4dR-Ee-gVN">
+                            <rect key="frame" x="20" y="194.5" width="374" height="60"/>
+                        </imageView>
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="5a1-BL-xlG">
                             <rect key="frame" x="0.0" y="0.0" width="414" height="414.5"/>
                             <subviews>
@@ -77,79 +83,65 @@
                                         </label>
                                     </subviews>
                                 </stackView>
-                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="3Qs-d2-pNa">
+                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="3Qs-d2-pNa">
                                     <rect key="frame" x="20" y="114.5" width="374" height="300"/>
                                     <subviews>
-                                        <view tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qOW-3d-X2G" customClass="CustomNeumophicButton" customModule="ADCBGamification" customModuleProvider="target">
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kU2-1P-ZsK">
                                             <rect key="frame" x="0.0" y="0.0" width="374" height="60"/>
-                                            <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PNWDisabledOld" translatesAutoresizingMaskIntoConstraints="NO" id="6n5-pS-qgQ">
-                                                    <rect key="frame" x="0.0" y="0.0" width="374" height="60"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="60" id="jcq-yq-tDj"/>
-                                                    </constraints>
-                                                </imageView>
-                                            </subviews>
-                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
-                                                <constraint firstAttribute="height" constant="60" id="3KM-IX-y4M"/>
-                                                <constraint firstItem="6n5-pS-qgQ" firstAttribute="top" secondItem="qOW-3d-X2G" secondAttribute="top" id="4cW-wM-0kq"/>
-                                                <constraint firstAttribute="trailing" secondItem="6n5-pS-qgQ" secondAttribute="trailing" id="Sfx-Ll-JJr"/>
-                                                <constraint firstAttribute="bottom" secondItem="6n5-pS-qgQ" secondAttribute="bottom" id="bNU-jE-ev4"/>
-                                                <constraint firstItem="6n5-pS-qgQ" firstAttribute="leading" secondItem="qOW-3d-X2G" secondAttribute="leading" id="mqG-X6-jsI"/>
+                                                <constraint firstAttribute="height" constant="60" id="8t7-mK-LmZ"/>
                                             </constraints>
-                                        </view>
-                                        <view tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1KM-gc-lzD" customClass="CustomNeumophicButton" customModule="ADCBGamification" customModuleProvider="target">
+                                            <fontDescription key="fontDescription" name="OpenSans-SemiBold" family="Open Sans" pointSize="17"/>
+                                            <state key="normal" title="Button">
+                                                <color key="titleColor" red="0.13333333333333333" green="0.12941176470588234" blue="0.396078431372549" alpha="1" colorSpace="calibratedRGB"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="firstBtnAction:" destination="-1" eventType="touchUpInside" id="W5W-PH-WcW"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WEf-3F-axz">
                                             <rect key="frame" x="0.0" y="80" width="374" height="60"/>
-                                            <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PNWDisabledOld" translatesAutoresizingMaskIntoConstraints="NO" id="xWS-It-nkd">
-                                                    <rect key="frame" x="0.0" y="0.0" width="374" height="60"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="60" id="2Sx-Oc-7F5"/>
-                                                    </constraints>
-                                                </imageView>
-                                            </subviews>
-                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
-                                                <constraint firstItem="xWS-It-nkd" firstAttribute="top" secondItem="1KM-gc-lzD" secondAttribute="top" id="HWE-0X-FtJ"/>
-                                                <constraint firstAttribute="height" constant="60" id="I3x-T3-9E8"/>
-                                                <constraint firstAttribute="bottom" secondItem="xWS-It-nkd" secondAttribute="bottom" id="ZPX-NN-jk8"/>
-                                                <constraint firstAttribute="trailing" secondItem="xWS-It-nkd" secondAttribute="trailing" id="a7Z-ew-m6k"/>
-                                                <constraint firstItem="xWS-It-nkd" firstAttribute="leading" secondItem="1KM-gc-lzD" secondAttribute="leading" id="bFf-h2-CzJ"/>
+                                                <constraint firstAttribute="height" constant="60" id="8j3-4Q-tew"/>
                                             </constraints>
-                                        </view>
-                                        <view tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wT8-eW-EvQ" customClass="CustomNeumophicButton" customModule="ADCBGamification" customModuleProvider="target">
+                                            <fontDescription key="fontDescription" name="OpenSans-SemiBold" family="Open Sans" pointSize="17"/>
+                                            <state key="normal" title="Button">
+                                                <color key="titleColor" red="0.13333333333333333" green="0.12941176470588234" blue="0.396078431372549" alpha="1" colorSpace="calibratedRGB"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="secondBtnAction:" destination="-1" eventType="touchUpInside" id="gX7-c7-1mE"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XQn-sd-Lzp">
                                             <rect key="frame" x="0.0" y="160" width="374" height="60"/>
-                                            <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PNWDisabledOld" translatesAutoresizingMaskIntoConstraints="NO" id="WWb-z8-DGu">
-                                                    <rect key="frame" x="0.0" y="0.0" width="374" height="60"/>
-                                                </imageView>
-                                            </subviews>
-                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
-                                                <constraint firstItem="WWb-z8-DGu" firstAttribute="leading" secondItem="wT8-eW-EvQ" secondAttribute="leading" id="4V8-R5-esO"/>
-                                                <constraint firstAttribute="height" constant="60" id="7LG-bB-TkZ"/>
-                                                <constraint firstAttribute="trailing" secondItem="WWb-z8-DGu" secondAttribute="trailing" id="W84-1D-wDa"/>
-                                                <constraint firstItem="WWb-z8-DGu" firstAttribute="top" secondItem="wT8-eW-EvQ" secondAttribute="top" id="awH-wv-oRB"/>
-                                                <constraint firstAttribute="bottom" secondItem="WWb-z8-DGu" secondAttribute="bottom" id="bXo-fV-UHG"/>
+                                                <constraint firstAttribute="height" constant="60" id="L8i-xZ-dPK"/>
                                             </constraints>
-                                        </view>
-                                        <view tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vog-wD-7eO" customClass="CustomNeumophicButton" customModule="ADCBGamification" customModuleProvider="target">
+                                            <fontDescription key="fontDescription" name="OpenSans-SemiBold" family="Open Sans" pointSize="17"/>
+                                            <state key="normal" title="Button" backgroundImage="PNWImage">
+                                                <color key="titleColor" red="0.13333333333333333" green="0.12941176470588234" blue="0.396078431372549" alpha="1" colorSpace="calibratedRGB"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="thirdBtnAction:" destination="-1" eventType="touchUpInside" id="f3a-07-dYT"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mjU-pU-HXd">
                                             <rect key="frame" x="0.0" y="240" width="374" height="60"/>
-                                            <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PNWDisabledOld" translatesAutoresizingMaskIntoConstraints="NO" id="ECj-Zl-DUP" userLabel="PNWDisabled">
-                                                    <rect key="frame" x="0.0" y="0.0" width="374" height="60"/>
-                                                </imageView>
-                                            </subviews>
-                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
-                                                <constraint firstAttribute="height" constant="60" id="bcq-mJ-f5h"/>
-                                                <constraint firstAttribute="trailing" secondItem="ECj-Zl-DUP" secondAttribute="trailing" id="cBO-A6-eFl"/>
-                                                <constraint firstItem="ECj-Zl-DUP" firstAttribute="leading" secondItem="vog-wD-7eO" secondAttribute="leading" id="cTf-KF-YoJ"/>
-                                                <constraint firstAttribute="bottom" secondItem="ECj-Zl-DUP" secondAttribute="bottom" id="dgA-WK-bxr"/>
-                                                <constraint firstItem="ECj-Zl-DUP" firstAttribute="top" secondItem="vog-wD-7eO" secondAttribute="top" id="hsa-Gq-WYe"/>
+                                                <constraint firstAttribute="height" constant="60" id="TRf-SF-Xkl"/>
                                             </constraints>
-                                        </view>
+                                            <fontDescription key="fontDescription" name="OpenSans-SemiBold" family="Open Sans" pointSize="17"/>
+                                            <state key="normal" title="Button" backgroundImage="PNWImage">
+                                                <color key="titleColor" red="0.13333333333333333" green="0.12941176470588234" blue="0.396078431372549" alpha="1" colorSpace="calibratedRGB"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="fourthBtnAction:" destination="-1" eventType="touchUpInside" id="wrs-Sz-JW4"/>
+                                            </connections>
+                                        </button>
                                     </subviews>
                                 </stackView>
                             </subviews>
@@ -160,11 +152,25 @@
                     </subviews>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
+                        <constraint firstItem="kU2-1P-ZsK" firstAttribute="centerX" secondItem="u1Z-9J-7bI" secondAttribute="centerX" id="Agw-dr-CB7"/>
+                        <constraint firstItem="kU2-1P-ZsK" firstAttribute="width" secondItem="u1Z-9J-7bI" secondAttribute="width" id="BLe-Af-y6i"/>
+                        <constraint firstItem="4dR-Ee-gVN" firstAttribute="centerX" secondItem="WEf-3F-axz" secondAttribute="centerX" id="L0e-cL-wbT"/>
                         <constraint firstItem="5a1-BL-xlG" firstAttribute="top" secondItem="E3T-So-Z93" secondAttribute="top" id="OKa-Tw-57Q"/>
                         <constraint firstAttribute="trailing" secondItem="5a1-BL-xlG" secondAttribute="trailing" id="Ug7-Ne-r99"/>
+                        <constraint firstItem="4dR-Ee-gVN" firstAttribute="height" secondItem="WEf-3F-axz" secondAttribute="height" id="YOT-p7-U4m"/>
                         <constraint firstItem="5a1-BL-xlG" firstAttribute="leading" secondItem="E3T-So-Z93" secondAttribute="leading" id="Zsc-Hs-iLs"/>
+                        <constraint firstItem="kU2-1P-ZsK" firstAttribute="height" secondItem="u1Z-9J-7bI" secondAttribute="height" id="cYg-cx-30C"/>
+                        <constraint firstItem="4dR-Ee-gVN" firstAttribute="centerY" secondItem="WEf-3F-axz" secondAttribute="centerY" id="sl8-V6-mbI"/>
+                        <constraint firstItem="kU2-1P-ZsK" firstAttribute="centerY" secondItem="u1Z-9J-7bI" secondAttribute="centerY" id="u3u-8Q-wVL"/>
+                        <constraint firstItem="4dR-Ee-gVN" firstAttribute="width" secondItem="WEf-3F-axz" secondAttribute="width" id="uNi-oy-rbf"/>
                         <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="5a1-BL-xlG" secondAttribute="bottom" constant="20" id="xjR-iN-eCJ"/>
                     </constraints>
+                    <variation key="default">
+                        <mask key="subviews">
+                            <exclude reference="u1Z-9J-7bI"/>
+                            <exclude reference="4dR-Ee-gVN"/>
+                        </mask>
+                    </variation>
                 </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
@@ -176,10 +182,10 @@
                 <constraint firstItem="E3T-So-Z93" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="kHu-h3-CNR"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="-78.260869565217391" y="94.084821428571431"/>
+            <point key="canvasLocation" x="-78.260869565217391" y="93.75"/>
         </view>
     </objects>
     <resources>
-        <image name="PNWDisabledOld" width="490" height="84"/>
+        <image name="PNWImage" width="497" height="57"/>
     </resources>
 </document>
