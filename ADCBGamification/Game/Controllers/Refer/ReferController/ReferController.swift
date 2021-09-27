@@ -10,7 +10,7 @@ import UIKit
 class ReferController: UIViewController, ReferDateDelegate {
     
     @IBOutlet weak var referArbLblLeftConstraints: NSLayoutConstraint!
-    @IBOutlet weak var referEngLblLeftConstraints: NSLayoutConstraint!
+   // @IBOutlet weak var referEngLblLeftConstraints: NSLayoutConstraint!
     @IBOutlet weak var orLabel: UILabel!
     @IBOutlet weak var shareReferalLabel: UILabel!
     @IBOutlet weak var referCodeView: UIView!
@@ -29,9 +29,9 @@ class ReferController: UIViewController, ReferDateDelegate {
     var myDefaultSize: CGFloat = 112.0
     override func viewDidLoad() {
         super.viewDidLoad()
-        referEngLblLeftConstraints.constant = 112
-        referArbLblLeftConstraints.constant = 180
-        self.setupLabelConstraints()
+        //referEngLblLeftConstraints.constant = 112
+       // referArbLblLeftConstraints.constant = 180
+        //self.setupLabelConstraints()
         self.setupArabicLabelConstraints()
         self.addDottedLine()
         self.neumorphicButtonSetup()
@@ -69,26 +69,31 @@ class ReferController: UIViewController, ReferDateDelegate {
         let con = self.navigationController
         (con as? CustomNavViewController)?.changeOnlyTitle(title: "Refer & Win".localized())
     }
-    
-    func setupLabelConstraints() {
-        
-        let device = UIDevice.current.modelName
-        switch device {
-        case "iPhone 11 Pro", "iPhone 11 Pro Max":
-            referEngLblLeftConstraints.constant = 105
-        default:
-            referEngLblLeftConstraints.constant = 112
-        }
-    }
+//    
+//    func setupLabelConstraints() {
+//        
+//        let device = UIDevice.current.modelName
+//        switch device {
+//        case "iPhone 11 Pro", "iPhone 11 Pro Max":
+//            referEngLblLeftConstraints.constant = 105
+//        default:
+//            referEngLblLeftConstraints.constant = 112
+//        }
+//    }
+//    
     
     func setupArabicLabelConstraints() {
-        
+       
         let device = UIDevice.current.modelName
-        switch device {
-        case "iPhone 11":
-            referArbLblLeftConstraints.constant = 210
-        default:
+        if (device == "iPhone 8") {
             referArbLblLeftConstraints.constant = 180
+        } else  if (device == "iPhone 11 Pro") {
+            referArbLblLeftConstraints.constant = 190
+        } else {
+            referArbLblLeftConstraints.constant = 200
+        }
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+            self.referMessageLabel.layoutIfNeeded()
         }
     }
     

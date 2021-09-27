@@ -25,7 +25,7 @@ class ReferIntroController: UIViewController {
 //
 
         
-        setupLabelConstraints()
+        //setupLabelConstraints()
         setupArabicLabelConstraints()
         if StoreManager.shared.language == GameLanguage.EN.rawValue {
             referMessageLabel.isHidden = true
@@ -37,6 +37,7 @@ class ReferIntroController: UIViewController {
         getReferCode()
         initialSetup()
         self.bgCloudImage.image = UIImage(named: "Clouds", in: Bundle(for: CustomNavView.self), compatibleWith: nil)
+        //self.referMessageLabelEnglish.semanticContentAttribute = .forceLeftToRight
 
     }
     
@@ -51,7 +52,7 @@ class ReferIntroController: UIViewController {
 
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        print("values", referArbLblLeftConstraints.constant)
+       // print("values", referArbLblLeftConstraints.constant)
     }
     
     func setupLabelConstraints() {
@@ -71,10 +72,12 @@ class ReferIntroController: UIViewController {
     func setupArabicLabelConstraints() {
        
         let device = UIDevice.current.modelName
-        if (device == "iPhone 11") {
-            referArbLblLeftConstraints.constant = 210
-        } else {
+        if (device == "iPhone 8") {
             referArbLblLeftConstraints.constant = 180
+        } else  if (device == "iPhone 11 Pro") {
+            referArbLblLeftConstraints.constant = 190
+        } else {
+            referArbLblLeftConstraints.constant = 200
         }
         DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
             self.referMessageLabel.layoutIfNeeded()
