@@ -72,12 +72,25 @@
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
                     </view>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uun-fw-h01">
+                        <rect key="frame" x="318" y="67.5" width="40" height="40"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="40" id="B4l-SK-5re"/>
+                            <constraint firstAttribute="width" constant="40" id="xrU-wb-Z8H"/>
+                        </constraints>
+                        <state key="normal" image="crown"/>
+                        <connections>
+                            <action selector="crownBtnAction:" destination="gTV-IL-0wX" eventType="touchUpInside" id="tio-88-Tmr"/>
+                        </connections>
+                    </button>
                 </subviews>
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstAttribute="bottom" secondItem="ew4-J8-FKb" secondAttribute="bottom" constant="5" id="1o2-jE-c6g"/>
+                <constraint firstItem="Uun-fw-h01" firstAttribute="centerY" secondItem="ew4-J8-FKb" secondAttribute="centerY" constant="5" id="J74-Lc-W8D"/>
+                <constraint firstItem="Uun-fw-h01" firstAttribute="trailing" secondItem="ew4-J8-FKb" secondAttribute="trailing" constant="21" id="NM6-XF-frY"/>
                 <constraint firstItem="ew4-J8-FKb" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="5" id="OOn-bS-uoZ"/>
                 <constraint firstItem="ew4-J8-FKb" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="30" id="aUr-dd-5xi"/>
                 <constraint firstAttribute="trailing" secondItem="ew4-J8-FKb" secondAttribute="trailing" constant="30" id="cPJ-PL-IYv"/>
@@ -85,6 +98,7 @@
             <size key="customSize" width="367" height="165"/>
             <connections>
                 <outlet property="containerView" destination="ew4-J8-FKb" id="zzB-AQ-Q38"/>
+                <outlet property="crownBtn" destination="Uun-fw-h01" id="RnR-eG-65G"/>
                 <outlet property="expireInLabel" destination="IN9-gJ-2PJ" id="Btk-4x-y4G"/>
                 <outlet property="gameLabel" destination="W08-4r-bgG" id="EBh-gM-265"/>
                 <outlet property="gameLogoImageView" destination="obU-ak-bHg" id="Svr-mY-lpY"/>
@@ -95,6 +109,7 @@
         </collectionViewCell>
     </objects>
     <resources>
-        <image name="SpinList" width="127" height="126"/>
+        <image name="SpinList" width="121" height="124"/>
+        <image name="crown" width="50" height="50"/>
     </resources>
 </document>

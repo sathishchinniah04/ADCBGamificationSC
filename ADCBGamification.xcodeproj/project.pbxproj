@@ -195,6 +195,8 @@
 		33FC31D326973CA000868D9E /* CustomTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33FC31D226973CA000868D9E /* CustomTimer.swift */; };
 		6A478CB326C2D07D00E96B5F /* en.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 6A478CB126C2D07C00E96B5F /* en.lproj */; };
 		6A478CB426C2D07D00E96B5F /* ar.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 6A478CB226C2D07D00E96B5F /* ar.lproj */; };
+		F50B71EE2701AA0D0051C88D /* LeaderBoardVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F50B71ED2701AA0D0051C88D /* LeaderBoardVC.swift */; };
+		F50B71F02701AA6C0051C88D /* LeaderBoard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F50B71EF2701AA6C0051C88D /* LeaderBoard.storyboard */; };
 		F55AE37626E1438F005B6F0E /* tick_back_animation.json in Resources */ = {isa = PBXBuildFile; fileRef = F59FFAAE26E10FA200539F30 /* tick_back_animation.json */; };
 		F58A64F726B22CCB00D5713F /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = F58A644126B22CCB00D5713F /* LICENSE */; };
 		F58A64F826B22CCB00D5713F /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = F58A644126B22CCB00D5713F /* LICENSE */; };
@@ -694,6 +696,8 @@
 		33FC31D226973CA000868D9E /* CustomTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTimer.swift; sourceTree = "<group>"; };
 		6A478CB126C2D07C00E96B5F /* en.lproj */ = {isa = PBXFileReference; lastKnownFileType = folder; path = en.lproj; sourceTree = "<group>"; };
 		6A478CB226C2D07D00E96B5F /* ar.lproj */ = {isa = PBXFileReference; lastKnownFileType = folder; path = ar.lproj; sourceTree = "<group>"; };
+		F50B71ED2701AA0D0051C88D /* LeaderBoardVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaderBoardVC.swift; sourceTree = "<group>"; };
+		F50B71EF2701AA6C0051C88D /* LeaderBoard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LeaderBoard.storyboard; sourceTree = "<group>"; };
 		F58A644126B22CCB00D5713F /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		F58A644226B22CCB00D5713F /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		F58A644726B22CCB00D5713F /* AnimationViewInitializers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimationViewInitializers.swift; sourceTree = "<group>"; };
@@ -955,6 +959,7 @@
 				3320FF492682EBC3001809AA /* Spin.storyboard */,
 				33EDB0D5268ED8200040DCD4 /* Predict.storyboard */,
 				33FC319A2695B04200868D9E /* GameList.storyboard */,
+				F50B71EF2701AA6C0051C88D /* LeaderBoard.storyboard */,
 			);
 			path = Storyboard;
 			sourceTree = "<group>";
@@ -1071,6 +1076,7 @@
 		3320FF712682EBC3001809AA /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				F50B71EC2701A9F70051C88D /* LeaderBoard */,
 				337E17CC269DC51700C14135 /* ADCBGameListController */,
 				33FC319E2695B06800868D9E /* GameListController */,
 				33EDB0F22692D9BC0040DCD4 /* NavigationController */,
@@ -1741,6 +1747,14 @@
 			path = CustomTimer;
 			sourceTree = "<group>";
 		};
+		F50B71EC2701A9F70051C88D /* LeaderBoard */ = {
+			isa = PBXGroup;
+			children = (
+				F50B71ED2701AA0D0051C88D /* LeaderBoardVC.swift */,
+			);
+			path = LeaderBoard;
+			sourceTree = "<group>";
+		};
 		F58A644026B22CCB00D5713F /* lottie-ios */ = {
 			isa = PBXGroup;
 			children = (
@@ -2400,6 +2414,7 @@
 				33FC31C62697129B00868D9E /* SpinSuccessView.xib in Resources */,
 				F594428D26B91B55006F4E8E /* Tajawal-ExtraLight.ttf in Resources */,
 				33E158CF26AA530D00B0615B /* OpenSans-ExtraBold.ttf in Resources */,
+				F50B71F02701AA6C0051C88D /* LeaderBoard.storyboard in Resources */,
 				3320FFA82682EBC4001809AA /* TermsView.xib in Resources */,
 				F594428726B91B3F006F4E8E /* Tajawal-Black.ttf in Resources */,
 				3357ED8C2693209300607F50 /* PredictTeamView.xib in Resources */,
@@ -2534,6 +2549,7 @@
 				33FC31CE26973C5100868D9E /* ExpireViewModel.swift in Sources */,
 				33CD21A4269BDEE400CB71AC /* ReferCode.swift in Sources */,
 				3320FFA32682EBC4001809AA /* String+Extension.swift in Sources */,
+				F50B71EE2701AA0D0051C88D /* LeaderBoardVC.swift in Sources */,
 				F58A653726B22CCB00D5713F /* TextCompositionLayer.swift in Sources */,
 				3320FFBA2682EBC4001809AA /* IQKeyboardReturnKeyHandler.swift in Sources */,
 				F58A65E726B22CCB00D5713F /* CGFloatExtensions.swift in Sources */,

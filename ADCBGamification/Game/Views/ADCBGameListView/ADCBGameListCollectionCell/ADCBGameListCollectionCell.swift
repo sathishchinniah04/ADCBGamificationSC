@@ -20,11 +20,15 @@ class ADCBGameListCollectionCell: UICollectionViewCell {
     @IBOutlet weak var containerView: UIView!
     //@IBOutlet weak var logoContainerView: UIImageView!
     @IBOutlet weak var gameLogoImageView: UIImageView!
+    @IBOutlet weak var crownBtn: UIButton!
     var timer: Timer?
     var game: Games?
+    var crownAction : (() -> Void)? = nil
+
     //var spinFailView = SpinSuccessViewHelper()
     override func awakeFromNib() {
         super.awakeFromNib()
+        crownBtn.isHidden = true
         setupFontFamily()
         // Initialization code
         //        spinFailView.loadScreen { (done) in
@@ -199,6 +203,11 @@ class ADCBGameListCollectionCell: UICollectionViewCell {
          // return formated string
          return String(format: "%02i:%02i:%02i", hour, minute, second)
      }
+    
+    @IBAction func crownBtnAction(_ sender: Any) {
+        //self.crownAction!()
+    }
+    
 }
 
 extension TimeInterval{

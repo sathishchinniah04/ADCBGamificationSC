@@ -137,6 +137,12 @@ func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection s
 func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
     let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ADCBGameListCollectionCell", for: indexPath) as! ADCBGameListCollectionCell
     cell.populateView(game: self.games[indexPath.row], index: indexPath.row)
+    cell.crownAction = {
+        print(indexPath.row)
+        let contr = UIStoryboard(name: "LeaderBoard", bundle: Bundle(for: Self.self)).instantiateViewController(withIdentifier: "LeaderBoardVC")
+        (contr as? LeaderBoardVC)?.game =  self.games[indexPath.row]
+        self.navigationController?.pushViewController(contr, animated: true)
+    }
     return cell
 }
 
