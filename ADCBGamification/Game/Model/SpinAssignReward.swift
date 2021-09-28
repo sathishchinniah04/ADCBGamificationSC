@@ -21,6 +21,7 @@ class SpinrespObj: Decodable{
     var achievmentStatus: String?
     var productId: String?
     var chancesRemaining: String?
+    var voucherCode: String?
     var displayDetails: [DisplayDetails]?
 }
 

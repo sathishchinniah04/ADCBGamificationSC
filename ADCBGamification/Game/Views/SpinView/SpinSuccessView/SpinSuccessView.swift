@@ -221,14 +221,18 @@ class SpinSuccessView: UIView {
         
         self.spinAgainButton.setTitle("Spin Again".localized(), for: .normal)
         
-        if (info?.responseObject?.first?.displayDetails?.first?.synonym?.lowercased() == "TouchPoints".lowercased() || info?.responseObject?.first?.displayDetails?.first?.synonym?.lowercased() == "cashback".lowercased()) {
+        
+        if (info?.responseObject?.first?.voucherCode == nil || ((info?.responseObject?.first?.voucherCode ?? "").isEmpty)) {
             self.messageTitleLbl.text = "You have won".localized() + " \(info?.responseObject?.first?.displayDetails?.first?.synonym ?? "")" + " !"
+            self.shareMessageLbl.text =  "I won".localized() + " " + (info?.responseObject?.first?.displayDetails?.first?.synonym ?? "") + " " + "by playing a Spin & Win.".localized()
         } else {
             self.messageTitleLbl.text = "You have won a".localized() + " \(info?.responseObject?.first?.displayDetails?.first?.synonym ?? "")" + " !"
+            self.shareMessageLbl.text =  "I won a".localized() + " " + (info?.responseObject?.first?.displayDetails?.first?.synonym ?? "") + " " + "by playing a Spin & Win.".localized()
         }
+        
         self.messageDescLbl.text = "\(info?.responseObject?.first?.displayDetails?.first?.name ?? "")"
         
-        self.shareMessageLbl.text =  "I won a".localized() + " " + (info?.responseObject?.first?.displayDetails?.first?.synonym ?? "") + " " + "by playing a Spin & Win.".localized()
+      
 
         if (info?.responseObject?.first?.expiryDate?.isEmpty ?? "".isEmpty || info?.responseObject?.first?.expiryDate == nil) {
             self.shareExpLbl.text = ""
