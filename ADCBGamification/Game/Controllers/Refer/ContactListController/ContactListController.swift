@@ -22,6 +22,7 @@ class ContactListController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var inviteButton: NeumorphicButton!
     @IBOutlet weak var inviteButtonContainerView: UIView!
     @IBOutlet weak var mainView: UIView!
+    @IBOutlet weak var mycontactLbl: UILabel!
     
     @IBOutlet weak var contentView: UIView! {
         didSet {
@@ -101,7 +102,7 @@ class ContactListController: UIViewController, UITextFieldDelegate {
         
         shareContactLbl.text = "Select the contact to Invite".localized()
        // self.chooseContactButton.placeHolder = "Enter a contact name or mobile number".localized()
-        
+        self.mycontactLbl.text = "My contacts".localized()
         
         self.titleLbl.attributedPlaceholder = NSAttributedString(string: "Enter a contact name or mobile number".localized(), attributes: [NSAttributedString.Key.foregroundColor : #colorLiteral(red: 0.3294117647, green: 0.3294117647, blue: 0.337254902, alpha: 1)])
         

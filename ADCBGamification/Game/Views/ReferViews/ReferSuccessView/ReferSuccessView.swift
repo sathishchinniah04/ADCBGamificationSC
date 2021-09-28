@@ -16,7 +16,7 @@ class ReferSuccessView: UIView {
     @IBOutlet weak var rewardButton: UIButton!
     @IBOutlet weak var knowMoreButton: UIButton!
     @IBOutlet weak var homePageButton: UIButton!
-    @IBOutlet weak var spinAgainButton: UIButton!
+    @IBOutlet weak var gamesButton: UIButton!
     @IBOutlet weak var descLabel: UILabel!
     @IBOutlet weak var headerLabel: UILabel!
     @IBOutlet weak var goToLabel: UILabel!
@@ -26,6 +26,7 @@ class ReferSuccessView: UIView {
     var referalStatus : ReferralStatus?
     @IBOutlet weak var referHeaderImage: UIImageView!
     @IBOutlet weak var lottiReferralAnimationView: AnimationView!
+    @IBOutlet weak var goTYoText: UIStackView!
     
     @IBOutlet weak var subMessageLbl: UILabel!
     
@@ -71,7 +72,8 @@ class ReferSuccessView: UIView {
     
     func setupLabel(info: SpinAssignReward?, status: ReferralStatus?) {
         setupFontFamily()
-        
+        goToLabel.text = "Go To".localized()
+        subMessageLbl.text = "TouchPoints will be credited shortly after your friend downloads the App and signs up.".localized()
         let fontDict: [NSAttributedString.Key : Any] = [
             NSAttributedString.Key.font: (StoreManager.shared.language == GameLanguage.AR.rawValue) ? UIFont(name: "Tajawal-Regular", size: 14.0) ?? UIFont.boldSystemFont(ofSize: 1.5) : UIFont(name: "OpenSans-Regular", size: 14.0) ?? UIFont.boldSystemFont(ofSize: 1.5),
             NSAttributedString.Key.underlineStyle : 1,
@@ -86,6 +88,11 @@ class ReferSuccessView: UIView {
         let homeAttString = NSMutableAttributedString()
         homeAttString.append(NSAttributedString(string: "Homepage".localized(), attributes: fontDict))
         self.homePageButton.setAttributedTitle(homeAttString, for: .normal)
+        
+        
+        let gamesAttString = NSMutableAttributedString()
+        gamesAttString.append(NSAttributedString(string: "Games".localized(), attributes: fontDict))
+        self.gamesButton.setAttributedTitle(gamesAttString, for: .normal)
         
         
         if status == .failure {
@@ -114,8 +121,8 @@ class ReferSuccessView: UIView {
         handle?(.referAgain)
     }
     
-    @IBAction func rewardButtonAction() {
-        //handle?(.rewardTapped)
+    @IBAction func gameButtonAction() {
+        handle?(.homePageTapped)
     }
     
     @IBAction func knowMoreButtonAction() {

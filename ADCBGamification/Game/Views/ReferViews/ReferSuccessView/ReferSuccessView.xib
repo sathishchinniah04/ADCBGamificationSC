@@ -57,10 +57,10 @@
                     </subviews>
                 </stackView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IAH-G8-iQf">
-                    <rect key="frame" x="30" y="194" width="354" height="508"/>
+                    <rect key="frame" x="30" y="180" width="354" height="536.5"/>
                     <subviews>
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="lgM-G5-jqe">
-                            <rect key="frame" x="20" y="25" width="314" height="458"/>
+                            <rect key="frame" x="20" y="25" width="314" height="486.5"/>
                             <subviews>
                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="52P-1c-Gqs">
                                     <rect key="frame" x="0.0" y="0.0" width="314" height="177.5"/>
@@ -154,7 +154,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="314" height="19.5"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="kbL-vN-54z">
-                                                    <rect key="frame" x="0.0" y="9.5" width="91.5" height="1"/>
+                                                    <rect key="frame" x="0.0" y="9" width="91.5" height="1"/>
                                                     <subviews>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="213-6F-Wtq">
                                                             <rect key="frame" x="0.0" y="0.0" width="91.5" height="1"/>
@@ -178,7 +178,7 @@
                                                     </subviews>
                                                 </stackView>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="oOK-wD-9AU">
-                                                    <rect key="frame" x="222.5" y="9.5" width="91.5" height="1"/>
+                                                    <rect key="frame" x="222.5" y="9" width="91.5" height="1"/>
                                                     <subviews>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aYv-WR-5Ep">
                                                             <rect key="frame" x="0.0" y="0.0" width="91.5" height="1"/>
@@ -194,7 +194,7 @@
                                     </subviews>
                                 </stackView>
                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="dfg-br-ZoA">
-                                    <rect key="frame" x="0.0" y="404.5" width="314" height="53.5"/>
+                                    <rect key="frame" x="0.0" y="404.5" width="314" height="82"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="tCG-j6-XhI">
                                             <rect key="frame" x="0.0" y="0.0" width="314" height="28.5"/>
@@ -238,14 +238,14 @@
                                             </subviews>
                                         </stackView>
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="H0f-iL-vLV">
-                                            <rect key="frame" x="0.0" y="53.5" width="314" height="0.0"/>
+                                            <rect key="frame" x="0.0" y="53.5" width="314" height="28.5"/>
                                             <subviews>
-                                                <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wBQ-IV-oOm">
-                                                    <rect key="frame" x="0.0" y="0.0" width="69" height="0.0"/>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wBQ-IV-oOm">
+                                                    <rect key="frame" x="134.5" y="0.0" width="45" height="28.5"/>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <state key="normal">
                                                         <attributedString key="attributedTitle">
-                                                            <fragment content="Spin Again">
+                                                            <fragment content="Games">
                                                                 <attributes>
                                                                     <color key="NSColor" red="0.1333333333" green="0.12941176469999999" blue="0.39607843139999999" alpha="1" colorSpace="calibratedRGB"/>
                                                                     <font key="NSFont" metaFont="system" size="14"/>
@@ -256,7 +256,7 @@
                                                         </attributedString>
                                                     </state>
                                                     <connections>
-                                                        <action selector="spinAgainButtonAction" destination="iN0-l3-epB" eventType="touchUpInside" id="QpI-gY-9R0"/>
+                                                        <action selector="gameButtonAction" destination="iN0-l3-epB" eventType="touchUpInside" id="yVC-fj-lIc"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
@@ -297,6 +297,8 @@
                 <outlet property="bgCloudImage" destination="xLg-Vx-zvZ" id="9wx-ZD-esO"/>
                 <outlet property="containerView" destination="IAH-G8-iQf" id="Hwi-t3-BVb"/>
                 <outlet property="descLabel" destination="Cv6-6m-HDP" id="qYh-Vf-Jlq"/>
+                <outlet property="gamesButton" destination="wBQ-IV-oOm" id="OLR-bQ-Ngv"/>
+                <outlet property="goTYoText" destination="ncE-ck-i1D" id="QvT-Ec-890"/>
                 <outlet property="goToLabel" destination="HUj-tb-PpK" id="VTr-Gs-dOm"/>
                 <outlet property="headerLabel" destination="D7d-3h-9d3" id="zSZ-Cj-x7c"/>
                 <outlet property="homePageButton" destination="eQC-VT-XrO" id="BLo-XF-IEx"/>
@@ -305,7 +307,6 @@
                 <outlet property="lottiReferralAnimationView" destination="jC9-t4-dgM" id="idq-bW-s3a"/>
                 <outlet property="referHeaderImage" destination="oDq-NS-RoN" id="ga0-qv-iTR"/>
                 <outlet property="rewardButton" destination="MTc-43-SJc" id="Orn-Hi-Kqe"/>
-                <outlet property="spinAgainButton" destination="wBQ-IV-oOm" id="MEd-hS-cQs"/>
                 <outlet property="subMessageLbl" destination="M5v-fU-ENa" id="UC8-eo-1tZ"/>
             </connections>
             <point key="canvasLocation" x="-186.95652173913044" y="66.964285714285708"/>

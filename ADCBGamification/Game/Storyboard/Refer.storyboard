@@ -655,6 +655,7 @@
                         <outlet property="inviteButtonContainerView" destination="9oP-bq-lFI" id="A2o-zH-kTl"/>
                         <outlet property="mainView" destination="V76-Hn-vAJ" id="JFn-0B-ZNf"/>
                         <outlet property="messageView" destination="wmX-uN-Mu8" id="gUv-Qc-RKM"/>
+                        <outlet property="mycontactLbl" destination="1gZ-jh-Squ" id="wMw-y5-ZO7"/>
                         <outlet property="placeHolderLbl" destination="qyd-sD-PDh" id="xXk-7b-RNL"/>
                         <outlet property="placeholderTopConstraints" destination="y5o-86-En9" id="PuO-gh-B5D"/>
                         <outlet property="shareContactLbl" destination="hFC-53-ku0" id="9if-Jc-FF0"/>

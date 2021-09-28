@@ -29,9 +29,9 @@
 "sec" = "ثانية";
 "hr" = "ساعة";
 "Choose Contact" = "اختر جهة الاتصال من هاتفك المتحرك";
-"Enter a contact name or mobile number" = "أدخل اسم جهة الاتصال أو رقم الهاتف المحمول";
+"Enter a contact name or mobile number" = "أدخل اسم أو رقم الهاتف المتحرك الخاص بجهة الاتصال";
 "Invite" = "يدعو";
-"Select the contact to Invite" = "حدد جهة الاتصال لدعوتها";
+"Select the contact to Invite" = "اختر جهة الاتصال لإرسال الدعوة";
 "or" = "أو";
 "Share Your Referral Code" = "شارك رمز الإحالة الخاص بك";
 "Refer Again" = "الرجوع مرة أخرى";
@@ -62,8 +62,8 @@
 "Valid till" = "صالحة ل";
 "Something went wrong" = "هناك خطأ ما";
 "Your invite was not sent. Please try again" =  "لم يتم إرسال دعوتك. حاول مرة اخرى";
-"Successful" = "ناجح";
-"The invite has been sent successfully." = "تم إرسال الدعوة بنجاح.";
+"Successful" = "مشاركة ناجحة";
+"The invite has been sent successfully." = "تم إرسال الدعوة بنجاح";
 "Refer again" = "الرجوع مرة أخرى";
 "Please eneter a valid mobile number" = "يرجى إدخال رقم هاتف محمول صحيح";
 "Invite" = "يدعو";
@@ -80,3 +80,5 @@
 "by playing a Spin & Win." = "من خلال اللعب تدور والفوز";
 "I won a" = "لقد فزت ب";
 "Verify" = "التحقق";
+"My contacts" = "جهات الاتصال";
+"TouchPoints will be credited shortly after your friend downloads the App and signs up." = "سيتم إضافة نقاط تاتش بوينتس فور قيام صديقك بتحميل التطبيق واستكمال متطلبات تسجيل الدخول";
