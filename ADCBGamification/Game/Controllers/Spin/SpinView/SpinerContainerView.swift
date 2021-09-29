@@ -67,13 +67,6 @@ class SpinerContainerView: UIView {
             self.wheelContainerView.transform = CGAffineTransform(rotationAngle: CGFloat(Double.pi))
         }
         
-        let count = slices.count/2
-        
-       // var id = achivementId
-       // id = "3"
-        
-        //slices
-        
         if achivementId == "-1" {
             self.startRotate(index: 1) { () -> Void? in
                 complition?(false)
@@ -88,56 +81,42 @@ class SpinerContainerView: UIView {
             return
         }
         
-        /*  if achivementId == "1" {
-            self.startRotate(index: 1 * count) { () -> Void? in
-                complition?(false)
-            }
-            return
-        }
+
         
-       if id == "2" {
-            self.startRotate(index: 2 * count) { () -> Void? in
-                complition?(false)
-            }
-            return
-        }
+        let selectedOffers = offer?.filter({$0.rewardId == achivementId}).first
         
-        if id == "3" {
-            self.startRotate(index: 3 * count) { () -> Void? in
-                complition?(false)
-            }
-            return
+        let stopIndex = slices.firstIndex(where: {$0.title == selectedOffers?.rewardTitle}) ?? 0
+        
+        print("reward is", selectedOffers?.rewardTitle)
+        
+        print("stop index is", stopIndex)
+        
+        DispatchQueue.main.async {
+            self.startRotate(index: stopIndex) { () -> Void? in
+                return complition?(true)
+        
+            }//(index: ind*2, complition: complition)
         }
         
         
-        if id == "4" {
-            self.startRotate(index: 4 * count) { () -> Void? in
-                complition?(false)
-            }
-            return
-        } */
         
-       
-        
-        print("count is", count)
-        
-        if let ind = self.offer?.firstIndex(where: {$0.rewardId == achivementId}) {
-            
-            print("index  found is \(ind) self.offer count is == \(self.offer?.count)")
-            
-            DispatchQueue.main.async {
-                self.startRotate(index: ind * count) { () -> Void? in
-                    return complition?(true)
-            
-                }//(index: ind*2, complition: complition)
-            }
-        } else {
-            DispatchQueue.main.async {
-                self.startRotate(index: 1) { () -> Void? in
-                    complition?(false)
-                }//(index: 1, complition: complition)
-            }
-        }        
+//        if let ind = self.offer?.firstIndex(where: {$0.rewardId == achivementId}) {
+//
+//            print("index  found is \(ind) self.offer count is == \(self.offer?.count)")
+//
+//            DispatchQueue.main.async {
+//                self.startRotate(index: ind * count) { () -> Void? in
+//                    return complition?(true)
+//
+//                }//(index: ind*2, complition: complition)
+//            }
+//        } else {
+//            DispatchQueue.main.async {
+//                self.startRotate(index: 1) { () -> Void? in
+//                    complition?(false)
+//                }//(index: 1, complition: complition)
+//            }
+//        }
     }
     
     func populateSpinner(offer: [Offers],complition:((SpinerContainerViewAction)->Void)?) {
@@ -151,10 +130,9 @@ class SpinerContainerView: UIView {
     func spinSetup(offer: [Offers]) {
         
         print(offer.map({ $0.rewardTitle }).count)
-        
+    
         for item in offer {
             print("item.defaultReward \(item.defaultReward)")
-            
             slices.append(CarnivalWheelSlice.init(title: "\(item.rewardTitle ?? "")"))
             slices.append(CarnivalWheelSlice.init(title: ""))
             //self.offer?.append(Offers())

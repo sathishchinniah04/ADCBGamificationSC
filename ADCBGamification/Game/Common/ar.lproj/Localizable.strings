@@ -30,7 +30,7 @@
 "hr" = "ساعة";
 "Choose Contact" = "اختر جهة الاتصال من هاتفك المتحرك";
 "Enter a contact name or mobile number" = "أدخل اسم أو رقم الهاتف المتحرك الخاص بجهة الاتصال";
-"Invite" = "يدعو";
+"Invite" = "أرسل الدعوة";
 "Select the contact to Invite" = "اختر جهة الاتصال لإرسال الدعوة";
 "or" = "أو";
 "Share Your Referral Code" = "شارك رمز الإحالة الخاص بك";
@@ -66,7 +66,7 @@
 "The invite has been sent successfully." = "تم إرسال الدعوة بنجاح";
 "Refer again" = "الرجوع مرة أخرى";
 "Please eneter a valid mobile number" = "يرجى إدخال رقم هاتف محمول صحيح";
-"Invite" = "يدعو";
+"Invite" = "أرسل الدعوة";
 "Starts in" = "يبدأ في";
 "Today, Starts in" = "اليوم ، يبدأ في";
 "mins" = "دقيقة";
