@@ -235,6 +235,21 @@ class SpinSuccessView: UIView {
         } else {
             self.shareExpLbl.text = "on ".localized() + Utility.convertDateFormat(inputDate: info?.responseObject?.first?.expiryDate ?? "")
         }
+        
+        if let imageUrls = info?.responseObject?.first?.displayDetails?.first?.imageList?.first?.name {
+                 if let url = URL(string: imageUrls) {
+                     let data = try? Data(contentsOf: url)
+                     if let imageData = data {
+                         shareImageView.image = UIImage(data: imageData)
+                         shareImageView.layer.masksToBounds = true
+                         shareImageView.layer.cornerRadius = imageView.frame.width / 2
+                         shareImageView.contentMode = .scaleToFill
+                       
+                     }
+                 } else {
+                    shareImageView.image = UIImage(named: "ohNo")
+                 }
+             }
     
     }
     
