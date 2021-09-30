@@ -19,6 +19,7 @@ class ADCBGameListController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         UIFont.loadMyFonts
+        UIApplication.configureFacebookId
         if #available(iOS 13.0, *) {
             //UIApplication.shared.windows.over
            // overrideUserInterfaceStyle = .light

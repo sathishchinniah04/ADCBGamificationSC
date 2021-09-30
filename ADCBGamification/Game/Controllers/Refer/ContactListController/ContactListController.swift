@@ -53,7 +53,8 @@ class ContactListController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var emptySpaceView: UIView!
     @IBOutlet weak var bottomStackView: UIStackView!
     @IBOutlet weak var verifyMessageview: UIView!
-    
+    @IBOutlet weak var leftMessageLbl: UILabel!
+    @IBOutlet weak var leftMessageLblTopConstraints: NSLayoutConstraint!
     var referSuccessViewHelper = ReferSuccessViewHelper()
     var handle: ((_ name: String,_ ph: String)->Void)?
     var contacts = [FetchedContact]()
@@ -66,6 +67,8 @@ class ContactListController: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.leftMessageLblTopConstraints.constant = -50
+        self.leftMessageLbl.text = "Click “Verify” to check whether the contact is a Simplylife user.".localized()
         self.verifyMessageview.isHidden = true
         hidebaseView()
         self.inviteButton.isHidden = false
@@ -389,63 +392,56 @@ class ContactListController: UIViewController, UITextFieldDelegate {
         self.newList.append(contact)
         self.contactTableView.reloadData()
         //self.inviteButton.alpha = 0.0
-        self.titleTopConstraints.constant = 25
-        self.verifyMessageview.isHidden = true
+        if !(titleLbl.text?.isEmpty ?? "".isEmpty) {
+            self.titleTopConstraints.constant = 25
+        }
         
-        ReferViewModel.checkSimpleLifeUser(number: contact.telephone) { data, err   in
+        self.verifyMessageview.isHidden = true
+        ReferViewModel.checkSimpleLifeUserApi(bParty: contact.telephone) { (data, err) in
+            print("data is \(data)")
+            
+       // ReferViewModel.checkSimpleLifeUser(number: contact.telephone) { data, err   in
             DispatchQueue.main.async {
                 self.activityIndicatorView.stopAnimating()
-                if err == nil {
-                    if data?.errorCode == "200" {
-                        self.errorMsg = "Sorry, this contact is already a Simplylife user"
+                if data == nil {
+                    self.showToast(message: "Something went wring. Try again !")
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                        self.dismiss(animated: true, completion: nil)
+                    }
+                } else {
+                    if (data == "201" || data == "200") {
+                        self.leftMessageLblTopConstraints.constant = -30
+                        self.verifyMessageview.isHidden = false
+                        self.errorMsg = " "
+                        self.leftMessageLbl.text = "Sorry, this contact is already a Simplylife user".localized()
                         self.footerHeight = 0
                         self.contactTableView.reloadData()
-                       // self.chooseContactButton.titleLabel.isHidden = false
-                       // self.chooseContactButton.titleLabel.text = contact.firstName + " " + contact.lastName
-                       // self.chooseContactButton.buttonState(isPressed: false)
-                       // self.chooseContactButton.titleLabel.alpha = 1.0
-                        
-                        self.titleLbl.text = contact.telephone
-                        self.placeHolderLbl.text = contact.firstName + " " + contact.lastName
-                        
-                        
-                       // self.unHideInviteButon()
+                        self.placeHolderLbl.text = "Enter a contact name or mobile number".localized()
                         self.handle?(contact.firstName + " " + contact.lastName, contact.telephone)
                         self.bPart = contact.telephone
                         self.UnhidebaseViewForexistingUser()
-//                        self.inviteButton.isUserInteractionEnabled = false
-//                        self.inviteButton.alpha = 0.0
-                    } else if data?.errorCode == "400" {
+                    } else if (data == "400") {
                         self.errorMsg = ""
                         self.footerHeight = 0
                         self.contactTableView.reloadData()
-                       // self.chooseContactButton.titleLabel.isHidden = false
-                        //self.chooseContactButton.titleLabel.text = contact.firstName + " " + contact.lastName
-                       // self.chooseContactButton.buttonState(isPressed: false)
-                       // self.chooseContactButton.titleLabel.alpha = 1.0
-                        self.titleLbl.text = contact.telephone
-                        self.placeHolderLbl.text = contact.firstName + " " + contact.lastName
-                        //self.chooseContactButton.textField.text = contact.telephone
-                        //self.unHideInviteButon()
+                        self.placeHolderLbl.text = "Enter a contact name or mobile number".localized()
                         self.handle?(contact.firstName + " " + contact.lastName, contact.telephone)
                         self.bPart = contact.telephone
-//                        self.inviteButton.isUserInteractionEnabled = true
-//                        self.inviteButton.alpha = 1.0
-                        
                         self.UnhidebaseViewForValidUser()
                     } else {
-                        self.showToast(message: data?.error ?? "Something went wring. Try again !")
+                        self.showToast(message: "Something went wring. Try again !")
                         DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
                             self.dismiss(animated: true, completion: nil)
                         }
                     }
-                } else {
-                    self.dismiss(animated: true, completion: nil)
+                    
                 }
                 
             }
 
         }
+        
+    }
         
        /* chooseContactButton.titleLabel.isHidden = false
         chooseContactButton.titleLabel.text = contact.firstName + " " + contact.lastName
@@ -458,12 +454,12 @@ class ContactListController: UIViewController, UITextFieldDelegate {
         self.inviteButton.isUserInteractionEnabled = true 
         self.inviteButton.alpha = 1.0 */
        // self.dismiss(animated: true, completion: nil)
-    }
+   // }
     
     func hidebaseView() {
         bottomStackView.isHidden = true
         emptySpaceView.isHidden = false
-        messageView.isHidden = false
+        messageView.isHidden = true
     }
     
     func UnhidebaseViewForValidUser() {
@@ -473,9 +469,9 @@ class ContactListController: UIViewController, UITextFieldDelegate {
     }
     
     func UnhidebaseViewForexistingUser() {
-        bottomStackView.isHidden = false
+        bottomStackView.isHidden = true
         emptySpaceView.isHidden = false
-        messageView.isHidden = false
+        messageView.isHidden = true
     }
     
     func inviteButtonAppearance() {
@@ -520,11 +516,11 @@ extension ContactListController: UITableViewDelegate, UITableViewDataSource {
         activityIndicatorView.startAnimating()
 //        chooseContactButton.titleLabel.isHidden = false
 //        self.chooseContactButton.titleLabel.alpha = 1.0
-        placeHolderLbl.isHidden = false
-        placeHolderLbl.text = contactData.firstName + contactData.lastName
+       // placeHolderLbl.isHidden = false
+        //placeHolderLbl.text = "Enter a contact name or mobile number".localized()
         //chooseContactButton.titleLabel.text = contactData.firstName + contactData.lastName
         //chooseContactButton.placeHolder = contactData.telephone
-        self.titleLbl.text = contactData.telephone
+        //self.titleLbl.text = contactData.firstName + contactData.lastName
        // self.chooseContactButton.textField.text = contactData.telephone
         onCellTap(indexPath: indexPath)
     }

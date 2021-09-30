@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import FBSDKCoreKit
+
 enum GameError {
     case noActiveGames
     case noGames
@@ -47,6 +49,7 @@ public class Game {
     
     public static func open(controller: UIViewController, msisdn: String, language: String, gameType: String, complition:((GameAction)->Void)?) {
         UIFont.loadMyFonts
+        UIApplication.configureFacebookId
         UIApplication.shared.windows.forEach { window in
             if #available(iOS 13.0, *) {
                 window.overrideUserInterfaceStyle = .light
@@ -101,6 +104,7 @@ public class Game {
     
     public static func openGameList(controller: UIViewController, msisdn: String, language: String, complition:((GameAction)->Void)?) {
         UIFont.loadMyFonts
+        UIApplication.configureFacebookId
         UIApplication.shared.windows.forEach { window in
             if #available(iOS 13.0, *) {
                 window.overrideUserInterfaceStyle = .light

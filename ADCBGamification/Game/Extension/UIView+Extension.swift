@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import FBSDKCoreKit
+
 enum AlertAction {
     case ok
     case cancel
@@ -279,4 +281,14 @@ extension UIFont {
         loadFontWith(name: "OpenSans-SemiBoldItalic")
     
     }()
+}
+
+
+extension UIApplication {
+    
+    public static let configureFacebookId: () = {
+        Settings.appID = "601213451027353"
+        Settings.displayName = "Gamification"
+    }()
+
 }

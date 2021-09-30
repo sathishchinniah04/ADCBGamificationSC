@@ -7,6 +7,7 @@
 
 import UIKit
 import Foundation
+import FBSDKShareKit
 
 class InstagramManager: NSObject, UIDocumentInteractionControllerDelegate {
 
@@ -118,9 +119,7 @@ class SpinSuccessView: UIView {
         shareMainView.isHidden = true
         shareGameTitleLbl.text = "Spin & Win".localized()
         shareCongratzLbl.text = "Congratulation".localized()
-        
-        
-        
+
         shareBtn.setTitle("Share".localized(), for: .normal)
         shareBtn.setSizeFont(sizeFont: (StoreManager.shared.language == GameLanguage.AR.rawValue) ?  16.0 : 16.0, fontFamily: (StoreManager.shared.language == GameLanguage.AR.rawValue) ? "Tajawal-SemiBold" : "OpenSans-SemiBold")
         
@@ -144,22 +143,19 @@ class SpinSuccessView: UIView {
     }
 
     func showActionSheetView() {
-        
-        let imageToShare = [ shareImage!,  Constants.referMessage] as [Any]
-        let activityViewController = UIActivityViewController(activityItems: imageToShare, applicationActivities: nil)
-        activityViewController.setValue(Constants.commonEmailSubject, forKey: "Subject")
-        activityViewController.popoverPresentationController?.sourceView = self // so that iPads won't crash
-        activityViewController.excludedActivityTypes = [ UIActivity.ActivityType.airDrop, UIActivity.ActivityType.postToFacebook ]
-        activityViewController.completionWithItemsHandler = {(activityType: UIActivity.ActivityType?, completed: Bool, returnedItems:[Any]?, error: Error?) in
-            self.shareMainView.isHidden = true
-            Constants.referMessage = ""
-        }
         if let viewController = UIApplication.topMostViewController {
+           // let imageToShare = [ shareImage!,  Constants.referMessage] as [Any]
+            let activityViewController = UIActivityViewController(activityItems: [self, shareImage!], applicationActivities: nil)
+            activityViewController.setValue(Constants.commonEmailSubject, forKey: "Subject")
+            activityViewController.popoverPresentationController?.sourceView = self // so that iPads won't crash
+            activityViewController.excludedActivityTypes = [ UIActivity.ActivityType.airDrop , .postToFacebook]
+            activityViewController.completionWithItemsHandler = {(activityType: UIActivity.ActivityType?, completed: Bool, returnedItems:[Any]?, error: Error?) in
+                self.shareMainView.isHidden = true
+            }
             viewController.present(activityViewController, animated: true) {
                // self.shareMainView.isHidden = true
             }
         }
-        
     }
     
 
@@ -283,18 +279,22 @@ class SpinSuccessView: UIView {
     } */
     
     @IBAction func gameBtnTap() {
+        Constants.referMessage = ""
         handle?(.gameTapped)
     }
     
     @IBAction func knowMoreButtonAction() {
+        Constants.referMessage = ""
         handle?(.knowMoreTapped)
     }
     
     @IBAction func homePageButtonAction() {
+        Constants.referMessage = ""
         handle?(.homePageTapped)
     }
     
     @IBAction func spinAgainButtonAction() {
+        Constants.referMessage = ""
         handle?(.spinAgainTapped)
     }
     
@@ -303,7 +303,14 @@ class SpinSuccessView: UIView {
         shareMainView.isHidden = false
         DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
             self.showActionSheetView()
-        }
+//            if let viewController = UIApplication.topMostViewController {
+//                viewController.showActionSheetView(image: self.shareImage!) { completed in
+//                    self.shareMainView.isHidden = true
+//                    Constants.referMessage = ""
+//                }
+//
+//        }
+    }
     }
       
     //MARK: Share view
@@ -398,5 +405,62 @@ extension UIViewController {
             })
         })
     }
+    
+
+}
+
+extension SpinSuccessView: UIActivityItemSource , SharingDelegate {
+    
+    public func sharer(_ sharer: Sharing, didCompleteWithResults results: [String : Any]) {
+        print("Share Completed")
+        self.shareMainView.isHidden = true
+    }
+    
+    public func sharer(_ sharer: Sharing, didFailWithError error: Error) {
+        print("Share Failed")
+        self.shareMainView.isHidden = true
+    }
+    
+    public func sharerDidCancel(_ sharer: Sharing) {
+        print("share Cancled")
+        self.shareMainView.isHidden = true
+    }
+    
+    func activityViewControllerPlaceholderItem(_ activityViewController: UIActivityViewController) -> Any {
+        return ""
+    }
+    
+    func activityViewController(_ activityViewController: UIActivityViewController, itemForActivityType activityType: UIActivity.ActivityType?) -> Any? {
+        if activityType == .postToFacebook {
+            activityViewController.dismiss(animated: false, completion: {
+                self.shareToFb(url: "https://matrixsolution.xyz/", message: "This is my FB caption")
+            })
+        }
+        return Constants.referMessage
+    }
+    
+    
+    func shareToFb(url: String, message: String) {
+        
+        guard let url = URL(string: url) else {
+            preconditionFailure("URL is invalid")
+        }
+        
+        let content = ShareLinkContent()
+        content.contentURL = url
+        //content.hashtag = Hashtag("#MatrixSolution")
+        content.quote = message
+        let vc = UIApplication.topMostViewController
+        let dialog = ShareDialog.init(fromViewController: vc, content: content, delegate: self)
+        do {
+            try dialog.validate()
+        } catch {
+            print(error)
+        }
+        
+        dialog.show()
+    }
+    
+    
 }
 

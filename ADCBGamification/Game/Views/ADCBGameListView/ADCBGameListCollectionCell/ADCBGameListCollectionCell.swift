@@ -185,12 +185,16 @@ class ADCBGameListCollectionCell: UICollectionViewCell {
             let currentDateComp = calendar.dateComponents([.hour, .minute], from: Date())
             let expDateComp = calendar.dateComponents([.hour, .minute], from: expDate)
 
-            let hours =  Int(expDateComp.hour ?? 0) - Int(currentDateComp.hour ?? 0)
+            var hours =  Int(expDateComp.hour ?? 0) - Int(currentDateComp.hour ?? 0)
         
             var min = Int(expDateComp.minute ?? 0) - Int(currentDateComp.minute ?? 0)
             
             if min <= 9 {
                 min = 0 + min
+            }
+            
+            if hours <= 9 {
+                hours = 0 + hours
             }
 
             self.timeLabel.text = daysCount + " \(abs(hours))" + "hr".localized() + " \(abs(min))" + "mins".localized()

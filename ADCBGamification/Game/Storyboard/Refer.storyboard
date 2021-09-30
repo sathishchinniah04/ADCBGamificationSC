@@ -352,7 +352,7 @@
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="searchBg" translatesAutoresizingMaskIntoConstraints="NO" id="yPi-La-BoZ">
                                                         <rect key="frame" x="0.0" y="0.0" width="354" height="50"/>
                                                     </imageView>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter a contact name or mobile number" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qyd-sD-PDh">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter a contact name or mobile number" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="qyd-sD-PDh">
                                                         <rect key="frame" x="20" y="7" width="293" height="16.5"/>
                                                         <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="12"/>
                                                         <color key="textColor" red="0.3294117647" green="0.3294117647" blue="0.33725490200000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -418,7 +418,7 @@
                                                 <rect key="frame" x="0.0" y="204.5" width="414" height="591.5"/>
                                                 <subviews>
                                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="KW3-SX-QvO">
-                                                        <rect key="frame" x="0.0" y="0.0" width="414" height="367.5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="414" height="390"/>
                                                         <color key="backgroundColor" red="0.97254901959999995" green="0.97254901959999995" blue="0.97254901959999995" alpha="1" colorSpace="calibratedRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" priority="999" constant="390" id="SbC-yB-Eig"/>
@@ -429,10 +429,13 @@
                                                         </connections>
                                                     </tableView>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HER-y7-C0u">
-                                                        <rect key="frame" x="0.0" y="367.5" width="414" height="50"/>
+                                                        <rect key="frame" x="0.0" y="390" width="414" height="50"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Click “Verify” to check whether the contact is a Simplylife user. " lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pg7-2M-p48">
                                                                 <rect key="frame" x="20" y="-50" width="374" height="100"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="100" id="jy4-DS-gMq"/>
+                                                                </constraints>
                                                                 <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="14"/>
                                                                 <color key="textColor" red="0.32941176470588235" green="0.32941176470588235" blue="0.33725490196078434" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <nil key="highlightedColor"/>
@@ -447,10 +450,10 @@
                                                             <constraint firstAttribute="bottom" secondItem="pg7-2M-p48" secondAttribute="bottom" id="riJ-Oo-VDv"/>
                                                         </constraints>
                                                     </view>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wmX-uN-Mu8">
-                                                        <rect key="frame" x="0.0" y="417.5" width="414" height="44"/>
+                                                    <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wmX-uN-Mu8">
+                                                        <rect key="frame" x="0.0" y="440" width="414" height="35"/>
                                                         <subviews>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Selected customer not found" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wHK-fq-avR">
+                                                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Selected customer not found" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wHK-fq-avR">
                                                                 <rect key="frame" x="112.5" y="-20" width="189" height="19.5"/>
                                                                 <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="14"/>
                                                                 <color key="textColor" red="0.3294117647" green="0.3294117647" blue="0.33725490200000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -460,12 +463,12 @@
                                                         <color key="backgroundColor" red="0.97254901960784312" green="0.97254901960784312" blue="0.97254901960784312" alpha="0.98278061224489799" colorSpace="calibratedRGB"/>
                                                         <constraints>
                                                             <constraint firstItem="wHK-fq-avR" firstAttribute="top" secondItem="wmX-uN-Mu8" secondAttribute="top" constant="-20" id="EJr-ec-8zi"/>
-                                                            <constraint firstAttribute="height" constant="44" id="pvc-Um-dNY"/>
+                                                            <constraint firstAttribute="height" constant="35" id="pvc-Um-dNY"/>
                                                             <constraint firstItem="wHK-fq-avR" firstAttribute="centerX" secondItem="wmX-uN-Mu8" secondAttribute="centerX" id="tF4-cn-YYi"/>
                                                         </constraints>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WKE-us-Syw">
-                                                        <rect key="frame" x="0.0" y="461.5" width="414" height="0.0"/>
+                                                        <rect key="frame" x="0.0" y="440" width="414" height="21.5"/>
                                                         <color key="backgroundColor" red="0.97254901959999995" green="0.97254901959999995" blue="0.97254901959999995" alpha="0.98278061220000001" colorSpace="calibratedRGB"/>
                                                     </view>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="o7q-FK-CmC">
@@ -653,13 +656,14 @@
                         <outlet property="emptySpaceView" destination="WKE-us-Syw" id="tAL-TR-Z8K"/>
                         <outlet property="inviteButton" destination="4lC-vF-XnM" id="bri-Tx-ql1"/>
                         <outlet property="inviteButtonContainerView" destination="9oP-bq-lFI" id="A2o-zH-kTl"/>
+                        <outlet property="leftMessageLbl" destination="pg7-2M-p48" id="J2n-Xa-RhQ"/>
+                        <outlet property="leftMessageLblTopConstraints" destination="idK-6u-RPW" id="BOZ-ec-V0y"/>
                         <outlet property="mainView" destination="V76-Hn-vAJ" id="JFn-0B-ZNf"/>
                         <outlet property="messageView" destination="wmX-uN-Mu8" id="gUv-Qc-RKM"/>
                         <outlet property="mycontactLbl" destination="1gZ-jh-Squ" id="wMw-y5-ZO7"/>
                         <outlet property="placeHolderLbl" destination="qyd-sD-PDh" id="xXk-7b-RNL"/>
                         <outlet property="placeholderTopConstraints" destination="y5o-86-En9" id="PuO-gh-B5D"/>
                         <outlet property="shareContactLbl" destination="hFC-53-ku0" id="9if-Jc-FF0"/>
-                        <outlet property="simplylifeUserLabel" destination="wHK-fq-avR" id="Zo5-3p-ssY"/>
                         <outlet property="tableViewHeightConstraints" destination="SbC-yB-Eig" id="lat-22-ucv"/>
                         <outlet property="titleLbl" destination="ior-uV-jJv" id="tTK-19-aaV"/>
                         <outlet property="titleTopConstraints" destination="16x-az-OjX" id="aRb-lY-L0C"/>

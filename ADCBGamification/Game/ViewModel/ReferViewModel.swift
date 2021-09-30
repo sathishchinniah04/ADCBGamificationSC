@@ -60,8 +60,7 @@ class ReferViewModel {
 //            print("Error is \(error)")
 //        }
     }
-    
-    
+
     static func referInviteApiCall(bParty: String ,complition:((String?, _ error: ErrorType?)->Void)?) {
         let service = "activation/notifications"
         let urlStr = Constants.recordReferUrl+service
@@ -84,16 +83,7 @@ class ReferViewModel {
                 complition?(nil, err)
             }
         }
-        
-        //urlReq.setValue(bParty, forHTTPHeaderField: "msisdn")
-        //urlReq.setValue(referCode, forHTTPHeaderField: "referralCode")
-//        NetworkManager.postRequest(struct: ReferCode.self, url: urlStr, urlReq: urlReq) { (data , error) in
-//            if let dat = data {
-//                print("data is \(dat)")
-//                complition?(dat)
-//            }
-//            print("Error is \(error)")
-//        }
+
     }
     
     static func notifyToUser() {
@@ -136,6 +126,31 @@ class ReferViewModel {
                 complition?(data, nil)
             } else {
                 complition?(nil, error)
+            }
+        }
+
+    }
+    
+    static func checkSimpleLifeUserApi(bParty: String ,complition:((String?, _ error: ErrorType?)->Void)?) {
+        let service = "getCustomerProfile"
+        
+        let urlStr = Constants.simpleLiferUserCheck + service
+        
+        guard let url = URL(string: urlStr) else { return }
+        
+        var urlReq = URLRequest(url: url)
+        
+        urlReq.setValue(StoreManager.shared.msisdn, forHTTPHeaderField: "X-CORELATION-ID")
+        
+        urlReq.setValue(bParty, forHTTPHeaderField: "msisdn")
+        
+        networkManager.plainGetRequest(url: urlStr, urlReq: urlReq) { (data, error) in
+            if let dat = data {
+                print("data is \(dat)")
+                complition?(dat, nil)
+            } else if let err = error {
+                print("data is \(err)")
+                complition?(nil, err)
             }
         }
 

@@ -55,6 +55,15 @@ class NetworkManager: NSObject {
         task(req: req, complition: complition)
     }
     
+    func plainGetRequest(url: String, urlReq: URLRequest? = nil, complition:((String?,ErrorType?)->Void)?) {
+       guard let ur = URL(string: url) else { complition?(nil, .invalidUrl); return}
+       let urReq = urlReq ?? URLRequest(url: ur)
+       print("urlReq \(urReq)")
+       let req = createCommonRequest(url: ur, urlReq: urReq, methodType: .get)
+       
+        plainTask(req: req, complition: complition)
+   }
+    
     
      func plainPostRequest(url: String, urlReq: URLRequest? = nil, requestData: Dictionary<String, Any>? = nil, complition: ((String?,ErrorType?)->Void)?) {
         guard let ur = URL(string: url) else { complition?(nil, .invalidUrl); return}
@@ -96,11 +105,13 @@ class NetworkManager: NSObject {
             self.parseData(data: data, resp: resp, error: error, complition: complition)
             if let httpResponse = resp as? HTTPURLResponse{
                 if  let dict = httpResponse.allHeaderFields as? [String: String] {
-                let message = dict["Share_Message"]
-                    let emailSub = dict["emailSubject"]
+                    let message = dict["Share_Message"]?.removingPercentEncoding
+                    var currentMessage = message?.replacingOccurrences(of: "+", with: " ")
+                    let emailSub = dict["emailSubject"]?.removingPercentEncoding
+                    var currentEmailSub = emailSub?.replacingOccurrences(of: "+", with: " ")
                     print("message is \(String(describing: message))")
-                    Constants.referMessage = message ?? ""
-                    Constants.commonEmailSubject = emailSub ?? ""
+                    Constants.referMessage = currentMessage ?? ""
+                    Constants.commonEmailSubject = currentEmailSub ?? ""
                 }
                 
             }
