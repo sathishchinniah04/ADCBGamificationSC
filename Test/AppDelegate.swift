@@ -6,7 +6,7 @@
 //
 
 import UIKit
-import FBSDKCoreKit
+//import FBSDKCoreKit
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -20,11 +20,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         } else {
             // Fallback on earlier versions
         }
-        ApplicationDelegate.shared.application(application, didFinishLaunchingWithOptions: launchOptions)
+        //ApplicationDelegate.shared.application(application, didFinishLaunchingWithOptions: launchOptions)
         return true
     }
     
-    func application(
+    /*func application(
         _ app: UIApplication,
         open url: URL,
         options: [UIApplication.OpenURLOptionsKey : Any] = [:]
@@ -36,7 +36,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             sourceApplication: options[UIApplication.OpenURLOptionsKey.sourceApplication] as? String,
             annotation: options[UIApplication.OpenURLOptionsKey.annotation]
         )
-    }
+    }*/
     
     @available(iOS 13.0, *)
     // MARK: UISceneSession Lifecycle

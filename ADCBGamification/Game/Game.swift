@@ -6,7 +6,7 @@
 //
 
 import UIKit
-import FBSDKCoreKit
+//import FBSDKCoreKit
 
 enum GameError {
     case noActiveGames

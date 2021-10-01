@@ -6,7 +6,7 @@
 //
 
 import UIKit
-import FBSDKCoreKit
+//import FBSDKCoreKit
 
 enum AlertAction {
     case ok
@@ -287,8 +287,8 @@ extension UIFont {
 extension UIApplication {
     
     public static let configureFacebookId: () = {
-        Settings.appID = "601213451027353"
-        Settings.displayName = "Gamification"
+        //Settings.appID = "601213451027353"
+        //Settings.displayName = "Gamification"
     }()
 
 }

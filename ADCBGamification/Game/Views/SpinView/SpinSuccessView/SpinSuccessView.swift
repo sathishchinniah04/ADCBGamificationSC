@@ -7,7 +7,7 @@
 
 import UIKit
 import Foundation
-import FBSDKShareKit
+//import FBSDKShareKit
 
 class InstagramManager: NSObject, UIDocumentInteractionControllerDelegate {
 
@@ -144,8 +144,8 @@ class SpinSuccessView: UIView {
 
     func showActionSheetView() {
         if let viewController = UIApplication.topMostViewController {
-           // let imageToShare = [ shareImage!,  Constants.referMessage] as [Any]
-            let activityViewController = UIActivityViewController(activityItems: [self, shareImage!], applicationActivities: nil)
+            //let imageToShare = [ shareImage!,  Constants.referMessage] as [Any]
+            let activityViewController = UIActivityViewController(activityItems: [self, shareImage!, Constants.referMessage], applicationActivities: nil)
             activityViewController.setValue(Constants.commonEmailSubject, forKey: "Subject")
             activityViewController.popoverPresentationController?.sourceView = self // so that iPads won't crash
             activityViewController.excludedActivityTypes = [ UIActivity.ActivityType.airDrop , .postToFacebook]
@@ -425,7 +425,7 @@ extension UIViewController {
 
 }
 
-extension SpinSuccessView: UIActivityItemSource , SharingDelegate {
+/*extension SpinSuccessView: UIActivityItemSource , SharingDelegate {
     
     public func sharer(_ sharer: Sharing, didCompleteWithResults results: [String : Any]) {
         print("Share Completed")
@@ -480,3 +480,4 @@ extension SpinSuccessView: UIActivityItemSource , SharingDelegate {
     
 }
 
+*/
