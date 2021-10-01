@@ -189,15 +189,22 @@ class ADCBGameListCollectionCell: UICollectionViewCell {
         
             var min = Int(expDateComp.minute ?? 0) - Int(currentDateComp.minute ?? 0)
             
+            var currentMinutes = ""
+            var currentHours = ""
+            
             if min <= 9 {
-                min = 0 + min
+                currentMinutes = "0" + "\(abs(min))"
+            } else {
+                currentMinutes = "\(abs(min))"
             }
             
             if hours <= 9 {
-                hours = 0 + hours
+                currentHours = "0" + "\(abs(hours))"
+            } else {
+                currentHours = "\(abs(hours))"
             }
 
-            self.timeLabel.text = daysCount + " \(abs(hours))" + "hr".localized() + " \(abs(min))" + "mins".localized()
+            self.timeLabel.text = daysCount + " \(currentHours)" + "hr".localized() + " \(currentMinutes)" + "mins".localized()
             
         }
         //\(Utility.secondsToHoursMinutesSeconds(seconds: Utility.convertStringIntoDate(date: date)).2)sec"
