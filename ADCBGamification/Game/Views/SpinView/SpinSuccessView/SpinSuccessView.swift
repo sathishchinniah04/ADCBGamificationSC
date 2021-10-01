@@ -241,9 +241,10 @@ class SpinSuccessView: UIView {
                      let data = try? Data(contentsOf: url)
                      if let imageData = data {
                          shareImageView.image = UIImage(data: imageData)
-                         shareImageView.layer.masksToBounds = true
-                         shareImageView.layer.cornerRadius = imageView.frame.width / 2
-                         shareImageView.contentMode = .scaleToFill
+                         shareImageView.layer.masksToBounds = false
+                         shareImageView.clipsToBounds = true
+                         shareImageView.layer.cornerRadius = imageView.frame.size.height / 2
+                         shareImageView.contentMode = .scaleAspectFill
                        
                      }
                  } else {

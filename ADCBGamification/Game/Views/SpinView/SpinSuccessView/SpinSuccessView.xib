@@ -335,13 +335,25 @@
                                             <color key="textColor" red="0.1333333333" green="0.12941176469999999" blue="0.39607843139999999" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ohNo" translatesAutoresizingMaskIntoConstraints="NO" id="kUw-d6-tty">
+                                        <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UwP-DY-fSR">
                                             <rect key="frame" x="54.5" y="63" width="100" height="100"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ohNo" translatesAutoresizingMaskIntoConstraints="NO" id="kUw-d6-tty">
+                                                    <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="100" id="eul-sC-ZCq"/>
+                                                        <constraint firstAttribute="height" constant="100" id="sMh-sa-F4l"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                             <constraints>
-                                                <constraint firstAttribute="width" constant="100" id="eul-sC-ZCq"/>
-                                                <constraint firstAttribute="height" constant="100" id="sMh-sa-F4l"/>
+                                                <constraint firstAttribute="height" constant="100" id="Ai1-Re-ip5"/>
+                                                <constraint firstAttribute="width" constant="100" id="KFL-Dh-vVg"/>
+                                                <constraint firstItem="kUw-d6-tty" firstAttribute="centerY" secondItem="UwP-DY-fSR" secondAttribute="centerY" id="RWc-Jf-ehz"/>
+                                                <constraint firstItem="kUw-d6-tty" firstAttribute="centerX" secondItem="UwP-DY-fSR" secondAttribute="centerX" id="hnQ-eL-HHp"/>
                                             </constraints>
-                                        </imageView>
+                                        </view>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I won a Disount Voucher by playing Spin &amp; Win playing Spin &amp; Win." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bLC-kq-40T">
                                             <rect key="frame" x="15" y="188" width="179" height="45"/>
                                             <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="11"/>
@@ -360,13 +372,13 @@
                                         <constraint firstItem="tu6-pb-bmK" firstAttribute="top" secondItem="M43-qi-yW3" secondAttribute="top" constant="20" id="2gz-45-Owx"/>
                                         <constraint firstItem="bLC-kq-40T" firstAttribute="leading" secondItem="M43-qi-yW3" secondAttribute="leading" constant="15" id="7FH-eM-daf"/>
                                         <constraint firstItem="tu6-pb-bmK" firstAttribute="centerX" secondItem="M43-qi-yW3" secondAttribute="centerX" constant="-0.25" id="ARi-V0-M2z"/>
-                                        <constraint firstItem="kUw-d6-tty" firstAttribute="top" secondItem="tu6-pb-bmK" secondAttribute="bottom" constant="25" id="B4z-t7-CdD"/>
+                                        <constraint firstItem="bLC-kq-40T" firstAttribute="top" secondItem="UwP-DY-fSR" secondAttribute="bottom" constant="25" id="MMc-aI-is5"/>
+                                        <constraint firstItem="UwP-DY-fSR" firstAttribute="top" secondItem="tu6-pb-bmK" secondAttribute="bottom" constant="25" id="Rib-0I-YCt"/>
                                         <constraint firstItem="jlF-WW-WjK" firstAttribute="centerX" secondItem="bLC-kq-40T" secondAttribute="centerX" constant="-0.5" id="WMR-G8-DGs"/>
                                         <constraint firstAttribute="height" constant="284" id="WjE-IR-68S"/>
-                                        <constraint firstItem="kUw-d6-tty" firstAttribute="centerX" secondItem="tu6-pb-bmK" secondAttribute="centerX" constant="0.25" id="Z7q-Sb-86I"/>
                                         <constraint firstAttribute="trailing" secondItem="bLC-kq-40T" secondAttribute="trailing" constant="15" id="eaa-7a-4M0"/>
+                                        <constraint firstItem="UwP-DY-fSR" firstAttribute="centerX" secondItem="tu6-pb-bmK" secondAttribute="centerX" id="gOu-nv-pbm"/>
                                         <constraint firstItem="jlF-WW-WjK" firstAttribute="top" secondItem="bLC-kq-40T" secondAttribute="bottom" constant="25" id="lCL-PF-cqc"/>
-                                        <constraint firstItem="bLC-kq-40T" firstAttribute="top" secondItem="kUw-d6-tty" secondAttribute="bottom" constant="25" id="tBj-8R-KHf"/>
                                         <constraint firstAttribute="width" constant="209" id="yQJ-SH-iGn"/>
                                     </constraints>
                                 </view>
