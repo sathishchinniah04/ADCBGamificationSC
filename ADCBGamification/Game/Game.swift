@@ -58,13 +58,19 @@ public class Game {
             }
         }
         getUrlFromInfoPlist()
+        StoreManager.shared.msisdn = msisdn
+        StoreManager.shared.language = language
+        IQKeyboardManager.shared.enable = true
+        IQKeyboardManager.shared.goNext()
+        StoreManager.shared.accessToken = "J0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9"
+        
         self.getAllGamesList(gameType, withCompletion : {(Id) in
             print("Game Language", language)
-            StoreManager.shared.msisdn = msisdn
-            StoreManager.shared.language = language
-            IQKeyboardManager.shared.enable = true
-            IQKeyboardManager.shared.goNext()
-            StoreManager.shared.accessToken = "J0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9"
+//            StoreManager.shared.msisdn = msisdn
+//            StoreManager.shared.language = language
+//            IQKeyboardManager.shared.enable = true
+//            IQKeyboardManager.shared.goNext()
+//            StoreManager.shared.accessToken = "J0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9"
             //complition = gameActionHandler(complition: <#T##((GameAction) -> Void)?##((GameAction) -> Void)?##(GameAction) -> Void#>)
             //complition = gameActionHandler(complition:)
             getControllerRef(controller: controller, gameType: gameType, gameId: Id)
