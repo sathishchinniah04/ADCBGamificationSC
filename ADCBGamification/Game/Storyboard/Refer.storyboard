@@ -352,7 +352,7 @@
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="searchBg" translatesAutoresizingMaskIntoConstraints="NO" id="yPi-La-BoZ">
                                                         <rect key="frame" x="0.0" y="0.0" width="354" height="50"/>
                                                     </imageView>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter a contact name or mobile number" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="qyd-sD-PDh">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter a contact name or mobile number" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="6" translatesAutoresizingMaskIntoConstraints="NO" id="qyd-sD-PDh">
                                                         <rect key="frame" x="20" y="7" width="293" height="16.5"/>
                                                         <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="12"/>
                                                         <color key="textColor" red="0.3294117647" green="0.3294117647" blue="0.33725490200000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -368,7 +368,7 @@
                                                             <action selector="clearFieldAction:" destination="qCL-1m-mOP" eventType="touchUpInside" id="QQa-fW-lKf"/>
                                                         </connections>
                                                     </button>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="ior-uV-jJv">
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="ior-uV-jJv">
                                                         <rect key="frame" x="20" y="25" width="293" height="20.5"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="20.5" id="ybn-Q0-5pK"/>
