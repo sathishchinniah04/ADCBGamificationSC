@@ -126,13 +126,13 @@
                                 <rect key="frame" x="0.0" y="134" width="414" height="89"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Refer and win 5000 touch points" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cPJ-Id-msd">
-                                        <rect key="frame" x="109" y="24" width="109" height="65"/>
+                                        <rect key="frame" x="108" y="24" width="109" height="65"/>
                                         <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="8"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Refer and win 5000 touch points" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="cP3-3a-HZZ">
-                                        <rect key="frame" x="190" y="24" width="83" height="65"/>
+                                        <rect key="frame" x="196" y="24" width="83" height="65"/>
                                         <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="8"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -144,8 +144,8 @@
                                     <constraint firstItem="cP3-3a-HZZ" firstAttribute="width" secondItem="SKH-GB-VdP" secondAttribute="width" multiplier="80:400" id="7lw-T3-GMg"/>
                                     <constraint firstItem="cPJ-Id-msd" firstAttribute="width" secondItem="SKH-GB-VdP" secondAttribute="width" multiplier="109:414" id="8bP-Qc-Tr5"/>
                                     <constraint firstAttribute="bottom" secondItem="cPJ-Id-msd" secondAttribute="bottom" id="93j-ib-cxG"/>
-                                    <constraint firstItem="cP3-3a-HZZ" firstAttribute="leading" secondItem="SKH-GB-VdP" secondAttribute="leading" priority="999" constant="190" id="CIG-ht-x7q"/>
-                                    <constraint firstItem="cPJ-Id-msd" firstAttribute="leading" secondItem="SKH-GB-VdP" secondAttribute="leading" constant="109" id="DbN-vw-npy"/>
+                                    <constraint firstItem="cP3-3a-HZZ" firstAttribute="leading" secondItem="SKH-GB-VdP" secondAttribute="leading" priority="999" constant="196" id="CIG-ht-x7q"/>
+                                    <constraint firstItem="cPJ-Id-msd" firstAttribute="leading" secondItem="SKH-GB-VdP" secondAttribute="leading" constant="108" id="DbN-vw-npy"/>
                                     <constraint firstItem="cP3-3a-HZZ" firstAttribute="height" secondItem="SKH-GB-VdP" secondAttribute="height" multiplier="0.741573" constant="-0.99999700000000757" id="JeZ-uJ-6yy"/>
                                     <constraint firstItem="cPJ-Id-msd" firstAttribute="height" secondItem="SKH-GB-VdP" secondAttribute="height" multiplier="0.741573" constant="-0.99999700000000757" id="xFH-in-WaH"/>
                                 </constraints>
@@ -704,13 +704,13 @@
                                 <rect key="frame" x="0.0" y="134" width="414" height="89"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Refer and win 5000 touch points" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fqN-Me-Ylz">
-                                        <rect key="frame" x="111" y="23" width="109" height="66"/>
+                                        <rect key="frame" x="109" y="23" width="109" height="66"/>
                                         <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="8"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Refer and win 5000 touch points" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="K9q-XB-W7Q">
-                                        <rect key="frame" x="190" y="23" width="83" height="66"/>
+                                        <rect key="frame" x="195" y="23" width="83" height="66"/>
                                         <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="8"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -719,9 +719,9 @@
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="K9q-XB-W7Q" firstAttribute="height" secondItem="J5G-Lt-8uo" secondAttribute="height" multiplier="0.741573" id="G9L-UH-nBC"/>
-                                    <constraint firstItem="fqN-Me-Ylz" firstAttribute="leading" secondItem="J5G-Lt-8uo" secondAttribute="leading" constant="111" id="MBT-2M-nZN"/>
+                                    <constraint firstItem="fqN-Me-Ylz" firstAttribute="leading" secondItem="J5G-Lt-8uo" secondAttribute="leading" constant="109" id="MBT-2M-nZN"/>
                                     <constraint firstItem="fqN-Me-Ylz" firstAttribute="width" secondItem="J5G-Lt-8uo" secondAttribute="width" multiplier="109:414" id="Tq2-DJ-T5B"/>
-                                    <constraint firstItem="K9q-XB-W7Q" firstAttribute="leading" secondItem="J5G-Lt-8uo" secondAttribute="leading" priority="999" constant="190" id="tTf-43-QPJ"/>
+                                    <constraint firstItem="K9q-XB-W7Q" firstAttribute="leading" secondItem="J5G-Lt-8uo" secondAttribute="leading" priority="999" constant="195" id="tTf-43-QPJ"/>
                                     <constraint firstAttribute="bottom" secondItem="K9q-XB-W7Q" secondAttribute="bottom" id="vwX-Ks-kXb"/>
                                     <constraint firstAttribute="bottom" secondItem="fqN-Me-Ylz" secondAttribute="bottom" id="y44-dL-eBo"/>
                                     <constraint firstItem="K9q-XB-W7Q" firstAttribute="width" secondItem="J5G-Lt-8uo" secondAttribute="width" multiplier="80:400" id="yXd-I8-rgG"/>

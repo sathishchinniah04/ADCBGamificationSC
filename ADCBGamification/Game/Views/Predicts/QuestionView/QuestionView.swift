@@ -365,7 +365,7 @@ extension String {
     func changeToArabic()-> String {
         let numberFormatter = NumberFormatter()
         let hijriCalendar = Calendar.init(identifier: Calendar.Identifier.islamicCivil)
-        convertDateFormatter.calendar = hijriCalendar
+       // convertDateFormatter.calendar = hijriCalendar
         numberFormatter.locale = Locale(identifier: "ar_SA")
         let arabicNumber = numberFormatter.number(from: self)
         return "\(arabicNumber!)"
