@@ -220,10 +220,10 @@ class SpinSuccessView: UIView {
         
         if (info?.responseObject?.first?.voucherCode == nil || ((info?.responseObject?.first?.voucherCode ?? "").isEmpty)) {
             self.messageTitleLbl.text = "You have won".localized() + " \(info?.responseObject?.first?.displayDetails?.first?.synonym ?? "")" + " !"
-            self.shareMessageLbl.text =  "I won".localized() + " " + (info?.responseObject?.first?.displayDetails?.first?.synonym ?? "") + " " + "by playing a Spin & Win.".localized()
+            self.shareMessageLbl.text =  "I won".localized() + " " + (info?.responseObject?.first?.displayDetails?.first?.synonym ?? "") + " " + "by playing Spin & Win.".localized()
         } else {
             self.messageTitleLbl.text = "You have won a".localized() + " \(info?.responseObject?.first?.displayDetails?.first?.synonym ?? "")" + " !"
-            self.shareMessageLbl.text =  "I won a".localized() + " " + (info?.responseObject?.first?.displayDetails?.first?.synonym ?? "") + " " + "by playing a Spin & Win.".localized()
+            self.shareMessageLbl.text =  "I won a".localized() + " " + (info?.responseObject?.first?.displayDetails?.first?.synonym ?? "") + " " + "by playing Spin & Win.".localized()
         }
         
         self.messageDescLbl.text = "\(info?.responseObject?.first?.displayDetails?.first?.name ?? "")"

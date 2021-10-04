@@ -241,9 +241,19 @@ class QuestionView: UIView {
     }
     
     func labelSetup(index: Int, info: EventsList) {
-            questionLabel.text = info.questionList?[index].question
-        noOfQuesLabel.text = "Question".localized() +  " \(index+1)"
+        
+        questionLabel.text = info.questionList?[index].question
+        
+        let cnt = "\(index + 1)"
+        
+        noOfQuesLabel.text = "Question".localized() + cnt
+        //cnt.convertedDigitsToLocale(Locale(identifier: "AR"))
+        print(cnt.changeToArabic())
+        
     }
+    
+    
+    
     
     func buttonPopulate(index: Int, info: EventsList) {
         let predOp = info.questionList?[index].predOptions
@@ -324,5 +334,40 @@ extension UIButton {
         layer.shadowOffset = CGSize(width: 3, height: 3)
         layer.shadowOpacity = Float(opacity)
         layer.shadowRadius = shadowRadius
+    }
+}
+
+extension String {
+    private static let formatter = NumberFormatter()
+
+    func clippingCharacters(in characterSet: CharacterSet) -> String {
+        components(separatedBy: characterSet).joined()
+    }
+
+    func convertedDigitsToLocale(_ locale: Locale = .current) -> String {
+        let digits = Set(clippingCharacters(in: CharacterSet.decimalDigits.inverted))
+        guard !digits.isEmpty else { return self }
+
+        Self.formatter.locale = locale
+
+        let maps: [(original: String, converted: String)] = digits.map {
+            let original = String($0)
+            let digit = Self.formatter.number(from: original)!
+            let localized = Self.formatter.string(from: digit)!
+            return (original, localized)
+        }
+
+        return maps.reduce(self) { converted, map in
+            converted.replacingOccurrences(of: map.original, with: map.converted)
+        }
+    }
+    
+    func changeToArabic()-> String {
+        let numberFormatter = NumberFormatter()
+        let hijriCalendar = Calendar.init(identifier: Calendar.Identifier.islamicCivil)
+        convertDateFormatter.calendar = hijriCalendar
+        numberFormatter.locale = Locale(identifier: "ar_SA")
+        let arabicNumber = numberFormatter.number(from: self)
+        return "\(arabicNumber!)"
     }
 }
