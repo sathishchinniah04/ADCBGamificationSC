@@ -245,10 +245,9 @@ class QuestionView: UIView {
         questionLabel.text = info.questionList?[index].question
         
         let cnt = "\(index + 1)"
-        
-        noOfQuesLabel.text = "Question".localized() + cnt
-        //cnt.convertedDigitsToLocale(Locale(identifier: "AR"))
-        print(cnt.changeToArabic())
+        print(cnt.convertedDigitsToLocale(Locale(identifier: "AR")))
+        noOfQuesLabel.text = "Question".localized() + cnt.convertedDigitsToLocale(Locale(identifier: "AR"))
+
         
     }
     
@@ -364,8 +363,6 @@ extension String {
     
     func changeToArabic()-> String {
         let numberFormatter = NumberFormatter()
-        let hijriCalendar = Calendar.init(identifier: Calendar.Identifier.islamicCivil)
-       // convertDateFormatter.calendar = hijriCalendar
         numberFormatter.locale = Locale(identifier: "ar_SA")
         let arabicNumber = numberFormatter.number(from: self)
         return "\(arabicNumber!)"
