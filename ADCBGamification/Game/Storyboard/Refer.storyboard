@@ -396,26 +396,8 @@
                                                     <constraint firstItem="qyd-sD-PDh" firstAttribute="top" secondItem="WHb-fE-v67" secondAttribute="top" constant="7" id="y5o-86-En9"/>
                                                 </constraints>
                                             </view>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hNC-yi-0pg">
-                                                <rect key="frame" x="0.0" y="159.5" width="414" height="45"/>
-                                                <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select the contact to Invite" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hFC-53-ku0">
-                                                        <rect key="frame" x="25" y="13" width="364" height="19.5"/>
-                                                        <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="14"/>
-                                                        <color key="textColor" red="0.1333333333" green="0.12941176469999999" blue="0.39607843139999999" alpha="1" colorSpace="calibratedRGB"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                </subviews>
-                                                <color key="backgroundColor" red="0.38823529411764707" green="0.38431372549019605" blue="0.48627450980392156" alpha="0.069621598639455787" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="45" id="5Xo-y4-PHO"/>
-                                                    <constraint firstItem="hFC-53-ku0" firstAttribute="centerY" secondItem="hNC-yi-0pg" secondAttribute="centerY" id="9t3-gI-Kqg"/>
-                                                    <constraint firstItem="hFC-53-ku0" firstAttribute="centerX" secondItem="hNC-yi-0pg" secondAttribute="centerX" id="OTu-Z7-VCh"/>
-                                                    <constraint firstItem="hFC-53-ku0" firstAttribute="leading" secondItem="hNC-yi-0pg" secondAttribute="leading" constant="25" id="rCK-YQ-rt4"/>
-                                                </constraints>
-                                            </view>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="B5z-cV-PkB">
-                                                <rect key="frame" x="0.0" y="204.5" width="414" height="591.5"/>
+                                                <rect key="frame" x="0.0" y="164.5" width="414" height="631.5"/>
                                                 <subviews>
                                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="KW3-SX-QvO">
                                                         <rect key="frame" x="0.0" y="0.0" width="414" height="390"/>
@@ -423,6 +405,25 @@
                                                         <constraints>
                                                             <constraint firstAttribute="height" priority="999" constant="390" id="SbC-yB-Eig"/>
                                                         </constraints>
+                                                        <view key="tableHeaderView" contentMode="scaleToFill" id="hNC-yi-0pg">
+                                                            <rect key="frame" x="0.0" y="0.0" width="414" height="45"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select the contact to Invite" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hFC-53-ku0">
+                                                                    <rect key="frame" x="25" y="13" width="364" height="19.5"/>
+                                                                    <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="14"/>
+                                                                    <color key="textColor" red="0.1333333333" green="0.12941176469999999" blue="0.39607843139999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                            <color key="backgroundColor" red="0.38823529411764707" green="0.38431372549019605" blue="0.48627450980392156" alpha="0.069621598639455787" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="45" id="5Xo-y4-PHO"/>
+                                                                <constraint firstItem="hFC-53-ku0" firstAttribute="centerY" secondItem="hNC-yi-0pg" secondAttribute="centerY" id="9t3-gI-Kqg"/>
+                                                                <constraint firstItem="hFC-53-ku0" firstAttribute="centerX" secondItem="hNC-yi-0pg" secondAttribute="centerX" id="OTu-Z7-VCh"/>
+                                                                <constraint firstItem="hFC-53-ku0" firstAttribute="leading" secondItem="hNC-yi-0pg" secondAttribute="leading" constant="25" id="rCK-YQ-rt4"/>
+                                                            </constraints>
+                                                        </view>
                                                         <connections>
                                                             <outlet property="dataSource" destination="qCL-1m-mOP" id="lqw-YP-7O6"/>
                                                             <outlet property="delegate" destination="qCL-1m-mOP" id="V3w-tT-J3S"/>
@@ -432,9 +433,9 @@
                                                         <rect key="frame" x="0.0" y="390" width="414" height="50"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Click “Verify” to check whether the contact is a Simplylife user. " lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pg7-2M-p48">
-                                                                <rect key="frame" x="20" y="-50" width="374" height="100"/>
+                                                                <rect key="frame" x="20" y="-50" width="374" height="38.5"/>
                                                                 <constraints>
-                                                                    <constraint firstAttribute="height" constant="100" id="jy4-DS-gMq"/>
+                                                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="100" id="jy4-DS-gMq"/>
                                                                 </constraints>
                                                                 <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="14"/>
                                                                 <color key="textColor" red="0.32941176470588235" green="0.32941176470588235" blue="0.33725490196078434" alpha="1" colorSpace="calibratedRGB"/>
@@ -447,7 +448,6 @@
                                                             <constraint firstItem="pg7-2M-p48" firstAttribute="leading" secondItem="HER-y7-C0u" secondAttribute="leading" constant="20" id="ULB-cq-TA2"/>
                                                             <constraint firstItem="pg7-2M-p48" firstAttribute="top" secondItem="HER-y7-C0u" secondAttribute="top" constant="-50" id="idK-6u-RPW"/>
                                                             <constraint firstAttribute="height" constant="50" id="mxE-Xs-Mee"/>
-                                                            <constraint firstAttribute="bottom" secondItem="pg7-2M-p48" secondAttribute="bottom" id="riJ-Oo-VDv"/>
                                                         </constraints>
                                                     </view>
                                                     <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wmX-uN-Mu8">
@@ -468,11 +468,11 @@
                                                         </constraints>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WKE-us-Syw">
-                                                        <rect key="frame" x="0.0" y="440" width="414" height="21.5"/>
+                                                        <rect key="frame" x="0.0" y="440" width="414" height="61.5"/>
                                                         <color key="backgroundColor" red="0.97254901959999995" green="0.97254901959999995" blue="0.97254901959999995" alpha="0.98278061220000001" colorSpace="calibratedRGB"/>
                                                     </view>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="o7q-FK-CmC">
-                                                        <rect key="frame" x="0.0" y="461.5" width="414" height="130"/>
+                                                        <rect key="frame" x="0.0" y="501.5" width="414" height="130"/>
                                                         <subviews>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9oP-bq-lFI">
                                                                 <rect key="frame" x="0.0" y="0.0" width="414" height="130"/>
@@ -526,14 +526,11 @@
                                             <constraint firstItem="Ama-ee-GT9" firstAttribute="centerX" secondItem="AyZ-1I-XKU" secondAttribute="centerX" id="5GV-8Z-SLo"/>
                                             <constraint firstItem="Ama-ee-GT9" firstAttribute="top" secondItem="AyZ-1I-XKU" secondAttribute="top" constant="20" symbolic="YES" id="5Yt-ax-CJ9"/>
                                             <constraint firstAttribute="bottom" secondItem="B5z-cV-PkB" secondAttribute="bottom" id="Cyz-yO-lLv"/>
+                                            <constraint firstItem="B5z-cV-PkB" firstAttribute="top" secondItem="WHb-fE-v67" secondAttribute="bottom" constant="20" id="EYq-xQ-2Us"/>
                                             <constraint firstItem="WHb-fE-v67" firstAttribute="top" secondItem="1gZ-jh-Squ" secondAttribute="bottom" constant="16" id="H5Y-3j-z07"/>
-                                            <constraint firstAttribute="trailing" secondItem="hNC-yi-0pg" secondAttribute="trailing" id="Pnd-An-Zdm"/>
-                                            <constraint firstItem="hNC-yi-0pg" firstAttribute="leading" secondItem="AyZ-1I-XKU" secondAttribute="leading" id="Zia-TK-flw"/>
                                             <constraint firstAttribute="trailing" secondItem="WHb-fE-v67" secondAttribute="trailing" constant="30" id="fJU-OE-JtQ"/>
                                             <constraint firstItem="WHb-fE-v67" firstAttribute="leading" secondItem="AyZ-1I-XKU" secondAttribute="leading" constant="30" id="jp9-mf-j3n"/>
-                                            <constraint firstItem="B5z-cV-PkB" firstAttribute="top" secondItem="hNC-yi-0pg" secondAttribute="bottom" id="l4U-PH-bmh"/>
                                             <constraint firstAttribute="trailing" secondItem="B5z-cV-PkB" secondAttribute="trailing" id="pRw-CO-MEi"/>
-                                            <constraint firstItem="hNC-yi-0pg" firstAttribute="top" secondItem="WHb-fE-v67" secondAttribute="bottom" constant="15" id="pcF-Tg-9sw"/>
                                             <constraint firstItem="1gZ-jh-Squ" firstAttribute="top" secondItem="Ama-ee-GT9" secondAttribute="bottom" constant="28" id="sad-BA-8As"/>
                                             <constraint firstItem="B5z-cV-PkB" firstAttribute="leading" secondItem="AyZ-1I-XKU" secondAttribute="leading" id="tqf-vj-rCT"/>
                                         </constraints>

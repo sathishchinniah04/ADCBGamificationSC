@@ -67,7 +67,7 @@ class ContactListController: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.leftMessageLblTopConstraints.constant = -50
+        self.leftMessageLblTopConstraints.constant = -30
         self.leftMessageLbl.text = "Click “Verify” to check whether the contact is a Simplylife user.".localized()
         self.verifyMessageview.isHidden = true
         hidebaseView()
@@ -338,6 +338,7 @@ class ContactListController: UIViewController, UITextFieldDelegate {
             }
             
         case .cleared:
+            shareContactLbl.text = "Select the contact to Invite".localized()
             print("text field cleared")
             self.newList = self.contacts
             //self.chooseContactButton.titleLabel.text = ""
@@ -358,6 +359,7 @@ class ContactListController: UIViewController, UITextFieldDelegate {
         if self.newList.isEmpty, !text.isEmpty , text.isNumeric, !text.isAlphanumeric {
             let unknownContact = FetchedContact(firstName: "Unknown", lastName: "contact", telephone: text, image: nil, unknowContact: true)
             self.newList.insert(unknownContact, at: 0)
+            shareContactLbl.text = "No match found".localized()
             //self.inviteButton.alpha = 0.0
             self.verifyMessageview.isHidden = false
         } else {
@@ -365,6 +367,8 @@ class ContactListController: UIViewController, UITextFieldDelegate {
         }
         
         if text.isEmpty {
+            self.leftMessageLbl.text = "Click “Verify” to check whether the contact is a Simplylife user.".localized()
+            self.shareContactLbl.text = "Select the contact to Invite".localized()
             self.newList.removeAll()
             self.newList = self.contacts
         }
@@ -410,10 +414,12 @@ class ContactListController: UIViewController, UITextFieldDelegate {
                     }
                 } else {
                     if (data == "201" || data == "200") {
+                        self.leftMessageLbl.sizeToFit()
                         self.leftMessageLblTopConstraints.constant = -30
                         self.verifyMessageview.isHidden = false
                         self.errorMsg = " "
-                        self.leftMessageLbl.text = "Sorry, this contact is already a Simplylife user".localized()
+                        self.shareContactLbl.text = "Sorry, this contact is already a Simplylife user".localized()
+                        self.leftMessageLbl.text = "Select another contact to refer".localized()
                         self.footerHeight = 0
                         self.contactTableView.reloadData()
                         self.placeHolderLbl.text = "Enter a contact name or mobile number".localized()
@@ -480,6 +486,9 @@ class ContactListController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func clearFieldAction(_ sender: Any) {
+        verifyMessageview.isHidden = true
+        self.leftMessageLbl.text = "Click “Verify” to check whether the contact is a Simplylife user.".localized()
+        shareContactLbl.text = "Select the contact to Invite".localized()
         dismissKeyboard()
     }
     
