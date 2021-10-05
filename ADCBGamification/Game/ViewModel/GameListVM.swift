@@ -13,7 +13,7 @@ class GameListVM {
     
     static var networkManager = NetworkManager()
     
-    static func getGame(url: String, gameType: String, gameid: String?, complition: @escaping (Bool) -> ()) {
+    static func getGame(url: String, gameType: String, gameid: String?, complition: @escaping (Bool, String?) -> ()) {
         
         let searchQuerry: [[String: String]]!
         
@@ -43,12 +43,13 @@ class GameListVM {
             if let data = data {
                 getActiveGames(list: data, complition: complition)
             } else {
+                complition(false, "\(String(describing: error))")
                 print("error is \(String(describing: error))")
             }
         }
     }
     
-    static func getGameList(url: String, complition: @escaping (Bool) -> ()) {
+    static func getGameList(url: String, complition: @escaping (Bool, String?) -> ()) {
         
         let myDict: Dictionary = [
             "requestId": Utility.getRandonNo(),
@@ -61,18 +62,22 @@ class GameListVM {
         networkManager.postRequest(struct: GameList.self, url: url, requestData: myDict) { (data, error) in
             print("data \(String(describing: data))")
             if let data = data {
-                getActiveGames(list: data, complition: complition)
+                if data.responseDetail != nil {
+                    getActiveGames(list: data, complition: complition)
+                } else {
+                    complition(false, data.respDesc)
+                }
             } else {
-                complition(false)
+                complition(false, "Something went wring. Try again !")
                 print("error is \(String(describing: error))")
             }
         }
     }
     
-    static func getActiveGames(list: GameList, complition: (Bool) -> ()) {
+    static func getActiveGames(list: GameList, complition: (Bool, String?) -> ()) {
         allGames = list.responseDetail?.games ?? [Games]()
         activeGames = list.responseDetail?.games?.filter({$0.executionStatus == "Active"}) ?? [Games]()
-        complition(true)
+        complition(true, "")
         print("total active Games \(activeGames.count) \n\n Active games \(activeGames)\n\n\n")
         print("total  Games \(allGames.count) \n\n all games \(allGames)\n\n\n")
     }

@@ -38,11 +38,16 @@ public class Game {
         controllerRef?.dismiss(animated: true, completion: nil)
     }
     
-    private static func getAllGamesList(_ gmeType: String, withCompletion completion: @escaping (_ gameId: String) -> Void) {
-        GameListVM.getGameList(url: Constants.listGameUrl) { (success) in
+    private static func getAllGamesList(_ gmeType: String, withCompletion completion: @escaping (_ gameId: String, Bool) -> Void) {
+        GameListVM.getGameList(url: Constants.listGameUrl) { (success, message) in
             DispatchQueue.main.async {
-                let gameId = GameListVM.allGames.filter({ $0.gameType.lowercased() == gmeType.lowercased() }).first?.gameId
-                completion(gameId ?? "0")
+                if success {
+                    let gameId = GameListVM.allGames.filter({ $0.gameType.lowercased() == gmeType.lowercased() }).first?.gameId
+                    completion(gameId ?? "0", true)
+                } else {
+                    completion(message ?? "", false)
+                }
+
             }
         }
     }
@@ -64,7 +69,7 @@ public class Game {
         IQKeyboardManager.shared.goNext()
         StoreManager.shared.accessToken = "J0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9"
         
-        self.getAllGamesList(gameType, withCompletion : {(Id) in
+        self.getAllGamesList(gameType, withCompletion : {(Id, success) in
             print("Game Language", language)
 //            StoreManager.shared.msisdn = msisdn
 //            StoreManager.shared.language = language
@@ -73,7 +78,7 @@ public class Game {
 //            StoreManager.shared.accessToken = "J0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9"
             //complition = gameActionHandler(complition: <#T##((GameAction) -> Void)?##((GameAction) -> Void)?##(GameAction) -> Void#>)
             //complition = gameActionHandler(complition:)
-            getControllerRef(controller: controller, gameType: gameType, gameId: Id)
+            getControllerRef(controller: controller, gameType: gameType, gameId: Id, isSuccess: success, errorMsg: Id)
             //loadGameList(controller: controller)
             CallBack.shared.callBacKAction { (action) in
                 switch action {
@@ -171,37 +176,58 @@ public class Game {
         //getControllerRef(gameType: gameType)
     }
     
-    private class func getControllerRef(controller: UIViewController, gameType: String, gameId: String?) {
+    private class func getControllerRef(controller: UIViewController, gameType: String, gameId: String?, isSuccess: Bool, errorMsg: String) {
         if gameType == "PredictNWin" {
            let cont = self.navigateToController(controller: controller, storyboard: "Predict", id: "PredictIntroController") as? PredictIntroController
             cont?.isDirectLoad = true
-            getGameList(gameType: gameType, gameId: gameId) { (games, error) in
+            if isSuccess {
+                getGameList(gameType: gameType, gameId: gameId) { (games, error) in
+                    DispatchQueue.main.async {
+                        cont?.updateOnResponce(game: games, error: error)
+                    }
+                }
+
+            } else {
                 DispatchQueue.main.async {
-                    cont?.updateOnResponce(game: games, error: error)
+                    cont?.updateErrorOnResponce(errorMsg: errorMsg, isSuccess: isSuccess)
                 }
             }
         } else if gameType == "SpinNWin" {
             let cont = self.navigateToController(controller: controller, storyboard: "Spin", id: "SpinHomeController") as? SpinHomeController
             cont?.isDirectLoad = true
-            getGameList(gameType: gameType, gameId: gameId) { (game, error) in
+            if isSuccess {
+                getGameList(gameType: gameType, gameId: gameId) { (game, error) in
+                    DispatchQueue.main.async {
+                        cont?.updateOnResponce(game: game, error: error)
+                    }
+                }
+            } else {
                 DispatchQueue.main.async {
-                    cont?.updateOnResponce(game: game, error: error)
+                    cont?.updateErrorOnResponce(errorMsg: errorMsg, isSuccess: isSuccess)
                 }
             }
+
         } else if gameType == "ReferNWin" {
             let cont = self.navigateToController(controller: controller, storyboard: "Refer", id: "ReferIntroController") as? ReferIntroController
             cont?.isDirectLoad = true
-            getGameList(gameType: gameType, gameId: gameId) { (games, error)  in
-                DispatchQueue.main.async {
-                    cont?.updateOnResponce(game: games, error: error)
+            if isSuccess {
+                getGameList(gameType: gameType, gameId: gameId) { (games, error)  in
+                    DispatchQueue.main.async {
+                        cont?.updateOnResponce(game: games, error: error)
+                }
             }
-        }
+            } else {
+                DispatchQueue.main.async {
+                    cont?.updateErrorOnResponce(errorMsg: errorMsg, isSuccess: isSuccess)
+                }
+            }
+
         } else {
             print("No Game type match")
         }
 }
         private class func getGameList(gameType: String, gameId: String?, complition:((Games?, GameError?)->Void)?) {
-        GameListVM.getGame(url: Constants.listGameUrl, gameType: gameType, gameid: gameId) { (success) in
+        GameListVM.getGame(url: Constants.listGameUrl, gameType: gameType, gameid: gameId) { (success, message) in
             print("Data is \(GameListVM.activeGames)")
             if let gam = GameListVM.activeGames.first {
                 complition?(gam,nil)

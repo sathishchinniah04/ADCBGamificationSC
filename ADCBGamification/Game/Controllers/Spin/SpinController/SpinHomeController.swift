@@ -113,6 +113,14 @@ class SpinHomeController: UIViewController {
         Utility.errorHandler(target: self, error: error)
     }
     
+    
+    func updateErrorOnResponce(errorMsg: String, isSuccess: Bool) {
+        self.showToast(message: errorMsg)
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+            self.dismiss(animated: true, completion: nil)
+        }
+    }
+    
     func handlerBasedOnResponce(game: Games) {
         print("Updated from game list type = \(game.gameType)  gameId  = \(game.gameId ?? "")")
         activityIndicatorView.stopAnimating()

@@ -64,6 +64,13 @@ class PredictIntroController: UIViewController {
         Utility.errorHandler(target: self, error: error)
     }
     
+    func updateErrorOnResponce(errorMsg: String, isSuccess: Bool) {
+        self.showToast(message: errorMsg)
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+            self.dismiss(animated: true, completion: nil)
+        }
+    }
+    
     func basedOnResponce(game: Games) {
         activityIndicator.stopAnimating()
         expireView.isUserInteractionEnabled = true

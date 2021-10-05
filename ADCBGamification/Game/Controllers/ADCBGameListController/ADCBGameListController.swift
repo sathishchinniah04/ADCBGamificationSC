@@ -85,7 +85,7 @@ class ADCBGameListController: UIViewController {
     }
     
     func getResponce() {
-        GameListVM.getGameList(url: Constants.listGameUrl) { (success) in
+        GameListVM.getGameList(url: Constants.listGameUrl) { (success, message) in
             if success {
                 DispatchQueue.main.async {
                     self.activityIndicatorView.stopAnimating()
@@ -95,7 +95,8 @@ class ADCBGameListController: UIViewController {
             } else {
                 DispatchQueue.main.async {
                     self.activityIndicatorView.stopAnimating()
-                    self.showToast(message: "Something went wring. Try again !")
+                    let text = message ?? ""
+                    self.showToast(message: (text.isEmpty) ? "Something went wring. Try again !" : text)
                     DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
                         self.dismiss(animated: false, completion:  nil)
                     }

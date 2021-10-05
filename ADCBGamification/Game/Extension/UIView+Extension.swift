@@ -38,12 +38,15 @@ extension UIView {
                     complition?(.cancel)
                 }))
             }
-            let rootView = UIApplication.shared.windows.last?.rootViewController
-            if let tar = target {
-                tar.present(alert, animated: true, completion: nil)
-            } else {
-                rootView?.present(alert, animated: true, completion: nil)
+            if let viewController = UIApplication.topMostViewController {
+                viewController.present(alert, animated: true, completion: nil)
             }
+//            let rootView = UIApplication.shared.windows.last?.rootViewController
+//            if let tar = target {
+//                tar.present(alert, animated: true, completion: nil)
+//            } else {
+//                rootView?.present(alert, animated: true, completion: nil)
+//            }
         }
     }
     

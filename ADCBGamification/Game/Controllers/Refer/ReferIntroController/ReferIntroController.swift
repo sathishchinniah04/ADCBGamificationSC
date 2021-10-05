@@ -121,6 +121,13 @@ class ReferIntroController: UIViewController {
     }
     
     
+    func updateErrorOnResponce(errorMsg: String, isSuccess: Bool) {
+        self.showToast(message: errorMsg)
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+            self.dismiss(animated: true, completion: nil)
+        }
+    }
+    
     func updateOnReponceHandler(game: Games) {
         print("Updated from game list type = \(game.gameType)  gameId  = \(game.gameId ?? "")")
         self.game = game

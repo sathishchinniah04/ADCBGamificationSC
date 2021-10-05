@@ -27,7 +27,7 @@ class GameListController: UIViewController {
     }
     
     func getResponce() {
-        GameListVM.getGameList(url: Constants.listGameUrl) { (success) in
+        GameListVM.getGameList(url: Constants.listGameUrl) { (success, message) in
             DispatchQueue.main.async {
                 self.activityIndicatorView.stopAnimating()
                 self.games = GameListVM.allGames
