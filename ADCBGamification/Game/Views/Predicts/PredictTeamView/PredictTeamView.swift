@@ -163,23 +163,38 @@ class PredictTeamView: UIView {
                 
                 
                 var hours =  Int(currentDateComp.hour ?? 0) - Int(expDateComp.hour ?? 0)
-                hours = (hours - 23)
+                hours = abs((hours - 23))
             
                 var min = Int(currentDateComp.minute ?? 0) - Int(expDateComp.minute ?? 0)
-                min = (min - 59)
+                min = abs((min - 59))
                 
-                if (hours == 0 && min == 0 ) {
+               /*if (hours == 0 && min == 0 ) {
                     hours = 12
+                }*/
+                
+                var currentHours = ""
+                var currentMin = ""
+                
+                if hours <= 9 {
+                    currentHours = "0" + "\(abs(hours))"
+                } else {
+                    currentHours = "\(abs(hours))"
+                }
+                
+                if min <= 9 {
+                    currentMin = "0" + "\(abs(min))"
+                } else {
+                    currentMin = "\(abs(min))"
                 }
                 
                 if matchDate < Date() {
-                    self.timeLabel.text = "Expired on".localized() + " \(abs(expDateComp.hour ?? 0))" + "hr".localized() + " \(abs(expDateComp.minute ?? 0))" + "mins".localized()
+                    self.timeLabel.text = "Expired on".localized() + " \(currentHours)" + "hr".localized() + " \(currentMin)" + "mins".localized()
                 } else {
                     if value == 0 {
-                        self.timeLabel.text = "Today, Starts in".localized() + " \(abs(hours))" + "hr".localized() + " \(abs(min))" + "mins".localized()
+                        self.timeLabel.text = "Today, Starts in".localized() + " \(currentHours)" + "hr".localized() + " \(currentMin)" + "mins".localized()
 
                     } else {
-                        self.timeLabel.text = "Starts in".localized() + " \(daysCount)" + " \(abs(hours))" + "hr".localized() + " \(abs(min))" + "mins".localized()
+                        self.timeLabel.text = "Starts in".localized() + " \(daysCount)" + " \(currentHours)" + "hr".localized() + " \(currentMin)" + "mins".localized()
 
                     }
                 }
