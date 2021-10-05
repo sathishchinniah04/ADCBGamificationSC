@@ -13,7 +13,7 @@ class GameListVM {
     
     static var networkManager = NetworkManager()
     
-    static func getGame(url: String, gameType: String, gameid: String?,complition:(()->Void)? = nil) {
+    static func getGame(url: String, gameType: String, gameid: String?, complition: @escaping (Bool) -> ()) {
         
         let searchQuerry: [[String: String]]!
         
@@ -48,7 +48,7 @@ class GameListVM {
         }
     }
     
-    static func getGameList(url: String, complition:(()->Void)? = nil) {
+    static func getGameList(url: String, complition: @escaping (Bool) -> ()) {
         
         let myDict: Dictionary = [
             "requestId": Utility.getRandonNo(),
@@ -63,15 +63,16 @@ class GameListVM {
             if let data = data {
                 getActiveGames(list: data, complition: complition)
             } else {
+                complition(false)
                 print("error is \(String(describing: error))")
             }
         }
     }
     
-    static func getActiveGames(list: GameList, complition:(()->Void)?) {
+    static func getActiveGames(list: GameList, complition: (Bool) -> ()) {
         allGames = list.responseDetail?.games ?? [Games]()
         activeGames = list.responseDetail?.games?.filter({$0.executionStatus == "Active"}) ?? [Games]()
-        complition?()
+        complition(true)
         print("total active Games \(activeGames.count) \n\n Active games \(activeGames)\n\n\n")
         print("total  Games \(allGames.count) \n\n all games \(allGames)\n\n\n")
     }

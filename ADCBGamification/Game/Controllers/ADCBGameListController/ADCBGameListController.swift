@@ -85,12 +85,24 @@ class ADCBGameListController: UIViewController {
     }
     
     func getResponce() {
-        GameListVM.getGameList(url: Constants.listGameUrl) {
-            DispatchQueue.main.async {
-                self.activityIndicatorView.stopAnimating()
-                self.games = GameListVM.allGames
-                self.gamesCollectionView.reloadData()
+        GameListVM.getGameList(url: Constants.listGameUrl) { (success) in
+            if success {
+                DispatchQueue.main.async {
+                    self.activityIndicatorView.stopAnimating()
+                    self.games = GameListVM.allGames
+                    self.gamesCollectionView.reloadData()
+                }
+            } else {
+                DispatchQueue.main.async {
+                    self.activityIndicatorView.stopAnimating()
+                    self.showToast(message: "Something went wring. Try again !")
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+                        self.dismiss(animated: false, completion:  nil)
+                    }
+                }
+
             }
+
         }
     }
     

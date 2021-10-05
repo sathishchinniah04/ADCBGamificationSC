@@ -39,7 +39,7 @@ public class Game {
     }
     
     private static func getAllGamesList(_ gmeType: String, withCompletion completion: @escaping (_ gameId: String) -> Void) {
-        GameListVM.getGameList(url: Constants.listGameUrl) {
+        GameListVM.getGameList(url: Constants.listGameUrl) { (success) in
             DispatchQueue.main.async {
                 let gameId = GameListVM.allGames.filter({ $0.gameType.lowercased() == gmeType.lowercased() }).first?.gameId
                 completion(gameId ?? "0")
@@ -201,7 +201,7 @@ public class Game {
         }
 }
         private class func getGameList(gameType: String, gameId: String?, complition:((Games?, GameError?)->Void)?) {
-        GameListVM.getGame(url: Constants.listGameUrl, gameType: gameType, gameid: gameId) {
+        GameListVM.getGame(url: Constants.listGameUrl, gameType: gameType, gameid: gameId) { (success) in
             print("Data is \(GameListVM.activeGames)")
             if let gam = GameListVM.activeGames.first {
                 complition?(gam,nil)
