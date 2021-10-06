@@ -124,7 +124,9 @@ class ReferIntroController: UIViewController {
     func updateErrorOnResponce(errorMsg: String, isSuccess: Bool) {
         self.showToast(message: errorMsg)
         DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-            self.dismiss(animated: true, completion: nil)
+            self.dismiss(animated: false) {
+                CallBack.shared.handle!(.dismissed)
+            }
         }
     }
     

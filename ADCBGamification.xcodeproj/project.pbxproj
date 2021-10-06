@@ -495,6 +495,7 @@
 		F5F648FF2704AFEE00F633D4 /* FacebookLogin in Frameworks */ = {isa = PBXBuildFile; productRef = F5F648FE2704AFEE00F633D4 /* FacebookLogin */; };
 		F5F649012704AFEE00F633D4 /* FacebookShare in Frameworks */ = {isa = PBXBuildFile; productRef = F5F649002704AFEE00F633D4 /* FacebookShare */; };
 		F5F649032704AFEE00F633D4 /* FacebookCore in Frameworks */ = {isa = PBXBuildFile; productRef = F5F649022704AFEE00F633D4 /* FacebookCore */; };
+		F5F64907270C8CA800F633D4 /* ViewController1.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5F64906270C8CA700F633D4 /* ViewController1.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -852,6 +853,7 @@
 		F5A89F7626CBA9CD00685428 /* cert.pem */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = cert.pem; sourceTree = "<group>"; };
 		F5A89F7726CBA9CD00685428 /* ca.pem */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ca.pem; sourceTree = "<group>"; };
 		F5A89F7826CBA9CD00685428 /* key.pem */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = key.pem; sourceTree = "<group>"; };
+		F5F64906270C8CA700F633D4 /* ViewController1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController1.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -919,6 +921,7 @@
 				3320FF2F2682EB13001809AA /* Assets.xcassets */,
 				3320FF312682EB13001809AA /* LaunchScreen.storyboard */,
 				3320FF342682EB13001809AA /* Info.plist */,
+				F5F64906270C8CA700F633D4 /* ViewController1.swift */,
 			);
 			path = Test;
 			sourceTree = "<group>";
@@ -2836,6 +2839,7 @@
 				F58A65C626B22CCB00D5713F /* Mask.swift in Sources */,
 				F58A65D226B22CCB00D5713F /* TextDocument.swift in Sources */,
 				F58A65BC26B22CCB00D5713F /* PreCompLayerModel.swift in Sources */,
+				F5F64907270C8CA800F633D4 /* ViewController1.swift in Sources */,
 				F58A655826B22CCB00D5713F /* GradientFillRenderer.swift in Sources */,
 				F58A659A26B22CCB00D5713F /* Trim.swift in Sources */,
 				F58A65F826B22CCB00D5713F /* CurveVertex.swift in Sources */,

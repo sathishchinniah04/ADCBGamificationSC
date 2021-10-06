@@ -98,12 +98,14 @@ class ADCBGameListController: UIViewController {
                     let text = message ?? ""
                     self.showToast(message: (text.isEmpty) ? "Something went wring. Try again !" : text)
                     DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-                        self.dismiss(animated: false, completion:  nil)
-                    }
+                        
+                        self.dismiss(animated: false) {
+                            CallBack.shared.handle!(.dismissed)
+                        }                    }
                 }
-
+                
             }
-
+            
         }
     }
     
