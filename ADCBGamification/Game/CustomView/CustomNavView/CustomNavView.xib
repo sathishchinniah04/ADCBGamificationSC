@@ -27,8 +27,8 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="115"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Qq1-06-ycb">
-                    <rect key="frame" x="0.0" y="0.0" width="414" height="115"/>
+                <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Clouds" translatesAutoresizingMaskIntoConstraints="NO" id="Qq1-06-ycb">
+                    <rect key="frame" x="0.0" y="0.0" width="339" height="115"/>
                 </imageView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Chi-Tp-qkq">
                     <rect key="frame" x="30" y="0.0" width="30" height="115"/>
@@ -87,7 +87,7 @@
                 <constraint firstItem="iJI-Yb-AUP" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="k1X-5L-jCc"/>
                 <constraint firstItem="Chi-Tp-qkq" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="30" id="qnF-ze-KD0"/>
                 <constraint firstAttribute="bottom" secondItem="Qq1-06-ycb" secondAttribute="bottom" id="ttu-2L-6g1"/>
-                <constraint firstAttribute="trailing" secondItem="Qq1-06-ycb" secondAttribute="trailing" id="wjB-5U-mcu"/>
+                <constraint firstAttribute="trailing" secondItem="Qq1-06-ycb" secondAttribute="trailing" constant="75" id="wjB-5U-mcu"/>
                 <constraint firstItem="q4e-9g-zji" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="ysE-T8-Yke"/>
                 <constraint firstItem="Chi-Tp-qkq" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="zKo-ds-nNu"/>
             </constraints>
@@ -97,6 +97,7 @@
     </objects>
     <resources>
         <image name="Back" width="18" height="16"/>
+        <image name="Clouds" width="300" height="63"/>
         <image name="Home" width="20" height="20"/>
         <image name="Logo" width="102" height="22"/>
     </resources>

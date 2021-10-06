@@ -144,15 +144,26 @@ class PredictTeamView: UIView {
             DispatchQueue.main.async {
                 
                 var daysCount = ""
-                
-                if value == 0 {
-                    daysCount = "Today".localized()
-                } else if value > 1 {
-                    daysCount = "\(value)" + "day(s)".localized()
+                if (StoreManager.shared.language.lowercased() == "ar".lowercased()) {
+                    if value == 0 {
+                        daysCount = "Today".localized()
+                    } else if value > 1 {
+                        daysCount = "\(value) " + "day(s)".localized()
+                    } else {
+                        daysCount = "\(value) " + "day".localized()
+                    }
+                 
                 } else {
-                    daysCount = "\(value)" + "day".localized()
+                    if value == 0 {
+                        daysCount = "Today".localized()
+                    } else if value > 1 {
+                        daysCount = "\(value)" + "day(s)".localized()
+                    } else {
+                        daysCount = "\(value)" + "day".localized()
+                    }
+                 
                 }
-             
+
                // let expDate = Utility.convertStringToDate(date: date)
                 
                 let calendar = Calendar.current
@@ -187,18 +198,35 @@ class PredictTeamView: UIView {
                     currentMin = "\(abs(min))"
                 }
                 
-                if matchDate < Date() {
-                    self.timeLabel.text = "Expired on".localized() + " \(currentHours)" + "hr".localized() + " \(currentMin)" + "mins".localized()
-                } else {
-                    if value == 0 {
-                        self.timeLabel.text = "Today, Starts in".localized() + " \(currentHours)" + "hr".localized() + " \(currentMin)" + "mins".localized()
-
+                if (StoreManager.shared.language.lowercased() == "ar".lowercased()) {
+                    if matchDate < Date() {
+                        self.timeLabel.text = "Expired on".localized() + " \(currentHours) " + "hr".localized() + " \(currentMin) " + "mins".localized()
                     } else {
-                        self.timeLabel.text = "Starts in".localized() + " \(daysCount)" + " \(currentHours)" + "hr".localized() + " \(currentMin)" + "mins".localized()
+                        if value == 0 {
+                            self.timeLabel.text = "Today, Starts in".localized() + " \(currentHours) " + "hr".localized() + " \(currentMin) " + "mins".localized()
 
+                        } else {
+                            self.timeLabel.text = "Starts in".localized() + " \(daysCount) " + " \(currentHours) " + "hr".localized() + " \(currentMin) " + "mins".localized()
+
+                        }
                     }
-                }
 
+
+                } else {
+                    if matchDate < Date() {
+                        self.timeLabel.text = "Expired on".localized() + " \(currentHours)" + "hr".localized() + " \(currentMin)" + "mins".localized()
+                    } else {
+                        if value == 0 {
+                            self.timeLabel.text = "Today, Starts in".localized() + " \(currentHours)" + "hr".localized() + " \(currentMin)" + "mins".localized()
+
+                        } else {
+                            self.timeLabel.text = "Starts in".localized() + " \(daysCount)" + " \(currentHours)" + "hr".localized() + " \(currentMin)" + "mins".localized()
+
+                        }
+                    }
+
+
+                }
 
 
                 //self.timeLabel.text = daysCount + " \(Utility.secondsToHoursMinutesSeconds(seconds: Utility.convertStringIntoDate(date: date)).0) " + "hr".localized() + " \(Utility.secondsToHoursMinutesSeconds(seconds: Utility.convertStringIntoDate(date: date)).1) " + "min".localized()
