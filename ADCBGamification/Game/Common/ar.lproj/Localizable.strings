@@ -27,7 +27,7 @@
 "h" = "ساعه";
 "min" = "دقيقة";
 "sec" = "ثانية";
-"hr" = "ساعة";
+"hr" = "ساعة و";
 "Choose Contact" = "اختر جهة الاتصال من هاتفك المتحرك";
 "Enter a contact name or mobile number" = "أدخل اسم أو رقم الهاتف المتحرك الخاص بجهة الاتصال";
 "Invite" = "أرسل الدعوة";
@@ -68,7 +68,7 @@
 "Please eneter a valid mobile number" = "يرجى إدخال رقم هاتف محمول صحيح";
 "Invite" = "أرسل الدعوة";
 "Starts in" = "يبدأ في";
-"Today, Starts in" = "اليوم ، يبدأ في";
+"Today, Starts in" = "اليوم، تبدأ المباراة بعد";
 "mins" = "دقيقة";
 "Thank you for your participation" = "أشكركم على مشاركتكم";
 "Winner will be announced shortly and you will receive a notification on the App. Stay tuned, enjoy the game !" = "سيتم الإعلان عن الفائز قريبًا وستتلقى إشعارًا على التطبيق. لا تنزعج ، استمتع باللعبة!";
