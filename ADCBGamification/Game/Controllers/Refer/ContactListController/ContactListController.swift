@@ -418,7 +418,7 @@ class ContactListController: UIViewController, UITextFieldDelegate {
                         self.leftMessageLblTopConstraints.constant = -30
                         self.verifyMessageview.isHidden = false
                         self.errorMsg = " "
-                        self.shareContactLbl.text = "Sorry, this contact is already a Simplylife user".localized()
+                        self.shareContactLbl.text = "Sorry, this contact is Simplylife user".localized()
                         self.leftMessageLbl.text = "Select another contact to refer".localized()
                         self.footerHeight = 0
                         self.contactTableView.reloadData()
