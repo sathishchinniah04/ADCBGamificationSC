@@ -15,12 +15,14 @@ class MatchListController: UIViewController, PredictDateDelegate {
     @IBOutlet weak var matchTableView: UITableView!
     @IBOutlet weak var activityIndicatorView: UIActivityIndicatorView!
     @IBOutlet weak var bgCloudImage: UIImageView!
-  
+//    @IBOutlet weak var visualTopView: UIVisualEffectView!
+    
     var predictGame = PredictGame()
     var game: Games?
     var tournaments: [Tournaments]?
     override func viewDidLoad() {
         super.viewDidLoad()
+//        visualTopView.isHidden = true
         registorCell()
         tableSetup()
         getMatchList()
@@ -98,7 +100,7 @@ extension MatchListController: UITableViewDelegate, UITableViewDataSource {
     func moveToController(index: IndexPath) {
         let controller = UIStoryboard(name: "Predict", bundle: Bundle(for: Self.self)).instantiateViewController(withIdentifier: "PredictMatchController") as! PredictMatchController
         let event = tournaments?[index.section].eventList?[index.row]
-        
+        //self.visualTopView.isHidden = false
         controller.eventsList = event
         controller.selectedIndex = index.row
         controller.game = game

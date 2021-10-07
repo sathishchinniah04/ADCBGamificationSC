@@ -35,6 +35,31 @@ class PredictMatchController: UIViewController {
             topSeperatorLbl.layer.cornerRadius = 3.5
         }
     }
+    
+    @IBOutlet weak var cancelView: UIView! {
+        didSet {
+            cancelView.clipsToBounds = true
+            cancelView.layer.cornerRadius = 20
+            if #available(iOS 11.0, *) {
+                cancelView.layer.maskedCorners = [.layerMaxXMinYCorner, .layerMinXMinYCorner]
+            } else {
+                // Fallback on earlier versions
+            }
+        }
+    }
+    
+    @IBOutlet weak var cancelBtn: UIButton! {
+        didSet {
+            cancelBtn.backgroundColor = .white
+            cancelBtn.addShadowButton(cornerRadius: 10, shadowRadius: 2, opacity: 0.2, color: .lightGray)
+        }
+    }
+    
+    @IBOutlet weak var cancelTopMessage: UILabel!
+    @IBOutlet weak var okayBtn: UIButton!
+    @IBOutlet weak var topView: UIView!
+    
+    
     var delegate: PredictDateDelegate? = nil
     var selectedEvent: EventsList?
     var eventsList: EventsList?
@@ -47,6 +72,7 @@ class PredictMatchController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         initialSetup()
+        cancelView.isHidden = true
         navInitialSetup()
         tableSetup()
         contentViewTopConstraint.constant = 80
@@ -106,8 +132,12 @@ class PredictMatchController: UIViewController {
                
             case .down:
                 print("Gesture direction: Down")
-               
-                    self.dismiss(animated: true, completion: nil)
+                tableView.isHidden = true
+                contentView.backgroundColor = .clear
+                buttonContainerView.isHidden = true
+                topView.isHidden = true
+                cancelView.isHidden = false
+                    //self.dismiss(animated: true, completion: nil)
                 
             default:
                 print("Unrecognized Gesture Direction")
@@ -167,6 +197,18 @@ class PredictMatchController: UIViewController {
         default:
             break
         }
+    }
+    
+    
+    @IBAction func cancelBtnAction(_ sender: Any) {
+        tableView.isHidden = false
+        buttonContainerView.isHidden = false
+        topView.isHidden = false
+        cancelView.isHidden = true
+    }
+    
+    @IBAction func okayBtnAction(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
     }
     
     @IBAction func submitAnswer() {
