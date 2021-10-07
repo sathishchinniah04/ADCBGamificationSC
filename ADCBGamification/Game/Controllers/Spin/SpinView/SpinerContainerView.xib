@@ -85,7 +85,7 @@
                     </constraints>
                 </view>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xYT-lm-Iws">
-                    <rect key="frame" x="30" y="787" width="354" height="45"/>
+                    <rect key="frame" x="30" y="811" width="354" height="45"/>
                     <color key="backgroundColor" red="0.13068386909999999" green="0.1246742383" blue="0.3787754774" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="45" id="Igq-k8-AiJ"/>
@@ -102,7 +102,7 @@
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="xYT-lm-Iws" secondAttribute="bottom" constant="30" id="3sQ-y3-zxE"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="xYT-lm-Iws" secondAttribute="bottom" constant="6" id="3sQ-y3-zxE"/>
                 <constraint firstItem="xYT-lm-Iws" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="OQR-k5-MLO"/>
                 <constraint firstItem="BsQ-dP-gKk" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="REg-Je-MGo"/>
                 <constraint firstItem="BsQ-dP-gKk" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" constant="-45" id="Ydq-wA-lSo"/>

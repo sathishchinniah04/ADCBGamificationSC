@@ -17,6 +17,25 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N1g-PV-rEc">
+                                <rect key="frame" x="30" y="772" width="354" height="50"/>
+                                <color key="backgroundColor" red="0.1333333333" green="0.12941176469999999" blue="0.39607843139999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="FLc-sv-Hzf"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                                <state key="normal" title="Spin">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="spinBtnAction:" destination="INV-Uo-N1h" eventType="touchUpInside" id="B9B-mp-0C3"/>
+                                </connections>
+                            </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CurveClip" translatesAutoresizingMaskIntoConstraints="NO" id="O5H-9N-Ue9">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="448"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -51,7 +70,7 @@
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                             <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fIY-xv-g70">
-                                <rect key="frame" x="0.0" y="89" width="414" height="773"/>
+                                <rect key="frame" x="0.0" y="89" width="414" height="699"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                             <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="otW-Vk-P3R">
@@ -85,11 +104,13 @@
                             <constraint firstItem="1au-yG-VVq" firstAttribute="centerX" secondItem="2DE-sR-4BU" secondAttribute="centerX" id="9Ig-wR-aeO"/>
                             <constraint firstItem="st0-RW-x1X" firstAttribute="leading" secondItem="peg-KZ-704" secondAttribute="leading" id="Cfg-A6-1c0"/>
                             <constraint firstItem="1au-yG-VVq" firstAttribute="centerY" secondItem="2DE-sR-4BU" secondAttribute="centerY" id="Eex-H7-I2m"/>
-                            <constraint firstItem="peg-KZ-704" firstAttribute="bottom" secondItem="fIY-xv-g70" secondAttribute="bottom" id="FYx-7v-906"/>
+                            <constraint firstItem="peg-KZ-704" firstAttribute="bottom" secondItem="fIY-xv-g70" secondAttribute="bottom" constant="74" id="FYx-7v-906"/>
                             <constraint firstItem="peg-KZ-704" firstAttribute="trailing" secondItem="fIY-xv-g70" secondAttribute="trailing" id="HCY-Ku-Bq8"/>
                             <constraint firstItem="7pc-Ro-PzS" firstAttribute="top" secondItem="O5H-9N-Ue9" secondAttribute="bottom" constant="-299" id="JcM-fl-xM4"/>
                             <constraint firstItem="vJN-O7-seS" firstAttribute="leading" secondItem="peg-KZ-704" secondAttribute="leading" id="Jpl-Wq-fbj"/>
+                            <constraint firstItem="peg-KZ-704" firstAttribute="bottom" secondItem="N1g-PV-rEc" secondAttribute="bottom" constant="40" id="KyI-nl-9p6"/>
                             <constraint firstItem="vJN-O7-seS" firstAttribute="top" secondItem="peg-KZ-704" secondAttribute="top" id="Llh-e3-3db"/>
+                            <constraint firstItem="N1g-PV-rEc" firstAttribute="leading" secondItem="peg-KZ-704" secondAttribute="leading" constant="30" id="OVL-m3-gEw"/>
                             <constraint firstItem="otW-Vk-P3R" firstAttribute="centerX" secondItem="2DE-sR-4BU" secondAttribute="centerX" id="WKj-xY-sdZ"/>
                             <constraint firstItem="peg-KZ-704" firstAttribute="bottom" secondItem="0gg-gf-sLk" secondAttribute="bottom" constant="85" id="XNu-Md-Bfc"/>
                             <constraint firstItem="wNb-S9-CRs" firstAttribute="leading" secondItem="peg-KZ-704" secondAttribute="leading" constant="30" id="Ycx-0X-YRR"/>
@@ -97,6 +118,7 @@
                             <constraint firstItem="O5H-9N-Ue9" firstAttribute="top" secondItem="2DE-sR-4BU" secondAttribute="top" id="avL-4s-3KO"/>
                             <constraint firstItem="peg-KZ-704" firstAttribute="trailing" secondItem="O5H-9N-Ue9" secondAttribute="trailing" id="cj8-00-lTf"/>
                             <constraint firstItem="st0-RW-x1X" firstAttribute="top" secondItem="vJN-O7-seS" secondAttribute="bottom" constant="22" id="cpU-6b-8C3"/>
+                            <constraint firstItem="peg-KZ-704" firstAttribute="trailing" secondItem="N1g-PV-rEc" secondAttribute="trailing" constant="30" id="dZ2-Cf-I2A"/>
                             <constraint firstItem="SGV-Kl-EeD" firstAttribute="centerX" secondItem="2DE-sR-4BU" secondAttribute="centerX" id="eW4-Jf-JSq"/>
                             <constraint firstItem="peg-KZ-704" firstAttribute="bottom" secondItem="wNb-S9-CRs" secondAttribute="bottom" constant="40" id="fBa-Fh-GSs"/>
                             <constraint firstItem="O5H-9N-Ue9" firstAttribute="height" secondItem="2DE-sR-4BU" secondAttribute="height" multiplier="0.5" id="fOO-UA-MxV"/>
@@ -117,6 +139,7 @@
                         <outlet property="expireView" destination="wNb-S9-CRs" id="o8M-YK-KvH"/>
                         <outlet property="homeAnimationStaticView" destination="7pc-Ro-PzS" id="xzl-uE-jtO"/>
                         <outlet property="lottiSpinAnimationView" destination="0gg-gf-sLk" id="FqL-Re-EAV"/>
+                        <outlet property="spinBtn" destination="N1g-PV-rEc" id="B0j-PL-Yha"/>
                         <outlet property="spinDummyImgView" destination="SGV-Kl-EeD" id="lj1-hE-UfA"/>
                         <outlet property="spinHomeBgView" destination="st0-RW-x1X" id="SHD-9S-wvV"/>
                     </connections>

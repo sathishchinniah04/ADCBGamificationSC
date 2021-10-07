@@ -20,7 +20,7 @@ class SpinHomeController: UIViewController {
     @IBOutlet weak var activityIndicatorView: UIActivityIndicatorView!
     @IBOutlet weak var bgCloudImage: UIImageView!
     @IBOutlet weak var spinHomeBgView: UIImageView!
-    //@IBOutlet weak var spinBtn: UIButton!
+    @IBOutlet weak var spinBtn: UIButton!
     
     var spinerView = SpinerContainerHelper()
     var game: Games?
@@ -39,7 +39,7 @@ class SpinHomeController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()    
         self.initialSetup()
-        //self.spinBtn.setTitle("Spin".localized(), for: .normal)
+        self.spinBtn.setTitle("Spin".localized(), for: .normal)
         self.spinDummyImgView.isHidden = true
         self.homeAnimationStaticView.isHidden = true
        // self.animationSetUp()
@@ -91,7 +91,7 @@ class SpinHomeController: UIViewController {
     @IBAction func spinBtnAction(_ sender: Any) {
         
         self.spinNowTapped = true
-        //self.spinBtn.isHidden = true
+        self.spinBtn.isHidden = true
         self.spinerView.startRotate()
         self.assignRewards()
         if let ind = self.gameIndex {
@@ -135,7 +135,7 @@ class SpinHomeController: UIViewController {
     
     
     func initialSetup() {
-        //self.spinBtn.isHidden = true
+        self.spinBtn.isHidden = true
         containerView.backgroundColor = UIColor.clear
         containerView.isHidden = true
         spinerView.hideSpinView()
@@ -153,12 +153,26 @@ class SpinHomeController: UIViewController {
         self.spinDummyImgView.alpha = 1.0
         self.spinerView.enableSpinButton(hide: true)
         expireView.populateView(isShowTerms: false, game: self.game) {
-            self.spinHomeBgView.isHidden = true
+            if self.expireView.genericButton.button.titleLabel?.text == "Play".localized() {
+                self.expireView.setupButtonName(name: "Spin".localized())
+                self.homeAnimationStaticView.isHidden = true
+                (self.con as? CustomNavViewController)?.changeOnlyTitle(title: "Spin & Win".localized())
+                self.spinHomeBgView.isHidden = true
+                self.spinDummyImgView.isHidden = false
+                self.containerView.isHidden = false
+                self.expireView.isHidden = true
+                self.spinBtn.isHidden = false
+                self.nukeAllAnimations()
+                self.wheelView?.layer.removeAllAnimations()
+            } else {
+                
+            }
+            
+           /* self.spinHomeBgView.isHidden = true
             self.spinDummyImgView.isHidden = false
             self.spinNowTapped = true
             self.nukeAllAnimations()
             self.wheelView?.layer.removeAllAnimations()
-            //self.wheelView?.layer.removeFromSuperlayer()
             self.homeAnimationStaticView.isHidden = true
             (self.con as? CustomNavViewController)?.changeOnlyTitle(title: "Spin & Win".localized())
             self.scaleToOrginalSize()
@@ -168,14 +182,13 @@ class SpinHomeController: UIViewController {
                 CallBack.shared.handle?(.gamePlayed(ind))
             }
             UIView.animate(withDuration: 0.8) {
-                //self.spinDummyImgView.isHidden = true
                 self.spinDummyImgView.alpha = 1.0
             } completion: { (done) in
                 print("Animation done")
             }
             self.spinerView.unHideSpinView()
             self.containerView.isHidden = false
-            self.expireView.isHidden = true
+            self.expireView.isHidden = true */
             
         }
     }
@@ -197,7 +210,7 @@ class SpinHomeController: UIViewController {
             print("Spin button tapped")
             self.assignRewards()
         case .view(let spinView, let wContainerView):
-            self.scalingSpinerView(v: spinView, wContaner:wContainerView)
+//            self.scalingSpinerView(v: spinView, wContaner:wContainerView)
             break;
         default:
             break
