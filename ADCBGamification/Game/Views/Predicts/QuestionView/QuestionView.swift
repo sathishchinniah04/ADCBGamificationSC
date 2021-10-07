@@ -245,8 +245,13 @@ class QuestionView: UIView {
         questionLabel.text = info.questionList?[index].question
         
         let cnt = "\(index + 1)"
-        print(cnt.convertedDigitsToLocale(Locale(identifier: "AR")))
-        noOfQuesLabel.text = "Question".localized() + cnt.convertedDigitsToLocale(Locale(identifier: "AR"))
+
+        if (StoreManager.shared.language.lowercased() == "ar".lowercased()) {
+            noOfQuesLabel.text = "Question".localized() + cnt.convertedDigitsToLocale(Locale(identifier: "AR"))
+        } else {
+            noOfQuesLabel.text = "Question".localized() + cnt
+        }
+       
 
         
     }
