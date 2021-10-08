@@ -20,6 +20,8 @@ class ADCBGameListController: UIViewController {
         super.viewDidLoad()
         UIFont.loadMyFonts
         UIApplication.configureFacebookId
+        NotificationCenter.default.addObserver(self, selector: #selector(self.reloadGames(notification:)), name: Notification.Name("ReloadGameList"), object: nil)
+
         if #available(iOS 13.0, *) {
             //UIApplication.shared.windows.over
            // overrideUserInterfaceStyle = .light
@@ -34,6 +36,11 @@ class ADCBGameListController: UIViewController {
         playerGameHandler()
         checkLeftToRight()
         self.bgCloudImage.image = UIImage(named: "Clouds", in: Bundle(for: CustomNavView.self), compatibleWith: nil)
+    }
+    
+    @objc func reloadGames(notification: Notification) {
+        activityIndicatorView.startAnimating()
+        getResponce()
     }
     
     func navigationViewCornerRadius() {
@@ -108,6 +115,11 @@ class ADCBGameListController: UIViewController {
             
         }
     }
+    
+    deinit {
+      NotificationCenter.default.removeObserver(self, name: Notification.Name("ReloadGameList"), object: nil)
+    }
+    
     
     func moveToController(sName: String, id: String, gameType: String, game: Games, index: IndexPath) {
         let contr = UIStoryboard(name: sName, bundle: Bundle(for: Self.self)).instantiateViewController(withIdentifier: id)
@@ -204,6 +216,8 @@ func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath:
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForFooterInSection section: Int) -> CGSize {
         return CGSize(width: collectionView.frame.width, height: 30)
     }
+
+    
 
     
 }

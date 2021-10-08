@@ -68,6 +68,7 @@ class MatchListController: UIViewController, PredictDateDelegate {
                 CallBack.shared.handle?(.homeAction)
             }
         } else {
+            NotificationCenter.default.post(name: Notification.Name("ReloadGameList"), object: nil)
             self.navigationController?.popToRootViewController(animated: true)
         }
 
