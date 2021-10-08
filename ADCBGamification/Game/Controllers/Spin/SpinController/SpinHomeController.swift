@@ -43,10 +43,10 @@ class SpinHomeController: UIViewController {
         self.spinDummyImgView.isHidden = true
         self.homeAnimationStaticView.isHidden = true
        // self.animationSetUp()
+       // activityIndicatorView.startAnimating()
         if let gam = game {
             updateOnResponce(game: gam, error: nil)
         }
-        activityIndicatorView.startAnimating()
         checkLeftToRight()
         self.bgCloudImage.image = UIImage(named: "Clouds", in: Bundle(for: CustomNavView.self), compatibleWith: nil)
 
@@ -55,13 +55,29 @@ class SpinHomeController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         print("viewWillAppear")
+        activityIndicatorView.startAnimating()
+        self.expireView.genericButton.button.isUserInteractionEnabled = false
         con = self.navigationController
        // let con = self.navigationController
         (con as? CustomNavViewController)?.changeTitleAndSubTitle(title: nil, subTitle: nil)
         (con as? CustomNavViewController)?.showLogo()
+        self.spinerView.startRotate()
+        //self.expireView.genericButton.alpha = 0.5
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+            print("spin going to stop")
+            self.spinerView.stopAnimationAtIndex(achivementId: "1") { (stopped) in
+                if stopped {
+                    self.expireView.genericButton.alpha = 1.0
+                    self.activityIndicatorView.stopAnimating()
+                    self.expireView.genericButton.button.isUserInteractionEnabled = true
+                }
+
+            }
+        }
         if !isDirectLoad {return}
 
     }
+
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         //con = self.navigationController
@@ -123,7 +139,7 @@ class SpinHomeController: UIViewController {
     
     func handlerBasedOnResponce(game: Games) {
         print("Updated from game list type = \(game.gameType)  gameId  = \(game.gameId ?? "")")
-        activityIndicatorView.stopAnimating()
+       // activityIndicatorView.stopAnimating()
         expireView.isUserInteractionEnabled = true
         self.game = game
         self.getSpinOffers()
@@ -148,6 +164,7 @@ class SpinHomeController: UIViewController {
         expireView.isUserInteractionEnabled = false
         
     }
+
     
     func populateExpireView(game: Games) {
         self.spinDummyImgView.alpha = 1.0
@@ -219,7 +236,7 @@ class SpinHomeController: UIViewController {
     
     func scalingSpinerView(v: UIView, wContaner: UIView) {
         self.spinDummyImgView.isHidden = true
-        self.activityIndicatorView.stopAnimating()
+       // self.activityIndicatorView.stopAnimating()
         let v = v
         wheelView = wContaner
         let scaleX = spinDummyImgView.frame.size.width/v.frame.size.width
@@ -504,7 +521,7 @@ class SpinHomeController: UIViewController {
             } else {
                 self.onFailure(info: data)
             }
-            self.activityIndicatorView.stopAnimating()
+           // self.activityIndicatorView.stopAnimating()
         }
     }
     func onSuccess(info: SpinOffers) {
