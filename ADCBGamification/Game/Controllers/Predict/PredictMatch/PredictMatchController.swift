@@ -150,6 +150,9 @@ class PredictMatchController: UIViewController {
         self.submitButton.backgroundColor = #colorLiteral(red: 0.9176470588, green: 0.9176470588, blue: 0.9176470588, alpha: 1)
         self.submitButton.setTitleColor(#colorLiteral(red: 0.6274509804, green: 0.6274509804, blue: 0.6274509804, alpha: 1), for: .normal)
         self.submitButton.isUserInteractionEnabled = false
+        self.cancelBtn.setTitle("No".localized(), for: .normal)
+        self.submitButton.setTitle("Yes".localized(), for: .normal)
+        self.cancelTopMessage.text = "Are you sure you want to close the game?".localized()
     }
     
     func tableSetup() {
