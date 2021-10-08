@@ -8,7 +8,7 @@
 import UIKit
 
 protocol PredictDateDelegate {
-    func predictAction()
+    func predictAction(_ isHomeAction: Bool)
 }
 
 class PredictMatchController: UIViewController {
@@ -59,7 +59,7 @@ class PredictMatchController: UIViewController {
     @IBOutlet weak var okayBtn: UIButton!
     @IBOutlet weak var topView: UIView!
     
-    
+    var nav : UINavigationController?
     var delegate: PredictDateDelegate? = nil
     var selectedEvent: EventsList?
     var eventsList: EventsList?
@@ -86,7 +86,7 @@ class PredictMatchController: UIViewController {
         self.submitButton.setSizeFont(sizeFont: (StoreManager.shared.language == GameLanguage.AR.rawValue) ?  16.0 : 16.0, fontFamily: (StoreManager.shared.language == GameLanguage.AR.rawValue) ? "Tajawal-Medium" : "OpenSans-SemiBold")
         
         let con = self.navigationController
- 
+        nav = self.navigationController
         (con as? CustomNavViewController)?.changeOnlyTitle(title: "Predict & Win".localized())
         
         
@@ -147,6 +147,7 @@ class PredictMatchController: UIViewController {
 
     func initialSetup() {
         //self.submitButton.alpha = 0.2
+        self.navigationController?.navigationBar.backgroundColor = .clear
         self.submitButton.backgroundColor = #colorLiteral(red: 0.9176470588, green: 0.9176470588, blue: 0.9176470588, alpha: 1)
         self.submitButton.setTitleColor(#colorLiteral(red: 0.6274509804, green: 0.6274509804, blue: 0.6274509804, alpha: 1), for: .normal)
         self.submitButton.isUserInteractionEnabled = false
@@ -154,6 +155,17 @@ class PredictMatchController: UIViewController {
         self.submitButton.setTitle("Yes".localized(), for: .normal)
         self.cancelTopMessage.text = "Are you sure you want to close the game?".localized()
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.setNavigationBarHidden(true, animated: animated)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        self.navigationController?.setNavigationBarHidden(false, animated: animated)
+    }
+    
     
     func tableSetup() {
         tableView.delegate = self
@@ -171,9 +183,7 @@ class PredictMatchController: UIViewController {
     }
     
     func onSuccess() {
-       
-            self.predictSuccessHelper.show(event: self.selectedEvent, complition: self.predictSuccessPopupHandler(action:))
-
+        self.predictSuccessHelper.show(event: self.selectedEvent, complition: self.predictSuccessPopupHandler(action:))
     }
     
     func predictSuccessPopupHandler(action: PredictSuccessViewAction) {
@@ -181,7 +191,7 @@ class PredictMatchController: UIViewController {
         case .homePage:
             self.predictSuccessHelper.animateAndRemove()
             self.dismiss(animated: false) {
-                self.delegate?.predictAction()
+                self.delegate?.predictAction(true)
             }
 //            self.dismiss(animated: true) {
 //                CallBack.shared.handle?(.homeAction)
@@ -194,8 +204,8 @@ class PredictMatchController: UIViewController {
             self.openActivityController(text: message)
         case .gamePage:
             self.predictSuccessHelper.animateAndRemove()
-            self.dismiss(animated: true) {
-                self.navigationController?.popViewController(animated: true)
+            self.dismiss(animated: false) {
+                self.delegate?.predictAction(false)
             }
         default:
             break

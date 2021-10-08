@@ -61,10 +61,16 @@ class MatchListController: UIViewController, PredictDateDelegate {
         self.matchTableView.reloadData()
     }
     
-    func predictAction() {
-        self.dismiss(animated: true) {
-            CallBack.shared.handle?(.homeAction)
+    func predictAction(_ isHomeAction: Bool) {
+        
+        if isHomeAction {
+            self.dismiss(animated: true) {
+                CallBack.shared.handle?(.homeAction)
+            }
+        } else {
+            self.navigationController?.popToRootViewController(animated: true)
         }
+
     }
     
     func onFailure(info: PredictGame) {
@@ -105,9 +111,11 @@ extension MatchListController: UITableViewDelegate, UITableViewDataSource {
         controller.selectedIndex = index.row
         controller.game = game
         controller.delegate = self
+        controller.nav = self.navigationController
         controller.modalPresentationStyle = .overFullScreen
         //self.present(controller, animated: true, completion: nil)
-        self.present(controller, animated: true, completion: nil)
+        let navController = UINavigationController(rootViewController: controller)
+        self.present(navController, animated: true, completion: nil)
         //self.navigationController?.pushViewController(controller, animated: true)
     }
 }
