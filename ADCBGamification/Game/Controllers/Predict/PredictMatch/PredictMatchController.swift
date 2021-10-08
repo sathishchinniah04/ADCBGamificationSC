@@ -208,6 +208,12 @@ class PredictMatchController: UIViewController {
         buttonContainerView.isHidden = false
         topView.isHidden = false
         cancelView.isHidden = true
+        contentView.backgroundColor = #colorLiteral(red: 0.9725490196, green: 0.9725490196, blue: 0.9725490196, alpha: 1)
+        
+//        tableView.isHidden = true
+//        buttonContainerView.isHidden = true
+//        topView.isHidden = true
+//        cancelView.isHidden = false
     }
     
     @IBAction func okayBtnAction(_ sender: Any) {
