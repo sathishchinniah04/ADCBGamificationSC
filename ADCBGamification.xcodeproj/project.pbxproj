@@ -81,7 +81,6 @@
 		3320FFD52682EBC4001809AA /* SpinerContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3320FF8E2682EBC4001809AA /* SpinerContainerView.swift */; };
 		3320FFD62682EBC4001809AA /* SpinerContainerHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3320FF8F2682EBC4001809AA /* SpinerContainerHelper.swift */; };
 		3320FFD72682EBC4001809AA /* SpinerContainerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3320FF902682EBC4001809AA /* SpinerContainerView.xib */; };
-		3320FFD82682EBC4001809AA /* SpinHomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3320FF922682EBC4001809AA /* SpinHomeController.swift */; };
 		3320FFD92682EBC4001809AA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3320FF962682EBC4001809AA /* Assets.xcassets */; };
 		3320FFDA2682EBC4001809AA /* TTFortuneWheel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3320FF972682EBC4001809AA /* TTFortuneWheel.swift */; };
 		3320FFDB2682EBC4001809AA /* SpinningWheelAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3320FF982682EBC4001809AA /* SpinningWheelAnimator.swift */; };
@@ -496,6 +495,7 @@
 		F5F649012704AFEE00F633D4 /* FacebookShare in Frameworks */ = {isa = PBXBuildFile; productRef = F5F649002704AFEE00F633D4 /* FacebookShare */; };
 		F5F649032704AFEE00F633D4 /* FacebookCore in Frameworks */ = {isa = PBXBuildFile; productRef = F5F649022704AFEE00F633D4 /* FacebookCore */; };
 		F5F64907270C8CA800F633D4 /* ViewController1.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5F64906270C8CA700F633D4 /* ViewController1.swift */; };
+		F5F6490927102ED800F633D4 /* SpinMainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5F6490827102ED600F633D4 /* SpinMainVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -587,7 +587,6 @@
 		3320FF8E2682EBC4001809AA /* SpinerContainerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpinerContainerView.swift; sourceTree = "<group>"; };
 		3320FF8F2682EBC4001809AA /* SpinerContainerHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpinerContainerHelper.swift; sourceTree = "<group>"; };
 		3320FF902682EBC4001809AA /* SpinerContainerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SpinerContainerView.xib; sourceTree = "<group>"; };
-		3320FF922682EBC4001809AA /* SpinHomeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpinHomeController.swift; sourceTree = "<group>"; };
 		3320FF962682EBC4001809AA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3320FF972682EBC4001809AA /* TTFortuneWheel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TTFortuneWheel.swift; sourceTree = "<group>"; };
 		3320FF982682EBC4001809AA /* SpinningWheelAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpinningWheelAnimator.swift; sourceTree = "<group>"; };
@@ -854,6 +853,7 @@
 		F5A89F7726CBA9CD00685428 /* ca.pem */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ca.pem; sourceTree = "<group>"; };
 		F5A89F7826CBA9CD00685428 /* key.pem */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = key.pem; sourceTree = "<group>"; };
 		F5F64906270C8CA700F633D4 /* ViewController1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController1.swift; sourceTree = "<group>"; };
+		F5F6490827102ED600F633D4 /* SpinMainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpinMainVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1211,7 +1211,7 @@
 		3320FF912682EBC4001809AA /* SpinController */ = {
 			isa = PBXGroup;
 			children = (
-				3320FF922682EBC4001809AA /* SpinHomeController.swift */,
+				F5F6490827102ED600F633D4 /* SpinMainVC.swift */,
 			);
 			path = SpinController;
 			sourceTree = "<group>";
@@ -2625,7 +2625,6 @@
 				33FC31C02697129100868D9E /* SpinSuccessView.swift in Sources */,
 				F58A654526B22CCB00D5713F /* LayerFontProvider.swift in Sources */,
 				F58A65FF26B22CCB00D5713F /* KeyframeExtensions.swift in Sources */,
-				3320FFD82682EBC4001809AA /* SpinHomeController.swift in Sources */,
 				F58A65DF26B22CCB00D5713F /* Asset.swift in Sources */,
 				F58A653326B22CCB00D5713F /* CompositionLayer.swift in Sources */,
 				F58A652B26B22CCB00D5713F /* SizeValueProvider.swift in Sources */,
@@ -2732,6 +2731,7 @@
 				3320FFBD2682EBC4001809AA /* IQKeyboardManager+OrientationNotification.swift in Sources */,
 				33EDB0EB2692CE870040DCD4 /* CustomNavView.swift in Sources */,
 				F58A652926B22CCB00D5713F /* FloatValueProvider.swift in Sources */,
+				F5F6490927102ED800F633D4 /* SpinMainVC.swift in Sources */,
 				33FC31A72695B18800868D9E /* GameListTableViewCell.swift in Sources */,
 				3320FFB92682EBC4001809AA /* IQKeyboardManager+Position.swift in Sources */,
 				3320FFCA2682EBC4001809AA /* NeumorphicButton.swift in Sources */,

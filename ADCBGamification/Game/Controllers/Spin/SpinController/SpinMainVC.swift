@@ -8,7 +8,7 @@
 import UIKit
 
 
-class SpinHomeController: UIViewController {
+class SpinMainVC: UIViewController {
     
     @IBOutlet weak var expireView: ExpireView!
     @IBOutlet weak var containerView: UIView!
@@ -37,8 +37,9 @@ class SpinHomeController: UIViewController {
     private var spinAnimationView: AnimationView?
     
     override func viewDidLoad() {
-        super.viewDidLoad()    
+        super.viewDidLoad()
         self.initialSetup()
+        (con as? CustomNavViewController)?.nav.disableBackAction = self.expireView.isHidden
         self.spinBtn.setTitle("Spin".localized(), for: .normal)
         self.spinDummyImgView.isHidden = true
         self.homeAnimationStaticView.isHidden = true
@@ -83,12 +84,30 @@ class SpinHomeController: UIViewController {
         //con = self.navigationController
        // (con as? CustomNavViewController)?.changeTitleAndSubTitle(title: nil, subTitle: nil)
     }
+    
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
+    
         if isDirectLoad {return}
+        
         print("viewWillDisappear")
+        
         con = self.navigationController
         
+//        if self.isMovingFromParent {
+//
+//            if self.expireView.isHidden {
+//                self.spinHomeBgView.isHidden = false
+//                self.spinDummyImgView.isHidden = true
+//                self.containerView.isHidden = true
+//                self.expireView.isHidden = false
+//                self.spinBtn.isHidden = true
+//                self.nukeAllAnimations()
+//                self.wheelView?.layer.removeAllAnimations()
+//            } else {
+//                print("first screen")
+//            }
+//        }
       //  (con as? CustomNavViewController)?.hideBackButton(isHide: false)
     }
     
@@ -171,16 +190,20 @@ class SpinHomeController: UIViewController {
         self.spinerView.enableSpinButton(hide: true)
         expireView.populateView(isShowTerms: false, game: self.game) {
             if self.expireView.genericButton.button.titleLabel?.text == "Play".localized() {
-                self.expireView.setupButtonName(name: "Spin".localized())
+ 
+              self.expireView.setupButtonName(name: "Spin".localized())
                 self.homeAnimationStaticView.isHidden = true
                 (self.con as? CustomNavViewController)?.changeOnlyTitle(title: "Spin & Win".localized())
                 self.spinHomeBgView.isHidden = true
                 self.spinDummyImgView.isHidden = false
                 self.containerView.isHidden = false
                 self.expireView.isHidden = true
+                (self.con as? CustomNavViewController)?.nav.disableBackAction = self.expireView.isHidden
                 self.spinBtn.isHidden = false
                 self.nukeAllAnimations()
                 self.wheelView?.layer.removeAllAnimations()
+                
+                
             } else {
                 
             }

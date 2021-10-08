@@ -114,8 +114,8 @@ class ADCBGameListController: UIViewController {
         if gameType == "PredictNWin" {
             (contr as? PredictIntroController)?.game = game
         } else if gameType == "SpinNWin" {
-            (contr as? SpinHomeController)?.game = game
-            (contr as? SpinHomeController)?.gameIndex = index
+            (contr as? SpinMainVC)?.game = game
+            (contr as? SpinMainVC)?.gameIndex = index
         } else if gameType == "ReferNWin" {
             (contr as? ReferIntroController)?.game = game
         }
@@ -124,7 +124,7 @@ class ADCBGameListController: UIViewController {
     
     func getControllerRef(gameType: String, game: Games, index: IndexPath) {
         if gameType == "SpinNWin" {
-            self.moveToController(sName: "Spin", id: "SpinHomeController", gameType: gameType, game: game, index: index)
+            self.moveToController(sName: "Spin", id: "SpinMainVC", gameType: gameType, game: game, index: index)
         } else if gameType == "PredictNWin" {
             self.moveToController(sName: "Predict", id: "PredictIntroController", gameType: gameType, game: game, index: index)
         } else if gameType == "ReferNWin" {

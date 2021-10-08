@@ -19,6 +19,7 @@ enum CustomNavViewAction {
     @IBOutlet weak var bgCloudImage: UIImageView!
     @IBOutlet weak var logoImageView: UIImageView!
     
+    var disableBackAction = false
     var isDismiss: Bool = false
     var view: UIView?
     var sController: UIViewController?
@@ -80,7 +81,26 @@ enum CustomNavViewAction {
             cont?.dismiss(animated: true, completion: nil)
             CallBack.shared.handle?(.homeAction)
         } else {
-            cont?.navigationController?.popViewController(animated: true)
+            if !disableBackAction {
+                cont?.navigationController?.popViewController(animated: true)
+            }
+            if disableBackAction {
+                // Only for spin N Win
+                let vc  = (cont as! SpinMainVC)
+                let nav = (vc.con as! CustomNavViewController)
+               
+                self.disableBackAction = false
+                nav.showLogo()
+                nav.changeTitleAndSubTitle(title: nil, subTitle: nil)
+                (cont as! SpinMainVC).expireView.setupButtonName(name: "Play".localized())
+                (cont as! SpinMainVC).spinHomeBgView.isHidden = false
+                (cont as! SpinMainVC).spinDummyImgView.isHidden = true
+                (cont as! SpinMainVC).containerView.isHidden = true
+                (cont as! SpinMainVC).expireView.isHidden = false
+                (cont as! SpinMainVC).spinBtn.isHidden = true
+                (cont as! SpinMainVC).nukeAllAnimations()
+                (cont as! SpinMainVC).wheelView?.layer.removeAllAnimations()
+            }
             CallBack.shared.handle?(.back)
         }
     }

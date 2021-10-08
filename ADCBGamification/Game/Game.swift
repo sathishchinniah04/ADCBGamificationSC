@@ -200,7 +200,7 @@ public class Game {
                 }
             }
         } else if gameType == "SpinNWin" {
-            let cont = self.navigateToController(controller: controller, storyboard: "Spin", id: "SpinHomeController") as? SpinHomeController
+            let cont = self.navigateToController(controller: controller, storyboard: "Spin", id: "SpinMainVC") as? SpinMainVC
             cont?.isDirectLoad = true
             if isSuccess {
                 getGameList(gameType: gameType, gameId: gameId) { (game, error) in

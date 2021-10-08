@@ -30,6 +30,7 @@ class ADCBGameListCollectionCell: UICollectionViewCell {
         super.awakeFromNib()
         crownBtn.isHidden = true
         setupFontFamily()
+        //
         // Initialization code
         //        spinFailView.loadScreen { (done) in
         //            self.spinFailView.animateAndRemove()
@@ -42,7 +43,7 @@ class ADCBGameListCollectionCell: UICollectionViewCell {
     }
     
     func setupFontFamily() {
-        
+        lockDayLabel.text = "Unlocks Tomorrow".localized()
         gameLabel.setSizeFont(sizeFont: (StoreManager.shared.language == GameLanguage.AR.rawValue) ?  16.0 : 16.0, fontFamily: (StoreManager.shared.language == GameLanguage.AR.rawValue) ? "Tajawal-Bold" : "OpenSans-Bold")
         
         expireInLabel.setSizeFont(sizeFont: (StoreManager.shared.language == GameLanguage.AR.rawValue) ?  13.0 : 13.0, fontFamily: (StoreManager.shared.language == GameLanguage.AR.rawValue) ? "Tajawal-Regular" : "OpenSans-Regular")

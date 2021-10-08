@@ -117,7 +117,7 @@ extension GamesViewController {
         if gameType == "PredictNWin" {
             (contr as? PredictIntroController)?.game = game
         } else if gameType == "SpinNWin" {
-            (contr as? SpinHomeController)?.game = game
+            (contr as? SpinMainVC)?.game = game
         } else if gameType == "ReferNWin" {
             (contr as? ReferIntroController)?.game = game
         }
@@ -126,7 +126,7 @@ extension GamesViewController {
     
     func getControllerRef(gameType: String, game: Games) {
         if gameType == "SpinNWin" {
-            self.moveToController(sName: "Spin", id: "SpinHomeController", gameType: gameType, game: game)
+            self.moveToController(sName: "Spin", id: "SpinMainVC", gameType: gameType, game: game)
         } else if gameType == "PredictNWin" {
             self.moveToController(sName: "Predict", id: "PredictIntroController", gameType: gameType, game: game)
         } else if gameType == "ReferNWin" {
