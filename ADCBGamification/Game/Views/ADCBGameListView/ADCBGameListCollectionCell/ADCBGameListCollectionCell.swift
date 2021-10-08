@@ -150,8 +150,8 @@ class ADCBGameListCollectionCell: UICollectionViewCell {
     
     func onLock(game: Games) {
         
-        let date = game.executionPeriod?.startDateTime ?? ""
-        expireInLabel.text = "Available in".localized()
+        let date = game.executionPeriod?.endDateTime ?? ""
+        expireInLabel.text = "Expires in".localized()
         let numberOfDays = Calendar.current.dateComponents([.day], from: Date(), to: Utility.convertStringToDate(date: date)).day ?? 0
         hourMinteAlignmentCheck(date: date, value: numberOfDays)
     }
@@ -175,7 +175,7 @@ class ADCBGameListCollectionCell: UICollectionViewCell {
             } else if value > 1 {
                 daysCount = "\(value)" + "day(s)".localized()
             } else {
-                daysCount = "\(value)" + "day".localized()
+                daysCount = "\(value)" + "day(s)".localized()
             }
             
             
