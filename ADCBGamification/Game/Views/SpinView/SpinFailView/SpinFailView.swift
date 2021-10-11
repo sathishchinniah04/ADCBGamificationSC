@@ -20,6 +20,7 @@ class SpinFailView: UIView {
     @IBOutlet weak var gamePageButton: UIButton!
     @IBOutlet weak var bgCloudImage: UIImageView!
     @IBOutlet weak var logoImageView: UIImageView!
+    @IBOutlet weak var spinAgainButton: UIButton!
     
     var handle:((SpinFailViewAction)->Void)?
     
@@ -62,6 +63,10 @@ class SpinFailView: UIView {
         gameAttString.append(NSAttributedString(string: "Games".localized(), attributes: fontDict))
         self.gamePageButton.setAttributedTitle(gameAttString, for: .normal)
     
+        let spinAttString = NSMutableAttributedString()
+        spinAttString.append(NSAttributedString(string: "Spin Again".localized(), attributes: fontDict))
+        self.spinAgainButton.setAttributedTitle(spinAttString, for: .normal)
+        
        /* if let attributedTitle = self.homePageButton.attributedTitle(for: .normal) {
             let mutableAttributedTitle = NSMutableAttributedString(attributedString: attributedTitle)
             mutableAttributedTitle.replaceCharacters(in: NSMakeRange(0, mutableAttributedTitle.length), with: "Homepage".localized())
@@ -90,6 +95,11 @@ class SpinFailView: UIView {
     @IBAction func homePageButtonAction() {
         handle?(.homePage)
 
+    }
+    
+    @IBAction func spinAgainButtonAction() {
+        Constants.referMessage = ""
+        handle?(.spinAgainTapped)
     }
 }
 

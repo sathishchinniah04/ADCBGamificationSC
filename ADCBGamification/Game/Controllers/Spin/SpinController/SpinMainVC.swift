@@ -494,6 +494,11 @@ class SpinMainVC: UIViewController {
             self.dismiss(animated: true) {
                 CallBack.shared.handle?(.homeAction)
             }
+        case .spinAgainTapped:
+            self.spinFailView.animateAndRemove()
+            self.spinerView.enableSpinButton()
+            self.spinerView.enableSpinButton(hide: false)
+            print("Spin again tapped")
         default:
             break
         }
