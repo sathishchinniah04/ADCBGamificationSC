@@ -64,6 +64,7 @@ class ContactListController: UIViewController, UITextFieldDelegate {
     var footerHeight = 0
     var errorMsg = ""
     var delegate: ReferDateDelegate? = nil
+    var isUnknownContactVerified = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -361,6 +362,7 @@ class ContactListController: UIViewController, UITextFieldDelegate {
             self.newList.insert(unknownContact, at: 0)
             shareContactLbl.text = "No match found".localized()
             //self.inviteButton.alpha = 0.0
+            self.isUnknownContactVerified = false
             self.verifyMessageview.isHidden = false
         } else {
             self.verifyMessageview.isHidden = true
@@ -414,9 +416,10 @@ class ContactListController: UIViewController, UITextFieldDelegate {
                     }
                 } else {
                     if (data == "201" || data == "200") {
+                        self.isUnknownContactVerified = false
                         self.leftMessageLbl.sizeToFit()
                         self.leftMessageLblTopConstraints.constant = -30
-                        self.verifyMessageview.isHidden = false
+                        self.verifyMessageview.isHidden = true
                         self.errorMsg = " "
                         self.shareContactLbl.text = "Sorry, this contact is Simplylife user".localized()
                         self.leftMessageLbl.text = "Select another contact to refer".localized()
@@ -427,6 +430,7 @@ class ContactListController: UIViewController, UITextFieldDelegate {
                         self.bPart = contact.telephone
                         self.UnhidebaseViewForexistingUser()
                     } else if (data == "400") {
+                        self.isUnknownContactVerified = true
                         self.errorMsg = ""
                         self.footerHeight = 0
                         self.contactTableView.reloadData()
@@ -435,6 +439,7 @@ class ContactListController: UIViewController, UITextFieldDelegate {
                         self.bPart = contact.telephone
                         self.UnhidebaseViewForValidUser()
                     } else {
+                        self.isUnknownContactVerified = false
                         self.showToast(message: "Something went wring. Try again !")
                         DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
                             self.dismiss(animated: true, completion: nil)
@@ -510,9 +515,15 @@ extension ContactListController: UITableViewDelegate, UITableViewDataSource {
             self.placeHolderLbl.isHidden = false
             self.placeHolderLbl.text = contactData.firstName + contactData.lastName
             self.titleLbl.text = contactData.telephone
+            self.isUnknownContactVerified = false
             self.onCellTap(indexPath: indexPath)
         }
         cell.populateView(info: self.newList[indexPath.row])
+        if self.isUnknownContactVerified {
+            cell.verifyBtn.isHidden = true
+        } else if (!isUnknownContactVerified && !verifyMessageview.isHidden) {
+            cell.verifyBtn.isHidden = false
+        }
         return cell
     }
     
