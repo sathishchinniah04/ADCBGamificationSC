@@ -73,6 +73,8 @@ class SpinFailView: UIView {
             self.homePageButton.setAttributedTitle(mutableAttributedTitle, for: .normal)
         } */
         
+        self.spinAgainButton.setTitle("Spin Again".localized(), for: .normal)
+        
         containerView.addShadow(cornerRadius: 20, shadowRadius: 3, opacity: 0.5, color: UIColor.black)
         bounceAnimation(imageView)
 

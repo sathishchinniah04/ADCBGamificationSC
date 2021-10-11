@@ -52,8 +52,8 @@
                                     <constraint firstAttribute="width" constant="330" id="tR7-dM-Uno"/>
                                 </constraints>
                             </view>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Clouds" translatesAutoresizingMaskIntoConstraints="NO" id="2Ui-sN-vAi">
-                                <rect key="frame" x="0.0" y="44" width="339" height="63"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Clouds" translatesAutoresizingMaskIntoConstraints="NO" id="2Ui-sN-vAi">
+                                <rect key="frame" x="0.0" y="44" width="414" height="63"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="63" id="Igs-O5-1pD"/>
                                 </constraints>
@@ -113,7 +113,7 @@
                             <constraint firstItem="AVA-WF-P08" firstAttribute="top" secondItem="T5C-ee-sAI" secondAttribute="bottom" constant="-299" id="fiv-F7-9ke"/>
                             <constraint firstItem="2Ui-sN-vAi" firstAttribute="leading" secondItem="YOm-AJ-NlY" secondAttribute="leading" id="g9I-Kf-FDg"/>
                             <constraint firstItem="eHn-Hz-QVq" firstAttribute="bottom" secondItem="T5C-ee-sAI" secondAttribute="bottom" constant="-60" id="hGH-wM-Doj"/>
-                            <constraint firstItem="2Ui-sN-vAi" firstAttribute="trailing" secondItem="YOm-AJ-NlY" secondAttribute="trailing" constant="-75" id="iI0-Lj-evO"/>
+                            <constraint firstItem="2Ui-sN-vAi" firstAttribute="trailing" secondItem="YOm-AJ-NlY" secondAttribute="trailing" id="iI0-Lj-evO"/>
                             <constraint firstItem="eDY-P3-Boe" firstAttribute="centerX" secondItem="VNq-xp-UA7" secondAttribute="centerX" id="k2T-wQ-nv1"/>
                             <constraint firstItem="eHn-Hz-QVq" firstAttribute="centerX" secondItem="VNq-xp-UA7" secondAttribute="centerX" id="l18-cg-aQ3"/>
                             <constraint firstItem="YOm-AJ-NlY" firstAttribute="trailing" secondItem="T5C-ee-sAI" secondAttribute="trailing" id="lZV-Fb-839"/>

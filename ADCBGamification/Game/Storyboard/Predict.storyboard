@@ -28,8 +28,8 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CurveClip" translatesAutoresizingMaskIntoConstraints="NO" id="bzT-Lp-4fO">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="448"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Clouds_cpy" translatesAutoresizingMaskIntoConstraints="NO" id="6AU-Br-XnY">
-                                <rect key="frame" x="0.0" y="44" width="339" height="63"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Clouds_cpy" translatesAutoresizingMaskIntoConstraints="NO" id="6AU-Br-XnY">
+                                <rect key="frame" x="0.0" y="44" width="414" height="63"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="63" id="ToQ-ka-6dc"/>
                                 </constraints>
@@ -67,7 +67,7 @@
                             <constraint firstItem="OJd-sM-KFa" firstAttribute="leading" secondItem="ha7-iE-AA2" secondAttribute="leading" id="fsf-kL-Slj"/>
                             <constraint firstItem="bzT-Lp-4fO" firstAttribute="leading" secondItem="ha7-iE-AA2" secondAttribute="leading" id="lMt-hW-D5m"/>
                             <constraint firstItem="ha7-iE-AA2" firstAttribute="bottom" secondItem="6Dq-si-cr6" secondAttribute="bottom" id="ph9-Rc-dVM"/>
-                            <constraint firstItem="6AU-Br-XnY" firstAttribute="trailing" secondItem="ha7-iE-AA2" secondAttribute="trailing" constant="-75" id="uFR-Qs-gji"/>
+                            <constraint firstItem="6AU-Br-XnY" firstAttribute="trailing" secondItem="ha7-iE-AA2" secondAttribute="trailing" id="uFR-Qs-gji"/>
                             <constraint firstItem="6AU-Br-XnY" firstAttribute="top" secondItem="ha7-iE-AA2" secondAttribute="top" id="xJk-yT-sEt"/>
                             <constraint firstItem="OJd-sM-KFa" firstAttribute="trailing" secondItem="ha7-iE-AA2" secondAttribute="trailing" id="yuu-57-fLq"/>
                             <constraint firstAttribute="bottom" secondItem="OJd-sM-KFa" secondAttribute="bottom" id="zgX-ZX-R4e"/>
@@ -94,8 +94,8 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CurveClip" translatesAutoresizingMaskIntoConstraints="NO" id="O1D-93-f0H">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="448"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Clouds" translatesAutoresizingMaskIntoConstraints="NO" id="tdu-bk-ghL">
-                                <rect key="frame" x="0.0" y="44" width="339" height="63"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Clouds" translatesAutoresizingMaskIntoConstraints="NO" id="tdu-bk-ghL">
+                                <rect key="frame" x="0.0" y="44" width="414" height="63"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="63" id="Gxl-rL-8gk"/>
                                 </constraints>
@@ -132,7 +132,7 @@
                             <constraint firstItem="Ifq-Y2-VVs" firstAttribute="leading" secondItem="F75-gm-2pA" secondAttribute="leading" constant="30" id="Qgr-Vy-tbU"/>
                             <constraint firstItem="0zs-1g-UM0" firstAttribute="leading" secondItem="F75-gm-2pA" secondAttribute="leading" constant="30" id="TYA-d3-N2f"/>
                             <constraint firstItem="U4D-t7-PCO" firstAttribute="leading" secondItem="Ifq-Y2-VVs" secondAttribute="trailing" constant="-129" id="Zw2-cK-jbs"/>
-                            <constraint firstItem="tdu-bk-ghL" firstAttribute="trailing" secondItem="F75-gm-2pA" secondAttribute="trailing" constant="-75" id="a3u-NU-1rT"/>
+                            <constraint firstItem="tdu-bk-ghL" firstAttribute="trailing" secondItem="F75-gm-2pA" secondAttribute="trailing" id="a3u-NU-1rT"/>
                             <constraint firstItem="tdu-bk-ghL" firstAttribute="top" secondItem="F75-gm-2pA" secondAttribute="top" id="a8G-9v-tLC"/>
                             <constraint firstItem="Ifq-Y2-VVs" firstAttribute="top" secondItem="F75-gm-2pA" secondAttribute="top" constant="103" id="bnI-Rk-yHq"/>
                             <constraint firstItem="xxf-cY-7Q7" firstAttribute="centerY" secondItem="9LS-1p-Or3" secondAttribute="centerY" id="jiN-aX-18L"/>
