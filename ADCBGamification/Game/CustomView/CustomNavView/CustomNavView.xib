@@ -60,7 +60,7 @@
                                 <constraint firstAttribute="height" constant="22" id="iWF-KH-vcT"/>
                             </constraints>
                         </imageView>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="simply" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eo7-na-Kdt">
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="simply" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eo7-na-Kdt">
                             <rect key="frame" x="85" y="0.0" width="66" height="27.5"/>
                             <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="20"/>
                             <color key="textColor" red="0.13333333333333333" green="0.12941176470588234" blue="0.396078431372549" alpha="1" colorSpace="calibratedRGB"/>
