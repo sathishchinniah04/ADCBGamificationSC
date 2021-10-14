@@ -650,6 +650,7 @@
                     <connections>
                         <outlet property="activityIndicatorView" destination="Gni-Sk-6FS" id="6g3-NX-tP0"/>
                         <outlet property="bottomStackView" destination="o7q-FK-CmC" id="VSj-am-jjp"/>
+                        <outlet property="closeBtn" destination="rw9-gg-17B" id="QW8-Mh-dDr"/>
                         <outlet property="contactTableView" destination="KW3-SX-QvO" id="oII-If-254"/>
                         <outlet property="contentView" destination="AyZ-1I-XKU" id="bYW-XJ-9ax"/>
                         <outlet property="contentViewTopConstraint" destination="zkt-Ee-6M9" id="tv4-p4-DxL"/>

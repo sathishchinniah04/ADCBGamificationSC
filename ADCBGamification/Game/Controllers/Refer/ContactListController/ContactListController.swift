@@ -36,6 +36,7 @@ class ContactListController: UIViewController, UITextFieldDelegate {
         }
     }
     
+    @IBOutlet weak var closeBtn: UIButton!
     @IBOutlet weak var simplylifeUserLabel: UILabel!
     @IBOutlet weak var messageView: UIView!
     
@@ -78,7 +79,7 @@ class ContactListController: UIViewController, UITextFieldDelegate {
         placeHolderLbl.isHidden = true
         titleLbl.isHidden = false
         titleTopConstraints.constant = 16
-        
+        closeBtn.isHidden = true
         contactTableView.addObserver(self, forKeyPath: "contentSize", options: NSKeyValueObservingOptions.new, context: nil)
         
         titleLbl.addTarget(self, action: #selector(textFieldTyping), for: .editingChanged)
@@ -344,6 +345,7 @@ class ContactListController: UIViewController, UITextFieldDelegate {
             }
             
         case .cleared:
+            self.closeBtn.isHidden = true
             shareContactLbl.text = "Select the contact to Invite".localized()
             print("text field cleared")
             self.newList = self.contacts
@@ -355,7 +357,7 @@ class ContactListController: UIViewController, UITextFieldDelegate {
     }
     
     func onEditionTextField(text: String) {
-      
+        self.closeBtn.isHidden = false
         self.newList = self.contacts.filter {
             $0.firstName.range(of: text, options: [.caseInsensitive, .diacriticInsensitive ]) != nil ||
                 $0.telephone.range(of: text, options: [.caseInsensitive, .diacriticInsensitive ]) != nil
@@ -497,6 +499,7 @@ class ContactListController: UIViewController, UITextFieldDelegate {
     
     @IBAction func clearFieldAction(_ sender: Any) {
         verifyMessageview.isHidden = true
+        self.closeBtn.isHidden = true
         self.leftMessageLbl.text = "Click “Verify” to check whether the contact is a Simplylife user.".localized()
         shareContactLbl.text = "Select the contact to Invite".localized()
         dismissKeyboard()
