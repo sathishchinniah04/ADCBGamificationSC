@@ -83,7 +83,7 @@
 "Verify" = "التحقق";
 "My contacts" = "جهات الاتصال";
 "TouchPoints will be credited shortly after your friend downloads the App and signs up." = "سيتم إضافة نقاط تاتش بوينتس فور قيام صديقك بتحميل التطبيق واستكمال متطلبات تسجيل الدخول";
-"Click “Verify” to check whether the contact is a Simplylife user." = "انقر فوق تحقق للتحقق مما إذا كانت جهة الاتصال هي مستخدم";
+"Click “Verify” to check whether the contact is a Simplylife user." = "اضغط على 'التحقق' للتحقق مما إذا كانت جهة الاتصال من مستخدمي سيمبلي لايف.";
 "No match found" = "لا يوجد تطابق";
 "Select another contact to refer" = "حدد جهة اتصال أخرى للرجوع إليها";
 "Sorry, this contact is Simplylife user" = "عذرا ، هذا الاتصال هو مستخدم ببساطة الحياة";
@@ -92,5 +92,5 @@
 "Are you sure you want to close the game?" = "هل أنت متأكد أنك تريد إغلاق اللعبة؟";
 "Unlocks Tomorrow" = "يفتح غدا";
 "Refer a friend" = "توصية ودعوة صديق";
-"Unknown" = "مجهول";
-"contact" = "اتصل";
+"Unknown" = "";
+"contact" = "جهة الاتصال غير معروفة";

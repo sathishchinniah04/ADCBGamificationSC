@@ -87,7 +87,13 @@ class ContactListController: UIViewController, UITextFieldDelegate {
         self.inviteButton.isUserInteractionEnabled = false
         
         titleLbl.delegate = self
-        
+        if StoreManager.shared.language.lowercased() == "ar" {
+            self.titleLbl.textAlignment = .right
+            self.shareContactLbl.textAlignment = .right
+        } else {
+            self.shareContactLbl.textAlignment = .left
+            self.titleLbl.textAlignment = .left
+        }
         
         buttonSetup()
         setupTableView()
@@ -335,6 +341,7 @@ class ContactListController: UIViewController, UITextFieldDelegate {
     func textFieldDelegateHandle(action: ReferTextFieldAction) {
         switch action {
         case .onEdit(let text):
+           
             self.onEditionTextField(text: text)
             // self.chooseContactButton.titleLabel.alpha = 1.0
             // self.chooseContactButton.titleLabel.isHidden = false
