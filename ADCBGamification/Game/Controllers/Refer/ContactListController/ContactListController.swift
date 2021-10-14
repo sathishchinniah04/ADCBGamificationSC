@@ -365,7 +365,7 @@ class ContactListController: UIViewController, UITextFieldDelegate {
         
         
         if self.newList.isEmpty, !text.isEmpty , text.isNumeric, !text.isAlphanumeric {
-            let unknownContact = FetchedContact(firstName: "Unknown", lastName: "contact", telephone: text, image: nil, unknowContact: true)
+            let unknownContact = FetchedContact(firstName: "Unknown".localized(), lastName: "contact".localized(), telephone: text, image: nil, unknowContact: true)
             self.newList.insert(unknownContact, at: 0)
             shareContactLbl.text = "No match found".localized()
             //self.inviteButton.alpha = 0.0
