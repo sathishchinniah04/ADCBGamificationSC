@@ -13,7 +13,7 @@ enum ReferralStatus {
 }
 
 protocol ReferDateDelegate {
-    func referAction()
+    func referAction(isToHomePage: Bool)
 }
 class ContactListController: UIViewController, UITextFieldDelegate {
     
@@ -216,7 +216,7 @@ class ContactListController: UIViewController, UITextFieldDelegate {
     func inviteApiCall() {
         activityIndicatorView.isHidden = false
         activityIndicatorView.startAnimating()
-        self.bPart = self.titleLbl.text!
+       // self.bPart = self.titleLbl.text!
         
         if self.bPart!.isEmpty {
             
@@ -257,10 +257,15 @@ class ContactListController: UIViewController, UITextFieldDelegate {
                     case .homePageTapped:
                         self.referSuccessViewHelper.animateAndRemove()
                         self.dismiss(animated: true) {
-                            self.delegate?.referAction()
+                            self.delegate?.referAction(isToHomePage: true)
                         }
                     case .referAgain:
                         self.referSuccessViewHelper.animateAndRemove()
+                    case .gamePage:
+                        self.referSuccessViewHelper.animateAndRemove()
+                        self.dismiss(animated: true) {
+                            self.delegate?.referAction(isToHomePage: false)
+                        }
                     }
                 }
             }

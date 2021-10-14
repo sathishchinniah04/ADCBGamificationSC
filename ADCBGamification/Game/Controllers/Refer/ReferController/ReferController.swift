@@ -69,9 +69,9 @@ class ReferController: UIViewController, ReferDateDelegate {
         let con = self.navigationController
         (con as? CustomNavViewController)?.changeOnlyTitle(title: "Refer & Win".localized())
     }
-//    
+//
 //    func setupLabelConstraints() {
-//        
+//
 //        let device = UIDevice.current.modelName
 //        switch device {
 //        case "iPhone 11 Pro", "iPhone 11 Pro Max":
@@ -80,7 +80,7 @@ class ReferController: UIViewController, ReferDateDelegate {
 //            referEngLblLeftConstraints.constant = 112
 //        }
 //    }
-//    
+//
     
     func setupArabicLabelConstraints() {
        
@@ -172,10 +172,15 @@ class ReferController: UIViewController, ReferDateDelegate {
         }
     }
     
-    func referAction() {
-        self.dismiss(animated: true) {
-            CallBack.shared.handle?(.homeAction)
+    func referAction(isToHomePage: Bool) {
+        if isToHomePage{
+            self.dismiss(animated: true) {
+                CallBack.shared.handle?(.homeAction)
+            }
+        } else {
+            self.navigationController?.popToRootViewController(animated: true)
         }
+
     }
     
     func openContactList() {

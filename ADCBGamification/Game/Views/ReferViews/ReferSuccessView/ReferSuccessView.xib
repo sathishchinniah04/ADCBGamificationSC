@@ -218,10 +218,10 @@
                                                     </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eQC-VT-XrO">
-                                                    <rect key="frame" x="243" y="0.0" width="71" height="28.5"/>
+                                                    <rect key="frame" x="239" y="0.0" width="75" height="28.5"/>
                                                     <state key="normal">
                                                         <attributedString key="attributedTitle">
-                                                            <fragment content="Homepage">
+                                                            <fragment content="Home Page">
                                                                 <attributes>
                                                                     <color key="NSColor" red="0.1333333333" green="0.12941176469999999" blue="0.39607843139999999" alpha="1" colorSpace="calibratedRGB"/>
                                                                     <font key="NSFont" metaFont="system" size="14"/>

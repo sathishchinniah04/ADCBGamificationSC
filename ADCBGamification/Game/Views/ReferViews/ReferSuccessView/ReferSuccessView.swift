@@ -9,6 +9,7 @@ import UIKit
 enum ReferSuccessViewAction {
     case referAgain
     case homePageTapped
+    case gamePage
 }
 
 class ReferSuccessView: UIView {
@@ -81,12 +82,12 @@ class ReferSuccessView: UIView {
             
         ]
         let rewardAttString = NSMutableAttributedString()
-        rewardAttString.append(NSAttributedString(string: "Refer again".localized(), attributes: fontDict))
+        rewardAttString.append(NSAttributedString(string: "Refer a friend".localized(), attributes: fontDict))
         self.rewardButton.setAttributedTitle(rewardAttString, for: .normal)
         
         
         let homeAttString = NSMutableAttributedString()
-        homeAttString.append(NSAttributedString(string: "Homepage".localized(), attributes: fontDict))
+        homeAttString.append(NSAttributedString(string: "Home Page".localized(), attributes: fontDict))
         self.homePageButton.setAttributedTitle(homeAttString, for: .normal)
         
         
@@ -122,7 +123,7 @@ class ReferSuccessView: UIView {
     }
     
     @IBAction func gameButtonAction() {
-        handle?(.homePageTapped)
+        handle?(.gamePage)
     }
     
     @IBAction func knowMoreButtonAction() {
