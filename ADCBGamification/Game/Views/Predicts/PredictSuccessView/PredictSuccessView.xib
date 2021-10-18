@@ -195,10 +195,10 @@ participation</string>
                                             </connections>
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cl7-LS-aoR">
-                                            <rect key="frame" x="243" y="0.0" width="71" height="28.5"/>
+                                            <rect key="frame" x="239" y="0.0" width="75" height="28.5"/>
                                             <state key="normal">
                                                 <attributedString key="attributedTitle">
-                                                    <fragment content="Homepage">
+                                                    <fragment content="Home Page">
                                                         <attributes>
                                                             <color key="NSColor" red="0.1333333333" green="0.12941176469999999" blue="0.39607843139999999" alpha="1" colorSpace="calibratedRGB"/>
                                                             <font key="NSFont" metaFont="system" size="14"/>
@@ -512,6 +512,11 @@ participation</string>
                 <constraint firstItem="HIL-NA-1vj" firstAttribute="centerX" secondItem="6iB-qM-LIg" secondAttribute="centerX" id="yR2-Xv-N9Z"/>
                 <constraint firstItem="krM-oZ-Fcx" firstAttribute="leading" secondItem="z0B-m1-9Ph" secondAttribute="leading" id="zqd-D2-NsU"/>
             </constraints>
+            <variation key="default">
+                <mask key="subviews">
+                    <exclude reference="m7E-xf-cb7"/>
+                </mask>
+            </variation>
             <connections>
                 <outlet property="bgCloudImage" destination="krM-oZ-Fcx" id="fWS-DY-v3Z"/>
                 <outlet property="containerView" destination="HIL-NA-1vj" id="BBa-Pr-oZw"/>
