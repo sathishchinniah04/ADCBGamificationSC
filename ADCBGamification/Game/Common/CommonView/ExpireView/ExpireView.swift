@@ -122,7 +122,7 @@ class ExpireView: UIView {
             gameNameSubTitleLabel.text = "Spin the wheel and win exciting prizes".localized()
        } else if game.gameType == "ReferNWin" {
         expireLabel.text = ""
-        gameNameSubTitleLabel.text = "Invite your friends to join Simplylife and earn exciting rewards".localized()
+        gameNameSubTitleLabel.text = "Invite your friends to join simplylife and earn exciting rewards".localized()
        }
         
     }

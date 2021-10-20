@@ -71,7 +71,7 @@
                                             <color key="textColor" red="0.61960784310000006" green="0.098039215690000001" blue="0.08235294118" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <imageView userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Sad" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NO2-F8-Ffb">
+                                        <imageView userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sad_new" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NO2-F8-Ffb">
                                             <rect key="frame" x="92" y="51.5" width="130" height="102"/>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
@@ -301,7 +301,7 @@
         <image name="CurveClip" width="187.5" height="211"/>
         <image name="Logo" width="102" height="22"/>
         <image name="Mobile" width="137" height="250"/>
-        <image name="Sad" width="130" height="104"/>
+        <image name="sad_new" width="130" height="104"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

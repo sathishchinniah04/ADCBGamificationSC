@@ -148,7 +148,7 @@
     </objects>
     <resources>
         <image name="ohNo" width="130" height="104"/>
-        <image name="spinClose" width="22" height="22"/>
+        <image name="spinClose" width="38" height="38"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

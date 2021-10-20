@@ -301,7 +301,7 @@ participation</string>
                                         <constraint firstAttribute="height" constant="22" id="dN9-Kn-x2F"/>
                                     </constraints>
                                 </imageView>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Predict &amp; Win" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ay7-VB-l5P">
+                                <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Predict &amp; Win" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ay7-VB-l5P">
                                     <rect key="frame" x="71.5" y="67" width="211.5" height="41"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="41" id="RRn-bO-Mrs"/>
@@ -311,9 +311,9 @@ participation</string>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZDi-NO-QlN">
-                                    <rect key="frame" x="52" y="123" width="250" height="284"/>
+                                    <rect key="frame" x="52" y="123" width="250" height="230"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="It was fun playing predict &amp; Win" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nyE-Ui-VGM">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Predict &amp; Win" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nyE-Ui-VGM">
                                             <rect key="frame" x="53.5" y="20" width="143" height="38"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="38" id="2Ya-b2-c4q"/>
@@ -323,8 +323,8 @@ participation</string>
                                             <color key="textColor" red="0.1333333333" green="0.12941176469999999" blue="0.39607843139999999" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <stackView opaque="NO" contentMode="scaleToFill" spacing="11" translatesAutoresizingMaskIntoConstraints="NO" id="gjB-rj-eoC">
-                                            <rect key="frame" x="21" y="93" width="208" height="80"/>
+                                        <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" spacing="11" translatesAutoresizingMaskIntoConstraints="NO" id="gjB-rj-eoC">
+                                            <rect key="frame" x="21" y="68" width="208" height="80"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="y4R-CO-3WC">
                                                     <rect key="frame" x="0.0" y="0.0" width="62" height="80"/>
@@ -434,8 +434,8 @@ participation</string>
                                                 <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="75" id="mP0-wI-zb0"/>
                                             </constraints>
                                         </stackView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Predict and get rewarded. Stay tuned, enjoy the game." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="THV-Ht-m7H">
-                                            <rect key="frame" x="37" y="203" width="169" height="52"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Predict and get rewarded. " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="THV-Ht-m7H">
+                                            <rect key="frame" x="37" y="158" width="169" height="52"/>
                                             <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="12"/>
                                             <color key="textColor" red="0.32941176470588235" green="0.32941176470588235" blue="0.33725490196078434" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
@@ -443,14 +443,14 @@ participation</string>
                                     </subviews>
                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                     <constraints>
-                                        <constraint firstItem="gjB-rj-eoC" firstAttribute="top" secondItem="nyE-Ui-VGM" secondAttribute="bottom" constant="35" id="3JP-sU-4ES"/>
-                                        <constraint firstAttribute="height" constant="284" id="4nk-gW-it0"/>
+                                        <constraint firstItem="gjB-rj-eoC" firstAttribute="top" secondItem="nyE-Ui-VGM" secondAttribute="bottom" constant="10" id="3JP-sU-4ES"/>
+                                        <constraint firstAttribute="height" constant="230" id="4nk-gW-it0"/>
                                         <constraint firstAttribute="trailing" secondItem="gjB-rj-eoC" secondAttribute="trailing" constant="21" id="9II-ot-rY0"/>
-                                        <constraint firstItem="THV-Ht-m7H" firstAttribute="top" secondItem="gjB-rj-eoC" secondAttribute="bottom" constant="30" id="SVp-ZG-DJo"/>
+                                        <constraint firstItem="THV-Ht-m7H" firstAttribute="top" secondItem="gjB-rj-eoC" secondAttribute="bottom" constant="10" id="SVp-ZG-DJo"/>
                                         <constraint firstItem="THV-Ht-m7H" firstAttribute="leading" secondItem="ZDi-NO-QlN" secondAttribute="leading" constant="37" id="TIi-4b-N8v"/>
                                         <constraint firstAttribute="width" constant="250" id="W7E-Zc-Uc7"/>
                                         <constraint firstItem="nyE-Ui-VGM" firstAttribute="centerX" secondItem="ZDi-NO-QlN" secondAttribute="centerX" constant="-0.25" id="iNc-8q-znd"/>
-                                        <constraint firstAttribute="bottom" secondItem="THV-Ht-m7H" secondAttribute="bottom" constant="29" id="mJg-5w-Mga"/>
+                                        <constraint firstAttribute="bottom" secondItem="THV-Ht-m7H" secondAttribute="bottom" constant="20" id="mJg-5w-Mga"/>
                                         <constraint firstItem="nyE-Ui-VGM" firstAttribute="top" secondItem="ZDi-NO-QlN" secondAttribute="top" constant="20" id="ozD-76-USz"/>
                                         <constraint firstAttribute="trailing" secondItem="THV-Ht-m7H" secondAttribute="trailing" constant="44" id="qpW-wE-I3p"/>
                                         <constraint firstItem="gjB-rj-eoC" firstAttribute="leading" secondItem="ZDi-NO-QlN" secondAttribute="leading" constant="21" id="tOv-FO-j9n"/>
@@ -512,11 +512,6 @@ participation</string>
                 <constraint firstItem="HIL-NA-1vj" firstAttribute="centerX" secondItem="6iB-qM-LIg" secondAttribute="centerX" id="yR2-Xv-N9Z"/>
                 <constraint firstItem="krM-oZ-Fcx" firstAttribute="leading" secondItem="z0B-m1-9Ph" secondAttribute="leading" id="zqd-D2-NsU"/>
             </constraints>
-            <variation key="default">
-                <mask key="subviews">
-                    <exclude reference="m7E-xf-cb7"/>
-                </mask>
-            </variation>
             <connections>
                 <outlet property="bgCloudImage" destination="krM-oZ-Fcx" id="fWS-DY-v3Z"/>
                 <outlet property="containerView" destination="HIL-NA-1vj" id="BBa-Pr-oZw"/>

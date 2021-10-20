@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "close copy@1.5x.png",
+      "filename" : "sad_new.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "close copy@2x.png",
+      "filename" : "sad_new@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "close copy@3x.png",
+      "filename" : "sad_new@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }
