@@ -504,6 +504,20 @@ class SpinMainVC: UIViewController {
         }
     }
     
+    func knowMoreAction(action: KnowMoreViewAction) {
+        
+        switch action {
+        case .knowmore:
+            print("know more page tapped")
+            self.spinSuccessView.animateAndRemove()
+            self.dismiss(animated: true) {
+                CallBack.shared.handle?(.knowMoreAction)
+            }
+        default:
+            break;
+        }
+    }
+    
     func successScreenActionHandler(action: SpinSuccessViewAction) {
         switch action {
         case .homePageTapped:
@@ -514,7 +528,7 @@ class SpinMainVC: UIViewController {
             }
         case .knowMoreTapped:
             print("Know more tapped")
-            KnowMoreViewHelper.show(info: self.spinAssignReward)
+            KnowMoreViewHelper.show(info: self.spinAssignReward, action: self.knowMoreAction(action:))
         case .rewardTapped:
             print("Reward  tapped")
             CallBack.shared.handle?(.spinReward)

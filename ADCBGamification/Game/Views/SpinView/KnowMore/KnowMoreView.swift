@@ -7,6 +7,10 @@
 
 import UIKit
 
+enum KnowMoreViewAction {
+    case knowmore
+}
+
 class KnowMoreView: UIView {
     @IBOutlet weak var closeButton: UIButton!
     @IBOutlet weak var containerView: UIView!
@@ -16,13 +20,16 @@ class KnowMoreView: UIView {
     @IBOutlet weak var validityLabel: UILabel!
     @IBOutlet weak var subTitleLabel: UILabel!
     @IBOutlet weak var infoContainerView: UIView!
+    @IBOutlet weak var knowmoreBtb: UIButton!
     
+    var handle:((KnowMoreViewAction)->Void)?
     var handler: (()->Void)?
     static func loadXib() -> KnowMoreView {
         return UINib(nibName: "KnowMoreView", bundle: Bundle(for: Self.self)).instantiate(withOwner: self, options: nil).first as! KnowMoreView
     }
     
-    func populateView(info: SpinAssignReward?) {
+    func populateView(info: SpinAssignReward?, action:((KnowMoreViewAction)->Void)?) {
+        self.handle = action
         appearenceSetup()
         labelSetup(info: info)
         setupFontFamily()
@@ -36,6 +43,8 @@ class KnowMoreView: UIView {
         subTitleLabel.setSizeFont(sizeFont: (StoreManager.shared.language == GameLanguage.AR.rawValue) ?  14.0 : 14.0, fontFamily: (StoreManager.shared.language == GameLanguage.AR.rawValue) ? "Tajawal-Light" : "OpenSans-Light")
         
         validityLabel.setSizeFont(sizeFont: (StoreManager.shared.language == GameLanguage.AR.rawValue) ?  14.0 : 14.0, fontFamily: (StoreManager.shared.language == GameLanguage.AR.rawValue) ? "Tajawal-Light" : "OpenSans-Light")
+        
+        knowmoreBtb.setSizeFont(sizeFont: (StoreManager.shared.language == GameLanguage.AR.rawValue) ?  14.0 : 14.0, fontFamily: (StoreManager.shared.language == GameLanguage.AR.rawValue) ? "Tajawal-Regular" : "OpenSans-Regular")
         
     }
     
@@ -70,6 +79,18 @@ class KnowMoreView: UIView {
             }
         }
 
+        
+        let fontDict: [NSAttributedString.Key : Any] = [
+            NSAttributedString.Key.font: (StoreManager.shared.language == GameLanguage.AR.rawValue) ? UIFont(name: "Tajawal-Regular", size: 14.0) ?? UIFont.boldSystemFont(ofSize: 1.5) : UIFont(name: "OpenSans-Regular", size: 14.0) ?? UIFont.boldSystemFont(ofSize: 1.5),
+            NSAttributedString.Key.underlineStyle : 1,
+            NSAttributedString.Key.foregroundColor :  UIColor(hexString: "#222165")
+            
+        ]
+        let rewardAttString = NSMutableAttributedString()
+        rewardAttString.append(NSAttributedString(string: "Know more".localized(), attributes: fontDict))
+        self.knowmoreBtb.setAttributedTitle(rewardAttString, for: .normal)
+        
+        
 
     }
     
@@ -86,4 +107,13 @@ class KnowMoreView: UIView {
     @IBAction func closeButtonAction() {
         handler?()
     }
+    
+    @IBAction func knowmoreBtnAction(_ sender: Any) {
+        defer {
+            handle?(.knowmore)
+        }
+        handler?()
+       
+    }
+    
 }

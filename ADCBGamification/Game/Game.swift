@@ -18,6 +18,7 @@ public enum GameAction {
     case homeAction
     case spinReward
     case dismissed
+    case knowMore
 }
 
 public enum GameLanguage: String, CaseIterable {
@@ -95,6 +96,9 @@ public class Game {
                 case .dismissed:
                      print("game list dismissed")
                     complition?(.dismissed)
+                case .knowMoreAction:
+                    print("know more action")
+                    complition?(.knowMore)
                 default :
                     print("default called")
                 }
@@ -146,6 +150,9 @@ public class Game {
             case .dismissed:
                  print("game list dismissed")
                 complition?(.dismissed)
+            case .knowMoreAction:
+                print("know more action")
+                complition?(.knowMore)
             default :
                 print("default")
             }

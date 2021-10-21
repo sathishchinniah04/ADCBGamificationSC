@@ -11,13 +11,13 @@ class KnowMoreViewHelper {
     static var view: KnowMoreView?
     static var window = UIApplication.shared.windows.first
     
-    static func show(info: SpinAssignReward?) {
+    static func show(info: SpinAssignReward?, action:((KnowMoreViewAction)->Void)?) {
         DispatchQueue.main.async {
             removeView()
             window = UIApplication.shared.windows.first
             view = KnowMoreView.loadXib()
             view?.frame = UIScreen.main.bounds
-            view?.populateView(info: info)
+            view?.populateView(info: info, action: action)
             window?.addSubview(view!)
             animatefadeup()
             view?.handler = {

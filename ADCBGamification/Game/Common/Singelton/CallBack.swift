@@ -9,6 +9,7 @@ import Foundation
 enum CallBackAction {
     case back
     case homeAction
+    case knowMoreAction
     case spinReward
     case gamePlayed(IndexPath)
     case dismissed

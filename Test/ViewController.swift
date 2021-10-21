@@ -60,6 +60,8 @@ class ViewController: UIViewController {
             print("Home Action Callback")
         case .spinReward:
             print("spinReward button tapped")
+        case .knowMore:
+            print("know more button tapped")
         
         default:
             print("default")

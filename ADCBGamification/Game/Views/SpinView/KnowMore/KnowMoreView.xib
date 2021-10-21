@@ -27,7 +27,7 @@
                     <rect key="frame" x="0.0" y="0.0" width="414" height="862"/>
                     <subviews>
                         <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="v5o-xZ-lal">
-                            <rect key="frame" x="50" y="253.5" width="314" height="355.5"/>
+                            <rect key="frame" x="50" y="254" width="314" height="405"/>
                             <subviews>
                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="uis-vI-kpQ">
                                     <rect key="frame" x="20" y="40" width="274" height="275.5"/>
@@ -104,23 +104,43 @@
                                         <action selector="closeButtonAction" destination="iN0-l3-epB" eventType="touchUpInside" id="pGt-Ib-QXt"/>
                                     </connections>
                                 </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QV7-Q3-dci">
+                                    <rect key="frame" x="120.5" y="335" width="73" height="28.5"/>
+                                    <state key="normal">
+                                        <attributedString key="attributedTitle">
+                                            <fragment content="Know more">
+                                                <attributes>
+                                                    <color key="NSColor" red="0.1333333333" green="0.12941176469999999" blue="0.39607843139999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <font key="NSFont" metaFont="system" size="14"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                    <integer key="NSUnderline" value="1"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
+                                    </state>
+                                    <connections>
+                                        <action selector="knowmoreBtnAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="rJH-c0-Ltz"/>
+                                    </connections>
+                                </button>
                             </subviews>
                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             <constraints>
                                 <constraint firstItem="uis-vI-kpQ" firstAttribute="centerX" secondItem="v5o-xZ-lal" secondAttribute="centerX" id="5eC-mF-IBM"/>
                                 <constraint firstAttribute="trailing" secondItem="SaL-kQ-IBV" secondAttribute="trailing" constant="12" id="9tX-iu-ZhE"/>
-                                <constraint firstAttribute="bottom" secondItem="uis-vI-kpQ" secondAttribute="bottom" constant="40" id="DPF-Pl-2Xd"/>
+                                <constraint firstAttribute="bottom" secondItem="uis-vI-kpQ" secondAttribute="bottom" constant="89.5" id="DPF-Pl-2Xd"/>
                                 <constraint firstItem="uis-vI-kpQ" firstAttribute="leading" secondItem="v5o-xZ-lal" secondAttribute="leading" constant="20" id="KBx-D6-hrN"/>
                                 <constraint firstItem="SaL-kQ-IBV" firstAttribute="top" secondItem="v5o-xZ-lal" secondAttribute="top" constant="12" id="NFd-uk-83M"/>
+                                <constraint firstItem="QV7-Q3-dci" firstAttribute="centerX" secondItem="04C-j1-Fe7" secondAttribute="centerX" id="ck1-vQ-WdJ"/>
                                 <constraint firstAttribute="trailing" secondItem="uis-vI-kpQ" secondAttribute="trailing" constant="20" id="l8t-74-dlB"/>
                                 <constraint firstItem="uis-vI-kpQ" firstAttribute="top" secondItem="v5o-xZ-lal" secondAttribute="top" constant="40" id="riD-TD-bbA"/>
+                                <constraint firstItem="QV7-Q3-dci" firstAttribute="top" secondItem="04C-j1-Fe7" secondAttribute="bottom" constant="19.5" id="rxR-Uh-cCs"/>
                             </constraints>
                         </view>
                     </subviews>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstItem="v5o-xZ-lal" firstAttribute="centerX" secondItem="mmH-sL-DfF" secondAttribute="centerX" id="8Mh-FT-tTQ"/>
-                        <constraint firstItem="v5o-xZ-lal" firstAttribute="centerY" secondItem="mmH-sL-DfF" secondAttribute="centerY" id="XFb-n9-hR9"/>
+                        <constraint firstItem="v5o-xZ-lal" firstAttribute="centerY" secondItem="mmH-sL-DfF" secondAttribute="centerY" constant="25.5" id="XFb-n9-hR9"/>
                         <constraint firstItem="v5o-xZ-lal" firstAttribute="leading" secondItem="mmH-sL-DfF" secondAttribute="leading" constant="50" id="yJv-Ia-Pfj"/>
                     </constraints>
                 </view>
@@ -138,12 +158,13 @@
                 <outlet property="containerView" destination="mmH-sL-DfF" id="DxQ-nt-N9Y"/>
                 <outlet property="imageView" destination="3K2-sK-e7I" id="GYu-Ie-Y9K"/>
                 <outlet property="infoContainerView" destination="v5o-xZ-lal" id="Ejr-2w-7v3"/>
+                <outlet property="knowmoreBtb" destination="QV7-Q3-dci" id="ldh-eW-5Zg"/>
                 <outlet property="subTitleLabel" destination="04C-j1-Fe7" id="IQC-A0-cgf"/>
                 <outlet property="titleLabel" destination="sfO-8q-0Jc" id="iQ8-wj-3lF"/>
                 <outlet property="titleMainLbl" destination="Z1n-yV-rNK" id="IJP-kQ-oJS"/>
                 <outlet property="validityLabel" destination="znr-f2-KkK" id="GCq-EJ-bS2"/>
             </connections>
-            <point key="canvasLocation" x="-752" y="49"/>
+            <point key="canvasLocation" x="-752.17391304347836" y="48.883928571428569"/>
         </view>
     </objects>
     <resources>
