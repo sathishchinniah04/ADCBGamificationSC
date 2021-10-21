@@ -177,9 +177,14 @@ class ADCBGameListCollectionCell: UICollectionViewCell {
             if value == 0 {
                 daysCount = "Today".localized()
             } else if value > 1 {
-                daysCount = "\(value)" + "day(s)".localized()
+                if (StoreManager.shared.language == GameLanguage.AR.rawValue) {
+                    daysCount = "\(value) " + "day(s)".localized()
+                } else {
+                    daysCount = "\(value)" + "day(s)".localized()
+                }
+                
             } else {
-                daysCount = "\(value)" + "day(s)".localized()
+                daysCount = "\(value) " + "day(s)".localized()
             }
             
             
@@ -209,7 +214,13 @@ class ADCBGameListCollectionCell: UICollectionViewCell {
                 currentHours = "\(abs(hours))"
             }
 
-            self.timeLabel.text = daysCount + " \(currentHours)" + "hr".localized() + " \(currentMinutes)" + "mins".localized()
+            if (StoreManager.shared.language == GameLanguage.AR.rawValue) {
+                self.timeLabel.text = daysCount + " \(currentHours) " + "hr".localized() + " \(currentMinutes) " + "mins".localized()
+            } else {
+                self.timeLabel.text = daysCount + " \(currentHours)" + "hr".localized() + " \(currentMinutes)" + "mins".localized()
+            }
+            
+           
             
         }
         //\(Utility.secondsToHoursMinutesSeconds(seconds: Utility.convertStringIntoDate(date: date)).2)sec"
