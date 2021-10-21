@@ -65,8 +65,8 @@ class ADCBGameListCollectionCell: UICollectionViewCell {
         setLabel(game: game)
         cellColor(index: index)
         cornerRadiusSetup()
-        self.expireInLabel.isHidden = false
-        self.timeLabel.isHidden = false
+//        self.expireInLabel.isHidden = false
+//        self.timeLabel.isHidden = false
         lockDayLabel.isHidden = true
     }
     
