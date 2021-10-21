@@ -101,6 +101,7 @@ extension MatchListController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print("didSelectRowAt \(indexPath)")
+        Constants.gameTitle = tournaments?[indexPath.section].tournamentName ?? ""
         moveToController(index: indexPath)
     }
     

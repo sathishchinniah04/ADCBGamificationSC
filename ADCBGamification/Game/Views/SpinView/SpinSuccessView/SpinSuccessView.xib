@@ -226,11 +226,11 @@
                                             <rect key="frame" x="0.0" y="52.5" width="314" height="28.5"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="U5J-ww-y2N">
-                                                    <rect key="frame" x="123" y="0.0" width="68" height="28.5"/>
+                                                    <rect key="frame" x="123.5" y="0.0" width="67" height="28.5"/>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <state key="normal">
                                                         <attributedString key="attributedTitle">
-                                                            <fragment content="Spin Again">
+                                                            <fragment content="Spin again">
                                                                 <attributes>
                                                                     <color key="NSColor" red="0.13333333333333333" green="0.12941176470588234" blue="0.396078431372549" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                     <font key="NSFont" size="14" name="HelveticaNeue"/>

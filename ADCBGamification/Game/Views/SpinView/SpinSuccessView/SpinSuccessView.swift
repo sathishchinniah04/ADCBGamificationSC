@@ -185,11 +185,11 @@ class SpinSuccessView: UIView {
         
         
         let homeAttString = NSMutableAttributedString()
-        homeAttString.append(NSAttributedString(string: "Home Page".localized(), attributes: fontDict))
+        homeAttString.append(NSAttributedString(string: "Homepage".localized(), attributes: fontDict))
         self.homePageButton.setAttributedTitle(homeAttString, for: .normal)
         
         let spinAttString = NSMutableAttributedString()
-        spinAttString.append(NSAttributedString(string: "Spin Again".localized(), attributes: fontDict))
+        spinAttString.append(NSAttributedString(string: "Spin again".localized(), attributes: fontDict))
         self.spinAgainButton.setAttributedTitle(spinAttString, for: .normal)
 
   
@@ -215,7 +215,7 @@ class SpinSuccessView: UIView {
         //self.rewardButton.setTitle("Rewards".localized(), for: .normal)
         //self.homePageButton.setTitle("Homepage".localized(), for: .normal)
         
-        self.spinAgainButton.setTitle("Spin Again".localized(), for: .normal)
+        self.spinAgainButton.setTitle("Spin again".localized(), for: .normal)
         
         
         if (info?.responseObject?.first?.voucherCode == nil || ((info?.responseObject?.first?.voucherCode ?? "").isEmpty)) {

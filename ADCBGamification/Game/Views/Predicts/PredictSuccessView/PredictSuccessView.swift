@@ -116,8 +116,8 @@ class PredictSuccessView: UIView {
     func setupFontFamily() {
         self.animationSetUp()
         shareGameTitleLbl.text = "Predict & Win".localized()
-        headingLbl.text = "It was fun playing Predict & Win".localized()
-        shareMessageLbl.text = "Predict and get rewarded. Stay tuned, enjoy the game.".localized()
+        headingLbl.text = "Predict & Win".localized()
+        shareMessageLbl.text = "Predict and get rewarded.".localized()
         
         
         shareBtn.setTitle("Share".localized(), for: .normal)
@@ -173,7 +173,7 @@ class PredictSuccessView: UIView {
             
         ]
         let rewardAttString = NSMutableAttributedString()
-        rewardAttString.append(NSAttributedString(string: "Home Page".localized(), attributes: fontDict))
+        rewardAttString.append(NSAttributedString(string: "Homepage".localized(), attributes: fontDict))
         self.homePageButton.setAttributedTitle(rewardAttString, for: .normal)
         
         

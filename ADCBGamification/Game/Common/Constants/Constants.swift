@@ -33,5 +33,6 @@ class Constants {
     static var referMessage = ""
     static var commonEmailSubject = ""
     static var leagueName:String = ""
+    static var gameTitle:String = ""
     //static let spinAssignReward = "http://cvm-game.20.74.146.216.nip.io/Gamification-1.0/Gamification/executeEvent"
 }

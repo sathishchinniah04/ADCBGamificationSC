@@ -56,7 +56,7 @@ class SpinFailView: UIView {
             
         ]
         let homeAttString = NSMutableAttributedString()
-        homeAttString.append(NSAttributedString(string: "Home Page".localized(), attributes: fontDict))
+        homeAttString.append(NSAttributedString(string: "Homepage".localized(), attributes: fontDict))
         self.homePageButton.setAttributedTitle(homeAttString, for: .normal)
         
         let gameAttString = NSMutableAttributedString()
@@ -64,7 +64,7 @@ class SpinFailView: UIView {
         self.gamePageButton.setAttributedTitle(gameAttString, for: .normal)
     
         let spinAttString = NSMutableAttributedString()
-        spinAttString.append(NSAttributedString(string: "Spin Again".localized(), attributes: fontDict))
+        spinAttString.append(NSAttributedString(string: "Spin again".localized(), attributes: fontDict))
         self.spinAgainButton.setAttributedTitle(spinAttString, for: .normal)
         
        /* if let attributedTitle = self.homePageButton.attributedTitle(for: .normal) {
@@ -73,7 +73,7 @@ class SpinFailView: UIView {
             self.homePageButton.setAttributedTitle(mutableAttributedTitle, for: .normal)
         } */
         
-        self.spinAgainButton.setTitle("Spin Again".localized(), for: .normal)
+        self.spinAgainButton.setTitle("Spin again".localized(), for: .normal)
         
         containerView.addShadow(cornerRadius: 20, shadowRadius: 3, opacity: 0.5, color: UIColor.black)
         bounceAnimation(imageView)
