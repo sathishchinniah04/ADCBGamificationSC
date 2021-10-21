@@ -15,7 +15,7 @@
 "Predict Now" = "توقع الآن";
 "Spin" = "أدر دولاب الحظ";
 "Refer" = "توصية ودعوة صديق";
-"Expires in" = "ينتهي في";
+"Expires in" = "تنتهي المسابقة بعد";
 "Hurray!" = "تهانينا!";
 "Go To" = "انتقل إلى";
 "Rewards" = "المكافآت";
@@ -51,7 +51,7 @@
 "Share" = "مشاركة";
 "Expire on" = "تنتهي في";
 "Congratulation" = "تهنئة";
-"Spin & Win" = "أدر دولاب الحظ واربح مكافآت مذهلة";
+"Spin & Win" = "أدر دولاب الحظ واربح";
 "Predict & Win" = "توقع واربح";
 "Thank you for your participation" = "نشكرك على مشاركتك";
 "Winner will be announced shortly and you will receive a notification on the App. Stay tuned, enjoy the game !" = "سيتم الإعلان عن الفائزين قريباً عبر إرسال  إشعار على التطبيق. احرص على متابعتنا واستمتع بمشاهدة المباراة!";
@@ -67,7 +67,7 @@
 "Refer again" = "الرجوع مرة أخرى";
 "Please eneter a valid mobile number" = "يرجى إدخال رقم هاتف محمول صحيح";
 "Invite" = "أرسل الدعوة";
-"Starts in" = "يبدأ في";
+"Starts in" = "تبدأ المباراة بعد";
 "Today, Starts in" = "اليوم، تبدأ المباراة بعد";
 "mins" = "دقيقة";
 "Thank you for your participation" = "أشكركم على مشاركتكم";
