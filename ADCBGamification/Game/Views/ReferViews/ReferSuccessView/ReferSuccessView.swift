@@ -87,7 +87,7 @@ class ReferSuccessView: UIView {
         
         
         let homeAttString = NSMutableAttributedString()
-        homeAttString.append(NSAttributedString(string: "Home Page".localized(), attributes: fontDict))
+        homeAttString.append(NSAttributedString(string: "Homepage".localized(), attributes: fontDict))
         self.homePageButton.setAttributedTitle(homeAttString, for: .normal)
         
         
