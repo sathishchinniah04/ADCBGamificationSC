@@ -168,6 +168,7 @@ class Utility {
         dateFormatter.locale = Locale.current
         return dateFormatter.date(from: date) ?? Date()
     }
+    
         
         static func secondsToHoursMinutesSeconds (seconds : Int) -> (String, String, String) {
             return (String(format: "%02d",seconds / 3600), String(format: "%02d", (seconds % 3600) / 60), String(format: "%02d", (seconds % 3600) % 60))

@@ -228,13 +228,19 @@ class SpinSuccessView: UIView {
         
         self.messageDescLbl.text = "\(info?.responseObject?.first?.displayDetails?.first?.name ?? "")"
         
-      
+        let df = DateFormatter()
+        df.dateFormat = "yyyy-MM-dd"
+        let currentDate = df.string(from: Date())
+        
+        
+        self.shareExpLbl.text = "on ".localized() + Utility.convertDateFormat(inputDate: currentDate)
 
-        if (info?.responseObject?.first?.expiryDate?.isEmpty ?? "".isEmpty || info?.responseObject?.first?.expiryDate == nil) {
-            self.shareExpLbl.text = ""
-        } else {
-            self.shareExpLbl.text = "on ".localized() + Utility.convertDateFormat(inputDate: info?.responseObject?.first?.expiryDate ?? "")
-        }
+        
+//        if (info?.responseObject?.first?.expiryDate?.isEmpty ?? "".isEmpty || info?.responseObject?.first?.expiryDate == nil) {
+//            self.shareExpLbl.text = ""
+//        } else {
+//            self.shareExpLbl.text = "on ".localized() + Utility.convertDateFormat(inputDate: info?.responseObject?.first?.expiryDate ?? "")
+//        }
         
         if let imageUrls = info?.responseObject?.first?.displayDetails?.first?.imageList?.first?.name {
                  if let url = URL(string: imageUrls) {
