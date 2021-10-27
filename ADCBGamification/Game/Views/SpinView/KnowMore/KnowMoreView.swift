@@ -53,7 +53,7 @@ class KnowMoreView: UIView {
         titleLabel.text = info?.responseObject?.first?.displayDetails?.first?.name ?? ""
        
         if let timeVal = info?.responseObject?.first?.expiryDate {
-            let date = Utility.convertDateWithFormat(inputDate: timeVal, currFormat: "yyyy-MM-dd", expFormat: "d MMM yyyy ha")
+            let date = Utility.convertDateWithFormatForPredicNWin(inputDate: timeVal, currFormat: "yyyy-MM-dd", expFormat: "d MMM yyyy ha")
             validityLabel.text = "Valid till".localized() + " " + date
         } else {
             validityLabel.isHidden = true

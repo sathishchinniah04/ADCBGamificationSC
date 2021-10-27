@@ -79,7 +79,7 @@ class ReferIntroController: UIViewController {
         } else {
             referArbLblLeftConstraints.constant = 200
         }
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+        DispatchQueue.main.asyncAfter(deadline: .now()) {
             self.referMessageLabel.layoutIfNeeded()
         }
     }
