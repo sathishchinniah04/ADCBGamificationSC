@@ -231,7 +231,7 @@ class PredictSuccessView: UIView {
         activityViewController.excludedActivityTypes = [ UIActivity.ActivityType.airDrop, UIActivity.ActivityType.postToFacebook ]
         activityViewController.completionWithItemsHandler = {(activityType: UIActivity.ActivityType?, completed: Bool, returnedItems:[Any]?, error: Error?) in
             self.shareMainView.isHidden = true
-            Constants.referMessage = ""
+            //Constants.referMessage = ""
         }
         if let viewController = UIApplication.topMostViewController {
             viewController.present(activityViewController, animated: true) {
