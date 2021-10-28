@@ -191,7 +191,7 @@ class SpinMainVC: UIViewController {
         self.spinerView.enableSpinButton(hide: true)
         expireView.populateView(isShowTerms: false, game: self.game) {
             if self.expireView.genericButton.button.titleLabel?.text == "Play".localized() {
- 
+                self.spinerView.enableSpinButton(hide: true)
               self.expireView.setupButtonName(name: "Spin".localized())
                 self.homeAnimationStaticView.isHidden = true
                 (self.con as? CustomNavViewController)?.changeOnlyTitle(title: "Spin & Win".localized())
