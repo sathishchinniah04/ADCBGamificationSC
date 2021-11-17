@@ -148,6 +148,7 @@
                         <outlet property="activityIndicator" destination="xxf-cY-7Q7" id="bmt-Xw-Fze"/>
                         <outlet property="bgCloudImage" destination="tdu-bk-ghL" id="TTP-gY-A8J"/>
                         <outlet property="expireView" destination="0zs-1g-UM0" id="Nkd-iS-rPk"/>
+                        <outlet property="predictWinBgImage" destination="Ifq-Y2-VVs" id="K8y-RR-Imr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wLU-v0-rOV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

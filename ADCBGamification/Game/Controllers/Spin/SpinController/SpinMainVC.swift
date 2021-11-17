@@ -51,6 +51,7 @@ class SpinMainVC: UIViewController {
         activityIndicatorView.startAnimating()
         checkLeftToRight()
         self.bgCloudImage.image = UIImage(named: "Clouds", in: Bundle(for: CustomNavView.self), compatibleWith: nil)
+        self.spinHomeBgView.image = UIImage(named: (StoreManager.shared.language.lowercased() == "en") ? "SpinHome" : "spin_arabic", in: Bundle(for: CustomNavView.self), compatibleWith: nil)
 
     }
 

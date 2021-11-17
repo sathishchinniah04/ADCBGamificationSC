@@ -191,7 +191,7 @@ func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath:
 
                 let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "ListGameCollectionHeaderView", for: indexPath) as! ListGameCollectionHeaderView
                 headerView.backgroundColor = .clear
-                headerView.populateView(title: "Enjoy the games and earn more rewards. We wish you goodluck!".localized())
+                headerView.populateView(title: "Enjoy your time and win many prizes".localized())
                 return headerView
 
             case UICollectionView.elementKindSectionFooter:

@@ -11,6 +11,7 @@ class PredictIntroController: UIViewController {
     @IBOutlet weak var expireView: ExpireView!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var bgCloudImage: UIImageView!
+    @IBOutlet weak var predictWinBgImage: UIImageView!
     
     var game: Games?
     var isDirectLoad: Bool = false
@@ -18,6 +19,8 @@ class PredictIntroController: UIViewController {
         super.viewDidLoad()
         self.initialSetup()
         self.bgCloudImage.image = UIImage(named: "Clouds", in: Bundle(for: CustomNavView.self), compatibleWith: nil)
+        
+        self.predictWinBgImage.image = UIImage(named: (StoreManager.shared.language.lowercased() == "en") ? "predictWinNewBG" : "PredictNWinArabiv", in: Bundle(for: CustomNavView.self), compatibleWith: nil)
     }
     
     override func viewWillAppear(_ animated: Bool) {
