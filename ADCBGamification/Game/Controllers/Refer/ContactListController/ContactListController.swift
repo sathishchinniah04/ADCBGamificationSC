@@ -424,7 +424,7 @@ class ContactListController: UIViewController, UITextFieldDelegate {
             DispatchQueue.main.async {
                 self.activityIndicatorView.stopAnimating()
                 if data == nil {
-                    self.showToast(message: "Something went wring. Try again !")
+                    self.showToast(message: "Something went wrong. Try again !")
                     DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
                         self.dismiss(animated: true, completion: nil)
                     }
@@ -454,7 +454,7 @@ class ContactListController: UIViewController, UITextFieldDelegate {
                         self.UnhidebaseViewForValidUser()
                     } else {
                         self.isUnknownContactVerified = false
-                        self.showToast(message: "Something went wring. Try again !")
+                        self.showToast(message: "Something went wrong. Try again !")
                         DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
                             self.dismiss(animated: true, completion: nil)
                         }

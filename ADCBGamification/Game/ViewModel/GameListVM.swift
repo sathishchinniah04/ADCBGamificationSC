@@ -68,7 +68,7 @@ class GameListVM {
                     complition(false, data.respDesc)
                 }
             } else {
-                complition(false, "Something went wring. Try again !")
+                complition(false, "Something went wrong. Try again !")
                 print("error is \(String(describing: error))")
             }
         }

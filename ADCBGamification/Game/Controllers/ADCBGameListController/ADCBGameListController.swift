@@ -103,7 +103,7 @@ class ADCBGameListController: UIViewController {
                 DispatchQueue.main.async {
                     self.activityIndicatorView.stopAnimating()
                     let text = message ?? ""
-                    self.showToast(message: (text.isEmpty) ? "Something went wring. Try again !" : text)
+                    self.showToast(message: (text.isEmpty) ? "Something went wrong. Try again !" : text)
                     DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
                         
                         self.dismiss(animated: false) {
