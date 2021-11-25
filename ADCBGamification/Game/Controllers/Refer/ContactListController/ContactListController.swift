@@ -66,6 +66,7 @@ class ContactListController: UIViewController, UITextFieldDelegate {
     var errorMsg = ""
     var delegate: ReferDateDelegate? = nil
     var isUnknownContactVerified = false
+    var shouldHideBerifyButton = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -433,7 +434,7 @@ class ContactListController: UIViewController, UITextFieldDelegate {
                         self.isUnknownContactVerified = false
                         self.leftMessageLbl.sizeToFit()
                         self.leftMessageLblTopConstraints.constant = -30
-                        self.verifyMessageview.isHidden = true
+                        self.verifyMessageview.isHidden = false
                         self.errorMsg = " "
                         self.shareContactLbl.text = "Sorry, this contact is Simplylife user".localized()
                         self.leftMessageLbl.text = "Select another contact to refer".localized()
@@ -443,6 +444,7 @@ class ContactListController: UIViewController, UITextFieldDelegate {
                         self.handle?(contact.firstName + " " + contact.lastName, contact.telephone)
                         self.bPart = contact.telephone
                         self.UnhidebaseViewForexistingUser()
+                        self.leftMessageLbl.isHidden = false
                     } else if (data == "400") {
                         self.isUnknownContactVerified = true
                         self.errorMsg = ""
@@ -462,7 +464,10 @@ class ContactListController: UIViewController, UITextFieldDelegate {
                     
                 }
                 
+                self.contactTableView.reloadData()
+                
             }
+            
 
         }
         
@@ -524,6 +529,7 @@ extension ContactListController: UITableViewDelegate, UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "CustomContactCell") as! CustomContactCell
         cell.verifyBtnAction = {
             let contactData = self.newList[indexPath.row]
+            self.shouldHideBerifyButton = true
             cell.isSelectedVal = true
             self.activityIndicatorView.isHidden = false
             self.activityIndicatorView.startAnimating()
@@ -539,6 +545,10 @@ extension ContactListController: UITableViewDelegate, UITableViewDataSource {
         } else if (!isUnknownContactVerified && !verifyMessageview.isHidden) {
             cell.verifyBtn.isHidden = false
         }
+        if shouldHideBerifyButton {
+            cell.verifyBtn.isHidden = true
+        }
+        
         return cell
     }
     
