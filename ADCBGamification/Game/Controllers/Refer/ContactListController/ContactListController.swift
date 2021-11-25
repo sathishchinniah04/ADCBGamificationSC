@@ -378,6 +378,7 @@ class ContactListController: UIViewController, UITextFieldDelegate {
             shareContactLbl.text = "No match found".localized()
             //self.inviteButton.alpha = 0.0
             self.isUnknownContactVerified = false
+            self.shouldHideBerifyButton = false
             self.verifyMessageview.isHidden = false
         } else {
             self.verifyMessageview.isHidden = true
@@ -464,7 +465,7 @@ class ContactListController: UIViewController, UITextFieldDelegate {
                     
                 }
                 
-                self.contactTableView.reloadData()
+              //  self.contactTableView.reloadData()
                 
             }
             
@@ -531,6 +532,7 @@ extension ContactListController: UITableViewDelegate, UITableViewDataSource {
             let contactData = self.newList[indexPath.row]
             self.shouldHideBerifyButton = true
             cell.isSelectedVal = true
+            cell.verifyBtn.isHidden = true
             self.activityIndicatorView.isHidden = false
             self.activityIndicatorView.startAnimating()
             self.placeHolderLbl.isHidden = false
@@ -538,17 +540,21 @@ extension ContactListController: UITableViewDelegate, UITableViewDataSource {
             self.titleLbl.text = contactData.telephone
             self.isUnknownContactVerified = false
             self.onCellTap(indexPath: indexPath)
+            self.shouldHideBerifyButton = true
         }
+        
         cell.populateView(info: self.newList[indexPath.row])
-        if self.isUnknownContactVerified {
-            cell.verifyBtn.isHidden = true
-        } else if (!isUnknownContactVerified && !verifyMessageview.isHidden) {
-            cell.verifyBtn.isHidden = false
-        }
+        
+//        if self.isUnknownContactVerified {
+//            cell.verifyBtn.isHidden = true
+//        } else if (!isUnknownContactVerified && !verifyMessageview.isHidden) {
+//            cell.verifyBtn.isHidden = true
+//        }
+        
         if shouldHideBerifyButton {
             cell.verifyBtn.isHidden = true
         }
-        
+
         return cell
     }
     
@@ -558,7 +564,9 @@ extension ContactListController: UITableViewDelegate, UITableViewDataSource {
         let contactData = self.newList[indexPath.row]
         selectedCell.isSelectedVal = true
         activityIndicatorView.isHidden = false
+        selectedCell.verifyBtn.isHidden = true
         activityIndicatorView.startAnimating()
+        self.shouldHideBerifyButton = true
 //        chooseContactButton.titleLabel.isHidden = false
 //        self.chooseContactButton.titleLabel.alpha = 1.0
        // placeHolderLbl.isHidden = false
