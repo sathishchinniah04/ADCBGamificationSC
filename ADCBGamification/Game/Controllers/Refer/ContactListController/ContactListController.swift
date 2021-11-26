@@ -409,7 +409,7 @@ class ContactListController: UIViewController, UITextFieldDelegate {
 //        let contact = self.newList[indexPath.row]
 //        self.inviteButton.alpha = 0.0
         
-        let contact = self.newList[indexPath.row]
+        var contact = self.newList[indexPath.row]
         self.newList.removeAll()
         self.newList.append(contact)
         self.contactTableView.reloadData()
@@ -419,6 +419,7 @@ class ContactListController: UIViewController, UITextFieldDelegate {
         }
         
         self.verifyMessageview.isHidden = true
+        contact.telephone = contact.telephone.replacingOccurrences(of: "-", with: "")
         ReferViewModel.checkSimpleLifeUserApi(bParty: contact.telephone) { (data, err) in
             print("data is \(data)")
             

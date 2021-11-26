@@ -97,12 +97,11 @@ class ADCBGameListCollectionCell: UICollectionViewCell {
     func setImage(game: Games) {
         var gameNameImg: String = ""
         if game.gameType == "SpinNWin" {
-            gameNameImg = "SpinList"
-            
+            gameNameImg = (StoreManager.shared.language == GameLanguage.AR.rawValue) ? "SpinListArabic" : "SpinList"
         } else if game.gameType == "PredictNWin" {
-            gameNameImg = "PredictList"
+            gameNameImg = (StoreManager.shared.language == GameLanguage.AR.rawValue) ? "PredictListArabic" : "PredictList"
         } else if game.gameType == "ReferNWin" {
-            gameNameImg = "Invite"
+            gameNameImg = (StoreManager.shared.language == GameLanguage.AR.rawValue) ? "InviteArabic" : "Invite"
             
         } else {
             gameNameImg = ""
