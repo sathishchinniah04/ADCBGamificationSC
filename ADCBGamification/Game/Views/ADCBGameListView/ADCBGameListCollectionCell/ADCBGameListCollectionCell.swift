@@ -73,7 +73,7 @@ class ADCBGameListCollectionCell: UICollectionViewCell {
     func disableCell() {
         DispatchQueue.main.async {
             self.lockDayLabel.isHidden = false
-            self.gameLogoImageView.backgroundColor = TTUtils.uiColor(from: 0xE0E0E0)
+            //self.gameLogoImageView.backgroundColor = TTUtils.uiColor(from: 0xE0E0E0)
             self.containerView.backgroundColor = TTUtils.uiColor(from: 0xEAEAEA)
             self.isUserInteractionEnabled = false
             self.gameLabel.textColor = UIColor.gray

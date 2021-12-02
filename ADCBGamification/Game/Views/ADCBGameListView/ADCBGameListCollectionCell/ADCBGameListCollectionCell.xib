@@ -22,7 +22,7 @@
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SpinList" translatesAutoresizingMaskIntoConstraints="NO" id="obU-ak-bHg">
                                 <rect key="frame" x="10" y="10" width="135" height="135"/>
-                                <color key="backgroundColor" red="1" green="0.8784313725490196" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="obU-ak-bHg" secondAttribute="height" multiplier="1:1" id="B0e-EK-u8k"/>
                                 </constraints>
