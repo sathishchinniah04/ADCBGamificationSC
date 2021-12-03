@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg width="121px" height="124px" viewBox="0 0 121 124" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <title>C0DF6F32-D145-4D80-ABF5-C35C5125F427</title>
+<svg width="121px" height="120px" viewBox="0 0 121 120" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>506345B1-B5C8-4F2E-A708-0D71CA821F55</title>
     <defs>
         <circle id="path-1" cx="60" cy="60" r="60"></circle>
     </defs>
-    <g id="All-In-One" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="Arabic_Complete_Flow_Updated_v2-01" transform="translate(-214.000000, -200.000000)">
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Arabic_Complete_Flow_Updated_v2-01" transform="translate(-214.000000, -204.000000)">
             <g id="Oval" transform="translate(30.000000, 194.000000)">
-                <g id="Group-8" transform="translate(184.000000, 6.000000)">
-                    <circle id="Oval" fill="#FFE000" cx="60" cy="64" r="60"></circle>
-                    <g id="Spin_the_Wheel[6]" transform="translate(0.000000, 4.000000)">
+                <g id="Group-8" transform="translate(184.000000, 10.000000)">
+                    <circle id="Oval" fill="#FFE000" cx="60" cy="60" r="60"></circle>
+                    <g id="Spin_the_Wheel[6]" transform="translate(1.000000, 0.000000)">
                         <mask id="mask-2" fill="white">
                             <use xlink:href="#path-1"></use>
                         </mask>
                         <use id="Mask" fill="#FFE000" xlink:href="#path-1"></use>
                         <g id="App_Illustrations_315x300-01" mask="url(#mask-2)">
-                            <g transform="translate(10.000000, 19.000000)">
+                            <g transform="translate(12.000000, 19.000000)">
                                 <path d="M45.8234101,10.365484 L24.6891165,90.5658763 C24.5856079,90.9613806 24.6724219,91.3821394 24.9242518,91.7054997 C25.1760817,92.02886 25.5645815,92.2189367 25.976502,92.2189367 L68.2450891,92.2189367 C68.6575051,92.2197844 69.0469264,92.0305678 69.2990596,91.706818 C69.5511928,91.3830682 69.637435,90.9615129 69.5324746,90.5658763 L48.398181,10.365484 C48.2434839,9.78611527 47.714991,9.38264272 47.1107956,9.38264272 C46.5066001,9.38264272 45.9781072,9.78611527 45.8234101,10.365484 Z" id="Path" stroke="#0C0853" stroke-width="0.5" fill="none"></path>
                                 <path d="M46.3083139,12.9263683 L26.2667613,88.9873418 C26.2058669,89.2320339 26.2618281,89.4909116 26.4185076,89.6893229 C26.575187,89.8877341 26.8151663,90.0035657 27.069243,90.0035657 L67.1557629,90.0035657 C67.4093608,90.0023032 67.6484544,89.8860745 67.8048405,89.6880347 C67.9612267,89.4899948 68.0177344,89.2318883 67.9582446,88.9873418 L47.9132772,12.9263683 C47.8173492,12.564746 47.4877534,12.3126995 47.1107956,12.3126995 C46.7338377,12.3126995 46.4042419,12.564746 46.3083139,12.9263683 Z" id="Path" stroke="#0C0853" stroke-width="0.5" fill="none"></path>
                                 <g id="Group_17" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(20.925990, 0.000000)">

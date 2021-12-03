@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "Spin & Win@1x.png",
+      "filename" : "SpinList@1x.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "Spin & Win@2x.png",
+      "filename" : "SpinList@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "Spin & Win@3x.png",
+      "filename" : "SpinList@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

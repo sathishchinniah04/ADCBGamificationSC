@@ -1,15 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "Invite.svg",
+      "filename" : "Invite.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
+      "filename" : "Invite@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
+      "filename" : "Invite@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }
