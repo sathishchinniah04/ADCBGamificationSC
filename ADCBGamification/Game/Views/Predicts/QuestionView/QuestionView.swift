@@ -61,6 +61,12 @@ class QuestionView: UIView {
         hideAllButton()
         buttonSetup()
         
+        if (StoreManager.shared.language == GameLanguage.AR.rawValue) {
+            questionLabel.textAlignment = .right
+        } else {
+            questionLabel.textAlignment = .center
+        }
+        
         noOfQuesLabel.setSizeFont(sizeFont: (StoreManager.shared.language == GameLanguage.AR.rawValue) ?  14.0 : 14.0, fontFamily: (StoreManager.shared.language == GameLanguage.AR.rawValue) ? "Tajawal-Regular" : "OpenSans-Regular")
         
         questionLabel.setSizeFont(sizeFont: (StoreManager.shared.language == GameLanguage.AR.rawValue) ?  20.0 : 20.0, fontFamily: (StoreManager.shared.language == GameLanguage.AR.rawValue) ? "Tajawal-Medium" : "OpenSans-SemiBold")
