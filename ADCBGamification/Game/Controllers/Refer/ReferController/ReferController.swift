@@ -49,9 +49,11 @@ class ReferController: UIViewController, ReferDateDelegate {
         if StoreManager.shared.language == GameLanguage.EN.rawValue {
             referMessageLabel.isHidden = true
             referMessageLabelEnglish.isHidden = false
+           // referCodeLabel.textAlignment = .left
         } else {
             referMessageLabel.isHidden = false
             referMessageLabelEnglish.isHidden = true
+           // referCodeLabel.textAlignment = .right
         }
 
         
@@ -125,7 +127,13 @@ class ReferController: UIViewController, ReferDateDelegate {
     
     func addDottedLine() {
         DispatchQueue.main.async {
-            self.referCodeView.addDottedLine()
+            if StoreManager.shared.language == GameLanguage.EN.rawValue {
+                self.referCodeView.addDashedBorder()
+            } else {
+                self.referCodeView.addDashedBorder(space: 20)
+            }
+           
+            self.referCodeView.contentMode = .right
         }
     }
     
