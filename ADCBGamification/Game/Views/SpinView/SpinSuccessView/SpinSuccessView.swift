@@ -175,7 +175,7 @@ class SpinSuccessView: UIView {
 
         let fontDict: [NSAttributedString.Key : Any] = [
             NSAttributedString.Key.font: (StoreManager.shared.language == GameLanguage.AR.rawValue) ? UIFont(name: "Tajawal-Regular", size: 14.0) ?? UIFont.boldSystemFont(ofSize: 1.5) : UIFont(name: "OpenSans-Regular", size: 14.0) ?? UIFont.boldSystemFont(ofSize: 1.5),
-            NSAttributedString.Key.underlineStyle : 1,
+            NSAttributedString.Key.underlineStyle : 0,
             NSAttributedString.Key.foregroundColor :  UIColor(hexString: "#222165")
             
         ]
@@ -183,16 +183,40 @@ class SpinSuccessView: UIView {
         rewardAttString.append(NSAttributedString(string: "Games".localized(), attributes: fontDict))
         self.rewardButton.setAttributedTitle(rewardAttString, for: .normal)
         
+        let rewardLine = UIView()
+        rewardLine.translatesAutoresizingMaskIntoConstraints = false
+        rewardLine.backgroundColor = #colorLiteral(red: 0.1333333333, green: 0.1294117647, blue: 0.3960784314, alpha: 1)
+        self.rewardButton.addSubview(rewardLine)
+        self.rewardButton.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|[line]|", metrics: nil, views: ["line":rewardLine]))
+        self.rewardButton.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:[line(1)]-(\(+4))-|", metrics: nil, views: ["line":rewardLine]))
+        
+        
         
         let homeAttString = NSMutableAttributedString()
         homeAttString.append(NSAttributedString(string: "Homepage".localized(), attributes: fontDict))
         self.homePageButton.setAttributedTitle(homeAttString, for: .normal)
         
+        let homePageLine = UIView()
+        homePageLine.translatesAutoresizingMaskIntoConstraints = false
+        homePageLine.backgroundColor = #colorLiteral(red: 0.1333333333, green: 0.1294117647, blue: 0.3960784314, alpha: 1)
+        self.homePageButton.addSubview(homePageLine)
+        self.homePageButton.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|[line]|", metrics: nil, views: ["line":homePageLine]))
+        self.homePageButton.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:[line(1)]-(\(+4))-|", metrics: nil, views: ["line":homePageLine]))
+        
+        
+        
         let spinAttString = NSMutableAttributedString()
         spinAttString.append(NSAttributedString(string: "Spin again".localized(), attributes: fontDict))
         self.spinAgainButton.setAttributedTitle(spinAttString, for: .normal)
-
+        
+        let spinLine = UIView()
+        spinLine.translatesAutoresizingMaskIntoConstraints = false
+        spinLine.backgroundColor = #colorLiteral(red: 0.1333333333, green: 0.1294117647, blue: 0.3960784314, alpha: 1)
+        self.spinAgainButton.addSubview(spinLine)
+        self.spinAgainButton.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|[line]|", metrics: nil, views: ["line":spinLine]))
+        self.spinAgainButton.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:[line(1)]-(\(+4))-|", metrics: nil, views: ["line":spinLine]))
   
+        
         
       /*  if let rewardsAttributedTitle = self.rewardButton.attributedTitle(for: .normal) {
             let mutableAttributedTitle = NSMutableAttributedString(attributedString: rewardsAttributedTitle)
@@ -430,6 +454,25 @@ extension UIViewController {
     
 
 }
+
+extension SpinSuccessView: UIActivityItemSource {
+
+    func activityViewControllerPlaceholderItem(_ activityViewController: UIActivityViewController) -> Any {
+        return ""
+    }
+
+
+    func activityViewController(_ activityViewController: UIActivityViewController, itemForActivityType activityType: UIActivity.ActivityType?) -> Any? {
+        print(UIActivity.ActivityType.self)
+//        if activityType == .po {
+//            activityViewController.dismiss(animated: false, completion: {
+//            })
+//        }
+        return Constants.referMessage
+    }
+
+}
+
 
 /*extension SpinSuccessView: UIActivityItemSource , SharingDelegate {
     

@@ -20,6 +20,7 @@ class PredictTeamView: UIView {
     @IBOutlet weak var secondTeamImageView: UIImageView!
     @IBOutlet weak var firstTeamImageContainerView: UIView!
     @IBOutlet weak var secondTeamImageContainerView: UIView!
+    @IBOutlet weak var vsBgImage: UIImageView!
     
     func loadXib() -> UIView {
         return UINib(nibName: "PredictTeamView", bundle: Bundle(for: Self.self)).instantiate(withOwner: self, options: nil).first as! UIView
@@ -33,6 +34,7 @@ class PredictTeamView: UIView {
     required init?(coder: NSCoder) {
         super.init(coder: coder)
         initialSetup()
+        setupFontFamily()
     }
     
     override func prepareForInterfaceBuilder() {
@@ -63,6 +65,12 @@ class PredictTeamView: UIView {
         secondTeamNameLabel.setSizeFont(sizeFont: (StoreManager.shared.language == GameLanguage.AR.rawValue) ?  12.0 : 12.0, fontFamily: (StoreManager.shared.language == GameLanguage.AR.rawValue) ? "Tajawal-Regular" : "OpenSans-Regular")
         
         secondTeamCharLabel.setSizeFont(sizeFont: (StoreManager.shared.language == GameLanguage.AR.rawValue) ?  14.0 : 14.0, fontFamily: (StoreManager.shared.language == GameLanguage.AR.rawValue) ? "Tajawal-ExtraBold" : "OpenSans-ExtraBold")
+        
+        if (StoreManager.shared.language == GameLanguage.AR.rawValue) {
+            vsBgImage.image = UIImage(named: "vsarabic", in: Bundle(for: CustomNavView.self), compatibleWith: nil)
+        } else {
+            vsBgImage.image = UIImage(named: "VS", in: Bundle(for: CustomNavView.self), compatibleWith: nil)
+        }
     }
     
     func extraPopulation(time: String) {

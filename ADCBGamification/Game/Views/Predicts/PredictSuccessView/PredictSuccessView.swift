@@ -168,7 +168,7 @@ class PredictSuccessView: UIView {
         
         let fontDict: [NSAttributedString.Key : Any] = [
             NSAttributedString.Key.font: (StoreManager.shared.language == GameLanguage.AR.rawValue) ? UIFont(name: "Tajawal-Regular", size: 14.0) ?? UIFont.boldSystemFont(ofSize: 1.5) : UIFont(name: "OpenSans-Regular", size: 14.0) ?? UIFont.boldSystemFont(ofSize: 1.5),
-            NSAttributedString.Key.underlineStyle : 1,
+            NSAttributedString.Key.underlineStyle : 0,
             NSAttributedString.Key.foregroundColor :  UIColor(hexString: "#222165")
             
         ]
@@ -176,11 +176,25 @@ class PredictSuccessView: UIView {
         rewardAttString.append(NSAttributedString(string: "Homepage".localized(), attributes: fontDict))
         self.homePageButton.setAttributedTitle(rewardAttString, for: .normal)
         
+        let homeLine = UIView()
+        homeLine.translatesAutoresizingMaskIntoConstraints = false
+        homeLine.backgroundColor = #colorLiteral(red: 0.1333333333, green: 0.1294117647, blue: 0.3960784314, alpha: 1)
+        self.homePageButton.addSubview(homeLine)
+        self.homePageButton.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|[line]|", metrics: nil, views: ["line":homeLine]))
+        self.homePageButton.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:[line(1)]-(\(+4))-|", metrics: nil, views: ["line":homeLine]))
+        
+        
         
         let gameAttString = NSMutableAttributedString()
         gameAttString.append(NSAttributedString(string: "Games".localized(), attributes: fontDict))
         self.gamePageButton.setAttributedTitle(gameAttString, for: .normal)
         
+        let gameLine = UIView()
+        gameLine.translatesAutoresizingMaskIntoConstraints = false
+        gameLine.backgroundColor = #colorLiteral(red: 0.1333333333, green: 0.1294117647, blue: 0.3960784314, alpha: 1)
+        self.gamePageButton.addSubview(gameLine)
+        self.gamePageButton.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|[line]|", metrics: nil, views: ["line":gameLine]))
+        self.gamePageButton.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:[line(1)]-(\(+4))-|", metrics: nil, views: ["line":gameLine]))
   
     }
     

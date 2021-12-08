@@ -77,7 +77,7 @@ class ReferSuccessView: UIView {
         subMessageLbl.text = "x".localized()
         let fontDict: [NSAttributedString.Key : Any] = [
             NSAttributedString.Key.font: (StoreManager.shared.language == GameLanguage.AR.rawValue) ? UIFont(name: "Tajawal-Regular", size: 14.0) ?? UIFont.boldSystemFont(ofSize: 1.5) : UIFont(name: "OpenSans-Regular", size: 14.0) ?? UIFont.boldSystemFont(ofSize: 1.5),
-            NSAttributedString.Key.underlineStyle : 1,
+            NSAttributedString.Key.underlineStyle : 0,
             NSAttributedString.Key.foregroundColor :  UIColor(hexString: "#222165")
             
         ]
@@ -85,15 +85,37 @@ class ReferSuccessView: UIView {
         rewardAttString.append(NSAttributedString(string: "Refer a friend".localized(), attributes: fontDict))
         self.rewardButton.setAttributedTitle(rewardAttString, for: .normal)
         
+        let rewardLine = UIView()
+        rewardLine.translatesAutoresizingMaskIntoConstraints = false
+        rewardLine.backgroundColor = #colorLiteral(red: 0.1333333333, green: 0.1294117647, blue: 0.3960784314, alpha: 1)
+        self.rewardButton.addSubview(rewardLine)
+        self.rewardButton.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|[line]|", metrics: nil, views: ["line":rewardLine]))
+        self.rewardButton.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:[line(1)]-(\(+4))-|", metrics: nil, views: ["line":rewardLine]))
+        
         
         let homeAttString = NSMutableAttributedString()
         homeAttString.append(NSAttributedString(string: "Homepage".localized(), attributes: fontDict))
         self.homePageButton.setAttributedTitle(homeAttString, for: .normal)
         
+        let homeLine = UIView()
+        homeLine.translatesAutoresizingMaskIntoConstraints = false
+        homeLine.backgroundColor = #colorLiteral(red: 0.1333333333, green: 0.1294117647, blue: 0.3960784314, alpha: 1)
+        self.homePageButton.addSubview(homeLine)
+        self.homePageButton.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|[line]|", metrics: nil, views: ["line":homeLine]))
+        self.homePageButton.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:[line(1)]-(\(+4))-|", metrics: nil, views: ["line":homeLine]))
+        
+        
         
         let gamesAttString = NSMutableAttributedString()
         gamesAttString.append(NSAttributedString(string: "Games".localized(), attributes: fontDict))
         self.gamesButton.setAttributedTitle(gamesAttString, for: .normal)
+        
+        let gameLine = UIView()
+        gameLine.translatesAutoresizingMaskIntoConstraints = false
+        gameLine.backgroundColor = #colorLiteral(red: 0.1333333333, green: 0.1294117647, blue: 0.3960784314, alpha: 1)
+        self.gamesButton.addSubview(gameLine)
+        self.gamesButton.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|[line]|", metrics: nil, views: ["line":gameLine]))
+        self.gamesButton.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:[line(1)]-(\(+4))-|", metrics: nil, views: ["line":gameLine]))
         
         
         if status == .failure {

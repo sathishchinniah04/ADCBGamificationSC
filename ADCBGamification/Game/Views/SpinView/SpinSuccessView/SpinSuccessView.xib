@@ -190,9 +190,9 @@
                                                         <attributedString key="attributedTitle">
                                                             <fragment content="Games">
                                                                 <attributes>
-                                                                    <color key="NSColor" red="0.13333333333333333" green="0.12941176470588234" blue="0.396078431372549" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                                                     <font key="NSFont" metaFont="system" size="14"/>
-                                                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="8" tighteningFactorForTruncation="0.0"/>
                                                                     <integer key="NSUnderline" value="1"/>
                                                                 </attributes>
                                                             </fragment>
@@ -434,11 +434,6 @@
                 <constraint firstItem="Sze-Hl-Lez" firstAttribute="centerY" secondItem="EoE-2C-3aV" secondAttribute="centerY" constant="0.5" id="sRa-Nc-APr"/>
                 <constraint firstItem="zzs-pO-hER" firstAttribute="trailing" secondItem="osd-Bu-Ix9" secondAttribute="trailing" id="zeZ-PZ-13N"/>
             </constraints>
-            <variation key="default">
-                <mask key="subviews">
-                    <exclude reference="mtE-Df-FqJ"/>
-                </mask>
-            </variation>
             <connections>
                 <outlet property="bgCloudImage" destination="rYa-6u-0UA" id="aee-GW-fS9"/>
                 <outlet property="containerView" destination="Sze-Hl-Lez" id="oku-Tz-ZOj"/>

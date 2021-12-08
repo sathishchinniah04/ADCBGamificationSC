@@ -53,8 +53,14 @@ class KnowMoreView: UIView {
         titleLabel.text = info?.responseObject?.first?.displayDetails?.first?.name ?? ""
        
         if let timeVal = info?.responseObject?.first?.expiryDate {
-            let date = Utility.convertDateWithFormatForPredicNWin(inputDate: timeVal, currFormat: "yyyy-MM-dd", expFormat: "d MMM yyyy ha")
-            validityLabel.text = "Valid till".localized() + " " + date
+            if (StoreManager.shared.language == GameLanguage.AR.rawValue) {
+                let date = Utility.convertDateWithFormatForPredicNWin(inputDate: timeVal, currFormat: "yyyy-MM-dd", expFormat: "ha yyyy MMM d")
+                validityLabel.text = "Valid till".localized() + " " + date
+            } else {
+                let date = Utility.convertDateWithFormatForPredicNWin(inputDate: timeVal, currFormat: "yyyy-MM-dd", expFormat: "d MMM yyyy ha")
+                validityLabel.text = "Valid till".localized() + " " + date
+            }
+
         } else {
             validityLabel.isHidden = true
         }
@@ -82,7 +88,7 @@ class KnowMoreView: UIView {
         
         let fontDict: [NSAttributedString.Key : Any] = [
             NSAttributedString.Key.font: (StoreManager.shared.language == GameLanguage.AR.rawValue) ? UIFont(name: "Tajawal-Regular", size: 14.0) ?? UIFont.boldSystemFont(ofSize: 1.5) : UIFont(name: "OpenSans-Regular", size: 14.0) ?? UIFont.boldSystemFont(ofSize: 1.5),
-            NSAttributedString.Key.underlineStyle : 1,
+            NSAttributedString.Key.underlineStyle : 0,
             NSAttributedString.Key.foregroundColor :  UIColor(hexString: "#222165")
             
         ]
@@ -90,7 +96,12 @@ class KnowMoreView: UIView {
         rewardAttString.append(NSAttributedString(string: "Know more".localized(), attributes: fontDict))
         self.knowmoreBtb.setAttributedTitle(rewardAttString, for: .normal)
         
-        
+        let rewardLine = UIView()
+        rewardLine.translatesAutoresizingMaskIntoConstraints = false
+        rewardLine.backgroundColor = #colorLiteral(red: 0.1333333333, green: 0.1294117647, blue: 0.3960784314, alpha: 1)
+        self.knowmoreBtb.addSubview(rewardLine)
+        self.knowmoreBtb.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|[line]|", metrics: nil, views: ["line":rewardLine]))
+        self.knowmoreBtb.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:[line(1)]-(\(+4))-|", metrics: nil, views: ["line":rewardLine]))
 
     }
     
