@@ -74,7 +74,7 @@ class ReferSuccessView: UIView {
     func setupLabel(info: SpinAssignReward?, status: ReferralStatus?) {
         setupFontFamily()
         goToLabel.text = "Go To".localized()
-        subMessageLbl.text = "x".localized()
+        subMessageLbl.text = "TouchPoints will be credited shortly after your friend downloads the App and signs up.".localized()
         let fontDict: [NSAttributedString.Key : Any] = [
             NSAttributedString.Key.font: (StoreManager.shared.language == GameLanguage.AR.rawValue) ? UIFont(name: "Tajawal-Regular", size: 14.0) ?? UIFont.boldSystemFont(ofSize: 1.5) : UIFont(name: "OpenSans-Regular", size: 14.0) ?? UIFont.boldSystemFont(ofSize: 1.5),
             NSAttributedString.Key.underlineStyle : 0,
