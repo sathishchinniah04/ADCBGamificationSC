@@ -29,9 +29,9 @@
 "sec" = "ثانية";
 "hr" = "ساعة،";
 "Choose Contact" = "اختر جهة الاتصال من هاتفك المتحرك";
-"Enter a contact name or mobile number" = "أدخل اسم أو رقم الهاتف المتحرك الخاص بجهة الاتصال";
+"Enter a contact name or mobile number" = "يرجى إدخال أسم الشخص الذي ترغب بدعوته أو رقم هاتفه المتحرك";
 "Invite" = "أرسل الدعوة";
-"Select the contact to Invite" = "اختر جهة الاتصال لإرسال الدعوة";
+"Select the contact to Invite" = "اختر الشخص الذي ترغب بدعوته";
 "or" = "أو";
 "Share Your Referral Code" = "شارك الرمز لدعوة صديق";
 "Refer Again" = "الرجوع مرة أخرى";
@@ -86,8 +86,8 @@
 
 "Click “Verify” to check whether the contact is a Simplylife user." = "اضغط على 'التحقق' للتحقق مما إذا كانت جهة الاتصال من مستخدمي سيمبلي لايف.";
 "No match found" = "لا يوجد تطابق";
-"Select another contact to refer" = "حدد جهة اتصال أخرى للرجوع إليها";
-"Sorry, this contact is Simplylife user" = "عذرا ، هذا الاتصال هو مستخدم ببساطة الحياة";
+"Select another contact to refer" = "يرجى دعوة شخص آخر";
+"Sorry, this contact is a Simplylife user" = "نعتذر، الشخص الذي قمت بدعوته هو عميل حالي لدى سيملي لايف";
 "No" = "لا";
 "Yes" = "نعم";
 "Are you sure you want to close the game?" = "هل أنت متأكد أنك تريد إغلاق اللعبة؟";

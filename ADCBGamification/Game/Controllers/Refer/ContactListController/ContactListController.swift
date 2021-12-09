@@ -120,7 +120,10 @@ class ContactListController: UIViewController, UITextFieldDelegate {
         
         inviteButton.setButtonFont(fSize: (StoreManager.shared.language == GameLanguage.AR.rawValue) ?  16.0 : 16.0, fName: (StoreManager.shared.language == GameLanguage.AR.rawValue) ? "Tajawal-Medium" : "OpenSans-SemiBold")
         
-        shareContactLbl.setSizeFont(sizeFont: (StoreManager.shared.language == GameLanguage.AR.rawValue) ?  14.0 : 14.0, fontFamily: (StoreManager.shared.language == GameLanguage.AR.rawValue) ? "Tajawal-Regular" : "OpenSans-Regular")
+        
+        leftMessageLbl.setSizeFont(sizeFont: (StoreManager.shared.language == GameLanguage.AR.rawValue) ?  14.0 : 14.0, fontFamily: (StoreManager.shared.language == GameLanguage.AR.rawValue) ? "Tajawal-Regular" : "OpenSans-Regular")
+        
+        shareContactLbl.setSizeFont(sizeFont: (StoreManager.shared.language == GameLanguage.AR.rawValue) ?  13.0 : 14.0, fontFamily: (StoreManager.shared.language == GameLanguage.AR.rawValue) ? "Tajawal-Regular" : "OpenSans-Regular")
         
         addSwipe()
         
@@ -438,7 +441,7 @@ class ContactListController: UIViewController, UITextFieldDelegate {
                         self.leftMessageLblTopConstraints.constant = -30
                         self.verifyMessageview.isHidden = false
                         self.errorMsg = " "
-                        self.shareContactLbl.text = "Sorry, this contact is Simplylife user".localized()
+                        self.shareContactLbl.text = "Sorry, this contact is a Simplylife user".localized()
                         self.leftMessageLbl.text = "Select another contact to refer".localized()
                         self.footerHeight = 0
                         self.contactTableView.reloadData()
