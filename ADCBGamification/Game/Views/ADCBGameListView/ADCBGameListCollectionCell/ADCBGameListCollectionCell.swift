@@ -106,7 +106,13 @@ class ADCBGameListCollectionCell: UICollectionViewCell {
         } else {
             gameNameImg = ""
         }
-        gameLogoImageView.image = UIImage(named: gameNameImg, in: Bundle(for: Self.self), compatibleWith: nil)
+        
+        if game.executionStatus?.lowercased() != GameStatus.Active.rawValue.lowercased() {
+            gameLogoImageView.image = UIImage(named: gameNameImg, in: Bundle(for: Self.self), compatibleWith: nil)?.changeInactiveImageColor
+        } else {
+            gameLogoImageView.image = UIImage(named: gameNameImg, in: Bundle(for: Self.self), compatibleWith: nil)
+        }
+
     }
     
     func startTimer() {

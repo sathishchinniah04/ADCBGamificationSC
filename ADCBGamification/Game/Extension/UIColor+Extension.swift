@@ -53,3 +53,19 @@ extension UIColor {
         self.init(red:red, green:green, blue:blue, alpha:1)
     }
 }
+
+
+extension UIImage {
+    
+    var changeInactiveImageColor: UIImage? {
+        let context = CIContext(options: nil)
+        guard let currentFilter = CIFilter(name: "CIPhotoEffectNoir") else { return nil }
+        currentFilter.setValue(CIImage(image: self), forKey: kCIInputImageKey)
+        if let output = currentFilter.outputImage,
+            let cgImage = context.createCGImage(output, from: output.extent) {
+            return UIImage(cgImage: cgImage, scale: scale, orientation: imageOrientation)
+        }
+        return nil
+    }
+}
+
