@@ -124,10 +124,12 @@ class Utility {
          let oldDate = olDateFormatter.date(from: currInputDate)
 
         let convertDateFormatter = DateFormatter()
+        convertDateFormatter.timeStyle = .short
+        
         if (StoreManager.shared.language.lowercased() == "ar".lowercased()) {
-            let hijriCalendar = Calendar.init(identifier: Calendar.Identifier.islamicCivil)
-            convertDateFormatter.calendar = hijriCalendar
-            convertDateFormatter.locale = Locale(identifier: "ar_SA")
+           // let hijriCalendar = Calendar.init(identifier: Calendar.Identifier.islamicCivil)
+           // convertDateFormatter.calendar = hijriCalendar
+            convertDateFormatter.locale = Locale(identifier: "ar")
         } else {
             convertDateFormatter.calendar = Calendar.init(identifier: Calendar.Identifier.gregorian)
             convertDateFormatter.locale = Locale(identifier: "en_US_POSIX")
