@@ -96,16 +96,35 @@ class ADCBGameListCollectionCell: UICollectionViewCell {
     
     func setImage(game: Games) {
         var gameNameImg: String = ""
-        if game.gameType == "SpinNWin" {
-            gameNameImg = (StoreManager.shared.language == GameLanguage.AR.rawValue) ? "SpinListArabic" : "SpinList"
-        } else if game.gameType == "PredictNWin" {
-            gameNameImg = (StoreManager.shared.language == GameLanguage.AR.rawValue) ? "PredictListArabic" : "PredictList"
-        } else if game.gameType == "ReferNWin" {
-            gameNameImg = (StoreManager.shared.language == GameLanguage.AR.rawValue) ? "InviteArabic" : "Invite"
-            
+        
+        if game.executionStatus == "Active" {
+            if game.gameType == "SpinNWin" {
+                gameNameImg = (StoreManager.shared.language == GameLanguage.AR.rawValue) ? "SpinListArabic" : "SpinList"
+            } else if game.gameType == "PredictNWin" {
+                gameNameImg = (StoreManager.shared.language == GameLanguage.AR.rawValue) ? "PredictListArabic" : "PredictList"
+            } else if game.gameType == "ReferNWin" {
+                gameNameImg = (StoreManager.shared.language == GameLanguage.AR.rawValue) ? "InviteArabic" : "Invite"
+                
+            } else {
+                gameNameImg = ""
+            }
         } else {
-            gameNameImg = ""
+            if game.gameType == "SpinNWin" {
+                gameNameImg = (StoreManager.shared.language == GameLanguage.AR.rawValue) ? "spin-disable-Arabic" : "spin-disable"
+            } else if game.gameType == "PredictNWin" {
+                gameNameImg = (StoreManager.shared.language == GameLanguage.AR.rawValue) ? "predict-disable-Arabic" : "predict-disable"
+            } else if game.gameType == "ReferNWin" {
+                gameNameImg = (StoreManager.shared.language == GameLanguage.AR.rawValue) ? "refer-disable-Arabic" : "refer-disable"
+                
+            } else {
+                gameNameImg = ""
+            }
         }
+        
+
+        
+
+        
         
         if game.executionStatus?.lowercased() != GameStatus.Active.rawValue.lowercased() {
             gameLogoImageView.image = UIImage(named: gameNameImg, in: Bundle(for: Self.self), compatibleWith: nil)?.changeInactiveImageColor
@@ -220,8 +239,48 @@ class ADCBGameListCollectionCell: UICollectionViewCell {
             }
 
             if (StoreManager.shared.language == GameLanguage.AR.rawValue) {
+                
+                if !self.lockDayLabel.isHidden {
+                    
+                    if value == 0 {
+                        self.lockDayLabel.text = "Unlocks Today".localized()
+                    } else if value == 1 { // Tomorrow
+                        self.lockDayLabel.text = "Unlocks Tomorrow".localized()
+                    } else if value <= 30 {
+                        self.lockDayLabel.text = "Unlocks in".localized() + " \(daysCount)"
+                    } else {
+                        let remainingDays = (value - 31)
+                        
+                        if remainingDays == 0 {
+                            self.lockDayLabel.text = "Unlocks in".localized() + " " + "1".localized() + "month".localized()
+                        } else {
+                            self.lockDayLabel.text = "Unlocks in".localized() + " " + "1".localized() + "month".localized() + "\(remainingDays)" + "days(s)"
+                        }
+                    }
+
+                }
                 self.timeLabel.text = daysCount + " \(currentHours) " + "hr".localized() + " \(currentMinutes) " + "mins".localized()
             } else {
+                
+                if !self.lockDayLabel.isHidden {
+                    
+                    if value == 0 {
+                        self.lockDayLabel.text = "Unlocks Today".localized()
+                    } else if value == 1 { // Tomorrow
+                        self.lockDayLabel.text = "Unlocks Tomorrow".localized()
+                    } else if value <= 30 {
+                        self.lockDayLabel.text = "Unlocks in " + daysCount
+                    } else {
+                        let remainingDays = (value - 31)
+                        
+                        if remainingDays == 0 {
+                            self.lockDayLabel.text = "Unlocks in " + "1 month"
+                        } else {
+                            self.lockDayLabel.text = "Unlocks in " + "1 month" + "\(remainingDays)" + "days(s)"
+                        }
+                    }
+
+                }
                 self.timeLabel.text = daysCount + " \(currentHours)" + "hr".localized() + " \(currentMinutes)" + "mins".localized()
             }
             
