@@ -252,9 +252,9 @@ class ADCBGameListCollectionCell: UICollectionViewCell {
                         let remainingDays = (value - 31)
                         
                         if remainingDays == 0 {
-                            self.lockDayLabel.text = "Unlocks in".localized() + " " + "1".localized() + "month".localized()
+                            self.lockDayLabel.text = "Unlocks in".localized() + " " + "1".localized() + "month(s)".localized()
                         } else {
-                            self.lockDayLabel.text = "Unlocks in".localized() + " " + "1".localized() + "month".localized() + "\(remainingDays)" + "days(s)"
+                            self.lockDayLabel.text = "Unlocks in".localized() + " " + "1".localized() + "month(s)".localized() + "\(remainingDays)" + "days(s)".localized()
                         }
                     }
 
@@ -274,9 +274,9 @@ class ADCBGameListCollectionCell: UICollectionViewCell {
                         let remainingDays = (value - 31)
                         
                         if remainingDays == 0 {
-                            self.lockDayLabel.text = "Unlocks in " + "1 month"
+                            self.lockDayLabel.text = "Unlocks in " + "1 month(s)"
                         } else {
-                            self.lockDayLabel.text = "Unlocks in " + "1 month" + "\(remainingDays)" + "days(s)"
+                            self.lockDayLabel.text = "Unlocks in " + "1 month(s)" + "\(remainingDays)" + "days(s)"
                         }
                     }
 
