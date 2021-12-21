@@ -64,7 +64,7 @@
 "Your invite was not sent. Please try again" =  "لم يتم إرسال دعوتك. حاول مرة اخرى";
 "Successful" = "مشاركة ناجحة";
 "The invite has been sent successfully." = "تم إرسال الدعوة بنجاح";
-"Refer again" = "الرجوع مرة أخرى";
+"Refer again" = "دعوة صديق";
 "Please eneter a valid mobile number" = "يرجى إدخال رقم هاتف محمول صحيح";
 "Invite" = "أرسل الدعوة";
 "Starts in" = "تبدأ المباراة بعد";
@@ -92,7 +92,7 @@
 "Yes" = "نعم";
 "Are you sure you want to close the game?" = "هل أنت متأكد أنك تريد إغلاق اللعبة؟";
 "Unlocks Tomorrow" = "يفتح غدا";
-"Refer a friend" = "توصية ودعوة صديق";
+"Refer a friend" = "دعوة صديق";
 "Unknown" = "";
 "contact" = "جهة الاتصال غير معروفة";
 "Know more" = "تعرف أكثر";
