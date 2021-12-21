@@ -34,9 +34,9 @@
 "Select the contact to Invite" = "اختر الشخص الذي ترغب بدعوته";
 "or" = "أو";
 "Share Your Referral Code" = "شارك الرمز لدعوة صديق";
-"Refer Again" = "الرجوع مرة أخرى";
-"Refer & Win" = "قم بدعوة صديق واربح المكافآت";
-"Invite your friends to join simplylife and earn exciting rewards" = "قم بدعوة اصدقائك للانضمام إلى سيمبلي لايف واربح مكافآت قيمة";
+"Refer Again" = "دعوة صديق";
+"Refer & Win" = "قم بدعوة صديق واربح  مكافآت مجزية";
+"Invite your friends to join simplylife and earn exciting rewards" = "قم بدعوة أصدقائك للانضمام إلى سمبلي لايف لتحصل على مكافآت قيمة";
 "Spin the wheel and win exciting prizes" = "أدر دولاب الحظ واربح جوائز قيّمة";
 "Play and win exciting rewards!" = "العب واربح مكافآت قيّمة";
 "Predict & Win" = "توقع واربح";
@@ -84,10 +84,10 @@
 "My contacts" = "جهات الاتصال";
 "TouchPoints will be credited shortly after your friend downloads the App and signs up." = "سيتم إضافة نقاط تاتش بوينتس فور قيام صديقك بتحميل التطبيق واستكمال متطلبات الانضمام إلى سيمبلي لايف";
 
-"Click “Verify” to check whether the contact is a Simplylife user." = "اضغط على 'التحقق' للتحقق مما إذا كانت جهة الاتصال من مستخدمي سيمبلي لايف.";
+"Click “Verify” to check whether the contact is a Simplylife user." = "اضغط على خَيار التحقق للتأكد مما إذا كانت جهة الاتصال من عملاء سمبلي لايف";
 "No match found" = "لا يوجد تطابق";
 "Select another contact to refer" = "يرجى دعوة شخص آخر";
-"Sorry, this contact is a Simplylife user" = "نعتذر، الشخص الذي قمت بدعوته هو عميل حالي لدى سيملي لايف";
+"Sorry, this contact is a Simplylife user" = "نعتذر، جهة الاتصال من عملاء سيمبلي لايف";
 "No" = "لا";
 "Yes" = "نعم";
 "Are you sure you want to close the game?" = "هل أنت متأكد أنك تريد إغلاق اللعبة؟";
