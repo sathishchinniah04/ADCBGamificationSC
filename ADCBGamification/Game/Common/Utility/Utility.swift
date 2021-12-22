@@ -127,14 +127,15 @@ class Utility {
         convertDateFormatter.timeStyle = .short
         
         if (StoreManager.shared.language.lowercased() == "ar".lowercased()) {
-           // let hijriCalendar = Calendar.init(identifier: Calendar.Identifier.islamicCivil)
+            let hijriCalendar = Calendar.init(identifier: Calendar.Identifier.islamicCivil)
            // convertDateFormatter.calendar = hijriCalendar
             convertDateFormatter.locale = Locale(identifier: "ar")
         } else {
             convertDateFormatter.calendar = Calendar.init(identifier: Calendar.Identifier.gregorian)
             convertDateFormatter.locale = Locale(identifier: "en_US_POSIX")
         }
-         
+        convertDateFormatter.amSymbol = "AM".localized()
+        convertDateFormatter.pmSymbol = "PM".localized()
          convertDateFormatter.dateFormat = expFormat
          return convertDateFormatter.string(from: oldDate!)
     }

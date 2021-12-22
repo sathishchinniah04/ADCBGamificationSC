@@ -55,7 +55,7 @@ class KnowMoreView: UIView {
         if let timeVal = info?.responseObject?.first?.expiryDate {
             //12 p.m. 30 september 2030 - for arbic
             if (StoreManager.shared.language == GameLanguage.AR.rawValue) {
-                let date = Utility.convertDateWithFormatForPredicNWin(inputDate: timeVal, currFormat: "yyyy-MM-dd", expFormat: "h a d MMM yyyy")
+                let date = Utility.convertDateWithFormatForPredicNWin(inputDate: timeVal, currFormat: "yyyy-MM-dd", expFormat: "hh a d MMM yyyy")
                 validityLabel.text = "Valid till".localized() + " " + date
             } else {
                 let date = Utility.convertDateWithFormatForPredicNWin(inputDate: timeVal, currFormat: "yyyy-MM-dd", expFormat: "ha d MMM yyyy")
