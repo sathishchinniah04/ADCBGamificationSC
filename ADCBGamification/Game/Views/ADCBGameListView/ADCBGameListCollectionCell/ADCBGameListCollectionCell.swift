@@ -138,7 +138,8 @@ class ADCBGameListCollectionCell: UICollectionViewCell {
         
         
         if game.executionStatus?.lowercased() != GameStatus.Active.rawValue.lowercased() {
-            gameLogoImageView.image = UIImage(named: gameNameImg, in: Bundle(for: Self.self), compatibleWith: nil)?.changeInactiveImageColor
+            gameLogoImageView.image = UIImage(named: gameNameImg, in: Bundle(for: Self.self), compatibleWith: nil)
+                //?.changeInactiveImageColor
         } else {
             gameLogoImageView.image = UIImage(named: gameNameImg, in: Bundle(for: Self.self), compatibleWith: nil)
         }
