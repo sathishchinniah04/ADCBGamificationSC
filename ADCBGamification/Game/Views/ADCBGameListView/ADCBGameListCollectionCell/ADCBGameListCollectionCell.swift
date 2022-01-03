@@ -18,6 +18,7 @@ class ADCBGameListCollectionCell: UICollectionViewCell {
     @IBOutlet weak var lockDayLabel: UILabel!
     @IBOutlet weak var timeLabel: UILabel!
     @IBOutlet weak var containerView: UIView!
+    @IBOutlet weak var overLayView: UIView!
     //@IBOutlet weak var logoContainerView: UIImageView!
     @IBOutlet weak var gameLogoImageView: UIImageView!
     @IBOutlet weak var crownBtn: UIButton!
@@ -74,7 +75,7 @@ class ADCBGameListCollectionCell: UICollectionViewCell {
         DispatchQueue.main.async {
             self.lockDayLabel.isHidden = false
             //self.gameLogoImageView.backgroundColor = TTUtils.uiColor(from: 0xE0E0E0)
-            self.containerView.backgroundColor = TTUtils.uiColor(from: 0xEAEAEA)
+            //self.containerView.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
             self.isUserInteractionEnabled = false
             self.gameLabel.textColor = UIColor.gray
             self.expireInLabel.isHidden = true
@@ -90,6 +91,7 @@ class ADCBGameListCollectionCell: UICollectionViewCell {
     }
     
     func cellColor(index: Int) {
+        self.overLayView.layer.cornerRadius = 10
         self.containerView.addShadow(cornerRadius: 10, shadowRadius: 3, opacity: 0.1, color: UIColor.black)
         self.containerView.backgroundColor = UIColor.white
     }
@@ -134,14 +136,13 @@ class ADCBGameListCollectionCell: UICollectionViewCell {
         
 
         
-
-        
-        
         if game.executionStatus?.lowercased() != GameStatus.Active.rawValue.lowercased() {
-            gameLogoImageView.image = UIImage(named: gameNameImg, in: Bundle(for: Self.self), compatibleWith: nil)
+            self.overLayView.isHidden = false
+            gameLogoImageView.image = UIImage(named: gameNameImg, in: Bundle(for: Self.self), compatibleWith: nil)?.alpha(0.3)
                 //?.changeInactiveImageColor
         } else {
-            gameLogoImageView.image = UIImage(named: gameNameImg, in: Bundle(for: Self.self), compatibleWith: nil)
+            self.overLayView.isHidden = true
+            gameLogoImageView.image = UIImage(named: gameNameImg, in: Bundle(for: Self.self), compatibleWith: nil)?.alpha(1.0)
         }
 
     }

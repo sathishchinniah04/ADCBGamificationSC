@@ -61,14 +61,22 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
+                            <view alpha="0.20000000000000001" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QJY-Ue-6xK">
+                                <rect key="frame" x="0.0" y="0.0" width="307" height="155"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="0.91764705882352937" green="0.91764705882352937" blue="0.91764705882352937" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="obU-ak-bHg" firstAttribute="leading" secondItem="ew4-J8-FKb" secondAttribute="leading" constant="10" id="Aro-QL-ZPR"/>
+                            <constraint firstItem="QJY-Ue-6xK" firstAttribute="top" secondItem="ew4-J8-FKb" secondAttribute="top" id="Nos-uy-4s6"/>
                             <constraint firstItem="obU-ak-bHg" firstAttribute="top" secondItem="ew4-J8-FKb" secondAttribute="top" constant="10" id="QGE-ym-ftN"/>
+                            <constraint firstAttribute="bottom" secondItem="QJY-Ue-6xK" secondAttribute="bottom" id="YcV-Dv-9Di"/>
                             <constraint firstItem="Cnc-0R-vW1" firstAttribute="centerY" secondItem="ew4-J8-FKb" secondAttribute="centerY" id="b8s-tw-OAM"/>
+                            <constraint firstAttribute="trailing" secondItem="QJY-Ue-6xK" secondAttribute="trailing" id="hxQ-Bs-Ntn"/>
                             <constraint firstAttribute="trailing" secondItem="Cnc-0R-vW1" secondAttribute="trailing" constant="10" id="iQO-wZ-Q09"/>
                             <constraint firstItem="Cnc-0R-vW1" firstAttribute="leading" secondItem="obU-ak-bHg" secondAttribute="trailing" constant="20" id="ih2-4E-Szm"/>
+                            <constraint firstItem="QJY-Ue-6xK" firstAttribute="leading" secondItem="ew4-J8-FKb" secondAttribute="leading" id="seQ-WQ-AmH"/>
                             <constraint firstAttribute="bottom" secondItem="obU-ak-bHg" secondAttribute="bottom" constant="10" id="wea-l9-1yD"/>
                         </constraints>
                         <userDefinedRuntimeAttributes>
@@ -108,6 +116,7 @@
                 <outlet property="gameLabel" destination="W08-4r-bgG" id="EBh-gM-265"/>
                 <outlet property="gameLogoImageView" destination="obU-ak-bHg" id="Svr-mY-lpY"/>
                 <outlet property="lockDayLabel" destination="cvK-HS-s0I" id="7p2-Xz-bUa"/>
+                <outlet property="overLayView" destination="QJY-Ue-6xK" id="oBM-ij-S0R"/>
                 <outlet property="timeLabel" destination="J5C-Hf-EDK" id="ESE-4V-rik"/>
             </connections>
             <point key="canvasLocation" x="368.84057971014494" y="95.424107142857139"/>
