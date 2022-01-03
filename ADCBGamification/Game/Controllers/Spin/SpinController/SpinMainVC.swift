@@ -476,7 +476,7 @@ class SpinMainVC: UIViewController {
                self.spinSuccessAnimation()
             }
             DispatchQueue.main.asyncAfter(deadline: .now() + 3.5) {
-                self.spinSuccessView.loadScreen(info: self.spinAssignReward, action: self.successScreenActionHandler(action:))
+                self.spinSuccessView.loadScreen(info: self.spinAssignReward, gameObj: self.game,action: self.successScreenActionHandler(action:))
             }
             
         } else {

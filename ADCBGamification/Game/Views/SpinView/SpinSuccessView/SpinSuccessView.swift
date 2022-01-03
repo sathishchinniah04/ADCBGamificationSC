@@ -99,14 +99,15 @@ class SpinSuccessView: UIView {
     var handle:((SpinSuccessViewAction)->Void)?
     var shareImage: UIImage?
     var shareMessage: String?
-    
+    var gameObjects: Games?
     
     static func loadXib() -> SpinSuccessView {
         return UINib(nibName: "SpinSuccessView", bundle: Bundle(for: Self.self)).instantiate(withOwner: self, options: nil).first as! SpinSuccessView
     }
     
-    func populateView(info: SpinAssignReward?,action:((SpinSuccessViewAction)->Void)?) {
+    func populateView(info: SpinAssignReward?, games: Games?, action:((SpinSuccessViewAction)->Void)?) {
         self.handle = action
+        self.gameObjects = games
         appearanceSetup()
         setupLabel(info: info)
         checkLeftToRight()
@@ -119,7 +120,7 @@ class SpinSuccessView: UIView {
         shareMainView.isHidden = true
         shareGameTitleLbl.text = "Spin & Win".localized()
         shareCongratzLbl.text = "Congratulation".localized()
-
+        spinAgainButton.isHidden = (gameObjects?.frequency.first?.frequencyValue == "1" ||  gameObjects?.frequency.first?.frequencyValue == "0" )
         shareBtn.setTitle("Share".localized(), for: .normal)
         shareBtn.setSizeFont(sizeFont: (StoreManager.shared.language == GameLanguage.AR.rawValue) ?  16.0 : 16.0, fontFamily: (StoreManager.shared.language == GameLanguage.AR.rawValue) ? "Tajawal-SemiBold" : "OpenSans-SemiBold")
         

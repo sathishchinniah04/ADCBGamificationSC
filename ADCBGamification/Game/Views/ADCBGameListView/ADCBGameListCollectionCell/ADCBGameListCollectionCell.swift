@@ -109,12 +109,23 @@ class ADCBGameListCollectionCell: UICollectionViewCell {
                 gameNameImg = ""
             }
         } else {
+//            if game.gameType == "SpinNWin" {
+//                gameNameImg = (StoreManager.shared.language == GameLanguage.AR.rawValue) ? "spin-disable-Arabic" : "spin-disable"
+//            } else if game.gameType == "PredictNWin" {
+//                gameNameImg = (StoreManager.shared.language == GameLanguage.AR.rawValue) ? "predict-disable-Arabic" : "predict-disable"
+//            } else if game.gameType == "ReferNWin" {
+//                gameNameImg = (StoreManager.shared.language == GameLanguage.AR.rawValue) ? "refer-disable-Arabic" : "refer-disable"
+//
+//            } else {
+//                gameNameImg = ""
+//            }
+            
             if game.gameType == "SpinNWin" {
-                gameNameImg = (StoreManager.shared.language == GameLanguage.AR.rawValue) ? "spin-disable-Arabic" : "spin-disable"
+                gameNameImg = (StoreManager.shared.language == GameLanguage.AR.rawValue) ? "SpinListArabic" : "SpinList"
             } else if game.gameType == "PredictNWin" {
-                gameNameImg = (StoreManager.shared.language == GameLanguage.AR.rawValue) ? "predict-disable-Arabic" : "predict-disable"
+                gameNameImg = (StoreManager.shared.language == GameLanguage.AR.rawValue) ? "PredictListArabic" : "PredictList"
             } else if game.gameType == "ReferNWin" {
-                gameNameImg = (StoreManager.shared.language == GameLanguage.AR.rawValue) ? "refer-disable-Arabic" : "refer-disable"
+                gameNameImg = (StoreManager.shared.language == GameLanguage.AR.rawValue) ? "InviteArabic" : "Invite"
                 
             } else {
                 gameNameImg = ""

@@ -73,6 +73,8 @@ class ADCBGameListController: UIViewController {
         let con = self.navigationController
  
         (con as? CustomNavViewController)?.changeOnlyTitle(title: "Games".localized())
+        activityIndicatorView.startAnimating()
+        getResponce()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
