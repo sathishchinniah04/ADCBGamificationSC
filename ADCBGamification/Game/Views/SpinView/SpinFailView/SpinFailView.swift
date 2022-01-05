@@ -23,13 +23,15 @@ class SpinFailView: UIView {
     @IBOutlet weak var spinAgainButton: UIButton!
     
     var handle:((SpinFailViewAction)->Void)?
+    var gameObjects: Games?
     
     static func loadXib() -> SpinFailView {
         return UINib(nibName: "SpinFailView", bundle: Bundle(for: Self.self)).instantiate(withOwner: self, options: nil).first as! SpinFailView
     }
     
-    func populateView(action:((SpinFailViewAction)->Void)?) {
+    func populateView(action:((SpinFailViewAction)->Void)?, game: Games?) {
         self.handle = action
+        self.gameObjects = game
         appearanceSetup()
         checkLeftToRight()
         self.bgCloudImage.image = UIImage(named: "Clouds", in: Bundle(for: CustomNavView.self), compatibleWith: nil)
@@ -48,6 +50,8 @@ class SpinFailView: UIView {
         //self.titleHeaderLabel.text = "simply".localized()
         //self.subTitleLabel.text = "life".localized()
         
+        
+        spinAgainButton.isHidden = (gameObjects?.frequency.first?.frequencyValue == "1" ||  gameObjects?.frequency.first?.frequencyValue == "0" )
         
         let fontDict: [NSAttributedString.Key : Any] = [
             NSAttributedString.Key.font: (StoreManager.shared.language == GameLanguage.AR.rawValue) ? UIFont(name: "Tajawal-Regular", size: 14.0) ?? UIFont.boldSystemFont(ofSize: 1.5) : UIFont(name: "OpenSans-Regular", size: 14.0) ?? UIFont.boldSystemFont(ofSize: 1.5),

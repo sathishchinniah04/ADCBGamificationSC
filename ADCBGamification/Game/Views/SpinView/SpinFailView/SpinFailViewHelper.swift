@@ -15,14 +15,14 @@ class SpinFailViewHelper {
     private var view: SpinFailView?
     private var rootView = UIApplication.shared.windows.first
     
-    func loadScreen(action:((SpinFailViewAction)->Void)?) {
+    func loadScreen(action:((SpinFailViewAction)->Void)?, gameObj: Games?) {
         DispatchQueue.main.async {
             self.removeView()
             self.rootView = UIApplication.shared.windows.first
             self.view = SpinFailView.loadXib()
             self.view?.frame = UIScreen.main.bounds
             self.rootView?.addSubview(self.view!)
-            self.view?.populateView(action: action)
+            self.view?.populateView(action: action, game: gameObj)
             self.animateUp()
         }
     }
