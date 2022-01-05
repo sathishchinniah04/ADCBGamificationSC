@@ -252,7 +252,7 @@ class ADCBGameListCollectionCell: UICollectionViewCell {
             }
 
             if (StoreManager.shared.language == GameLanguage.AR.rawValue) {
-                
+                self.lockDayLabel.textAlignment = .right
                 if !self.lockDayLabel.isHidden {
                     
                     if value == 0 {
@@ -274,7 +274,7 @@ class ADCBGameListCollectionCell: UICollectionViewCell {
                 }
                 self.timeLabel.text = daysCount + " \(currentHours) " + "hr".localized() + " \(currentMinutes) " + "mins".localized()
             } else {
-                
+                self.lockDayLabel.textAlignment = .left
                 if !self.lockDayLabel.isHidden {
                     
                     if value == 0 {
