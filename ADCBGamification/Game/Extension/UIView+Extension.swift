@@ -227,6 +227,14 @@ extension UILabel {
         self.sizeToFit()
     }
 }
+extension UITextField {
+    
+    func setSizeFont(sizeFont: Double, fontFamily: String) {
+        self.font =  UIFont(name: fontFamily, size: CGFloat(sizeFont)) ?? UIFont.systemFont(ofSize: CGFloat(sizeFont), weight: UIFont.Weight.thin)
+        self.sizeToFit()
+    }
+}
+
 
 extension UITextView {
     
