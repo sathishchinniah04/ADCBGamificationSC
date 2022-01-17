@@ -82,6 +82,15 @@ class ExpireView: UIView {
         descTextView.setSizeFont(sizeFont: (StoreManager.shared.language == GameLanguage.AR.rawValue) ?  14.0 : 14.0, fontFamily: (StoreManager.shared.language == GameLanguage.AR.rawValue) ? "Tajawal-Regular" : "OpenSans-Light")
         
         expireLabel.setSizeFont(sizeFont: (StoreManager.shared.language == GameLanguage.AR.rawValue) ?  20.0 : 14.0, fontFamily: (StoreManager.shared.language == GameLanguage.AR.rawValue) ? "Tajawal-Regular" : "OpenSans-Light")
+        
+        if (StoreManager.shared.language == GameLanguage.AR.rawValue) {
+            self.gameNameSubTitleLabel.textAlignment = .right
+            self.descTextView.textColor = .clear
+        } else {
+            self.gameNameSubTitleLabel.textAlignment = .center
+            self.descTextView.textColor = #colorLiteral(red: 0.3294117647, green: 0.3294117647, blue: 0.337254902, alpha: 1)
+        }
+        
     }
     
     func populateView(isShowTerms: Bool = true, game: Games?, complition: (()->Void)?) {
