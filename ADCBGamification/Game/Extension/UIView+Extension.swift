@@ -226,6 +226,29 @@ extension UILabel {
         self.font =  UIFont(name: fontFamily, size: CGFloat(sizeFont)) ?? UIFont.systemFont(ofSize: CGFloat(sizeFont), weight: UIFont.Weight.thin)
         self.sizeToFit()
     }
+    var numberOfVisibleLines: Int {
+         let maxSize = CGSize(width: frame.size.width, height: CGFloat(MAXFLOAT))
+         let textHeight = sizeThatFits(maxSize).height
+         let lineHeight = font.lineHeight
+         return Int(ceil(textHeight / lineHeight))
+     }
+    
+    func countLabelLines() -> Int {
+        // Call self.layoutIfNeeded() if your view is uses auto layout
+        let myText = self.text! as NSString
+        let attributes = [NSAttributedString.Key.font : self.font]
+
+        let labelSize = myText.boundingRect(with: CGSize(width: self.bounds.width, height: CGFloat.greatestFiniteMagnitude), options: NSStringDrawingOptions.usesLineFragmentOrigin, attributes: attributes, context: nil)
+        return Int(ceil(CGFloat(labelSize.height) / self.font.lineHeight))
+    }
+    
+    func isTruncated() -> Bool {
+
+        if (self.countLabelLines() > self.numberOfLines) {
+            return true
+        }
+        return false
+    }
 }
 extension UITextField {
     

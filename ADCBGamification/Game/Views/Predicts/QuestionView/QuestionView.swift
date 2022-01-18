@@ -253,9 +253,9 @@ class QuestionView: UIView {
         let cnt = "\(index + 1)"
 
         if (StoreManager.shared.language.lowercased() == "ar".lowercased()) {
-            noOfQuesLabel.text = "Question".localized() + cnt.convertedDigitsToLocale(Locale(identifier: "AR"))
+            noOfQuesLabel.text = "Question".localized() + "\(cnt) "
         } else {
-            noOfQuesLabel.text = "Question".localized() + cnt
+            noOfQuesLabel.text = "Question".localized() + " \(cnt)"
         }
        
 

@@ -212,16 +212,16 @@ class ADCBGameListCollectionCell: UICollectionViewCell {
             var daysCount = ""
             
             if value == 0 {
-                daysCount = "Today".localized()
+                daysCount = "Today"
             } else if value > 1 {
                 if (StoreManager.shared.language == GameLanguage.AR.rawValue) {
-                    daysCount = "\(value) " + "day(s)".localized()
+                    daysCount = "\(value) " + "day(s)"
                 } else {
-                    daysCount = "\(value)" + "day(s)".localized()
+                    daysCount = "\(value)" + "day(s)"
                 }
                 
             } else {
-                daysCount = "\(value) " + "day(s)".localized()
+                daysCount = "\(value) " + "day(s)"
             }
             
             
@@ -256,23 +256,23 @@ class ADCBGameListCollectionCell: UICollectionViewCell {
                 if !self.lockDayLabel.isHidden {
                     
                     if value == 0 {
-                        self.lockDayLabel.text = "Unlocks Today".localized()
+                        self.lockDayLabel.text = "Unlocks Today"
                     } else if value == 1 { // Tomorrow
-                        self.lockDayLabel.text = "Unlocks Tomorrow".localized()
+                        self.lockDayLabel.text = "Unlocks Tomorrow"
                     } else if value <= 30 {
                         self.lockDayLabel.text = "Unlocks in".localized() + " \(daysCount)"
                     } else {
                         let remainingDays = (value - 31)
                         
                         if remainingDays == 0 {
-                            self.lockDayLabel.text = "Unlocks in".localized() + " " + "1".localized() + "month(s)".localized()
+                            self.lockDayLabel.text = "Unlocks in" + " " + "1" + "month(s)"
                         } else {
-                            self.lockDayLabel.text = "Unlocks in".localized() + " " + "1".localized() + "month(s)".localized() + "\(remainingDays)" + "days(s)".localized()
+                            self.lockDayLabel.text = "Unlocks in" + " " + "1" + "month(s)" + "\(remainingDays)" + "days(s)"
                         }
                     }
 
                 }
-                self.timeLabel.text = daysCount + " \(currentHours) " + "hr".localized() + " \(currentMinutes) " + "mins".localized()
+                self.timeLabel.text = daysCount + " \(currentHours) " + "hr" + " \(currentMinutes) " + "mins"
             } else {
                 self.lockDayLabel.textAlignment = .left
                 if !self.lockDayLabel.isHidden {

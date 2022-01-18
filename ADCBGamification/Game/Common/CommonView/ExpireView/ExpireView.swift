@@ -83,14 +83,6 @@ class ExpireView: UIView {
         
         expireLabel.setSizeFont(sizeFont: (StoreManager.shared.language == GameLanguage.AR.rawValue) ?  20.0 : 14.0, fontFamily: (StoreManager.shared.language == GameLanguage.AR.rawValue) ? "Tajawal-Regular" : "OpenSans-Light")
         
-        if (StoreManager.shared.language == GameLanguage.AR.rawValue) {
-            self.gameNameSubTitleLabel.textAlignment = .right
-            self.descTextView.textColor = .clear
-        } else {
-            self.gameNameSubTitleLabel.textAlignment = .center
-            self.descTextView.textColor = #colorLiteral(red: 0.3294117647, green: 0.3294117647, blue: 0.337254902, alpha: 1)
-        }
-        
     }
     
     func populateView(isShowTerms: Bool = true, game: Games?, complition: (()->Void)?) {
@@ -125,14 +117,34 @@ class ExpireView: UIView {
         descTextView.text = game.displayDetails?.description ?? ""
         if game.gameType == "PredictNWin" {
             expireLabel.text = ""
+            self.gameNameSubTitleLabel.numberOfLines = 2
             gameNameSubTitleLabel.text = "Play and win exciting rewards!".localized()
         } else if game.gameType == "SpinNWin" {
             expireLabel.text = ""
+            self.gameNameSubTitleLabel.numberOfLines = 2
             gameNameSubTitleLabel.text = "Spin the wheel and win exciting prizes".localized()
        } else if game.gameType == "ReferNWin" {
         expireLabel.text = ""
+        self.gameNameSubTitleLabel.numberOfLines = 1
         gameNameSubTitleLabel.text = "Invite your friends to join simplylife and earn exciting rewards".localized()
        }
+        
+        if game.gameType == "ReferNWin" {
+            if (StoreManager.shared.language == GameLanguage.AR.rawValue) {
+                if self.gameNameSubTitleLabel.isTruncated() {
+                    self.gameNameSubTitleLabel.numberOfLines = 2
+                    self.gameNameSubTitleLabel.textAlignment = .right
+                } else {
+                    self.gameNameSubTitleLabel.textAlignment = .center
+                }
+                //self.descTextView.textColor = .clear
+            } else {
+                self.gameNameSubTitleLabel.textAlignment = .center
+                self.gameNameSubTitleLabel.numberOfLines = 2
+                //self.descTextView.textColor = #colorLiteral(red: 0.3294117647, green: 0.3294117647, blue: 0.337254902, alpha: 1)
+            }
+        }
+        
         
     }
     
