@@ -27,15 +27,14 @@ class ReferIntroController: UIViewController {
         
         //setupLabelConstraints()
         setupArabicLabelConstraints()
-        /*if StoreManager.shared.language == GameLanguage.EN.rawValue {
+        if StoreManager.shared.language == GameLanguage.EN.rawValue {
             referMessageLabel.isHidden = true
             referMessageLabelEnglish.isHidden = false
         } else {
             referMessageLabel.isHidden = false
             referMessageLabelEnglish.isHidden = true
-        }*/
-        referMessageLabel.isHidden = true
-        referMessageLabelEnglish.isHidden = false
+        }
+        checkLeftToRight()
         getReferCode()
         initialSetup()
         self.bgCloudImage.image = UIImage(named: "Clouds", in: Bundle(for: CustomNavView.self), compatibleWith: nil)
