@@ -248,7 +248,9 @@ class ContactListController: UIViewController, UITextFieldDelegate {
         ReferViewModel.referInviteApiCall(bParty: no ?? "") { (data, err) in
             
             print("data is \(data)")
-            self.activityIndicatorView.stopAnimating()
+            DispatchQueue.main.async {
+                self.activityIndicatorView.stopAnimating()
+            }
             if data == nil {
                 self.referWinFailPopup(.failure, nil)
             } else {
