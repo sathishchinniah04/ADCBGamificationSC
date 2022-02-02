@@ -55,6 +55,15 @@ class NetworkManager: NSObject {
         task(req: req, complition: complition)
     }
     
+    func getArrayRequest<T:Decodable>(struct: [T.Type], url: String, urlReq: URLRequest? = nil, complition:(([T]?, ErrorType?)->Void)?) {
+       guard let ur = URL(string: url) else { complition?(nil, .invalidUrl); return}
+       let urReq = urlReq ?? URLRequest(url: ur)
+       print("urlReq \(urReq)")
+       let req = createCommonRequest(url: ur, urlReq: urReq, methodType: .get)
+       
+       task(req: req, complition: complition)
+   }
+    
     func plainGetRequest(url: String, urlReq: URLRequest? = nil, complition:((String?,ErrorType?)->Void)?) {
        guard let ur = URL(string: url) else { complition?(nil, .invalidUrl); return}
        let urReq = urlReq ?? URLRequest(url: ur)

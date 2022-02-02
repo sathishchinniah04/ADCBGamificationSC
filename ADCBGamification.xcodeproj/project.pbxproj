@@ -491,6 +491,11 @@
 		F5A89F7926CBA9CD00685428 /* cert.pem in Resources */ = {isa = PBXBuildFile; fileRef = F5A89F7626CBA9CD00685428 /* cert.pem */; };
 		F5A89F7A26CBA9CD00685428 /* ca.pem in Resources */ = {isa = PBXBuildFile; fileRef = F5A89F7726CBA9CD00685428 /* ca.pem */; };
 		F5A89F7B26CBA9CD00685428 /* key.pem in Resources */ = {isa = PBXBuildFile; fileRef = F5A89F7826CBA9CD00685428 /* key.pem */; };
+		F5ECB1E627A7AE4A00AE8992 /* ContestWinnerCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5ECB1E427A7AE4A00AE8992 /* ContestWinnerCollectionCell.swift */; };
+		F5ECB1E727A7AE4A00AE8992 /* ContestWinnerCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F5ECB1E527A7AE4A00AE8992 /* ContestWinnerCollectionCell.xib */; };
+		F5ECB1E927A7FA0A00AE8992 /* ContestWinnerDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5ECB1E827A7FA0A00AE8992 /* ContestWinnerDetailsVC.swift */; };
+		F5ECB1EC27A8852700AE8992 /* ContestWinnerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5ECB1EA27A8852700AE8992 /* ContestWinnerTableViewCell.swift */; };
+		F5ECB1ED27A8852700AE8992 /* ContestWinnerTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F5ECB1EB27A8852700AE8992 /* ContestWinnerTableViewCell.xib */; };
 		F5F64907270C8CA800F633D4 /* ViewController1.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5F64906270C8CA700F633D4 /* ViewController1.swift */; };
 		F5F6490927102ED800F633D4 /* SpinMainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5F6490827102ED600F633D4 /* SpinMainVC.swift */; };
 /* End PBXBuildFile section */
@@ -849,6 +854,11 @@
 		F5A89F7626CBA9CD00685428 /* cert.pem */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = cert.pem; sourceTree = "<group>"; };
 		F5A89F7726CBA9CD00685428 /* ca.pem */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ca.pem; sourceTree = "<group>"; };
 		F5A89F7826CBA9CD00685428 /* key.pem */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = key.pem; sourceTree = "<group>"; };
+		F5ECB1E427A7AE4A00AE8992 /* ContestWinnerCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContestWinnerCollectionCell.swift; sourceTree = "<group>"; };
+		F5ECB1E527A7AE4A00AE8992 /* ContestWinnerCollectionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ContestWinnerCollectionCell.xib; sourceTree = "<group>"; };
+		F5ECB1E827A7FA0A00AE8992 /* ContestWinnerDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContestWinnerDetailsVC.swift; sourceTree = "<group>"; };
+		F5ECB1EA27A8852700AE8992 /* ContestWinnerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContestWinnerTableViewCell.swift; sourceTree = "<group>"; };
+		F5ECB1EB27A8852700AE8992 /* ContestWinnerTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ContestWinnerTableViewCell.xib; sourceTree = "<group>"; };
 		F5F64906270C8CA700F633D4 /* ViewController1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController1.swift; sourceTree = "<group>"; };
 		F5F6490827102ED600F633D4 /* SpinMainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpinMainVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -1379,6 +1389,7 @@
 			isa = PBXGroup;
 			children = (
 				337E17CD269DC53C00C14135 /* ADCBGameListController.swift */,
+				F5ECB1E827A7FA0A00AE8992 /* ContestWinnerDetailsVC.swift */,
 			);
 			path = ADCBGameListController;
 			sourceTree = "<group>";
@@ -1398,6 +1409,8 @@
 			children = (
 				337E17D3269DC60400C14135 /* ADCBGameListCollectionCell.swift */,
 				337E17D4269DC60400C14135 /* ADCBGameListCollectionCell.xib */,
+				F5ECB1E427A7AE4A00AE8992 /* ContestWinnerCollectionCell.swift */,
+				F5ECB1E527A7AE4A00AE8992 /* ContestWinnerCollectionCell.xib */,
 			);
 			path = ADCBGameListCollectionCell;
 			sourceTree = "<group>";
@@ -1570,6 +1583,8 @@
 				33F59CCF269330A0005B009A /* PredictMatchTableViewCell */,
 				3357ED842693203C00607F50 /* PredictTeamView */,
 				33EDB0DF2692CC770040DCD4 /* MatchesTableViewCell */,
+				F5ECB1EA27A8852700AE8992 /* ContestWinnerTableViewCell.swift */,
+				F5ECB1EB27A8852700AE8992 /* ContestWinnerTableViewCell.xib */,
 			);
 			path = Predicts;
 			sourceTree = "<group>";
@@ -2413,6 +2428,7 @@
 				F58A660E26B22EEC00D5713F /* sample.json in Resources */,
 				F58A660C26B22EEC00D5713F /* home.json in Resources */,
 				F5A89F7A26CBA9CD00685428 /* ca.pem in Resources */,
+				F5ECB1E727A7AE4A00AE8992 /* ContestWinnerCollectionCell.xib in Resources */,
 				33E158D026AA530D00B0615B /* OpenSans-BoldItalic.ttf in Resources */,
 				F594428F26B91B5C006F4E8E /* Tajawal-Light.ttf in Resources */,
 				F58A64F926B22CCB00D5713F /* README.md in Resources */,
@@ -2433,6 +2449,7 @@
 				6A478CB426C2D07D00E96B5F /* ar.lproj in Resources */,
 				3349799926AEBA3500B909C8 /* ListGameCollectionHeaderView.xib in Resources */,
 				33E158D526AA530D00B0615B /* OpenSans-Regular.ttf in Resources */,
+				F5ECB1ED27A8852700AE8992 /* ContestWinnerTableViewCell.xib in Resources */,
 				33EDB0E32692CCB40040DCD4 /* MatchTableViewCell.xib in Resources */,
 				334979A226AEC7FA00B909C8 /* ListGameCollectionFooterView.xib in Resources */,
 				3320FFD12682EBC4001809AA /* NewRefferView.xib in Resources */,
@@ -2563,6 +2580,7 @@
 				3320FFB22682EBC4001809AA /* IQBarButtonItem.swift in Sources */,
 				F58A65D526B22CCB00D5713F /* TextAnimator.swift in Sources */,
 				3320FFDB2682EBC4001809AA /* SpinningWheelAnimator.swift in Sources */,
+				F5ECB1E927A7FA0A00AE8992 /* ContestWinnerDetailsVC.swift in Sources */,
 				F58A65E926B22CCB00D5713F /* AnimationKeypathExtension.swift in Sources */,
 				F58A65A726B22CCB00D5713F /* Repeater.swift in Sources */,
 				F58A650926B22CCB00D5713F /* AnimatedSwitch.swift in Sources */,
@@ -2688,6 +2706,7 @@
 				F58A653B26B22CCB00D5713F /* PreCompositionLayer.swift in Sources */,
 				33CD219C269AF4EE00CB71AC /* PredictSuccessHelper.swift in Sources */,
 				F58A651D26B22CCB00D5713F /* AnimationCacheProvider.swift in Sources */,
+				F5ECB1E627A7AE4A00AE8992 /* ContestWinnerCollectionCell.swift in Sources */,
 				F58A65A126B22CCB00D5713F /* ShapeTransform.swift in Sources */,
 				F58A65F926B22CCB00D5713F /* VectorsExtensions.swift in Sources */,
 				3320FFC02682EBC4001809AA /* IQUIScrollView+Additions.swift in Sources */,
@@ -2759,6 +2778,7 @@
 				F58A65B126B22CCB00D5713F /* Star.swift in Sources */,
 				F58A65B326B22CCB00D5713F /* SolidLayerModel.swift in Sources */,
 				33EDB0C2268ED7B10040DCD4 /* PredictIntroController.swift in Sources */,
+				F5ECB1EC27A8852700AE8992 /* ContestWinnerTableViewCell.swift in Sources */,
 				F58A656126B22CCB00D5713F /* PathOutputNode.swift in Sources */,
 				33EE795D26A52F9C006AB306 /* KnowMoreView.swift in Sources */,
 				F58A654126B22CCB00D5713F /* MaskContainerLayer.swift in Sources */,

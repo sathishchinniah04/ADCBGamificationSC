@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="OpenSans-Bold.ttf">
+            <string>OpenSans-Bold</string>
+        </array>
+        <array key="OpenSans-Regular.ttf">
+            <string>OpenSans-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ContestWinnerCollectionCell" id="d4R-VK-ANC" customClass="ContestWinnerCollectionCell" customModule="ADCBGamification" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="367" height="165"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="367" height="165"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZWN-nf-7hq">
+                        <rect key="frame" x="30" y="5" width="307" height="155"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="contestWinnerBg" translatesAutoresizingMaskIntoConstraints="NO" id="Gkr-IF-eUW">
+                                <rect key="frame" x="10" y="10" width="135" height="135"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Gkr-IF-eUW" secondAttribute="height" multiplier="1:1" id="wTX-dA-qIG"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="6Qg-Mx-qt6">
+                                <rect key="frame" x="155" y="40" width="142" height="75.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Unlocks Tomorrow" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="7" translatesAutoresizingMaskIntoConstraints="NO" id="QqE-ev-Opy">
+                                        <rect key="frame" x="0.0" y="0.0" width="132" height="16"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                        <color key="textColor" red="0.3294117647" green="0.3294117647" blue="0.33725490200000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="liF-Ea-nBg">
+                                        <rect key="frame" x="0.0" y="0.0" width="142" height="38.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bMe-EM-a7h">
+                                                <rect key="frame" x="0.0" y="0.0" width="142" height="24"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                <color key="textColor" red="0.1333333333" green="0.12941176469999999" blue="0.39607843139999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BHU vs GMS " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qz2-xh-9c6">
+                                                <rect key="frame" x="0.0" y="26" width="142" height="12.5"/>
+                                                <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="9"/>
+                                                <color key="textColor" red="0.13333333333333333" green="0.12941176470588234" blue="0.396078431372549" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="hIB-yb-FtC">
+                                        <rect key="frame" x="0.0" y="46.5" width="142" height="29"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Contest on Dec 1 - Dec 8, 2021" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="7" translatesAutoresizingMaskIntoConstraints="NO" id="B1i-YX-JOr">
+                                                <rect key="frame" x="0.0" y="0.0" width="142" height="11"/>
+                                                <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="8"/>
+                                                <color key="textColor" red="0.3294117647" green="0.3294117647" blue="0.33725490200000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XxO-o9-u6p">
+                                                <rect key="frame" x="0.0" y="14" width="142" height="1"/>
+                                                <color key="backgroundColor" red="0.91764705882352937" green="0.91764705882352937" blue="0.91764705882352937" alpha="1" colorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="1" id="vo9-de-Cvg"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Announced on Dec 13, 2021" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="7" translatesAutoresizingMaskIntoConstraints="NO" id="XOm-hW-NoJ">
+                                                <rect key="frame" x="0.0" y="18" width="142" height="11"/>
+                                                <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="8"/>
+                                                <color key="textColor" red="0.3294117647" green="0.3294117647" blue="0.33725490200000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <variation key="default">
+                                    <mask key="subviews">
+                                        <exclude reference="QqE-ev-Opy"/>
+                                    </mask>
+                                </variation>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="50 Winners" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HT7-sq-81b">
+                                <rect key="frame" x="21" y="32" width="112" height="92"/>
+                                <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="20"/>
+                                <color key="textColor" red="0.1333333333" green="0.12941176469999999" blue="0.39607843139999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view alpha="0.20000000298023224" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WRq-Ll-Nt7">
+                                <rect key="frame" x="0.0" y="0.0" width="307" height="155"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Qg-Mx-qt6" firstAttribute="leading" secondItem="Gkr-IF-eUW" secondAttribute="trailing" constant="10" id="AS5-J2-LzU"/>
+                            <constraint firstItem="6Qg-Mx-qt6" firstAttribute="centerY" secondItem="ZWN-nf-7hq" secondAttribute="centerY" id="BIV-Xd-eAk"/>
+                            <constraint firstItem="HT7-sq-81b" firstAttribute="width" secondItem="Gkr-IF-eUW" secondAttribute="width" multiplier="0.82963" id="IR5-wV-Ba9"/>
+                            <constraint firstAttribute="bottom" secondItem="Gkr-IF-eUW" secondAttribute="bottom" constant="10" id="IoY-n8-rcB"/>
+                            <constraint firstAttribute="trailing" secondItem="WRq-Ll-Nt7" secondAttribute="trailing" id="K8K-q4-d5j"/>
+                            <constraint firstItem="WRq-Ll-Nt7" firstAttribute="leading" secondItem="ZWN-nf-7hq" secondAttribute="leading" id="Lnw-TF-SlC"/>
+                            <constraint firstItem="HT7-sq-81b" firstAttribute="height" secondItem="Gkr-IF-eUW" secondAttribute="height" multiplier="0.681481" id="OsB-nD-6n1"/>
+                            <constraint firstItem="WRq-Ll-Nt7" firstAttribute="top" secondItem="ZWN-nf-7hq" secondAttribute="top" id="h6f-Ke-ZoY"/>
+                            <constraint firstItem="HT7-sq-81b" firstAttribute="top" secondItem="Gkr-IF-eUW" secondAttribute="bottom" constant="-113" id="nLz-hD-Ogn"/>
+                            <constraint firstAttribute="bottom" secondItem="WRq-Ll-Nt7" secondAttribute="bottom" id="pDM-t8-vyQ"/>
+                            <constraint firstItem="Gkr-IF-eUW" firstAttribute="top" secondItem="ZWN-nf-7hq" secondAttribute="top" constant="10" id="pRK-AW-efo"/>
+                            <constraint firstItem="Gkr-IF-eUW" firstAttribute="leading" secondItem="ZWN-nf-7hq" secondAttribute="leading" constant="10" id="qzn-f9-AEJ"/>
+                            <constraint firstItem="Gkr-IF-eUW" firstAttribute="leading" secondItem="HT7-sq-81b" secondAttribute="trailing" constant="-123" id="sVH-t7-NDE"/>
+                            <constraint firstAttribute="trailing" secondItem="6Qg-Mx-qt6" secondAttribute="trailing" constant="10" id="sp5-nW-BBn"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="10"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="WRq-Ll-Nt7"/>
+                            </mask>
+                        </variation>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="tI9-QW-Z20"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="ZWN-nf-7hq" firstAttribute="top" secondItem="d4R-VK-ANC" secondAttribute="top" constant="5" id="0u3-5Z-aIH"/>
+                <constraint firstAttribute="bottom" secondItem="ZWN-nf-7hq" secondAttribute="bottom" constant="5" id="KNp-EM-mLH"/>
+                <constraint firstAttribute="trailing" secondItem="ZWN-nf-7hq" secondAttribute="trailing" constant="30" id="Pge-Nv-P0R"/>
+                <constraint firstItem="ZWN-nf-7hq" firstAttribute="leading" secondItem="d4R-VK-ANC" secondAttribute="leading" constant="30" id="nMi-oG-IoZ"/>
+            </constraints>
+            <size key="customSize" width="367" height="165"/>
+            <connections>
+                <outlet property="contestAnnouncedDate" destination="XOm-hW-NoJ" id="mwN-8s-gw2"/>
+                <outlet property="contestDate" destination="B1i-YX-JOr" id="SBd-H0-ISA"/>
+                <outlet property="contestGameTitle" destination="bMe-EM-a7h" id="md0-Bp-rSO"/>
+                <outlet property="contestGamevsCode" destination="Qz2-xh-9c6" id="Ito-jZ-szM"/>
+                <outlet property="winnerCount" destination="HT7-sq-81b" id="86m-Pk-Vmf"/>
+            </connections>
+            <point key="canvasLocation" x="368.84057971014494" y="95.424107142857139"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="contestWinnerBg" width="120" height="120"/>
+    </resources>
+</document>

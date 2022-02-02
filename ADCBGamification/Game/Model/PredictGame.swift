@@ -60,3 +60,44 @@ class PredOption: Decodable {
         return false
     }()
 }
+
+
+class PredictContestWinnerList: Decodable {
+
+    var requestId: String
+    var respCode: String
+    var respDesc: String
+    var announcedEvents: [PredictContestWinnerModel]?
+}
+
+class PredictContestWinnerModel: Decodable {
+
+    var opponentAsynonym: String?
+    var opponentBsynonym: String?
+    var eventStartDate: String?
+    var eventEndDate: String?
+    var announcementDate: String?
+    var title: String?
+    var totalWinners: Int?
+    var gameId: Int?
+    var eventId: Int?
+    
+}
+
+class PredictContestWinnerDetails: Decodable {
+    
+    var respCode: String?
+    var respDesc: String?
+    var title: String?
+    var opponentAsynonym: String?
+    var opponentBsynonym: String?
+    var eventStartDate: String?
+    var eventEndDate: String?
+    var announcementDate: String?
+    var winners:[PredictContestWinnerNameList]?
+    
+}
+
+class PredictContestWinnerNameList: Decodable {
+    var name: String?
+}

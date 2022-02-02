@@ -73,6 +73,47 @@ class GameListVM {
             }
         }
     }
+
+    static func getPredicNWinContestList(url: String,  complition:((PredictContestWinnerList?)->Void)?) {
+        
+        guard let urlStr = URL(string: url) else {print("Inavlid url getPredictDetail"); return }
+        var urlReq = URLRequest(url: urlStr)
+        urlReq.setValue(Utility.getRandonNo(), forHTTPHeaderField: "requestId")
+//        urlReq.setValue("1", forHTTPHeaderField: "customerId")
+        urlReq.setValue(StoreManager.shared.msisdn, forHTTPHeaderField: "customerId")
+        urlReq.setValue(StoreManager.shared.language, forHTTPHeaderField: "language")
+        
+        networkManager.getRequest(struct: PredictContestWinnerList.self, url: url, urlReq: urlReq) { (data, error) in
+            if let dat = data {
+                complition?(dat)
+            } else {
+                print("Error found \(error)")
+            }
+        }
+        
+    }
+    
+    static func getContestWinnerDetails(url: String, eventId: String, limit: String, offset: String, complition:((PredictContestWinnerDetails?)->Void)?) {
+        
+        guard let urlStr = URL(string: url) else {print("Inavlid url getPredictDetail"); return }
+        var urlReq = URLRequest(url: urlStr)
+        urlReq.setValue(Utility.getRandonNo(), forHTTPHeaderField: "requestId")
+        //urlReq.setValue("1", forHTTPHeaderField: "customerId")
+        urlReq.setValue(StoreManager.shared.msisdn, forHTTPHeaderField: "customerId")
+        urlReq.setValue(StoreManager.shared.language, forHTTPHeaderField: "language")
+        urlReq.setValue(eventId, forHTTPHeaderField: "eventId")
+        //urlReq.setValue(offset, forHTTPHeaderField: "offset")
+       // urlReq.setValue(limit, forHTTPHeaderField: "limit")
+        
+        networkManager.getRequest(struct: PredictContestWinnerDetails.self, url: url, urlReq: urlReq) { (data, error) in
+            if let dat = data {
+                complition?(dat)
+            } else {
+                print("Error found \(error)")
+            }
+        }
+        
+    }
     
     static func getActiveGames(list: GameList, complition: (Bool, String?) -> ()) {
         allGames = list.responseDetail?.games ?? [Games]()

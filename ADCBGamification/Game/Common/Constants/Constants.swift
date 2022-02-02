@@ -18,6 +18,13 @@ class Constants {
     static let recordReferUrl = "\(baseUrl)Gamification-1.0/Gamification/gameManagement/game/referral/"
     static let sendNotificationUrl = "\(baseUrl)Gamification-1.0/Gamification/gameManagement/game/referral/"
     
+    static let predictContestWinnerListUrl = "\(baseUrl)Gamification-1.0/Gamification/PredictionAnnouncedEvents"
+    static var predictContestWinnerDetailUrl = "\(baseUrl)Gamification-1.0/Gamification/PredictionWinners/"
+    
+    
+    //static let predictContestWinnerListUrl = "http://10.0.0.95:8789/Gamification-1.0/Gamification/PredictionAnnouncedEvents"
+    //static var predictContestWinnerDetailUrl = "http://10.0.0.95:8789/Gamification-1.0/Gamification/PredictionWinners/"
+    
    // https://gameuat.intclstl.com/Gamification-1.0/Gamification/1/1/getCustomerProfile
     
     static let simpleLiferUserCheck = "\(baseUrl)Gamification-1.0/Gamification/1/1/"
