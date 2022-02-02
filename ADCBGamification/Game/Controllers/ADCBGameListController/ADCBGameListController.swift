@@ -146,9 +146,11 @@ class ADCBGameListController: UIViewController {
                     self.showToast(message: (text.isEmpty) ? "Something went wrong. Try again !" : text)
                     DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
                         
-                        self.dismiss(animated: false) {
-                            CallBack.shared.handle!(.dismissed)
-                        }                    }
+//                        self.dismiss(animated: false) {
+//                            CallBack.shared.handle!(.dismissed)
+//                        }
+                        
+                    }
                 }
                 completion(false)
             }
@@ -168,15 +170,17 @@ class ADCBGameListController: UIViewController {
                     completion(true)
                 }
             } else {
-                self.topSectionView.isHidden = true
                 DispatchQueue.main.async {
+                    self.topSectionView.isHidden = true
                     self.activityIndicatorView.stopAnimating()
                     let text = data?.respDesc ?? ""
                     self.showToast(message: (text.isEmpty) ? "Something went wrong. Try again !" : text)
                     DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-                        self.dismiss(animated: false) {
-                            CallBack.shared.handle!(.dismissed)
-                        }                    }
+//                        self.dismiss(animated: false) {
+//                            CallBack.shared.handle!(.dismissed)
+//                        }
+                        
+                    }
                 }
                 completion(false)
             }

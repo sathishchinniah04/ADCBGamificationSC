@@ -88,6 +88,7 @@ class GameListVM {
                 complition?(dat)
             } else {
                 print("Error found \(error)")
+                complition?(nil)
             }
         }
         
