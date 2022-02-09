@@ -176,7 +176,7 @@ class ADCBGameListController: UIViewController {
                     self.topSectionView.isHidden = true
                     self.activityIndicatorView.stopAnimating()
                     let text = data?.respDesc ?? ""
-                    self.showToast(message: (text.isEmpty) ? "Something went wrong. Try again !" : text)
+                   // self.showToast(message: (text.isEmpty) ? "Something went wrong. Try again !" : text)
                     DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
 //                        self.dismiss(animated: false) {
 //                            CallBack.shared.handle!(.dismissed)

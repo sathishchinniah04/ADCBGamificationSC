@@ -26,7 +26,7 @@ class SpinViewOfferVM {
         }
     }
     
-    static func assignReward(gameId: String, complition:((SpinAssignReward)->Void)?) {
+    static func assignReward(gameId: String, complition:((SpinAssignReward?)->Void)?) {
         let myDict: Dictionary = [
             "requestId": Utility.getRandonNo(),
             "timestamp": Utility.getTimeStamp(),
@@ -47,6 +47,8 @@ class SpinViewOfferVM {
             print("error is \(String(describing: error))")
             if let data = data {
                 complition?(data)
+            } else {
+                complition?(nil)
             }
         }
     }

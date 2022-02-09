@@ -433,12 +433,16 @@ class SpinMainVC: UIViewController {
     func assignRewards() {
         guard let gameId = self.game?.gameId else { return }
         SpinViewOfferVM.assignReward(gameId: gameId) { (spinAssignReward) in
-            self.spinAssignReward = spinAssignReward
-            if let inde = spinAssignReward.responseObject?.first?.achievmentId  {
-                print(inde)
-                self.spinerView.stopAnimationAtIndex(achivementId: inde, complition: self.spinnerStopped(isPass:))
+            if spinAssignReward != nil {
+                self.spinAssignReward = spinAssignReward
+                if let inde = spinAssignReward?.responseObject?.first?.achievmentId  {
+                    print(inde)
+                    self.spinerView.stopAnimationAtIndex(achivementId: inde, complition: self.spinnerStopped(isPass:))
+                } else {
+                    self.spinerView.stopAnimationAtIndex(achivementId: "0", complition: self.spinnerStopped(isPass:))
+                }
             } else {
-                self.spinerView.stopAnimationAtIndex(achivementId: "1", complition: self.spinnerStopped(isPass:))
+                self.spinerView.stopAnimationAtIndex(achivementId: "0", complition: self.spinnerStopped(isPass:))
             }
         }
     }
