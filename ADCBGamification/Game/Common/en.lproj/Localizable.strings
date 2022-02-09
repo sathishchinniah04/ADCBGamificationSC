@@ -104,4 +104,6 @@
 "vs" = "vs";
 "Contest Winner Name" = "Contest Winner Name";
 "No Winner available" = "No Winner available";
-
+"Games" = "Games";
+"Contest Winners" = "Contest Winners";
+"Announcement from last 30 days. Contest winner will be alerted with a notification" = "Announcement from last 30 days. Contest winner will be alerted with a notification";

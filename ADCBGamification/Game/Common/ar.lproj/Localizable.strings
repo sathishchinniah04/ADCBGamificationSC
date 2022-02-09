@@ -54,7 +54,7 @@
 "Spin & Win" = "أدر دولاب الحظ واربح";
 "Predict & Win" = "توقع واربح";
 "Thank you for your participation" = "شكراً للمشاركة";
-"Winner will be announced shortly and you will receive a notification on the App. Stay tuned, enjoy the game !" = "سيتم الإعلان عن أسماء الفائزين قريباً من خلال إشعارات التطبيق. استمتع بمشاهدة المباريات";
+"Winner will be announced shortly and you will receive a notification on the App. Stay tuned, enjoy the game !" = "سيتم الإعلان عن أسماء الرابحين قريباً وستتلقى إشعاراً عبر التطبيق. استمتع باللعبة";
 "Predict and Win" = "توقع واربح";
 "Predict & Win" = "توقع واربح";
 "Play" = "العب!";
@@ -110,3 +110,6 @@
 "Contest Winner Name" = "اسم الفائز في المسابقة";
 "No Winner available" = "لا يوجد فائز متاح";
 "Announcement from last 30 days. Contest Winners will be alerted with a notification" = "إعلان من آخر 30 يومًا. سيتم تنبيه الفائزين في المسابقة بإشعار";
+"Games" = "ألعاب";
+"Contest Winners" = "الفائزون في المسابقة";
+"Announcement from last 30 days. Contest winner will be alerted with a notification" = "إعلانات من آخر 30 يومًا. سيتم تنبيه الفائز في المسابقة بإشعار.";

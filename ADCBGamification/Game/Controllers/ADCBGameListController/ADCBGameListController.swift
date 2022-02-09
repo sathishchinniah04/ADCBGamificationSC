@@ -47,6 +47,8 @@ class ADCBGameListController: UIViewController {
         } else {
             // Fallback on earlier versions
         }
+        gameButtonSection.setTitle("Games".localized(), for: .normal)
+        conteestWinnerSection.setTitle("Contest Winners".localized(), for: .normal)
         tableViewSetup()
         getInitialApiCalls()
         navigationViewCornerRadius()

@@ -90,9 +90,9 @@ class ContestWinnerDetailsVC: UIViewController {
                 let vsString = [NSAttributedString.Key.font : UIFont(name: (StoreManager.shared.language == GameLanguage.AR.rawValue) ? "Tajawal-Regular" : "OpenSans-Regular", size: 10), NSAttributedString.Key.foregroundColor : UIColor(red: 34/255.0, green: 33/255.0, blue: 101/255.0, alpha: 1.0) ]
                 
                 let text = NSMutableAttributedString()
-                text.append(NSAttributedString(string: "\(opponentA.capitalized) ", attributes: opponentString as [NSAttributedString.Key : Any]));
+                text.append(NSAttributedString(string: "\(opponentA) ", attributes: opponentString as [NSAttributedString.Key : Any]));
                 text.append(NSAttributedString(string: "vs".localized(), attributes: vsString as [NSAttributedString.Key : Any]));
-                text.append(NSAttributedString(string: " \(opponentB.capitalized)", attributes: opponentString as [NSAttributedString.Key : Any]))
+                text.append(NSAttributedString(string: " \(opponentB)", attributes: opponentString as [NSAttributedString.Key : Any]))
                 self.opponentCodeLbl.attributedText = text
                 
             }

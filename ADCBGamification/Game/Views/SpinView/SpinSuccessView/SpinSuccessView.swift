@@ -120,7 +120,7 @@ class SpinSuccessView: UIView {
         shareMainView.isHidden = true
         shareGameTitleLbl.text = "Spin & Win".localized()
         shareCongratzLbl.text = "Congratulation".localized()
-        spinAgainButton.isHidden = (gameObjects?.frequency.first?.frequencyValue == "1" ||  gameObjects?.frequency.first?.frequencyValue == "0" )
+       // spinAgainButton.isHidden = (gameObjects?.frequency.first?.frequencyValue == "1" ||  gameObjects?.frequency.first?.frequencyValue == "0" )
         shareBtn.setTitle("Share".localized(), for: .normal)
         shareBtn.setSizeFont(sizeFont: (StoreManager.shared.language == GameLanguage.AR.rawValue) ?  16.0 : 16.0, fontFamily: (StoreManager.shared.language == GameLanguage.AR.rawValue) ? "Tajawal-SemiBold" : "OpenSans-SemiBold")
         
@@ -161,6 +161,16 @@ class SpinSuccessView: UIView {
     
 
     func setupLabel(info: SpinAssignReward?) {
+        
+        if (gameObjects?.frequency.first?.frequencyValue == "1" ||  gameObjects?.frequency.first?.frequencyValue == "0" ) {
+            spinAgainButton.isHidden = true
+        } else {
+            if let remainingChance = Int(info?.responseObject?.first?.chancesRemaining ?? "0"), remainingChance >= 1 {
+                spinAgainButton.isHidden = false
+            } else {
+                spinAgainButton.isHidden = true
+            }
+        }
         
         logoImageView.image = UIImage(named: (StoreManager.shared.language == "AR") ? "Logo_Arabic" : "Logo", in: Bundle(for: CustomNavView.self), compatibleWith: nil)
         
@@ -334,6 +344,7 @@ class SpinSuccessView: UIView {
     } */
     
     @IBAction func gameBtnTap() {
+        NotificationCenter.default.post(name: Notification.Name("ReloadGameList"), object: nil)
         Constants.referMessage = ""
         handle?(.gameTapped)
     }
