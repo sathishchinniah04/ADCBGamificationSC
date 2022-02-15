@@ -145,6 +145,7 @@ class SpinSuccessView: UIView {
 
     func showActionSheetView() {
         if let viewController = UIApplication.topMostViewController {
+            print("Share Content", Constants.referMessage)
             //let imageToShare = [ shareImage!,  Constants.referMessage] as [Any]
             let activityViewController = UIActivityViewController(activityItems: [self, shareImage!, Constants.referMessage], applicationActivities: nil)
             activityViewController.setValue(Constants.commonEmailSubject, forKey: "Subject")
@@ -264,7 +265,7 @@ class SpinSuccessView: UIView {
             if StoreManager.shared.language == GameLanguage.AR.rawValue{
                 self.messageTitleLbl.text = ""
             }else{
-                self.messageTitleLbl.text = "You have won a".localized() + " \(info?.responseObject?.first?.displayDetails?.first?.synonym ?? "")" + " !"
+                self.messageTitleLbl.text = "You have won".localized() + " \(info?.responseObject?.first?.displayDetails?.first?.synonym ?? "")" + " !"
             }
             self.shareMessageLbl.text =  "I won a".localized() + " " + (info?.responseObject?.first?.displayDetails?.first?.synonym ?? "") + " " + "by playing Spin & Win.".localized()
         }
