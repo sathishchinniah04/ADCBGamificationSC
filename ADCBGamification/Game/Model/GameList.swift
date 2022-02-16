@@ -57,6 +57,7 @@ class DisplayDetails: Decodable {
     var tncFile: String?
     var language: String?
     var imageList: [ImageList]?
+    var displayMessage:String?
 }
 
 class ImageList: Decodable {

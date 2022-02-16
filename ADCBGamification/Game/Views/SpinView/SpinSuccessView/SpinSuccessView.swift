@@ -255,18 +255,20 @@ class SpinSuccessView: UIView {
         
         
         if (info?.responseObject?.first?.voucherCode == nil || ((info?.responseObject?.first?.voucherCode ?? "").isEmpty)) {
-            if StoreManager.shared.language == GameLanguage.AR.rawValue{
+            /*if StoreManager.shared.language == GameLanguage.AR.rawValue{
                 self.messageTitleLbl.text = ""
             }else{
                 self.messageTitleLbl.text = "You have won".localized() + " \(info?.responseObject?.first?.displayDetails?.first?.synonym ?? "")" + " !"
-            }
+            }*/
+            self.messageTitleLbl.text = info?.responseObject?.first?.displayDetails?.first?.displayMessage ?? ""
             self.shareMessageLbl.text =  "I won".localized() + " " + (info?.responseObject?.first?.displayDetails?.first?.synonym ?? "") + " " + "by playing Spin & Win.".localized()
         } else {
-            if StoreManager.shared.language == GameLanguage.AR.rawValue{
+            /*if StoreManager.shared.language == GameLanguage.AR.rawValue{
                 self.messageTitleLbl.text = ""
             }else{
                 self.messageTitleLbl.text = "You have won".localized() + " \(info?.responseObject?.first?.displayDetails?.first?.synonym ?? "")" + " !"
-            }
+            }*/
+            self.messageTitleLbl.text = info?.responseObject?.first?.displayDetails?.first?.displayMessage ?? ""
             self.shareMessageLbl.text =  "I won a".localized() + " " + (info?.responseObject?.first?.displayDetails?.first?.synonym ?? "") + " " + "by playing Spin & Win.".localized()
         }
         
