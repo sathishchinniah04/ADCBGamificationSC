@@ -450,7 +450,9 @@ class SpinMainVC: UIViewController {
     func spinSuccessAnimation() {
         
         lottiSpinAnimationView.isHidden = false
-        self.spinAnimationView = .init(name: "spin_success_new")
+        self.spinAnimationView = .init(name: "spin_success_new", bundle: Bundle(for: Self.self), imageProvider: nil, animationCache: nil)
+//        self.spinAnimationView = .init(name: "spin_success_new", bundle: Bundle(for: SpinMainVC.self), imageProvider: nil, animationCache: nil)
+            //.init(name: "spin_success_new")
         self.spinAnimationView!.frame = self.lottiSpinAnimationView.bounds
         self.spinAnimationView!.contentMode = .scaleAspectFill
         self.spinAnimationView!.animationSpeed = 1.0

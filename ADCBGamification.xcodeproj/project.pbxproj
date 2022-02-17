@@ -470,7 +470,6 @@
 		F58A660E26B22EEC00D5713F /* sample.json in Resources */ = {isa = PBXBuildFile; fileRef = F58A660B26B22EEC00D5713F /* sample.json */; };
 		F58A660F26B22EEC00D5713F /* sample.json in Resources */ = {isa = PBXBuildFile; fileRef = F58A660B26B22EEC00D5713F /* sample.json */; };
 		F594424426B41963006F4E8E /* spin_success_new.json in Resources */ = {isa = PBXBuildFile; fileRef = F594424226B41963006F4E8E /* spin_success_new.json */; };
-		F594424526B41963006F4E8E /* spin_success_new.json in Resources */ = {isa = PBXBuildFile; fileRef = F594424226B41963006F4E8E /* spin_success_new.json */; };
 		F594424626B41963006F4E8E /* sparkle.json in Resources */ = {isa = PBXBuildFile; fileRef = F594424326B41963006F4E8E /* sparkle.json */; };
 		F594424726B41963006F4E8E /* sparkle.json in Resources */ = {isa = PBXBuildFile; fileRef = F594424326B41963006F4E8E /* sparkle.json */; };
 		F594428726B91B3F006F4E8E /* Tajawal-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F594428626B91B3F006F4E8E /* Tajawal-Black.ttf */; };
@@ -2509,7 +2508,6 @@
 				F58A64F826B22CCB00D5713F /* LICENSE in Resources */,
 				3320FF2E2682EB10001809AA /* Main.storyboard in Resources */,
 				F58A660F26B22EEC00D5713F /* sample.json in Resources */,
-				F594424526B41963006F4E8E /* spin_success_new.json in Resources */,
 				F58A64FA26B22CCB00D5713F /* README.md in Resources */,
 				F594424726B41963006F4E8E /* sparkle.json in Resources */,
 				33E158E426AA533000B0615B /* OpenSans-ExtraBoldItalic.ttf in Resources */,
