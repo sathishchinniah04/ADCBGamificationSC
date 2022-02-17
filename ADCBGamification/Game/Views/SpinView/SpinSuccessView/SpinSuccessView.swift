@@ -269,7 +269,7 @@ class SpinSuccessView: UIView {
                 self.messageTitleLbl.text = "You have won".localized() + " \(info?.responseObject?.first?.displayDetails?.first?.synonym ?? "")" + " !"
             }*/
             self.messageTitleLbl.text = info?.responseObject?.first?.displayDetails?.first?.displayMessage ?? ""
-            self.shareMessageLbl.text =  "I won a".localized() + " " + (info?.responseObject?.first?.displayDetails?.first?.synonym ?? "") + " " + "by playing Spin & Win.".localized()
+            self.shareMessageLbl.text =  "I won".localized() + " " + (info?.responseObject?.first?.displayDetails?.first?.synonym ?? "") + " " + "by playing Spin & Win.".localized()
         }
         
         self.messageDescLbl.text = "\(info?.responseObject?.first?.displayDetails?.first?.name ?? "")"
