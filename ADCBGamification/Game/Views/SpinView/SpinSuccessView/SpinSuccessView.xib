@@ -316,11 +316,10 @@
                                         <constraint firstAttribute="width" constant="85" id="iIX-Lr-P2W"/>
                                     </constraints>
                                 </imageView>
-                                <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Spin &amp; Win" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HdS-UB-91S">
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Spin &amp; Win" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HdS-UB-91S">
                                     <rect key="frame" x="93.5" y="67" width="167.5" height="41"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="41" id="Dgb-I2-ydo"/>
-                                        <constraint firstAttribute="width" constant="167.5" id="Pfm-n8-3Xz"/>
                                     </constraints>
                                     <fontDescription key="fontDescription" name="OpenSans-ExtraBold" family="Open Sans" pointSize="30"/>
                                     <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

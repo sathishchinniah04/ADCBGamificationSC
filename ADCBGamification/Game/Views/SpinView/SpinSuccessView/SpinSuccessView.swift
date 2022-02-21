@@ -278,8 +278,8 @@ class SpinSuccessView: UIView {
         df.dateFormat = "yyyy-MM-dd"
         let currentDate = df.string(from: Date())
         
-        
-        self.shareExpLbl.text = "on ".localized() + Utility.convertDateFormat(inputDate: currentDate)
+        self.shareExpLbl.text = "on ".localized() + Utility.convertDateWithFormatForPredicNWin(inputDate: currentDate, currFormat: "yyyy-MM-dd", expFormat: "dd MMM yyyy")
+
 
         
 //        if (info?.responseObject?.first?.expiryDate?.isEmpty ?? "".isEmpty || info?.responseObject?.first?.expiryDate == nil) {
