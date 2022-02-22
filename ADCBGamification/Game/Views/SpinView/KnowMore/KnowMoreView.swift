@@ -50,7 +50,7 @@ class KnowMoreView: UIView {
     
     func labelSetup(info: SpinAssignReward?) {
         
-        titleLabel.text = info?.responseObject?.first?.displayDetails?.first?.name ?? ""
+        titleLabel.text = (info?.responseObject?.first?.displayDetails?.first?.name ?? "").htmlToString
        
         if let timeVal = info?.responseObject?.first?.expiryDate {
             //12 p.m. 30 september 2030 - for arbic
@@ -68,7 +68,8 @@ class KnowMoreView: UIView {
         
         
         if let desc = info?.responseObject?.first?.displayDetails?.first?.description {
-            subTitleLabel.text = desc
+            subTitleLabel.text = desc.htmlToString
+            
         } else {
             subTitleLabel.isHidden = true
         }

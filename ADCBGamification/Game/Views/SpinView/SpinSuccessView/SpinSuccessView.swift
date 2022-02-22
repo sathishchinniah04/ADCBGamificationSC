@@ -272,7 +272,7 @@ class SpinSuccessView: UIView {
             self.shareMessageLbl.text =  "I won".localized() + " " + (info?.responseObject?.first?.displayDetails?.first?.synonym ?? "") + " " + "by playing Spin & Win.".localized()
         }
         
-        self.messageDescLbl.text = "\(info?.responseObject?.first?.displayDetails?.first?.name ?? "")"
+        self.messageDescLbl.text = "\(info?.responseObject?.first?.displayDetails?.first?.name ?? "")".htmlToString
         
         let df = DateFormatter()
         df.dateFormat = "yyyy-MM-dd"

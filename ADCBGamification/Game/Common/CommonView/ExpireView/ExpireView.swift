@@ -114,7 +114,7 @@ class ExpireView: UIView {
         gameNameLabel.text = game.displayDetails?.name
         //gameNameSubTitleLabel.text = game.displayDetails?.synonym   //game.gameType
         descLabel.text = game.displayDetails?.description ?? ""
-        descTextView.text = game.displayDetails?.description ?? ""
+        descTextView.text = (game.displayDetails?.description ?? "").htmlToString
         if game.gameType == "PredictNWin" {
             expireLabel.text = ""
             self.gameNameSubTitleLabel.numberOfLines = 2
