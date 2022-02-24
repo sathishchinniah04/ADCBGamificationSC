@@ -115,6 +115,7 @@ class ADCBGameListController: UIViewController {
     
     func getInitialApiCalls() {
         
+        gamesCollectionView.isUserInteractionEnabled = false
         self.activityIndicatorView.startAnimating()
         let taskGroup = DispatchGroup()
         taskGroup.enter()
@@ -127,6 +128,8 @@ class ADCBGameListController: UIViewController {
         }
         taskGroup.notify(queue: .main) {
             self.activityIndicatorView.stopAnimating()
+            self.gamesCollectionView.isUserInteractionEnabled = true
+
         }
         
     }

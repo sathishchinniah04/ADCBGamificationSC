@@ -61,6 +61,12 @@ class ADCBGameListCollectionCell: UICollectionViewCell {
         self.startTimer()
         if game.executionStatus?.lowercased() != GameStatus.Active.rawValue.lowercased() {
            disableCell()
+        } else {
+            self.lockDayLabel.isHidden = true
+            self.isUserInteractionEnabled = true
+            self.gameLabel.textColor = #colorLiteral(red: 0.1333333333, green: 0.1294117647, blue: 0.3960784314, alpha: 1)
+            self.expireInLabel.isHidden = false
+            self.timeLabel.isHidden = false
         }
         setImage(game: game)
         setLabel(game: game)
