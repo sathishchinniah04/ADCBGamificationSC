@@ -106,10 +106,10 @@ class SpinSuccessView: UIView {
     }
     
     func populateView(info: SpinAssignReward?, games: Games?, action:((SpinSuccessViewAction)->Void)?) {
-        self.handle = action
-        self.gameObjects = games
         appearanceSetup()
         setupLabel(info: info)
+        self.handle = action
+        self.gameObjects = games
         checkLeftToRight()
         self.bgCloudImage.image = UIImage(named: "Clouds", in: Bundle(for: CustomNavView.self), compatibleWith: nil)
         self.shareCloudImage.image = UIImage(named: "Clouds", in: Bundle(for: CustomNavView.self), compatibleWith: nil)
@@ -321,7 +321,7 @@ class SpinSuccessView: UIView {
         shareSubView.addShadow(cornerRadius: 20, shadowRadius: 3, opacity: 0.5, color: UIColor.black)
         containerView.addShadow(cornerRadius: 20, shadowRadius: 3, opacity: 0.5, color: UIColor.black)
         bounceAnimation(imageView)
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
             self.handle?(.knowMoreTapped)
         }
     }
