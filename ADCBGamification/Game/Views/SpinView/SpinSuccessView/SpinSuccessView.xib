@@ -42,10 +42,10 @@
                     <rect key="frame" x="138.5" y="110" width="137" height="250"/>
                 </imageView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Sze-Hl-Lez">
-                    <rect key="frame" x="30" y="183" width="354" height="531"/>
+                    <rect key="frame" x="30" y="202.5" width="354" height="492"/>
                     <subviews>
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="p0S-Tv-ElG">
-                            <rect key="frame" x="20" y="40" width="314" height="451"/>
+                            <rect key="frame" x="20" y="40" width="314" height="412"/>
                             <subviews>
                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="fLt-fW-bLX">
                                     <rect key="frame" x="0.0" y="0.0" width="314" height="153.5"/>
@@ -71,22 +71,22 @@
                                     </subviews>
                                 </stackView>
                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="rw7-y2-WRI">
-                                    <rect key="frame" x="0.0" y="177.5" width="314" height="41"/>
+                                    <rect key="frame" x="0.0" y="177.5" width="314" height="2"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You have won a discount voucher!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JX8-at-J0M">
-                                            <rect key="frame" x="45.5" y="0.0" width="223" height="19.5"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JX8-at-J0M">
+                                            <rect key="frame" x="157" y="0.0" width="0.0" height="0.0"/>
                                             <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="14"/>
                                             <color key="textColor" red="0.3294117647" green="0.3294117647" blue="0.33725490200000002" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enjoy 10% off at Starbucks!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vJt-LO-d0x">
-                                            <rect key="frame" x="69" y="21.5" width="176" height="19.5"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vJt-LO-d0x">
+                                            <rect key="frame" x="157" y="2" width="0.0" height="0.0"/>
                                             <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="14"/>
                                             <color key="textColor" red="0.3294117647" green="0.3294117647" blue="0.33725490200000002" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LiM-dj-lFa">
-                                            <rect key="frame" x="118.5" y="41" width="77" height="0.0"/>
+                                            <rect key="frame" x="118.5" y="2" width="77" height="0.0"/>
                                             <state key="normal">
                                                 <attributedString key="attributedTitle">
                                                     <fragment content="Know more">
@@ -105,7 +105,7 @@
                                     </subviews>
                                 </stackView>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Na6-oC-3sY">
-                                    <rect key="frame" x="0.0" y="242.5" width="314" height="60"/>
+                                    <rect key="frame" x="0.0" y="203.5" width="314" height="60"/>
                                     <subviews>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oeq-Fc-2xV">
                                             <rect key="frame" x="10" y="0.0" width="294" height="60"/>
@@ -133,7 +133,7 @@
                                     </constraints>
                                 </view>
                                 <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Wee-cA-AY4">
-                                    <rect key="frame" x="0.0" y="326.5" width="314" height="19.5"/>
+                                    <rect key="frame" x="0.0" y="287.5" width="314" height="19.5"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="pXQ-Ql-RaR">
                                             <rect key="frame" x="0.0" y="0.0" width="314" height="19.5"/>
@@ -179,7 +179,7 @@
                                     </subviews>
                                 </stackView>
                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="WCL-ie-pcC">
-                                    <rect key="frame" x="0.0" y="370" width="314" height="81"/>
+                                    <rect key="frame" x="0.0" y="331" width="314" height="81"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="PmT-qZ-Jgx">
                                             <rect key="frame" x="0.0" y="0.0" width="314" height="28.5"/>
