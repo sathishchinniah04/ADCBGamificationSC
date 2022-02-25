@@ -197,18 +197,200 @@ class ADCBGameListCollectionCell: UICollectionViewCell {
     
     func onLock(game: Games) {
         
-        let date = game.executionPeriod?.endDateTime ?? ""
+        let date = game.executionPeriod?.startDateTime ?? ""
         expireInLabel.text = "Expires in".localized()
-        let numberOfDays = Calendar.current.dateComponents([.day], from: Date(), to: Utility.convertStringToDate(date: date)).day ?? 0
-        hourMinteAlignmentCheck(date: date, value: numberOfDays)
+        let components = Set<Calendar.Component>([.second, .minute, .hour, .day, .month, .year])
+        let differenceOfDate = Calendar.current.dateComponents(components, from: Date(), to: Utility.convertStringToDate(date: date))
+                
+        if (StoreManager.shared.language == GameLanguage.AR.rawValue) {
+            self.lockDayLabel.textAlignment = .right
+        } else {
+            self.lockDayLabel.textAlignment = .left
+        }
+        if differenceOfDate.day == 0,  (differenceOfDate.hour ?? 0) <= 24, differenceOfDate.hour?.signum() == -1 {
+            self.lockDayLabel.text = "Unlocks Today".localized()
+            return
+        } else if differenceOfDate.day == 0,  (differenceOfDate.hour ?? 0) <= 24, differenceOfDate.hour?.signum() == 1 {
+            self.lockDayLabel.text = "Unlocks Tomorrow".localized()
+            return
+        } else {
+            hourMinteAlignmentCheckForLockGames(date: date, value: differenceOfDate.day ?? 0)
+        }
+
     }
+    
+    func updateExpiryTimeLabel(date: String, value: Int) {
+        
+        DispatchQueue.main.async {
+
+            var daysCount = ""
+            
+            if value == 0 {
+                daysCount = "Today"
+            } else if value > 1 {
+                if (StoreManager.shared.language == GameLanguage.AR.rawValue) {
+                    daysCount = "\(value) " + "day(s)"
+                } else {
+                    daysCount = "\(value)" + "day(s)"
+                }
+                
+            } else {
+                daysCount = "\(value) " + "day(s)"
+            }
+
+
+            let expDate = Utility.convertStringToDate(date: date)
+
+            let calendar = Calendar.current
+
+            let currentDateComp = calendar.dateComponents([.hour, .minute], from: Date())
+            let expDateComp = calendar.dateComponents([.hour, .minute], from: expDate)
+
+            var hours =  Int(expDateComp.hour ?? 0) - Int(currentDateComp.hour ?? 0)
+
+            var min = Int(expDateComp.minute ?? 0) - Int(currentDateComp.minute ?? 0)
+
+            var currentMinutes = ""
+            var currentHours = ""
+
+            if min <= 9 {
+                currentMinutes = "0" + "\(abs(min))"
+            } else {
+                currentMinutes = "\(abs(min))"
+            }
+
+            if hours <= 9 {
+                currentHours = "0" + "\(abs(hours))"
+            } else {
+                currentHours = "\(abs(hours))"
+            }
+
+            self.timeLabel.text = daysCount + " \(currentHours) " + "hr" + " \(currentMinutes) " + "mins"
+
+        }
+    }
+    
+    
+    func hourMinteAlignmentCheckForLockGames(date: String, value: Int) {
+
+        DispatchQueue.main.async {
+
+            var daysCount = ""
+
+            if value == -0 {
+                daysCount = "Today".localized()
+            } else if value == 0 {
+                daysCount = "Tomorrow".localized()
+            } else if value > 1 {
+                if (StoreManager.shared.language == GameLanguage.AR.rawValue) {
+                    daysCount = "\(value) " + "day(s)".localized()
+                } else {
+                    daysCount = "\(value)" + "day(s)".localized()
+                }
+
+            } else {
+                daysCount = "\(value) " + "day(s)".localized()
+            }
+
+
+            let expDate = Utility.convertStringToDate(date: date)
+
+            let calendar = Calendar.current
+
+            let currentDateComp = calendar.dateComponents([.hour, .minute], from: Date())
+            let expDateComp = calendar.dateComponents([.hour, .minute], from: expDate)
+
+            var hours =  Int(expDateComp.hour ?? 0) - Int(currentDateComp.hour ?? 0)
+
+            var min = Int(expDateComp.minute ?? 0) - Int(currentDateComp.minute ?? 0)
+
+            var currentMinutes = ""
+            var currentHours = ""
+
+            if min <= 9 {
+                currentMinutes = "0" + "\(abs(min))"
+            } else {
+                currentMinutes = "\(abs(min))"
+            }
+
+            if hours <= 9 {
+                currentHours = "0" + "\(abs(hours))"
+            } else {
+                currentHours = "\(abs(hours))"
+            }
+
+            if (StoreManager.shared.language == GameLanguage.AR.rawValue) {
+                self.lockDayLabel.textAlignment = .right
+                if !self.lockDayLabel.isHidden {
+
+                    if value == -0 {
+                        self.lockDayLabel.text = "Unlocks Today".localized()
+                    } else if value == 0 { // Tomorrow
+                        self.lockDayLabel.text = "Unlocks Tomorrow".localized()
+                    } else if value <= 30 {
+                        self.lockDayLabel.text = "Unlocks in".localized() + " \(daysCount)"
+                    } else {
+                        let remainingDays = (value - 31)
+
+                        if remainingDays == 0 {
+                            self.lockDayLabel.text = "Unlocks in".localized() + " " + "1" + "month(s)".localized()
+                        } else {
+                            self.lockDayLabel.text = "Unlocks in".localized() + " " + "1" + "month(s)".localized() + "\(remainingDays)" + "days(s)".localized()
+                        }
+                    }
+
+                }
+//                self.timeLabel.text = daysCount + " \(currentHours) " + "hr" + " \(currentMinutes) " + "mins"
+            } else {
+                self.lockDayLabel.textAlignment = .left
+                if !self.lockDayLabel.isHidden {
+
+                    if value == -0 {
+                        self.lockDayLabel.text = "Unlocks Today".localized()
+                    } else if value == 0 { // Tomorrow
+                        self.lockDayLabel.text = "Unlocks Tomorrow".localized()
+                    } else if value <= 30 {
+                        self.lockDayLabel.text = "Unlocks in " + daysCount
+                    } else {
+                        let remainingDays = (value - 31)
+
+                        if remainingDays == 0 {
+                            self.lockDayLabel.text = "Unlocks in ".localized() + "1 month(s)"
+                        } else {
+                            self.lockDayLabel.text = "Unlocks in ".localized() + "1 month(s)" + "\(remainingDays)" + "days(s)".localized()
+                        }
+                    }
+
+                }
+//                self.timeLabel.text = daysCount + " \(currentHours)" + "hr".localized() + " \(currentMinutes)" + "mins".localized()
+            }
+
+        }
+        //\(Utility.secondsToHoursMinutesSeconds(seconds: Utility.convertStringIntoDate(date: date)).2)sec"
+    }
+    
+    private func calculateDaysBetweenTwoDates(start: Date, end: Date) -> Int {
+
+        let currentCalendar = Calendar.current
+        guard let start = currentCalendar.ordinality(of: .day, in: .era, for: start) else {
+            return 0
+        }
+        guard let end = currentCalendar.ordinality(of: .day, in: .era, for: end) else {
+            return 0
+        }
+        return end - start
+    }
+    
+    
     
     func onActive(game: Games) {
 
         let date = game.validityPeriod?.endDateTime ?? ""
         expireInLabel.text = "Expires in".localized()
-        let numberOfDays = Calendar.current.dateComponents([.day], from: Date(), to: Utility.convertStringToDate(date: date)).day ?? 0
+        let numberOfDays = calculateDaysBetweenTwoDates(start: Date(), end: Utility.convertStringToDate(date: date))
+//        let numberOfDays = Calendar.current.dateComponents([.day], from: Date(), to: Utility.convertStringToDate(date: date)).day ?? 0
         hourMinteAlignmentCheck(date: date, value: numberOfDays)
+        //updateExpiryTimeLabel(date: date, value: numberOfDays)
     }
     
     func hourMinteAlignmentCheck(date: String, value: Int) {
@@ -262,18 +444,18 @@ class ADCBGameListCollectionCell: UICollectionViewCell {
                 if !self.lockDayLabel.isHidden {
                     
                     if value == 0 {
-                        self.lockDayLabel.text = "Unlocks Today"
+                        self.lockDayLabel.text = "Unlocks Today".localized()
                     } else if value == 1 { // Tomorrow
-                        self.lockDayLabel.text = "Unlocks Tomorrow"
+                        self.lockDayLabel.text = "Unlocks Tomorrow".localized()
                     } else if value <= 30 {
                         self.lockDayLabel.text = "Unlocks in".localized() + " \(daysCount)"
                     } else {
                         let remainingDays = (value - 31)
                         
                         if remainingDays == 0 {
-                            self.lockDayLabel.text = "Unlocks in" + " " + "1" + "month(s)"
+                            self.lockDayLabel.text = "Unlocks in".localized() + " " + "1" + "month(s)".localized()
                         } else {
-                            self.lockDayLabel.text = "Unlocks in" + " " + "1" + "month(s)" + "\(remainingDays)" + "days(s)"
+                            self.lockDayLabel.text = "Unlocks in".localized() + " " + "1" + "month(s)".localized() + "\(remainingDays)" + "days(s)".localized()
                         }
                     }
 
@@ -302,8 +484,6 @@ class ADCBGameListCollectionCell: UICollectionViewCell {
                 }
                 self.timeLabel.text = daysCount + " \(currentHours)" + "hr".localized() + " \(currentMinutes)" + "mins".localized()
             }
-            
-           
             
         }
         //\(Utility.secondsToHoursMinutesSeconds(seconds: Utility.convertStringIntoDate(date: date)).2)sec"

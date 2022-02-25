@@ -131,11 +131,24 @@ class PredictTeamView: UIView {
         
         let currMatachDate = Utility.convertDateWithFormat(inputDate: inf.MatchDate ?? "", currFormat: "yyyy-MM-dd", expFormat: "yyyy-MM-dd HH:mm:ss")
         
-        let numberOfDays = Calendar.current.dateComponents([.day], from: Date(), to: Utility.convertStringToDate(date: currMatachDate )).day ?? 0
+        let numberOfDays = calculateDaysBetweenTwoDates(start: Date(), end: Utility.convertStringToDate(date: currMatachDate))
+
+//        let numberOfDays = Calendar.current.dateComponents([.day], from: Date(), to: Utility.convertStringToDate(date: currMatachDate )).day ?? 0
         hourMinteAlignmentCheck(date: inf.MatchDate ?? "", value: numberOfDays)
     }
     
     
+    private func calculateDaysBetweenTwoDates(start: Date, end: Date) -> Int {
+
+        let currentCalendar = Calendar.current
+        guard let start = currentCalendar.ordinality(of: .day, in: .era, for: start) else {
+            return 0
+        }
+        guard let end = currentCalendar.ordinality(of: .day, in: .era, for: end) else {
+            return 0
+        }
+        return end - start
+    }
     
     func hourMinteAlignmentCheck(date: String, value: Int) {
         
