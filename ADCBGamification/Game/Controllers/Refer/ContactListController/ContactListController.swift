@@ -419,6 +419,10 @@ class ContactListController: UIViewController, UITextFieldDelegate {
 //        let contact = self.newList[indexPath.row]
 //        self.inviteButton.alpha = 0.0
         
+        guard !self.newList.isEmpty else { return }
+        
+        guard self.newList.indices.contains(indexPath.row) else { return }
+        
         var contact = self.newList[indexPath.row]
         placeHolderLbl.isHidden = false
         self.titleLbl.text = contact.telephone
@@ -574,21 +578,14 @@ extension ContactListController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        let selectedCell = tableView.cellForRow(at: indexPath) as! CustomContactCell
-        let contactData = self.newList[indexPath.row]
-        selectedCell.isSelectedVal = true
+        let selectedCell = tableView.cellForRow(at: indexPath) as? CustomContactCell
+
+        selectedCell?.isSelectedVal = true
         activityIndicatorView.isHidden = false
-        selectedCell.verifyBtn.isHidden = true
+        selectedCell?.verifyBtn.isHidden = true
         activityIndicatorView.startAnimating()
         self.shouldHideBerifyButton = true
-//        chooseContactButton.titleLabel.isHidden = false
-//        self.chooseContactButton.titleLabel.alpha = 1.0
-       // placeHolderLbl.isHidden = false
-        //placeHolderLbl.text = "Enter a contact name or mobile number".localized()
-        //chooseContactButton.titleLabel.text = contactData.firstName + contactData.lastName
-        //chooseContactButton.placeHolder = contactData.telephone
-        //self.titleLbl.text = contactData.firstName + contactData.lastName
-       // self.chooseContactButton.textField.text = contactData.telephone
+
         onCellTap(indexPath: indexPath)
     }
     
