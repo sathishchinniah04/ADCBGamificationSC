@@ -420,6 +420,9 @@ class ContactListController: UIViewController, UITextFieldDelegate {
 //        self.inviteButton.alpha = 0.0
         
         var contact = self.newList[indexPath.row]
+        placeHolderLbl.isHidden = false
+        self.titleLbl.text = contact.telephone
+        self.placeHolderLbl.text = (contact.firstName + " " + contact.lastName)
         self.newList.removeAll()
         self.newList.append(contact)
         self.contactTableView.reloadData()
@@ -430,7 +433,7 @@ class ContactListController: UIViewController, UITextFieldDelegate {
         
         self.verifyMessageview.isHidden = true
         contact.telephone = contact.telephone.replacingOccurrences(of: "-", with: "")
-        ReferViewModel.checkSimpleLifeUserApi(bParty: contact.telephone) { (data, err) in
+        ReferViewModel.checkSimpleLifeUserApi(bParty: contact.telephone.trimmingCharacters(in: .whitespaces)) { (data, err) in
             print("data is \(data)")
             
        // ReferViewModel.checkSimpleLifeUser(number: contact.telephone) { data, err   in
@@ -452,7 +455,7 @@ class ContactListController: UIViewController, UITextFieldDelegate {
                         self.leftMessageLbl.text = "Select another contact to refer".localized()
                         self.footerHeight = 0
                         self.contactTableView.reloadData()
-                        self.placeHolderLbl.text = "Enter a contact name or mobile number".localized()
+                       // self.placeHolderLbl.text = "Enter a contact name or mobile number".localized()
                         self.handle?(contact.firstName + " " + contact.lastName, contact.telephone)
                         self.bPart = contact.telephone
                         self.UnhidebaseViewForexistingUser()
@@ -462,7 +465,7 @@ class ContactListController: UIViewController, UITextFieldDelegate {
                         self.errorMsg = ""
                         self.footerHeight = 0
                         self.contactTableView.reloadData()
-                        self.placeHolderLbl.text = "Enter a contact name or mobile number".localized()
+                       // self.placeHolderLbl.text = "Enter a contact name or mobile number".localized()
                         self.handle?(contact.firstName + " " + contact.lastName, contact.telephone)
                         self.bPart = contact.telephone
                         self.UnhidebaseViewForValidUser()
