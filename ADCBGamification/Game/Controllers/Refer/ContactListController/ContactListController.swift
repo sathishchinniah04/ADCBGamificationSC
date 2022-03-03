@@ -67,9 +67,12 @@ class ContactListController: UIViewController, UITextFieldDelegate {
     var delegate: ReferDateDelegate? = nil
     var isUnknownContactVerified = false
     var shouldHideBerifyButton = false
+    var isContactSelected = false
+    var selectedContactRow = -1
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        fetchContact()
         self.leftMessageLblTopConstraints.constant = -30
         self.leftMessageLbl.text = "Click “Verify” to check whether the contact is a Simplylife user.".localized()
         self.verifyMessageview.isHidden = true
@@ -98,7 +101,7 @@ class ContactListController: UIViewController, UITextFieldDelegate {
         
         buttonSetup()
         setupTableView()
-        fetchContact()
+        
         inviteButton.alpha = 0.3
         inviteButton.isUserInteractionEnabled = false
         inviteButton.populateView { (done) in
@@ -180,6 +183,7 @@ class ContactListController: UIViewController, UITextFieldDelegate {
         }
     }
     
+    
     @objc func handleSwipe(sender: UISwipeGestureRecognizer) {
         let direction = sender.direction
         switch direction {
@@ -222,8 +226,11 @@ class ContactListController: UIViewController, UITextFieldDelegate {
             DispatchQueue.main.async {
                 self.contacts.removeAll()
                 self.newList.removeAll()
-                self.contacts = contacts
-                self.newList = contacts
+                let sortedContactList = contacts.sorted { $0.firstName < $1.firstName }
+                self.contacts = sortedContactList
+                self.newList = sortedContactList
+                self.selectedContactRow = -1
+                self.isContactSelected = false
                 self.contactTableView.reloadData()
             }
         }
@@ -381,6 +388,12 @@ class ContactListController: UIViewController, UITextFieldDelegate {
                 $0.telephone.range(of: text, options: [.caseInsensitive, .diacriticInsensitive ]) != nil
         }
         
+        if self.newList.count > 1 {
+            self.UnhidebaseViewForexistingUser()
+        }
+//        else {
+//            self.UnhidebaseViewForValidUser()
+//        }
         
         if self.newList.isEmpty, !text.isEmpty , text.isNumeric, !text.isAlphanumeric {
             let unknownContact = FetchedContact(firstName: "Unknown".localized(), lastName: "contact".localized(), telephone: text, image: nil, unknowContact: true)
@@ -395,6 +408,7 @@ class ContactListController: UIViewController, UITextFieldDelegate {
         }
         
         if text.isEmpty {
+            self.UnhidebaseViewForexistingUser()
             self.leftMessageLbl.text = "Click “Verify” to check whether the contact is a Simplylife user.".localized()
             self.shareContactLbl.text = "Select the contact to Invite".localized()
             self.newList.removeAll()
@@ -414,11 +428,9 @@ class ContactListController: UIViewController, UITextFieldDelegate {
         
     }
 
-    func onCellTap(indexPath: IndexPath) {
+    func onCellTap(indexPath: IndexPath, cell: CustomContactCell) {
         self.view.endEditing(true)
-//        let contact = self.newList[indexPath.row]
-//        self.inviteButton.alpha = 0.0
-        
+
         guard !self.newList.isEmpty else { return }
         
         guard self.newList.indices.contains(indexPath.row) else { return }
@@ -429,7 +441,13 @@ class ContactListController: UIViewController, UITextFieldDelegate {
         self.placeHolderLbl.text = (contact.firstName + " " + contact.lastName)
         self.newList.removeAll()
         self.newList.append(contact)
+       
         self.contactTableView.reloadData()
+        
+        selectedContactRow = 0
+        
+        contactTableView.reloadRows(at: [indexPath], with: .fade)
+        
         //self.inviteButton.alpha = 0.0
         if !(titleLbl.text?.isEmpty ?? "".isEmpty) {
             self.titleTopConstraints.constant = 25
@@ -439,7 +457,7 @@ class ContactListController: UIViewController, UITextFieldDelegate {
         contact.telephone = contact.telephone.replacingOccurrences(of: "-", with: "")
         ReferViewModel.checkSimpleLifeUserApi(bParty: contact.telephone.trimmingCharacters(in: .whitespaces)) { (data, err) in
             print("data is \(data)")
-            
+           
        // ReferViewModel.checkSimpleLifeUser(number: contact.telephone) { data, err   in
             DispatchQueue.main.async {
                 self.activityIndicatorView.stopAnimating()
@@ -521,6 +539,7 @@ class ContactListController: UIViewController, UITextFieldDelegate {
         bottomStackView.isHidden = true
         emptySpaceView.isHidden = false
         messageView.isHidden = true
+        self.isContactSelected = false
     }
     
     func inviteButtonAppearance() {
@@ -549,19 +568,28 @@ extension ContactListController: UITableViewDelegate, UITableViewDataSource {
         cell.verifyBtnAction = {
             let contactData = self.newList[indexPath.row]
             self.shouldHideBerifyButton = true
-            cell.isSelectedVal = true
             cell.verifyBtn.isHidden = true
+            self.isContactSelected = true
             self.activityIndicatorView.isHidden = false
             self.activityIndicatorView.startAnimating()
             self.placeHolderLbl.isHidden = false
             self.placeHolderLbl.text = contactData.firstName + contactData.lastName
             self.titleLbl.text = contactData.telephone
             self.isUnknownContactVerified = false
-            self.onCellTap(indexPath: indexPath)
+            self.onCellTap(indexPath: indexPath, cell: cell)
             self.shouldHideBerifyButton = true
         }
         
         cell.populateView(info: self.newList[indexPath.row])
+        
+        if selectedContactRow == indexPath.row, self.newList.count == 1, self.isContactSelected {
+            cell.containerView.layer.borderWidth = 1.0
+            cell.containerView.layer.borderColor = #colorLiteral(red: 0.1333333333, green: 0.1294117647, blue: 0.3960784314, alpha: 1)
+        } else {
+            cell.containerView.layer.borderWidth = 0.0
+            cell.containerView.layer.borderColor = UIColor.clear.cgColor
+        }
+    
         
 //        if self.isUnknownContactVerified {
 //            cell.verifyBtn.isHidden = true
@@ -578,15 +606,16 @@ extension ContactListController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
+        
         let selectedCell = tableView.cellForRow(at: indexPath) as? CustomContactCell
-
-        selectedCell?.isSelectedVal = true
         activityIndicatorView.isHidden = false
         selectedCell?.verifyBtn.isHidden = true
         activityIndicatorView.startAnimating()
         self.shouldHideBerifyButton = true
-
-        onCellTap(indexPath: indexPath)
+        self.isContactSelected = true
+        onCellTap(indexPath: indexPath, cell: selectedCell!)
+        
+       
     }
     
     func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {

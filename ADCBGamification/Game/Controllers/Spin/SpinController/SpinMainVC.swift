@@ -42,6 +42,7 @@ class SpinMainVC: UIViewController {
         (con as? CustomNavViewController)?.nav.disableBackAction = self.expireView.isHidden
         self.spinBtn.setTitle("Spin".localized(), for: .normal)
         self.spinDummyImgView.isHidden = true
+        self.lottiSpinAnimationView.isHidden = true
         self.homeAnimationStaticView.isHidden = true
        // self.animationSetUp()
 //        activityIndicatorView.startAnimating()
@@ -481,7 +482,8 @@ class SpinMainVC: UIViewController {
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
                self.spinSuccessAnimation()
             }
-            DispatchQueue.main.asyncAfter(deadline: .now() + 3.5) {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 2.5) {
+                self.lottiSpinAnimationView.isHidden = true
                 self.spinSuccessView.loadScreen(info: self.spinAssignReward, gameObj: self.game,action: self.successScreenActionHandler(action:))
             }
             

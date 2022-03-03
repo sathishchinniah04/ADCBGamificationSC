@@ -18,12 +18,6 @@ class CustomContactCell: UITableViewCell {
     @IBOutlet weak var verifyBtn: UIButton!
     var verifyBtnAction : (() -> Void)? = nil
     
-    var isSelectedVal: Bool = false {
-        didSet {
-            containerView.layer.borderWidth = isSelectedVal ? 0.5 : 0.0
-            containerView.layer.borderColor = isSelectedVal ? #colorLiteral(red: 0.1333333333, green: 0.1294117647, blue: 0.3960784314, alpha: 1) : #colorLiteral(red: 0, green: 0, blue: 0, alpha: 0)
-        }
-    }
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
