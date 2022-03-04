@@ -33,8 +33,9 @@ class PhoneContactVM: NSObject {
                     // 3.
                     try store.enumerateContacts(with: request, usingBlock: { (contact, stopPointer) in
                         let contat = contact.phoneNumbers.first?.value.stringValue.trimmingCharacters(in: CharacterSet(charactersIn:"-")).trimmingCharacters(in: CharacterSet(charactersIn:" "))
-                        
-                        self.contacts.append(FetchedContact(firstName: contact.givenName, lastName: contact.familyName, telephone: contat ?? "", image: contact.imageData))
+                        if !contact.phoneNumbers.isEmpty, (contact.phoneNumbers.first?.value.stringValue.count ?? 0) > 3 {
+                            self.contacts.append(FetchedContact(firstName: contact.givenName, lastName: contact.familyName, telephone: contat ?? "", image: contact.imageData))
+                        }
                     })
                     complition?(self.contacts)
                 } catch let error {

@@ -383,9 +383,16 @@ class ContactListController: UIViewController, UITextFieldDelegate {
     
     func onEditionTextField(text: String) {
         self.closeBtn.isHidden = false
+       // print("contact listss", self.contacts.filter({ $0.firstName.prefix(text.count
+//        ) == text }))
+       /* self.newList = self.contacts.filter {
+            $0.firstName.range(of: text, options: [.literal ]) != nil ||
+                $0.telephone.range(of: text, options: [.literal ]) != nil
+        } */
+        
         self.newList = self.contacts.filter {
-            $0.firstName.range(of: text, options: [.caseInsensitive, .diacriticInsensitive ]) != nil ||
-                $0.telephone.range(of: text, options: [.caseInsensitive, .diacriticInsensitive ]) != nil
+            $0.firstName.lowercased().prefix(text.count) == text.lowercased() ||
+            $0.telephone.lowercased().prefix(text.count) == text.lowercased()
         }
         
         if self.newList.count > 1 {
@@ -539,7 +546,7 @@ class ContactListController: UIViewController, UITextFieldDelegate {
         bottomStackView.isHidden = true
         emptySpaceView.isHidden = false
         messageView.isHidden = true
-        self.isContactSelected = false
+        //self.isContactSelected = false
     }
     
     func inviteButtonAppearance() {
