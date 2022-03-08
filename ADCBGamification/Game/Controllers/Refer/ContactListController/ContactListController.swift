@@ -438,9 +438,17 @@ class ContactListController: UIViewController, UITextFieldDelegate {
     func onCellTap(indexPath: IndexPath, cell: CustomContactCell) {
         self.view.endEditing(true)
 
-        guard !self.newList.isEmpty else { return }
+        guard !self.newList.isEmpty else {
+            self.activityIndicatorView.stopAnimating()
+            return
+            
+        }
         
-        guard self.newList.indices.contains(indexPath.row) else { return }
+        guard self.newList.indices.contains(indexPath.row) else {
+            self.activityIndicatorView.stopAnimating()
+            return
+            
+        }
         
         var contact = self.newList[indexPath.row]
         placeHolderLbl.isHidden = false
