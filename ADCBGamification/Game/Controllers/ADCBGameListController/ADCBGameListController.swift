@@ -34,6 +34,7 @@ class ADCBGameListController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        UIApplication.configureAdjustAnalutics
         topSectionView.isHidden = true
         UIFont.loadMyFonts
         UIApplication.configureFacebookId

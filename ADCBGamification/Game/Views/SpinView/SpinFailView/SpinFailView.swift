@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import AdjustSdk
 
 class SpinFailView: UIView {
     
@@ -38,6 +39,8 @@ class SpinFailView: UIView {
     }
     
     func appearanceSetup() {
+        let event = ADJEvent(eventToken: "285ipt")
+        Adjust.trackEvent(event)
         self.titleHeaderLabel.isHidden = true
         self.subTitleLabel.isHidden = true
         

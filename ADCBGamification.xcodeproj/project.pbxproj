@@ -487,9 +487,12 @@
 		F59442A426BA77CE006F4E8E /* Tajawal-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F594429026B91B65006F4E8E /* Tajawal-Medium.ttf */; };
 		F59442A526BA77CE006F4E8E /* Tajawal-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F594429226B91B6D006F4E8E /* Tajawal-Regular.ttf */; };
 		F59FFAAF26E10FA200539F30 /* tick_back_animation.json in Resources */ = {isa = PBXBuildFile; fileRef = F59FFAAE26E10FA200539F30 /* tick_back_animation.json */; };
+		F5A1F8B5283E962600302CD9 /* ADCBGamification.h in Headers */ = {isa = PBXBuildFile; fileRef = F5A1F8B4283E962600302CD9 /* ADCBGamification.h */; };
 		F5A89F7926CBA9CD00685428 /* cert.pem in Resources */ = {isa = PBXBuildFile; fileRef = F5A89F7626CBA9CD00685428 /* cert.pem */; };
 		F5A89F7A26CBA9CD00685428 /* ca.pem in Resources */ = {isa = PBXBuildFile; fileRef = F5A89F7726CBA9CD00685428 /* ca.pem */; };
 		F5A89F7B26CBA9CD00685428 /* key.pem in Resources */ = {isa = PBXBuildFile; fileRef = F5A89F7826CBA9CD00685428 /* key.pem */; };
+		F5B17F08283E5522004DF69D /* AdjustSdk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5B17F07283E5522004DF69D /* AdjustSdk.framework */; };
+		F5B17F09283E582C004DF69D /* AdjustSdk.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F5B17F07283E5522004DF69D /* AdjustSdk.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F5ECB1E627A7AE4A00AE8992 /* ContestWinnerCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5ECB1E427A7AE4A00AE8992 /* ContestWinnerCollectionCell.swift */; };
 		F5ECB1E727A7AE4A00AE8992 /* ContestWinnerCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F5ECB1E527A7AE4A00AE8992 /* ContestWinnerCollectionCell.xib */; };
 		F5ECB1E927A7FA0A00AE8992 /* ContestWinnerDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5ECB1E827A7FA0A00AE8992 /* ContestWinnerDetailsVC.swift */; };
@@ -516,6 +519,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				F5B17F09283E582C004DF69D /* AdjustSdk.framework in Embed Frameworks */,
 				3320FFEB2682ED8F001809AA /* ADCBGamification.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -850,9 +854,11 @@
 		F594429B26B91C57006F4E8E /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Main.strings; sourceTree = "<group>"; };
 		F594429C26B91C58006F4E8E /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		F59FFAAE26E10FA200539F30 /* tick_back_animation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = tick_back_animation.json; sourceTree = "<group>"; };
+		F5A1F8B4283E962600302CD9 /* ADCBGamification.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ADCBGamification.h; sourceTree = "<group>"; };
 		F5A89F7626CBA9CD00685428 /* cert.pem */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = cert.pem; sourceTree = "<group>"; };
 		F5A89F7726CBA9CD00685428 /* ca.pem */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ca.pem; sourceTree = "<group>"; };
 		F5A89F7826CBA9CD00685428 /* key.pem */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = key.pem; sourceTree = "<group>"; };
+		F5B17F07283E5522004DF69D /* AdjustSdk.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AdjustSdk.framework; sourceTree = "<group>"; };
 		F5ECB1E427A7AE4A00AE8992 /* ContestWinnerCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContestWinnerCollectionCell.swift; sourceTree = "<group>"; };
 		F5ECB1E527A7AE4A00AE8992 /* ContestWinnerCollectionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ContestWinnerCollectionCell.xib; sourceTree = "<group>"; };
 		F5ECB1E827A7FA0A00AE8992 /* ContestWinnerDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContestWinnerDetailsVC.swift; sourceTree = "<group>"; };
@@ -867,6 +873,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F5B17F08283E5522004DF69D /* AdjustSdk.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1222,6 +1229,7 @@
 		3320FF932682EBC4001809AA /* ThirdParty */ = {
 			isa = PBXGroup;
 			children = (
+				F5B17F07283E5522004DF69D /* AdjustSdk.framework */,
 				F58A644026B22CCB00D5713F /* lottie-ios */,
 				3320FF942682EBC4001809AA /* TTFortuneWheel */,
 			);
@@ -1707,6 +1715,7 @@
 			isa = PBXGroup;
 			children = (
 				33FC318326958D2F00868D9E /* Utility.swift */,
+				F5A1F8B4283E962600302CD9 /* ADCBGamification.h */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -2317,6 +2326,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3320FF112682EA9F001809AA /* ADCBGamification.h in Headers */,
+				F5A1F8B5283E962600302CD9 /* ADCBGamification.h in Headers */,
 				3320FFDE2682EBC4001809AA /* TTFortuneWheel.h in Headers */,
 				3320FFBF2682EBC4001809AA /* IQKeyboardManagerSwift.h in Headers */,
 			);
@@ -3099,6 +3109,10 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/ADCBGamification/Game/ThirdParty",
+				);
 				INFOPLIST_FILE = ADCBGamification/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -3126,6 +3140,10 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/ADCBGamification/Game/ThirdParty",
+				);
 				INFOPLIST_FILE = ADCBGamification/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -3178,6 +3196,7 @@
 				PROVISIONING_PROFILE_SPECIFIER = Provisioning_Profile_adcbgamification;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
+				VALIDATE_WORKSPACE = YES;
 			};
 			name = Debug;
 		};
@@ -3200,6 +3219,7 @@
 				PROVISIONING_PROFILE_SPECIFIER = Provisioning_Profile_adcbgamification;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
+				VALIDATE_WORKSPACE = YES;
 			};
 			name = Release;
 		};

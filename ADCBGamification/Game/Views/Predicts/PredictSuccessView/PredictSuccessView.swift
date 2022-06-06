@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import AdjustSdk
+
 enum PredictSuccessViewAction {
     case share
     case homePage
@@ -114,6 +116,8 @@ class PredictSuccessView: UIView {
     }
     
     func setupFontFamily() {
+        let event = ADJEvent(eventToken: "57b7hh")
+        Adjust.trackEvent(event)
         self.animationSetUp()
         shareGameTitleLbl.text = "Predict & Win".localized()
         headingLbl.text = "Predict & Win".localized()
@@ -132,8 +136,8 @@ class PredictSuccessView: UIView {
         headerLbl.text = "Thank you for your participation".localized()
         messageLbl.text = "Winner will be announced shortly and you will receive a notification on the App. Stay tuned, enjoy the game !".localized()
         goToLbl.text = "Go To".localized()
-     
-      
+        
+        
         eventInitialLbl.text = eventDetails?.opponentASynonym
         eventTwoInitialLbl.text = eventDetails?.opponentBSynonym
         
@@ -141,7 +145,7 @@ class PredictSuccessView: UIView {
         eventPlayerTwoTitle.text = eventDetails?.OpponentB
         
         
-      //  self.getChars(info: eventDetails)
+        //  self.getChars(info: eventDetails)
         
         eventPlayerOneTitle.setSizeFont(sizeFont: (StoreManager.shared.language == GameLanguage.AR.rawValue) ?  10.0 : 10.0, fontFamily: (StoreManager.shared.language == GameLanguage.AR.rawValue) ? "Tajawal-SemiBold" : "OpenSans-SemiBold")
         
@@ -195,7 +199,7 @@ class PredictSuccessView: UIView {
         self.gamePageButton.addSubview(gameLine)
         self.gamePageButton.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|[line]|", metrics: nil, views: ["line":gameLine]))
         self.gamePageButton.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:[line(1)]-(\(+4))-|", metrics: nil, views: ["line":gameLine]))
-  
+        
     }
     
     func neumorphicEffect() {

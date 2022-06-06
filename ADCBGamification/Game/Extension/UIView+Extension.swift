@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import AdjustSdk
 //import FBSDKCoreKit
 
 enum AlertAction {
@@ -345,4 +346,20 @@ extension UIApplication {
         //Settings.displayName = "Gamification"
     }()
 
+    public static let configureAdjustAnalutics: () = {
+        
+        //nbxlxhsd9zpc -  Gamification_Test
+        //hrkvvty5j9xc = Simplylife from ADCB
+        
+        let appToken = "hrkvvty5j9xc"
+        let environment = ADJEnvironmentSandbox
+
+        let adjustConfig = ADJConfig(appToken: appToken, environment: environment, allowSuppressLogLevel: true)
+        adjustConfig?.deactivateSKAdNetworkHandling()
+        adjustConfig?.allowiAdInfoReading = false
+        adjustConfig?.allowIdfaReading = false
+        adjustConfig?.sendInBackground = true
+        adjustConfig?.logLevel = ADJLogLevelVerbose
+        Adjust.appDidLaunch(adjustConfig)
+    }()
 }

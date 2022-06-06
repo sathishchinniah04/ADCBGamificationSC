@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import AdjustSdk
+
 enum ReferSuccessViewAction {
     case referAgain
     case homePageTapped
@@ -119,20 +121,24 @@ class ReferSuccessView: UIView {
         
         
         if status == .failure {
+            let event = ADJEvent(eventToken: "qdjh9a")
+            Adjust.trackEvent(event)
             self.subMessageLbl.isHidden = true
             self.headerLabel.text = "Something went wrong".localized()
             self.headerLabel.textColor = #colorLiteral(red: 0.6196078431, green: 0.09803921569, blue: 0.08235294118, alpha: 1)
             self.descLabel.text = "Your invite was not sent. Please try again".localized()
             self.referHeaderImage.image = UIImage(named: "referFail", in: Bundle(for: ReferSuccessView.self), compatibleWith: nil)
-
+            
         } else if status == .success  {
+            let event = ADJEvent(eventToken: "4zzrtc")
+            Adjust.trackEvent(event)
             self.animationSetUp()
             self.subMessageLbl.isHidden = false
             self.headerLabel.text = "Successful".localized()
             self.headerLabel.textColor = #colorLiteral(red: 0.1333333333, green: 0.1294117647, blue: 0.3960784314, alpha: 1)
             self.descLabel.text = "The invite has been sent successfully.".localized()
             self.referHeaderImage.image = UIImage(named: "inviteTick", in: Bundle(for: ReferSuccessView.self), compatibleWith: nil)
-
+            
         }
     }
     
