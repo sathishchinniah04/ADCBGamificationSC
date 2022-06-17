@@ -200,7 +200,8 @@ class ADCBGameListCollectionCell: UICollectionViewCell {
         let date = game.executionPeriod?.startDateTime ?? ""
         expireInLabel.text = "Expires in".localized()
         let components = Set<Calendar.Component>([.second, .minute, .hour, .day, .month, .year])
-        let differenceOfDate = Calendar.current.dateComponents(components, from: Date(), to: Utility.convertStringToDate(date: date))
+        let currentDate = Utility.convertStringToDate(date: game.currentTime ?? "")
+        let differenceOfDate = Calendar.current.dateComponents(components, from: currentDate, to: Utility.convertStringToDate(date: date))
                 
         if (StoreManager.shared.language == GameLanguage.AR.rawValue) {
             self.lockDayLabel.textAlignment = .right

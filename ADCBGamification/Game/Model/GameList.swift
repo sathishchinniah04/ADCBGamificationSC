@@ -24,6 +24,7 @@ class Games: Decodable {
     let gameType: String
     let gameStatus: String?
     let executionStatus: String?
+    let currentTime: String?
     
     let milestonesAvailable: Bool?
     let leaderboardAvailable: Bool?
