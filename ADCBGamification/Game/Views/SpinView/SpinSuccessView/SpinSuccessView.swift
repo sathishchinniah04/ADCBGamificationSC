@@ -7,7 +7,7 @@
 
 import UIKit
 import Foundation
-import AdjustSdk
+//import AdjustSdk
 //import FBSDKShareKit
 
 class InstagramManager: NSObject, UIDocumentInteractionControllerDelegate {
@@ -117,8 +117,8 @@ class SpinSuccessView: UIView {
     }
     
     func setupFontFamily() {
-        let event = ADJEvent(eventToken: "j8a6fk")
-        Adjust.trackEvent(event)
+       // let event = ADJEvent(eventToken: "j8a6fk")
+       // Adjust.trackEvent(event)
         shareMainView.isHidden = true
         shareGameTitleLbl.text = "Spin & Win".localized()
         shareCongratzLbl.text = "Congratulation".localized()

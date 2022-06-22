@@ -6,7 +6,7 @@
 //
 
 import UIKit
-import AdjustSdk
+//import AdjustSdk
 
 enum PredictSuccessViewAction {
     case share
@@ -116,8 +116,8 @@ class PredictSuccessView: UIView {
     }
     
     func setupFontFamily() {
-        let event = ADJEvent(eventToken: "57b7hh")
-        Adjust.trackEvent(event)
+        //let event = ADJEvent(eventToken: "57b7hh")
+        //Adjust.trackEvent(event)
         self.animationSetUp()
         shareGameTitleLbl.text = "Predict & Win".localized()
         headingLbl.text = "Predict & Win".localized()

@@ -6,7 +6,7 @@
 //
 
 import UIKit
-import AdjustSdk
+//import AdjustSdk
 
 enum ReferSuccessViewAction {
     case referAgain
@@ -121,8 +121,8 @@ class ReferSuccessView: UIView {
         
         
         if status == .failure {
-            let event = ADJEvent(eventToken: "qdjh9a")
-            Adjust.trackEvent(event)
+           // let event = ADJEvent(eventToken: "qdjh9a")
+            //Adjust.trackEvent(event)
             self.subMessageLbl.isHidden = true
             self.headerLabel.text = "Something went wrong".localized()
             self.headerLabel.textColor = #colorLiteral(red: 0.6196078431, green: 0.09803921569, blue: 0.08235294118, alpha: 1)
@@ -130,8 +130,8 @@ class ReferSuccessView: UIView {
             self.referHeaderImage.image = UIImage(named: "referFail", in: Bundle(for: ReferSuccessView.self), compatibleWith: nil)
             
         } else if status == .success  {
-            let event = ADJEvent(eventToken: "4zzrtc")
-            Adjust.trackEvent(event)
+           // let event = ADJEvent(eventToken: "4zzrtc")
+           // Adjust.trackEvent(event)
             self.animationSetUp()
             self.subMessageLbl.isHidden = false
             self.headerLabel.text = "Successful".localized()

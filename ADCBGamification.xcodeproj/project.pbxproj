@@ -491,8 +491,6 @@
 		F5A89F7926CBA9CD00685428 /* cert.pem in Resources */ = {isa = PBXBuildFile; fileRef = F5A89F7626CBA9CD00685428 /* cert.pem */; };
 		F5A89F7A26CBA9CD00685428 /* ca.pem in Resources */ = {isa = PBXBuildFile; fileRef = F5A89F7726CBA9CD00685428 /* ca.pem */; };
 		F5A89F7B26CBA9CD00685428 /* key.pem in Resources */ = {isa = PBXBuildFile; fileRef = F5A89F7826CBA9CD00685428 /* key.pem */; };
-		F5B17F08283E5522004DF69D /* AdjustSdk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5B17F07283E5522004DF69D /* AdjustSdk.framework */; };
-		F5B17F09283E582C004DF69D /* AdjustSdk.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F5B17F07283E5522004DF69D /* AdjustSdk.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F5ECB1E627A7AE4A00AE8992 /* ContestWinnerCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5ECB1E427A7AE4A00AE8992 /* ContestWinnerCollectionCell.swift */; };
 		F5ECB1E727A7AE4A00AE8992 /* ContestWinnerCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F5ECB1E527A7AE4A00AE8992 /* ContestWinnerCollectionCell.xib */; };
 		F5ECB1E927A7FA0A00AE8992 /* ContestWinnerDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5ECB1E827A7FA0A00AE8992 /* ContestWinnerDetailsVC.swift */; };
@@ -519,7 +517,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				F5B17F09283E582C004DF69D /* AdjustSdk.framework in Embed Frameworks */,
 				3320FFEB2682ED8F001809AA /* ADCBGamification.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -873,7 +870,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F5B17F08283E5522004DF69D /* AdjustSdk.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

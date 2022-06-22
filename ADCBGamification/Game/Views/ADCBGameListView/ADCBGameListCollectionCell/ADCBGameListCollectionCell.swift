@@ -209,7 +209,7 @@ class ADCBGameListCollectionCell: UICollectionViewCell {
             self.lockDayLabel.textAlignment = .left
         }
         if differenceOfDate.day == 0,  (differenceOfDate.hour ?? 0) <= 24, differenceOfDate.hour?.signum() == -1 {
-            self.lockDayLabel.text = "Unlocks Today".localized()
+            self.lockDayLabel.text = "Unlocks Today ".localized()
             return
         } else if differenceOfDate.day == 0,  (differenceOfDate.hour ?? 0) <= 24, differenceOfDate.hour?.signum() == 1 {
             self.lockDayLabel.text = "Unlocks Tomorrow".localized()
