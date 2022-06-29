@@ -13,6 +13,7 @@ enum GameStatus: String, CaseIterable {
 
 class ADCBGameListCollectionCell: UICollectionViewCell {
     
+    @IBOutlet weak var referContentLbl: UILabel!
     @IBOutlet weak var gameLabel: UILabel!
     @IBOutlet weak var expireInLabel: UILabel!
     @IBOutlet weak var lockDayLabel: UILabel!
@@ -29,6 +30,7 @@ class ADCBGameListCollectionCell: UICollectionViewCell {
     //var spinFailView = SpinSuccessViewHelper()
     override func awakeFromNib() {
         super.awakeFromNib()
+       // referContentLbl.isHidden = true
         crownBtn.isHidden = true
         setupFontFamily()
         //
@@ -107,13 +109,16 @@ class ADCBGameListCollectionCell: UICollectionViewCell {
         
         if game.executionStatus == "Active" {
             if game.gameType == "SpinNWin" {
+               // referContentLbl.isHidden = true
                 gameNameImg = (StoreManager.shared.language == GameLanguage.AR.rawValue) ? "SpinListArabic" : "SpinList"
             } else if game.gameType == "PredictNWin" {
+               // referContentLbl.isHidden = true
                 gameNameImg = (StoreManager.shared.language == GameLanguage.AR.rawValue) ? "PredictListArabic" : "PredictList"
             } else if game.gameType == "ReferNWin" {
-                gameNameImg = (StoreManager.shared.language == GameLanguage.AR.rawValue) ? "InviteArabic" : "Invite"
-                
+               // referContentLbl.isHidden = false
+                gameNameImg = (StoreManager.shared.language == GameLanguage.AR.rawValue) ? "Invite1" : "Invite1"
             } else {
+                //referContentLbl.isHidden = true
                 gameNameImg = ""
             }
         } else {
@@ -129,13 +134,17 @@ class ADCBGameListCollectionCell: UICollectionViewCell {
 //            }
             
             if game.gameType == "SpinNWin" {
+              //  referContentLbl.isHidden = true
                 gameNameImg = (StoreManager.shared.language == GameLanguage.AR.rawValue) ? "SpinListArabic" : "SpinList"
             } else if game.gameType == "PredictNWin" {
+              //  referContentLbl.isHidden = true
                 gameNameImg = (StoreManager.shared.language == GameLanguage.AR.rawValue) ? "PredictListArabic" : "PredictList"
             } else if game.gameType == "ReferNWin" {
-                gameNameImg = (StoreManager.shared.language == GameLanguage.AR.rawValue) ? "InviteArabic" : "Invite"
+               // referContentLbl.isHidden = false
+                gameNameImg = (StoreManager.shared.language == GameLanguage.AR.rawValue) ? "Invite1" : "Invite1"
                 
             } else {
+               // referContentLbl.isHidden = true
                 gameNameImg = ""
             }
         }
@@ -181,6 +190,7 @@ class ADCBGameListCollectionCell: UICollectionViewCell {
         }
         
         self.gameLabel.text = game.displayDetails?.name
+        referContentLbl.text = game.displayDetails?.rewardDetails
         //        CustomTimer.shared.startTimer {
         //            self.checkGameStatus(game: game)
         //        }

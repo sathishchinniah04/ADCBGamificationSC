@@ -488,7 +488,7 @@ class SpinMainVC: UIViewController {
             }
             
         } else {
-            self.spinFailView.loadScreen(action: self.failScreenActionHandler(action:), gameObj: self.game)
+            self.spinFailView.loadScreen(info: self.spinAssignReward, action: self.failScreenActionHandler(action:), gameObj: self.game)
             //self.spinSuccessView.loadScreen(info: self.spinAssignReward, action: self.successScreenActionHandler(action:))
         }
     }

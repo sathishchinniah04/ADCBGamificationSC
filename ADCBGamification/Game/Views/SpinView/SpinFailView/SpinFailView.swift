@@ -25,13 +25,15 @@ class SpinFailView: UIView {
     
     var handle:((SpinFailViewAction)->Void)?
     var gameObjects: Games?
+    var responseObj: SpinAssignReward?
     
     static func loadXib() -> SpinFailView {
         return UINib(nibName: "SpinFailView", bundle: Bundle(for: Self.self)).instantiate(withOwner: self, options: nil).first as! SpinFailView
     }
     
-    func populateView(action:((SpinFailViewAction)->Void)?, game: Games?) {
+    func populateView(info: SpinAssignReward?, action:((SpinFailViewAction)->Void)?, game: Games?) {
         self.handle = action
+        self.responseObj = info
         self.gameObjects = game
         appearanceSetup()
         checkLeftToRight()
@@ -54,7 +56,16 @@ class SpinFailView: UIView {
         //self.subTitleLabel.text = "life".localized()
         
         
-        spinAgainButton.isHidden = (gameObjects?.frequency.first?.frequencyValue == "1" ||  gameObjects?.frequency.first?.frequencyValue == "0" )
+        if (gameObjects?.frequency.first?.frequencyValue == "1" ||  gameObjects?.frequency.first?.frequencyValue == "0" ) {
+            spinAgainButton.isHidden = true
+        } else {
+            if let remainingChance = Int(self.responseObj?.responseObject?.first?.chancesRemaining ?? "0"), remainingChance >= 1 {
+                spinAgainButton.isHidden = false
+            } else {
+                spinAgainButton.isHidden = true
+            }
+        }
+        
         
         let fontDict: [NSAttributedString.Key : Any] = [
             NSAttributedString.Key.font: (StoreManager.shared.language == GameLanguage.AR.rawValue) ? UIFont(name: "Tajawal-Regular", size: 14.0) ?? UIFont.boldSystemFont(ofSize: 1.5) : UIFont(name: "OpenSans-Regular", size: 14.0) ?? UIFont.boldSystemFont(ofSize: 1.5),

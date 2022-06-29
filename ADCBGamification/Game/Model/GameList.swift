@@ -40,6 +40,7 @@ class Games: Decodable {
     let costOfGame: CostOfGame?
     let frequency:[Frequency]
     
+    
 }
 class ValidityPeriod: Decodable {
     var startDateTime: String?
@@ -59,6 +60,7 @@ class DisplayDetails: Decodable {
     var language: String?
     var imageList: [ImageList]?
     var displayMessage:String?
+    let rewardDetails: String?
 }
 
 class ImageList: Decodable {

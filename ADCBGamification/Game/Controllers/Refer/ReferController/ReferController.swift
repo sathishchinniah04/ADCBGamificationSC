@@ -91,6 +91,8 @@ class ReferController: UIViewController, ReferDateDelegate {
             referArbLblLeftConstraints.constant = 180
         } else  if (device == "iPhone 11 Pro") {
             referArbLblLeftConstraints.constant = 190
+        }  else  if (device == "iPhone X") {
+            referArbLblLeftConstraints.constant = 180
         } else {
             referArbLblLeftConstraints.constant = 200
         }
